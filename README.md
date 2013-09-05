@@ -1,2 +1,2 @@
-ZHAW
+ZHAW by Daniel Brun
 ====
