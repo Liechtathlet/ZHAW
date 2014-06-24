@@ -11,13 +11,13 @@
 
 - [x] Informatik-Recht 1 [Details](https://ebs.zhaw.ch/occasions/view/438)
 - [x] IT Controlling [Details](https://ebs.zhaw.ch/occasions/view/991)
-- [x] Wirtschaftsinformatik 1 [Details](https://ebs.zhaw.ch/occasions/view/993)
+- [ ] Wirtschaftsinformatik 1 [Details](https://ebs.zhaw.ch/occasions/view/993)
 - [ ] Gründung neuer Unternehmen [Details](https://ebs.zhaw.ch/occasions/view/442)
 - [x] Risikoanalysen in der IT [Details](https://ebs.zhaw.ch/occasions/view/999)
 - [ ] Business Solutions - Standards and Cases [Details](https://ebs.zhaw.ch/occasions/view/1040)
 - [x] Management der IT-Sicherheit [Details](https://ebs.zhaw.ch/occasions/view/1039)
 - [ ] eBusiness [Details](https://ebs.zhaw.ch/occasions/view/1042)
-- [x] PR und Kommunikation [Details](https://ebs.zhaw.ch/occasions/view/450)
+- [ ] PR und Kommunikation [Details](https://ebs.zhaw.ch/occasions/view/450)
 
 #### Frühlingssemester
 
@@ -30,7 +30,7 @@
 - [ ] Geschäftsprozessmanagement [Details](https://ebs.zhaw.ch/occasions/view/1041)
 - [x] ITIL - IT Infrastructure Library [Details](https://ebs.zhaw.ch/occasions/view/441)
 - [ ] Business Decision Simulation [Details](https://ebs.zhaw.ch/occasions/view/1044)
-- [x] Wirtschaftsinformatik 2 [Details](https://ebs.zhaw.ch/occasions/view/1101)
+- [ ] Wirtschaftsinformatik 2 [Details](https://ebs.zhaw.ch/occasions/view/1101)
 - [x] ITIL - IT Infrastructure Library (Montag) [Details](https://ebs.zhaw.ch/occasions/view/642)
 
 #### Seminare (Frühlingssemester)
