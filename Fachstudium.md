@@ -9,40 +9,40 @@
 
 #### Herbstsemester
 
-- [ ] Informatik-Recht 1 [Details](https://ebs.zhaw.ch/occasions/view/438)
-- [ ] IT Controlling [Details](https://ebs.zhaw.ch/occasions/view/991)
-- [ ] Wirtschaftsinformatik 1 [Details](https://ebs.zhaw.ch/occasions/view/993)
+- [x] Informatik-Recht 1 [Details](https://ebs.zhaw.ch/occasions/view/438)
+- [x] IT Controlling [Details](https://ebs.zhaw.ch/occasions/view/991)
+- [x] Wirtschaftsinformatik 1 [Details](https://ebs.zhaw.ch/occasions/view/993)
 - [ ] Gründung neuer Unternehmen [Details](https://ebs.zhaw.ch/occasions/view/442)
-- [ ] Risikoanalysen in der IT [Details](https://ebs.zhaw.ch/occasions/view/999)
+- [x] Risikoanalysen in der IT [Details](https://ebs.zhaw.ch/occasions/view/999)
 - [ ] Business Solutions - Standards and Cases [Details](https://ebs.zhaw.ch/occasions/view/1040)
-- [ ] Management der IT-Sicherheit [Details](https://ebs.zhaw.ch/occasions/view/1039)
+- [x] Management der IT-Sicherheit [Details](https://ebs.zhaw.ch/occasions/view/1039)
 - [ ] eBusiness [Details](https://ebs.zhaw.ch/occasions/view/1042)
-- [ ] PR und Kommunikation [Details](https://ebs.zhaw.ch/occasions/view/450)
+- [x] PR und Kommunikation [Details](https://ebs.zhaw.ch/occasions/view/450)
 
 #### Frühlingssemester
 
-- [ ] Informatik-Recht 2 [Details](https://ebs.zhaw.ch/occasions/view/439)
+- [x] Informatik-Recht 2 [Details](https://ebs.zhaw.ch/occasions/view/439)
 - [ ] Projekt und Prozessmanagement [Details](https://ebs.zhaw.ch/occasions/view/440)
-- [ ] Integriertes Risiko-Management [Details](https://ebs.zhaw.ch/occasions/view/444)
-- [ ] IT Governance [Details](https://ebs.zhaw.ch/occasions/view/990)
+- [x] Integriertes Risiko-Management [Details](https://ebs.zhaw.ch/occasions/view/444)
+- [x] IT Governance [Details](https://ebs.zhaw.ch/occasions/view/990)
 - [ ] IT Qualitäts Management [Details](https://ebs.zhaw.ch/occasions/view/992)
-- [ ] IT Security Management [Details](https://ebs.zhaw.ch/occasions/view/998)
+- [x] IT Security Management [Details](https://ebs.zhaw.ch/occasions/view/998)
 - [ ] Geschäftsprozessmanagement [Details](https://ebs.zhaw.ch/occasions/view/1041)
-- [ ] ITIL - IT Infrastructure Library [Details](https://ebs.zhaw.ch/occasions/view/441)
+- [x] ITIL - IT Infrastructure Library [Details](https://ebs.zhaw.ch/occasions/view/441)
 - [ ] Business Decision Simulation [Details](https://ebs.zhaw.ch/occasions/view/1044)
-- [ ] Wirtschaftsinformatik 2 [Details](https://ebs.zhaw.ch/occasions/view/1101)
-- [ ] ITIL - IT Infrastructure Library (Montag) [Details](https://ebs.zhaw.ch/occasions/view/642)
+- [x] Wirtschaftsinformatik 2 [Details](https://ebs.zhaw.ch/occasions/view/1101)
+- [x] ITIL - IT Infrastructure Library (Montag) [Details](https://ebs.zhaw.ch/occasions/view/642)
 
 #### Seminare (Frühlingssemester)
 
-- [ ] eBiz Strategie / Konzept [Details](https://ebs.zhaw.ch/occasions/view/1046)
+- [x] eBiz Strategie / Konzept [Details](https://ebs.zhaw.ch/occasions/view/1046)
 - [ ] Einsatz von GPS in Business-Lösungen [Details](https://ebs.zhaw.ch/occasions/view/1048)
 - [ ] Entwickeln von Anwendungen für Hand Held [Details](https://ebs.zhaw.ch/occasions/view/1049)
 - [ ] Vergleich von verschiedenen ERP-Systemen [Details](https://ebs.zhaw.ch/occasions/view/1050)
 - [ ] IT Service Management [Details](https://ebs.zhaw.ch/occasions/view/1052)
-- [ ] IT Governance [Details](https://ebs.zhaw.ch/occasions/view/415)
-- [ ] Cloud als Geschäftsmodell [Details](https://ebs.zhaw.ch/occasions/view/1167)
-- [ ] Angewandte Wirtschaftsinformatik [Details](https://ebs.zhaw.ch/occasions/view/1168)  
+- [x] IT Governance [Details](https://ebs.zhaw.ch/occasions/view/415)
+- [x] Cloud als Geschäftsmodell [Details](https://ebs.zhaw.ch/occasions/view/1167)
+- [x] Angewandte Wirtschaftsinformatik [Details](https://ebs.zhaw.ch/occasions/view/1168)  
 
 
 ## Wahlpflichtmodule  
@@ -65,7 +65,7 @@
 - [ ] Web Technologies &amp; Web Engineering [Details](https://ebs.zhaw.ch/modules/view/61)
 - [ ] Theoretische Informatik und Automatentheorie [Details](https://ebs.zhaw.ch/modules/view/55)
 - [ ] Betriebssysteme [Details](https://ebs.zhaw.ch/modules/view/50)
-- [xx] Systemarchitektur [Details](https://ebs.zhaw.ch/modules/view/42)
+- [x][x] Systemarchitektur [Details](https://ebs.zhaw.ch/modules/view/42)
 - [ ] Programmieren - PHP/MySQL - DotNet - Java - C++ [Details](https://ebs.zhaw.ch/modules/view/228)
 
 
