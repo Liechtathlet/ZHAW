@@ -65,7 +65,7 @@
 - [ ] Web Technologies &amp; Web Engineering [Details](https://ebs.zhaw.ch/modules/view/61)
 - [ ] Theoretische Informatik und Automatentheorie [Details](https://ebs.zhaw.ch/modules/view/55)
 - [ ] Betriebssysteme [Details](https://ebs.zhaw.ch/modules/view/50)
-- [x][x] Systemarchitektur [Details](https://ebs.zhaw.ch/modules/view/42)
+- [x] [x] Systemarchitektur [Details](https://ebs.zhaw.ch/modules/view/42)
 - [ ] Programmieren - PHP/MySQL - DotNet - Java - C++ [Details](https://ebs.zhaw.ch/modules/view/228)
 
 
