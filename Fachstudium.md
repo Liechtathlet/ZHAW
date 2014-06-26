@@ -24,7 +24,7 @@
 - [x] Informatik-Recht 2 [Details](https://ebs.zhaw.ch/occasions/view/439)
 - [ ] Projekt und Prozessmanagement [Details](https://ebs.zhaw.ch/occasions/view/440)
 - [x] Integriertes Risiko-Management [Details](https://ebs.zhaw.ch/occasions/view/444)
-- [x] IT Governance [Details](https://ebs.zhaw.ch/occasions/view/990)
+- [ ] IT Governance [Details](https://ebs.zhaw.ch/occasions/view/990)
 - [ ] IT Qualitäts Management [Details](https://ebs.zhaw.ch/occasions/view/992)
 - [x] IT Security Management [Details](https://ebs.zhaw.ch/occasions/view/998)
 - [ ] Geschäftsprozessmanagement [Details](https://ebs.zhaw.ch/occasions/view/1041)
