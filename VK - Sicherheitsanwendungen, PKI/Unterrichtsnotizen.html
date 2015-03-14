@@ -1,0 +1,30 @@
+<h2 id="repetition">Repetition</h2>
+<ul>
+<li>Wie viel Inhalt können mit einem 1024-Bit Schlüssel übermittelt werden? 1024-Bit.</li>
+<li>Ist das Padding normiert? Ja, in einem RFC</li>
+<li>Grösse Integer? 32- / 64-Bit begrenzt durch Architektur, BigInteger :arrow_right: Spezialbehandlung</li>
+<li>Was ist ein qualifiziertes Zertifikat? Personenzertifikat</li>
+</ul>
+<h2 id="padding">Padding</h2>
+<p>Ist der Text kürzer als der Schlüssel braucht es immer zwingend ein Padding. Ansonsten ist die Sicherheit der Nachricht gefährdet (Füllzeichen).</p>
+<p><span class="math"><em>x</em> = <em>a</em> + <em>b</em><em>x</em> + <em>c</em><em>y</em></span></p>
+<p><span class="math"><em>x</em> = <em>a</em> + <em>b</em><em>x</em> + <em>c</em><em>y</em></span><br /><span class="math"><em>a</em><sup><em>x</em></sup> * <em>a</em><sup><em>y</em></sup> = <em>a</em><sup>(<em>x</em> + <em>y</em>)</sup></span><br /><span class="math"><em>a</em><sup><em>a</em><sub>0</sub></sup> * <em>a</em><sup><em>b</em><em>x</em></sup> * <em>a</em><sup><em>c</em><em>y</em></sup> = <em>a</em><sup><em>a</em><sub>0</sub> + <em>b</em><em>x</em> + <em>c</em><em>y</em></sup> = <em>a</em><sup><em>x</em></sup></span><br /><span class="math">$a_0 = 0 \implies a^{a_0} = 0$</span><br /><span class="math">(<em>x</em><em>y</em>)<sup><em>d</em></sup> ≡ <em>x</em><sup><em>d</em></sup> * <em>y</em><sup><em>d</em></sup><em>m</em><em>o</em><em>d</em><em>n</em></span><br /><span class="math"><em>C</em><sub>1</sub>....<em>C</em><sub>2</sub></span><br /><span class="math"><em>C</em> = ∏<em>C</em>(<em>M</em><sub><em>i</em></sub>)<sup><em>e</em><sup><em>i</em></sup></sup><em>m</em><em>o</em><em>d</em><em>n</em> → <em>M</em> = ∏<em>M</em><sub><em>i</em></sub><sup><em>e</em><sub><em>i</em></sub></sup><em>m</em><em>o</em><em>d</em><em>n</em></span></p>
+<h1 id="asn.1-abstract-syntax-notation-no.-1">ASN.1 [Abstract Syntax Notation No. 1]</h1>
+<p>Wichtig: - Basic Encoding Rules (BER) - Distinguished Encoding Rules (DER)</p>
+<h2 id="beschreibungsstruktur">Beschreibungsstruktur</h2>
+<h3 id="module">Module</h3>
+<p><em>Modulname</em> DEFINITIONS::=BEGIN EXPORTS export liste IMPORTS imports ....</p>
+<p>www.oid-info.com</p>
+<p>Sequence: 30h --&gt; Tag: 0011 0000 Universal: 00 Zusammengesetzt: 1 Sequence: 16</p>
+<p>Tag-Value: 30-0B-03-03-00-0F-C1-....</p>
+<p>Sequence of Seuquence: 30 - L - 30 - ....</p>
+<h2 id="objekt-identifier">Objekt-Identifier</h2>
+<p>x x 40 + y 1x40 + 2 = 42</p>
+<h2 id="zertifikate">Zertifikate</h2>
+<h3 id="erzeugung">Erzeugung</h3>
+<ul>
+<li>Werden oft bei CA erstellt.</li>
+</ul>
+<p><strong>Ablauf:</strong><br /> 1. Person geht zur RA für die initiale Registrierung (Intermidär).<br /> 2. RA bestätigt Identität und leitet den Request der CA weiter.<br /> 3. ....<br /> x. PKCS#12-Container geht zurück an die Person (geschützt mit PIN)</p>
+<h2 id="aufbau">Aufbau</h2>
+<p>ID + Signatur <span class="math"><em>s</em><em>S</em><sub><em>p</em><sub><em>C</em><em>A</em></sub></sub>(<em>I</em><em>D</em>)</span> ObjectIdentifier :arrow_right: Signaturtyp + Algorithmus</p>
