@@ -10,17 +10,17 @@
 ##Konstruktive vs. Analytische QM-Massnahmen
 **Konstruktive Massnahmen:** Methoden, Sprachen, Werkzeuge, Standards, Checklisten, die dafür sorgen, dass entstehende Produkte / Erstellungsproz. bestimmte Eigenschaften besitzen. **| Analytische Massnahmen: ** diagnostische Vorgehensweise, keine Qualität in Produkt / Proz., Messung existierende Qualitätsniveau
 
-**TODO: Übersicht Qualität, Slide 7**
+![Qualität](./images/VK_SWE_10_QM_Uebersicht.png)
 ** Hauptgruppen: Prüfungsrelevant, inkl. Beispiele**
 ###Konstruktives QM
 Gewährleistung das es dokumentierte Vorgehensweisen für SWE gibt, z.B. Programmierrichtlinien, Reviews, etc.
 
-**TODO: Bild Slide 9**
+![Konstruktive Massnahmen](./images/VK_SWE_10_QM_Konstruktive_Massnahmen.png)
 
 **Bsp. produktorientierte konstruktive Massnahmen: ** Gliederungsschema Pflichtenheft (Richtlinie), alle wichtigen Infos auf einer Seite (Methode), Einsatz Programmiersprache mit statischer Typprüfung können keine Typfehelr zur Lfz auftreten (Sprache)
 **| Bsp. prozessorientierte konstruktive Massnahmen**: Festlegung welche Teilprodukte mit welchem Inhalt und welchem Layout wann und von wem erstellt werden müssen, standardisiert den Entwicklungsprozess (Richtlinie), Konfigurationsmanagementsystem zur Identifikation SW-Elemente - Konfiguration (Richtlinie, Werkzeug), Festlegung zulässiger Zustandsübergänge, Festlegung Vorgehensmodell
 
 ###Analytisches QM
-**TODO: Bild Slide 13**
+![Analytisches QM](./images/VK_SWE_10_QM_Analytisches_QM.png)
 
 **Gliederung:** Bezug zur Prüfung (Produkt- / Prozessprüfung), Automatisierungsgrad / Nachvollziehbarkeit / Einsatzbereich Prüfung (Definitions- / Entwurfs- / Impl- / Abnahme / Wartungs- & Pflege-phase)

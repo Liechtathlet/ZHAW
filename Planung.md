@@ -4,17 +4,18 @@
       * Buch: OK
       * Unterricht
           * KW 11: OK
-          * KW 12 Offen (ab slide 28)
+          * KW 12: OK
   * Service Design
     * Buch: Offen
     * Unterricht
-        * Offen
+        * KW 13: Offen
 
 ##Projekt- und Prozessmanagement
   * Buch: Offen (Kapitel: 2, 3, 4, 5, 6, 7, 8, 10, 11)
   * Unterricht:
-      * KW 11: In Arbeit
-      * KW 12: Offen
+      * KW 11: OK
+      * KW 12: OK
+      * KW 13: Offen
 
 ##PKI
   * Unterricht:

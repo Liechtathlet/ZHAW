@@ -39,8 +39,7 @@ gDocs
 
 ###Projektsteuerung, Kontrolle
 **Fortschrittsüberwachung**  
-  - Fertigstellungsgrad = erbrachter Aufwand / geplanter Aufwand
-  - TODO: ...
+  * Fertigstellungsgrad = erbrachter Aufwand / (geplanter Aufwand + Restaufwand)
 
 **Earned Value Analysis**  
 *Diagramm, x-Achse: Zeit, y-Achse: Aufwand / Kosten*
@@ -63,7 +62,7 @@ gDocs
 
 **Meilenstein-Trendanalyse (Projektebene)**
 *Diagramm: x-Achse: Berichtszeitpunkte, y-Achse: Meilenstein-Termine, Quadrant 4, Trapezförmig*  
-TODO: Beispielsbild, Slide 9
+![Meilenstein-Trendanalyse](./images/ITM_PPM_ZusfUnterricht_Meilenstein_Trendanalyse.png)
 Einzeichnen des Status pro Berichtszeitpunkt und Meilenstein  
 
 **Management Bericht**
@@ -75,7 +74,7 @@ Einzeichnen des Status pro Berichtszeitpunkt und Meilenstein
   - Risiken
   - Technische Probleme
 
-  TOD: Bild Tabelle, Slide 10
+![Management Bericht](./images/ITM_PPM_ZusfUnterricht_Mgmt_Bericht.png)  
 
 ###Projektbesprechungen
 **Hinweise aus der Praxis**
@@ -88,13 +87,13 @@ Einzeichnen des Status pro Berichtszeitpunkt und Meilenstein
 Terminprobleme, Kostenprobleme, Funktionalitätsprobleme, Qualitätsprobleme: Einbindung Team, Besprechung in Projektbesprechungen
 
 ###Projektführung
-PL: Ist eine Begabung, man macht es gerne oder
-  - Verhaltsn- / Motivationsprobleme?
+PL: Ist eine Begabung, man macht es gerne oder nicht
+  - Verhaltens- / Motivationsprobleme?
   - Regeln im Team festlegen
   - Führungsmittel
   - Teamregeln
 
-**Verhaltensprobleme**  
+###Verhaltensprobleme  
   - Mangelndes Verantowrtungsgefühl
   - Mangelnde Eignung zur Gruppenarbeit
   - Mangelnde Sachbezogenheit
@@ -110,7 +109,7 @@ PL: Ist eine Begabung, man macht es gerne oder
   - Autoritäres Verhalten
   - Mangelnde Methodik bzw. Know-How im Vorgehen
 
-**Motivationsprinzipien**  
+###Motivationsprinzipien
   - Wort gegenüber Team und Kunde halten
   - Regelmässige Gespräche führen
   - Zu neuen Ideen ermutigen
@@ -122,30 +121,42 @@ PL: Ist eine Begabung, man macht es gerne oder
   - Sich vom Team bewerten lassen, Feedback einholen
   - Mit gutem Beispiel vorangehen
 
-**Teamführung**
-  - Aufgabe und Ziele ...
-  TODO: fertig stellen
+###Teamführung
+  - Aufgabe und Ziele vorgeben
+  - Anforderungsprofile  definieren
+  - Ausgleich im Teamfinden
+  - Auswahl geeignete Methoden
+  - Verantwortung tragen
+  - Vertrauen schaffen
+  - Teammitglieder ausschliessen
+  - Bearbeitung Konflikte / Kriesen
+  - Teamsitzungen leiten
 
-
-**Teambildung**  
+###Teambildung
 Max. 6-8 Personen, Recht auf Meinungsäusserung
 
-**Das 4 Ohren Modell**  
+###Das 4 Ohren Modell
+**Sender:** Es hat keinen Kaffee mehr.  
 
-**Gewaltfrei Kommunikation GfK**  
+  1. Sachohr (Die Kaffeekanne ist leer)
+  2. Beziehungsohr (Kaffee machen ist deine Sache)
+  3. Selbstoffenbahrungsohr (Ich möchte auch noch Kaffee)
+  4. Appellohr (Mach bitte Kaffee!)
+
+###Gewaltfrei Kommunikation GfK  
   1. Beobachtung (ohne Wertung)
   2. Gefühl (Wie wirkt das auf mich?)
   3. Bedürfnis (formulieren)
   4. Bitte (umwandeln in Bitten)
 
-**Das Harvard Konzept**
+###Das Harvard Konzept
 *Position einnehmen: Problem, nicht lösbar, keine Person will von Position zurückkommen (Gesichtsverlust)*  
   1. Menschen und Probleme getrennt voneinander behandeln
   2. Auf Interessen konzentrieren, nicht auf Positionen
   3. Entwicklung von Entscheidungsmöglichkeiten zum beiderseitigen Vorteil
   4. Anwendung neutraler Beurteilungskriterien
 
-###Projektrapportierung
+##Projektabnahme /-abschluss
   - Projektabnahme (Protokollieren)
   - Mängelliste erstellen
   - Projektreview (Lessons learned)
@@ -153,3 +164,72 @@ Max. 6-8 Personen, Recht auf Meinungsäusserung
   - Teambesprechung durchführen
   - Kundenzufriedenheit ermitteln
   - Projekt formell abschliessen
+
+
+##Qualitätsmanagement
+**Definition:** Besschaffenhiet, Merkmal, Eigenschaft, Zustand, nach DIN EN ISO 9000:2005 (Qualitätsmanagement, "Grad", Erfüllung Satz inhärenter Merkmale Anforderungen), bezeichnet alle org. Massnahmen zur Verbesserung von Produkten, Prozessen oder Servies jeglicher Art
+
+**Qualität:** Kundenbedürfnisse abdecken (Q ist, wenn Kunde zurück kommt)  
+
+**Konfliktdreicek:** Kosten - Qualität - Termine
+
+###Qualitätsmerkmale Produkte
+  - Funktionalität
+    - Aufgabenangemessenheit
+    - Richtigkeit / Genauigkeit Ergebnisse
+    - Verknüpfbarkeit
+    - Konformität Regelungen
+  - Zuverlässigkeit
+    - Reife
+    - Fehlertoleranz
+    - Wiederherstellbarkeit
+  - Benutzerbarkeit
+    - Verständlichkeit
+    - Erlernbarkeit
+    - Bedienbarkeit
+  - Effizienz
+    - Zeitverhalten
+    - Verbrauchsverhalten
+  - Wartbarkeit
+    - Analysierbarkeit
+    - Änderbarkeit
+    - Stabilität
+    - Prüfbarkeit
+  - Übertragbarkeit
+    - Anpassbarkeit
+    - Installierbarkeit
+    - Konformität
+    - Austauschbarkeit
+
+###Konstruktive Methoden
+![Konstruktive Methoden](./images/ITM_PPM_ZusfUnterricht_QM_Konstruktive_Methoden.png)
+
+###Analytische Methoden
+![Analytische Methoden](./images/ITM_PPM_ZusfUnterricht_QM_Analytische_Methoden.png)
+
+  - Progressiver Test: Test von neuen Komp. bei Neu- / Weiterentwicklungen
+
+###Entwicklungsprozess - V-Modell
+  - Anforderungsdefinition (Anforderungsspezifikation) - Abnahmetest
+  - Funktionaler Systementwurf (Systemspezifikation) - Systemtest
+  - Technischer Systementwurf (Detailspezifikation) - Integrationstest
+  - Komponentenspezifikation (Programmspezifikation) - Komponententest
+  - Implementierung
+
+Jeweils Testspezifikation pro Ebene, Review auf gleicher Ebene  
+Jeweils Spezifikation pro Level, Review zwischen Levels
+
+###Prüfwerkzeuge
+![Prüfwerkzeuge](./images/ITM_PPM_ZusfUnterricht_QM_Pruefwerkzeuge.png)
+
+###Qualitätsplanung
+  1. Geltungsbereich
+  2. Zuständigkeit / Befugnisse QS-Personal
+  3. Benötigte Ressourcen
+  4. Budgetierung der QS-Aktivitäten
+  5. Qualitätssichernde Massnahmen & Zeitplan
+  6. Zugrunde liegende Normen & Verfahren
+  7. Behandlung von Abweichungen
+  8. Eskalationsverfahren
+  9. Zu erstellende Dokumentation
+  10. Art und Weise der Zusammenarbeit im Projekt
