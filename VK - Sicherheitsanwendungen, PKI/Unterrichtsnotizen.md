@@ -71,3 +71,6 @@ ID + Signatur $sS_{p_{CA}}(ID)$
 ObjectIdentifier :arrow_right: Signaturtyp + Algorithmus
 
 Subject: Enduser oder Sub-CA
+
+#X.509 Zertifikate nach RFC 5280
+Bestandteil X.500-Standards (Verzeichnisdienste), nicht immer optimale Lösungen, da bereits alt, Authentifizierungsstandard für Kommunikationsnetze, 3. Teil des Standards: Formate für digitale Zertifikate

@@ -6,12 +6,22 @@
           * KW 11: OK
           * KW 12: OK
   * Service Design
-    * Buch: Offen
+    * Buch: OK
     * Unterricht
         * KW 13: Offen
 
 ##Projekt- und Prozessmanagement
-  * Buch: Offen (Kapitel: 2, 3, 4, 5, 6, 7, 8, 10, 11)
+  * Buch:
+    * Kapitel 2: OK
+    * Kapitel 3: OK
+    * Kapitel 4:
+    * Kapitel 5:
+    * Kapitel 6:
+    * Kapitel 7:
+    * Kapitel 8:
+    * Kapitel 10:
+    * Kapitel 11:
+
   * Unterricht:
       * KW 11: OK
       * KW 12: OK
@@ -24,5 +34,5 @@
 
 ##SWE
   * Unterricht:
-      * KW 11: In Arbeit
+      * KW 11: Ok
       * KW 12: Offen
