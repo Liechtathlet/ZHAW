@@ -14,7 +14,7 @@
   * Buch:
     * Kapitel 2: OK
     * Kapitel 3: OK
-    * Kapitel 4:
+    * Kapitel 4: OK
     * Kapitel 5:
     * Kapitel 6:
     * Kapitel 7:
@@ -34,5 +34,5 @@
 
 ##SWE
   * Unterricht:
-      * KW 11: Ok
-      * KW 12: Offen
+      * KW 11: OK
+      * KW 12: OK
