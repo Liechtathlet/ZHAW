@@ -15,8 +15,8 @@
     * Kapitel 2: OK
     * Kapitel 3: OK
     * Kapitel 4: OK
-    * Kapitel 5:
-    * Kapitel 6:
+    * Kapitel 5: OK
+    * Kapitel 6: OK
     * Kapitel 7:
     * Kapitel 8:
     * Kapitel 10:
