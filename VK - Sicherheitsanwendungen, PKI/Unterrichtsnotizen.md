@@ -74,3 +74,159 @@ Subject: Enduser oder Sub-CA
 
 #X.509 Zertifikate nach RFC 5280
 Bestandteil X.500-Standards (Verzeichnisdienste), nicht immer optimale Lösungen, da bereits alt, Authentifizierungsstandard für Kommunikationsnetze, 3. Teil des Standards: Formate für digitale Zertifikate
+
+
+
+
+
+
+#
+##Repetition
+Hauptbestandteile Zertifikat:
+  - tbs
+  - AlgID
+  - Sig ($ sS_a(tbs) $)
+
+Erweiterungen / Extensions: Standard / Privat
+
+Auflösung Zertifikatspfad: Via AuthorityKeyIdentifier
+
+CA Zertifikat: Basic constraints, critical, Key Usage: critical (True, sonst immer false)
+
+Dokumentunterschreibung: Key Usage: Content commitment
+
+Attribut CRL: CRLDistributionPoint
+
+Qualifiziertes zertifikat: Nur für natürliche Personen
+
+##Attributzertifikat
+Erweiterung Zertifikat um weitere Attribute (z.B. auch zeitbegrenzt).
+Keine Identifikation, sondern Autorisierung
+
+Analog zu SAML im Web-Bereich
+
+Attribute müssen als OID hinterlegt sein
+
+###ASN1
+objectDigestInfo:objectDigest: Hashwert Identifikationszertifikat
+
+
+#Sperrlisten (CRL)
+crlDistributionPoint: URL für Sperrliste  
+Key-Attribut für Revokation: Seriennummer  
+crlEntryExtension: Bezogen auf jedes Zertifikat  
+crlExtensions: Extensions für CRL selbst
+CRL: Nicht notwendig, wenn normal abgelaufen
+CRL: Nur noch für kleinere CAs oder Sub-CAs, OCSP stattdessen
+
+#Verzeichnisdienst (OCSP)
+RFC2560, via HTTP oder LDAP, Request-Signatur: optional
+
+**TBSRequest (n Requests)**
+  * Request
+    * CertID
+    * hashAlgorithm
+    * issuernamehash
+    * issuerkeyhash ("AuthorityKeyIdentifier", Hash Public key von Issuer)
+    * serialnumber
+    * singleRequestExtension*
+
+**OCSPResponse**
+Immer signiert durch OCSP-Dienst
+
+  * SingleResponse
+    * CertID
+      * hashAlgorithm
+      * issuernamehash
+      * issuerkeyHash
+      * serialnumber
+    * certStatus
+    * thisUpdate
+    * singleExtensions*
+
+  * OCSPResponse (nicht signiert)
+    * responseStatus (nicht optional, immer)
+    * responseBytes (optional, Anfrage falsch, falsches Cert, Inhalt nur wenn Anfrage beantwortbar) :arrow_right: BasicOCSPResponse
+
+  * BasicOCSPResponse
+    * tbsResponseData (signiert)
+
+#XCA
+ZHAW-Root-CA - ZHAW-Sub-CA
+
+##Root-CA
+1. XCA starte
+    1. DB alege. -> Kes Passwort setze
+    1. Certificates
+    1. New Certificate
+        1. Create a self signed certificate with the serial (self signed bedeutet es ist ein Root Zertifikat
+        1. Signature algorithm: SHA 1
+        1. Subject
+        1. Internal name: ZHAW-Root-CA
+        1. countryName: CH
+        1. stateOrProvinceName: Zuerich
+        1. localityName: Zuerich
+        1. organizationName: ZHAW
+        1. organizationUnitName: Certificate Services
+        1. commonName: zhaw-root-ca
+        1. Generate a new key
+        1. Create
+        1. Key usage
+        1. Certificate Sign
+        1. CRL Sign
+        1. Key usage -> Critical
+        1. Extensions
+        1. Type -> Certification Authority
+        1. Path length: 2
+            - Leer = Unendlich lang
+        1. Critical
+        1. Subject Key Identifier
+        1. Authority Key Identifier
+        1. Not after: 10 Jahre gültig
+        1. CRL distribution point -> Edit -> Add -> Content setzen auf: http://crl.zhaw-CA.ch (gibt es aber nicht) -> Apply
+        1. Finales OK
+
+##Sub-CA
+  * use this Certificate for signing: ZHAW-Root-CA
+  * Subject
+    * Generate a new key
+    * Ausfüllen
+  * Key usage
+    * Critical
+    * Certificate sign
+    * CRL sign
+  * Extended key usage
+    * Not critical
+    * OCSP signing
+  * Extensions
+    * Type Authority: Certification Authority
+    * path length: 1, critical
+    * subject key Identifier, authority key Identifier
+    * Time range: kleiner als Root (5)
+    * CRL distribution point (URI:http://crl.zhaw.ch/subca.crl)
+    * OCSP (URI:http://ocsp.zhaw.ch/)
+  * Export DER
+
+##Enduser Zertifikat (EE-Cert)
+  * New Certificate
+    * Use this Certificate for signing: Sub-CA
+    * SHA1
+    * HTTP_client
+    * Generate a new key
+    * Subject (ZHAW-Mail)
+    * Key usage:
+      * Digital Signature
+      * Key Encipherment
+      * Data Encipherment
+    * Extended key usage:
+      * E-mail Protection
+    * Extensions
+      * End Entity
+      * Path length (leer)
+      * Subject Key Identifier
+      * Authority key identifier
+      * Time Range: 1 Year
+      * Subject alternative name: email:brundan1@students.zhaw.ch
+      * CRL distribution point (URI:http://crl.zhaw.ch/subca.crl)
+      * OCSP (URI:http://ocsp.zhaw.ch/)
+    * Export DER, PKCS12 (Private, Public, PW:DaniBrun), PKCS7 (with Chain, Public)
