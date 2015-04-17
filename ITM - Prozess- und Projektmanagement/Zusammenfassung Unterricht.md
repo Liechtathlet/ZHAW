@@ -211,9 +211,9 @@ Max. 6-8 Personen, Recht auf Meinungsäusserung
 
 ###Entwicklungsprozess - V-Modell
   - Anforderungsdefinition (Anforderungsspezifikation) - Abnahmetest
-  - Funktionaler Systementwurf (Systemspezifikation) - Systemtest
   - Technischer Systementwurf (Detailspezifikation) - Integrationstest
   - Komponentenspezifikation (Programmspezifikation) - Komponententest
+  - Funktionaler Systementwurf (Systemspezifikation) - Systemtest
   - Implementierung
 
 Jeweils Testspezifikation pro Ebene, Review auf gleicher Ebene  
@@ -233,3 +233,71 @@ Jeweils Spezifikation pro Level, Review zwischen Levels
   8. Eskalationsverfahren
   9. Zu erstellende Dokumentation
   10. Art und Weise der Zusammenarbeit im Projekt
+
+
+##Vorgehensmodelle
+  * Wasserfallmodell (mit Rückkoppelung): Req - Analyse - Design - Constr. Design - construction - Prod. / Maint. - Analyse bis Prod: QS / Test
+  * V-Modell  
+    Validierung: erste zwei Ebenen und Links gegen Rechts, Verifikation: untere drei Ebenen und rechts gegen Ergebniss links
+    * Req-Def - Abnahmetest
+    * Fkt. Sysentwurf - Systemtest
+    * Techn. Sysentwurf - Integrationstest
+    * Komp. Spez. - Komponententest
+    * Implementierung
+  * V-Modell 97
+  * Rational Unified Process (RUP)
+  * Sprialmodell
+
+###Basistechniken
+![](./images/ITM_PPM_Kapitel2_MethodenModelle_Basistechniken.png)
+
+###Einsatzarten
+![](./images/ITM_PPM_Kapitel2_MethodenModelle_Einsatzarten.png)
+
+###Strukturierte Analysen
+![](./images/ITM_PPM_Kapitel2_MethodenModelle_StruktAnalysis.png)
+
+###Real Time Analysis
+![](./images/ITM_PPM_Kapitel2_MethodenModelle_RealTimeAnalysis.png)
+
+###Allgemeines Vorgehen SW/HW Evaluation
+  * Projektvorgaben
+  * Marktanalyse
+  * Erarbeitung Pflichtenheft
+  * Vorbereitung Bewertungsdokumente
+  * Vorauswahl (KO Kriterien)
+  * Einholen der Offerten
+  * Evaluation im engeren Sinne
+  * Ergebnisanalyse
+  * Kosten- / Nutzen Analyse
+  * Erstellen Evaluationsbericht
+  * Antrag / Weiteres Vorgehen
+  * Verträge
+
+###Aufbau Pflichtenheft / Offerte
+  * Angaben über Offertsteller
+  * Summary (Ausgangslage, Generelle Ziele, Gesamtübersicht, wichtigste Kriterien, Preis- / Kostneübersicht)
+  * Applikationsbeschreibung
+  * Systemplattform (Übersicht, Komponenten, Netzwerk, Infrastruktur, SW)
+  * Anbieter-Information (Generelle Angaben, Referenzen, Wartung, Support, Org, Verträge)
+  * Preise / Kosten (Zusf, Details)
+  * Antworten Fragekatalog
+  * Diverses / Beilagen
+
+###Nutzwertanalyse
+Relatives Gewicht: Gewicht Sub-Punkt % Gewicht Oberpunkt = Absolutes Gewicht, Vergabe Punkte x Absolutes Gewicht = Total
+
+###Kosten / Nutzen Diagramm
+y-Achse: Kosten (tief zu hoch), x-Achse: Nutzwert (tief zu hoch)
+
+###SWOT-Analyse
+Strength, Weaknesses, Opportunities, Threats
+
+###Erhebungstechniken
+Diverse, Kreative Techniken: Brainwriting (6-3-5er): 6 Tn, 3 Gedacken, 5 mal zirkulieren - Morphologischer Kasten: Zerlegung Problem in Teilprobleme, Delphi-Befragung (Befragung Experten),
+
+###POSAT ZH
+![](./images/ITM_PPM_Kapitel2_MethodenModelle_POSATZH.png)
+
+###Prince 2
+![](./images/ITM_PPM_Kapitel2_MethodenModelle_Prince2.png)

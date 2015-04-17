@@ -1,0 +1,36 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF8
+
+
+@Book{,
+  Title                    = {Wirtschaftsinformatik - Eine Einführung},
+  Author                   = {Laudon, Kenneth C. and Laudon, Jane P. and Schoder, Detlef},
+  Publisher                = {Pearson Studium},
+  Year                     = {2009},
+  Edition                  = {2},
+  Month                    = {November},
+
+  Owner                    = {Daniel Brun},
+  Timestamp                = {2014.11.12}
+}
+
+@Electronic{ZHAW:2012:Seminararbeit:Reglemente,
+  Title                    = {Reglement: Seminararbeit},
+  Author                   = {Stern, Olaf},
+  Language                 = {Deutsch},
+  Month                    = {August},
+  Organization             = {ZHAW},
+  Url                      = {https://ebs.zhaw.ch/files/documents/informatik/Reglemente/Bachelor/Seminararbeit/a_Reglement-Seminar_Studiengang-Informatik_V2.1.docx},
+  Year                     = {2012}
+}
+
+@Book{TVT:Chronik:150,
+  Title                    = {150 Jahre Vereinsgeschichte Turnverein Thalwil},
+  Author                   = {TV-Thalwil},
+  Publisher                = {Turnverein Thalwil},
+  Year                     = {2014},
+
+  Owner                    = {Daniel Brun},
+  Timestamp                = {2014.11.01}
+}
+
