@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.28)  9 APR 2015 20:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.28)  17 APR 2015 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3472,9 +3472,7 @@ File: german.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 \c@pagesLTS.alph.1.local.cnt=\count498
 \c@pagesLTS.roman.1.local.cnt=\count499
 
-(./content/0-Introduction.aux) (./content/1-InitialSituation.aux)
-(./content/2-Analysis.aux) (./content/3-Selection.aux)
-(./content/4-Evaluation.aux) (./content/5-Summary.aux)
+(./content/0-Introduction.aux)
 \c@pagesLTS.arabic.1.local.cnt=\count500
 )
 \openout1 = `ZHAW_SM_ComputerForensik_Daniel_Brun.aux'.
@@ -3974,37 +3972,97 @@ number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 16.42499pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 16.42499pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 16.42499pt
-number indent by \l@... (toc, 2):  41.61002pt
-text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.8916pt
-text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 41.61002pt
-number indent by \l@... (toc, 2):  41.61002pt
-text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.8916pt
-text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 41.61002pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 16.42499pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 16.42499pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 0):  0.0pt
+text indent by \l@... (toc, 0):  16.42499pt
+number indent by parent (toc, 0):  0.0pt
+text indent calculated (toc, 0): 12.59247pt
+number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 0):  0.0pt
+text indent by \l@... (toc, 0):  16.42499pt
+number indent by parent (toc, 0):  0.0pt
+text indent calculated (toc, 0): 12.59247pt
+number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 0):  0.0pt
+text indent by \l@... (toc, 0):  16.42499pt
+number indent by parent (toc, 0):  0.0pt
+text indent calculated (toc, 0): 12.59247pt
+number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, -1):  0.0pt
 text indent by \l@... (toc, -1):  21.9pt
 number indent by parent (toc, -1):  0.0pt
@@ -4097,8 +4155,9 @@ LaTeX Warning: Citation 'ZHAW:2012:Seminararbeit:Reglemente' on page 1 undefine
 d on input line 11.
 
 
-Overfull \hbox (3.57008pt too wide) in paragraph at lines 11--12
-\T1/lmr/m/n/10.95 (-20) ment zur Ver-fas-sung ei-ner Se-mi-nar-ar-beit ([[]]) 
+Overfull \hbox (16.68578pt too wide) in paragraph at lines 11--12
+\T1/lmr/m/n/10.95 (-20) gle-ment zur Ver-fas-sung ei-ner Se-mi-nar-ar-beit ([[]
+]) 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -4109,22 +4168,24 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 16.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
-
-LaTeX Warning: Citation 'Pearson:WirtschaftsInf:LaudonEtAl' on page 1 undefined
- on input line 18.
-
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 19.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 23.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 [1] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
@@ -4135,51 +4196,20 @@ Package babel Info: Redefining ngerman shorthand "~
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 27.
 
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-
-
-LaTeX Warning: Reference `sec:PotentialFunctionality' on page 2 undefined on in
-put line 22.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
-
-LaTeX Warning: Reference `sec:Initial:DigitalCentury' on page 2 undefined on in
-put line 32.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 36.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 36.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 39.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-Package cleveref Info: loaded `ngerman' language definitions on input line 192.
-
+)
+Package cleveref Info: loaded `ngerman' language definitions on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 36.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [2]
@@ -4190,58 +4220,132 @@ Package babel Info: Redefining ngerman shorthand "~
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
+
+Kapitel 2.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 36.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 36.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 37.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 47.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 47.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+[3] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-Package cleveref Info: loaded `ngerman' language definitions on input line 192.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 47.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [3]
+ [4]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+
+
+
+Kapitel 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 47.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 48.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 48.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 55.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
+[5] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 55.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-\openout2 = `content/1-InitialSituation.aux'.
+ [6]
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
-No file content/1-InitialSituation.tex.
-\openout2 = `content/2-Analysis.aux'.
 
-No file content/2-Analysis.tex.
-\openout2 = `content/3-Selection.aux'.
+Kapitel 4.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 56.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 56.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 59.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 59.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 192.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 192.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-No file content/3-Selection.tex.
-\openout2 = `content/4-Evaluation.aux'.
-
-No file content/4-Evaluation.tex.
-\openout2 = `content/5-Summary.aux'.
-
-No file content/5-Summary.tex.
+ [7] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 217.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4252,23 +4356,8 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 217.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-[4
-\FN@pp@footnotehinttrue 
-\FN@pp@footnotehinttrue 
-\FN@pp@footnotehinttrue 
-\FN@pp@footnotehinttrue 
-\FN@pp@footnotehinttrue 
-] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-
-
-
-
-
-
-
-
-
-
+ [8]
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
 
@@ -4292,7 +4381,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 222.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [5]
+ [9]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -4308,7 +4397,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 222.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [6]
+ [10]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -4329,7 +4418,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 231.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [7]
+ [11]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -4343,7 +4432,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 231.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [8]
+ [12]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -4364,7 +4453,18 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 )
-(./ZHAW_SM_ComputerForensik_Daniel_Brun.tdo)
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.tdo
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+)
 \tf@tdo=\write20
  
 AED: pageslts setting LastPage 
@@ -4378,7 +4478,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 257.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-[9] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+[13] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
 
@@ -4468,9 +4568,47 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-) (./content/1-InitialSituation.aux)
-(./content/2-Analysis.aux) (./content/3-Selection.aux)
-(./content/4-Evaluation.aux) (./content/5-Summary.aux)
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+)
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
@@ -4893,13 +5031,13 @@ run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61053 strings out of 493304
- 1260630 string characters out of 6139871
- 1758786 words of memory out of 5000000
- 62767 multiletter control sequences out of 15000+600000
- 98463 words of font info for 138 fonts, out of 8000000 for 9000
+ 61110 strings out of 493304
+ 1261588 string characters out of 6139871
+ 1761786 words of memory out of 5000000
+ 62831 multiletter control sequences out of 15000+600000
+ 98131 words of font info for 134 fonts, out of 8000000 for 9000
  963 hyphenation exceptions out of 8191
- 65i,12n,101p,10471b,2042s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,101p,10471b,2022s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
@@ -4908,11 +5046,11 @@ mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
 7.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb
 >
-Output written on ZHAW_SM_ComputerForensik_Daniel_Brun.pdf (15 pages, 224155 by
+Output written on ZHAW_SM_ComputerForensik_Daniel_Brun.pdf (19 pages, 227367 by
 tes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 34981 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 39685 words of extra memory for PDF output out of 42996 (max. 10000000)
 
