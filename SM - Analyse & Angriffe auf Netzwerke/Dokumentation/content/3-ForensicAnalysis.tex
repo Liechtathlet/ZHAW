@@ -1,0 +1,62 @@
+\chapter{Forensische Analyse}
+\section{Ablauf}
+Vorbereitung ("`Readiniess"'): Autorisierung, wichtig bei nicht polizeilichen Ermittlern, keine Aktionen auf eigene Faust, mehr Schaden als Nutzen
+Schutz der Beweismittel: Keine Veränderung an Daten möglich, Schutz eigene Umgebung
+Imaging und Datensammlung: Bitweise Kopie Datenträer, Sammlung Daten vom "`Lebenden"' System
+Untersuchung und Bewertung Informationen: Analyse und Relevanzbewertung
+Dokumentation: Alle Phasen, schlüssig sofort dokumentieren
+
+Evaluation 
+Collection
+Analysis
+Presentation
+Review
+
+S-A-P-Modell:
+\begin{itemize}
+\item Secure
+\item Analyse
+\item Present
+\end{itemize}
+
+Analyse:
+\begin{itemize}
+\item Einbruchsanalyse 
+	-(Wer hatte Zugang?) Hinweise zu Täter --> Ermittlung Ausmass / Einschützung Schaden, Insiderwissen
+	-Was hat der Angreifer auf Sys gemacht?, Bestimmt weiteres Vorgehen und Gegenmassnahmen, Daten einsicht / Modifikation / Zerstörung, Installation SW, neue User, Hintertüren?
+	-Zeitpunkt Vorfall (Wichtig für Daten von anderen Quellen)
+	-Weitere betroffene Systeme --> Recovery Planung, Zusatzinfos, mehr Spuren / Beweise
+	-Wieso dieses System? Offene Schwachstellen? Besonder Daten?
+	-Wie kam der Angreifer rein? Technik und Tools, Hinweise täter, 
+	-Ist der täter noch aktiv? ist schon weg? kommt er wieder?
+\item Schadensfeststellung
+	- Bestimmung auf was für Daten / Informationen der Täter zugriff gehabt hätte
+	- Evtl. noch aktive Passwortsniffer o.ä? Aufspüren, Passwörter ändern
+\item Analyse der Tools
+	- Was würde zurückgelassen? Spuren / Tools, Hinweise auf weitere / eigentliche Ziele?
+	- Hinweise herkunft / Täter
+	- Wie wurden Tools aufgerufen? Von Hand, via Copy & Paste (Zeilenweise), Scripts (Rasche eingabe)
+	- Programmiersprache Tools, Einschränkung Täterkreis, z.T. im Programmcode Hinweise zum Täter (Kommentare, Copyright, ...., Sprache)
+	- Querabgleich Binärdateien andere kompromitierte Systeme oder gefundene Dateien bei mutmasslichen Tätern
+\item Logdatei-Analyse
+	-Logs: netzwerkverbindungen, Firewall, Router, IDS - Wenn nicht: wieso?
+	-Was verraten die Logs? Quelle, weitere Ziele ,Muster
+	-Sicherung Logs Remote Access Systeme
+	-Vermutung Innentäter: Sicherung Daten Zutrittskontrolle / Videoüberwachung
+\item Weitere Beweissuche
+	-Datenträger Analyse
+	-Spuren von verwendeten Applikationen
+	-Gelöschte Dateien
+	-Versteckte Dateien? Dateimaskierung, versteckte Speicherorte
+	-Verschlüsselte Datein vom Angreifer vorhanden? Evtl. Hinweise wenn schlecht gesichert
+	-Versteckte Partitionen?
+	-Bekannte versteckte Hintertüren / Fernzugriff (Rootkits, trojanisierte Systemprogramme)
+\end{itemize}
+
+\section{Techniken}
+\section{Ablauf}
+
+
+\section{Hinweise}
+-Zeuge / Zweitperson bei Ermittlungen anwesend
+-Protokollierung sämtliche Schritte (Abnahme durch Zeuge)

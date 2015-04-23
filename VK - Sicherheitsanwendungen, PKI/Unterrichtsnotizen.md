@@ -230,3 +230,5 @@ ZHAW-Root-CA - ZHAW-Sub-CA
       * CRL distribution point (URI:http://crl.zhaw.ch/subca.crl)
       * OCSP (URI:http://ocsp.zhaw.ch/)
     * Export DER, PKCS12 (Private, Public, PW:DaniBrun), PKCS7 (with Chain, Public)
+
+    
