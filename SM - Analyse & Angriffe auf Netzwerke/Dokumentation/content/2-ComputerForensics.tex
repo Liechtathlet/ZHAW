@@ -1,11 +1,15 @@
 \chapter{Computer Forensik}
+
 \section{Einbettung und Definition}
 \subsection{Forensik}
-Forensik, Wissenschaftszweig, Nachweis + Aufklärung strafbare Handlungen,
-Begriffs-Ursprung: antikes Rom, Gerichtsverfahren, Untersuchungen, Urteile, Strafvollzug auf dem Marktplatz, öffentlich, lat.: forum: Marktplatz, Forum (Plural: Foren)
-Heute: Systematische Analyse, Kriminelle Handlungen identifizieren, analysieren, rekonstruieren, ...
+\subsubsection{Ursprung}
+Der Begriff "`Forensik"' stammt aus den Zeiten des antiken Roms. Damals wurden Gerichtsverfahren, Untersuchungen, Urteilsverkündungen und der Vollzug von Strafen öffentlich auf dem Marktplatz abgehalten. Marktplatz (oder auch Forum) wird im lateinischen mit \it{forum} bezeichnet. Die Plural-Form von \it{forum} ist \it{foren}. Aus dieser Plural-Form hat sich der Begriff "`Forensik"' entwickelt.
+
+\subsubsection{Bedeutung}
+Die Forensik ist ein Wissenschaftszweig, welche sich mit dem Nachweis, Beweis und der Aufklärung von kriminellen, oder allgemein strafbaren, Handlungen beschäftigt. Die forensische Untersuchung ist eine systematische Analyse mit dem Ziel strafbare Handlungen zu identifizieren, analysieren und rekonstruieren.
 
 \subsubsection{Teilbereiche}
+Die Forensik gleidert sich in zahlreiche Unterbereiche. Dazu gehören unter anderem: 
 \begin{itemize}
 \item Forensische Phsychiatrie
 
@@ -19,10 +23,11 @@ http://forensictrak.com/faq.html
 http://de.wikipedia.org/wiki/Forensik
 
 \subsection{IT- / Digitale Forensik}
-http://de.wikipedia.org/wiki/IT-Forensik
-http://www.ehow.com/facts_6733855_difference-computer-forensics-digital-forensics_.html
+%http://de.wikipedia.org/wiki/IT-Forensik
+%http://www.ehow.com/facts_6733855_difference-computer-forensics-digital-forensics_.html
 
 \subsection{Computer Forensik}
+Die Computer Forensik
 Die Computer Forensik
 Einbettung in Forensik, Digitale Forensik
 
@@ -41,6 +46,18 @@ Ziel: nach Systemeinbruch / Sicherheitsvorfall: Methode / Schwachstelle finden, 
 
 Wenn am Anfang nicht klar ob jur. Schritte: Trotzdem immer gleichen Prozess verwenden.
 Unvoreingenommenheit
+Gewisse Beweise kurze Halbwertszeit (meist sehr spannend), erfordern besonnenes / koordiniertes erfassen, Bewusstsein, dass System in jedem Fall verändert wird
+
+Sachbeweis: Festplate, Logs, Gutachten, Fingerabdruck - keine Beweiskraft, nicht zugeordnet, keine Aussagekraft alleine, erst im Kontext, Beweiskraft erst druch Person, die Beweis in Tat-ZSH bringt, Sachbeweis eng mit Personenbeweis verbunden
+Beweis rasch Bedeutungslos, weniger Beweiskraft, wenn Person unrichtig darstellt, widerlegbare Behauptungen, Interpretationen, dachliche Darstellung, Integrität Person und Glaubwürdigkeit wichtig, sachliches, fundiertes Gutachten durch unglaubwürdige Darstellung als nichtig betrachtet
+
+\section{Hinweise zum Datenschutz}
+Datenschutz bei personenbezogenen Daten auch bei Auswertungen zum Zug
+Schweizer Recht??
+
+Vorgängige Klärung wenn Logs personenbezogene Daten beinhalten, Information Datenschutzbeauftrager, Security \& Compliance, IT-leiter, REvision, Vier-Augen-Prinzip wahren
+
+DS bei Ermittlung nicht ausser Kraft, aber kein Täterschutz, Verhältnismässigkeit
 \section{Themengebiete und Teilbereiche}
 
 \section{Anwendungsbereich}
@@ -57,6 +74,14 @@ Unvoreingenommenheit
 --Anwendungssoftware-Ebene
 
 \section{Unterscheidung Daten-Typen}
+\begin{itemize}
+\item Empfindliche Daten
+\begin{itemize}
+\item Flüchtige Daten, gehen beim geordneten Shutdown / Ausschalten veroren (Cache, Hauptspeicher, Status NWV, Prozesse,...)
+\item Fragile Daten, zwar auf HD, Zustand kann sich beim Zugriff ändern
+\item Temporär zugreifbare Daten, auf HD, nur zu Bestimmten Zeitpunkten zugreifbar
+\end{itemize}
+\end{itemize}
 -Flüchtig
 -Nicht-Flüchtig
 

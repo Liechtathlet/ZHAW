@@ -35,7 +35,7 @@ Analyse:
 \item Analyse der Tools
 	- Was würde zurückgelassen? Spuren / Tools, Hinweise auf weitere / eigentliche Ziele?
 	- Hinweise herkunft / Täter
-	- Wie wurden Tools aufgerufen? Von Hand, via Copy & Paste (Zeilenweise), Scripts (Rasche eingabe)
+	- Wie wurden Tools aufgerufen? Von Hand, via Copy \& Paste (Zeilenweise), Scripts (Rasche eingabe)
 	- Programmiersprache Tools, Einschränkung Täterkreis, z.T. im Programmcode Hinweise zum Täter (Kommentare, Copyright, ...., Sprache)
 	- Querabgleich Binärdateien andere kompromitierte Systeme oder gefundene Dateien bei mutmasslichen Tätern
 \item Logdatei-Analyse
@@ -54,9 +54,53 @@ Analyse:
 \end{itemize}
 
 \section{Techniken}
+\subsection{Aktuelle Prozesse}
+-z.T. Programm / Prozess gestartet und nachher gelöscht, bei laufenden Prozessen gibt es Binärkopien in /proc, Bei Beendigung: Daten weg
+
+\subsection{Shutdown}
+Herunterfahren: Änderung vieler Zeitstempel, etl. Swap gelöscht
+Steckerziehen, verkraften nicht alle Dateisysteme, Status laufende Umgebung auf Dateisystemm, Extraktion sehr schwierig, Entscheidung im Kontext
 \section{Ablauf}
 
 
 \section{Hinweise}
 -Zeuge / Zweitperson bei Ermittlungen anwesend
 -Protokollierung sämtliche Schritte (Abnahme durch Zeuge)
+
+\subsection{Vorbereitung}
+-Datenträger sjtjerilisieren, am besten formatierjt
+-Dokumente / Formulare / Protokolle
+
+\subsection{Secure}
+-Beschreibung Physische Umgebung, detailliert, Fotos)
+-Beschreibung Umgebung (Computer), detailliert Fotos
+-Aktuelle Uhrzeit + Referenzzeit
+-Liste von Prozessen
+
+-Regeulärer Shutdwon? Ja / Nein
+Mögliche Fehler Beweissammlung:
+-Zeitstempel an Datein werden verändert (z.T. schon durch Ansehen der Datei, oder aufrufen von Systembefehlen)
+-Keine Verwendung von grafischen Tools (Zugriff auf Vielzahl von Binärdateien / Konfigurationen --> Änderung Zeitstempel)
+-Verdächtige Prozesse nicht beenden
+-Alle Befehle protokollieren, sonst Lücke in Beweiskette
+-Keine Verwendung vertrauensunwürdiger Programme / Systemtools (evtl. Sys-Dateien ausgetausch, eigene vorkompilierte Dateien)
+-Patches / Updates: nur wenn Response-Team das empfiehlt, grundsätzlich offen lassen für Analyse, Abwägen je nach Kritikalität / Zusätzlichem Schaden bei offen lassen
+-Software (de)-installieren auf Empfehlung Response-Team, Vernichtung Beweise, Installation Forensik-Tools: Abwägung, Vernichtung Spuren, 
+-Protokolle nicht auf zu untersuchende Platte schreiben (Beweise gefährdet, FIle slack...)
+-Ordnungsgemässer Shutdown könnte Beweise vernichten 
+
+\subsection{Analyse}
+-Bewertung Beweisspuren: 3 Gruppen: 1: Untermauern bestimmte Theorie, wiederlegen bestimmte Theorie, unterstützen keine best. Theorie
+Zuordnung der Informationen
+
+
+\subsection{Dokumentation}
+Wenn elektronisch: Verwendung vn Prüfsummen
+
+Viele Screenshots zum festhalten oder mit Kamera
+
+Untersuchungstools mit Versionsnummer
+
+Unterschrift durch Zeuge: Gesamtes protokoll, und einzeln bei wichtigen Feststellungen / Beweisen
+
+Pro Beweis: Beweiszettel, kein Zweifel an Herkunft, Besitztum, Unversertheit bestehen, Pro Objekt ein Zettel (Festplatte, PDA, Ausdruck, CD-Rom, Notebook)

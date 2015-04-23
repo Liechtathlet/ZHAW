@@ -8,9 +8,11 @@
 | Dokument vorbereiten      | -          | 2         |
 | Angriffe, IR, ID          | 21.04.2015 | 1         |
 | Angriffe, IR              | 22.04.2015 | 3         |
+| Angriffe, IR, CF          | 22.04.2015 | 1         |
+| Computer Forensik         | 23.04.2015 | 2.5       |
 
 ##Calculation-Log
-  - 8,2,1,3
+  - 8,2,1,3,1,2.5
 
 ##Total
-Total (h): 14
+Total (h):  17.5
