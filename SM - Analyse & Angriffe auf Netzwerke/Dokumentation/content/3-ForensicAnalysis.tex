@@ -1,6 +1,6 @@
 \chapter{Forensische Analyse}
 \section{Ablauf}
-Vorbereitung ("`Readiniess"'): Autorisierung, wichtig bei nicht polizeilichen Ermittlern, keine Aktionen auf eigene Faust, mehr Schaden als Nutzen
+Vorbereitung ("`Readiniess"'): Autorisierung, wichtig bei nicht polizeilichen Ermittlern, keine Aktionen auf eigene Faust, mehr Schaden als Nutzen, Incident-Response-Plan
 Schutz der Beweismittel: Keine Veränderung an Daten möglich, Schutz eigene Umgebung
 Imaging und Datensammlung: Bitweise Kopie Datenträer, Sammlung Daten vom "`Lebenden"' System
 Untersuchung und Bewertung Informationen: Analyse und Relevanzbewertung
@@ -19,6 +19,12 @@ S-A-P-Modell:
 \item Present
 \end{itemize}
 
+--
+Collection: Idenify, label, record, acquire data, preserve integrity, in timely manner
+Examination: forensically processing data, 
+Analysis: analyze result, using legally justifiable methods and techniques to derive useful information zur unterstützung des falles
+Reporting: describing actions used, how tools / procedures were selected, , other actions, ....
+---
 Analyse:
 \begin{itemize}
 \item Einbruchsanalyse 
@@ -72,10 +78,39 @@ Steckerziehen, verkraften nicht alle Dateisysteme, Status laufende Umgebung auf 
 -Dokumente / Formulare / Protokolle
 
 \subsection{Secure}
+Sicherung möglichst vieler Daten, ohne eigene Spuren zu hinterlassen
+Zuerst Daten, die nach Shutdown oder hartem Shutdown nicht mehr verfügbar sind, nicht Systembefehle verwenden!!
+Protokolldateien auf externtes Medium (eigenes), evtl. auch Scripte zum Zusammenzug der Informationen, 
+
+
 -Beschreibung Physische Umgebung, detailliert, Fotos)
 -Beschreibung Umgebung (Computer), detailliert Fotos
--Aktuelle Uhrzeit + Referenzzeit
--Liste von Prozessen
+-Aktuelle Systemzeit + Referenzzeit, + Abweichung
+-Liste der aktiven Prozesse
+-Liste der geöffneten Sockets
+-Liste der Anwendungen, die auf geöffnete Sockets lauschen
+-Liste der User, die angemeldet sind
+-Liste der Systeme, die gerade eine Netzverbindung haben oder vor kurzem hatten
+
+Anschliessend, Suche nach:
+-Timestamps gehacktes System
+-Trojanisierte Systemprogramme
+-Versteckte Dateien / Verzeichnissen
+-Verdächtige Dateien / Sockets
+-Verdächtige Prozesse
+
+-Sicherung Cache- und Auslagerungsdateien
+-Sicherung Hauptspeicher pro Prozess-ID
+-Offene Netzwerkports
+-Verbindungen im Auf-/Abbau
+-erfolglose Verbindungsauf- / abbauversuche
+-Prozesse: Umgebungsvariablen, Übergabeparameter, geladnee Bibliotheken, offene Dateideskriptoren, etc.
+-Wechseldatenträger sicherstellen
+-Hauptspeicher: Inhalt + Strukturdaten (Welcher Prozess welche Biblio, Belegung Speicherbereich), Strukturiert und komplett dumpen
+
+-Forensische Duplikation: Bitweise 1:1 Kopie Speichermedium, mehrere Varianten: 1. Ausbau, Anschluss saubere Platte an System, Kopie via Netzwerk, Wichtig: Writeblocker (Verhindert physisch den Schreibzugriff auf das zu sichernde Medium), gewisse Bereiche auf Datenträgern wo Daten versteckt werden können: z.B. Host Protected Area, Device Configuration Overlay --> Verfahren auswählen, dass diese Daten auch sichert, Sicherung durch Checksummen, Hash-Algorithmen
+
+Verwendung Duplikat: Grundsätzlich sinnvoll, bessere Analysemöglichkeiten (Notaufnahme vs. Gerichtsmedizin), Sinnvoll wenn: Strafverfolgung, Sicherstellung Beweise, ...
 
 -Regeulärer Shutdwon? Ja / Nein
 Mögliche Fehler Beweissammlung:
@@ -89,10 +124,64 @@ Mögliche Fehler Beweissammlung:
 -Protokolle nicht auf zu untersuchende Platte schreiben (Beweise gefährdet, FIle slack...)
 -Ordnungsgemässer Shutdown könnte Beweise vernichten 
 
+
+Sicherstellung:
+-Haupteinheit (evtl. nur Datenträger)
+-Montor + Tastatur: i.d.R. nicht, nur bei Spezialgeräten
+-Dazugehörige Stromkabel
+-Externe Festplatten, Disketten, DVD, CD, WORM, Backup-Bänder, USB, Speicherkarten
+-Externe Kommunikationssysteme, welche für die Analyse benötigt werden: WLAN-Router, Modem, etc.
+-Spezialhardware und -peripherie
+-Digitalkameras, MP3-Player, etc.
+-PDAs, Mobile-Telefone, ....
+
+Jeweils Abwägung, ob Schaden durch Beeinträchtigung Arbeitsfähigkeit (Mitnahme Gerät / Teile) grösser wird, als das einfache Delikt
+
+\subsection{Erste Schritte}
+Einige Allgemeingültige Schritte, je nach System / Gerät etwas anders (Mobiletelefone, etc.)
+
+\subsubsection{System ist ausgeschaltet}
+-Fremde Personen vom System und Stromversorgung entfernen
+-Umgebung fotografieren / skizzen anfertigen
+-Aktive Druckjobs zu Ende laufen lassen
+-System nicht einschalten (Achtung Notebooks, Deckel nicht hochklappen)
+-Sicherstellung System ausgeschaltet (Bildschirmschoner)
+-System evtl. im Standby-Modus? Bei Notebooks: Akku entfernen, sodass Energiesparmodus nicht anspringt (Veränderung Zeitstempel)
+-Stromkabel entfernen
+-Netzwerkkabel entfernen
+-Geräte und Objekte Beschriften (Beweiszettel)
+-Umgebung / Notizen / Unterlagen utnersuchen
+-Befragung Anwender nach: Besonderheiten System, Passwörter, Konfigurationsspezifika -> Dokumentation & Hinterfragen
+-Protokoll
+
+
+\subsubsection{System ist eingeschaltet}
+-Fremde Personen vom System und Stromversorgung entfernen
+-Umgebung fotografieren / skizzen anfertigen
+-Aktive Druckjobs zu Ende laufen lassen
+-Befragung Anwender nach: Besonderheiten System, Passwörter, Konfigurationsspezifika -> Dokumentation & Hinterfragen
+-Bildschirminhalte festhalten
+-Keyboard / Maus wenn möglich nicht sofort berühren, Bildschirm blank / Bildschirmschoner: Ermittlungsleiter fragen, bezüglich "`aufwecken"', Zeitstempel festhalten)
+-Live-Response (Siehe oben)
+-Protokoll
+
 \subsection{Analyse}
 -Bewertung Beweisspuren: 3 Gruppen: 1: Untermauern bestimmte Theorie, wiederlegen bestimmte Theorie, unterstützen keine best. Theorie
 Zuordnung der Informationen
 
+Schwierigkeit: Kausaler und zeitlicher Zusammenhang herstellen, müssen mit anderen Ereignissen überinstimmen, plausiebel, nachvollziehbar
+
+Fragen / Hilfe:
+-War physischer Zugang zum System notwendig? Ja --> Zutrittskontrolle / Überwachung prüfen
+-Wer hatte noch Zugang zum Computer? Zutrittskontrolle / Überwachung prüfen
+-War Cronjob / Scheduler aktiv? --> Handlung ohne Anwesenheit Tatverdächtiger --> Prüfung Logs Betriebssystem / Scheduler
+-Digitale Spur durch Fremdeinwirkung / Einwirkung dritter?
+-Weitere Beweise Bekräftigung / Widerlegung digitale Spuren?
+-Computerkenntnisse Tatverdächtiger? Was war für Know-How notwendig?
+-Hardware transportabel? Verschleierung Standort durch Verwendung mehrere Computer?
+-Code / Dokument / Mail / .... Verbindung zu Tatverdächtiger? (Stil, Grammatik, Vokabular, ...)
+-Verbindung Spuren und besuchte Webseiten in Verbindung?
+-Hinweise E-Mail-Clients / Chats zur Identifizierung Mittäter / Mitwisser?
 
 \subsection{Dokumentation}
 Wenn elektronisch: Verwendung vn Prüfsummen
@@ -104,3 +193,19 @@ Untersuchungstools mit Versionsnummer
 Unterschrift durch Zeuge: Gesamtes protokoll, und einzeln bei wichtigen Feststellungen / Beweisen
 
 Pro Beweis: Beweiszettel, kein Zweifel an Herkunft, Besitztum, Unversertheit bestehen, Pro Objekt ein Zettel (Festplatte, PDA, Ausdruck, CD-Rom, Notebook)
+
+
+Collection / Aquisition:
+Power Down System and boot into secure environement oder Write Blockers + Anschluss an Analyse-Syste, Runterfahren: Stromquelle entfernen (Kabel ziehen)
+
+1. Runter fahren
+2. Sämtliche Laufwerke entfernen --> Dokumentieren und Beweiszettel ausfüllen --> Beweiskette etablieren, Innenleben dokumentieren (schriftlich, Fotos)
+3. Sämtliche Datenträger sicherstellen, Beweiskette, wenn berechtigt: Arbeitsumgebung durchsuchen (!Corporate Policies berücksichtigen). 
+4. Booten, BIOS-Informationen notieren auf Beweiszettel (Vorabrecherchieren Key für BIOS), Systemdatum -/ Zeit in Beweiszettel, WEnn Zeit anders: bei recover of files: Zeit anpassen
+5. Forensisches Image erstellen
+-a: Wipe Drive (Vorbereitungsarbeit, wenn möglich nicht vor Ort)
+-b: Create Image with EnCase Bootable, Wenn EnCase Boot disk: Kein Write-Blocker notwendig, EnCase verhindert schreiben, Image benötigt in der Regel etwas mehr Platz als das original, immer Hash erstellen, Imaging auf -windows OS-Basis: Immer Write-Blocker, Linux: schreibt nicht auf Geräte, kein mount, Power Down Linux, Attach Drive, Power Up
+6.	Hash erzeugen und speichern, am besten auf Beweiszttel
+7.	Bag and Tag: Laufwerke auf die, die Images geschrieben wurden beschriften, sicher unterbringen, (anti-statischer Sack, sicherer Ort), Original-Laufwerk: je nach Szenario: auch eintüten oder wieder in Betrieb
+
+Bemerkung zur Remote Untersuchung: nicht immer physischer Zugang möglich, weit entfernt, Einsatz von Forensik-tools via Netzwerk, Voraussetzung: Vorinstallierter Client auf System, voraus testen

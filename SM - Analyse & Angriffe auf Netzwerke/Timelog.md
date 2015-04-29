@@ -10,9 +10,12 @@
 | Angriffe, IR              | 22.04.2015 | 3         |
 | Angriffe, IR, CF          | 22.04.2015 | 1         |
 | Computer Forensik         | 23.04.2015 | 2.5       |
-
+| Recherche                 | 26.04.2015 | 3         |
+| Recherche                 | 27.04.2015 | 1         |
+| Recherceh / CF            | 27.04.2015 | 1         |
+| Recherche CF / FA, FAT    | 29.04.2015 | 1.5       |
 ##Calculation-Log
-  - 8,2,1,3,1,2.5
+  - 8,2,1,3,1,2.5,3,1,1,1.5
 
 ##Total
-Total (h):  17.5
+Total (h):  23

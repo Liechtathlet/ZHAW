@@ -5,6 +5,8 @@
 \subsubsection{Ursprung}
 Der Begriff "`Forensik"' stammt aus den Zeiten des antiken Roms. Damals wurden Gerichtsverfahren, Untersuchungen, Urteilsverkündungen und der Vollzug von Strafen öffentlich auf dem Marktplatz abgehalten. Marktplatz (oder auch Forum) wird im lateinischen mit \it{forum} bezeichnet. Die Plural-Form von \it{forum} ist \it{foren}. Aus dieser Plural-Form hat sich der Begriff "`Forensik"' entwickelt.
 
+Evtl. noch Definitionen aus NIST-Paper Seite ES-1
+
 \subsubsection{Bedeutung}
 Die Forensik ist ein Wissenschaftszweig, welche sich mit dem Nachweis, Beweis und der Aufklärung von kriminellen, oder allgemein strafbaren, Handlungen beschäftigt. Die forensische Untersuchung ist eine systematische Analyse mit dem Ziel strafbare Handlungen zu identifizieren, analysieren und rekonstruieren.
 
@@ -62,6 +64,13 @@ DS bei Ermittlung nicht ausser Kraft, aber kein Täterschutz, Verhältnismässig
 
 \section{Anwendungsbereich}
 
+-Klassisch: Strafuntersuchungen, Computer Security Incident Handling
+-Operative Problembehebung
+-Log Monitoring
+-Data Recovery
+-Data Acquisition
+-Due Diligence / Regulatory Compliance
+
 \section{Ziele}
 
 \section{Ausbildung \& Zertifizierung}
@@ -86,3 +95,10 @@ DS bei Ermittlung nicht ausser Kraft, aber kein Täterschutz, Verhältnismässig
 -Nicht-Flüchtig
 
 Evtl. Matrix mit Zuordnung Techniken / Themenbereichen zu Typen und Sicherungsebenen
+
+\section{Anti-Forensik}
+Verschleierung Spuren, Anti-Forensik-Werkzeuge / Technologien, Be- / Verhinderung Analyse, falsche Spuren, Löscheung / Veränderung relevante spuren
+
+Primäres Ziel: Vorgaukeln, dass nichts verdächtiges vorgefallen ist, Anti-Detection: Tat und Täter sollen unterkannt bleiben, Anti-Forensik: Behinderung Ermittler, Datensammlung stören / unterbinden, Ablenken, Zeitkntingent / -budget Ermittler, falsche Fahrte
+
+Angriff auf Werkzeuge: bei komplexen Angriffen / längere Zeit, Ermittlung eingesetzte Forensik-Werkzeuge, Netzbereich der Ermittler, IP-Analysesysteme, Bugs / Sicherheitslücken in Forensik-Werkzeugen: Manipulation Ermittlung, wenn nicht in geschützten Analyseumgebungen: grosser Schaden durch Angreifer, Verschleierung Anti-Forensik-methoden, eher Anti-Detection: Gebrauchsspuren regelmässig löschen / oder Verhinderung entstehung, Arbeit mit virtuellen Umgebungen (via USB-STicks, o.ä.), Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...

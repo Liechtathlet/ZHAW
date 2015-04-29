@@ -1,0 +1,35 @@
+\chapter{Tools und Techniken}
+
+\section{Image-Related / Data-Aquisitation}
+\subsection{Laufwerk löschen}
+EnCase, statisches überschreiben (nur einmal), 
+
+Attach to System, Windows, Start EnCase, Tools -> Wipe Drive, Select Device, Defaults as are, Next, HECF; S. 69
+Kein WippingUtility, bei spezialfällen / wenn notwendig: Wipeutility: Linux: "`dd if=/dev/random of=/dev/<image drive>"'
+
+
+\subsection{Image erstellen}
+EnCase (Seite 72) DOS Boot disk
+EnCase (Windows)
+Linux: Device Name ermitteln: /proc/partitions oder logs, dann: "`dd if=/dev/<suspect drive> of=/some dir/image name"', "`md5sum /some dir/image name"', "`md5sum /dev/<suspect drive>"'
+Midifzierte Version von dd, dcfldd für Forensik: http://dcfldd.sourceforge.net
+
+FreeHelix
+
+FTKImager (Windows)
+
+\subsection{Image verifizieren}
+EnCase, Tools, Verify Single Evidence File
+Linux: md5sum "`image file"', compare
+
+
+
+
+\section{Kommerzielle Tools}
+-SMART
+-Helix (ein Teil Freeware)
+
+Remote Untersuchungen:
+-EnCase Enterprise Edition
+-Paraben Enterprise
+-ProDiscover

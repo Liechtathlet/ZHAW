@@ -73,5 +73,55 @@ Business Prozesse: Primäre Quelle für Bedarf an Services
   * Chief Sourcing
   * Officer
   * Product Manager
-  
+
+##Service Design
+**4 P's:**
+  - People
+  - Processes
+  - Products
+  -
+
+**5 Aspekte:**
+  -
+
+**Prozess:**
+  - Service Design
+    - Business Requirements
+    - Servic Requirements
+    - Service
+
+    - Service Design Package: Gesamte Dokumentation Service  
+
+**Disziplinen für Service Design:**
+    - Service Level Management: Kunde (Service Requirements) - SLA -  SL Manager (Service Catalogue), SLM - OLA - RZ, SLM / Rz - Underpinning-Contract (Sicht Externer: SLA) - Externer Provider (Supplier Management)
+    - Service Catalogue Managament: Business Service Cataogue (Public), Technical Service Catalogue (Interne Sicht, HW, SW, Anwendungen, Daten)
+    - Capacity Management
+    - Availability Management
+    - Service Continuity Management
+    - Information Security Management
+    - Supplier Management
+
+###Disziplinen
+
+####Supplier Management
+Supplier \& Contract Database (SCD), Parallelen Beschaffungsprozess (Procurement), BP: Strateie, Spezifikation, Offerte einholen, Lieferantenauswahl, Bestellung, Warenannahme, ...
+
+####Availability Management
+Reaktive Aktivitäten: Monitoring, Messungen, Analyse, ...
+
+OLA Verfügbarkeit: Abängig: Wartbarkeit
+Underpinning Contract: Verfügbarkeit: Abhängig
+
+
+####Capacity Management
+#####BCM
+
+#####SCM
+
+#####CCM
+
+####Security Management
+Datensicherheit: Verfügbarkeit, Vertraulichkeit, Integrität  
+Physische Sicherheit, Logische Sicherheit, Netzwerksicherheit, Anwendungssicherheit, ...
+
 ##Service Transition

@@ -231,4 +231,44 @@ ZHAW-Root-CA - ZHAW-Sub-CA
       * OCSP (URI:http://ocsp.zhaw.ch/)
     * Export DER, PKCS12 (Private, Public, PW:DaniBrun), PKCS7 (with Chain, Public)
 
-    
+
+    #Timestamp-Dienst
+    Parameter: Hash Dokument, Ein Dokument aufs Mal mit Timestamp signieren, n können zurück kommen.
+
+#Hash
+Kollisionsresistenz (Geburtstagsangriff), gleicher Hash für gleiche Eingabe,
+
+##SHA-1
+Bläcke ä 512 Bit, Padding beim letzten Block (falls notwendig) bis zu 448 Bits, 64 Bit für Bit-Länge der ursprünglichen Nachricht, Grenze $ 2^64$
+
+  - Alle 512 Bit Blöcke in 16 32-Bit (Big Endian) unterteilen
+  - Epansion der 16 32-Bit Worte auf 80 32-Bit Worte
+  - Kompression über 4 Runden
+  - Addition der Hash-Werte :arrow_right: Hash-Wert (160 Bit)
+
+  #HMAC
+  ##HMAC
+  grössere Entropie  , bessere Kollisionsresistenz
+
+    - Schlüssel-Länge (aufgepaddet mit 0)),
+    - XOR mit ipad (Konstant)
+    - + Nachricht
+    - Hash-Wert
+    - + Schlüssel XOR opad (Konstant)
+
+#SSL
+Je höher die Schicht, desto unsicherer
+
+
+##Übung
+Zertifizierungsanfrage (Public Key, Subject Information)
+
+  - Neues Zertifikat zu abgelaufenem Zertifikat, Unterschreiben mit altem Private Key
+
+~~~
+openssl
+req -nodes -new -newkey rsa:2048 -outform DER -out csr.der
+./dumpasn1 al csr.der
+~~~
+
+  - -nodes: optional, Private Key wird auch in die csr.der geschrieben
