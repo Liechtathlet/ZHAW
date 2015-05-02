@@ -1,52 +1,93 @@
 \chapter{Computer Forensik}
 
+Dieses Kapitel definiert den Begriff der Computer Forensik und beschreibt das Themengebiet im Allgemeinen. 
+
 \section{Einbettung und Definition}
 \subsection{Forensik}
 \subsubsection{Ursprung}
-Der Begriff "`Forensik"' stammt aus den Zeiten des antiken Roms. Damals wurden Gerichtsverfahren, Untersuchungen, Urteilsverkündungen und der Vollzug von Strafen öffentlich auf dem Marktplatz abgehalten. Marktplatz (oder auch Forum) wird im lateinischen mit \it{forum} bezeichnet. Die Plural-Form von \it{forum} ist \it{foren}. Aus dieser Plural-Form hat sich der Begriff "`Forensik"' entwickelt.
-
-Evtl. noch Definitionen aus NIST-Paper Seite ES-1
+Der Begriff "`Forensik"' stammt aus den Zeiten des antiken Roms. Damals wurden Gerichtsverfahren, Untersuchungen, Urteilsverkündungen und der Vollzug von Strafen öffentlich auf dem Marktplatz abgehalten. Marktplatz (oder auch Forum) wird im lateinischen mit \textit{forum} bezeichnet. Die Plural-Form von \textit{forum} ist \textit{foren}. Aus dieser Plural-Form hat sich der Begriff "`Forensik"' entwickelt.
 
 \subsubsection{Bedeutung}
 Die Forensik ist ein Wissenschaftszweig, welche sich mit dem Nachweis, Beweis und der Aufklärung von kriminellen, oder allgemein strafbaren, Handlungen beschäftigt. Die forensische Untersuchung ist eine systematische Analyse mit dem Ziel strafbare Handlungen zu identifizieren, analysieren und rekonstruieren.
 
-\subsubsection{Teilbereiche}
-Die Forensik gleidert sich in zahlreiche Unterbereiche. Dazu gehören unter anderem: 
-\begin{itemize}
-\item Forensische Phsychiatrie
+Der "`Guide to Integrating Forensic Techniques into Incident Response"' des \gls{acr:NIST} beinhaltet eine kurze und prägnante Definition für den Begriff der "`Forensik"'.
 
-\item Computer-Forensik
+\begin{center}
+\textbf{"`Forensic science is generally defined as the application of science to the law"'} \cite[S. ES-1]{E:2006:NIST:Guide:IncidentResponse}
+\end{center}
+
+Übersetzt bedeutet dies so viel wie "`Forensische Wissenschaft ist allgemein definiert, als die Anwendung der Wissenschaft für das Gesetz"'.
+
+
+\subsubsection{Teilbereiche}
+Wie in der vorangehenden Definition bereits angedeutet, gibt es grundsätzlich für jeden Wissenschaftszweig einen entsprechenden Wissenschaftszweig in der Forensik. Nachfolgend sind einige für die Strafverfolgung bedeutensten Teilbereiche der Forensik aufgelistet.
+
+\begin{itemize}
+\item Forensische Pathologie
+\item Forensische Kriminaltechnik
+\item Forensische Phsychiatrie und Psychologie
+\item Forensische Toxikologie
 \item Ballistik
-\item Rechtsmedizin
+\item Computer-Forensik
 \end{itemize}
 
-https://www.mtholyoke.edu/org/forensic/fields.html
-http://forensictrak.com/faq.html
-http://de.wikipedia.org/wiki/Forensik
 
 \subsection{IT- / Digitale Forensik}
-%http://de.wikipedia.org/wiki/IT-Forensik
-%http://www.ehow.com/facts_6733855_difference-computer-forensics-digital-forensics_.html
+Die IT-, bzw. Digitale, Forensik beschäftigt sich mit der Auffindung, Untersuchung und Wiederherstellung von Material, bzw. Daten, auf elektronischen, bzw. digitalen, Geräten. Dabei kann es sich zum Beispiel sowohl um verlorene Daten, als auch um explizites oder nicht explizites Beweismaterial handeln.
+
+\subsubsection{Teilbereiche}
+Die Unterteilung der IT- / Digitalen Forensik in ihre Teilgebiete ist nicht offiziell definiert. Nachfolgend wird eine mögliche Unterteilung aufgezeigt. Diese Unterteilung ist nicht vollständig und nicht abschliessend.
+
+\begin{itemize}
+\item Computer Forensik
+\item Forensische Datananalyse
+\item Datenbank Forensik
+\item Mobile Device Forensik
+\item Netzwerk Forensik
+\item Forensische Videoanalyse
+\item Forensische Audioanalyse
+
+\end{itemize}
+
 
 \subsection{Computer Forensik}
-Die Computer Forensik
-Die Computer Forensik
-Einbettung in Forensik, Digitale Forensik
+Für die Definition der Computer Forensik existieren zum heutigen zwei verschiedene Ansätze. Ein Ansatz sieht die Computer Forensik als Teilgebiet der IT-, bzw. der Digitalen Forensik. Der andere Ansatz betrachtet den Begriff Computer Forensik als Synonym zu den Begriffen IT- und Digitale Forensik.
+
+Diese Arbeit richtet sich nach dem ersten Ansatz, bei dem die Computer Forensik ein Teilgebiet der Digitalen Forensik ist.
+
+
+\todo{Definition Computer Forensik}
+
+\todo{Grafik Einbettung}
 
 
 \section{Einführung}
-Ziel: nach Systemeinbruch / Sicherheitsvorfall: Methode / Schwachstelle finden, Bezifferung Schaden, Identifikation Angreifer, Beweissicherung für juristische Schritte
+Die Computer Forensik kann in verschiedenen Kontexten zum Einsatz kommen. Zum einen erfolgt während, bzw. nach einem Sicherheitsvorfall (Incident), z.B. Systeminbruch eine forensische Untersuchung (Mehr dazu im Kapitel \ref{chap:AIDI}). 
+
+Im Kontext der Incident Response ist es das Ziel der Computerforensik die ausgenutzte Schwachstelle zu finden, den Schaden zu beziffern, den Angreifer zu Identifizieren und die Beweise für allfällige juristsiche Schritte zu sichern.
+
+Im Kontext der Untersuchung von Straftaten ist es das Ziel, 
 
 \section{Hinweise für die juristische Verwertbarkeit}
--Angewendete Methoden / Techniken / Programme sollten in Fachwelt beschrieben / akzeptiert / gängig sein, neue Verfahren / Tools schwierig, nicht unmöglich
--Glaubwürdigkeit: Schritte / Ergebnisse müssen Nachvollziehbar sein (im Detail), Ermittler muss Ablauf / Hintergrund erklären können, (Programm mit Daten füttern, loslassen)
--Sämtliche Schritte / Methoden müssen reproduzierbar sein (durch Dritte)
--Integrität: sichergestellte Daten dürfen nicht verändert werden, muss jederzeit belegt werden können
--Ursache / Wirkung: Gewählte Methoden: möglichst logische, nachvollziehbare Verbindung person - Ereignis - Beweisspuren
--Angemessene Dokumentation
+Sollen die sichergestellten Daten und Informationen juristisch verwertbar sein, zum Beispiel als Beweise in einem Strafprozess müssen einige zusätzliche Punkte beachtet werden. Grundsätzlich ist es sinnvoll die folgenden Punkte bei jeder Untersuchung zu berücksichtigen.
+
+\subsection{Methoden, Techniken und Programme}
+Die angewendeten Methoden und eingesetzten Techniken und Programme sollten in der Fachwelt akzeptiert und beschrieben sein. Neue Tools und Verfahren haben in der Regel einen schweren Stand, bis diese allgemein akzeptiert wurden.
+
+\subsection{Glaubwürdigkeit und Reproduzierbarkeit}
+Um die Glaubwürdigkeit der Ergebnisse sicherzustellen müssen sämtliche Schritte und die resultierenden Ergebnisse von Laien nachvollzogen werden können. Zusätzlich müssen die Ergebnisse durch einen anderen Experten reproduziert werden können. Der Ermittler, bzw. die Person, welche die forensische Untersuchung durchgeführt hat, muss in der Lage sein den gesamten Ablauf im Detail zu erklären. Erklärungen im Stiel von "`Diese Information wurde vom eingesetzten Analyse-Programm automatisch gefunden"' sind nicht gern gesehen und können die Glaubwürkdigkeit der gesamten Untersuschung in Frage stellen.
 
 
-Wenn am Anfang nicht klar ob jur. Schritte: Trotzdem immer gleichen Prozess verwenden.
+\subsection{Integrität}
+Während der gesamten Ermittlung (und auch darüber) hinaus muss die Integrität der untersuchten Daten und gefundenn Informationen, Daten und Beweise lückenlos sichergestellt werden. Die Integrität muss jederzeit vollständig belegt werden können.
+
+\subsection{Präsentation und Dokumentation}
+Die Ergebnisse müssen angemessen dokumentiert und präsentiert werden. Am geeignetsten ist es, wenn die Ergebnisse in Form von Ursache - Wirkung aufgezeigt werden. Die Beweisspuren, Ereignisse und Personen sollen möglichst logisch und nachvollziehbar in Relation zu einander gebracht werden.
+
+
+
+
+
 Unvoreingenommenheit
 Gewisse Beweise kurze Halbwertszeit (meist sehr spannend), erfordern besonnenes / koordiniertes erfassen, Bewusstsein, dass System in jedem Fall verändert wird
 
@@ -61,7 +102,7 @@ Vorgängige Klärung wenn Logs personenbezogene Daten beinhalten, Information Da
 
 DS bei Ermittlung nicht ausser Kraft, aber kein Täterschutz, Verhältnismässigkeit
 \section{Themengebiete und Teilbereiche}
-
+-HW, SW, AW
 \section{Anwendungsbereich}
 
 -Klassisch: Strafuntersuchungen, Computer Security Incident Handling
@@ -96,9 +137,9 @@ DS bei Ermittlung nicht ausser Kraft, aber kein Täterschutz, Verhältnismässig
 
 Evtl. Matrix mit Zuordnung Techniken / Themenbereichen zu Typen und Sicherungsebenen
 
-\section{Anti-Forensik}
-Verschleierung Spuren, Anti-Forensik-Werkzeuge / Technologien, Be- / Verhinderung Analyse, falsche Spuren, Löscheung / Veränderung relevante spuren
+\section{Anti-Forensik und Anti-Detection}
+Straftäter und Angreifer auf Computer Systeme werden sich immer mehr bewusst, dass sie Spuren auf dem System hinterlassen. Diese versuchen dann entweder keine oder so wenig Spuren wie möglich zu hinterlassen, Spuren und Beweise zu verändern oder gar zu löschen oder falsche Fährten zu legen. Dies kann entweder manuell oder mit Hilfe von Anti-Forensik und Anti-Detection Tools erfolgen.
 
-Primäres Ziel: Vorgaukeln, dass nichts verdächtiges vorgefallen ist, Anti-Detection: Tat und Täter sollen unterkannt bleiben, Anti-Forensik: Behinderung Ermittler, Datensammlung stören / unterbinden, Ablenken, Zeitkntingent / -budget Ermittler, falsche Fahrte
+Das primäre Ziel dabei ist, zu verhindern, dass das Eindringen oder die verdächtige Handlung entdeckt wird. Dies wird eigentlich eher dem Themenbereich der Anti-Detection, also dem "`Unbemerkt bleiben"', zugeordnet. Bei der Anti-Detection versuchen die Täter unerkannt und unbemerkt zu bleiben. Zusätzlich wird versucht die Ermittler zu behindern, abzulenken oder die Datensammlung zu stören oder zu unterbinden. Zum Teil wird auch versucht den Umstand ausgenutzt, dass für eine Ermittlung nur eine beschränktes Zeitkontingent und Budget vorhanden ist. Dies kann dazu führen, dass der Ermittler nur die Beweise findet, die er soll und sich dann aus zeitlichen und budgettechnischen Gründen damit zufrieden gibt und die Untersuchung abschliesst.
 
-Angriff auf Werkzeuge: bei komplexen Angriffen / längere Zeit, Ermittlung eingesetzte Forensik-Werkzeuge, Netzbereich der Ermittler, IP-Analysesysteme, Bugs / Sicherheitslücken in Forensik-Werkzeugen: Manipulation Ermittlung, wenn nicht in geschützten Analyseumgebungen: grosser Schaden durch Angreifer, Verschleierung Anti-Forensik-methoden, eher Anti-Detection: Gebrauchsspuren regelmässig löschen / oder Verhinderung entstehung, Arbeit mit virtuellen Umgebungen (via USB-STicks, o.ä.), Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...
+Kennt der Angreifer die eingesetzten Werkzeuge oder kann diese ermitteln, kann er Schwachstellen und Sicherheitslücken in diesen ausnutzen und gezielt angreifen. im schlimmsten Fall kann der Angreifer die Ermittlungen gezielt manipulieren, ohne dass der Ermittler dies bemerkt. Daher sollte die Analyse zum einen in einer geschützten Umgebung durchgeführt werden und die verwendete regelmässig upgedatet werden.

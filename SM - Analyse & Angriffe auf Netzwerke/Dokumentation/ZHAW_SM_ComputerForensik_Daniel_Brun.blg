@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ZHAW_SM_ComputerForensik_Daniel_Brun.aux
+The style file: biblatex.bst
+A level-1 auxiliary file: content/0-title.aux
+A level-1 auxiliary file: content/0-Introduction.aux
+A level-1 auxiliary file: content/1-AngriffeIncidentResponse.aux
+A level-1 auxiliary file: content/2-ComputerForensics.aux
+A level-1 auxiliary file: content/3-ForensicAnalysis.aux
+A level-1 auxiliary file: content/4-ToolsAndTechniques.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ZHAW_SM_ComputerForensik_Daniel_Brun-blx.bib
+Database file #2: bib/e.bib
+Biblatex version: 2.8
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 8 entries,
+            6047 wiz_defined-function locations,
+            1181 strings with 9784 characters,
+and the built_in function-call counts, 20904 in all, are:
+= -- 957
+> -- 441
+< -- 311
++ -- 202
+- -- 119
+* -- 1072
+:= -- 1056
+add.period$ -- 0
+call.type$ -- 8
+change.case$ -- 186
+chr.to.int$ -- 39
+cite$ -- 22
+duplicate$ -- 2398
+empty$ -- 2448
+format.name$ -- 165
+if$ -- 4925
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 0
+newline$ -- 159
+num.names$ -- 271
+pop$ -- 2334
+preamble$ -- 1
+purify$ -- 163
+quote$ -- 0
+skip$ -- 1192
+stack$ -- 0
+substring$ -- 814
+swap$ -- 814
+text.length$ -- 201
+text.prefix$ -- 10
+top$ -- 1
+type$ -- 285
+warning$ -- 0
+while$ -- 138
+width$ -- 0
+write$ -- 150

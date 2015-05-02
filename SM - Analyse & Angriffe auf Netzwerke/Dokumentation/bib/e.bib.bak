@@ -1,0 +1,81 @@
+% This file was created with JabRef 2.10b2.
+% Encoding: UTF-8
+
+@Electronic{ZHAW:2012:Seminararbeit:Reglemente,
+  Title                    = {Reglement: Seminararbeit},
+  Author                   = {Stern, Olaf},
+  Language                 = {Deutsch},
+  Month                    = {August},
+  Organization             = {ZHAW},
+  Url                      = {https://ebs.zhaw.ch/files/documents/informatik/Reglemente/Bachelor/Seminararbeit/a_Reglement-Seminar_Studiengang-Informatik_V2.1.docx},
+  Year                     = {2012}
+}
+
+@Electronic{Lex:Springer:Forensik,
+  Title                    = {Forensik},
+  Author                   = {Prof. (FH) Mag. Dr. Helmut Siller},
+  HowPublished             = {Web},
+  Language                 = {DE},
+  Organization             = {Wirtschaftslexikon Gabler},
+  Url                      = {http://wirtschaftslexikon.gabler.de/Archiv/1408495/forensik-v3.html},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.04.23}
+}
+
+@Electronic{,
+  Title                    = {Advanced persistent threats and other advanced attacks},
+  Author                   = {Websense},
+  HowPublished             = {PDF},
+  Language                 = {EN},
+  Note                     = {Rev2},
+  Organization             = {Websense},
+  Url                      = {https://www.websense.com/assets/white-papers/whitepaper-websense-advanced-persistent-threats-and-other-advanced-attacks-en.pdf},
+  Year                     = {2011},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.04.22}
+}
+
+@Electronic{,
+  Month                    = {April},
+  Url                      = {http://de.wikipedia.org/wiki/Hacker_(Computersicherheit)},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.04.22}
+}
+
+@Electronic{,
+  Month                    = {April},
+  Url                      = {https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/400106/Common_Cyber_Attacks-Reducing_The_Impact.pdf},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.04.22}
+}
+
+@Electronic{,
+  Title                    = {Cyber Incident Response Guide},
+  HowPublished             = {PDF},
+  Language                 = {EN},
+  Month                    = {April},
+  Organization             = {Multi-State Information Sharing and Analysis Center (MS-ISAC)},
+  Url                      = {http://msisac.cisecurity.org/members/local-government/documents/finalincidentresponseguide.pdf},
+  Year                     = {2010},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.04.22}
+}
+
+@Electronic{,
+  Title                    = {Guide to Integrating Forensic Techniques into Incident Response},
+  Month                    = {August},
+  Organization             = {NIST},
+  Url                      = {http://csrc.nist.gov/publications/nistpubs/800-86/SP800-86.pdf},
+  Year                     = {2006},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.04.22}
+}
+

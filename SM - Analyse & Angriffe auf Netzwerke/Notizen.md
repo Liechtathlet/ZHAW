@@ -18,4 +18,21 @@
 
 ##Coole links
   - https://apt.securelist.com/#firstPage
-  
+  - http://resources.infosecinstitute.com/category/forensics-2/
+
+###Challenges
+  - http://www.forensicfocus.com/images-and-challenges
+  - http://old.honeynet.org/challenge/
+  - http://dc3.mil
+
+##Forensik Seiten
+  - http://forensicswiki.org
+  - http://resources.infosecinstitute.com/category/forensics-2/
+
+##Sample Data
+  - http://digitalcorpora.org/
+  - https://www.isfce.com/sample-pe.htm
+  - http://resources.infosecinstitute.com/linux-and-disk-forensics/
+
+###Wissenslinks
+  - http://resources.infosecinstitute.com/linux-and-disk-forensics/

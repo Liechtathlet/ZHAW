@@ -1,69 +1,83 @@
-\chapter{Angriffe, Incident Detection \& Incident Response}
+\chapter{Angriffe, Incident Detection \& Incident Response} \label{chap:AIDIR}
 In diesem Kapitel wird erläutert, wie typische Angriffe ablaufen, wie diese erkannt und anschliessend entsprechend reagiert werden kann.
 
 
 \section{Angriffe}
-Kenntniss über Angriffsverfahren, -methoden, -techniken wichtig, da auf diese reagiert, untersucht werden muss
+Für die Reaktion auf Angriffe und die Untersuchung von Angriffen ist es wichtig die grundlegenden Angriffsverfahren, -methoden und -techniken zu verstehen. In diesem Kapitel werden die wichtigsten Punkte erläutert.
 
-Es kann zwischen generellen und zwischen Massgeschneiderten Attacken und Tools unterschieden werden....
 
-\subsection{Angriffskategorien}
--Un-Targeted attacks, so viele Geräte, Services, User als möglich, Opfer spielt keine Rolle, Ausnutzung der Offenheit des Internets, z.B. Phising, Water holing, ransomware, scanning
--Targeted attacks: organisation / service / user, spezifisches interesse, Basisarbeit: z.T. mehrere Monate, fataler, Maasgeschneidert, z.B. Spear-Phsining, deploying botnet, subverting supply chain
--Targeted Attacks: Heute auch oft spezifische Angriffscodes für einzelne Unternehmen, Codes unbekannt, schwierigere Erkennung
--Advanced Persistent Threats: Solange als mölgich unerkannt bleiben, so viel als möglich, so wenig wie möglich zum unerkannt bleiben, Angriff über mehrere lange Phasen, Kein Vorgängiges Wissen zu Schwachstellen beim Ziel, Monate / Jahre, Schadcode ist so gebaut, dass er nicht gefunden wird, bleibt unbemerkt bestehen
+\subsection{Angriffstypen}
+Grundsätzlich können zwei Angriffstypen unterschieden werden. Auf der einen Seite stehen Massenangriffe, so genannte "`un-targeted attacks"', deren Ziel es ist so viele Geräte oder Services als möglich zu treffen. Das einzelne Opfer spielt dabei eine untergeordnete Rolle. Phising und Malware sind zwei Beispiele für solche Massenangriffe. Ausgenutzt wird hier grundsätzlich immer die Offenheit des Internets.
 
-\subsection{Typen von Schwachstellen}
--Flaws: ungbeabsichtigte Funktionalität, Schlechtes Design oder Fehler, oft lange unentdeckt
--Features: Missbrauch vorgesehen Funktion,
--User Error: z.B. unerfahrner Administrator, welcher Schwachstellen "freischaltet", Default-Passowrt, ...
+Auf der anderen Seite stehen gezielte Angriffe, so genannte "`targeted attacks"'. Diese Attacken sind in der Regel auf das Ziel oder das spezifische Szenario, massgeschneidert. Solche Angriffe werden über mehrere Monate hinweg geplant und vorbereitet. Oft sind diese Codes spezifisch entwickelt worden und können somit von Intrusion-Detection-Systemen und Anti-Viren-Software nicht oder nur sehr schwer erkannt werden. Ein Beispielt für eine solche Attacke wäre Spear-Phising.
+
+Bei den gezielten Angriffen hat sich in den letzten Jahren eine neue Unterkategorie, die Kategorie der "`advanced persistent threats"'. Ziel dieser Angriffe ist es, möglichst lange unerkannt zu bleiben und den Einbruch zu vertuschen. Dabei werden gerade so viele Daten gesammelt, bzw. Aktionen durchgeführt, dass der Täter noch unerkannt bleibt. Ein solcher Angriff wird über mehrere Monate, wenn nicht sogar Jahre, hinweg vorbereitet und anschliessend Schritt für Schritt umgesetzt. Auch der eingesetzte Schadcode wird so gebaut, dass dieser möglichst lange unterkannt bliebt, aber trotzdem so viel Nutzen als möglich erbringen kann.
+
+
+\subsection{Kategorien von Schwachstellen}
+Bei einem Angriff werden immer vorhandene Schwachstellen ausgenutzt. Diese Schwachstellen können in drei Kategorien unterteilt werden.
+
+\begin{itemize}
+\item \textbf{Flaws (Fehler / Mängel)} \\
+Bei einem Flaw handelt es sich um eine unbeabsichtigte Funktionalität der Anwendung. Dieser kann entweder durch schlechtes Design oder simpel und einfach durch einen Implementierungsfehler entstehen.
+\item \textbf{Features (Funktionalitäten)} \\
+Hier wird eine vorhandene Funktionalität für andere Zwecke missbraucht. Dabei handelt es sich um keinen Fehler in der Anwendungen, sondern um eine Funktionalität, welche entsprechend spezifiziert wurde.
+\item \textbf{User Errors (Benutzer Fehler)} \\
+User Errors werden durch den Benutzer verursacht. Zum Beispiel könnte ein unerfahrener Systemadministrator unwissentlich Schwachstellen im System freischalten.
+\end{itemize}
 
 
 \subsection{Komplexität}
-Nimmt laufend zu, Monokulut Komponenten, OS, Anwendungen, Angriffstechniken auch komplexer, Anforderungen an Hacker immer höher,
-Bild CF Seite 13
+Durch die vorherrschende Monokultur von Betriebsystemen, Anwendungen und Komponenten werden die Anforderungen an Hacker immer grösser. Mit den steigenden Anforderungen werden auch die Angriffe und die Angriffstechniken immer komplexer.
+
+\todo{Bild CF Seite 13}
 
 
 \subsection{Täter}
-Vielschichtige Motivationen, Soziale Motivation, Technische Ambitionen, Politische / Finanzielle / staatlich-politische Motivation, Regierung, Gruppen (Anonymous)
-Vielfältige Berufsbezeichnungen (Elite, Hacker, Script Kiddies, Cracker, ...), Hacker: neutral, Cracker-: negativ, White (Hackerethik, z.B. für Penetrationstests), Gray, Black-Hats
+Die Motivation von Tätern sind sehr unterschiedlich. Dies reicht von Sozielen, politischen, finanziellen, staatlich-politischen Motivationen über technische Ambitionen bis hin zu Regierungen oder Gruppierungen wie Anonymous. Neben der Motivation können die Täter nach Aussen- und Innentätern unterschieden werden. Innentäter verfügen über Insider-Wissen und arbeiten in der Regel für das angegriffene Unternehmen oder die angegriffene Organisation. Der Anteil an Innentätern am gesamten Tätervolumen ist sehr hoch und wächst stetig. Unternehmen und Organisationen sind sich dessen aber nicht immer bewusst und wähnen sich in falscher Sicherheit.
 
--Innen- / Aussentäter, Innentäter: Vorteile, Anteil bei Verbrechen relativ hoch, Unternehmen wähnen sich in falscher Sicherheit,
+Die "`Berufsbezeichnungen"' der Täter sind sehr unterschiedlich und vielfältig. Nachfolgend sind einige der gängigsten Bezeichnungen und deren Bedeutung aufgelistet.
+
+\todo{Vervollständigen}
+\begin{itemize}
+\item \textbf{Elite} \\
+\item \textbf{Hacker} \\
+Neutraler Begriff
+\item \textbf{Cracker} \\
+Negativ
+\item \textbf{Script Kiddy} \\
+\item \textbf{White-Hat} \\
+Berücksichtigung Hackerethik, Penetrationstests
+\item \textbf{Gray-Hats} \\
+\item \textbf{Black-Hats} \\
+...
+\end{itemize}
 
 
 \subsection{Typischer Ablauf}
 Ein Angriff kann in die nachfolgenden Phasen gegliedert werden. Diese können je nach Angriff in unterschiedlichen Ausprägungen vorkommen.
 
-Stages:
--Survey: Untersuchen / Analysieren von verfügbaren Informationen, Schwachstellen ermitteln, Social Engeineering, Commodity-Toolkits / -Techniques, Network Scanning, Infos über Org. und IT, user Errors ausnutzen
--Delivery: Soweit kommen, dass die Schwachstelle ausgenutzt werden kann. Angreifer bringt sich in Position (z.B. Zugriff auf Online-Service, Versand Mails mit infizierten Links / Attachment, ifidzierter USB-Stick, Fake Website,), selecting best delivery path to breach defence
--Breach: Ausnutzen der Schwachstelle
--Affect: Auskundschaften der Systeme, Zugriffe erweitern, Hintertüre einrichten, user / admin account,
-
-\todo{CF: Seiten 34-36}
-\begin{itemize}
-  \item Footprinting
-  \item Port- und Protokollscan
-  \item Enumerationng / Penetration
-  \item Hintertüren einrichten
-  \item Spuren verwischen
-\end{itemize}
-
-Phasen APT
--Phase 1: Erkennung, Start und Infizieren: Survey, Delivery, + Infect
--Phase 2: Control, Update, Discover, Persist: spread, discover / collect data
--Phase 3: Extract and take action: extract data, take action (sell data, ...)
+\subsubsection{Survey (Untersuchung)}
+In dieser Phase werden so viele Informationen wie möglich gesammelt. Dazu gehören Informationen über die Organisation, die eingesetzte Hard- und Software und Prozesse. Anschliessend wird versucht so viele Schwachstellen wie möglich zu ermitteln. Zum einen wird ein Footprinting durchgeführt, welches so viele Informationen wie möglich über die Systeme zu Tage befördern soll. Zum Footprinting gehören unter anderem Port- und Protokollscanns und DNS- und WHOIS-Abfragen. Zum anderen werden mit Hilfe von Social Engeineering und Commodity-Toolkits und -Techniken weitere Schwachstellen ermittelt.
 
 
-\section{Incident Detection}
-Bevor auf ein Angriff reagiert werden kann, muss zuerst bemerkt werden, dass ein solcher sich anbahn oder bereits in vollem Gange ist.
+\subsubsection{Delivery (Positionierung)}
+Diese Phase beschäftigt sich mit den expliziten Vorbereitungen für die Ausnutzung der Schwachstellen. Der Angreifer versucht das für dieses Szenario am besten geeignete Vorgehen zu ermitteln und bringt sich anschliessend in Position um die Schwachstellen auszunutzen. Eine typische Aktion in dieser Phase wäre zum Beispiel der Versand einer infizierten E-Mail oder das Unterjubeln eines inifizierten USB-Sticks.
 
-...
 
-Wichtig ist, dass nach einer Incident Detection das Incident Response Team unverzüglich Informiert wird. Ist kein Incident Response Team vorhanden und gibt es in der Unternehmung keine entpsrechende Anlaufstelle, ist das Vorgehen mit....
-Keine übereilten Reaktionen, da der Angreifer allenfalls etwas bemerkt
+\subsubsection{Breach (Ausnutzung)}
+In dieser Phase wird die Schwachstelle ausgenutzt, um dem Angreifer Zugang zum gewünschten System zu verschaffen.
 
-Grossteil Angriffe nicht verfolgt, viele nicht bemekrt
+\subsubsection{Affect (Beeinträchtigung / Infizierung)}
+Nach dem der Angreifer Zugang zum System erlangt hat, unternimmt er weitere Schritte um sein eigentliches Ziel zu erreichen. Dies kann zum Beispiel die Erweiterung seiner Zugriffsrechte, die Einrichtung von Hintertüren, die Sammlung von Daten oder der Angriff eines weiteren Systemes sein.
+
+
+\subsubsection{Clean Up (Aufräumen)}
+Je nach Ziel und Zweck des Angreifers verwischt er seine Spuren und räumt auf, damit er unerkannt bleibt oder allenfalls zu einem späteren Zeitpunkt nochmals zurückkehren kann.
+
+\section{Incident Detection (Erkennung eines Vorfalls)}
+Bevor auf einen Angriff, beziehungsweise auf einen Sicherheitsvorfall, reagiert werden kann muss dieser zuerst bemerkt werden. Bleibt der Vorfall unterkannt, wird es nie zu einer Untersuchung kommen.
+Ein Angriff kann durch verschiedenste Indikatoren erkannt und zum Teil sogar vorausgesagt werden. Nachfolgend werden einige dieser Indikatoren aufgelistet.
 
 \subsection{Hinweise Netzwerkseitig}
 \begin{itemize}
@@ -74,22 +88,30 @@ Grossteil Angriffe nicht verfolgt, viele nicht bemekrt
 \subsection{Hinweise Serverseitig}
 \begin{itemize}
   \item Unbekannte Prozesse
-  \item Unbekannte User
+  \item Unbekannte / Neue User
   \item Unbekannte Dateien
   \item Ungewöhnliche Systemlast
   \item Dienste laufen nicht mehr
   \item Ungewöhnliche Systemanmeldungen
+  \item Systemabsturz
+  \item Kleiner werdende Log-Files
+  \item Bestehende Dateien werden grösser (Beispiel: Ausführbare Datei wächst um mehrere kB)
+  \item Versuch Berechtigungen zu verändern
+  \item Schlechte Performance
 \end{itemize}
 
 \subsection{Hinweise durch Intrusion-Detection-Systeme}
-Erkennung von Angriffen / Angriffsmustern, nicht verhindern, wenn gut konfiguriert: Frühzeitig Anzeichen erkennen, Beweise sammeln
-, Data Loss Prevention Technology
+Intrusion-Detection-Systeme sind dazu da Angriffe möglichst früh zu erkennen und die entsprechenden Stellen zu informieren. Ist das Intrusion-Detection-System gut konfiguriert, kann dieses Angriffe anhand von Strategien und Mustern erkennen.
+
+\todo{Data Loss Prevention Technology}
+
 
 \subsection{Weitere Hinweise}
--Externe Hinweise: Kunden / Partnern / MA, Strafverfolgungsbehörde, Presse, Intrustion-Mapping-Systeme
--RFC 2196, Abschnitt 5.3
+Weitere Hinweise können durch Kunden, Partner, Mitarbeiter, Strafverfolgungsbehörden oder die Presse erfolgen.
+\todo{Intrustion-Mapping-Systeme}
 
 \subsection{Meldung eines Vorfalles}
+
 -Richtige Informationen abfragen (Merkblatt / Chekliste)
 --Basisinfos: Aktuelle Uhrzeit, Wer / Welches System berichtet Vorfall, Art und Weise Vorfall, Vermuteter Zeitpunkt Vorfall, mittelbar / unmittelbar betroffene HW / SW, evtl. Auswirkungen, Schaden, Kontakstelle für ISR und Ermittler
 --Infos über betroffenes System sammeln (!! möglichst nicht vom System abfragen, Datenklassifizierung? Klassifizierung? Ort?, Physischer Zugang?  allgemeiner Systemzustand,)
@@ -103,6 +125,14 @@ Bei Einbruch: erste Risikoabschützung für möglcihe Abschaltzung / Netzdekonne
 Entscheid Abschaltung / Dekonnektion: Management der Systemeigentümer, Basis: Empfehlung ISR
 
 Klassifizierung  des Vorfalls: Probing  / Portscanning, Denial-of--service-Angriff, Unberechtigter Zugriff auf User-Account, ... Admin-Account, Datendiebstahl / -manipulation,
+
+...
+
+Wichtig ist, dass nach einer Incident Detection das Incident Response Team unverzüglich Informiert wird. Ist kein Incident Response Team vorhanden und gibt es in der Unternehmung keine entpsrechende Anlaufstelle, ist das Vorgehen mit....
+Keine übereilten Reaktionen, da der Angreifer allenfalls etwas bemerkt
+
+
+
 \section{Incident Response Team}
 Rasch und richtig handeln
 Eingreiftruppe bei Incidents, Häufig durch Situation bedingt, wer wegen Detailkenntnisse in Gruppe gehört,
