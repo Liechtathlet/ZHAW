@@ -272,3 +272,22 @@ req -nodes -new -newkey rsa:2048 -outform DER -out csr.der
 ~~~
 
   - -nodes: optional, Private Key wird auch in die csr.der geschrieben
+##Protokollstack
+Ziel / Fixpunkt: DNS-Name (localhost:1234/test), Schichten: 5, 6, 7, Daten über Schicht 5 als SSL-Record, SSL beinhaltet / verwendet nirgends IP-Adressen, nur DNS
+
+**SSL/TLS Record Header:** Handshake noch unverschlüsselt
+**Handshake:** Client bleibt anonym (Browser kein Zertifikat), Diffie-Hellmann: Nur wenn Client anonym, sonst nicht, sonst: immer gleicher Key, heute wird Ephemeral Diffie-Hellmann verwendet (DHE_DSS, DHE_RSA), EDH: Vorteil: immer neuer Session Key (auch wenn client gehackt), RSA: Session Key voll von Client abhängig
+
+##Protokoll
+  - hello_request (Aushandlung neuer Session, auch während laufender Kommunikation), Server zu Browser
+  - client_hello (Beginn Aufbau SSL-Session)
+  - Erweitertes client_hello
+  - server_hello
+  - Erweitertes server_hello
+  - certificate (Zertifikat inkl. Chain)
+  - server_key_exchange (bei RSA braucht es dies nicht, nur bei Diffie Hellmann und Diffie Hellmann Ephemeral)
+  - certificate_request
+  - server_hello_done
+  - certificate_verify (Nur client, Bildung Signatur Client, keine Verifikation Zertifikat auf Client)
+  - client_key_exchange
+  - finished

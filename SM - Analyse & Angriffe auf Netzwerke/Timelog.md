@@ -15,12 +15,12 @@
 | Recherceh / CF            | 27.04.2015 | 1         |
 | Recherche CF / FA, FAT    | 29.04.2015 | 1.5       |
 | Texten CF, IR, ID         | 02.05.2015 | 3         |
-
+| Texten CF, IR, ID, ...    | 03.05.2015 | 3         |
 
 ##Calculation-Log
   - 8,2,1,3,1,2.5,3,1,1,1.5
-  - 3
+  - 3, 3
 
 
 ##Total
-Total (h):  27
+Total (h):  30

@@ -301,3 +301,52 @@ Diverse, Kreative Techniken: Brainwriting (6-3-5er): 6 Tn, 3 Gedacken, 5 mal zir
 
 ###Prince 2
 ![](./images/ITM_PPM_Kapitel2_MethodenModelle_Prince2.png)
+
+
+
+#Prozessmanagement
+**Warum:**: Repetitiv / Messbar, Optimierung Abläufe, Qualitätssicherung, Effizienz steigern, Effektivität sichern, Personen unabhängig, Schulungszwecke, Vorgabe Workflow
+
+##Definition
+Sachlogische zusammenhängende Reihe von zielgerichteten Aktivitäten zur Erreichung eines def. Ergebnisses, Kosten durch Ressourcenverbrauch
+
+**Merkmale:**
+  - Ziel
+  - Input (Auslöser)
+  - Aktivitäten (Tätigkeiten)
+  - Output (Ergebnis)
+  - Bedingungen (soziales Umfeld)
+  - Qualität (Leistungsindikatoren)
+  - Messbar
+  - erbringen Resultate
+  - haben Kunden
+
+**Rollen:**
+  - Sponsor
+  - Owner (Ergebnisverantwortlicher)
+  - Manager (Durchführungsverantowrtlicher)
+  - Performer (Mitwirkender)
+  - Coach (Beratender)
+  - Koordinatoren
+  - Controller
+  - ....
+
+**Empfehlungen:**
+  - Top Down
+  - Im Team
+  - Teilnehmerzahl: 5-6
+  - Modellierungsworkshop: mx 4 h
+  - Mind. 4 Termine
+  - Termine nicht mehr als 14 Tage auseinander
+  - Fokus auf 80% der Standardabläufe
+  - Implementierung als Projekt
+
+  **Begriffe:**
+    - BPR: Business Process Reengineering
+    - GPO: Geschäftsprozess Optimierung
+    - KPI: Key Performance Indicators
+    - CSF: Critical Success Factors
+    - Grundsätze ordnungsgemässer Modellierung
+
+###Richtige Prozesse Finden
+Vision - Strategie - Ziele - | Leistungen und Produkte | - Prozesslandkarte, Prozessdetails und STeuerung - Geschüftsprozess / Führungsprozess - Leistungserbringender Prozess / wertschöpfungsprozess, Unterstützungsprozess / Supportprozess

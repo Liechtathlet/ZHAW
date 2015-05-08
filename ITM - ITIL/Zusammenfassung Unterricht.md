@@ -124,4 +124,85 @@ Underpinning Contract: Verfügbarkeit: Abhängig
 Datensicherheit: Verfügbarkeit, Vertraulichkeit, Integrität  
 Physische Sicherheit, Logische Sicherheit, Netzwerksicherheit, Anwendungssicherheit, ...
 
+
+
 ##Service Transition
+Nach Transition :arrow_right: Service Operations
+
+###Disziplinen / Prozesse
+  - **Gesamter Life Cycle**
+    - Change Management
+    - Service Asset Management und Configuration Management System (CMDB)
+    - Knowledge Management
+  - **Fokussiert auf Tranisition Phase**
+    - Transition Planning and Support
+    - Release and Deployment Management
+    - Service Validation and Testing
+    - Evaluation
+
+####Change Management
+Service Change: Hinzufügen, Verändern Entfernen von authorisierten, geplanten, supporteten Services / Service-Komponenten und der dazugehörigen Dokumentation, nur über Change Prozess - Gilt für: Service Assets, Configuration Items  
+
+Strategic Change, Tactical Change, Operational Change
+TODO: Image Slide 9 ST
+
+**Change Management Prozess für Operational Changes:**
+  1.  RFC: Request for Change (Anfrage)
+  2.  Review RFC
+  3.  Beurteilung Change-Typ (S, N, E)
+      - S: Standard Change :arrow_right: Service Request (kleine Änderung, regulär, oft)
+      - E: Emergency Change :arrow_right: Spezialfall
+      - N: Normal Change
+  4.  Verification and Authorization
+  5.  Change Planning
+  6.  Entscheid Go / NoGo
+  7.  CO: Change Order (Übergabe an Techniker, PL, QS-Leiter, etc. für Durchführung)  
+  8.  PIR (Post Implementation Review) durch Change Manager
+
+**Change Advisory Board (CAB):** Wenn grosser / teurer Change  
+**Emergency Advisory Board (ECAB):** Bei Emergency  
+
+
+**7 R's:**
+  - Raise the Change  (Dokumentation)
+  - Reason
+  - Return (financial Benefit)
+  - Risk involved / Impact Analysis / Risk Analysis
+  - Resousrces needed
+  - Responsibility
+  - Relationship between Changes
+
+**Priorisierung:** TODO: Bild slide 13
+
+
+**Rollen:**
+  - Change Manager
+  - CAB
+  - EC/CAB
+
+**Voraussetzungen / Best Practices:**
+  - Konfigurationsmanagement und Release Management als Basis / Voraussetzung
+  - Prozess-Verantwortliche unabhängig von Organisations-Hierarchie
+
+###Configuration Management
+CMS: Config Management System, CMDB: Configuration Management Data Base, SKDB: Service Knowledge Data Base, DML: Definitive Media Library
+Configuration Item (CI): Asset, Service component or other item that is / will be controlled by configuration management, DML: location in which the definitive or approved versions of all software configuration items are stored
+
+**Configuration Items:** Verträge, Netzwerk / Netzwerkkomponenten, Prozessbeschreibungen, Hardware, Prozesse, Rollen, Handbücher, Dokumentation - Tiefe und Umfang abhängig von Ziel und Zweck, Pro Item: Version, Variante, Baseline (Vergleichsbasis)
+
+//TODO: Von Slides vervollständigen
+
+**Rollen:**
+  - Service Asset Manager
+  - Configuration Manager
+  - configuration Analyst
+  - Configuration Administrator / Librarian
+  - CMS / Tool-Administrator
+
+
+//TODO: Bild Slide 36
+
+###Knowledge Management
+CMDB - CMS - Presentation and Processing Layer - Service Knowledge Management System, Ziel: Qualität Managemententscheidungen verbessern, DIKW: Data - Information - Knowledge - Wisdom
+
+TODO: Restliche Slides

@@ -75,7 +75,7 @@ Nach dem der Angreifer Zugang zum System erlangt hat, unternimmt er weitere Schr
 \subsubsection{Clean Up (Aufräumen)}
 Je nach Ziel und Zweck des Angreifers verwischt er seine Spuren und räumt auf, damit er unerkannt bleibt oder allenfalls zu einem späteren Zeitpunkt nochmals zurückkehren kann.
 
-\section{Incident Detection (Erkennung eines Vorfalls)}
+\section{Incident Detection (Erkennung eines Vorfalls)} \label{sec:Angriffe:IncidentDetection}
 Bevor auf einen Angriff, beziehungsweise auf einen Sicherheitsvorfall, reagiert werden kann muss dieser zuerst bemerkt werden. Bleibt der Vorfall unterkannt, wird es nie zu einer Untersuchung kommen.
 Ein Angriff kann durch verschiedenste Indikatoren erkannt und zum Teil sogar vorausgesagt werden. Nachfolgend werden einige dieser Indikatoren aufgelistet.
 
@@ -110,55 +110,55 @@ Intrusion-Detection-Systeme sind dazu da Angriffe möglichst früh zu erkennen u
 Weitere Hinweise können durch Kunden, Partner, Mitarbeiter, Strafverfolgungsbehörden oder die Presse erfolgen.
 \todo{Intrustion-Mapping-Systeme}
 
-\subsection{Meldung eines Vorfalles}
+\subsection{Meldung eines Vorfalles}\label{subsec:Angriff:MeldungVorfall}
+Wurde ein möglicher Sicherheitsvorfall oder ein Angriff gemeldet, ist es wichtig, dass die Person, welche die Meldung entgegen nimmt korrekt und schnell reagiert. Personen welche solche Meldungen entgegen nehmen könntetn (z.B. Mitarbeiter des Service Desks) sollten geschult und mit einem entsprechenden Merkblatt und einer Checkliste / Formular ausgestattet werden. Die entgegenehmende Person muss vom Melder so viele Informationen wie möglich erfragen, damit anschliessend schnellere und effizientere Entscheidungen getroffen werden können. Dabei sind sowohl Informationen zum Melder, als auch über die Symptome und den Zustand des Systemes von Interesse.
 
--Richtige Informationen abfragen (Merkblatt / Chekliste)
---Basisinfos: Aktuelle Uhrzeit, Wer / Welches System berichtet Vorfall, Art und Weise Vorfall, Vermuteter Zeitpunkt Vorfall, mittelbar / unmittelbar betroffene HW / SW, evtl. Auswirkungen, Schaden, Kontakstelle für ISR und Ermittler
---Infos über betroffenes System sammeln (!! möglichst nicht vom System abfragen, Datenklassifizierung? Klassifizierung? Ort?, Physischer Zugang?  allgemeiner Systemzustand,)
---Angreifer: Infos? noch aktiv? Systeme / Daten manipuliert / zerstört, Vermutungen?
---Getroffene Massnahmen / System verändert? Andere Perosnen benachrichtigt?
+\todo{Verweis Formular}
 
-Beurteilung Vorfall / Störung: Kentnisse aktueller Status, Organisation, Landschaft, MA, nicht zu lange warten, Durchleuchtug / Ausschlussverfahren
-
-Bei Einbruch: erste Risikoabschützung für möglcihe Abschaltzung / Netzdekonnektion, Berücksichtigung weiterer Ermittlungsschritte
-
-Entscheid Abschaltung / Dekonnektion: Management der Systemeigentümer, Basis: Empfehlung ISR
-
-Klassifizierung  des Vorfalls: Probing  / Portscanning, Denial-of--service-Angriff, Unberechtigter Zugriff auf User-Account, ... Admin-Account, Datendiebstahl / -manipulation,
-
-...
-
-Wichtig ist, dass nach einer Incident Detection das Incident Response Team unverzüglich Informiert wird. Ist kein Incident Response Team vorhanden und gibt es in der Unternehmung keine entpsrechende Anlaufstelle, ist das Vorgehen mit....
-Keine übereilten Reaktionen, da der Angreifer allenfalls etwas bemerkt
-
-
+Nachdem ein Vorfall gemeldet wurde, ist unverzüglich das zuständige Incident Response Team zu informieren und aufzubieten. Gibt es in der Organisation kein Incident Response Team und keinen Incident Response Plan ist das weitere Vorgehen mit dem Vorgesetzten und allenfalls einem Mitglied des höheren Managements abzustimmen. Übereilte Reaktionen sollten vermieden werden, da dadurch Beweisspuren verwischt oder vernichtet werden können. 
 
 \section{Incident Response Team}
-Rasch und richtig handeln
-Eingreiftruppe bei Incidents, Häufig durch Situation bedingt, wer wegen Detailkenntnisse in Gruppe gehört,
-Augenmerk: Erfahrene Personen für Schlüsselpositionen, Integrität und Zuverlässigkeit MA, passendes Persönlichkeitsprofil (gesunder Menschenverstand,Fähigkeit effiziente und annehmbare Entscheide zu treffen in krit Sit., gute Kommunikationsfähigkeiten, an Regeln / Prozeduren halten, Arbeiten unter Stress, Teamfähig, Vorbild Sicherheitsrelevante Tätigkeiten, Priorisierung utner Stress)
+Das Incident Response Team ist die Eingreiftruppe beim Eintretten eines Sicherheitsvorfalles. Die Aufgabe dieses Team ist es im Falle eines Incidents auf Basis der vorhandenen Informationen eine Lagebeurteilung und Risikoeinschätzung durchzuführen und anschliessend entsprechende Massnahmen einzuleiten.
 
-Bei grösseren Organisationen / IT-Abhängige: Evtl. Dauerhaft in Belegschaft, Wahrnehmung anderer Sicherhietsaufgaben, Früherkennung, Personen: Leiter, Kontaktperson bei Verdacht, etc., Spezialist: Erfassung / Behanldung Vorfall, Spezialist: Schwachstellen, Spezialist auf Plattform, Schulungspersonal
+In einem Incident Response Team sollten folgende Rollen besetzt werden.
 
-Wichtig: Koordinator, direkter Zugang zum Mgmt
+\begin{itemize}
+\item \textbf{Kern-Team} \\
+\begin{itemize}
+\item Koordinator / Leiter mit direktem Zugang zum Management
+\item Kontaktstelle zur Entgegennahme von Verdachtsmeldungen
+\item Incident-Spezialist oder einen Ermittler aus dem Bereich der Computer Forensik
+\end{itemize}
+\item \textbf{Erweitertes Team} \\
+\begin{itemize}
+\item Juristischer Berater
+\item Auditor
+\item Mitarbeiter der physikalischen Sicherheit
+\item HR-Mitarbeiter
+\item Fachspezialisten (z.B. Netzwerk-, Sicherheits- oder Datenbankadministratoren)
+\end{itemize}
+\end{itemize}
 
--Ermittler, IT-Professionals (Technical support staff, system, network, security admin): small number of forensic tools according to their area of expertise, 
--Incident-Handlers (respond to variaty of computer security incidents, wide variety of forensiq technique and tools, knowledge of forensic principles, guidelines, procedures, ...)
+Die Mitarbeiter dieses Teams sollten über längere Erfahrung in ihrem Tätigkeitsbereich verfügen, gute Kommunikationsfähigkeiten besitzen, teamfähig sein und gut integriert und zuverlässig sein. Darüber hinaus müssen sie in der Lage sein unter Stress effiziente und akzeptable Entscheide zu treffen, sich an vorgegebene Regeln und Prozeduren zu halten und in sicherheitsrelevanten Aspekten als Vorbild dienen. Sie müssen in der Lage sein sich unter Stress an vorgegebene Regeln und Prozeduren zu halten.
 
--Legal advisors, hr, auditors, physical security staff
+Bei grossen Organisationen kann das Incident Response Team als Dauerhaftes Team vorhanden ist, welches auch noch andere Aufgaben im Sicherheitsbereich wahrnimmt. Bei kleineren Organisationen kann es sich um ein Team mit Mitgliedern aus mehreren Organisationseinheiten handeln, welche im Notfall zusammengerufen werden können. Denkbar ist es auch, dass das ganze Incident Response Team oder einen Teil davon (z.B. den Incident-Spezialisten) durch eine externe spezialisierte Unternehmung wahrgenommen wird.
+
 
 \section{Incident Response}
-Nach dem der Angriff entdeckt wurde oder Anzeichen für einen zukünftigen Angriff bestehen müssen entsprechende Massnahmen in die Wege geleitet werden. Die einzuleitenden Massnahmen sind dabei von der gewählten Reaktionsart abhängig. Es sind folgende zwei Reaktionen denkbar
+Die Incident Response hat zum Ziel bei einem Sicherheitsvorfall so rasch als möglich den entstandenen Schaden, die verwendeten Angriffsmethoden und die Auswirkungen für die Organisation zu beurteilen und anschliessend entsprechende Massnahmen umzusetzen. Die Computer Forensik ist ein essentieller Bestandteil des Incident Response Prozesses.
 
-Teil der Computer Forensik
 
-Bei Einbruch: in kurzer Zeit: Schaden, Angriffsmethoden und mögliche weitere Auswirkungen für Org. beurteilt werden
+
+
 Notwendig: guter Beweissicherungsmassnahmen im Prozess etablieren
 
 Guter Incident Response Prozess / erfolgreicher Ablauf Incident Response: Basis für juristische Verfolgung
 
-Wichtig: Ermittlung Ursaxche, grundlage für zukünftige Handlungsempfehlungen
 
+Wichtig: Ermittlung Ursaxche, grundlage für zukünftige Handlungsempfehlungen
+Infos: Business Impact, ...
+
+\subsection{Organisatorische Vorbereitung}
 organisatorische Vorarbeit notwendig, um korrekt reagieren zu können. wenn nicht: im Entscheidenden Moment keine Ressourcen
 -Incident Awareness: Beteiligte MA, Bewusstsein
 -Grobes Konzept Sicherheitsvorfallbehandlung (Eskalations- / Alarmierungsregelung, Weisungskompetenzen)
@@ -166,6 +166,25 @@ organisatorische Vorarbeit notwendig, um korrekt reagieren zu können. wenn nich
 -Weiterbildungen: Incident-Detection / Response
 -Kontakt zu Security-Spezialisten / Ermittlungsbehörden aufbauen
 -....
+
+Vorbereitung ("`Readiniess"'): Autorisierung, wichtig bei nicht polizeilichen Ermittlern, keine Aktionen auf eigene Faust, mehr Schaden als Nutzen, Incident-Response-Plan
+Organisatorische Vorbereitung: Rollen, Verantowrtlichkeiten, Policies, Vorbereitende / Unterstützende Massnahmen im Rahmen System Life Cycle (Zentralisierte Logs, Auditing für Server, Arbeitsplatzcomputer, ..., file hashes für verbreitete Betriebssysteme und Installationen, File integrity checking software, data retention policies, etc. ), Guidelines, Step-By-Step- Procedures
+
+\subsection{Incident Response Prozess}
+Wurde ein Vorfall gemeldet gilt es zuerst zu beurteilen, ob es sich um einen wirklichen Sicherheitsvorfalle handelt, oder ob es sich um eine Betriebsstörung handelt.
+
+Handelt es sich um einen Sicherheitsvorfall muss auf Basis der vorhandenen Informationen eine erste Einschätzung durchgeführt werden. Um für die Einschätzung alle relevanten Informationen zur Verfügung zu haben, ist es essentiell, dass bei der Entgegennahme der Meldung die entsprechenden Informationen erfragt werden (Siehe dazu Kapitel \ref{subsec:Angriff:MeldungVorfall}). Sind zu wenig Informationen vorhanden, kann bereits eine erste Analyse durchgeführt werden. 
+
+Es ist jedoch darauf zu achten, das....keine Beweise zerstören, nicht bemerkt werden, jur. Verwendbarkeit..
+
+
+-Honeypots
+
+
+-Nach Abschluss:
+--Ermittlunsvorgang analysieren und verbessern
+--Reaktionszeit, Wirksamkeit, Tätermotivation, Kosten
+--Schlüsse ziehen, permanente Massnahmen etablieren.
 
 Strategie, zwei Aspekte berücksichtigen: direkten / indirekten Schaden minimieren, Tathergang möglichst umfassend rekonstruieren zur Identifikation Tatverdächtige, jeder Sicherheitsvorfall erfordert andere Strategie
 -Kritkialität System im Bezug auf Unternehmensprozesse
@@ -178,10 +197,17 @@ Strategie, zwei Aspekte berücksichtigen: direkten / indirekten Schaden minimier
 -Vermuteter finanzieller Gesamtverlust
 
 -Kein unüberlegter Gegenangriff, Angriffer bemerkt, evtl. zerstörung,
--Honeypots
 
-Infos: Business Impact, ...
-Vorfall analysieren, Schlüsse ziehen, Lerneffekt, Ermittlungsvorgang analysieren (Optimierung / Verbesserung), Reaktionszeit, Wirksamkeit, Tätermotivation, Kosten
+
+
+Beurteilung Vorfall / Störung: nicht zu lange warten, Durchleuchtug / Ausschlussverfahren
+
+Bei Einbruch: erste Risikoabschützung für möglcihe Abschaltzung / Netzdekonnektion, Berücksichtigung weiterer Ermittlungsschritte
+
+Entscheid Abschaltung / Dekonnektion: Management der Systemeigentümer, Basis: Empfehlung ISR
+
+Klassifizierung  des Vorfalls: Probing  / Portscanning, Denial-of--service-Angriff, Unberechtigter Zugriff auf User-Account, ... Admin-Account, Datendiebstahl / -manipulation,
+
 
 \begin{itemize}
   \item Härtung der Systeme, Abwehr des Angriffes
@@ -198,9 +224,6 @@ Bei der Auswahl von geeigneten Massnahmen ist immer auch der Zeitpunkt der Angri
   \item Angriff ist schon vorbei
 \end{itemize}
 
-
-\subsubsection{Härtung der Systeme, Abwehr des Angriffes}
-
 \subsubsection{Abwarten, Beobachten, Informationen sammeln}
 
 \begin{itemize}
@@ -211,29 +234,42 @@ Bei der Auswahl von geeigneten Massnahmen ist immer auch der Zeitpunkt der Angri
 \end{itemize}
 
 
-Evtl. übergreifendes Kapitel
 \section{Ablauf}
+\begin{enumerate}
+\item \textbf{Identify (Identifizierung)}\\
+\begin{enumerate}
+\item Eingang eines Hinweises für einen Verdachtsmoment (Siehe dazu Kapitel \ref{sec:Angriffe:IncidentDetection})
+\item Handlet es sich um einen Sicherheitsvorfall oder eine Betriebsstörung?
+\end{enumerate}
+\item \textbf{Assess (Beurteilung)}\\
+\begin{enumerate}
+\item Durchführen einer ersten Analyse / Sicherstellung von Spuren
+\item Einschätzung auf Basis der vorhandenen Informationen.
+\item Bestätigung des Verdachtes.
+\end{enumerate}
+\item \textbf{Respond (Reagieren)}\\
+\begin{enumerate}
+\item ...Initial Response (Determine origin, identify compromised systems, disconnect, untersuchung, anzeige)
+\item ...Procedure
+\item ...Recovery
+\end{enumerate}
+\item \textbf{Report (Bericht)}\\
+\begin{enumerate}
+\item ...
+\end{enumerate}
+\item \textbf{Review (Rückblick)}\\
+\begin{enumerate}
+\item ...
+\end{enumerate}
+\end{enumerate}
+
+
+
+
 \begin{itemize}
-  \item Systemeinbruch oder normale Betriebsstörung?))
-  \item Wahrnehmung / Bemerkung ungewöhnliche Aktivitäten (Administrator, Anwender, ...)
-  \item Evtl. weitere Beobachtung
-  \item Kurze Analyse / Sammlung von Spuren
-  \item Bestätigung Verdacht
-  \item Meldung an Incident Response Team
   \item Sicherstellung elektronische Beweise
   \item Beweisspuren identifizieren
   \item Beweisspuren analysieren
   \item Analyseergebnisse interpretieren / verifizieren
   \item Analyseergebnisse in Bericht zusammenfassen / präsentieren.
 \end{itemize}
-
--Identify
--Assess (if is security incident), check, gather information
--Respond: Kick of procedure
---Initial Response: Determine origin, idenitfy compromised systems, evtl. disconnect from nw, untersuchung starten, Anzeige: Sicherung beweise
---Recovery
-Report
-Review
-
-
-Organisatorische Vorbereitung: Rollen, Verantowrtlichkeiten, Policies, Vorbereitende / Unterstützende Massnahmen im Rahmen System Life Cycle (Zentralisierte Logs, Auditing für Server, Arbeitsplatzcomputer, ..., file hashes für verbreitete Betriebssysteme und Installationen, File integrity checking software, data retention policies, etc. ), Guidelines, Step-By-Step- Procedures

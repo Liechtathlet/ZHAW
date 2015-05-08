@@ -1,211 +1,180 @@
 \chapter{Forensische Analyse}
-\section{Ablauf}
-Vorbereitung ("`Readiniess"'): Autorisierung, wichtig bei nicht polizeilichen Ermittlern, keine Aktionen auf eigene Faust, mehr Schaden als Nutzen, Incident-Response-Plan
-Schutz der Beweismittel: Keine Veränderung an Daten möglich, Schutz eigene Umgebung
-Imaging und Datensammlung: Bitweise Kopie Datenträer, Sammlung Daten vom "`Lebenden"' System
-Untersuchung und Bewertung Informationen: Analyse und Relevanzbewertung
-Dokumentation: Alle Phasen, schlüssig sofort dokumentieren
+In diesem Kapitel wird der Ablauf der Computer forensischen Analyse im Detail aufgezeigt und erklärt. Die Techniken und Tools zur Unterstützung dieses Prozesses wird im Kapitel \ref{chap:ToolsTechniques} \nameref{chap:ToolsTechniques} erläutert.
 
-Evaluation 
-Collection
-Analysis
-Presentation
-Review
 
-S-A-P-Modell:
+\todo{ERDM: Electronic Discovery Reference Model, Guter Prozess: Noitzbuch}
+
+\section{Einführung}
+Der Prozess der forensischen Analyse lässt sich grundsätzlich in die nachfolgenden Phasen unterteilen werden. Die Erläuterung der einzelnen Phasen erfolgt in den nachfolgenden Kapiteln.
+
+\begin{enumerate}
+\item Readiness (Vorbereitung)
+\item Secure (Sicherstellung)
+\item Analysis (Analyse)
+\item Documentation (Dokumentation)
+\item Present (Präsentation)
+\item Review (Rückblick)
+\end{enumerate}
+
+\section{Phasen}
+\subsection{Readiness (Vorbereitung)}
+Um während der Untersuchung Fehler zu verhindern und wertvolle Zeit einzusparen, ist es sinnvoll gewisse Vorbereitunsarbeiten vor einem Einsatz, beziehungsweise vor einer Untersuchung, durchzuführen. Die gleichen Arbeiten sollten auch nach Abschluss einer Untersuchung durchgeführt werden, da jederzeit der nächste Fall eintreten kann.
+
+\textbf{Vorbereitungsarbeiten}
 \begin{itemize}
-\item Secure
-\item Analyse
-\item Present
+\item Sterilisieren / Formatieren von Datenträgern für die Speicherung des Beweismaterials
+\item Formulare und Protokolle vorbereiten und ausdrucken
+\item Vorbereitung und Verpackung der notwendigen technischen Ausrüstung \\
+\begin{itemize}
+\item Kleines Werkzeugset
+\item Digitalkamera
+\item Notizblock und Stifte
+\item Wasserfeste Filzstifte und Etiketten
+\item Antistatische Beutel
+\item Dokumente (Manuals, Anleitungen, Abläufe, etc. )
+\item Writeblocker
+\item Datenträger
+\item (Mobiles) Analysesystem + Zubehör (Adapter, USB-Hubs, Card-Reader, Multi-Card-Reader, CD/DVD/Blue-Ray Leser / Brenner, Drucker)
+\item ...
+\end{itemize}
+\item Vorbereitung und Verpackung der notwendigen Tools und Programme \\
+\begin{itemize}
+\item Datensicherung \todo{Übersetzen}
+\item Data discovery
+\item internet history
+\item image viewers
+\item E-mail viewers
+\item Password-cracking tools
+\item Mobile device tools
+\item large storage analysis tools
+\item ...
+\end{itemize}
 \end{itemize}
 
---
-Collection: Idenify, label, record, acquire data, preserve integrity, in timely manner
-Examination: forensically processing data, 
-Analysis: analyze result, using legally justifiable methods and techniques to derive useful information zur unterstützung des falles
-Reporting: describing actions used, how tools / procedures were selected, , other actions, ....
----
-Analyse:
+\subsection{Secure (Sicherstellen)}
+Die Phase "`Secure"' lässt sich weiter in die Phasen "`Environment (Umgebung)"', "`Identify (Identifizieren)"', "`Collect (Sammeln)"' und "`Preserve (Aufbewahren)"' unterteilen.
+
+
+\subsection{Environment (Umgebung)}
+Diese Phase muss grundsätzlich nur berücksichtigt werden, wenn es sich bei der Untersuchung um eine Ermittlung im Rahmen einer Incident Response oder einer Tatortssicherung handelt.
+
+Bei Ankunft des Ermittlers am "`Tatort"' sollte er sogleich sicherstellen, dass nur noch berechtigte Personen Zugang zum Tatort und der näheren Umgebung haben. Bevor die Personen den Tatort verlassen, sind zum einen die Kontaktdaten für spätere Rückfragen und zum anderen weitere Informationen (zum Beispiel: Passwörter, Besonderheiten des Systems) zu protokollieren. Sofern noch nicht erfolgt, sollte der Tatort isoliert und dokumentiert werden. Für die Tatortdokumentation sind Fotos und Skizzen sehr gut geeignet.
+
+\subsubsection{Identify (Identifizieren)}
+Bevor die ersten Daten gesichert werden können, müssen alle möglichen Datenquellen identifiziert werden. Dazu zählt zum Beispiel das zu untersuchende System, externe Festplatten, USB-Sticks, Wechseldatenträger, etc. Falls gestattet, sollte in der näheren Umgebung, zum Beispiel im Aktenschrank oder im Korpus, nach weiteren Datenträgern gesucht werden. Je nach Situation sind an weiteren Stellen (zum Beispiel Firewall-Logs, Server-Logs, etc.) zusätzliche Informationen gespeichert. Gegebenenfalls sollte auch nach relevanten physischen Dokumenten, welche Hinweise oder wichtige Informationen beinhalten, gesucht werden. Zum Beispiel könnte eine mehr oder weniger gut versteckte Passwortliste die Arbeit erheblich erleichtern. Wurden nicht an ein System angeschlossene Datenträger, Medien  und Dokumente gefunden ist dies sofort zu dokumentieren und der Beweisgegenstand fachgerecht zu sichern (Siehe Abschnitt \nameref{subsubsec:FA:Secure:CollectPreserve}). 
+
+\subsubsection{Collect (Sammeln) and Preserve (Aufbewahren)} \label{subsubsec:FA:Secure:CollectPreserve}
+Bei der Sammlung von Daten gilt der Grundsatz, dass so wenig eigene Spuren hinterlassen werden sollten, als irgendwie möglich ist. Die Sicherung der Daten erfolgt anhand Ihrer Einstufung. Zuerst werden flüchtige Daten gesichert, anschliessend nicht flüchtige Daten. Flüchtige Daten, sind Daten, welche nach einem Shutdown oder einem harten Shutdown des Systems nicht mehr verfügbar sind.
+
+\paragraph{Harter vs. Normaler Shutdown}
+Bei einem normalen Shutdown wird das System durch den Benutzer regulär heruntergefahren, sämtliche Daten werden gespeichert und das System befindet sich im Anschluss in einem sauberen / lauffähigen Zustand. Während dem Shutdown werden jedoch die Zeitstempel von sehr vielen Dateien verändert und temporäre Dateien und Arbeitsdateien des Betriebssystems gelöscht. Dies kann unter Umständen die Analysearbeiten erschweren oder sogar Beweise vernichten. 
+
+Bei einem harten Shutdown wird das System von der Stromversorgung getrennt, ohne dieses vorher herunterzufahren. Mit diesem Vorgehen wird sichergestellt, dass keine Zeitstempel von Dateien verändert werden. Auch ist die Wahrscheinlichkeit da, dass auf der Festplatte eine Auslagerungsdatei vorhanden ist, welche anschliessend analysiert werden kann. Die Extraktion und anschliessende Analyse dieser Daten ist jedoch sehr aufwändig. Diese Methode des Shutdowns kann bei gewissen Dateisystemen zu irreparablen Schäden führen. Daher ist vorgängig abzuwägen, ob ein harter Shutdown sinnvoll und verkraftbar ist.
+
+Bei einem Shutdown gehen in der Regel immer viele Daten verloren. Es wäre zum Beispiel möglich, dass der Angreifer ein Schadprogramm installiert hat, welches nur noch im RAM verfügbar ist. Nach einem weichen Shutdown ist das Programm auf dem System nicht mehr auffindbar. 
+
+Bei beiden Varianten ist die Zeit der Durchführung und die Art des Shutdowns zu protokollieren.
+
+\paragraph{Sicherung des RAM-Inhaltes}
+Nachdem herunterfahren des Systems sind die Daten im RAM noch einige Sekunden verfügbar. Dies reicht in der Regel jedoch nicht um eine Datensicherung durchzuführen. Einige neuere Studien und Experimente haben gezeigt, dass es durchaus Mittel und Wege gibt, um den Inhalt des RAMS zu sichern. Eine Möglichkeit besteht darin, die Raumbausteine mit einem Stickstoffspray auf -50 Grad Celsius herunter gekühlt. Anschliessend wird der Rechner ausgeschaltet, der RAM ausgebaut und in ein anderes System eingebaut. Das System wird mit einer Spezialsoftware gestartet, welches einen Memory-Dump erstellt.
+
+\paragraph{System ist eingeschaltet}
+\begin{enumerate}
+\item Nähere Umgebung und Zustand des Systems dokumentieren
+\item Befindet sich das System im Standby? \\
+Befindet sich das System im Standby ist abzuwägen, ob das System aufgeweckt oder ein harter Shutdown gemacht werden soll. In dieser Situation ist in der Regel ein harter Shutdown  zu empfehlen.
+\item Ist der Screensaver aktiv? \\
+Ist auf dem System ein Screensaver ist abzuwägen, ob dieser "`deaktiviert"' werden soll oder ein harter Shutdown gemacht werden soll. Dies ist stark situationsabhängig und sollte von Fall zu Fall entschieden werden. Ist anzunehmen, dass die Freischaltung des Screens mit einem Passwort erfolgt, welches nicht bekannt ist, ist auch hier der harte Shutdown zu empfehlen. Wird der Screensaver "`deaktiviert"' muss dies entsprechend mit der exakten Uhrzeit dokumentiert werden.
+\item Ist das System durch ein Passwort geschützt? \\
+Ist das System durch ein unbekanntes Passwort geschützt, ist in der Regel ein harter Shutdown zu empfehlen. In Ausnahmefällen kann durchaus auch ein Versuch unternommen werden, dass Passwort mit Hilfe von entsprechenden Werkzeugen zu knacken.
+\end{enumerate}
+
+Ist der Zugang zum System hergestellt, kann mit der Sicherung der flüchtigen Daten begonnen werden. 
+
+\begin{enumerate}
+\item Festhalten des Bildschirminhalts und der geöffneten Anwendungen
+\item Festhalten der aktuellen Systemzeit und einer Referenzzeit, sowie deren Abweichung
+\item Liste der aktiven Prozesse
+\item Liste der geöffneten Sockets
+\item Liste der Anwendungen, die auf geöffnete Sockets hören
+\item Liste der angemeldeten User
+\item Erstellen eines Memory Dumps
+\item Sicherung des Hauptspeichers pro Prozess-ID
+\item Sicherung der Cache- und Auslagerungsdateien
+\item Liste der geöffneten Ports
+\item Status und Statistik der Netzwerkverbindungen
+\item Pro Prozess: Umgebungsvariablen, Übergabeparameter, geladene Bibliotheken, Offene Dateideskriptoren, etc.
+\item ....Memory Dump?
+\end{enumerate}
+
+
+Ist die Sicherung der volatilen Daten abgeschlossen sollte das System mit einem harten Shutdown heruntergefahren werden.
+
+\paragraph{System ist nicht eingeschaltet}
+Ist das System ausgeschaltet oder wurde es heruntergefahren wird als erstes das System von der Stromversorgung getrennt, geöffnet, der Zustand dokumentiert und die verbauten Datenträger ausgebaut, beziehungsweise im Falle von USB-Sticks oder anderen Wechseldatenträgern, entfernt und beschriftet. 
+
+Anschliessend wird von sämtlichen Datenträgern ein forensisches Duplikat erzeugt. Ein forensisches Duplikat ist eine Bitweise 1:1 Kopie des Quelldatenträgers.
+
+Die Erstellung eines Duplikates ist grundsätzlich immer sinnvoll, da dies bessere Analysemöglichkeiten bietet. Ist die Untersuchung ein Teil einer Strafuntersuchung ist in jedem Fall die Anfertigung eines Duplikates zu empfehlen.
+
+
+\paragraph{Beweiskette}
+
+
+\paragraph{Sicherung}
+Haupteinheit (evtl. nur Datenträger), evtl. Spezialgeräte, Stromkabel, Sämtliche externen Datenträger, Wechselmedien wie DVD, CD, Disketten, USB-Sticks, WORM, Speicherkarten 
+-Externe Kommunikationssysteme; WLAN-Router, Modem, spezial-HW / Peripherie, Digitalkameras, MP3-Player, PDAs, Mobiltelefone)
+
+Zum Teil schaden grösser Bei Mitnahme / Ausbau, Abwägung
+http://forensic.belkasoft.com/en/live-ram-forensics
+
+Auf sterilisierten Datenträgern
+
+
+\subsection{Analysis (Analyse)}
+
+\subsubsection{Examination (Untersuchung)}
+
+\subsubsection{Analysis (Analyse)}
+Analyse mit juristisch verwertbaren Methoden und Techniken und Informationen zur Unterstützung des Falles zu erhalten
+
+Trojanisierte Systemprogramme
+-Versteckte Dateien / Verzeichnisse
+
+\subsection{Reporting (Dokumentation)}
+Die gesamte forensische Untersuchung muss im Detail protokolliert und dokumentiert werden. Es müssen sämtliche Arbeitsschritte nachvollzogen und gegebenenfalls durch einen anderen Experten reproduziert werden können. Die eingesetzten Tools (inkl. Version) und Techniken sollten kurz beschrieben werden Im Rahmen einer Strafuntersuchung müssen die durchgeführten Schritte und angewandten Techniken so erläutert werden, dass diese von Laien verstanden und nachvollzogen werden können.
+
+Die Dokumentation der Untersuchung sollte soweit als möglich und praktikabel sofort bei der Durchführung erstellt werden, da ansonsten wichtige Informationen, Gedanken und Arbeitsschritte verloren gehen. Die Dokumentation ist mit Screenshots oder gegebenenfalls Fotos, welche mit der Digitalkamera aufgenommen wurden, zu unterlegen.
+
+Evtl. auflistung besser?
 \begin{itemize}
-\item Einbruchsanalyse 
-	-(Wer hatte Zugang?) Hinweise zu Täter --> Ermittlung Ausmass / Einschützung Schaden, Insiderwissen
-	-Was hat der Angreifer auf Sys gemacht?, Bestimmt weiteres Vorgehen und Gegenmassnahmen, Daten einsicht / Modifikation / Zerstörung, Installation SW, neue User, Hintertüren?
-	-Zeitpunkt Vorfall (Wichtig für Daten von anderen Quellen)
-	-Weitere betroffene Systeme --> Recovery Planung, Zusatzinfos, mehr Spuren / Beweise
-	-Wieso dieses System? Offene Schwachstellen? Besonder Daten?
-	-Wie kam der Angreifer rein? Technik und Tools, Hinweise täter, 
-	-Ist der täter noch aktiv? ist schon weg? kommt er wieder?
-\item Schadensfeststellung
-	- Bestimmung auf was für Daten / Informationen der Täter zugriff gehabt hätte
-	- Evtl. noch aktive Passwortsniffer o.ä? Aufspüren, Passwörter ändern
-\item Analyse der Tools
-	- Was würde zurückgelassen? Spuren / Tools, Hinweise auf weitere / eigentliche Ziele?
-	- Hinweise herkunft / Täter
-	- Wie wurden Tools aufgerufen? Von Hand, via Copy \& Paste (Zeilenweise), Scripts (Rasche eingabe)
-	- Programmiersprache Tools, Einschränkung Täterkreis, z.T. im Programmcode Hinweise zum Täter (Kommentare, Copyright, ...., Sprache)
-	- Querabgleich Binärdateien andere kompromitierte Systeme oder gefundene Dateien bei mutmasslichen Tätern
-\item Logdatei-Analyse
-	-Logs: netzwerkverbindungen, Firewall, Router, IDS - Wenn nicht: wieso?
-	-Was verraten die Logs? Quelle, weitere Ziele ,Muster
-	-Sicherung Logs Remote Access Systeme
-	-Vermutung Innentäter: Sicherung Daten Zutrittskontrolle / Videoüberwachung
-\item Weitere Beweissuche
-	-Datenträger Analyse
-	-Spuren von verwendeten Applikationen
-	-Gelöschte Dateien
-	-Versteckte Dateien? Dateimaskierung, versteckte Speicherorte
-	-Verschlüsselte Datein vom Angreifer vorhanden? Evtl. Hinweise wenn schlecht gesichert
-	-Versteckte Partitionen?
-	-Bekannte versteckte Hintertüren / Fernzugriff (Rootkits, trojanisierte Systemprogramme)
+\item Verwendete Tools (inkl. Versionsnummer)
+\item Verwendete Hardware (zum Beispiel FastBloc Write Blocker)
+\item Angewendete Techniken
+\item Prüfsummen von Dokumenten, Protokollen und Beweisen
+\item Erläuterung der Evaluation der Tools und Techniken
 \end{itemize}
-
-\section{Techniken}
-\subsection{Aktuelle Prozesse}
--z.T. Programm / Prozess gestartet und nachher gelöscht, bei laufenden Prozessen gibt es Binärkopien in /proc, Bei Beendigung: Daten weg
-
-\subsection{Shutdown}
-Herunterfahren: Änderung vieler Zeitstempel, etl. Swap gelöscht
-Steckerziehen, verkraften nicht alle Dateisysteme, Status laufende Umgebung auf Dateisystemm, Extraktion sehr schwierig, Entscheidung im Kontext
-\section{Ablauf}
+\subsection{Present (Präsentation)}
 
 
-\section{Hinweise}
--Zeuge / Zweitperson bei Ermittlungen anwesend
--Protokollierung sämtliche Schritte (Abnahme durch Zeuge)
+\subsection{Review (Rückblick)}
 
-\subsection{Vorbereitung}
--Datenträger sjtjerilisieren, am besten formatierjt
--Dokumente / Formulare / Protokolle
+\section{Hinweise zur forensischen Analyse}
+Bei einer forensischen Analyse sind folgende wichtige Aspekte zu berücksichtigen.
 
-\subsection{Secure}
-Sicherung möglichst vieler Daten, ohne eigene Spuren zu hinterlassen
-Zuerst Daten, die nach Shutdown oder hartem Shutdown nicht mehr verfügbar sind, nicht Systembefehle verwenden!!
-Protokolldateien auf externtes Medium (eigenes), evtl. auch Scripte zum Zusammenzug der Informationen, 
-
-
--Beschreibung Physische Umgebung, detailliert, Fotos)
--Beschreibung Umgebung (Computer), detailliert Fotos
--Aktuelle Systemzeit + Referenzzeit, + Abweichung
--Liste der aktiven Prozesse
--Liste der geöffneten Sockets
--Liste der Anwendungen, die auf geöffnete Sockets lauschen
--Liste der User, die angemeldet sind
--Liste der Systeme, die gerade eine Netzverbindung haben oder vor kurzem hatten
-
-Anschliessend, Suche nach:
--Timestamps gehacktes System
--Trojanisierte Systemprogramme
--Versteckte Dateien / Verzeichnissen
--Verdächtige Dateien / Sockets
--Verdächtige Prozesse
-
--Sicherung Cache- und Auslagerungsdateien
--Sicherung Hauptspeicher pro Prozess-ID
--Offene Netzwerkports
--Verbindungen im Auf-/Abbau
--erfolglose Verbindungsauf- / abbauversuche
--Prozesse: Umgebungsvariablen, Übergabeparameter, geladnee Bibliotheken, offene Dateideskriptoren, etc.
--Wechseldatenträger sicherstellen
--Hauptspeicher: Inhalt + Strukturdaten (Welcher Prozess welche Biblio, Belegung Speicherbereich), Strukturiert und komplett dumpen
-
--Forensische Duplikation: Bitweise 1:1 Kopie Speichermedium, mehrere Varianten: 1. Ausbau, Anschluss saubere Platte an System, Kopie via Netzwerk, Wichtig: Writeblocker (Verhindert physisch den Schreibzugriff auf das zu sichernde Medium), gewisse Bereiche auf Datenträgern wo Daten versteckt werden können: z.B. Host Protected Area, Device Configuration Overlay --> Verfahren auswählen, dass diese Daten auch sichert, Sicherung durch Checksummen, Hash-Algorithmen
-
-Verwendung Duplikat: Grundsätzlich sinnvoll, bessere Analysemöglichkeiten (Notaufnahme vs. Gerichtsmedizin), Sinnvoll wenn: Strafverfolgung, Sicherstellung Beweise, ...
-
--Regeulärer Shutdwon? Ja / Nein
-Mögliche Fehler Beweissammlung:
--Zeitstempel an Datein werden verändert (z.T. schon durch Ansehen der Datei, oder aufrufen von Systembefehlen)
--Keine Verwendung von grafischen Tools (Zugriff auf Vielzahl von Binärdateien / Konfigurationen --> Änderung Zeitstempel)
--Verdächtige Prozesse nicht beenden
--Alle Befehle protokollieren, sonst Lücke in Beweiskette
--Keine Verwendung vertrauensunwürdiger Programme / Systemtools (evtl. Sys-Dateien ausgetausch, eigene vorkompilierte Dateien)
--Patches / Updates: nur wenn Response-Team das empfiehlt, grundsätzlich offen lassen für Analyse, Abwägen je nach Kritikalität / Zusätzlichem Schaden bei offen lassen
--Software (de)-installieren auf Empfehlung Response-Team, Vernichtung Beweise, Installation Forensik-Tools: Abwägung, Vernichtung Spuren, 
--Protokolle nicht auf zu untersuchende Platte schreiben (Beweise gefährdet, FIle slack...)
--Ordnungsgemässer Shutdown könnte Beweise vernichten 
-
-
-Sicherstellung:
--Haupteinheit (evtl. nur Datenträger)
--Montor + Tastatur: i.d.R. nicht, nur bei Spezialgeräten
--Dazugehörige Stromkabel
--Externe Festplatten, Disketten, DVD, CD, WORM, Backup-Bänder, USB, Speicherkarten
--Externe Kommunikationssysteme, welche für die Analyse benötigt werden: WLAN-Router, Modem, etc.
--Spezialhardware und -peripherie
--Digitalkameras, MP3-Player, etc.
--PDAs, Mobile-Telefone, ....
-
-Jeweils Abwägung, ob Schaden durch Beeinträchtigung Arbeitsfähigkeit (Mitnahme Gerät / Teile) grösser wird, als das einfache Delikt
-
-\subsection{Erste Schritte}
-Einige Allgemeingültige Schritte, je nach System / Gerät etwas anders (Mobiletelefone, etc.)
-
-\subsubsection{System ist ausgeschaltet}
--Fremde Personen vom System und Stromversorgung entfernen
--Umgebung fotografieren / skizzen anfertigen
--Aktive Druckjobs zu Ende laufen lassen
--System nicht einschalten (Achtung Notebooks, Deckel nicht hochklappen)
--Sicherstellung System ausgeschaltet (Bildschirmschoner)
--System evtl. im Standby-Modus? Bei Notebooks: Akku entfernen, sodass Energiesparmodus nicht anspringt (Veränderung Zeitstempel)
--Stromkabel entfernen
--Netzwerkkabel entfernen
--Geräte und Objekte Beschriften (Beweiszettel)
--Umgebung / Notizen / Unterlagen utnersuchen
--Befragung Anwender nach: Besonderheiten System, Passwörter, Konfigurationsspezifika -> Dokumentation \& Hinterfragen
--Protokoll
-
-
-\subsubsection{System ist eingeschaltet}
--Fremde Personen vom System und Stromversorgung entfernen
--Umgebung fotografieren / skizzen anfertigen
--Aktive Druckjobs zu Ende laufen lassen
--Befragung Anwender nach: Besonderheiten System, Passwörter, Konfigurationsspezifika -> Dokumentation \& Hinterfragen
--Bildschirminhalte festhalten
--Keyboard / Maus wenn möglich nicht sofort berühren, Bildschirm blank / Bildschirmschoner: Ermittlungsleiter fragen, bezüglich "`aufwecken"', Zeitstempel festhalten)
--Live-Response (Siehe oben)
--Protokoll
-
-\subsection{Analyse}
--Bewertung Beweisspuren: 3 Gruppen: 1: Untermauern bestimmte Theorie, wiederlegen bestimmte Theorie, unterstützen keine best. Theorie
-Zuordnung der Informationen
-
-Schwierigkeit: Kausaler und zeitlicher Zusammenhang herstellen, müssen mit anderen Ereignissen überinstimmen, plausiebel, nachvollziehbar
-
-Fragen / Hilfe:
--War physischer Zugang zum System notwendig? Ja --> Zutrittskontrolle / Überwachung prüfen
--Wer hatte noch Zugang zum Computer? Zutrittskontrolle / Überwachung prüfen
--War Cronjob / Scheduler aktiv? --> Handlung ohne Anwesenheit Tatverdächtiger --> Prüfung Logs Betriebssystem / Scheduler
--Digitale Spur durch Fremdeinwirkung / Einwirkung dritter?
--Weitere Beweise Bekräftigung / Widerlegung digitale Spuren?
--Computerkenntnisse Tatverdächtiger? Was war für Know-How notwendig?
--Hardware transportabel? Verschleierung Standort durch Verwendung mehrere Computer?
--Code / Dokument / Mail / .... Verbindung zu Tatverdächtiger? (Stil, Grammatik, Vokabular, ...)
--Verbindung Spuren und besuchte Webseiten in Verbindung?
--Hinweise E-Mail-Clients / Chats zur Identifizierung Mittäter / Mitwisser?
-
-\subsection{Dokumentation}
-Wenn elektronisch: Verwendung vn Prüfsummen
-
-Viele Screenshots zum festhalten oder mit Kamera
-
-Untersuchungstools mit Versionsnummer
-
-Unterschrift durch Zeuge: Gesamtes protokoll, und einzeln bei wichtigen Feststellungen / Beweisen
-
-Pro Beweis: Beweiszettel, kein Zweifel an Herkunft, Besitztum, Unversertheit bestehen, Pro Objekt ein Zettel (Festplatte, PDA, Ausdruck, CD-Rom, Notebook)
-
-
-Collection / Aquisition:
-Power Down System and boot into secure environement oder Write Blockers + Anschluss an Analyse-Syste, Runterfahren: Stromquelle entfernen (Kabel ziehen)
-
-1. Runter fahren
-2. Sämtliche Laufwerke entfernen --> Dokumentieren und Beweiszettel ausfüllen --> Beweiskette etablieren, Innenleben dokumentieren (schriftlich, Fotos)
-3. Sämtliche Datenträger sicherstellen, Beweiskette, wenn berechtigt: Arbeitsumgebung durchsuchen (!Corporate Policies berücksichtigen). 
-4. Booten, BIOS-Informationen notieren auf Beweiszettel (Vorabrecherchieren Key für BIOS), Systemdatum -/ Zeit in Beweiszettel, WEnn Zeit anders: bei recover of files: Zeit anpassen
-5. Forensisches Image erstellen
--a: Wipe Drive (Vorbereitungsarbeit, wenn möglich nicht vor Ort)
--b: Create Image with EnCase Bootable, Wenn EnCase Boot disk: Kein Write-Blocker notwendig, EnCase verhindert schreiben, Image benötigt in der Regel etwas mehr Platz als das original, immer Hash erstellen, Imaging auf -windows OS-Basis: Immer Write-Blocker, Linux: schreibt nicht auf Geräte, kein mount, Power Down Linux, Attach Drive, Power Up
-6.	Hash erzeugen und speichern, am besten auf Beweiszttel
-7.	Bag and Tag: Laufwerke auf die, die Images geschrieben wurden beschriften, sicher unterbringen, (anti-statischer Sack, sicherer Ort), Original-Laufwerk: je nach Szenario: auch eintüten oder wieder in Betrieb
-
-Bemerkung zur Remote Untersuchung: nicht immer physischer Zugang möglich, weit entfernt, Einsatz von Forensik-tools via Netzwerk, Voraussetzung: Vorinstallierter Client auf System, voraus testen
+\begin{itemize}
+\item \textbf{Zeuge / Zweitperson} \\
+Während der Untersuchung sollte eine Zweitperson, bzw. ein Zeuge anwesend sein.
+\item \textbf{Protokollierung} \\
+Sämtliche durchgeführten Arbeitsschritte müssen protokolliert werden. Am Ende der Untersuchung sollte das Protokoll durch den Zeugen, die Zweitperson abgenommen und von beiden unterschrieben werden.
+\item \textbf{Schutz der eigenen Umgebung} \\
+Die eigene Analyseumgebung sollte gut gegen Angriffe geschützt sein und nicht direkt mit dem angegriffenen System oder Netzwerk verbunden werden. Sollte sich der Angreifer noch im Netzwerk oder auf dem System befinden, könnte er das Analysesystem angreifen und weiteren Schaden anrichten.
+\item \textbf{Schutz der Beweismittel} \\
+Sämtliche Beweismittel müssen sichergestellt und anschliessend geschützt werden. Eine Veränderung der Daten nach der Sicherung darf nicht mehr möglich sein beziehungsweise muss zweifelsfrei festgestellt werden können.
+\item \textbf{Verwendung von Systembefehlen} \\
+Zur Sammlung und Sicherung von Daten sollten niemals Systembefehle verwendet werden. Die Systemprogramme könnten vom Angreifer durch modifizierte Programme ausgetauscht werden sein. Der Ermittler sollte immer statisch vorkompilierte Programme verwenden.
+\item \textbf{Einsatz Grafischer Programme} \\
+Bei der Untersuchung eines Live-Systems sollte soweit als möglich auf den EInsatz von Programmen mit einer grafischen Oberfläche verzichtet werden. Grund dafür ist, dass diese eine Vielzahl an Binärdateien und Konfigurationen benötigen. Zum einen werden dadurch viele Zeitstempel geändert und zum anderen benötigen diese mehr RAM als Konsolenanwendungen.
+\item \textbf{Patches und Updates} \\
+Eher nicht, wenn kritisch, nach Rücksprache, Vernichtung Beweise
+\end{itemize}

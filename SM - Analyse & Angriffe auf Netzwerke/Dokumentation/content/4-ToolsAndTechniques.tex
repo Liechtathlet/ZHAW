@@ -1,4 +1,6 @@
-\chapter{Tools und Techniken}
+\chapter{Tools und Techniken} \label{chap:ToolsTechniques}
+In diesem Kapitel werden die grundlegenden Tools und Techniken einer forensischen Analyse vorgestellt. 
+
 
 \section{Image-Related / Data-Aquisitation}
 \subsection{Laufwerk löschen}
@@ -9,6 +11,14 @@ Kein WippingUtility, bei spezialfällen / wenn notwendig: Wipeutility: Linux: "`
 
 
 \subsection{Image erstellen}
+
+\subsubsection{Technik}
+Varianten: Ausbau, Anschluss saubere Platte an System, Kopie via netzwerk
+Writeblocker
+
+Versteckte Bereiche auf Datenträgern: Host Protected Area, Device Configuration Overlay --> Verfahren, dass auch diese Daten sichert, Checksummen
+
+\subsubsection{Tool}
 EnCase (Seite 72) DOS Boot disk
 EnCase (Windows)
 Linux: Device Name ermitteln: /proc/partitions oder logs, dann: "`dd if=/dev/<suspect drive> of=/some dir/image name"', "`md5sum /some dir/image name"', "`md5sum /dev/<suspect drive>"'
@@ -26,6 +36,11 @@ Linux: md5sum "`image file"', compare
 \section{Gelöschte Datenträger}
 Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...
 
+
+\section{Secure}
+\subsection{Prozesse}
+Binärkopien Prozesse / Programme unter /proc
+
 \section{Kommerzielle Tools}
 -SMART
 -Helix (ein Teil Freeware)
@@ -34,3 +49,41 @@ Remote Untersuchungen:
 -EnCase Enterprise Edition
 -Paraben Enterprise
 -ProDiscover
+
+\section{Tool-Matrix}
+\begin{table}[H]
+\centering
+\caption{Verfügbarkeit der Tools auf verschiedenen Betriebssystemen}
+\begin{tabular}{r | c | c | c | c}
+Name 					&	\THrot{Windows}		&	\THrot{Linux}		&	\THrot{Mac OSX}		& 	\THrot{Weitere}		\\
+\midrule
+Test 					&	x			&				&	x			&			\\	
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Technik-Matrix}
+\begin{table}[H]
+\centering
+\caption{Einsatz der Techniken auf verschiedenen Betriebssystemen}
+\begin{tabular}{r | c | c | c | c}
+Name 					&	\THrot{Windows}		&	\THrot{Linux}		&	\THrot{Mac OSX}		& 	\THrot{Weitere}		\\
+\midrule
+Test 					&	x			&				&	x			&			\\	
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Tool-Technik-Matrix}
+Nur Tool-Suiten
+
+\begin{table}[H]
+\centering
+\caption{Tools: Unterstützte Techniken}
+\begin{tabular}{r | c | c | c | c}
+Name 					&	\THrot{Tool1}		&	\THrot{Tool2}		&	\THrot{Tool3}		& 	\THrot{Tool4}		\\
+\midrule
+Test 					&	x			&				&	x			&			\\	
+\bottomrule
+\end{tabular}
+\end{table}
