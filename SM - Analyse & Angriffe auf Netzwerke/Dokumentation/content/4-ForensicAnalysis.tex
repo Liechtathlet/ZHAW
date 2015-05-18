@@ -1,8 +1,6 @@
-\chapter{Forensische Analyse}
+\chapter{Forensische Analyse} \label{chap:ForensischeAnalyse}
 In diesem Kapitel wird der Ablauf der Computer forensischen Analyse im Detail aufgezeigt und erklärt. Die Techniken und Tools zur Unterstützung dieses Prozesses wird im Kapitel \ref{chap:ToolsTechniques} \nameref{chap:ToolsTechniques} erläutert.
 
-
-\todo{ERDM: Electronic Discovery Reference Model, Guter Prozess: Noitzbuch}
 
 \section{Einführung}
 Der Prozess der forensischen Analyse lässt sich grundsätzlich in die nachfolgenden Phasen unterteilen werden. Die Erläuterung der einzelnen Phasen erfolgt in den nachfolgenden Kapiteln.
@@ -15,6 +13,23 @@ Der Prozess der forensischen Analyse lässt sich grundsätzlich in die nachfolge
 \item Present (Präsentation)
 \item Review (Rückblick)
 \end{enumerate}
+
+Ziel ist es es aus den vorhandenen Median die Daten zu extrahieren. Aus den extrahierten Daten werden Informationen gewonnen, welche anschliessend im Zuammenhang mit anderen Informationen als Beweis dienen können
+
+\todo{Evtl. Bild Media -> Data --> Information --> Evidence}
+
+\subsection{Ein guter Prozess}
+Ein guter Prozess für eine forensische Analyse zeichnet sich durch folgende Punkte aus:
+
+\begin{itemize}
+\item Kreuzvalidierung von essentiellen Ergebnissen mit anderen Tools
+\item Sauberer und Korrekter Umgang mit Beweismaterial
+\item Vollständigkeit der Untersuchung
+\item Management des Falles: Case-Management, Dokumentation, Archivierung
+\item Dokumentierte und geprüfte Arbeitsprozesse
+\item Konformität zu gesetzlichen Vorgaben und Restriktionen
+\item Flexibilität
+\end{itemize}
 
 \section{Phasen}
 \subsection{Readiness (Vorbereitung)}
@@ -55,16 +70,18 @@ Um während der Untersuchung Fehler zu verhindern und wertvolle Zeit einzusparen
 Die Phase "`Secure"' lässt sich weiter in die Phasen "`Environment (Umgebung)"', "`Identify (Identifizieren)"', "`Collect (Sammeln)"' und "`Preserve (Aufbewahren)"' unterteilen.
 
 
-\subsection{Environment (Umgebung)}
+\subsubsection{Environment (Umgebung)}
 Diese Phase muss grundsätzlich nur berücksichtigt werden, wenn es sich bei der Untersuchung um eine Ermittlung im Rahmen einer Incident Response oder einer Tatortssicherung handelt.
 
 Bei Ankunft des Ermittlers am "`Tatort"' sollte er sogleich sicherstellen, dass nur noch berechtigte Personen Zugang zum Tatort und der näheren Umgebung haben. Bevor die Personen den Tatort verlassen, sind zum einen die Kontaktdaten für spätere Rückfragen und zum anderen weitere Informationen (zum Beispiel: Passwörter, Besonderheiten des Systems) zu protokollieren. Sofern noch nicht erfolgt, sollte der Tatort isoliert und dokumentiert werden. Für die Tatortdokumentation sind Fotos und Skizzen sehr gut geeignet.
 
 \subsubsection{Identify (Identifizieren)}
-Bevor die ersten Daten gesichert werden können, müssen alle möglichen Datenquellen identifiziert werden. Dazu zählt zum Beispiel das zu untersuchende System, externe Festplatten, USB-Sticks, Wechseldatenträger, etc. Falls gestattet, sollte in der näheren Umgebung, zum Beispiel im Aktenschrank oder im Korpus, nach weiteren Datenträgern gesucht werden. Je nach Situation sind an weiteren Stellen (zum Beispiel Firewall-Logs, Server-Logs, etc.) zusätzliche Informationen gespeichert. Gegebenenfalls sollte auch nach relevanten physischen Dokumenten, welche Hinweise oder wichtige Informationen beinhalten, gesucht werden. Zum Beispiel könnte eine mehr oder weniger gut versteckte Passwortliste die Arbeit erheblich erleichtern. Wurden nicht an ein System angeschlossene Datenträger, Medien  und Dokumente gefunden ist dies sofort zu dokumentieren und der Beweisgegenstand fachgerecht zu sichern (Siehe Abschnitt \nameref{subsubsec:FA:Secure:CollectPreserve}). 
+Bevor die ersten Daten gesichert werden können, müssen alle möglichen Datenquellen identifiziert werden. Dazu zählt zum Beispiel das zu untersuchende System, externe Festplatten, USB-Sticks, Wechseldatenträger, etc. Falls gestattet, sollte in der näheren Umgebung, zum Beispiel im Aktenschrank oder im Korpus, nach weiteren Datenträgern gesucht werden. Je nach Situation sind an weiteren Stellen (zum Beispiel beim Internet-Provider, Firewall, Roter, etc.) zusätzliche Informationen gespeichert. Gegebenenfalls sollte auch nach relevanten physischen Dokumenten, welche Hinweise oder wichtige Informationen beinhalten, gesucht werden. Zum Beispiel könnte eine mehr oder weniger gut versteckte Passwortliste die Arbeit erheblich erleichtern. Wurden nicht an ein System angeschlossene Datenträger, Medien  und Dokumente gefunden ist dies sofort zu dokumentieren und der Beweisgegenstand fachgerecht zu sichern (Siehe Abschnitt \nameref{subsubsec:FA:Secure:CollectPreserve}). 
 
 \subsubsection{Collect (Sammeln) and Preserve (Aufbewahren)} \label{subsubsec:FA:Secure:CollectPreserve}
-Bei der Sammlung von Daten gilt der Grundsatz, dass so wenig eigene Spuren hinterlassen werden sollten, als irgendwie möglich ist. Die Sicherung der Daten erfolgt anhand Ihrer Einstufung. Zuerst werden flüchtige Daten gesichert, anschliessend nicht flüchtige Daten. Flüchtige Daten, sind Daten, welche nach einem Shutdown oder einem harten Shutdown des Systems nicht mehr verfügbar sind.
+Bei der Sammlung von Daten gilt der Grundsatz, dass so wenig eigene Spuren hinterlassen werden sollten, als irgendwie möglich ist. Die Sicherung der Daten erfolgt grundsätzlich anhand Ihrer Halbwertszeit. Zuerst werden flüchtige Daten gesichert, anschliessend nicht flüchtige Daten. Innerhalb der flüchtigen Daten erfolgt die Reihenfolge der Sicherung auch anhand der Halbwertszeit. Es werden zuerst Caches, dann Hauptspeicherinhalte und anschliessend Informationen über Netzwerkverbindungen und Laufende Prozesse gesichert. Flüchtige Daten, sind Daten, welche nach einem Shutdown oder einem harten Shutdown des Systems nicht mehr verfügbar sind und unwiderruflich verloren sind.
+
+Bevor mit der Sammlung und Aufbewahrung begonnen wird, sollte der Ermittler einen Plan aufstellen, welche Daten er in welcher Reihenfolge wie und mit welchen Tools und Techniken sichern sollte. Bei der Planung ist die Priorität der einzelnen Datenquellen zu berücksichtigen. Die Priorität setzt sich dabei aus folgenden Faktoren zusammen: Geschätzter Wert der Daten (basierend auf den Erfahrungen und der Einschätzung der Situation) und Aufwand (Zeit / Kosten / Ausrüstung) um die Daten zu sichern. Häufig ist es nicht möglich, alle Datenquellen einzusammeln, daher müssen diese priorisiert werden.
 
 \paragraph{Harter vs. Normaler Shutdown}
 Bei einem normalen Shutdown wird das System durch den Benutzer regulär heruntergefahren, sämtliche Daten werden gespeichert und das System befindet sich im Anschluss in einem sauberen / lauffähigen Zustand. Während dem Shutdown werden jedoch die Zeitstempel von sehr vielen Dateien verändert und temporäre Dateien und Arbeitsdateien des Betriebssystems gelöscht. Dies kann unter Umständen die Analysearbeiten erschweren oder sogar Beweise vernichten. 
@@ -77,6 +94,10 @@ Bei beiden Varianten ist die Zeit der Durchführung und die Art des Shutdowns zu
 
 \paragraph{Sicherung des RAM-Inhaltes}
 Nachdem herunterfahren des Systems sind die Daten im RAM noch einige Sekunden verfügbar. Dies reicht in der Regel jedoch nicht um eine Datensicherung durchzuführen. Einige neuere Studien und Experimente haben gezeigt, dass es durchaus Mittel und Wege gibt, um den Inhalt des RAMS zu sichern. Eine Möglichkeit besteht darin, die Raumbausteine mit einem Stickstoffspray auf -50 Grad Celsius herunter gekühlt. Anschliessend wird der Rechner ausgeschaltet, der RAM ausgebaut und in ein anderes System eingebaut. Das System wird mit einer Spezialsoftware gestartet, welches einen Memory-Dump erstellt.
+
+\paragraph{Writeblocker}
+\todo{Writeblocker}
+HW und SW
 
 \paragraph{System ist eingeschaltet}
 \begin{enumerate}
@@ -94,6 +115,7 @@ Ist der Zugang zum System hergestellt, kann mit der Sicherung der flüchtigen Da
 \begin{enumerate}
 \item Festhalten des Bildschirminhalts und der geöffneten Anwendungen
 \item Festhalten der aktuellen Systemzeit und einer Referenzzeit, sowie deren Abweichung
+\item Informationen über das verwendete Betriebssystem
 \item Liste der aktiven Prozesse
 \item Liste der geöffneten Sockets
 \item Liste der Anwendungen, die auf geöffnete Sockets hören
@@ -117,9 +139,13 @@ Anschliessend wird von sämtlichen Datenträgern ein forensisches Duplikat erzeu
 
 Die Erstellung eines Duplikates ist grundsätzlich immer sinnvoll, da dies bessere Analysemöglichkeiten bietet. Ist die Untersuchung ein Teil einer Strafuntersuchung ist in jedem Fall die Anfertigung eines Duplikates zu empfehlen.
 
+Sind sämtliche Datenträger entfernt, sollte das System gestartet und direkt das BIOS aufgerufen werden. Der entsprechende Key um ins BIOS zu wechseln sollte vorab ermittelt / recherchiert werden. Anschliessend sind sämtliche BIOS-Informationen zu dokumentieren. Besonders wichtig ist auch hier die im BIOS eingestellte Systemzeit und das Datum. Besteht eine Diskrepanz zur aktuellen Zeit oder zur notierten Zeit des Betriebssystemes ist dies entsprechend zu notieren und später zu berücksichtigen.
 
-\paragraph{Beweiskette}
-
+\paragraph{Beweiskette und Beweissicherung}
+-Pro Beweis: Beweiszettel, kein Zweifel an Herkunft, Besitztum, Sicherstellung Unversertheit
+-Pro Objekt: Zettel
+-Antistatischer Sack
+-original: mitnehmen oder wieder in Betrieb (je nach Situation)
 
 \paragraph{Sicherung}
 Haupteinheit (evtl. nur Datenträger), evtl. Spezialgeräte, Stromkabel, Sämtliche externen Datenträger, Wechselmedien wie DVD, CD, Disketten, USB-Sticks, WORM, Speicherkarten 
@@ -131,16 +157,75 @@ http://forensic.belkasoft.com/en/live-ram-forensics
 Auf sterilisierten Datenträgern
 
 
+%--------------------------------------------------
 \subsection{Analysis (Analyse)}
+Die Analyse Phase unterteilt sich zum einen in die Phase "`Examination (Untersuchung)"' und zum anderen in die eigentliche Analyse-Phase. Der Übergang zwischen diesen beiden Phasen ist fliessend und lässt sich nicht immer klar trennen. Mit Abschluss der Secure-Phase kann der Ermittler sämtliche weiteren Arbeiten im Labor durchführen. Die Anwesenheit am Tatort ist nicht mehr zwingend, da sämtliches Material eingesammelt und gesichert wurde.
+
+Die anzuwendenden Techniken und durchzuführenden Schritte bei der Analyse sind stark von der Situation abhängig. Bei der Untersuchung einer Cyber-Attacke sind oft andere Aspekte relevant, als bei der Untersuchung einer Entführung oder eines Mordfalles. Im nachfolgenden Abschnitt werden einige Ansatzpunkte für eine Untersuchung aufgezeigt.
 
 \subsubsection{Examination (Untersuchung)}
+Bevor die Untersuchung und die Analyse durchgeführt werden kann, muss das forensische Image gemountet werden. Dafür gibt es verschiedene Vorgehensweisen. In jedem Fall ist jedoch sicherzustellen, dass das Image ReadOnly gemountet wird. Im Idealfall wird vor und nach der Analyse jeweils ein Hash des Images erstellt, um zu verifizieren, dass das Image nicht manipuliert / verändert wurde.
+
+Kontext Abhängig
+Trojanisierte Systemprogramme
+-Versteckte Dateien / Verzeichnisse
+
+\begin{enumerate}
+\item Wiederherstellung des File-Systems / der Beweisspuren (gelöschte, umbenannte, versteckte, verschlüsselte Dateien)
+\item Generierung von Hashes für alle Dateien.
+\item Abgleich der generierten Hashes. \\
+Die generierten Hashes können mit Datenbanken abgeglichen werden, welche Hashes von zahlreichen System- / Programmdateien von verschiedenen Betriebssystemen und Programmen enthalten. Die so als irrelevant identifizierten Dateien können für die weitere Analyse ausgeblendet werden.
+\item Suchindex über sämtliches Material erstellen \\
+Es wird empfohlen ein Suchindex aus lesbaren Zeichen zu bilden. Bei der Index-Erstellung ist darauf zu achten, dass auch der File-Slack, alle belegten und unbelegten Bereiche auf dem Datenträger und die Metadaten des Dateisystems indexiert werden.
+\item Kategorisierung der Dateien (zum Beispiel nach Typ)
+
+\end{enumerate}
+
+\begin{itemize}
+\item Analyse des File Slacks
+\item Timeline-Analyse
+\item Analyse der Auslagerungsdateien
+\item Analyse der versteckten Dateien
+\item Analyse unbekannter Binärdateien
+\item Analyse der Systemprotokolle
+\item Analyse der Netzwerkschnittstellen
+\item Untersuchung der Shell
+\item Untersuchung der Druckerjobs und der Druckerqueue
+\item Untersuchung der Dateien / Dateiendungen
+\item Bei Verdacht auf Einsatz von Anti-Forensik-Techniken: Vertiefte Analyse
+\item Untersuchung von User Aktivitäten
+\item Weitere Untersuchungen auf Anwendungsebene (zum Beispiel: E-Mail, Browser)
+\end{itemize}
 
 \subsubsection{Analysis (Analyse)}
 Analyse mit juristisch verwertbaren Methoden und Techniken und Informationen zur Unterstützung des Falles zu erhalten
 
-Trojanisierte Systemprogramme
--Versteckte Dateien / Verzeichnisse
+Die gefundenen Beweisspuren werden analysiert und in ein der folgenden drei Gruppen eingeteilt.
 
+-Scheduler / Cronjobs
+-OS-Logs
+-
+\begin{itemize}
+\item Beweise untermauern eine bestimmte Theorie.
+\item Beweise widerlegen eine bestimmte Theorie.
+\item Beweise unterstützen keine bestimmte Theorie.
+\end{itemize}
+
+Die Schwierigkeit bei der Analyse der Informationen besteht darin, diese in einen kausalen und zeitlichen Zusammenhang zu setzen. Diese Zusammenhänge müssen zum einen plausibel und nachvollziehbar sein und zum anderen mit anderen Ereignissen korrelieren. 
+
+
+-Verbindung herstellen: besuchte Webseiten, Hinweise E-Mails, Chats, Via Grammatik Stiel?
+
+\paragraph{Unterstützende Fragestellungen}
+\begin{itemize}
+\item War ein physischer Zugang zum System notwendig?\\
+Ja: Kontrolle der physischen Überwachung und Zutrittskontrolle.
+\item Hatten andere Personen Zugang zum System?\\
+Ja: Kontrolle der physischen Überwachung und Zutrittskontrolle.
+\item Was für Computerkenntnisse hat der Verdächtige? Was für Computerkenntnisse waren notwendig?
+\end{itemize}
+
+%--------------------------------------------------
 \subsection{Reporting (Dokumentation)}
 Die gesamte forensische Untersuchung muss im Detail protokolliert und dokumentiert werden. Es müssen sämtliche Arbeitsschritte nachvollzogen und gegebenenfalls durch einen anderen Experten reproduziert werden können. Die eingesetzten Tools (inkl. Version) und Techniken sollten kurz beschrieben werden Im Rahmen einer Strafuntersuchung müssen die durchgeführten Schritte und angewandten Techniken so erläutert werden, dass diese von Laien verstanden und nachvollzogen werden können.
 
@@ -154,6 +239,9 @@ Evtl. auflistung besser?
 \item Prüfsummen von Dokumenten, Protokollen und Beweisen
 \item Erläuterung der Evaluation der Tools und Techniken
 \end{itemize}
+
+\todo{HE CF: S. 341}
+
 \subsection{Present (Präsentation)}
 
 
@@ -177,4 +265,6 @@ Zur Sammlung und Sicherung von Daten sollten niemals Systembefehle verwendet wer
 Bei der Untersuchung eines Live-Systems sollte soweit als möglich auf den EInsatz von Programmen mit einer grafischen Oberfläche verzichtet werden. Grund dafür ist, dass diese eine Vielzahl an Binärdateien und Konfigurationen benötigen. Zum einen werden dadurch viele Zeitstempel geändert und zum anderen benötigen diese mehr RAM als Konsolenanwendungen.
 \item \textbf{Patches und Updates} \\
 Eher nicht, wenn kritisch, nach Rücksprache, Vernichtung Beweise
+\item \textbf{Remote Untersuchung} \\
+Bei einer forensischen Analyse ist nicht immer ein direkter Zugriff auf das System vorhanden. Gewisse Forensik-Tools erlauben den Einsatz via Netzwerk. Diese benötigt jedoch auf dem zu untersuchenden System einen entsprechenden Forensik-Client, mit welchem sich der Server anschliessend verbinden kann. Dieser sollte bereits vorgängig (vor dem Sicherheitsvorfall) auf dem System installiert worden sein.
 \end{itemize}

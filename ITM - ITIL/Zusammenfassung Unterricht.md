@@ -206,3 +206,13 @@ Configuration Item (CI): Asset, Service component or other item that is / will b
 CMDB - CMS - Presentation and Processing Layer - Service Knowledge Management System, Ziel: Qualität Managemententscheidungen verbessern, DIKW: Data - Information - Knowledge - Wisdom
 
 TODO: Restliche Slides
+
+
+###Transition Planning and Support
+Kernprozess Service Transition, Transition Strategy - Prepare for ST - Planning and Coordinating - Provide Transition Process Support
+
+  - Change Management
+  - Service Assets and Configuration Management
+  - Release and Deployment Management
+  - Service Validation and Testing
+  - Evaluation

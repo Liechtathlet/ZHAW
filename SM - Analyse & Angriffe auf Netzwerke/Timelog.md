@@ -17,11 +17,15 @@
 | Texten CF, IR, ID         | 02.05.2015 | 3         |
 | Texten CF, IR, ID, ...    | 03.05.2015 | 3         |
 | Texten Kapitel 4          | 08.05.2015 | 3         |
+| Überarbeitung             | 09.05.2015 | 1         |
+| Texten Kapitel 4, 5       | 09.05.2015 | 3         |
+| Abschluss Kapitel 2       | 18.05.2015 | 2         |
+
 
 ##Calculation-Log
   - 8,2,1,3,1,2.5,3,1,1,1.5
-  - 3, 3, 3
+  - 3, 3, 3, 1, 3, 2
 
 
 ##Total
-Total (h):  33
+Total (h):  35

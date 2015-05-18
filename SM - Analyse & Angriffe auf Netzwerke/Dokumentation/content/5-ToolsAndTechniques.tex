@@ -1,22 +1,36 @@
 \chapter{Tools und Techniken} \label{chap:ToolsTechniques}
-In diesem Kapitel werden die grundlegenden Tools und Techniken einer forensischen Analyse vorgestellt. 
+In diesem Kapitel werden die grundlegenden Tools und Techniken einer forensischen Analyse vorgestellt. Die Tools und Techniken werden dabei nach der Phase, in der diese eingesetzt und angewendet werden, gegliedert.
 
 
-\section{Image-Related / Data-Aquisitation}
-\subsection{Laufwerk löschen}
+
+%---------------------------------------------------------------------------------------------------------------
+\section{Readiness}
+
+\subsection{Datenträger löschen}
 EnCase, statisches überschreiben (nur einmal), 
 
 Attach to System, Windows, Start EnCase, Tools -> Wipe Drive, Select Device, Defaults as are, Next, HECF; S. 69
 Kein WippingUtility, bei spezialfällen / wenn notwendig: Wipeutility: Linux: "`dd if=/dev/random of=/dev/<image drive>"'
 
 
-\subsection{Image erstellen}
+%---------------------------------------------------------------------------------------------------------------
+\section{Secure}
 
-\subsubsection{Technik}
+\subsection{Sicherung flüchtiger Daten}
+
+\todo{CF: Seite 210 / 2011}
+\todo{CFH: S. 1 - 35}
+
+\subsection{Forensische Duplikation}
 Varianten: Ausbau, Anschluss saubere Platte an System, Kopie via netzwerk
 Writeblocker
 
 Versteckte Bereiche auf Datenträgern: Host Protected Area, Device Configuration Overlay --> Verfahren, dass auch diese Daten sichert, Checksummen
+
+\subsection{Verifizierung eines forensischen Duplikates oder eines Beweisstückes}
+EnCase, Tools, Verify Single Evidence File
+Linux: md5sum "`image file"', compare
+
 
 \subsubsection{Tool}
 EnCase (Seite 72) DOS Boot disk
@@ -28,27 +42,48 @@ FreeHelix
 
 FTKImager (Windows)
 
-\subsection{Image verifizieren}
-EnCase, Tools, Verify Single Evidence File
-Linux: md5sum "`image file"', compare
 
+%---------------------------------------------------------------------------------------------------------------
+\section{Analysis}
 
-\section{Gelöschte Datenträger}
+\subsection{Gelöschte Datenträger}
 Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...
 
+\subsection{Untersuchung der Shell}
+\todo{HECF: S. 171}
 
-\section{Secure}
-\subsection{Prozesse}
-Binärkopien Prozesse / Programme unter /proc
+\subsection{Untersuchung der Druckerjobs und der Druckerqueue}
+\todo{HECF: S. 171}
 
+\subsection{Untersuchung der Dateien / Dateiendungen}
+\todo{HECF: S. 172}
+
+\subsection{Untersuchung von User Aktivitäten}
+
+\subsection{Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}
+
+
+File-Slack: CF S. 109
+%---------------------------------------------------------------------------------------------------------------
+\section{Reporting}
+
+
+
+
+%-------------------------------------------
+
+
+
+Tools: CF: S. 175
+
+
+
+
+http://www.computer-forensik.org/tools/
 \section{Kommerzielle Tools}
 -SMART
 -Helix (ein Teil Freeware)
 
-Remote Untersuchungen:
--EnCase Enterprise Edition
--Paraben Enterprise
--ProDiscover
 
 \section{Tool-Matrix}
 \begin{table}[H]

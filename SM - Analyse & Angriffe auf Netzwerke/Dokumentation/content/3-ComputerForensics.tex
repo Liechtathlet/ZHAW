@@ -1,4 +1,4 @@
-\chapter{Computer Forensik}
+\chapter{Computer Forensik}\label{chapt:ComputerForensics}
 
 Dieses Kapitel definiert den Begriff der Computer Forensik und beschreibt das Themengebiet im Allgemeinen. 
 
@@ -60,6 +60,7 @@ Diese Arbeit richtet sich nach dem ersten Ansatz, bei dem die Computer Forensik 
 
 \todo{Grafik Einbettung}
 
+\section{Ziele}
 
 \section{Einführung}
 Die Computer Forensik kann in verschiedenen Kontexten zum Einsatz kommen. Zum einen erfolgt während, bzw. nach einem Sicherheitsvorfall (Incident), z.B. Systeminbruch eine forensische Untersuchung (Mehr dazu im Kapitel \ref{chap:AIDI}). 
@@ -70,8 +71,6 @@ Im Kontext der Untersuchung von Straftaten ist es das Ziel,
 
 .....
 
-\section{Themengebiete und Teilbereiche}
--HW, SW, AW
 
 \section{Anwendungsbereich}
 Die Computer Forensik findet unter anderem in folgenden Bereichen Anwendung:
@@ -84,9 +83,35 @@ Die Computer Forensik findet unter anderem in folgenden Bereichen Anwendung:
 \item Datenbeschaffung
 \end{itemize}
 
-\section{Ziele}
+
+\section{Kategorien von Daten}
+\begin{itemize}
+\item Empfindliche Daten
+\begin{itemize}
+\item Flüchtige Daten, gehen beim geordneten Shutdown / Ausschalten veroren (Cache, Hauptspeicher, Status NWV, Prozesse,...)
+\item Fragile Daten, zwar auf HD, Zustand kann sich beim Zugriff ändern
+\item Temporär zugreifbare Daten, auf HD, nur zu Bestimmten Zeitpunkten zugreifbar
+\end{itemize}
+\end{itemize}
+-Flüchtig
+-Nicht-Flüchtig
+
+Evtl. Matrix mit Zuordnung Techniken / Themenbereichen zu Typen und Sicherungsebenen 
+
+
+
+\section{Anti-Forensik und Anti-Detection}
+Straftäter und Angreifer auf Computer Systeme werden sich immer mehr bewusst, dass sie Spuren auf dem System hinterlassen. Diese versuchen dann entweder keine oder so wenig Spuren wie möglich zu hinterlassen, Spuren und Beweise zu verändern oder gar zu löschen oder falsche Fährten zu legen. Dies kann entweder manuell oder mit Hilfe von Anti-Forensik und Anti-Detection Tools erfolgen.
+
+Das primäre Ziel dabei ist, zu verhindern, dass das Eindringen oder die verdächtige Handlung entdeckt wird. Dies wird eigentlich eher dem Themenbereich der Anti-Detection, also dem "`Unbemerkt bleiben"', zugeordnet. Bei der Anti-Detection versuchen die Täter unerkannt und unbemerkt zu bleiben. Zusätzlich wird versucht die Ermittler zu behindern, abzulenken oder die Datensammlung zu stören oder zu unterbinden. Zum Teil wird auch versucht den Umstand ausgenutzt, dass für eine Ermittlung nur eine beschränktes Zeitkontingent und Budget vorhanden ist. Dies kann dazu führen, dass der Ermittler nur die Beweise findet, die er soll und sich dann aus zeitlichen und budgettechnischen Gründen damit zufrieden gibt und die Untersuchung abschliesst.
+
+Kennt der Angreifer die eingesetzten Werkzeuge oder kann diese ermitteln, kann er Schwachstellen und Sicherheitslücken in diesen ausnutzen und gezielt angreifen. im schlimmsten Fall kann der Angreifer die Ermittlungen gezielt manipulieren, ohne dass der Ermittler dies bemerkt. Daher sollte die Analyse zum einen in einer geschützten Umgebung durchgeführt werden und die verwendete regelmässig upgedatet werden.
+
+
 
 \section{Ausbildung \& Zertifizierung}
+
+
 
 \section{Hinweise für die juristische Verwertbarkeit}
 Sollen die sichergestellten Daten und Informationen juristisch verwertbar sein, zum Beispiel als Beweise in einem Strafprozess müssen einige zusätzliche Punkte beachtet werden. Grundsätzlich ist es sinnvoll die folgenden Punkte bei jeder Untersuchung zu berücksichtigen.
@@ -121,32 +146,3 @@ Schweizer Recht??
 Vorgängige Klärung wenn Logs personenbezogene Daten beinhalten, Information Datenschutzbeauftrager, Security \& Compliance, IT-leiter, REvision, Vier-Augen-Prinzip wahren
 
 DS bei Ermittlung nicht ausser Kraft, aber kein Täterschutz, Verhältnismässigkeit
-
-
-
-\section{Sicherungsebenen}
--Hardware-Ebene
--Software-Ebene
---Betriebssystem-Ebene
---Anwendungssoftware-Ebene
-
-\section{Unterscheidung Daten-Typen}
-\begin{itemize}
-\item Empfindliche Daten
-\begin{itemize}
-\item Flüchtige Daten, gehen beim geordneten Shutdown / Ausschalten veroren (Cache, Hauptspeicher, Status NWV, Prozesse,...)
-\item Fragile Daten, zwar auf HD, Zustand kann sich beim Zugriff ändern
-\item Temporär zugreifbare Daten, auf HD, nur zu Bestimmten Zeitpunkten zugreifbar
-\end{itemize}
-\end{itemize}
--Flüchtig
--Nicht-Flüchtig
-
-Evtl. Matrix mit Zuordnung Techniken / Themenbereichen zu Typen und Sicherungsebenen
-
-\section{Anti-Forensik und Anti-Detection}
-Straftäter und Angreifer auf Computer Systeme werden sich immer mehr bewusst, dass sie Spuren auf dem System hinterlassen. Diese versuchen dann entweder keine oder so wenig Spuren wie möglich zu hinterlassen, Spuren und Beweise zu verändern oder gar zu löschen oder falsche Fährten zu legen. Dies kann entweder manuell oder mit Hilfe von Anti-Forensik und Anti-Detection Tools erfolgen.
-
-Das primäre Ziel dabei ist, zu verhindern, dass das Eindringen oder die verdächtige Handlung entdeckt wird. Dies wird eigentlich eher dem Themenbereich der Anti-Detection, also dem "`Unbemerkt bleiben"', zugeordnet. Bei der Anti-Detection versuchen die Täter unerkannt und unbemerkt zu bleiben. Zusätzlich wird versucht die Ermittler zu behindern, abzulenken oder die Datensammlung zu stören oder zu unterbinden. Zum Teil wird auch versucht den Umstand ausgenutzt, dass für eine Ermittlung nur eine beschränktes Zeitkontingent und Budget vorhanden ist. Dies kann dazu führen, dass der Ermittler nur die Beweise findet, die er soll und sich dann aus zeitlichen und budgettechnischen Gründen damit zufrieden gibt und die Untersuchung abschliesst.
-
-Kennt der Angreifer die eingesetzten Werkzeuge oder kann diese ermitteln, kann er Schwachstellen und Sicherheitslücken in diesen ausnutzen und gezielt angreifen. im schlimmsten Fall kann der Angreifer die Ermittlungen gezielt manipulieren, ohne dass der Ermittler dies bemerkt. Daher sollte die Analyse zum einen in einer geschützten Umgebung durchgeführt werden und die verwendete regelmässig upgedatet werden.

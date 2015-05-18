@@ -3,12 +3,11 @@
 
 \chapter{Einleitung}
 
-\todo{Hinweis männlich / weibliche Form}
 
 \section{Hintergrund}
 Im Rahmen meines Bachelor-Studiums in Informatik an der \gls{acr:ZHAW} muss im 6. Semester eine Seminararbeit zu einem vorgegebenen Themenbereich erarbeitet werden. Ich habe mich für den Themenbereich "`Analyse und Angriffe auf Netzwerke"' entschieden.
 
-Es einem Themenkatalog konnte ein spezifisches Thema im Bereich "`Analyse und Angriffe auf Netzwerke"' ausgewählt werden. Ich habe mich für das Thema "`Computer Forensik"' entschieden.
+Aus einem Themenkatalog konnte ein spezifisches Thema im Bereich "`Analyse und Angriffe auf Netzwerke"' ausgewählt werden. Ich habe mich für das Thema "`Computer Forensik"' entschieden.
 
 Für die Arbeit sollen circa 50 Arbeitsstunden aufgewendet werden. Dies entspricht etwa einem Umfang von 15 bis 20 Seiten. Zusätzlich gelten die Rahmenbedingungen gemäss dem Reglement zur Verfassung einer Seminararbeit (\cite{ZHAW:2012:Seminararbeit:Reglemente})
 
@@ -16,13 +15,25 @@ Für die Arbeit sollen circa 50 Arbeitsstunden aufgewendet werden. Dies entspric
 In dieser Arbeit soll ein Überblick über das Themengebiet der "`Computer Forensik"' erarbeitet werden. Es soll gezeigt werden was für Themenbereiche es gibt und was für Werkzeuge und Tools eingesetzt werden können. Das Ganze soll mit einem Ablauf einer forensischen Untersuchung und entsprechenden Beispielen illustriert werden.
 
 \section{Abgrenzung}
-Aufgrund des grossen Themengebietes können nicht alle Detail-Aspekte der Computer Forensik berücksichtigt werden. Daher werden in dieser Arbeit nur die wichtigsten Aspekte der Computer Forensik näher betrachtet.
+Aufgrund des grossen Themengebietes können nicht alle Detail-Aspekte der Computer Forensik berücksichtigt werden. Daher werden in dieser Arbeit nur einige Kernaspekte betrachtet. 
 
--Unix-Systeme
--Normale / Einzelsysteme (ohne RAID, etc.)
-\todo{Weitere Abgrenzungen}
+Folgende Themengebiete werden im Detail erläutert:
+\begin{itemize}
+\item Analyse von normalen Einzelplatz Unix-Systemen
+\end{itemize}
+
+Explizit ausgeschlossen werden folgende Themenbereiche:
+
+\begin{itemize}
+\item Detaillierte rechtliche Aspekte (zum Beispiel Strafrechtliches Vorgehen, Strafantrag, Tatortprinzip, etc.)
+\item Remote-Analyse
+\item Analyse von RAID-Systemen
+\item Analyse von Windows und Mac OS X Systemen.
+\end{itemize}
 
 \section{Motivation}
+Die forensischen Wissenschaften haben mich seit jeher fasziniert. Zusammen mit meinem berufsbedingten Interesse für Informatik, Computer und andere elektronische Geräte hat sich mit der Zeit das Interesse an der Computer Forensik herauskristallisiert. Ich hatte bereits vor längerer Zeit ein Buch zu diesem Thema gekauft, bin jedoch nie dazu gekommen, mich vertieft damit auseinanderzusetzen. Dieses Seminar hat mir nun ermöglicht, mich vertieft mit diesem Themenkomplex auseinanderzusetzen und erste Einblicke zu erhalten und Erfahrungen zu sammeln.
+
 \subsection{Computerkriminalität}
 Stetiger Zuwachs an
 Themenkreis: Ausführung von Taten in Kenntnis bzw. unter Einsatz von Computer- bzw. Kommunikationstechnologie, die Verletzung von Eigentum an Sachwerten sowie Verfügungsrechten an immateriellen Gütern und die Beeinträchtigung von Computer- bzw. Kommunikationstechnologien.
@@ -34,14 +45,16 @@ Delikte: Computerbetrug, Betrug mit Zugangsberechtigungen zu Kommunikationsdiens
 Angreifer: Cyberkriminelle, Konkurrenten, Nachrichtendienste, Hackers, Hacktivisten, Mitarbeiter
 
 \section{Struktur}
-\todo{Struktur erklären}
 Diese Arbeit gliedert sich in folgende Hauptteile:
 \begin{itemize}
-\item Ausgangslage
-\item Analyse
-\item Evaluation
+\item Einleitung
+\item Angriffe
+\item Incident Detection \& Incident Response
+\item Computer Forensik
+\item Forensische Analyse
+\item Tools und Techniken
 \item Schlusswort
 \end{itemize}
 
-Im ersten Kapitel werden die Details zur Ausgangslage und die Hintergründe der Arbeit aufgezeigt. Im zweiten Kapitel wird mit Hilfe einer Umfrage innerhalb des Turnvereins eine Analyse erstellt. Aus dieser Analyse gehen die Randbedingungen, Ziele und Anforderungen an das Mini \gls{acr:ERP} System hervor. Diese Randbedingungen, Ziele und Anforderungen werden im Kapitel 'Evaluation' als Kriterien für die Vorselektion, Selektion und anschliessenden die Evaluation der Produkte verwendet. Im letzten Kapitel wird ein Fazit gezogen, eine Empfehlung an den  abgegeben und über die gesamte Arbeit reflektiert.
+Im ersten Kapitel werden die Details zur Ausgangslage und die Hintergründe der Arbeit aufgezeigt. Im darauffolgenden Kapitel wird zum besseren Verständnis die Kategorien und Phasen eines Angriffes aufgezeigt. Anschliessend wird der Ablauf einer Incident Response erklärt. Die darauffolgenden Kapitel beschäftigen sich mit dem Kernbereich der Arbeit, der Computer Forensik. Zuerst werden allgemeine Informationen zur Computer Forensik vermittelt, bevor die Forensische Analyse im Detail betrachtet wird. Im Kapitel 6 werden dann verschiedene Tools und Techniken vorgestellt, welche im Rahmen der forensischen Analyse eingesetzt werden können. Am Ende folgt noch das Schlusswort mit einem Fazit und einer Reflexion über die gesamte Arbeit.
 

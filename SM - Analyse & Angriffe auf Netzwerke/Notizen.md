@@ -36,3 +36,14 @@
 
 ###Wissenslinks
   - http://resources.infosecinstitute.com/linux-and-disk-forensics/
+
+
+#Status
+| Kapitel-Nr. |        Titel        | Status Arbeit | Status Review | Freigabe |
+|:-----------:|:-------------------:|:-------------:|:-------------:|:--------:|
+|      0      |     Einleitung      |     Offen     |               |          |
+|      1      |      Attacken       |      OK       |     Offen     |          |
+|      2      |  Incident Response  |      OK       |     Offen     |          |
+|      3      |  Computer Forensik  |   In Arbeit   |               |          |
+|      4      | Forensische Analyse |   In Arbeit   |               |          |
+|      5      | Tools und Techniken |   In Arbeit   |               |          |

@@ -291,3 +291,13 @@ Ziel / Fixpunkt: DNS-Name (localhost:1234/test), Schichten: 5, 6, 7, Daten über
   - certificate_verify (Nur client, Bildung Signatur Client, keine Verifikation Zertifikat auf Client)
   - client_key_exchange
   - finished
+
+##Alert Protokoll
+Eigener Payload, kann auch während Chiffrierung kommen, innerhalb eines SSL-/ TLS-Records, Level: Warning, Fatal
+
+##Application Data Protokoll
+Record-Layer 5, Transport Anwendungsdaten ohne Betrachtung Inhalt
+
+#Kryptografische Komponenten von SSL und TLS
+###Schlüsselerzeugung
+| | :arrow_right: Konkatenation

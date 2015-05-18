@@ -8,94 +8,100 @@
 \contentsline {section}{\numberline {1.4}Motivation}{2}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Computerkriminalit\IeC {\"a}t}{2}{subsection.1.4.1}
 \contentsline {section}{\numberline {1.5}Struktur}{2}{section.1.5}
-\contentsline {chapter}{\numberline {2}Angriffe, Incident Detection \& Incident Response}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Angriffe}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Angriffstypen}{3}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Kategorien von Schwachstellen}{4}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Komplexit\IeC {\"a}t}{4}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}T\IeC {\"a}ter}{4}{subsection.2.1.4}
-\contentsline {subsection}{\numberline {2.1.5}Typischer Ablauf}{5}{subsection.2.1.5}
-\contentsline {subsubsection}{Survey (Untersuchung)}{5}{subsubsection*.8}
-\contentsline {subsubsection}{Delivery (Positionierung)}{5}{subsubsection*.9}
-\contentsline {subsubsection}{Breach (Ausnutzung)}{5}{subsubsection*.10}
-\contentsline {subsubsection}{Affect (Beeintr\IeC {\"a}chtigung / Infizierung)}{6}{subsubsection*.11}
-\contentsline {subsubsection}{Clean Up (Aufr\IeC {\"a}umen)}{6}{subsubsection*.12}
-\contentsline {section}{\numberline {2.2}Incident Detection (Erkennung eines Vorfalls)}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Hinweise Netzwerkseitig}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Hinweise Serverseitig}{6}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Hinweise durch Intrusion-Detection-Systeme}{7}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Weitere Hinweise}{7}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Meldung eines Vorfalles}{7}{subsection.2.2.5}
-\contentsline {section}{\numberline {2.3}Incident Response Team}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Incident Response}{8}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Organisatorische Vorbereitung}{9}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Incident Response Prozess}{9}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Reaktionsarten}{10}{subsection.2.4.3}
-\contentsline {subsubsection}{Abwarten, Beobachten, Informationen sammeln}{10}{subsubsection*.16}
-\contentsline {section}{\numberline {2.5}Ablauf}{10}{section.2.5}
-\contentsline {chapter}{\numberline {3}Computer Forensik}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Einbettung und Definition}{13}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Forensik}{13}{subsection.3.1.1}
-\contentsline {subsubsection}{Ursprung}{13}{subsubsection*.17}
-\contentsline {subsubsection}{Bedeutung}{13}{subsubsection*.18}
-\contentsline {subsubsection}{Teilbereiche}{14}{subsubsection*.19}
-\contentsline {subsection}{\numberline {3.1.2}IT- / Digitale Forensik}{14}{subsection.3.1.2}
-\contentsline {subsubsection}{Teilbereiche}{14}{subsubsection*.20}
-\contentsline {subsection}{\numberline {3.1.3}Computer Forensik}{15}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Einf\IeC {\"u}hrung}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}Themengebiete und Teilbereiche}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Anwendungsbereich}{15}{section.3.4}
-\contentsline {section}{\numberline {3.5}Ziele}{16}{section.3.5}
-\contentsline {section}{\numberline {3.6}Ausbildung \& Zertifizierung}{16}{section.3.6}
-\contentsline {section}{\numberline {3.7}Hinweise f\IeC {\"u}r die juristische Verwertbarkeit}{16}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Methoden, Techniken und Programme}{16}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Glaubw\IeC {\"u}rdigkeit und Reproduzierbarkeit}{16}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Integrit\IeC {\"a}t}{16}{subsection.3.7.3}
-\contentsline {subsection}{\numberline {3.7.4}Pr\IeC {\"a}sentation und Dokumentation}{16}{subsection.3.7.4}
-\contentsline {section}{\numberline {3.8}Hinweise zum Datenschutz}{17}{section.3.8}
-\contentsline {section}{\numberline {3.9}Sicherungsebenen}{17}{section.3.9}
-\contentsline {section}{\numberline {3.10}Unterscheidung Daten-Typen}{17}{section.3.10}
-\contentsline {section}{\numberline {3.11}Anti-Forensik und Anti-Detection}{17}{section.3.11}
-\contentsline {chapter}{\numberline {4}Forensische Analyse}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Phasen}{19}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Readiness (Vorbereitung)}{19}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Secure (Sicherstellen)}{20}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Environment (Umgebung)}{21}{subsection.4.2.3}
-\contentsline {subsubsection}{Identify (Identifizieren)}{21}{subsubsection*.25}
-\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{21}{subsubsection*.26}
-\contentsline {paragraph}{Harter vs. Normaler Shutdown}{21}{paragraph*.27}
-\contentsline {paragraph}{Sicherung des RAM-Inhaltes}{22}{paragraph*.28}
-\contentsline {paragraph}{System ist eingeschaltet}{22}{paragraph*.29}
-\contentsline {paragraph}{System ist nicht eingeschaltet}{23}{paragraph*.30}
-\contentsline {paragraph}{Beweiskette}{23}{paragraph*.31}
-\contentsline {paragraph}{Sicherung}{24}{paragraph*.32}
-\contentsline {subsection}{\numberline {4.2.4}Analysis (Analyse)}{24}{subsection.4.2.4}
-\contentsline {subsubsection}{Examination (Untersuchung)}{24}{subsubsection*.33}
-\contentsline {subsubsection}{Analysis (Analyse)}{24}{subsubsection*.34}
-\contentsline {subsection}{\numberline {4.2.5}Reporting (Dokumentation)}{24}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Present (Pr\IeC {\"a}sentation)}{25}{subsection.4.2.6}
-\contentsline {subsection}{\numberline {4.2.7}Review (R\IeC {\"u}ckblick)}{25}{subsection.4.2.7}
-\contentsline {section}{\numberline {4.3}Hinweise zur forensischen Analyse}{25}{section.4.3}
-\contentsline {chapter}{\numberline {5}Tools und Techniken}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Image-Related / Data-Aquisitation}{27}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Laufwerk l\IeC {\"o}schen}{27}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Image erstellen}{27}{subsection.5.1.2}
-\contentsline {subsubsection}{Technik}{27}{subsubsection*.35}
-\contentsline {subsubsection}{Tool}{27}{subsubsection*.36}
-\contentsline {subsection}{\numberline {5.1.3}Image verifizieren}{28}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{28}{section.5.2}
-\contentsline {section}{\numberline {5.3}Secure}{28}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Prozesse}{28}{subsection.5.3.1}
-\contentsline {section}{\numberline {5.4}Kommerzielle Tools}{28}{section.5.4}
-\contentsline {section}{\numberline {5.5}Tool-Matrix}{28}{section.5.5}
-\contentsline {section}{\numberline {5.6}Technik-Matrix}{28}{section.5.6}
-\contentsline {section}{\numberline {5.7}Tool-Technik-Matrix}{28}{section.5.7}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{31}{chapter*.41}
-\contentsline {part}{Anhang}{37}{chapter*.45}
-\contentsline {chapter}{\numberline {A}Vorlage: Protokoll}{37}{appendix.A}
-\contentsline {chapter}{\numberline {B}Vorlage: Beweiszettel}{39}{appendix.B}
-\contentsline {chapter}{\numberline {C}Vorlage: Formular Incident-Meldung}{41}{appendix.C}
-\contentsline {chapter}{\numberline {D}Ablauf einer forensischen Analyse}{43}{appendix.D}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{45}{section*.47}
+\contentsline {chapter}{\numberline {2}Angriffe}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Angriffstypen}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Kategorien von Schwachstellen}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Komplexit\IeC {\"a}t}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}T\IeC {\"a}ter-Typen}{6}{section.2.4}
+\contentsline {section}{\numberline {2.5}Typischer Ablauf}{7}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Survey (Untersuchung)}{8}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Delivery (Positionierung)}{8}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Breach (Ausnutzung)}{8}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Affect (Beeintr\IeC {\"a}chtigung / Infizierung)}{8}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Clean Up (Aufr\IeC {\"a}umen)}{8}{subsection.2.5.5}
+\contentsline {chapter}{\numberline {3}Incident Detection \& Incident Response}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Incident Detection (Erkennung eines Vorfalls)}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Hinweise Netzwerkseitig}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Hinweise Serverseitig}{9}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Hinweise durch Intrusion-Detection-Systeme}{10}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Weitere Hinweise}{10}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Meldung eines Vorfalles}{10}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Incident Response Team}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Incident Response}{12}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Organisatorische Vorbereitung}{12}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Incident Response Prozess}{13}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Ablauf}{13}{section.3.4}
+\contentsline {chapter}{\numberline {4}Computer Forensik}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Einbettung und Definition}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Forensik}{17}{subsection.4.1.1}
+\contentsline {subsubsection}{Ursprung}{17}{subsubsection*.4}
+\contentsline {subsubsection}{Bedeutung}{17}{subsubsection*.5}
+\contentsline {subsubsection}{Teilbereiche}{18}{subsubsection*.6}
+\contentsline {subsection}{\numberline {4.1.2}IT- / Digitale Forensik}{18}{subsection.4.1.2}
+\contentsline {subsubsection}{Teilbereiche}{18}{subsubsection*.7}
+\contentsline {subsection}{\numberline {4.1.3}Computer Forensik}{19}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Ziele}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Einf\IeC {\"u}hrung}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}Anwendungsbereich}{19}{section.4.4}
+\contentsline {section}{\numberline {4.5}Kategorien von Daten}{20}{section.4.5}
+\contentsline {section}{\numberline {4.6}Anti-Forensik und Anti-Detection}{20}{section.4.6}
+\contentsline {section}{\numberline {4.7}Ausbildung \& Zertifizierung}{20}{section.4.7}
+\contentsline {section}{\numberline {4.8}Hinweise f\IeC {\"u}r die juristische Verwertbarkeit}{20}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Methoden, Techniken und Programme}{21}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Glaubw\IeC {\"u}rdigkeit und Reproduzierbarkeit}{21}{subsection.4.8.2}
+\contentsline {subsection}{\numberline {4.8.3}Integrit\IeC {\"a}t}{21}{subsection.4.8.3}
+\contentsline {subsection}{\numberline {4.8.4}Pr\IeC {\"a}sentation und Dokumentation}{21}{subsection.4.8.4}
+\contentsline {section}{\numberline {4.9}Hinweise zum Datenschutz}{22}{section.4.9}
+\contentsline {chapter}{\numberline {5}Forensische Analyse}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{23}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Ein guter Prozess}{24}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Phasen}{24}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Readiness (Vorbereitung)}{24}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Secure (Sicherstellen)}{25}{subsection.5.2.2}
+\contentsline {subsubsection}{Environment (Umgebung)}{25}{subsubsection*.12}
+\contentsline {subsubsection}{Identify (Identifizieren)}{26}{subsubsection*.13}
+\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{26}{subsubsection*.14}
+\contentsline {paragraph}{Harter vs. Normaler Shutdown}{26}{paragraph*.15}
+\contentsline {paragraph}{Sicherung des RAM-Inhaltes}{27}{paragraph*.16}
+\contentsline {paragraph}{Writeblocker}{27}{paragraph*.17}
+\contentsline {paragraph}{System ist eingeschaltet}{27}{paragraph*.19}
+\contentsline {paragraph}{System ist nicht eingeschaltet}{28}{paragraph*.20}
+\contentsline {paragraph}{Beweiskette und Beweissicherung}{29}{paragraph*.21}
+\contentsline {paragraph}{Sicherung}{29}{paragraph*.22}
+\contentsline {subsection}{\numberline {5.2.3}Analysis (Analyse)}{29}{subsection.5.2.3}
+\contentsline {subsubsection}{Examination (Untersuchung)}{29}{subsubsection*.23}
+\contentsline {subsubsection}{Analysis (Analyse)}{30}{subsubsection*.24}
+\contentsline {paragraph}{Unterst\IeC {\"u}tzende Fragestellungen}{31}{paragraph*.25}
+\contentsline {subsection}{\numberline {5.2.4}Reporting (Dokumentation)}{31}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Present (Pr\IeC {\"a}sentation)}{32}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Review (R\IeC {\"u}ckblick)}{32}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Hinweise zur forensischen Analyse}{32}{section.5.3}
+\contentsline {chapter}{\numberline {6}Tools und Techniken}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Readiness}{35}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Datentr\IeC {\"a}ger l\IeC {\"o}schen}{35}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Secure}{35}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Sicherung fl\IeC {\"u}chtiger Daten}{35}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Forensische Duplikation}{35}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Verifizierung eines forensischen Duplikates oder eines Beweisst\IeC {\"u}ckes}{35}{subsection.6.2.3}
+\contentsline {subsubsection}{Tool}{36}{subsubsection*.29}
+\contentsline {section}{\numberline {6.3}Analysis}{36}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{36}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Untersuchung der Shell}{36}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Untersuchung der Druckerjobs und der Druckerqueue}{36}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Untersuchung der Dateien / Dateiendungen}{36}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Untersuchung von User Aktivit\IeC {\"a}ten}{36}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}{36}{subsection.6.3.6}
+\contentsline {section}{\numberline {6.4}Reporting}{36}{section.6.4}
+\contentsline {section}{\numberline {6.5}Kommerzielle Tools}{36}{section.6.5}
+\contentsline {section}{\numberline {6.6}Tool-Matrix}{37}{section.6.6}
+\contentsline {section}{\numberline {6.7}Technik-Matrix}{37}{section.6.7}
+\contentsline {section}{\numberline {6.8}Tool-Technik-Matrix}{37}{section.6.8}
+\contentsline {chapter}{\nonumberline Quellenverzeichnis}{39}{chapter*.37}
+\contentsline {part}{Anhang}{45}{chapter*.41}
+\contentsline {chapter}{\numberline {A}Vorlage: Formular Incident-Meldung}{45}{appendix.A}
+\contentsline {chapter}{\numberline {B}Vorlage Formular Ermittlung}{47}{appendix.B}
+\contentsline {chapter}{\numberline {C}Vorlage: Protokoll}{49}{appendix.C}
+\contentsline {chapter}{\numberline {D}Vorlage: Beweiszettel}{51}{appendix.D}
+\contentsline {chapter}{\numberline {E}Ablauf einer forensischen Analyse}{53}{appendix.E}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{55}{section*.43}
 \contentsfinish

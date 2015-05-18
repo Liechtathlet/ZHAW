@@ -14,3 +14,14 @@
   - Evtl. Gegenüberstellung Alt / Neu (Highlights)
   - DSSE sinnvoll in diesem Bereich?
   - Fazit
+
+##Links
+  - 
+##Status
+| Kapitel-Nr. |    Titel     | Status Arbeit | Status Review | Freigabe |
+|:-----------:|:------------:|:-------------:|:-------------:|:--------:|
+|      0      |  Einleitung  |     Offen     |               |          |
+|      1      | Ausgangslage |     Offen     |               |          |
+|      2      |  Die Domäne  |     Offen     |               |          |
+|      3      |  SWE in IOT  |     Offen     |               |          |
+|      4      |  Fallstudie  |     Offen     |               |          |
