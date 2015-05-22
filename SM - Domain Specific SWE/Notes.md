@@ -16,7 +16,7 @@
   - Fazit
 
 ##Links
-  - 
+  -
 ##Status
 | Kapitel-Nr. |    Titel     | Status Arbeit | Status Review | Freigabe |
 |:-----------:|:------------:|:-------------:|:-------------:|:--------:|
@@ -25,3 +25,9 @@
 |      2      |  Die Domäne  |     Offen     |               |          |
 |      3      |  SWE in IOT  |     Offen     |               |          |
 |      4      |  Fallstudie  |     Offen     |               |          |
+
+
+##Einkaufsliste
+  - Raspberry PI 2 (Evtl. Kit?) ~110.-
+    - WiFi-Dongle
+  - Arduino Due oder Arduino Mega 2560

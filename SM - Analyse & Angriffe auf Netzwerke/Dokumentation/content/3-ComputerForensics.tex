@@ -20,7 +20,7 @@ Der "`Guide to Integrating Forensic Techniques into Incident Response"' des \gls
 
 
 \subsubsection{Teilbereiche}
-Wie in der vorangehenden Definition bereits angedeutet, gibt es grundsätzlich für jeden Wissenschaftszweig einen entsprechenden Wissenschaftszweig in der Forensik. Nachfolgend sind einige für die Strafverfolgung bedeutensten Teilbereiche der Forensik aufgelistet.
+Wie in der vorangehenden Definition bereits angedeutet, gibt es grundsätzlich für jeden Wissenschaftszweig einen entsprechenden Wissenschaftszweig in der Forensik. Nachfolgend sind einige für die Strafverfolgung bedeutendsten Teilbereiche der Forensik aufgelistet.
 
 \begin{itemize}
 \item Forensische Pathologie
@@ -55,21 +55,12 @@ Für die Definition der Computer Forensik existieren zum heutigen zwei verschied
 
 Diese Arbeit richtet sich nach dem ersten Ansatz, bei dem die Computer Forensik ein Teilgebiet der Digitalen Forensik ist.
 
-
-\todo{Definition Computer Forensik}
-
-\todo{Grafik Einbettung}
-
-\section{Ziele}
+Die Computer Forensik ist ein Teilgebiet der Digitalen Forensik und beschäftigt sich mit der Analyse von Computer-Systemen mit Fokus auf Einzelplatzsysteme und Server.
 
 \section{Einführung}
 Die Computer Forensik kann in verschiedenen Kontexten zum Einsatz kommen. Zum einen erfolgt während, bzw. nach einem Sicherheitsvorfall (Incident), z.B. Systeminbruch eine forensische Untersuchung (Mehr dazu im Kapitel \ref{chap:AIDI}). 
 
-Im Kontext der Incident Response ist es das Ziel der Computerforensik die ausgenutzte Schwachstelle zu finden, den Schaden zu beziffern, den Angreifer zu Identifizieren und die Beweise für allfällige juristsiche Schritte zu sichern.
-
-Im Kontext der Untersuchung von Straftaten ist es das Ziel, 
-
-.....
+Im Kontext der Incident Response ist es das Ziel der Computer Forensik die ausgenutzte Schwachstelle zu finden, den Schaden zu beziffern, den Angreifer zu Identifizieren und die Beweise für allfällige juristische Schritte zu sichern. Im Kontext der Untersuchung von Straftaten oder ähnlich ist es das Ziel, aus dem System so viele Informationen wie möglich zu extrahieren und diese anschliessend zu analysieren. Aus den analysierten Daten werden Beweise gewonnen, welche entweder eine bestimmte Theorie unterstützen, widerlegen oder keine der beiden Aussage unterstützen. 
 
 
 \section{Anwendungsbereich}
@@ -85,20 +76,11 @@ Die Computer Forensik findet unter anderem in folgenden Bereichen Anwendung:
 
 
 \section{Kategorien von Daten}
-\begin{itemize}
-\item Empfindliche Daten
-\begin{itemize}
-\item Flüchtige Daten, gehen beim geordneten Shutdown / Ausschalten veroren (Cache, Hauptspeicher, Status NWV, Prozesse,...)
-\item Fragile Daten, zwar auf HD, Zustand kann sich beim Zugriff ändern
-\item Temporär zugreifbare Daten, auf HD, nur zu Bestimmten Zeitpunkten zugreifbar
-\end{itemize}
-\end{itemize}
--Flüchtig
--Nicht-Flüchtig
+In der Computer Forensik können grundsätzlich zwei Kategorien von Daten unterschieden werden. Auf der einen Seite stehen flüchtige Daten. Diese Daten stehen in der Regel nur temporär zur Verfügung und sind spätestens mit einem normalen Shutdown des Systems unwiderruflich verloren. Als Beispiel seien her der Inhalt des Arbeitspseichers oder die Liste der aktiven Prozesse genannt. Auf der anderen Seite stehen nichtflüchtige Daten. Diese Daten sind auch nach einem Shutdown des Systemes noch vorhanden und können ausgelesen werden. Dazu zählen zum Beispiel Systemdateien, Programme oder Daten des Benutzers (Fotos, Videos, Dokumente, etc.)
 
-Evtl. Matrix mit Zuordnung Techniken / Themenbereichen zu Typen und Sicherungsebenen 
+Flüchtige Daten können weiter in Unterkategorien aufgeteilt werden. Zum einen gibt es die Flüchtigen Daten selbst, welche bei einem normalen Shutdown verloren gehen (Zum Beispiel: Cache-Inhalte, Inhalt des Hauptspeichers, Status der Netzwerkveribndungen). Zum anderen gibt es noch fragile Daten. Fragile Daten sind grundsätzlich gespeichert und stehen theoretisch auch nach einem Shutdown weiter zur Verfügung. Bei fragilen Daten besteht jedoch die Gefahr, dass diese sich bei einem Zugriff ändern können (zum Beispiel die Zeit des letzten Dateizugriffes unter Unix). Die dritte Unterkategorie beinhaltet die temporären Daten. Diese Daten stehen nur zu einem bestimmten Zeitpunkt zur Verfügung.
 
-
+Flüchtige Daten sind meist von sehr hohem Interesse und sollten als erstes gesichert werden. Die Sicherung dieser Daten erfordert jedoch ein besonnenes und koordiniertes Vorgehen.
 
 \section{Anti-Forensik und Anti-Detection}
 Straftäter und Angreifer auf Computer Systeme werden sich immer mehr bewusst, dass sie Spuren auf dem System hinterlassen. Diese versuchen dann entweder keine oder so wenig Spuren wie möglich zu hinterlassen, Spuren und Beweise zu verändern oder gar zu löschen oder falsche Fährten zu legen. Dies kann entweder manuell oder mit Hilfe von Anti-Forensik und Anti-Detection Tools erfolgen.
@@ -110,7 +92,30 @@ Kennt der Angreifer die eingesetzten Werkzeuge oder kann diese ermitteln, kann e
 
 
 \section{Ausbildung \& Zertifizierung}
+In der Schweiz gibt es aktuell nur wenige Ausbildungsprogramme im Bereich der Computer Forensik. Einige Hochschulen und Universitäten bieten aktuell nur einzelne Kurse zu diesem Themenbereich an. Für die Absolvierung von international anerkannten Zertifizierungen gibt es nur wenige Anbieter in der Schweiz. Nachfolgend werden die gängigsten Zertifizierungen aus dem Bereich der Computer Forensik aufgelistet. Neben diesen Zertifizierungen gibt es noch einige weitere, welche von den Herstellern spezieller Hard- und Software angeboten werden.
 
+\begin{itemize}
+\item Certified Computer Examiner (CCE) \\
+\textit{The International Society of Forensic Coputer Examiners}
+
+\item Computer Hacking Forensic Investigator (CHFI) \\
+\textit{International Council of E-Commerce Consultants}
+
+\item Certified Computer Forensics Examiner (CCFE) \\
+\textit{International Association of Computer Investigative Specialists}
+
+\item Certified Forensic Analyst (GCFA)\\
+\textit{Global Information Assurance Certification}
+\item Certified Forensic Examiner (GCFE)\\
+\textit{Global Information Assurance Certification}
+\item Certified Network Forensic Analyst (GNFA)\\
+\textit{Global Information Assurance Certification}
+\item Reverse Engineering Malware (GREM)\\
+\textit{Global Information Assurance Certification}
+
+\item Professional Certified Investigator (PCI)\\
+\textit{ASIS International}
+\end{itemize}
 
 
 \section{Hinweise für die juristische Verwertbarkeit}
@@ -124,25 +129,15 @@ Um die Glaubwürdigkeit der Ergebnisse sicherzustellen müssen sämtliche Schrit
 
 
 \subsection{Integrität}
-Während der gesamten Ermittlung (und auch darüber) hinaus muss die Integrität der untersuchten Daten und gefundenn Informationen, Daten und Beweise lückenlos sichergestellt werden. Die Integrität muss jederzeit vollständig belegt werden können.
+Während der gesamten Ermittlung (und auch darüber) hinaus muss die Integrität der untersuchten Daten und gefundenen Informationen, Daten und Beweise lückenlos sichergestellt werden. Die Integrität muss jederzeit vollständig belegt werden können.
 
 \subsection{Präsentation und Dokumentation}
 Die Ergebnisse müssen angemessen dokumentiert und präsentiert werden. Am geeignetsten ist es, wenn die Ergebnisse in Form von Ursache - Wirkung aufgezeigt werden. Die Beweisspuren, Ereignisse und Personen sollen möglichst logisch und nachvollziehbar in Relation zu einander gebracht werden.
 
+\subsection{Beweiskraft}
+Die gefundenen Informationen und Daten (zum Beispiel: Einträge in Log-Dateien) haben für sich alleine keinerlei Beweiskraft. Es handelt sich dabei um Sachbeweise. Die Beweiskraft ergibt sich erst durch den Kontext, bzw. durch die Person, welche den Beweis in Zusammenhang mit der Tat bringt. Der Sachbeweis ist somit eng mit dem Personenbeweis verbunden.
 
-
-
-
-Unvoreingenommenheit
-Gewisse Beweise kurze Halbwertszeit (meist sehr spannend), erfordern besonnenes / koordiniertes erfassen, Bewusstsein, dass System in jedem Fall verändert wird
-
-Sachbeweis: Festplate, Logs, Gutachten, Fingerabdruck - keine Beweiskraft, nicht zugeordnet, keine Aussagekraft alleine, erst im Kontext, Beweiskraft erst druch Person, die Beweis in Tat-ZSH bringt, Sachbeweis eng mit Personenbeweis verbunden
-Beweis rasch Bedeutungslos, weniger Beweiskraft, wenn Person unrichtig darstellt, widerlegbare Behauptungen, Interpretationen, dachliche Darstellung, Integrität Person und Glaubwürdigkeit wichtig, sachliches, fundiertes Gutachten durch unglaubwürdige Darstellung als nichtig betrachtet
+Ein Beweis verliert relativ rasch seine Beweiskraft, wenn dieser unrichtig, bzw. falsch, dargelegt wurde. Es ist daher zwingend erforderlich, denn Beweis sachlich zu präsentieren. Auch die Integrität und Glaubwürdigkeit der präsentierenden Person ist ebenfalls von hoher Wichtigkeit.
 
 \section{Hinweise zum Datenschutz}
-Datenschutz bei personenbezogenen Daten auch bei Auswertungen zum Zug
-Schweizer Recht??
-
-Vorgängige Klärung wenn Logs personenbezogene Daten beinhalten, Information Datenschutzbeauftrager, Security \& Compliance, IT-leiter, REvision, Vier-Augen-Prinzip wahren
-
-DS bei Ermittlung nicht ausser Kraft, aber kein Täterschutz, Verhältnismässigkeit
+Auch im Rahmen einer Computer forensischen Analyse hat der Datenschutz weiterhin seine Gültigkeit und die Analyse und Auswertung von personenbezogenen Daten muss entsprechend genehmigt / autorisiert werden. Im Zweifelsfall sollte die zuständige Stelle in der Organisation (zum Beispiel der Datenschutzbeauftrage) hinzugezogen werden. Im Rahmen einer strafrechtlichen Untersuchung kann bei überwiegendem öffentlichen Interesse der Datenschutz jedoch ausser Kraft gesetzt werden.

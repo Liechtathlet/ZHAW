@@ -40,42 +40,37 @@
 \contentsline {subsection}{\numberline {4.1.2}IT- / Digitale Forensik}{18}{subsection.4.1.2}
 \contentsline {subsubsection}{Teilbereiche}{18}{subsubsection*.7}
 \contentsline {subsection}{\numberline {4.1.3}Computer Forensik}{19}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Ziele}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}Einf\IeC {\"u}hrung}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}Anwendungsbereich}{19}{section.4.4}
-\contentsline {section}{\numberline {4.5}Kategorien von Daten}{20}{section.4.5}
-\contentsline {section}{\numberline {4.6}Anti-Forensik und Anti-Detection}{20}{section.4.6}
-\contentsline {section}{\numberline {4.7}Ausbildung \& Zertifizierung}{20}{section.4.7}
-\contentsline {section}{\numberline {4.8}Hinweise f\IeC {\"u}r die juristische Verwertbarkeit}{20}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Methoden, Techniken und Programme}{21}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Glaubw\IeC {\"u}rdigkeit und Reproduzierbarkeit}{21}{subsection.4.8.2}
-\contentsline {subsection}{\numberline {4.8.3}Integrit\IeC {\"a}t}{21}{subsection.4.8.3}
-\contentsline {subsection}{\numberline {4.8.4}Pr\IeC {\"a}sentation und Dokumentation}{21}{subsection.4.8.4}
-\contentsline {section}{\numberline {4.9}Hinweise zum Datenschutz}{22}{section.4.9}
+\contentsline {section}{\numberline {4.2}Einf\IeC {\"u}hrung}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Anwendungsbereich}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}Kategorien von Daten}{20}{section.4.4}
+\contentsline {section}{\numberline {4.5}Anti-Forensik und Anti-Detection}{20}{section.4.5}
+\contentsline {section}{\numberline {4.6}Ausbildung \& Zertifizierung}{21}{section.4.6}
+\contentsline {section}{\numberline {4.7}Hinweise f\IeC {\"u}r die juristische Verwertbarkeit}{21}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Methoden, Techniken und Programme}{21}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Glaubw\IeC {\"u}rdigkeit und Reproduzierbarkeit}{22}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Integrit\IeC {\"a}t}{22}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Pr\IeC {\"a}sentation und Dokumentation}{22}{subsection.4.7.4}
+\contentsline {subsection}{\numberline {4.7.5}Beweiskraft}{22}{subsection.4.7.5}
+\contentsline {section}{\numberline {4.8}Hinweise zum Datenschutz}{22}{section.4.8}
 \contentsline {chapter}{\numberline {5}Forensische Analyse}{23}{chapter.5}
 \contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{23}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Ein guter Prozess}{24}{subsection.5.1.1}
 \contentsline {section}{\numberline {5.2}Phasen}{24}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Readiness (Vorbereitung)}{24}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Secure (Sicherstellen)}{25}{subsection.5.2.2}
-\contentsline {subsubsection}{Environment (Umgebung)}{25}{subsubsection*.12}
-\contentsline {subsubsection}{Identify (Identifizieren)}{26}{subsubsection*.13}
-\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{26}{subsubsection*.14}
-\contentsline {paragraph}{Harter vs. Normaler Shutdown}{26}{paragraph*.15}
-\contentsline {paragraph}{Sicherung des RAM-Inhaltes}{27}{paragraph*.16}
-\contentsline {paragraph}{Writeblocker}{27}{paragraph*.17}
-\contentsline {paragraph}{System ist eingeschaltet}{27}{paragraph*.19}
-\contentsline {paragraph}{System ist nicht eingeschaltet}{28}{paragraph*.20}
-\contentsline {paragraph}{Beweiskette und Beweissicherung}{29}{paragraph*.21}
-\contentsline {paragraph}{Sicherung}{29}{paragraph*.22}
-\contentsline {subsection}{\numberline {5.2.3}Analysis (Analyse)}{29}{subsection.5.2.3}
-\contentsline {subsubsection}{Examination (Untersuchung)}{29}{subsubsection*.23}
-\contentsline {subsubsection}{Analysis (Analyse)}{30}{subsubsection*.24}
-\contentsline {paragraph}{Unterst\IeC {\"u}tzende Fragestellungen}{31}{paragraph*.25}
+\contentsline {subsubsection}{Environment (Umgebung)}{25}{subsubsection*.8}
+\contentsline {subsubsection}{Identify (Identifizieren)}{26}{subsubsection*.9}
+\contentsline {subsubsection}{Asses and Decide (Beurteilen und Entscheiden)}{26}{subsubsection*.10}
+\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{26}{subsubsection*.11}
+\contentsline {subsection}{\numberline {5.2.3}Analysis (Analyse)}{28}{subsection.5.2.3}
+\contentsline {subsubsection}{Preparation (Vorbereitung)}{29}{subsubsection*.12}
+\contentsline {subsubsection}{Analysis (Analyse)}{29}{subsubsection*.13}
+\contentsline {paragraph}{Unterst\IeC {\"u}tzende Fragestellungen}{30}{paragraph*.14}
 \contentsline {subsection}{\numberline {5.2.4}Reporting (Dokumentation)}{31}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Present (Pr\IeC {\"a}sentation)}{32}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Review (R\IeC {\"u}ckblick)}{32}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}Hinweise zur forensischen Analyse}{32}{section.5.3}
+\contentsline {subsection}{\numberline {5.2.5}Present (Pr\IeC {\"a}sentation)}{31}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Review (R\IeC {\"u}ckblick)}{31}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Beweiskette und Beweissicherung}{32}{section.5.3}
+\contentsline {section}{\numberline {5.4}Hinweise zur forensischen Analyse}{32}{section.5.4}
 \contentsline {chapter}{\numberline {6}Tools und Techniken}{35}{chapter.6}
 \contentsline {section}{\numberline {6.1}Readiness}{35}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Datentr\IeC {\"a}ger l\IeC {\"o}schen}{35}{subsection.6.1.1}
@@ -83,25 +78,28 @@
 \contentsline {subsection}{\numberline {6.2.1}Sicherung fl\IeC {\"u}chtiger Daten}{35}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Forensische Duplikation}{35}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}Verifizierung eines forensischen Duplikates oder eines Beweisst\IeC {\"u}ckes}{35}{subsection.6.2.3}
-\contentsline {subsubsection}{Tool}{36}{subsubsection*.29}
-\contentsline {section}{\numberline {6.3}Analysis}{36}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{36}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Untersuchung der Shell}{36}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Untersuchung der Druckerjobs und der Druckerqueue}{36}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Untersuchung der Dateien / Dateiendungen}{36}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Untersuchung von User Aktivit\IeC {\"a}ten}{36}{subsection.6.3.5}
-\contentsline {subsection}{\numberline {6.3.6}Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}{36}{subsection.6.3.6}
-\contentsline {section}{\numberline {6.4}Reporting}{36}{section.6.4}
-\contentsline {section}{\numberline {6.5}Kommerzielle Tools}{36}{section.6.5}
-\contentsline {section}{\numberline {6.6}Tool-Matrix}{37}{section.6.6}
-\contentsline {section}{\numberline {6.7}Technik-Matrix}{37}{section.6.7}
-\contentsline {section}{\numberline {6.8}Tool-Technik-Matrix}{37}{section.6.8}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{39}{chapter*.37}
-\contentsline {part}{Anhang}{45}{chapter*.41}
+\contentsline {subsection}{\numberline {6.2.4}Harter vs. Normaler Shutdown}{36}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Sicherung des RAM-Inhaltes}{36}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Writeblocker}{36}{subsection.6.2.6}
+\contentsline {subsubsection}{Tool}{37}{subsubsection*.19}
+\contentsline {section}{\numberline {6.3}Analysis}{37}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{37}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Untersuchung der Shell}{37}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Untersuchung der Druckerjobs und der Druckerqueue}{37}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Untersuchung der Dateien / Dateiendungen}{37}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Untersuchung von User Aktivit\IeC {\"a}ten}{37}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}{37}{subsection.6.3.6}
+\contentsline {section}{\numberline {6.4}Reporting}{37}{section.6.4}
+\contentsline {section}{\numberline {6.5}Kommerzielle Tools}{37}{section.6.5}
+\contentsline {section}{\numberline {6.6}Tool-Matrix}{38}{section.6.6}
+\contentsline {section}{\numberline {6.7}Technik-Matrix}{38}{section.6.7}
+\contentsline {section}{\numberline {6.8}Tool-Technik-Matrix}{38}{section.6.8}
+\contentsline {chapter}{\nonumberline Quellenverzeichnis}{39}{chapter*.27}
+\contentsline {part}{Anhang}{45}{chapter*.31}
 \contentsline {chapter}{\numberline {A}Vorlage: Formular Incident-Meldung}{45}{appendix.A}
 \contentsline {chapter}{\numberline {B}Vorlage Formular Ermittlung}{47}{appendix.B}
 \contentsline {chapter}{\numberline {C}Vorlage: Protokoll}{49}{appendix.C}
 \contentsline {chapter}{\numberline {D}Vorlage: Beweiszettel}{51}{appendix.D}
 \contentsline {chapter}{\numberline {E}Ablauf einer forensischen Analyse}{53}{appendix.E}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{55}{section*.43}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{55}{section*.33}
 \contentsfinish

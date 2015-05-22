@@ -232,8 +232,8 @@ ZHAW-Root-CA - ZHAW-Sub-CA
     * Export DER, PKCS12 (Private, Public, PW:DaniBrun), PKCS7 (with Chain, Public)
 
 
-    #Timestamp-Dienst
-    Parameter: Hash Dokument, Ein Dokument aufs Mal mit Timestamp signieren, n können zurück kommen.
+#Timestamp-Dienst
+Parameter: Hash Dokument, Ein Dokument aufs Mal mit Timestamp signieren, n können zurück kommen.
 
 #Hash
 Kollisionsresistenz (Geburtstagsangriff), gleicher Hash für gleiche Eingabe,
@@ -301,3 +301,42 @@ Record-Layer 5, Transport Anwendungsdaten ohne Betrachtung Inhalt
 #Kryptografische Komponenten von SSL und TLS
 ###Schlüsselerzeugung
 | | :arrow_right: Konkatenation
+
+#IPsec
+Je weiter oben im OSI-Modell, desto unsicherer
+
+##Standardisierung
+###IKE
+Handshake / Initialisierung
+
+##IPsec Protokolle
+Kein Client / Server, beide gleichberechtigt, Multi-VPN möglich
+
+###IPv6
+Header: unter Umständen: verkettete Liste
+Mask: Eingeführt wegen zu wenigen IP-Adressen, eigentlich nicht mehr notwendig
+
+##Übertragungsmodi
+Tunnel-Modus: 2 IP-Adresse: 1 Klartext, 1 Verschlüsselt, bei beiden ESP möglich
+Transport-Modus: Nur 1 IP-Adresse
+
+##Teilprotokolle
+###Authentication Header
+Authentifiziert (z.B. MAC), nicht asymmetrisch (zu langsam), Tunnel- und Transportmodus, nicht verschlüsselt
+
+SPI: Security Parameter Index, analogie zu Cyphersuite, Aushandlung, Zuordnung Security Assoziation
+
+###Encapsulating Security Payload
+Verschlüsselt, Transport- und Tunnelmodues
+
+####Einbindung ESP in IPv4 (Transportmode)
+next: Verweis auf TCP-header innerhalb des Payloads
+
+####Einbindung ESP in IPv4 (Tunnelmode)
+next: Verweis auf IP (innere IP) im Payload
+
+##IPsec Management
+Security Association Database und Security Policy Database pro VPN-Receiver
+
+###ISAKMP
+Version egall, universell

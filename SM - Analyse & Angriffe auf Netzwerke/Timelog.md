@@ -20,12 +20,12 @@
 | Überarbeitung             | 09.05.2015 | 1         |
 | Texten Kapitel 4, 5       | 09.05.2015 | 3         |
 | Abschluss Kapitel 2       | 18.05.2015 | 2         |
-
+| Abschluss Kapitel 3       | 18.05.2015 | 2         |
 
 ##Calculation-Log
   - 8,2,1,3,1,2.5,3,1,1,1.5
-  - 3, 3, 3, 1, 3, 2
+  - 3, 3, 3, 1, 3, 2, 2
 
 
 ##Total
-Total (h):  35
+Total (h):  37

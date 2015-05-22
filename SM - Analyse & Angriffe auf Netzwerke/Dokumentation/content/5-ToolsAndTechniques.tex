@@ -31,6 +31,24 @@ Versteckte Bereiche auf Datenträgern: Host Protected Area, Device Configuration
 EnCase, Tools, Verify Single Evidence File
 Linux: md5sum "`image file"', compare
 
+\subsection{Harter vs. Normaler Shutdown}
+Bei einem normalen Shutdown wird das System durch den Benutzer regulär heruntergefahren, sämtliche Daten werden gespeichert und das System befindet sich im Anschluss in einem sauberen / lauffähigen Zustand. Während dem Shutdown werden jedoch die Zeitstempel von zahlreichen Dateien verändert und temporäre Dateien des Betriebssystems gelöscht. Dies kann unter Umständen die Analysearbeiten erschweren oder im schlimmsten Fall wichtige Beweise vernichten. 
+
+Bei einem harten Shutdown wird das System von der Stromversorgung getrennt, ohne das dieses vorher heruntergefahren wurde. Mit diesem Vorgehen wird sichergestellt, dass keine Zeitstempel von Dateien verändert werden. Auch ist die Wahrscheinlichkeit da, dass auf der Festplatte eine Auslagerungsdatei vorhanden ist, welche anschliessend analysiert werden kann. Die Extraktion und anschliessende Analyse dieser Daten ist jedoch sehr aufwändig. Diese Methode des Shutdowns kann bei gewissen Dateisystemen zu irreparablen Schäden führen. Daher ist vorgängig abzuwägen, ob ein harter Shutdown sinnvoll und verkraftbar ist.
+
+Bei einem Shutdown gehen in der Regel immer viele Daten verloren. Es wäre zum Beispiel möglich, dass der Angreifer ein Schadprogramm installiert hat, welches nur noch im RAM verfügbar ist. Nach einem weichen Shutdown ist das Programm auf dem System nicht mehr auffindbar. 
+
+Bei beiden Varianten ist die Zeit der Durchführung und die Art des Shutdowns zu protokollieren.
+
+\subsection{Sicherung des RAM-Inhaltes}
+Nachdem herunterfahren des Systems sind die Daten im RAM noch einige Sekunden verfügbar. Dies reicht in der Regel jedoch nicht um eine Datensicherung durchzuführen. Einige neuere Studien und Experimente haben gezeigt, dass es durchaus Mittel und Wege gibt, um den Inhalt des RAMS zu sichern. Eine Möglichkeit besteht darin, die Raumbausteine mit einem Stickstoffspray auf -50 Grad Celsius herunter gekühlt. Anschliessend wird der Rechner ausgeschaltet, der RAM ausgebaut und in ein anderes System eingebaut. Das System wird mit einer Spezialsoftware gestartet, welches einen Memory-Dump erstellt.
+
+Kernel-Level Sicherung (Nicht User-Mode)
+Small-Footprint
+Firewire-Attacke
+\subsection{Writeblocker}
+\todo{Writeblocker}
+HW und SW
 
 \subsubsection{Tool}
 EnCase (Seite 72) DOS Boot disk
