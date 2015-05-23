@@ -7,14 +7,29 @@ In diesem Kapitel werden die grundlegenden Tools und Techniken einer forensische
 \section{Readiness}
 
 \subsection{Datenträger löschen}
-EnCase, statisches überschreiben (nur einmal), 
+Digitale Beweise sollten immer auf leere, beziehungsweise komplett gelöschte, Datenträger gesichert werden.
 
-Attach to System, Windows, Start EnCase, Tools -> Wipe Drive, Select Device, Defaults as are, Next, HECF; S. 69
-Kein WippingUtility, bei spezialfällen / wenn notwendig: Wipeutility: Linux: "`dd if=/dev/random of=/dev/<image drive>"'
+\textbf{Linux (native)} \\
+\begin{verbatim}
+dd if=/dev/random of=/dev/<DriveToWipe>
+\end{verbatim}
+
+\textbf{Tool-Suiten}\\
+\begin{itemize}
+\item EnCase
+\end{itemize}
+
+
 
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Secure}
+
+\subsection{Auslesen der Zeitkonfiguration}
+Die Zeitkonfiguration des Systemes wird je nach Betriebssystem und zum Teil sogar je nach Distribution an einem anderen Ort gespeichert.
+
+Unter Ubuntu, beziehungsweise Debian-Systemen ist diese unter \textit{/etc/timezone} zu finden. Bei Red-Hat-Distributionen unter \textit{/etc/sysconfig/clock}.
+Beim Auslesen der Zeitkonfiguration ist auch zu notieren, ob das System automatisch zwischen Sommer- und Winterzeit umstellt.
 
 \subsection{Sicherung flüchtiger Daten}
 
@@ -61,13 +76,98 @@ FreeHelix
 FTKImager (Windows)
 
 
+
+
 %---------------------------------------------------------------------------------------------------------------
 \section{Analysis}
 
 \subsection{Gelöschte Datenträger}
 Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...
 
+\subsection{Analyse des File Slacks}
+Aufgrund der Besonderheiten einiger Dateisysteme können auf Datenträgern mit einem solchen Dateisystem Dateien versteckt werden. Der Grund dafür liegt, darin das eine Datei auf dem Datenträger in sogenannten Dateiblöcken mit einer festen Länge gespeichert werden. Füllt eine Datei nicht den gesamten Dateiblock aus entsteht ein ungenutzter Bereich. Dieser Bereich wird File Slack genannt und wird vom Betriebssystem mit zufälligen Daten aufgefüllt. Unter Windows werden für das Auffüllen des Slacks zum Beispiel Inhalte aus dem Arbeitsspeicher verwendet. Dies wird dann als RAM-Slack bezeichnet.
+
+\todo{Dateisysteme mit FileSlack}
+
+Die File Slack Analyse ermöglicht dem Ermittler unter Umständen auf Inhalte zuzugreifen, welcher der Täter gelöscht hat.
+
+\subsection{Timeline-Analyse}
+Bei der Timeline-Analyse werden die letzten Aktivitäten, welche auf dem System durchgeführt wurden, in ein zeitlich logische Abfolge gebracht. Bei der Herstellung einer Verbindung zu anderen Beweisen ist eine allfällige Abweichung der Systemzeit von der Referenzzeit zu beachten. Die Timeline-Analyse ist häufig der erste Ansatzpunkt einer Ermittlung. Durch die Analyse kann festgestellt werden, was undder Täter auf dem System gemacht / verändert / installiert hat. Ausgehend von dem entstehenden Zeitstrahl können weitere, vertiefte Analysen durchgeführt werden. Ein wichtiger Baustein der Timeline-Analyse ist die Auswertung der MAC-Time der Dateien und Ordner. Die MAC-Time setzt sich aus folgenden Elementen zusammen:
+
+\begin{itemize}
+\item Modification Time\\
+Zeitpunkt der letzten Modifikation (Schreiben), Der Zeitstempel ändert sich bei folgenden Aktionen nicht: Kopieren, Verschieben, Umbenennen, Veränderung Dateiattribute
+\item Access-Time\\
+Zeitpunkt des letzten Zugriffes (Lesen / Ausführen), Der Zeitstempel wird auch verändert, wenn Metadaten oder Dateiinhalte angezeigt werden
+\item Creation-Time (Windows)\\
+Zeitpunkt der Erstellung der Datei, Der Zeitstempel wird bei Erstellung einer Kopie aktualisiert. Beim Verschieben einer Datei / Ordner wird der Zeitstempel nicht aktualisiert.
+\item Change-Time (Unix)\\
+Zeitpunkt der Veränderung bestimmter Metadaten der Datei
+\end{itemize}
+
+Nicht jede Aktion löst auf der Datei selbst eine Veränderung der MAC-Time aus. Unter Linux bewirkt die Verschiebung einer Datei eine Veränderung der MAC-Time des Verzeichnises, aber nicht der Datei selbst. Die MAC-Time kann jedoch relativ einfach durch den Angreifer, beziehungsweise durch Anti-Forensik-Tools manipuliert oder unbrauchbar gemacht werden. Eine weitere Schwierigkeit besteht darin, dass die MAC-Time sich je nach Betriebssystem anders verhält.
+
+
+\subsection{Analyse von Auslagerungsdateien}
+Fast alle OS: Erweiterung physisch nutzbarer Speicherbereich, oder Auslagerung kurzfristig nicht benötiger Speicher
+Auslagerungs- oder Swap-Dateien, Datei oder virtuelles / physisches Dateisystem
+Win: Swap / Page-File: nicht gelöscht bei Shutdown, 
+
+Sonderfälle: Inhalt Hauptspeicher vor Eintritt in Ruheszustand / Suspend-To-Disk-Modus, nach Wake-Up wieder gleich, Hilfreich: RAM-Analyse
+
+
+\subsection{Analyse von versteckten Dateien}
+Klassische Festplatte:
+Section Gaps: Sektoren überall gleich --> am Rand Gaps
+Paritions Gaps: Mehrere Partitionen, Gaps --> spuren früherer Partitionen, Daten vestecken, auch in unpartitionierten Bereich
+
+Bad Blocks: Vom OS als unbrauchbar markiert, missbrauch möglich
+Hidden-Attribut: Möglichkeit auf OS Ebene Dateien zu verstecken
+
+
+Rootkits: Können gut Dateien, Verzeichnis, Prozesse, Netzwerkverbindungen verbergen --> trojanisierte Systemprogramme
+Kernel-Level-Rootkits: Prozesse, Verbindungen, Dateien verstecken + Hintertüren bereitstellen, Austausch von System-Calls, Aufspüren schwierig: Analyse von Strukturen, Beobachtungen, Vergleich Syscall-tAbelle, z.T. auch Syscall-Code direkt verändert
+
+Bei modernen: Reduktion durch Mapping-Technologien
+
+\subsection{Dateien oder Fragemente wiederherstellen}
+File Carving: Zusammensetzen von Dateifragementen, Extraktion wesentlicher Informationen, Wiederherstellung aus File-Slack oder unalloziertem Bereich, 
+Temp-Bereich: gelöschte Reste compilerlauf vom kompilieren von Codes, Wiedeherstellung nur am Duplikat, wenn Live: Auf sparatem System speichern
+
+Anti-Forensik: Mehrfaches überschreiben mit echten zufälligen Bitmustern oder Nullen
+
+\subsection{Unbekannte Binärdateien analysieren}
+Fund Binärdateien (z.B. Rootkits, Tools) --> Analyse --> Hinweise / Absichten Täter, Vergleich Prüfsumme (Originaldatei?), Analyse auf Analysesystem --> Ausführung in isolierter Testumgebung
+
+Ablauf gemäss CF: Seite 141
+
+-DAteityp ermitteln (file), Virusscan, 
+
+Tools: PEiD: Analyse Windows-Datei, kann getäuscht werden.
+String-Analyse: Suche aller lesbaren Zeichen in Binärdatei --> Hilfetexte, Infos Autor, Copyright
+Tools: Unix/Cygwin: strings, BinText, WinHex, IDA Pro
+
+Laufzeitanalyse in isolierter Umgebung (Prozess, netzwerk-, Dateisystemaktivitäten), Analyse Hauptspeicher, Virtuelle Umgebung
+
+Unix: strace, truss --> Zugriff auf welche Ressourcen
+
+Auffinden von nicht angepassten STandard Kits / Tools relativ einfach
+
+weitere Möglichkeit: Analyse dynamisch eingebundener Bibliotheken --> Grundfunktion nachvollziehen
+ldd
+
+\subsection{Systemprotokolle}
+Anzeichen vor Angriff, oder vom Angrif, wenn nicht gesäubert --> anhaltspunkte, nicht typsich für Post-Mortem, häufig im Betrieb --> Feststellung Angriff
+
+3 Formen: Normale Meldungen (Tagesbetrieb), ANzeichen Angriffe / kritische Meldungen, Unbekannte Meldungen
+--> Fehlgeschalgende Anmeldeversuche, Erfolgreiche Anmeldeversiche im Vorfeld von laken Angriffen oder SU-vErsuchen
+--Aktionen welche erweiterte Rechte erfoern, Shutdeon / Restor
+
+Details im Kapitel Detection
+
+
 \subsection{Untersuchung der Shell}
+MAC-Time
 \todo{HECF: S. 171}
 
 \subsection{Untersuchung der Druckerjobs und der Druckerqueue}
@@ -80,8 +180,18 @@ Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typisch
 
 \subsection{Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}
 
+\subsection{Weitere Analyse-Möglichkeiten}
+\begin{itemize}
+\item Analyse der Master File Table
+\item Analyse von NTFS-Streams
+\item Analyse von NTFS TxF
+\item NTFS-Volumen-Schattenkopien
+\item Analyse der Windows-Registry
+\item Analyse der Windows UserAssist Keys
+\item Analyse der Windows Prefetch-Dateien
+\item Analyse von Netzwerkmitschnitten
+\end{itemize}
 
-File-Slack: CF S. 109
 %---------------------------------------------------------------------------------------------------------------
 \section{Reporting}
 
@@ -90,6 +200,11 @@ File-Slack: CF S. 109
 
 %-------------------------------------------
 
+
+\section{Tool-Suiten}
+\begin{itemize}
+\item Encase
+\end{itemize}
 
 
 Tools: CF: S. 175

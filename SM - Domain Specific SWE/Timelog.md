@@ -8,11 +8,12 @@
 | Information Gathering | 04.05.2015 | 2.5       |
 | Information Gathering | -          | 1         |
 | Setup IOTIVITY-Stack  | 08.05.2015 | 3         |
+| Raspberry  aufsetzen  | 22.05.2015 | 2         |
 
 
 ##Calculation-Log
-  - 1, 2.5, 1, 3
+  - 1, 2.5, 1, 3,2
 
 
 ##Total
-Total (h):  7.5
+Total (h):  9.5
