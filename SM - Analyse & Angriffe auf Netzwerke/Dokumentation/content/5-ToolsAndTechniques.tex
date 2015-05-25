@@ -280,13 +280,43 @@ FreeHelix
 FTKImager (Windows)
 
 
+\subsection{Bestimmung der Distribution}
+jede Distribution eigenheiten, eigene Speicherorte, eigene Wege für Tracking und Auditierung User Aktivität, System Events
+/etc --> redhat-release, debian-release, redhat-version
+Oder /etc/issue --> logon banner
+oder /var/log/dmesg oder /var/log/messages (Startup log)
 
+Ubuntu Linux: APT, Synaptic
+
+Red Hat / Fedora Linux: RPM, Mandrake Linux similar
+
+Gentoo Linux: Kompiliert für spezifisches System, sehr lange installationszeit, keine binaries, Package manager: portage / emerge
+
+SUSE Linux: Package-Manager: YaST
+
+Debian Linux: Developer distribution, APT
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Analysis}
 
+\subsection{Image mounten}
+Read-Only
+
+Zuerst hashen, dann mounten, dann hashen
+\begin{verbatim}
+mount -r -o loop <PathToImage> <MountPoint>
+\end{verbatim}
+
 \subsection{Gelöschte Datenträger}
 Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...
+
+
+\subsection{Gelöschte Partitionstabelle}
+Hat ein Datenträger den anschein gelöscht worden zu sein, sollte diese in jedem Fall trotzdem untersucht werden. Befinden sich auf dem Datenträger noch Daten kann ein Versuch unternommen werden, das Dateisystem zu rekonstruieren. Im Falle eines ext-Dateisystems muss der Datenträger nach einer bestimmten Signatur (0xef53) durchsucht werden. Diese Signatur kennzeichnet den Superblock des Dateisystems. Ein Backup des Superblocks wird in der Regel zusätzlich an mehreren Stellen des Dateisystems abgelegt. Anhand des Superblockes kann das gesamte Dateisystem rekonstruiert werden.
+
+\subsubsection{Tools}
+SMART, findsuper, PartitionMagic
+
 
 \subsection{Analyse des File Slacks}
 Aufgrund der Besonderheiten einiger Dateisysteme können auf Datenträgern mit einem solchen Dateisystem Dateien versteckt werden. Der Grund dafür liegt, darin das eine Datei auf dem Datenträger in sogenannten Dateiblöcken mit einer festen Länge gespeichert werden. Füllt eine Datei nicht den gesamten Dateiblock aus entsteht ein ungenutzter Bereich. Dieser Bereich wird File Slack genannt und wird vom Betriebssystem mit zufälligen Daten aufgefüllt. Unter Windows werden für das Auffüllen des Slacks zum Beispiel Inhalte aus dem Arbeitsspeicher verwendet. Dies wird dann als RAM-Slack bezeichnet.
@@ -339,6 +369,7 @@ Fast alle OS: Erweiterung physisch nutzbarer Speicherbereich, oder Auslagerung k
 Auslagerungs- oder Swap-Dateien, Datei oder virtuelles / physisches Dateisystem
 Win: Swap / Page-File: nicht gelöscht bei Shutdown, 
 
+Linux: Swap --> Behandlung wie Binärdateien, kann alles beinhalten
 Sonderfälle: Inhalt Hauptspeicher vor Eintritt in Ruheszustand / Suspend-To-Disk-Modus, nach Wake-Up wieder gleich, Hilfreich: RAM-Analyse
 
 
@@ -357,6 +388,10 @@ istat <MountPoint>/<PathToImage.dd> <Inode>
 icat <MountPoint>/<PathToImage.dd> <Inode> > <OutputPath>
 \end{verbatim}
 \end{enumerate}
+
+
+TASK, 
+SMART (Ext2, ext3) Suche in unalloziertem Bereich, Auffindung gelöschte Files
 
 \subsection{Analyse von versteckten Dateien}
 Klassische Festplatte:
@@ -395,7 +430,7 @@ foremost -v -c <PathToForemostConfig> <PathToImage.dd>
 
 
 \textbf{Fatback}\\
-FAT_partitionen unter unix untersuchen
+FAT-partitionen unter unix untersuchen
 \begin{verbatim}
 fatback <PathToImage.dd>
 \end{verbatim}
@@ -441,12 +476,20 @@ Anzeichen vor Angriff, oder vom Angrif, wenn nicht gesäubert --> anhaltspunkte,
 Details im Kapitel Detection
 
 
-\subsection{Untersuchung der Shell}
-MAC-Time
-\todo{HECF: S. 171}
+\subsection{Untersuchung der Shell (Bash)}
+MAC-Time der Shell untersuchen, .bash\_profile und .bashrc --> Shell startup commands, evtl. referenziert file /etc/skel directory --> prüfen
+
+.bash\_history: Audit-Trail der Bash
+.bash\_logout: commands when exit shell, auch in ordner /Etc/skel evtl. globales script
+
+Oft link history file nach /Dev/null --> Schwarzes Loch
 
 \subsection{Untersuchung der Druckerjobs und der Druckerqueue}
-\todo{HECF: S. 171}
+ÄLteres Unix: LPR, /var/log/lpr.log, /var/spool
+
+Neuer: CUPS: /var/log/cups, alternativ: Config Files in /etc/ --> anderer Speicherort, /var/spool/cups
+
+Auffindung gedruckter Dokumente --> Was / Wer, Timeline-Analyse, Beweis für gelöschtes File --> ansatzpunkt bei Suche nach gelöschtem File in Speicher
 
 \subsection{Untersuchung der Dateien / Dateiendungen}
 \todo{HECF: S. 172}
@@ -493,7 +536,7 @@ ls -Rlrta /lib
 
 
 %-------------------------------------------
-http://forensicswiki.org/wiki/Tools#Forensics_Live_CDs
+%http://forensicswiki.org/wiki/Tools#Forensics_Live_CDs
 
 \section{Tool-Sammmlungen}
 \begin{itemize}
