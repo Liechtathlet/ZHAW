@@ -9,35 +9,47 @@
 \contentsline {section}{\numberline {1.5}Struktur}{2}{section.1.5}
 \contentsline {chapter}{\numberline {2}Ausgangslage}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Internet of Things}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Domain Specific Software Engineering}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Domain Specific Languages}{3}{section.2.3}
-\contentsline {chapter}{\numberline {3}Die Dom\IeC {\"a}ne "`Internet of Things"'}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Einf\IeC {\"u}hrung}{5}{section.3.1}
-\contentsline {section}{\numberline {3.2}Anforderungen an Software}{5}{section.3.2}
-\contentsline {section}{\numberline {3.3}Anforderungen an die Softwarearchitektur}{5}{section.3.3}
-\contentsline {section}{\numberline {3.4}Anforderungen an die Programmiersprache}{5}{section.3.4}
-\contentsline {section}{\numberline {3.5}Anforderungen / Unterschiede zur "`Standard-Dom\IeC {\"a}ne"'}{5}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Software Requirements}{5}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Software Design}{5}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Software Construction}{6}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Software Testing}{6}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Software Maintenance}{6}{subsection.3.5.5}
-\contentsline {subsection}{\numberline {3.5.6}Software Configuration Management}{6}{subsection.3.5.6}
-\contentsline {subsection}{\numberline {3.5.7}Software Engineering Management}{6}{subsection.3.5.7}
-\contentsline {subsection}{\numberline {3.5.8}Software Engineering Process}{6}{subsection.3.5.8}
-\contentsline {subsection}{\numberline {3.5.9}Software Engineering Tools and Methods}{6}{subsection.3.5.9}
-\contentsline {subsection}{\numberline {3.5.10}Software Quality}{6}{subsection.3.5.10}
-\contentsline {chapter}{\numberline {4}Software Engineering in der Dom\IeC {\"a}ne "`Internet of Things"'}{7}{chapter.4}
-\contentsline {section}{\numberline {4.1}Programmiersprachen}{7}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Assembler}{7}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}C / C++}{7}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Java / .NET}{7}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Protokolle und Standards}{7}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Thread}{7}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}AllJoyn}{7}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Frameworks}{8}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Kommunikation zwischen \gls {acr:IOT}-Ger\IeC {\"a}ten}{8}{subsection.4.3.1}
-\contentsline {chapter}{\numberline {5}Case-Study "`iotivity}{9}{chapter.5}
-\contentsline {part}{Anhang}{15}{chapter*.10}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{15}{section*.12}
+\contentsline {subsection}{\numberline {2.1.1}Anwendungsbereiche}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Das "`Ding"'}{5}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Domain Specific Software Engineering}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Domain Specific Languages}{5}{section.2.3}
+\contentsline {chapter}{\numberline {3}Die Dom\IeC {\"a}ne "`Internet of Things"'}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Einf\IeC {\"u}hrung}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Anforderungen an Software}{7}{section.3.2}
+\contentsline {section}{\numberline {3.3}Anforderungen an die Softwarearchitektur}{7}{section.3.3}
+\contentsline {section}{\numberline {3.4}Anforderungen an die Programmiersprache}{7}{section.3.4}
+\contentsline {section}{\numberline {3.5}Anforderungen / Unterschiede zur "`Standard-Dom\IeC {\"a}ne"'}{7}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Software Requirements}{8}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Software Design}{8}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Software Construction}{8}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Software Testing}{8}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Software Maintenance}{8}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Software Configuration Management}{8}{subsection.3.5.6}
+\contentsline {subsection}{\numberline {3.5.7}Software Engineering Management}{8}{subsection.3.5.7}
+\contentsline {subsection}{\numberline {3.5.8}Software Engineering Process}{8}{subsection.3.5.8}
+\contentsline {subsection}{\numberline {3.5.9}Software Engineering Tools and Methods}{9}{subsection.3.5.9}
+\contentsline {subsection}{\numberline {3.5.10}Software Quality}{9}{subsection.3.5.10}
+\contentsline {chapter}{\numberline {4}Software Engineering in der Dom\IeC {\"a}ne "`Internet of Things"'}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Programmiersprachen}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Assembler}{11}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}C / C++}{12}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Java / .NET}{12}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Protokolle und Standards}{12}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}MQTT}{12}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}XMPP}{12}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}DDS}{13}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}AMQP}{13}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}HTTP}{13}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}WebSocket}{13}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}CoAP}{14}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}Thread}{14}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}AllJoyn}{14}{subsection.4.2.9}
+\contentsline {section}{\numberline {4.3}Frameworks}{14}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Kommunikation zwischen \gls {acr:IOT}-Ger\IeC {\"a}ten}{14}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}Case-Study "`iotivity}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Aufsetzen der Entwicklungsumgebung}{15}{section.5.1}
+\contentsline {section}{\numberline {5.2}Entwicklung}{15}{section.5.2}
+\contentsline {section}{\numberline {5.3}Deployment und Betrieb}{15}{section.5.3}
+\contentsline {part}{Anhang}{21}{chapter*.10}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{21}{section*.12}
 \contentsfinish

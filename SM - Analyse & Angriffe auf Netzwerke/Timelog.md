@@ -22,11 +22,13 @@
 | Abschluss Kapitel 2       | 18.05.2015 | 2         |
 | Abschluss Kapitel 3       | 18.05.2015 | 2         |
 | Kapitel 4, 5              | 22.05.2015 | 4         |
+| Kapitel 6                 | 23.05.2015 | 2         |
+| Kapitel 6                 | 25.05.2015 | 0.5       |
 
 ##Calculation-Log
   - 8,2,1,3,1,2.5,3,1,1,1.5
-  - 3, 3, 3, 1, 3, 2, 2,4
+  - 3, 3, 3, 1, 3, 2, 2,4, 2, 0.5
 
 
 ##Total
-Total (h):  41
+Total (h):  43.5

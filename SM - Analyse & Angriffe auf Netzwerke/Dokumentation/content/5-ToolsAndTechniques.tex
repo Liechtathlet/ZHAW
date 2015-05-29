@@ -1,25 +1,25 @@
 \chapter{Tools und Techniken} \label{chap:ToolsTechniques}
 In diesem Kapitel werden die grundlegenden Tools und Techniken einer forensischen Analyse vorgestellt. Die Tools und Techniken werden dabei nach der Phase, in der diese eingesetzt und angewendet werden, gegliedert.
 
-Hinweis zu verwendung statisch vorkompilierte Systembefehle
+
 
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Readiness}
+In diesem Kapitel werden einige Techniken und Tools aufgezeigt, welche während der Phase "`Readiness"' von Bedeutung sind.
+
 
 \subsection{Datenträger löschen}
-Digitale Beweise sollten immer auf leere, beziehungsweise komplett gelöschte, Datenträger gesichert werden.
+Digitale Beweise und Kopien von Images sollten immer auf leere, beziehungsweise zuvor komplett gelöschte Datenträger gesichert werden. Wird dies nicht gemacht, kann es sein, dass Rückstände / Daten von vorherigen Untersuchungen die Analyse beeinflussen.
 
-\textbf{Linux (native)} \\
-\begin{verbatim}
+\subsubsection{dd}
+Unter Linux kann für das Löschen, genauer gesagt das Überschreiben mit Zufallswerten das Tool \textit{dd} verwendet werden.
+
+\begin{lstlisting}
 dd if=/dev/random of=/dev/<DriveToWipe>
-\end{verbatim}
+\end{lstlisting}
 
-Kontrolle: (alles Nullen)
-\begin{verbatim}
-dd if=<PathToDisk> | xxd | grep -v
-\end{verbatim}
-\textbf{Tool-Suiten}\\
+\subsubsection{Weitere Tools}
 \begin{itemize}
 \item EnCase
 \end{itemize}
@@ -29,6 +29,8 @@ dd if=<PathToDisk> | xxd | grep -v
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Secure}
+In diesem Kapitel werden einige Techniken und Tools aufgezeigt, welche während der Phase "`Secure"' von Bedeutung sind. 
+
 
 \subsection{Auslesen der Zeitkonfiguration}
 Die Zeitkonfiguration des Systemes wird je nach Betriebssystem und zum Teil sogar je nach Distribution an einem anderen Ort gespeichert.
@@ -36,134 +38,336 @@ Die Zeitkonfiguration des Systemes wird je nach Betriebssystem und zum Teil soga
 Unter Ubuntu, beziehungsweise Debian-Systemen ist diese unter \textit{/etc/timezone} zu finden. Bei Red-Hat-Distributionen unter \textit{/etc/sysconfig/clock}.
 Beim Auslesen der Zeitkonfiguration ist auch zu notieren, ob das System automatisch zwischen Sommer- und Winterzeit umstellt.
 
-\subsection{Sicherung der Binärdateien von ausgeführten Prozessen}
-Inhalt proc-Dateisystem, Binaries laufende Prozesse --> wenn programm nach start gelöscht
+\begin{lstlisting}
+> cat /etc/timezone
+Europe/Zurich
+\end{lstlisting}
 
-\begin{verbatim}
-cat /proc/<PDI>/exe > /<OutputPath>
-\end{verbatim}
+Das Datum und die Uhrzeit kann über nachfolgenden Befehl ausgelesen werden. Zu beachten ist hier, dass eine statisch vorkompilierte Version des Befehsl verwendet wird.
+\begin{lstlisting}
+> date
+Fre Mai 29 08:00:00 CEST 2015
+\end{lstlisting}
+
+
+
+\subsection{Bestimmung der Linux-Distribution}
+Jede Linux-Distribution hat ihre Eigenheiten. Dazu zählen unter anderem Befehle, Speicherorte, Methoden für Tracking und Auditierung der User Aktivität und das Logging von System Events.
+
+Unter vielen Distributionen befindet sich unterhalb des Ordners \textit{/etc} ein File, welches die Versions-Informationen enthält.\\
+\begin{lstlisting}
+> ls /etc | grep -E "`release|version"'
+debian_version
+lsb-release
+lsb-release.dpkg-dist
+os-release
+upstream-release
+
+> cat /etc/debian_version
+jessie/sid
+
+> cat /etc/os-release
+NAME="Ubuntu"
+VERSION="14.04.2 LTS, Trusty Tahr"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 14.04.2 LTS"
+VERSION_ID="14.04"
+HOME_URL="http://www.ubuntu.com/"
+SUPPORT_URL="http://help.ubuntu.com/"
+BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+\end{lstlisting}
+
+Ist kein entsprechendes File vorhanden kann das Logon-Banner oder die Log-Einträge unter \textit{/var/log/dmesg} oder \textit{/var/log/messages} allenfalls Hinweise zur Distribution enthalten:\\
+\begin{lstlisting}
+> cat /etc/issue
+Linux Mint 17 Qiana \n \l
+
+> cat /var/log/dmesg
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.13.0-49-generic (buildd@akateko) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #83-Ubuntu SMP Fri Apr 10 08:00:00 UTC 2015 (Ubuntu 3.13.0-49.83-generic 3.13.11-ckt17)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.13.0-49-generic root=UUID=ee905b77-1264-477b-9942-23bd448df95c ro quiet splash acpi_backlight=vendor acpi_osi=Linux vt.handoff=7
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] e820: BIOS-provided physical RAM map:
+\end{lstlisting}
+
+Oft gibt auch der verwendete Package-Manager ein Hinweis auf die verwendete Distribution:\\
+\begin{itemize}
+\item Ubuntu Linux: APT, Synaptic
+\item Red Hat / Fedora Linux: RPM
+\item Gentoo Linux: Portage / Emerge
+\item SUSE Linux: YaST
+\item Debian Linux: APT
+\end{itemize}
+
+
+
+\subsection{Shutdown eines Systemes}
+Ein laufendes System kann grundsätzlich auf zwei verschiedene Arten heruntergefahren werden. Zum einen kann ein normaler, regulärer Shutdown des Systemes durchgeführt werden. Dabei werden sämtliche Datei gespeichert und temporäre Daten gelöscht / aufgeräumt. Das System befindet sich anschliessend in einem sauberen / lauffähigen Zustand. Während dem Shutdown werden jedoch bei zahlreichen Dateien die Zeitstempel verändert und sämtliche Daten welche sich im Arbeitsspeicher befinden gehen verloren. Dies kann unter Umständen die Analysearbeiten erschweren oder im schlimmsten Fall wichtige Beweise vernichten.
+
+Die andere Methode ein System herunterzufahren ist der harte Shutdown. Beim harten Shutdown wird das System von der Stromversorgung getrennt, ohne das dieses vorher heruntergefahren wurde. Mit diesem Vorgehen wird sichergestellt, dass die Zeitstempel unverändert bleiben und die temporären Daten erhalten bleiben. Auch ist die Wahrscheinlichkeit da, dass auf der Festplatte eine Auslagerungsdatei vorhanden ist, welche analysiert werden kann. Die Extraktion und Analyse dieser Daten ist jedoch sehr aufwändig. Diese Methode des Shutdowns kann bei gewissen Dateisystemen zu irreparablen Schäden führen. Daher ist vorgängig abzuwägen, ob ein harter Shutdown sinnvoll und verkraftbar ist.
+
+Bei beiden Varianten ist die Zeit der Durchführung und die Art des Shutdowns zu protokollieren.
+
+Die Möglichkeiten den Inhalt des Arbeitsspeichers zu sichern, werden im nachfolgenden Kapitel vorgestellt.
+
+
+
+\subsection{Erstellen von Hashes} \label{subsec:ToolsTechniques:Secure:Hash}
+Für die Sicherung von Daten ist die Erstellung von Hashes von essentieller Bedeutung. Jede Datei, Partition oder ähnlich sollte vor und nach der Sicherung gehasht werden, um sicherzustellen, dass diese durch den Sicherungsvorgang nicht verändert wurde. Auch Protokolle, Dokumentation, Ergebnisse der Analyse, etc. sollten immer mit einem Hash versehen und geprüft werden.
+
+\subsubsection{md5sum}
+Mit folgendem Befehl können MD5-Hashes von einzelnen Dateien erstellt werden. Es stehen unter anderm MD2, MD4, MD5, SHA und SHA1 als Algorithmen zur Verfügung.
+
+\begin{lstlisting}
+> md5sum <FileName>
+\end{lstlisting}
+
+\subsubsection{md5deep}
+Mit dem Tool "`md5deppe"' können Hashes von Ordnerinhalten rekursiv erstellt werden. Es können dabei Hashes mit dem MD5, dem SHA1, dem SHA256, dem Tiger und Whirlpool Algorithmus erstellt werden.
+
+\begin{lstlisting}
+> md5depp -r <PathToDirectory>
+\end{lstlisting}
+
+
+
+\subsection{Sicherung des Arbeitsspeicher-Inhaltes}
+Bei der Sicherung von Arbeitsspeicher-Inhalten ist grundsätzlich zu beachten, dass die verwendeten Tools und Techniken einen kleinen Memory-Footprint aufweisen. Je mehr Arbeitsspeicher ein Tool verwendet, desto mehr wichtige Daten und somit auch Beweise gehen verloren. Ein weiterer wichtiger Punkt der beachtet werden soll ist, dass die Sicherung nicht im User-Mode, sondern im Kernel-Mode erfolgt. So ist sichergestellt, dass der gesamte Inhalte des Arbeitsspeichers gesichert werden kann. Andernfalls können aufgrund von Berechtigungseinschränkungen nicht alle Daten gesichert werden.
+
+\subsubsection{Kein Zugriff auf das Betriebssystem vorhanden} \todo{Evtl. weitere Details und Beispiele}
+%http://www.forensicmag.com/articles/2013/05/catching-ghost-how-discover-ephemeral-evidence-through-live-ram-analysis
+%http://forensicswiki.org/wiki/Tools:Memory_Imaging
+Grundsätzlich gilt, dass der Inhalt des Arbeitsspeichers beim herunterfahren des Systems verloren geht. Studien haben gezeigt, dass die Inhalte des Arbeitsspeichers noch bis zu mehreren Minuten nach dem Verlust der Stromversorgung im Arbeitsspeicher vorhanden sind. 
+
+Für die Sicherung des Arbeitsspeichers ohne zugriff auf das Betriebssystem können unter anderem folgende Techniken eingesetzt werden:
+\begin{itemize}
+\item Kühlung des physikalischen Bausteins\\
+Bevor das System mit einem harten Shutdown heruntergefahren wird, wird das Gehäuse des Systems geöffnet und der Arbeitsspeicher mit einem Stickstoffspray auf -50 Grad Celsius herutner gekühlt. Nach dem harten Shutdown wird der Arbeitsspeicher ausgebaut und in einem Analyse-System  eingebaut. Das Analyse-System wird mit einer Spezialsoftware gestartet, welche den gesamten Arbeitsspeicher auf einen anderen Datenträger sichert.
+
+\item Firewire-Attacke\\
+Bei der Firewire-Attacke wird eine Schwachstelle der Firewire-Schnittstelle ausgenutzt, um Inhalte des Arbeitsspeichers zu sichern. Die Schwachstelle kann jedoch nur unter bestimmten Bedingungen ausgenutzt werden und es kann nur eine begrenzte Menge an Arbeitsspeicher ausgelesen werden. Weitere Informationen zur Firewire-Attacke sind hier zu finden: \url{https://blogs.gnome.org/muelli/2010/04/reading-ram-using-firewire/}, \url{http://link.springer.com/chapter/10.1007%2F978-3-642-23602-0_14#page-1}
+\end{itemize}
+
+
+
+\subsection{Forensische Duplikation}
+Bei einer forensischen Duplikation sollte der Quelldatenträger immer Bit-Weise kopiert werden. Zusätzlich ist sicherzustellen, dass der Quelldatenträger Read-Only gemountet oder über einen Writeblocker angeschlossen ist. Ein Writeblocker verhindert physisch, dass Daten auf einen Datenträger geschrieben werden können. Es ist zu empfehlen grundsätzlich immer einen Writeblocker auf Hardware-Basis zu verwenden.
+
+Die Sicherung kann auf folgende Arten durchgeführt werden:
+\begin{itemize}
+\item Auf einem Live-System\\
+Die Duplikation des Datenträgers erfolgt unter Einsatz eines Software-Writeblockers auf dem Live-System
+\item Auf dem zu untersuchenden System\\
+Die Duplikation erfolgt über eine Live-CD, nachdem das System heruntergefahren wurde. Für die Duplikation wird ein Writeblocker auf Software- oder Hardware-Basis eingesetzt.
+\item Auf dem Analyse-System\\
+Die Duplikation erfolgt auf dem Analyse-System. Für die Duplikation wird ein Writeblocker auf Software- oder Hardware-Basis eingesetzt.
+\item Hardware-Imager\\
+Die Duplikation erfolgt durch ein auf Imaging spezialisierte externe Hardware.
+\end{itemize}
+
+Das Image des Quelldatenträgers kann entweder auf einem separaten, sterilen Datenträger oder über ein Netzwerk auf einen Server gesichert werden. Bei der Duplikation ist sicherzustellen, dass auch versteckte Bereiche des Datenträgers, wie Host Protected Areas, Device configuration Overlays gesichert werden.
+
+\subsubsection{Einsatz von Standard-Linux Tools}
+
+\textbf{Mounten des Zieldatenträgers}
+\begin{lstlisting}
+> mount -t <Dateisystem> <PathToDisk> <MountPoint>
+\end{lstlisting}
+
+\textbf{Sicherung der Partitionstabelle}
+\begin{lstlisting}
+> fdisk -l <PathToDisk> > <MountPoint>/<FileName.fdisk>
+
+> parted -l <PathToDisk> > <MountPoint>/<FileName.fdisk>
+\end{lstlisting}
+
+\textbf{Generierung eines Hashes}\\
+Vor der Duplikation wird ein Hash des zu sichernden Datenträgers / Partition gemäss Kapitel \ref{subsec:ToolsTechniques:Secure:Hash} \nameref{subsec:ToolsTechniques:Secure:Hash} erstellt und dokumentiert.
+
+\textbf{Duplikation}
+\begin{lstlisting}
+> dd conv=noerror bs=512k if=<PathToDisk> of=<MountPoint>/<FileName.dd>
+\end{lstlisting}
+
+\textbf{Generierung eines Hashes}\\
+Nach der Duplikation wird ein Hash des zu sichernden Datenträgers / Partition gemäss Kapitel \ref{subsec:ToolsTechniques:Secure:Hash} \nameref{subsec:ToolsTechniques:Secure:Hash} erstellt und mit dem dokumentierten Hash verglichen. Dies stellt sicher, dass der Datenträger während der Duplikation nicht unbemerkt verändert wurde. Anschliessend ist vom erstellten Image ebenfalls ein Hash zu erstellten, welcher mit dem dokumentierten verglichen werden muss. Ist dieser mit dem dokumentierten Hash identisch, wurde der Datenträger / die Partition korrekt dupliziert.
+
+Im Anschluss muss das Verfahren für jede verfügbare Partition wiederholt werden.
+
+\textbf{Transfer des Images via Netzwerk}
+\begin{lstlisting}
+> nc -l -p 8000 |dd of=<MountPoint>/<PathToImage>
+\end{lstlisting}
+
+\textbf{Transfer des Images via Netzwerk (Verschlüsselt)}
+\begin{lstlisting}
+> cryptcat -k <Pssword> -l -p 8000 |dd of=<MountPoint>/<PathToImage>
+\end{lstlisting}
+
+\subsubsection{Weitere Tools}
+\todo{Weitere Tools}
+Adepto: Wizard für die gängigen Tools
+
+
+
+
+\subsection{Verifikation eines forensischen Duplikates oder eines Beweisstückes}
+Vor und nach der Verwendung eines forensischen Duplikates oder eines Beweisstückes sollte jeweils die Integrität verifiziert werden. Dazu wird ein neuer Hash erzeugt (Siehe Kapitel \ref{subsec:ToolsTechniques:Secure:Hash} \nameref{subsec:ToolsTechniques:Secure:Hash}). Dies kann entweder manuell oder durch den Einsatz eines Tools oder einer Tool-Suite sichergestellt werden.
+
+\subsubsection{md5sum und md5deep}
+Mit diesen beiden Tools wird manuell ein neuer Hash generiert, welcher mit dem dokumentierten Hash des Duplikates oder des Beweisstückes verglichen wird.
+
+\subsubsection{dcfldd}
+\todo{Inhalt}
+
+\subsubsection{Weitere Tools} \todo{Inhalt}
+EnCase (Seite 72)
+Linux: Device Name ermitteln: /proc/partitions oder logs, dann: "`dd if=/dev/<suspect drive> of=/some dir/image name"', "`md5sum /some dir/image name"', "`md5sum /dev/<suspect drive>"'
+FreeHelix
+
+FTKImager (Windows)
+
+
+
+\subsection{Sicherung der Binärdatei von ausgeführten Prozessen}
+Unter Umständen wurde auf dem System ein Prozess gestartet und die dazugehörige Binärdatei anschliessend gelöscht. Der Prozess ist dann solange aktiv, bis das System neu gestartet oder heruntergefahren wird. Solange das System noch läuft kann eine Kopie der Binärdatei um Proc-Dateisystem gefunden werden.
+
+\subsubsection{Linux}
+\begin{lstlisting}
+> cat /proc/<PDI>/exe > /<OutputPath>
+\end{lstlisting}
+
+
 
 \subsection{Sicherung flüchtiger Daten}
+Die Sicherung von flüchtigen Daten muss effizient, schnell und korrekt erfolgen. Nachfolgend werden die wichtigsten zu sichernden Informationen mit den dazugehörigen Befehlen aufgelistet.
 
+\subsubsection{Linux}
 \begin{itemize}
 \item Informationen über den Prozessor 
-\begin{verbatim}
+\begin{lstlisting}
 cat /proc/cpuinfo
-\end{verbatim}
+\end{lstlisting}
 
 \item Grösse und Anzahl der eingebundenen Partitionen und deren Füllungsgrad 
-\begin{verbatim}
+\begin{lstlisting}
 df -h
-\end{verbatim}
+\end{lstlisting}
 
 \item  Informationen über den physischen Datengräger und die Partitionierung
-\begin{verbatim}
+\begin{lstlisting}
 fdisk -l
-\end{verbatim}
+\end{lstlisting}
 
 \item  Information über den aktiven Kernel, Compiler-Version und Kommpilierdatum, etc.
-\begin{verbatim}
+\begin{lstlisting}
 cat /proc/version
-\end{verbatim}
+\end{lstlisting}
 
 \item  Anzeige der aktiven Boot-Parameter
-\begin{verbatim}
+\begin{lstlisting}
 cat /proc/cmdline
-\end{verbatim}
+\end{lstlisting}
 
 
 \item  Anzeige der Shell-Umgebungsvariablen
-\begin{verbatim}
+\begin{lstlisting}
 env
-\end{verbatim}
+\end{lstlisting}
 
 \item  Anzeige der angemeldeten User
-\begin{verbatim}
+\begin{lstlisting}
 who
-\end{verbatim}
+\end{lstlisting}
 
 \item  Liste der alufenden Prozesse
-\begin{verbatim}
+\begin{lstlisting}
 ps -efl
-\end{verbatim}
+\end{lstlisting}
 
 \item  Informationen über die konfigurierten Netzwerk-Interfaces und deren Statistik 
-\begin{verbatim}
+\begin{lstlisting}
 ifconfig -a, ifconfig -s
-\end{verbatim}
+\end{lstlisting}
 
 \item  Anzeige der Einträge der Arp-Table
-\begin{verbatim}
+\begin{lstlisting}
 arp -n, arp -n
-\end{verbatim}\\
+\end{lstlisting}
 
 \item  Anzeige des Inhalts des Host-File
-\begin{verbatim}
+\begin{lstlisting}
 cat /etc/hosts
-\end{verbatim}
+\end{lstlisting}
 
 \item  Anzeige der DNS-Konfiguration
-\begin{verbatim}
+\begin{lstlisting}
 cat /etc/resolv.conf
-\end{verbatim}
+\end{lstlisting}
 
 \item  Inhalt der Passwortdatei
-\begin{verbatim}
+\begin{lstlisting}
 cat /etc/passwd
-\end{verbatim}
+\end{lstlisting}
 
 \item  Inhalt der Shadow-Datei
-\begin{verbatim}
+\begin{lstlisting}
 cat /etc/shadow
-\end{verbatim}
+\end{lstlisting}
 
 \item  Anzeige der aktiven Netzwerkverbindungen
-\begin{verbatim}
+\begin{lstlisting}
 netstat -anp
-\end{verbatim}
+\end{lstlisting}
 
 \item  Anzeige der Routing-Tabelle
-\begin{verbatim}
+\begin{lstlisting}
 netstat -rn
-\end{verbatim}
+\end{lstlisting}
 
 \item Anzeige der geöffneten und aktiven Ports 
-\begin{verbatim}
+\begin{lstlisting}
 lsof -P -i -n
-\end{verbatim}
+\end{lstlisting}
 
 \item  Komplette Ausgabe aller durch Prozesse geöffneten Dateien
-\begin{verbatim}
+\begin{lstlisting}
 lsof
-\end{verbatim}
+\end{lstlisting}
 
 \item  Informationen über den Hauptspeicher
-\begin{verbatim}
+\begin{lstlisting}
 cat /proc/meminfo
-\end{verbatim}
+\end{lstlisting}
 
 \item  Information über aktive Module
-\begin{verbatim}
+\begin{lstlisting}
 cat /proc/modules
-\end{verbatim}
+\end{lstlisting}
 
 \item  Informationen über die gemounteten Dateisysteme
-\begin{verbatim}
+\begin{lstlisting}
 cat /proc/mounts
-\end{verbatim}
+\end{lstlisting}
 
 \item  Informationen über die Swap-Konfiguration
-\begin{verbatim}
+\begin{lstlisting}
 cat /proc/swap
-\end{verbatim}
+\end{lstlisting}
 
 \item  Konfiguration der Mountpoints
-\begin{verbatim}
+\begin{lstlisting}
 cat /etc/fastab
-\end{verbatim}
+\end{lstlisting}
 
 \item  Pro Prozess: Umgebungsvariablen, verwendete Speicherbereiche, etc.
-\begin{verbatim}
+\begin{lstlisting}
 ls /proc | sort -n | grep -v [a-z,A-Z] | while read PID
 	do
 		echo "`Prozess ID $PID:"`
@@ -180,121 +384,12 @@ ls /proc | sort -n | grep -v [a-z,A-Z] | while read PID
 		ls -lrta /proc/$PID/fd
 		echo "`-------------------"'
 	done > <OutputPath> 2>&1
-\end{verbatim}
-
+\end{lstlisting}
 \end{itemize}
-\todo{CF: Seite 210 / 2011}
-\todo{CFH: S. 1 - 35}deep -r /etc
-
-\subsection{Erstellen von Hashes}
-
-\subsubsection{Tools}
-\textbf{Md5deep}\\
-Rekursives Erstellen / Prüfen von Prüfsummen
-\begin{verbatim}
-md5
-\end{verbatim}
-
-\subsection{Forensische Duplikation}
-Varianten: Ausbau, Anschluss saubere Platte an System, Kopie via netzwerk
-Writeblocker
-Sonst: Boot von Live-CD --> Sicherung via NW oder auf saubere Platte
 
 
-Versteckte Bereiche auf Datenträgern: Host Protected Area, Device Configuration Overlay --> Verfahren, dass auch diese Daten sichert, Checksummen
 
 
-Steriler Datenträger: Dateisystem erstellen, anschliessend mountent
-\begin{verbatim}
-mount -t <Dateisystem> <PathToDisk> <MountPoint>
-\end{verbatim}
-
-\textbf{Sicherung Partitionstabelle}\\
-\begin{verbatim}
-fdisk -l <PathToDisk> > <MountPoint>/<FileName.fdisk>
-\end{verbatim}
-
-\textbf{Duplikation}
-\begin{verbatim}
-dd conv=noerror bs=512k if=<PathToDisk> of=<MountPoint>/<FileName.dd>
-\end{verbatim}
-
-Anschliessend Prüfsummen von allen Partitionen erstellen, anschliessend Paritionen separat duplizieren
-
-\textbf{Transfer via Netzwerk}
-\begin{verbatim}
-nc -l -p 8000 |dd of=<MountPoint>/<PathToImage>
-\end{verbatim}
-
-\textbf{Transfer via Netzwerk (Verschlüsselt)}
-\begin{verbatim}
-cryptcat -k <Pssword> -l -p 8000 |dd of=<MountPoint>/<PathToImage>
-\end{verbatim}
-
-\subsubsection{Tools}
-Adepto: Wizard für die gängigen Tools
-
-\begin{verbatim}
-dd if//de
-\end{verbatim}
-
-\subsection{Verifizierung eines forensischen Duplikates oder eines Beweisstückes}
-EnCase, Tools, Verify Single Evidence File
-Linux: md5sum "`image file"', compare
-
-\subsubsection{Tools}
-\textbf{dd}
-Weitere Parameter, Aufteilbar in mehrere Stücke, Erweiterungen. dcfldd (mit MD5-Prüfsummen), 
-\begin{verbatim}
-dd if=Quelle of=Ziel
-\end{verbatim}
-
-
-\subsection{Harter vs. Normaler Shutdown}
-Bei einem normalen Shutdown wird das System durch den Benutzer regulär heruntergefahren, sämtliche Daten werden gespeichert und das System befindet sich im Anschluss in einem sauberen / lauffähigen Zustand. Während dem Shutdown werden jedoch die Zeitstempel von zahlreichen Dateien verändert und temporäre Dateien des Betriebssystems gelöscht. Dies kann unter Umständen die Analysearbeiten erschweren oder im schlimmsten Fall wichtige Beweise vernichten. 
-
-Bei einem harten Shutdown wird das System von der Stromversorgung getrennt, ohne das dieses vorher heruntergefahren wurde. Mit diesem Vorgehen wird sichergestellt, dass keine Zeitstempel von Dateien verändert werden. Auch ist die Wahrscheinlichkeit da, dass auf der Festplatte eine Auslagerungsdatei vorhanden ist, welche anschliessend analysiert werden kann. Die Extraktion und anschliessende Analyse dieser Daten ist jedoch sehr aufwändig. Diese Methode des Shutdowns kann bei gewissen Dateisystemen zu irreparablen Schäden führen. Daher ist vorgängig abzuwägen, ob ein harter Shutdown sinnvoll und verkraftbar ist.
-
-Bei einem Shutdown gehen in der Regel immer viele Daten verloren. Es wäre zum Beispiel möglich, dass der Angreifer ein Schadprogramm installiert hat, welches nur noch im RAM verfügbar ist. Nach einem weichen Shutdown ist das Programm auf dem System nicht mehr auffindbar. 
-
-Bei beiden Varianten ist die Zeit der Durchführung und die Art des Shutdowns zu protokollieren.
-
-\subsection{Sicherung des RAM-Inhaltes}
-Nachdem herunterfahren des Systems sind die Daten im RAM noch einige Sekunden verfügbar. Dies reicht in der Regel jedoch nicht um eine Datensicherung durchzuführen. Einige neuere Studien und Experimente haben gezeigt, dass es durchaus Mittel und Wege gibt, um den Inhalt des RAMS zu sichern. Eine Möglichkeit besteht darin, die Raumbausteine mit einem Stickstoffspray auf -50 Grad Celsius herunter gekühlt. Anschliessend wird der Rechner ausgeschaltet, der RAM ausgebaut und in ein anderes System eingebaut. Das System wird mit einer Spezialsoftware gestartet, welches einen Memory-Dump erstellt.
-
-Kernel-Level Sicherung (Nicht User-Mode)
-Small-Footprint
-Firewire-Attacke
-\subsection{Writeblocker}
-\todo{Writeblocker}
-HW und SW
-
-\subsubsection{Tool}
-EnCase (Seite 72) DOS Boot disk
-EnCase (Windows)
-Linux: Device Name ermitteln: /proc/partitions oder logs, dann: "`dd if=/dev/<suspect drive> of=/some dir/image name"', "`md5sum /some dir/image name"', "`md5sum /dev/<suspect drive>"'
-Midifzierte Version von dd, dcfldd für Forensik: http://dcfldd.sourceforge.net
-
-FreeHelix
-
-FTKImager (Windows)
-
-
-\subsection{Bestimmung der Distribution}
-jede Distribution eigenheiten, eigene Speicherorte, eigene Wege für Tracking und Auditierung User Aktivität, System Events
-/etc --> redhat-release, debian-release, redhat-version
-Oder /etc/issue --> logon banner
-oder /var/log/dmesg oder /var/log/messages (Startup log)
-
-Ubuntu Linux: APT, Synaptic
-
-Red Hat / Fedora Linux: RPM, Mandrake Linux similar
-
-Gentoo Linux: Kompiliert für spezifisches System, sehr lange installationszeit, keine binaries, Package manager: portage / emerge
-
-SUSE Linux: Package-Manager: YaST
-
-Debian Linux: Developer distribution, APT
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Analysis}
@@ -303,9 +398,9 @@ Debian Linux: Developer distribution, APT
 Read-Only
 
 Zuerst hashen, dann mounten, dann hashen
-\begin{verbatim}
+\begin{lstlisting}
 mount -r -o loop <PathToImage> <MountPoint>
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Gelöschte Datenträger}
 Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...
@@ -345,21 +440,21 @@ Nicht jede Aktion löst auf der Datei selbst eine Veränderung der MAC-Time aus.
 \textbf{Sleuth Kit}
 \begin{enumerate}
 \item Dateinformationen sammeln
-\begin{verbatim}
+\begin{lstlisting}
 fls -f <Filesystem> -m <Path> -r <MountPoint>/<PathToimage> > body.fls
 fls -f linux-ext2 -m / -r /mnt/images/hda7.dd > body.fls
-\end{verbatim}
+\end{lstlisting}
 
 \item Metadaten sammeln
-\begin{verbatim}
+\begin{lstlisting}
 ils -f <Filesystem> -m <MountPoint>/<PathToImage> >> body.fls
 ils -f linux-ext2 -m /mnt/images/hda7.dd >>body.fls
-\end{verbatim}
+\end{lstlisting}
 
 \item Gemeinsame Auswertung
-\begin{verbatim}
+\begin{lstlisting}
 mactime -b body.fls
-\end{verbatim}
+\end{lstlisting}
 
 \end{enumerate}
 
@@ -379,14 +474,14 @@ Sonderfälle: Inhalt Hauptspeicher vor Eintritt in Ruheszustand / Suspend-To-Dis
 \textbf{Sleuth Kit}\\
 \begin{enumerate}
 \item Identifizierung
-\begin{verbatim}
+\begin{lstlisting}
 fls -rd <MountPoint>/<PathToImage.dd>
-\end{verbatim}
+\end{lstlisting}
 \item Dateien wiederherstellen
-\begin{verbatim}
+\begin{lstlisting}
 istat <MountPoint>/<PathToImage.dd> <Inode>
 icat <MountPoint>/<PathToImage.dd> <Inode> > <OutputPath>
-\end{verbatim}
+\end{lstlisting}
 \end{enumerate}
 
 
@@ -410,10 +505,10 @@ Bei modernen: Reduktion durch Mapping-Technologien
 \subsubsection{Tools}
 \textbf{unrm und lazarus} \\
 Wiederherstellung unallozierter Bereiche
-\begin{verbatim}
+\begin{lstlisting}
 unrm <PathToDisk> > <OutputPath>
 lazarus -h <OutputPath>
-\end{verbatim}
+\end{lstlisting}
 
 
 \subsection{Dateien oder Fragemente wiederherstellen}
@@ -424,16 +519,16 @@ Anti-Forensik: Mehrfaches überschreiben mit echten zufälligen Bitmustern oder 
 
 \subsubsection{Tools}
 \textbf{foremost} \\
-\begin{verbatim}
+\begin{lstlisting}
 foremost -v -c <PathToForemostConfig> <PathToImage.dd>
-\end{verbatim}
+\end{lstlisting}
 
 
 \textbf{Fatback}\\
 FAT-partitionen unter unix untersuchen
-\begin{verbatim}
+\begin{lstlisting}
 fatback <PathToImage.dd>
-\end{verbatim}
+\end{lstlisting}
 
 Weitere: Scalpel, Foregone
 
@@ -462,9 +557,9 @@ Rootkits, trojanisierte Systemprogramme, ok für Standard-Rootkits
 
 \subsubsection{Tools}
 \textbf{chkrootkit}\\
-\begin{verbatim}
+\begin{lstlisting}
 chkrootkit
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Systemprotokolle}
 Anzeichen vor Angriff, oder vom Angrif, wenn nicht gesäubert --> anhaltspunkte, nicht typsich für Post-Mortem, häufig im Betrieb --> Feststellung Angriff
@@ -500,13 +595,13 @@ Auffindung gedruckter Dokumente --> Was / Wer, Timeline-Analyse, Beweis für gel
 
 \subsection{Suche nach SUID und GID-Dateien}
 Veränderung MAC
-\begin{verbatim}
+\begin{lstlisting}
 find / -perm -2000 -o -perm -4000 -print | xargs /ls -l {}
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Datei- und Verzeichnisrechte}
 Veränderung MAC
-\begin{verbatim}
+\begin{lstlisting}
 ls -lrta /etc/
 ls -lrta /bin
 ls -lrta /sbin
@@ -515,7 +610,7 @@ ls -Rlrta /var
 ls -Rlrta /dev
 ls -Rlrta /home
 ls -Rlrta /lib
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Weitere Analyse-Möglichkeiten}
 \begin{itemize}
@@ -613,6 +708,8 @@ Oft je nach Situation andere Tools notwenidjg, z.bB. Windows Analyse -> Windows 
 
 Absicherung Workstation des Ermittlers, lokal gespeicherte Ergebnisse, Notizen, etc. --> verschlüsseln
 
+Hinweis zu verwendung statisch vorkompilierte Systembefehle
+
 http://www.computer-forensik.org/tools/
 \section{Kommerzielle Tools}
 -SMART
@@ -656,3 +753,4 @@ Test 					&	x			&				&	x			&			\\
 \bottomrule
 \end{tabular}
 \end{table}
+

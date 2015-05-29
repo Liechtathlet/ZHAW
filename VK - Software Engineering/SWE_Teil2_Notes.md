@@ -57,3 +57,26 @@ Reproduzierbare Fehler:
 Nicht-Reproduzierbare Fehler: Aus Betriebssicht keine Fehler, nicht bearbeitbar  
 Configuration-Manager ~= Product Manager (Zuständige Person, nicht aus SCRUM)  
 3 Eskalationsstufen: 1. Vorfall - Keine sofortige Behebung: 2. Incident (Behebung ohne Systemveränderung, ohne Lösung): Problem (Fachleute, z.B. Reboot, Indexierung, Clean) - 3. Change (Wenn Problem nicht behebbar) | Systemzustand darüber messbar, Anzahl Incidents: egal, Anzahl Probleme: interessant --> Viele Probleme / Wenig Changes --> Plattform etwas schief
+
+
+
+#Kosten der Informationstechnologie
+##Allgemeines und Ausgaben für die IT
+Entwicklungs-Kosten, Betriebs-Kosten (ca. 20% der Entwicklungskosten pro Jahr), Betriebsnutzen, Entwicklungsnutzen (selten kalkuliert, Nutzeneffekte durch Engineering, z.B. Prozessmodellierung), IT heute nur als Kosten in der Buchhaltung (werden heute nicht korrekt verrechnet), Strukturkapital: Strukturen (Businessregeln, etc.), IT: Wachstumsbranche, starker Einfluss auf technologisch orientierte Wirtschaftssektoren, Wertschöpfung: Hälfte durch interne IT, Hälfte durch externe IT, Ausgaben IT: Durchschnitt über alles: 4% des Umsatzes, Dual-Vendor-Strategie (Speziell Schweiz), 20'000 IT-Unternehmen (ca. 1 -4 Angestellte)
+
+##Kennzahlen für die IT
+Wie bewertet jemand, der nicht versteht was die IT tut?
+
+  - Kalkulatorische Bewertung (Vor Projekt, Projektantrag)  
+    Rechtfertigung durch Investitionsrechnung (Net Present Value oder vereinfacht: Return On Investment)
+  - Kalkulatorische Bewertung nach Projekt: unüblich
+  - Total Cost of Ownership  
+    Kosten von Erstinstandsetzung bis Abschaltung, Zusammensetzung aus direkten (HW, SW, Operations, Verwaltung) und indirekten Kosten (End-User Operations, Downtime)
+  - Opportunitätskosten  
+    Wird selten benutzt
+
+
+##IT-Controlling
+Wie gut ist eine IT?, Woher kommen die Zahlen für das Controlling? (Siehe Beilage)
+
+##Kennzahlen

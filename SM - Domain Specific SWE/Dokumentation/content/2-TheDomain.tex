@@ -26,19 +26,39 @@ deckt dieser Begriff auch ein sehr groses Spektrum an verschiedensten Anwendungs
 \subsection{Software Requirements}
 eindeutig, Komplexität schwierig, nachhaltig (schwieriger Update)
 
+non-consumer-market: regulatorisches Schwierigkeiten, Remote Tracking, Kabellose Implantate, --> Requirements-Phase: Verfolgbarkeit und Prüfbarkeit, Geschickte Verisonierung, Reviews --> Sicherstellung Compliance und Erfolg
+Wetter, Physische Einflüsse, Durch das Gerät erzeugte Hitze, Lange Lebensdauer
+
+SW Muss: Skalierbar für breite Palette an verschiedenen Gerätekategorien
+Modular sein --> nur Auswahl (RAM-Footprint)
+Verbunden (Daten rein/raus)
+Verlässlich:Zertifizierung für kritische Applikationen
 \subsection{Software Design}
 Schlank, Energieeffizient, einfach wartbar?
 
+Berücksichtigung: Protokolle, Standards, Last-Anforderungen
+
+Machine To Machine Connectivity, Wireless, API-Evolution in MInd
 \subsection{Software Construction}
 Je nach Anwendungsbereich: Hardwarenahe, Optimierung
 Für die Entwicklung von Anwendungen für \gls{acr:IOT}-Geräte können
 https://www.rti.com/company/careers/software-engineer.html grundsätzlich
 
+
+Firmware für Spezifische Hardware, Adressierung Netzwerk- und Verbindungsprobleme, Security
+
+
 \subsection{Software Testing}
 Wenn bei Consumer: Update evtl. schwierig, Fehlfunktion schwerwiegend,
 
+Test: Nachbildung physische Umgebung, komplexe Szenarien, Netzwerk-Anforderungen, 
+
 \subsection{Software Maintenance}
 Schwierig,...
+Immer connected --> regular updates, wenn nicht regelmässig upgedatet --> Verlust kritischer Funktionalität, Continuous Delivery
+
+Nicht überall möglich, Low-Bandwith, Hardware-Near Devices
+
 
 \subsection{Software Configuration Management}
 
@@ -47,10 +67,21 @@ Schwierig,...
 
 
 \subsection{Software Engineering Process}
-
+Defect Tracking, small scale projects, fast product turnaroudn, 
 
 \subsection{Software Engineering Tools and Methods}
 
 
 \subsection{Software Quality}
 Höhere Qualität notwendig
+
+
+
+
+Layer: Transport-Layer: TCP zum Teil overkill für IOT-Device --> UDP
+UDP: beser geeignet für relatime-data, TCPS Acknowledgment and retransmission unnützer overhad für solche Anwendungen (Stück sprache nicht rechtzeitig übermittelt -> Retransmission sinnlos), 
+
+
+Klassische Ansätze nicht alle geeignet für IoT, 
+
+Service-based Application: composition and orchestration of Services

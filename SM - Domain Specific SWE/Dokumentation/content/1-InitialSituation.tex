@@ -31,7 +31,7 @@ http://www.internet-of-things.eu/
 
 
 Die "`Things"', Dinge, beziehungsweise Geräte
--Embedded Devices / -Systems
+-Embedded Devices / -Systems, Kern: Bau vernetzter Produkte, 
 
 Transformation von isolierten Systemen zu vernetzten dingen, 
 
@@ -43,7 +43,9 @@ End-To-End Lösung: Orchestrierung der einzelnen komponenten,  Grafik Seite 10 (
 
 Eingebaute, sichere Kommunikation
 
-IOT: Things - Gateway - Network and cloud, grosses ökosystem, 
+IOT: Things - Gateway - Network and cloud, grosses ökosystem, regulatorische / rechtliche Schwierigkeiten 
+
+IOT: Thing - Local Network  (Evtl. mit Gateway)- Internet - Back-End Services (Enterprise Data System, PC, Mobile Device)
 
 Dinge: Autos, Geräte-Sensoren, Wearables, Smartphones,  direkt verbunden über Mobiles Netzwerk mit Zugriff auf das Internet, IOT-Solution: entweder Dinge sind intelligent --> filtern / managed von daten lokal oder verbunden mit gateways, welche diese Fkt bieten.
 
@@ -52,6 +54,37 @@ Gateway: 85 \% der Geräte nicht darauf ausgelegt, direkt mit Internet zu kommun
 Network and Cloud: klassisch, Datenanlyse der Rohdaten
 
 
+\subsection{Anwendungsbereiche}
+Unterschied: http://micrium.com/iot/iot-rtos/
+
+Für das \gls{acr:IOT} gilt es zwei Anwendungsbereiche zu unterscheiden. Auf der einen Seite gibt es den Anwendungsbereich in der Industrie...(Verschiedenste Technologien, IP-Network -> internet), Wireless Sensor Network: Distributed Sensors, montiro physical / environmental conditions, WSN-Node (low cost, low powered, batterie): Einzelne Funktion
+
+WSN Edge Nodes: WSN Node mit Internet Verbindung, Gateway WSN und IP-Netzwerk, lokale Verarbeitung, Speicher, evtl. User-Interface
+
+Auf der anderen Seite existiert der Anwendungsbereich des Kommerziellen IoT (Bluetooth, Ethernet (Wired or Wireless), only with local devices.)
+
+
+WSN-Technologien: Wi-Fi (hohe Verbreitung, hoher Stromverbrauch), Low-Power-Solutions (Low-Power and efficient radios, energy harvesting, mesh networking, long term operation, new protocols and data formats), IEEE 802.15.4: Radio Standard, base low power system, power reduction, 6LoWPAN: As small messages as possible, IPv6 over Low power Wireless Personal Area Networks, Kapselung und Kompressionsmechnismen für kürzere Übermittlungszeiten
+
+
+\subsection{Das "`Ding"'}
+Definition "`Thing"' nich einfach, z.B. embedded computing device / system welches informationen über ein Netzwerk versendet und empfängt
+
+Embedded Systems: Basis: Mikrocontroller, kleiner Memory foot print, 
+
+
+Stromsparen: Früher so rasch als möglich Aufgabe ausführen, anschliessend in Sleep mode wechseln, neue Prozessorarchitekturen: Fast kein Stromverbrauch, Nachteil: weniger Performance, 
+
+Plug And play, Paradigmenwechsel: Aktuell Server stellen Daten zur Verfügung, 
+
+-Low-Powered-Device
+-Embedded OS
+-Kommunikationsmöglichkeit (meist: wireless) mit 1:n Kommunikationsprotokollen
+-Direkt mit Internet oder Via Gateway
+-Netzwerk
+-Server / Infrastruktur
+-Analytics
+-End-User-Tier
 \section{Domain Specific Software Engineering}
 
 

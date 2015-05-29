@@ -12,7 +12,7 @@ https://blog.profitbricks.com/top-49-tools-internet-of-things/
 http://www.businesscloudnews.com/2015/05/14/samsung-announces-open-internet-of-things-platform/
 https://www.rti.com/company/news/iot-connectivity-webinar.html
 http://www.iotsworldcongress.com/documents/4643185/4c3cc80c-03b0-41be-baf0-6a1a0fa7db07
-https://www.mapr.com/blog/key-requirements-iot-data-platform#.VVuNi3W1FBc
+%https://www.mapr.com/blog/key-requirements-iot-data-platform#.VVuNi3W1FBc
 
 
 SWE:
@@ -20,12 +20,15 @@ https://hal.inria.fr/hal-01064075/document
 http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7030178
 http://www.cio.com/article/2843814/developer/how-to-develop-applications-for-the-internet-of-things.html
 http://www.appdevelopersalliance.org/internet-of-things/
-http://www.fit.fraunhofer.de/de/fb/ucc/lehre/scrum-based_softwaredevelopmentofinternet-of-thingsapplications.html
-http://insights.wired.com/profiles/blogs/winning-strategies-software-development-for-the-internet-of#axzz3anWNtzAE
+%http://www.fit.fraunhofer.de/de/fb/ucc/lehre/scrum-based_softwaredevelopmentofinternet-of-thingsapplications.html
+%http://insights.wired.com/profiles/blogs/winning-strategies-software-development-for-the-internet-of#axzz3anWNtzAE
 http://www.intel.com/content/www/us/en/internet-of-things/white-papers/developing-solutions-for-iot.html
 http://link.springer.com/chapter/10.1007%2F978-3-642-36818-9_6#page-1
 
 \section{Programmiersprachen}
+
+C, C++, Zum Teil: Java --> OS benötigt, von daher C,C++ und Java
+Java benötigt nicht zu vernachlässigendd Ressourcen, z.B. Oracle Java ME Embedded: Memory: 130 KB - 700 KB, ROM: 350 KB - 2000 KB, + Netzwerkstack, Kernel, nicht mehr ein embedded system, Java nur auf fähigeren, teurerern Systemen
 
 \subsection{Assembler}
 Eine Implementation in Assembler kann unter bestimmten Voraussetzungen die beste Lösung für ein bestimmtes Problem sein. In der Regel wird der Assembler-Ansatz gewählt, wenn das Programm so effizient und sparsam wie möglich ablaufen und mit so wenig Ressourcen als möglich auskommen soll.
@@ -57,12 +60,15 @@ http://micrium.com/iot/internet-protocols/
 \subsection{MQTT}
 Message Queue Telemetry Transport, Device Data Collection, Haupfaufgabe: Fernmessung, Remote Monitoring, Datensammeln und an Infrastruktur ausliefern, Anwendungszweck: Grosse Netzwerke von kleinen Geräte, welche überwacht und kontrolliert werden müssen. Basis: TCP (kein Datenverlust)
 
+Publish / Subscribe, central Server, Subscribe to Topics, MQTT-Broker, Notify all connected devices, 
 Hub and Spoke System: Geräte --> Data Verbindung zu Server, System ist designt, um daten an enterprise technologien weiter zu geben (z.B. ESB)
 
 Kein Protokoll für D2D, nicht mehrere Empfänger der Daten, wenige Kontrollmöglichkeiten, muss nicht schnell sein --> kein rela time (sekunden)
 
-
+Ziel: Conserve Power and Management
 Bsp: ÖL Pipeline, Energieverbrauch Überwachung, Licht-Kontrolle
+
+Lightweight packet structure, dokumentation auf einer Seite
 
 \subsection{XMPP}
 Ursprünglich: Jabber, entwickelt für Instant messaging
@@ -102,8 +108,20 @@ Hauptsächlich: Business messaging, device - back-office data centers
 
 IOT: appropriate for control plane oder server-basierte analyse funktionen
 
+\subsection{HTTP}
+Basis für Client-Server-Model im Web, Sichere Methode: auf Device nur Client implementiersen
 
+\subsection{WebSocket}
+Protokoll, Full-Duplex Communication über einzelne TCP-Verbindung zwischen Client und Server, Zeilt HTML5 Spec
 
+\subsection{CoAP}
+Web-Protokolle z.T. zu schwer für IOT-Geräte, Constrained Application Protocol for low-power and constrained networks, RESTful protocol, semantisch an HTTP ausgerichtet, 1:1 Mapping von / zu HTTP
+
+UDP, + einige nachgebildete TCP-Funktionen, Request / Responses: Asynchron via CoAP Messages, Header, Method, Status Codes binary encoded, Reduktion Overhead, Caching abhängig von Response-Code (HTTP: Request Method)
+
+Comparison of Protocol-Stacks: http://micrium.com/iot/internet-protocols/
+
+Leichtgewichtige Alternative zu HTTP, CoAP Packets: all around bitmapping
 
 \subsection{Thread}
 Protokolle: Thread, Netzwerk-Protokoll, Fokus: Security, Low Energy, notwendiger Chip, schon in vielen Geräten vorhanden, gestützt auf 6LoWPAN, IPv6 over Low power Wireless Personal Area Network, 
@@ -124,3 +142,19 @@ http://iot.eclipse.org/java/open-iot-stack-for-java.html
 AllSeen
 IOTIVITY
 Z-Wave
+
+
+
+
+
+
+6LoWPAN, ANT, Bluetooth, DASH7, ISA100, Wireless HART, Wireless M-Bus, Z-Wave, Zigbee / Zigbee IP, EnOcean, EtherCAT, Modbus, Profinet, HomePlug, HomeGrid
+
+
+Voraussetzung Zugriff Internet: IPv6 Pflicht, Non-IP Geräte; Gateway
+
+
+Middleware / Platforms / OS: http://postscapes.com/internet-of-things-software-guide
+
+Weitere-Protokolle: http://postscapes.com/internet-of-things-protocols
+Tools: http://www.datamation.com/open-source/35-open-source-tools-for-the-internet-of-things-1.html

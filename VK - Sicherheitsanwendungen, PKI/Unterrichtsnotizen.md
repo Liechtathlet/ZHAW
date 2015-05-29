@@ -340,3 +340,171 @@ Security Association Database und Security Policy Database pro VPN-Receiver
 
 ###ISAKMP
 Version egall, universell
+
+##IKEv1
+###Authentisierung
+  - Variante 1: Via Signatur (explizit)
+    - Nachricht 1
+      - Header: IKE-Header (ISAKMP, S. 27), Next Payload
+      - SA: Security Assoziation (als Payload, S. 30)
+      - Proposal 1: Proposal Payload (Einleitung Parameter, S. 30, SPI enthalten)
+      - Transform 1: Transform Payload (Parameter, S. 31)
+    - Antwort 1
+      - Header: ISAKMP-Header
+      - SA: Auswahl SA
+      - Proposal: Ausgewähltes Proposal
+      - Transform: Ausgewählter Transform
+    - Nachricht 2
+      - Header: ""
+      - KEi: Diffie-Hellmann-Parameter (3)
+      - Nonce: Zufallszahl
+      - Certificate Request: Optional
+    - Antwort 2
+      - Header: ""
+      - KEr: Diffie-Hellmann-Parameter
+      - Nonce
+      - Certificate Request: optional
+    - Nachricht 3
+      - Header
+      - Payload: Verschlüsselt (Diffie-Hellmann ist ausgetauscht)
+        - IDi
+        - Certificate: Optional
+        - Signatur i (Authentifizierung)
+    - Antwort 3
+      -Header
+      -Payload: Verschlüsselt
+        - IDr
+        - Certificate: Optional
+        - Signatur r: (Authentifizierung)
+  - Variante 2: Authentisierung mit Public Key Verschlüsselung (implizit)
+    - Nachricht 1 und Antwort 1 analog
+    - Nachricht 2
+      - Header
+      - KEi: Diffie-Hellmann-Parameter (3) für Session-Key
+      - Hash(Certifikat): optional, Hash von Zertifikat
+      - IDi: Verschlüsselt mit Public-Key von Responder
+      - Ni: Verschlüsselt mit Public-Key von Responder
+    - Antwort 2
+      - Header
+      - KEr: Diffie-Hellmann-Parameter für Session-Key
+      - IDr: Verschlüsselt mit Public-Key von Initiator
+      - Nr: Verschlüsselt mit Public-Key von Initiator
+    - Nachricht 3
+      - Header
+      - Hash_i: Verschlüsselt mit Diffie-Hellmann / Session-Key
+      - Hash_r: Verschlüsselt mit Diffie-Hellmann / Session-Key
+  - Veriante 3: Pre-Shared Key
+      - Nachricht / Antowrt 1 und 2: analog
+      - Nachricht 3:
+        - Header
+        - KEi: Diffie-Hellmann (3)
+        - Ni
+      - Antwort 3:
+          - Header
+          - KEr: Diffie-Hellmann (3)
+          - Nr
+      - Nachricht 4:
+          - Header
+          - Hash: Identifikation (mit Shared-Secret)
+      - Antwort 4:
+          - Header
+          - hash: Identifikation (mit Shared-Secret)
+
+###Aggressive-Mode
+Schneller (nur 3 Nachrichten für Etablierung) und unsicherer, "sinnvoll" bei variablen / dynamischen IP-Adressen
+  - Nachricht 1 und Nachricht 2 verkettet & zusammengefasst
+  - Antwort 1: Antwort 1, 2 & 3 verketten & zusammengefasst
+  - Nachricht 2
+
+Gleiche Modes (Variante 1, 2 und 3 für Aggressive Mode), Variante 3 (Pre-Shared) im Aggressive-mode nicht verwenden! -> Knackbar
+
+
+##IKE Quick Mode
+IPsec-Schlüsselaustausch, anschliessend alles verschlüsselt (Key-Exchange bereits stattgefunden), braucht keine Authentisierung mehr, Wesentlichster Punkt: Austausch neues Key-Material, mit PFS oder ohne
+
+##NAT-Traversal
+###NAT/PAT und IPsec
+NAT: Adress-Übersetzung (Kein Subnetz!), PAT: Port-Übersetzung, NAPT: Beides Zusammen
+
+  - NAT: Tunnelmode funktioniert, Transportmode funktioniert nicht (AH: Problem MAC, nur ein IP-Header, wenn transferiert -> MAC stimmt nicht mehr)
+
+##UDP-Einkapselung
+Kapselung von IKE- und IPSec-ESP-Paketen: ISAKMP und Payload müssen gekapselt werden, Unterscheidung, nur ESP mit Transport- und Tunnelmode, AH läuft nicht
+
+  - NAT-T: UDP Encapsulated ESP Header format
+  - NAT-ESP Marker: IKE Header Format für Port 4500
+  - NAT-T: ESP Transportmodus
+  - NAT-Traversal: EsP Tunnelmodus
+  - NAT-Keepalive Paket
+
+###NAT-T
+Vendor-ID: Hashwert von "RFC 3947" aka "Ich kann NAT-T", NAT-Discovery Payload, Port: Meist 500 UDP am Anfang,
+
+**IKE-Main-Mode:**
+    - Nachricht 1:
+      - Header: ISKAMP
+      - SA: Security Assoziation
+      - Vendor-ID (Initiator -> Responder, ich kann NAT-Traversal)
+    - Antwort 1:
+      - Angabe eines neuen Ports für Zukunft
+      - Header, SA, Vendor-ID
+    - Nachricht 2:
+      - Header, Diffie-Hellmann, Ni
+      - NAT-D(r): IP / Port von Gegenseite  
+        Stimmt überein: Kein NAT, sonst Keepalive-Pakets senden damit der Router den Eintrag in der Tabaelle behält.
+      - NAT-D(i): Eigene IP / Port
+    - Antwort 2:
+      - Header, Diffie-Hellmann, Nr
+      - NAT-D(r), NAT-D(l) -> Check off NAT-Fähig)
+    - Nachricht 3:
+      - Non-ESP-M, Header (ISAKMP), ID(i), Cert, Sig(i)
+    - Antwort 3:
+      - Non-ESP-M, Header, ID(r), Cert, Sig(r)
+
+**NAT-T: IKE Aggressive Mode:**
+Analog
+
+**NAT-T: IKE Quickmode für ESP Transport-Mode**
+NAT-OA-Payload: Original IP-Adresse, Quickmode bevor ESP Transport-Mode
+
+##Internet Key Exchange Protocol Version 2 (IKEv2)
+Init, Authentifizierung, Mehrere Kanäle auf gleicher Authentifizierung (Childs, ähnlich Quick-Mode), Informationsautschausch separat  
+
+###IKE_SA_INIT
+Cookies gegen DOS-Attacken  
+Phase 1
+  - Nachricht 1: (Keine Authentifizierung)
+    - ISAKMP-Header
+    - Security Assoziation
+    - Diffie-Hellmann
+    - Nonce
+  - Antwort 1:
+    - ISAKMP-Header
+    - Security Assoziation
+    - Diffie-Hellmann
+    - Nonce
+    - Cert (optional)
+
+###IKE_AUTH
+Phase 2, Alles verschlüsselt, aber noch nicht authentifiziert
+  - Nachricht 1
+    - ISAKMP-Header
+    - IDi
+    - Cert: optional
+    - Cert-Req: optional
+    - IDr: optional
+    - AUTH: Authentisierungs-Information
+    - SAi2: Ausgehandelte SA, Bestätigung
+    - TSi: Traffic-Selektoren
+    - TSr: Traffic-Selektoren
+  - Antwort 1
+    - ISAKMP-Header
+    - IDr
+    - Cert: optional
+    - AUTH
+    - SAr2
+    - TSi: Anpassbar vom Responder
+    - TSr: Anpassbar von Responder
+
+###CREATE_CHILD_SA
+Nochmals Diffie-Hellmann, Sitzungsschlüssel, Pro Child: Nachricht / Schritt 3

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.23)  11 MAY 2015 17:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.23)  28 MAY 2015 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4003,6 +4003,16 @@ text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
 number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
@@ -4103,16 +4113,6 @@ text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
 number indent calculated (toc, 1): 12.59247pt
-number indent by \l@... (toc, 2):  41.61002pt
-text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  32.05908pt
-text indent calculated (toc, 2): 33.45824pt
-number indent calculated (toc, 2): 32.05908pt
-number indent by \l@... (toc, 2):  41.61002pt
-text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  32.05908pt
-text indent calculated (toc, 2): 33.45824pt
-number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
 number indent by parent (toc, 2):  32.05908pt
@@ -4144,11 +4144,56 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
 number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 33.45824pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
 number indent by parent (toc, 2):  32.05908pt
@@ -4174,6 +4219,21 @@ text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
 text indent calculated (toc, 0): 12.59247pt
 number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, -1):  0.0pt
 text indent by \l@... (toc, -1):  21.9pt
 number indent by parent (toc, -1):  0.0pt
@@ -4336,18 +4396,59 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 39.
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+[3] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+
+
+
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 70.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 70.
+Package cleveref Info: loaded `ngerman' language definitions on input line 73.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+ [4] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 88.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 88.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 91.
 )
+Package cleveref Info: loaded `ngerman' language definitions on input line 193.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 193.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4358,13 +4459,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 193.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
- [3] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
-
-
-
-
-\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
-
+ [5] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 \openout2 = `content/2-TheDomain.aux'.
 
  (./content/2-TheDomain.tex
@@ -4378,7 +4473,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
- [4]
+ [6]
 (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
 
@@ -4410,18 +4505,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 17.
+
+Overfull \hbox (21.61966pt too wide) in paragraph at lines 20--22
+[]\T1/lmr/m/n/10.95 (-20) http://ercim-news.ercim.eu/en98/special/internet-of-t
+hings-a-challenge-for-software-engineering
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4432,35 +4525,63 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 31.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
-[5] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+[7] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 42.
+
+Overfull \hbox (12.30731pt too wide) in paragraph at lines 43--46
+\T1/lmr/m/n/10.95 (-20) dun-gen für []IOT-Geräte kön-nen https://www.rti.com/co
+mpany/careers/software-engineer.html
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 51.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 51.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 63.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 63.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 66.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 66.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 75.
+Package cleveref Info: loaded `ngerman' language definitions on input line 81.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 81.
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+[8] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
 )
 Package cleveref Info: loaded `ngerman' language definitions on input line 194.
 
@@ -4474,74 +4595,185 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 194.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
- [6] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
-\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
-
+ [9] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 \openout2 = `content/3-SweInIot.aux'.
 
  (./content/3-SweInIot.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+ [10] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+
+
+
+
+
 Kapitel 4.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+
+Overfull \hbox (158.6077pt too wide) in paragraph at lines 8--16
+[]\T1/lmr/m/n/10.95 (-20) http://postscapes.com/internet-of-things-software-gui
+de https://www.silabs.com/Supporthttp://www.datamation.com/open-
+ []
+
+
+Overfull \hbox (17.5872pt too wide) in paragraph at lines 8--16
+\T1/lmr/m/n/10.95 (-20) source/35-open-source-tools-for-the-internet-of-things-
+1.html https://blog.profitbricks.com/top-
+ []
+
+
+Overfull \hbox (28.26736pt too wide) in paragraph at lines 8--16
+\T1/lmr/m/n/10.95 (-20) 49-tools-internet-of-things/ http://www.businesscloudne
+ws.com/2015/05/14/samsung-announces-
+ []
+
+
+Overfull \hbox (127.53781pt too wide) in paragraph at lines 18--27
+[]\T1/lmr/m/n/10.95 (-20) SWE: https://hal.inria.fr/hal-01064075/document http:
+//ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7030178
+ []
+
+
+Overfull \hbox (8.22578pt too wide) in paragraph at lines 18--27
+\T1/lmr/m/n/10.95 (-20) http://www.cio.com/article/2843814/developer/how-to-dev
+elop-applications-for-the-internet-
+ []
+
+
+Overfull \hbox (161.39851pt too wide) in paragraph at lines 18--27
+\T1/lmr/m/n/10.95 (-20) of-things.html http://www.appdevelopersalliance.org/int
+ernet-of-things/ http://www.intel.com/content/www/us/en/internet-
+ []
+
+
+Overfull \hbox (44.0275pt too wide) in paragraph at lines 18--27
+\T1/lmr/m/n/10.95 (-20) of-things/white-papers/developing-solutions-for-iot.htm
+l http://link.springer.com/chapter/10.1007 
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 6.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 22.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 22.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 44.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
-[7] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+[11] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
+Package cleveref Info: loaded `ngerman' language definitions on input line 85.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 85.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 85.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 85.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 85.
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
-
-
+ [12]
+(./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 89.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 89.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 104.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 104.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 111.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 111.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 117.
+Package cleveref Info: loaded `ngerman' language definitions on input line 119.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 119.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 119.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 119.
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+ [13] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 130.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 130.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 141.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 141.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 38.
+(hyperref)                removing `\gls' on input line 141.
 
 )
+Overfull \hbox (101.56146pt too wide) in paragraph at lines 159--195
+[]\T1/lmr/m/n/10.95 (-20) Weitere-Protokolle: http://postscapes.com/internet-of
+-things-protocols Tools: http://www.datamation.com/open-
+ []
+
 Package cleveref Info: loaded `ngerman' language definitions on input line 195.
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -4554,7 +4786,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 195.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
- [8] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+[14] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
 \openout2 = `content/4-CaseStudy.aux'.
@@ -4565,6 +4797,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 7.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 196.
@@ -4576,7 +4820,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 196.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
- [9] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+ [15] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
 
 
@@ -4595,7 +4839,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 217.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
-[10
+[16
 \FN@pp@footnotehinttrue 
 ] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
@@ -4623,7 +4867,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 222.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
- [11] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+ [17] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
 
 
@@ -4639,7 +4883,7 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
 
-[12] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+[18] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
 
 Package tocbasic Info: character protrusion at lot deactivated on input line 22
@@ -4659,7 +4903,7 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
 
-[13] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+[19] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -4672,7 +4916,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 231.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
- [14]
+ [20]
 (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
 
@@ -4723,7 +4967,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 257.
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
-[15] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
+[21] (./ZHAW_SM_DSSE_IoT_Daniel_Brun.mw)
 
 
 
@@ -4828,6 +5072,10 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
 )
 (./content/2-TheDomain.aux
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
@@ -4891,8 +5139,28 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
 )
 (./content/4-CaseStudy.aux
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
+
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
 
 \openout3 = `ZHAW_SM_DSSE_IoT_Daniel_Brun.mw'.
@@ -5326,11 +5594,11 @@ Package logreq Info: Writing requests to 'ZHAW_SM_DSSE_IoT_Daniel_Brun.run.xml'
 
  ) 
 Here is how much of TeX's memory you used:
- 60969 strings out of 493304
- 1258939 string characters out of 6139871
+ 61044 strings out of 493304
+ 1259978 string characters out of 6139871
  1758096 words of memory out of 5000000
- 62617 multiletter control sequences out of 15000+600000
- 98546 words of font info for 139 fonts, out of 8000000 for 9000
+ 62630 multiletter control sequences out of 15000+600000
+ 99874 words of font info for 155 fonts, out of 8000000 for 9000
  963 hyphenation exceptions out of 8191
  65i,12n,101p,10463b,2727s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
@@ -5341,10 +5609,10 @@ mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
 7.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb
 >
-Output written on ZHAW_SM_DSSE_IoT_Daniel_Brun.pdf (23 pages, 243152 bytes).
+Output written on ZHAW_SM_DSSE_IoT_Daniel_Brun.pdf (29 pages, 260509 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 343 compressed objects within 4 object streams
- 75 named destinations out of 1000 (max. 500000)
- 39821 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 39917 words of extra memory for PDF output out of 42996 (max. 10000000)
 
