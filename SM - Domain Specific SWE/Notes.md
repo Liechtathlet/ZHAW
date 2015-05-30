@@ -15,14 +15,19 @@
   - DSSE sinnvoll in diesem Bereich?
   - Fazit
 
+##Präsentation
+  - Vernetzte Stadt
+  - Grand coulee Dam
+  - US Army Blue Force Tracker (JBC-P)
+
 ##Links
   -
 ##Status
 | Kapitel-Nr. |    Titel     | Status Arbeit | Status Review | Freigabe |
 |:-----------:|:------------:|:-------------:|:-------------:|:--------:|
-|      0      |  Einleitung  |     Offen     |               |          |
-|      1      | Ausgangslage |     Offen     |               |          |
-|      2      |  Die Domäne  |     Offen     |               |          |
+|      0      |  Einleitung  |     90  %     |               |          |
+|      1      | Ausgangslage |     90 %      |               |          |
+|      2      |  Die Domäne  |   In Arbeit   |               |          |
 |      3      |  SWE in IOT  |     Offen     |               |          |
 |      4      |  Fallstudie  |     Offen     |               |          |
 

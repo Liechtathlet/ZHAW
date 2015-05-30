@@ -45,6 +45,6 @@
 |      1      |      Attacken       |      OK       |     Offen     |          |
 |      2      |  Incident Response  |      OK       |     Offen     |          |
 |      3      |  Computer Forensik  |      OK       |     Offen     |          |
-|      4      | Forensische Analyse |   In Arbeit   |               |          |
+|      4      | Forensische Analyse |      OK       |     Offen     |          |
 |      5      | Tools und Techniken |   In Arbeit   |               |          |
 |      A      |       Anhang        |   In Arbeit   |               |          |

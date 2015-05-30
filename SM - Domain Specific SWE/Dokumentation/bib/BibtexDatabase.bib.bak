@@ -2,6 +2,32 @@
 % Encoding: UTF8
 
 
+@Electronic{,
+  Title                    = {Unterstanding the Internet of Things Protocols},
+  Author                   = {Real-Time Innovations},
+  Language                 = {EN},
+  Month                    = {Mai},
+  Organization             = {Real-Time Innovations (RTI)},
+  Url                      = {http://de.slideshare.net/RealTimeInnovations/io-34485340},
+  Year                     = {2014},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.05.30}
+}
+
+@Electronic{,
+  Title                    = {Understanding The Protocols Behind The Internet Of Things},
+  Author                   = {Stan Schneider},
+  HowPublished             = {Web},
+  Language                 = {English},
+  Month                    = {Oktober},
+  Url                      = {http://electronicdesign.com/embedded/understanding-protocols-behind-internet-things},
+  Year                     = {2013},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.05.25}
+}
+
 @Electronic{ZHAW:2012:Seminararbeit:Reglemente,
   Title                    = {Reglement: Seminararbeit},
   Author                   = {Stern, Olaf},
@@ -13,9 +39,32 @@
 }
 
 @Electronic{,
+  Title                    = {Creating a DSL in Java},
+  Author                   = {Venkat Subramaniam},
+  Language                 = {EN},
+  Month                    = {Juni},
+  Organization             = {JavaWorld},
+  Url                      = {http://www.javaworld.com/article/2077865/core-java/core-java-creating-dsls-in-java-part-1-what-is-a-domain-specific-language.html},
+  Year                     = {2008},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.05.30}
+}
+
+@Electronic{,
   Url                      = {http://www.networkworld.com/article/2456421/internet-of-things/a-guide-to-the-confusing-internet-of-things-standards-world.html},
 
   Owner                    = {dani},
   Timestamp                = {2015.05.11}
+}
+
+@Electronic{,
+  Title                    = {Developing Solutions for the Internet of Things},
+  Organization             = {Intel Corporation},
+  Url                      = {http://www.intel.com/content/www/us/en/internet-of-things/white-papers/developing-solutions-for-iot.html},
+  Year                     = {2014},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.05.30}
 }
 

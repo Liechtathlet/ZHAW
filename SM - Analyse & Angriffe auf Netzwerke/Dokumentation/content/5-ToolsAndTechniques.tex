@@ -393,32 +393,109 @@ ls /proc | sort -n | grep -v [a-z,A-Z] | while read PID
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Analysis}
+In diesem Kapitel werden einige Techniken und Tools aufgezeigt, welche während der Phase "`Analysis"' von Bedeutung sind. 
+
+
 
 \subsection{Image mounten}
-Read-Only
+Ein forensisches Duplikat, beziehungsweise ein Image, sollte immer Read-Only gemountet werden. Um sicherzustellen, dass das Image nicht verändert wird, sollte vor und nach dem Mounten jeweils ein Hash des Images erzeugt werden.
 
-Zuerst hashen, dann mounten, dann hashen
+\subsection{Linux}
 \begin{lstlisting}
-mount -r -o loop <PathToImage> <MountPoint>
+> mount -r -o loop <PathToImage> <MountPoint>
 \end{lstlisting}
 
+
+
 \subsection{Gelöschte Datenträger}
-Datenträger-Löschsoftware, welche wurde eingesetzt? (noch installiert? typische Spuren?) arbeiten nicht immer zufälligen Löschpattern, evtl. Löschsoftware nicht ganz zuverlässig --> Temporäre Dateien, Registry, Protokolle, ...
+Ist ein gesicherter Datenträger leer, beziehungsweise hat den Anschein, als wäre dieser leer, könnte eine Löschsoftware zur Verwischung von Spuren eingesetzt worden sein. Ist dies der Fall sollte zuerst versucht werden herauszufinden, welche Löschsoftware eingesetzt wurde. Allenfalls wurden dazu Hinweise oder Spuren auf anderen Datenträgern hinterlassen. Gewisse Produkte arbeiten beim Löschen nicht mit reinen Zufallswerten, sondern verwenden Löschpattern. Dies kann einen weiteren Hinweis auf die verwendete Löschsoftware liefern. Oft arbeiten auch die Produkte nicht zuverlässig, und es bleiben gewisse temporäre Dateien, Registry-Einträge oder Protokolle übrig, welche für eine Analyse herangezogen werden können. Wurde der Datenträger mehrfach mit echten zufälligen Bitmustern oder Nullen überschrieben, besteht in der Regel praktisch keine Möglichkeit zur Datenwiederherstellung mehr.
+
+\todo{Wiederherstellung?}
+
 
 
 \subsection{Gelöschte Partitionstabelle}
-Hat ein Datenträger den anschein gelöscht worden zu sein, sollte diese in jedem Fall trotzdem untersucht werden. Befinden sich auf dem Datenträger noch Daten kann ein Versuch unternommen werden, das Dateisystem zu rekonstruieren. Im Falle eines ext-Dateisystems muss der Datenträger nach einer bestimmten Signatur (0xef53) durchsucht werden. Diese Signatur kennzeichnet den Superblock des Dateisystems. Ein Backup des Superblocks wird in der Regel zusätzlich an mehreren Stellen des Dateisystems abgelegt. Anhand des Superblockes kann das gesamte Dateisystem rekonstruiert werden.
+Hat ein Datenträger den Anschein gelöscht worden zu sein, sollte diese in jedem Fall trotzdem untersucht werden. Befinden sich auf dem Datenträger noch Daten kann ein Versuch unternommen werden, das Dateisystem zu rekonstruieren. Im Falle eines ext-Dateisystems muss der Datenträger nach einer bestimmten Signatur (0xef53) durchsucht werden. Diese Signatur kennzeichnet den Superblock des Dateisystems. Ein Backup dieses Superblocks wird in der Regel redundant an mehreren Stellen des Dateisystems abgelegt. Der Superblock ermöglicht die Rekonstruktion des ganzen oder eines grossen Teiles des Dateisystems.
 
-\subsubsection{Tools}
+\subsubsection{Tools} \todo{Details}
 SMART, findsuper, PartitionMagic
 
 
-\subsection{Analyse des File Slacks}
-Aufgrund der Besonderheiten einiger Dateisysteme können auf Datenträgern mit einem solchen Dateisystem Dateien versteckt werden. Der Grund dafür liegt, darin das eine Datei auf dem Datenträger in sogenannten Dateiblöcken mit einer festen Länge gespeichert werden. Füllt eine Datei nicht den gesamten Dateiblock aus entsteht ein ungenutzter Bereich. Dieser Bereich wird File Slack genannt und wird vom Betriebssystem mit zufälligen Daten aufgefüllt. Unter Windows werden für das Auffüllen des Slacks zum Beispiel Inhalte aus dem Arbeitsspeicher verwendet. Dies wird dann als RAM-Slack bezeichnet.
 
-\todo{Dateisysteme mit FileSlack}
+\subsection{Analyse von gelöschten Dateien}
+Wurden Dateien vom Dateien vom System gelöscht besteht ein gewisse Wahrscheinlichkeit, dass diese mit einem entsprechenden Tool wiederhergestellt werden können.
+
+\subsubsection{Sleuth Kit}
+Die Wiederherstellung von gelöschten Daten mit Hilfe der Tools aus dem Sleuth Kit erfolgt nach folgendem Ablauf:
+ 
+\begin{enumerate}
+\item Identifizierung von gelöschten Daten
+\begin{lstlisting}
+> fls -rd <MountPoint>/<PathToImage.dd>
+\end{lstlisting}
+\item Wiederherstellung ausgewählter Dateien
+\begin{lstlisting}
+> istat <MountPoint>/<PathToImage.dd> <Inode>
+> icat <MountPoint>/<PathToImage.dd> <Inode> > <OutputPath>
+\end{lstlisting}
+\end{enumerate}
+
+\subsubsection{Weitere Tools}
+\todo{ Complete}
+TASK, 
+SMART (Ext2, ext3) Suche in unalloziertem Bereich, Auffindung gelöschte Files
+
+
+
+\subsection{Analyse von versteckten Dateien}
+Auf einer Festplatte können an einigen Stellen Daten versteckt werden. Aufgrund des Aufbaus und der Aufteilung einer Festplatte in Sektoren fester Grösse über die gesamte Fläche, können am Rand Abstände zwischen den Sektoren entstehen. In diesen sogenannten Gaps können Daten versteckt werden. Eine weitere Möglichkeit Daten zu verstekcen sind die Partition-Gaps (Abstände zwischen Partitionen) und unpartitionierte Bereiche der Festplatte. Eine etwas andere Methode ist die Verwendung von Blöcken, welche vom Betriebssystem als unbrauchbar markiert wurden (Bad Blocks).  Die einfachste Art um Dateien zu verstecken, ist die Verwendung des Hidden-Attributes des Betriebssystems. Dieses existiert in der einen oder anderen Form in den meisten gängigen Betriebssystemen.
+
+Auch mit Hilfe von Rootkits lassen sich Dateien und Verzeichnisse verstecken. Darüber hinaus können unter anderem auch Prozesse und Netzwerkverbindungen verborgen werden. Normale Rootkits verwenden dafür trojanisierte (manipulierte) Systemprogramme, welche die entsprechenden Dateien, Verzeichnise, etc. herausfiltern. kernel-Level-Rootkits verwenden keine trojanisierten Systemprogramme, sondern manipulieren die Syscall-Tabelle. Einige Kernel-Level-Rootkits verändern sogar direkt den Syscall-Code. Diese Art von Rootkits sind auf dem System sehr schwer aufzuspüren. Um diese zu finden, müssen die Strukturen analysiert und das System beobachtet und mit einem Referenz-System verglichen werden.
+
+\todo{Tools}
+
+
+\subsection{Dateien oder Fragemente wiederherstellen}
+Wurden Dateien auf einem System gelöscht, bleiben möglicherweise gewisse Dateifragmente über längere Zeit erhalten. Können die einzelnen Fragmente im File-Slack oder unallozierten Bereich gefunden werden, können diese zusammengesetzt werden. Der Prozess der Suche und Wiederherstellung von Dateien oder Dateifragementen wird auch als File Carving bezeichnet.
+
+\subsubsection{foremost}
+Foremost ist ein File-Carving-Tool welches speziell für Unix entwickelt wurde. Die Widerherstellung erfolgt aufgrund der Analyse von Header- und Footer-Informationen.
+
+\begin{lstlisting}
+> foremost -v -c <PathToForemostConfig> <PathToImage.dd>
+\end{lstlisting}
+
+
+\subsubsection{Fatback}
+File-Carving-Tool um FAT-Dateisysteme unter Unix zu untersuchen.
+
+\begin{lstlisting}
+> fatback <PathToImage.dd>
+\end{lstlisting}
+
+
+\subsubsection{unrm und lazarus}
+Mit den Tools unrm und lazarus können Dateien aus dem unallozierten Bereich der Festplatte wiederhergestellt werden. Bei diesem Vorgang fällt eine sehr grosse Menge an Rohdaten an, es sollte daher entsprechend Speicherplatz zur Verfügung stehen.
+\begin{lstlisting}
+unrm <PathToDisk> > <OutputPath>
+lazarus -h <OutputPath>
+\end{lstlisting}
+
+
+\subsubsection{Weitere Tools} \todo{Weitere}
+Weitere: Scalpel, Foregone
+
+
+
+\subsection{Analyse des File Slacks}
+Aufgrund der Besonderheiten einiger Dateisysteme können auf Datenträgern mit einem solchen Dateisystem Dateien versteckt werden. Der Grund dafür liegt, darin das eine Datei auf dem Datenträger in sogenannten Dateiblöcken mit einer festen Länge (Sektoren) gespeichert werden. Füllt eine Datei nicht den gesamten Dateiblock aus entsteht ein ungenutzter Bereich. Dieser Bereich wird File Slack, genauer gesagt Sektor-Slack, genannt und wird vom Betriebssystem mit zufälligen Daten aufgefüllt. Unter Windows werden für das Auffüllen des Slacks zum Beispiel Inhalte aus dem Arbeitsspeicher verwendet. Dies wird dann als RAM-Slack bezeichnet. 
+
+\todo{Dateisysteme mit FileSlack, Drive-Slack, etc.}
+%http://www.florianwoerter.at/publications/fileslack.pdf
 
 Die File Slack Analyse ermöglicht dem Ermittler unter Umständen auf Inhalte zuzugreifen, welcher der Täter gelöscht hat.
+
+
 
 \subsection{Timeline-Analyse}
 Bei der Timeline-Analyse werden die letzten Aktivitäten, welche auf dem System durchgeführt wurden, in ein zeitlich logische Abfolge gebracht. Bei der Herstellung einer Verbindung zu anderen Beweisen ist eine allfällige Abweichung der Systemzeit von der Referenzzeit zu beachten. Die Timeline-Analyse ist häufig der erste Ansatzpunkt einer Ermittlung. Durch die Analyse kann festgestellt werden, was undder Täter auf dem System gemacht / verändert / installiert hat. Ausgehend von dem entstehenden Zeitstrahl können weitere, vertiefte Analysen durchgeführt werden. Ein wichtiger Baustein der Timeline-Analyse ist die Auswertung der MAC-Time der Dateien und Ordner. Die MAC-Time setzt sich aus folgenden Elementen zusammen:
@@ -436,8 +513,8 @@ Zeitpunkt der Veränderung bestimmter Metadaten der Datei
 
 Nicht jede Aktion löst auf der Datei selbst eine Veränderung der MAC-Time aus. Unter Linux bewirkt die Verschiebung einer Datei eine Veränderung der MAC-Time des Verzeichnises, aber nicht der Datei selbst. Die MAC-Time kann jedoch relativ einfach durch den Angreifer, beziehungsweise durch Anti-Forensik-Tools manipuliert oder unbrauchbar gemacht werden. Eine weitere Schwierigkeit besteht darin, dass die MAC-Time sich je nach Betriebssystem anders verhält.
 
-\subsubsection{Tools}
-\textbf{Sleuth Kit}
+
+\subsubsection{Sleuth Kit}
 \begin{enumerate}
 \item Dateinformationen sammeln
 \begin{lstlisting}
@@ -455,84 +532,21 @@ ils -f linux-ext2 -m /mnt/images/hda7.dd >>body.fls
 \begin{lstlisting}
 mactime -b body.fls
 \end{lstlisting}
-
 \end{enumerate}
+
 
 
 \subsection{Analyse von Auslagerungsdateien}
-Fast alle OS: Erweiterung physisch nutzbarer Speicherbereich, oder Auslagerung kurzfristig nicht benötiger Speicher
-Auslagerungs- oder Swap-Dateien, Datei oder virtuelles / physisches Dateisystem
-Win: Swap / Page-File: nicht gelöscht bei Shutdown, 
+Fast alle Betriebssysteme kennen das Prinzip der Auslagerungsdatei, bzw. Swap-Datei. Diese Auslagerungsdatei erweitert entweder den physisch nutzbaren Arbeitsspeicherbereich oder dient der Auslagerung von kurzfristig nicht benötigten Speicherinhalten. Dieser Swap-Bereich ist entweder eine Datei oder ein eigenes physisches oder virtuelles Dateisystem. Unter Windows wird das Page-File (früher Swap-File) beim Shutdown nicht gelöscht und kann somit bei einer Analyse interessante Informationen beinhalten. Wird ein System in den Ruhezustand, beziehungsweise Suspend-to-Disk-Modus versetzt, wird der gesamte Arbeitsspeicherinhalt auf die Festplatte gesichert. Dieser wird bei Reaktivierung wieder geladen, um den Zustand des Systemes wiederherzustellen. Unter Windows heisst diese Datei \textit{hyberfil.sys} und liegt im Wurzelverzeichnis des Systemlaufwerkes.
 
-Linux: Swap --> Behandlung wie Binärdateien, kann alles beinhalten
-Sonderfälle: Inhalt Hauptspeicher vor Eintritt in Ruheszustand / Suspend-To-Disk-Modus, nach Wake-Up wieder gleich, Hilfreich: RAM-Analyse
+\todo{Detail swap? Linux wie Binärdatei?}
 
 
-\subsection{Analyse von gelöschten Dateien}
-
-\subsubsection{Tools}
-\textbf{Sleuth Kit}\\
-\begin{enumerate}
-\item Identifizierung
-\begin{lstlisting}
-fls -rd <MountPoint>/<PathToImage.dd>
-\end{lstlisting}
-\item Dateien wiederherstellen
-\begin{lstlisting}
-istat <MountPoint>/<PathToImage.dd> <Inode>
-icat <MountPoint>/<PathToImage.dd> <Inode> > <OutputPath>
-\end{lstlisting}
-\end{enumerate}
-
-
-TASK, 
-SMART (Ext2, ext3) Suche in unalloziertem Bereich, Auffindung gelöschte Files
-
-\subsection{Analyse von versteckten Dateien}
-Klassische Festplatte:
-Section Gaps: Sektoren überall gleich --> am Rand Gaps
-Paritions Gaps: Mehrere Partitionen, Gaps --> spuren früherer Partitionen, Daten vestecken, auch in unpartitionierten Bereich
-
-Bad Blocks: Vom OS als unbrauchbar markiert, missbrauch möglich
-Hidden-Attribut: Möglichkeit auf OS Ebene Dateien zu verstecken
-
-
-Rootkits: Können gut Dateien, Verzeichnis, Prozesse, Netzwerkverbindungen verbergen --> trojanisierte Systemprogramme
-Kernel-Level-Rootkits: Prozesse, Verbindungen, Dateien verstecken + Hintertüren bereitstellen, Austausch von System-Calls, Aufspüren schwierig: Analyse von Strukturen, Beobachtungen, Vergleich Syscall-tAbelle, z.T. auch Syscall-Code direkt verändert
-
-Bei modernen: Reduktion durch Mapping-Technologien
-
-\subsubsection{Tools}
-\textbf{unrm und lazarus} \\
-Wiederherstellung unallozierter Bereiche
-\begin{lstlisting}
-unrm <PathToDisk> > <OutputPath>
-lazarus -h <OutputPath>
-\end{lstlisting}
-
-
-\subsection{Dateien oder Fragemente wiederherstellen}
-File Carving: Zusammensetzen von Dateifragementen, Extraktion wesentlicher Informationen, Wiederherstellung aus File-Slack oder unalloziertem Bereich, 
-Temp-Bereich: gelöschte Reste compilerlauf vom kompilieren von Codes, Wiedeherstellung nur am Duplikat, wenn Live: Auf sparatem System speichern
-
-Anti-Forensik: Mehrfaches überschreiben mit echten zufälligen Bitmustern oder Nullen
-
-\subsubsection{Tools}
-\textbf{foremost} \\
-\begin{lstlisting}
-foremost -v -c <PathToForemostConfig> <PathToImage.dd>
-\end{lstlisting}
-
-
-\textbf{Fatback}\\
-FAT-partitionen unter unix untersuchen
-\begin{lstlisting}
-fatback <PathToImage.dd>
-\end{lstlisting}
-
-Weitere: Scalpel, Foregone
 
 \subsection{Unbekannte Binärdateien analysieren}
+Werden auf dem System unbekannte Binärdateien gefunden, können diese unter Umständen Hinweis auf den Täter oder die Absichten des Täters enthalten. 
+
+\todo{Vervollständigen mit Bild CF: Seite 141}
 Fund Binärdateien (z.B. Rootkits, Tools) --> Analyse --> Hinweise / Absichten Täter, Vergleich Prüfsumme (Originaldatei?), Analyse auf Analysesystem --> Ausführung in isolierter Testumgebung
 
 Ablauf gemäss CF: Seite 141
@@ -552,39 +566,34 @@ Auffinden von nicht angepassten STandard Kits / Tools relativ einfach
 weitere Möglichkeit: Analyse dynamisch eingebundener Bibliotheken --> Grundfunktion nachvollziehen
 ldd
 
-\subsection{Suche nach Rootkits}
-Rootkits, trojanisierte Systemprogramme, ok für Standard-Rootkits
 
-\subsubsection{Tools}
-\textbf{chkrootkit}\\
+
+\subsection{Suche nach Rootkits}
+Die Suche nach Rootkits auf einem System kann sich unter Umständen als sehr schwierig und zeitintensiv herausstellen. Handelt es sich um ein Standard-Rootkit gibt es einige Tools, welche die Rootkits anhand von File- und Hash-Analysen aufspüren können. 
+
+
+\subsubsection{chkrootkit} \todo{Mehr Infos}
 \begin{lstlisting}
-chkrootkit
+> chkrootkit
 \end{lstlisting}
 
-\subsection{Systemprotokolle}
-Anzeichen vor Angriff, oder vom Angrif, wenn nicht gesäubert --> anhaltspunkte, nicht typsich für Post-Mortem, häufig im Betrieb --> Feststellung Angriff
 
-3 Formen: Normale Meldungen (Tagesbetrieb), ANzeichen Angriffe / kritische Meldungen, Unbekannte Meldungen
---> Fehlgeschalgende Anmeldeversuche, Erfolgreiche Anmeldeversiche im Vorfeld von laken Angriffen oder SU-vErsuchen
---Aktionen welche erweiterte Rechte erfoern, Shutdeon / Restor
 
-Details im Kapitel Detection
+\subsection{Systemprotokolle}ns
+Systemprotokolle bieten in der Regel gute Hinweise auf einen zukünftigen oder bereits erfolgten Angriff. Die Analyse der Systemprotokolle ist meistens nicht Teil der Post-Mortem-Analyse, da der Angriff erst durch die Systemprotokolle entdeckt wird. In den Systemprotokollen lassen sich die Meldungen grundsätzlich in drei Kategorien einteilen. Zum einen die normalen Meldungen aus dem Tagesbetrieb und zum anderen kritische und unbekannte Meldungen, welche einen Hinweis auf einen Angriff darstellen können. Weitere Informationen zu diesem Thema sind im Kapitel \ref{sec:IncidentDetection} \nameref{sec:IncidentDetection} aufgezeigt.
+
 
 
 \subsection{Untersuchung der Shell (Bash)}
-MAC-Time der Shell untersuchen, .bash\_profile und .bashrc --> Shell startup commands, evtl. referenziert file /etc/skel directory --> prüfen
+Die Untersuchung der Shell kann weitere wertvolle Informationen liefern. Zum einen kann die MAC-Time der Shell selbst untersucht werden. Zum anderen können die von der Shell verwendeten Dateien untersucht werden. Dazu gehören die Dateien \textit{.bash\_profile} und \textit{.bashrc}, welche die Befehle enthalten, welche bei einem Start der Shell ausgeführt werden. Die interessantere Datei ist die Datei \textit{.bash\_history}. Diese Datei enthält den Audit-Trail (Histroy) der eingegebenen Befehle. Angreifer verändern diese Datei oft so, dass diese einen Link auf die Datei \textit{/dev/null} darstellt. Alles was unter Linux nach \textit{/dev/null} geschrieben wird, ist unwiderruflich verloren. Allenfalls weitere Hinweise könnte die Datei \textit{.bash\_logout} liefern, welche die Befehle enthält, welche beim Verlassen der Shell ausgeführt werden.
 
-.bash\_history: Audit-Trail der Bash
-.bash\_logout: commands when exit shell, auch in ordner /Etc/skel evtl. globales script
-
-Oft link history file nach /Dev/null --> Schwarzes Loch
+Es kann sich auch lohnen das Verzeichnis \textit{/etc/skel} einer genaueren Analyse zu unterziehen, da die Standard-Dateien enthält, welche beim Anlegen eines neuen Benutzers kopiert werden.
+	
 
 \subsection{Untersuchung der Druckerjobs und der Druckerqueue}
-ÄLteres Unix: LPR, /var/log/lpr.log, /var/spool
+Die vom System aufgegebenen Druckerjobs können interessante Informationen enthalten. Auf älterne Unix-Systemen sind die entsprechenden Log-Dateien unter \textit{/vaR/log/lpr.log} zu finden. Auf neueren Systemen unter \textit{/var/log/cups}. Der Ort der Log-Datei kann allenfalls auch durch ein Überschreiben der Konfiguration im Verzeichnis \textit{/etc} geändert worden sein. Die Kopien der gedruckten Dateien können im Verzeichnis \textit{/var/spool}, beziehungsweise \textit{/var/spool/cups} gefunden werden. Die Analyse der Druckjobs und der Druckerqueue kann einen guten Ansatzpunkt in der Timeline-Analyse darstellen. Die Log-Einträge können zum Beispiel Hinweise auf eine gelöschte Datei beinhalten und bieten somit einen ersten Anhaltspunkt für die Suche der Datei im Speicherbereich.
 
-Neuer: CUPS: /var/log/cups, alternativ: Config Files in /etc/ --> anderer Speicherort, /var/spool/cups
 
-Auffindung gedruckter Dokumente --> Was / Wer, Timeline-Analyse, Beweis für gelöschtes File --> ansatzpunkt bei Suche nach gelöschtem File in Speicher
 
 \subsection{Untersuchung der Dateien / Dateiendungen}
 \todo{HECF: S. 172}
@@ -613,6 +622,7 @@ ls -Rlrta /lib
 \end{lstlisting}
 
 \subsection{Weitere Analyse-Möglichkeiten}
+Nachfolgend werden weitere Analysemöglichkeiten aufgezeigt, welche in diesem Kapitel nicht näher beschrieben werden.
 \begin{itemize}
 \item Analyse der Master File Table
 \item Analyse von NTFS-Streams
@@ -624,13 +634,34 @@ ls -Rlrta /lib
 \item Analyse von Netzwerkmitschnitten
 \end{itemize}
 
+
 %---------------------------------------------------------------------------------------------------------------
 \section{Reporting}
+Gewisse Tools und Tool-Suiten bieten eine integrierte Möglichkeit um Berichte und Dokumentationen zu generieren. 
 
 
+%---------------------------------------------------------------------------------------------------------------
+\section{Hinweise zu Tooleinsatz}
+-Frage des Tools oft anlass für Gundsatzdiskussion Ermittlungsmethoden
+Verständnis unterschiedlicher Ansätze der diversen Forensik-Lösungen, 
+
+nicht-kommerzielle Werkzeuge: notwendige Transparenz für Bewertung von Beweissicherungsverfahren
+Open Source vs Kommmerziell: klassische ideologische Diskussionen, für juristische Verwendunung beides OK, wenn etabliert
+
+CF erfordert oft Einsatz von Werkzeugen für zuverlässige Sammlung / Asuwertung, Schwierigkeiten beginnen schon bei Sammlung Scripte von Kommandozeilenwerkzeuge vs. GUI basierte Anwendungen
+
+Oft je nach Situation andere Tools notwenidjg, z.bB. Windows Analyse -> Windows System, Linux ext-Dateiystem --> Linux
+
+Üben und auseinandersetzen mit Tools
+
+Absicherung Workstation des Ermittlers, lokal gespeicherte Ergebnisse, Notizen, etc. --> verschlüsseln
+
+Hinweis zu verwendung statisch vorkompilierte Systembefehle
+
+http://www.computer-forensik.org/tools/
 
 
-%-------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %http://forensicswiki.org/wiki/Tools#Forensics_Live_CDs
 
 \section{Tool-Sammmlungen}
@@ -693,64 +724,7 @@ Grafische Oberfläche für Sleuth Kit, neuste Version nur Windows
 Tools: CF: S. 175
 
 
-\section{Hinweise zu Tooleinsatz}
--Frage des Tools oft anlass für Gundsatzdiskussion Ermittlungsmethoden
-Verständnis unterschiedlicher Ansätze der diversen Forensik-Lösungen, 
 
-nicht-kommerzielle Werkzeuge: notwendige Transparenz für Bewertung von Beweissicherungsverfahren
-Open Source vs Kommmerziell: klassische ideologische Diskussionen, für juristische Verwendunung beides OK, wenn etabliert
-
-CF erfordert oft Einsatz von Werkzeugen für zuverlässige Sammlung / Asuwertung, Schwierigkeiten beginnen schon bei Sammlung Scripte von Kommandozeilenwerkzeuge vs. GUI basierte Anwendungen
-
-Oft je nach Situation andere Tools notwenidjg, z.bB. Windows Analyse -> Windows System, Linux ext-Dateiystem --> Linux
-
-Üben und auseinandersetzen mit Tools
-
-Absicherung Workstation des Ermittlers, lokal gespeicherte Ergebnisse, Notizen, etc. --> verschlüsseln
-
-Hinweis zu verwendung statisch vorkompilierte Systembefehle
-
-http://www.computer-forensik.org/tools/
 \section{Kommerzielle Tools}
 -SMART
 -Helix (ein Teil Freeware)
-
-
-\section{Tool-Matrix}
-\begin{table}[H]
-\centering
-\caption{Verfügbarkeit der Tools auf verschiedenen Betriebssystemen}
-\begin{tabular}{r | c | c | c | c}
-Name 					&	\THrot{Windows}		&	\THrot{Linux}		&	\THrot{Mac OSX}		& 	\THrot{Weitere}		\\
-\midrule
-Test 					&	x			&				&	x			&			\\	
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Technik-Matrix}
-\begin{table}[H]
-\centering
-\caption{Einsatz der Techniken auf verschiedenen Betriebssystemen}
-\begin{tabular}{r | c | c | c | c}
-Name 					&	\THrot{Windows}		&	\THrot{Linux}		&	\THrot{Mac OSX}		& 	\THrot{Weitere}		\\
-\midrule
-Test 					&	x			&				&	x			&			\\	
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Tool-Technik-Matrix}
-Nur Tool-Suiten
-
-\begin{table}[H]
-\centering
-\caption{Tools: Unterstützte Techniken}
-\begin{tabular}{r | c | c | c | c}
-Name 					&	\THrot{Tool1}		&	\THrot{Tool2}		&	\THrot{Tool3}		& 	\THrot{Tool4}		\\
-\midrule
-Test 					&	x			&				&	x			&			\\	
-\bottomrule
-\end{tabular}
-\end{table}
-

@@ -10,11 +10,14 @@
 | Setup IOTIVITY-Stack  | 08.05.2015 | 3         |
 | Raspberry  aufsetzen  | 22.05.2015 | 2         |
 | Rohdaten              | 25.05.2015 | 2         |
+| Struktur              | 29.05.2015 | 1.5       |
+| Inhalt 1, 2           | 30.05.2015 | 1.5       |
+| Einrichten Dev        | 30.05.2015 | 1.5       |
 
 
 ##Calculation-Log
-  - 1, 2.5, 1, 3,2, 2
+  - 1, 2.5, 1, 3,2, 2, 1.5, 1.5, 1.5
 
 
 ##Total
-Total (h):  11.5
+Total (h):  16

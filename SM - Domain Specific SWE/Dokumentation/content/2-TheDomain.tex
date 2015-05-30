@@ -1,9 +1,122 @@
 \chapter{Die Domäne "`Internet of Things"'}
+In diesem Kapitel wird die Domäne "`Internet of Things"' näher beschrieben und die Eigen- und Besonderheiten im Bereich Software Engineering aufgezeigt.
 
-\section{Einführung}
-Beschreibung der Domäne
+\section{Ziel}
+Das primäre Ziel des \gls{acr:IOT} ist die Vernetzung von Dingen mit der realen Welt und mit anderen Dingen. Die Dinge sollen intelligent miteinander kommunizieren können um so einen Mehrwert zu schaffen. 
+
+\section{Anwendungsbereich}
+Das \gls{acr:IOT} könnte grundsätzlich überall eingesetzt werden. Sei es in der Landwirtschaft, in der Pflege, in der Medizin oder in der Industrie. Das \gls{acr:IOT} ist mehr ein Konzept, beziehungsweise eine Architektur, als ein konkretes Produkt, Dadurch lässt es sich auf die jeweiligen Bedürfnisse der verschiedenen Unternehmensbereiche individuell anpassen. Neben der Anwendung im geschäftlichen Umfeld, findet das \gls{acr:IOT} auch im privaten Umfeld Anwendung. Das primäre Ziel ist dabei die Heimautomation, das heisst die intelligente Vernetzung verschiedener Geräte und Gegenstände im Haushalt. Nachfolgend einige Beispiele für konkrete Anwendungen des \gls{acr:IOT}
+
+\begin{itemize}
+\item Smart City
+\item ÖL-Pipeline
+\item Pflege
+\item Medizin
+\item Energie
+\item Verteidigung
+\item Kommunikation
+\item Industrie
+\end{itemize}
+
+Auch im Bereich Big Data stellt \gls{acr:IOT} ein weiterer Meilenstein dar. Durch die Vernetzung von Millionen von Geräten können riesige Datenmengen gesammelt, analysiert und ausgewertet werden.
+
+
+
+\section{Architektur \& Aufbau}
+
+
+\subsection{Das "`Thing"'}
+Die Definition eines "`Thing"', beziehungsweise eines "`Dinges"', ist nicht ganz einfach. Grundsätzlich handelt es sich um ein "`Embedded System"' welches Informationen über ein Netzwerk versendet und empfängt. Ein "`Embedded System"' basiert auf einem Mikrocontroller, verfügt relativ gesehen nur über einen geringe Ressourcen (Prozessor und Arbeitsspeicher) und ist in der Regel auf Energieeffizienz ausgelegt. Das "`Embedded System"' verfügt über einen Kommunikationsstack mit 1 bis n Kommunikationsprotokollen welcher entweder direkt oder über ein Gateway mit einem Netzwerk kommuniziert. Die gesammelten Daten werden entweder auf dem Gerät oder auf einem Gateway gefiltert. 
+
+Solche "`Embedded Systems"' sind bereits heute überall gegenwärtig. Sei es in Autos, Wearables, Kühlschränken, Kaffeemschinen oder Smartphones.
+
+
+\subsection{Gateway}
+Filtern, managedn Daten, Verbindungshub
+
+Gemäss Intel WhitePaper: 85\% der Geräte nicht für Internet-Kommunikation ausgelegt (Requirements Stack)
+Intermediär Netzwerk und Legacy Things
+
+
+Netzwerk und Cloud: Datanalyse der Rohdaten
+Lokales Netzwerk
+Back-End Services (Enterprise Data System, PC, mobile Device)
+
+
+
+\section{Unterschied zum Konzept des klassischen Internet}
+Im Gegensatz zum 
+Paradigmenwechsel: Früher Server stellen Daten zur Verfügung.
+Das Konzept verändert sich auch dahingehend, dass nicht mehr nur Server miteinander kommunizieren, sondern auch die Endgeräte.
+
+\section{Effekte \& Auswirkungen}
+Durch \gls{acr:IOT} kann Mehrwert auf verschiedenen Ebenen geschaffen werden. Zum Beispiel in Industriebetrieben können Produkte schneller und besser entwickelt und produziert werden, was sich am Ende auf die Kosten auswirken wird.
+
+-Besseres Shopping vergnügen
+-Optimierung Energienutzung / -konsum
+
+\section{Subdomänen}
+\subsection{Wireless Sensor Network}
+\gls{acr:WSN} sind Netzwerke von verteilten Sensoren, welche gewisse physikalische Zustände oder Zustände in der Umgebung und Umwelt überwachen. Ein \gls{acr:WSN}-Node ist ein billig produzierbares Gerät, welches nur sehr wenig Strom benötigt. Idealerweise wird dieses über eine Batterie oder eine autonome Energiequelle (zum Beispiel ein Solar-Panel) betrieben. Ein \gls{acr:WSN}-Node besitzt nur eine einzelne Funktion.
+
+Ein \gls{acr:WSN}-Edge-Nodes verbindet mehrere \gls{acr:WSN} mit einem Netzwerk, Gateway
+
+\todo{image: http://micrium.com/iot/devices/}	
+Vorwiegend industrie
+
+WSN-Technologien: Wi-Fi (hohe Verbreitung, hoher Stromverbrauch), Low-Power-Solutions (Low-Power and efficient radios, energy harvesting, mesh networking, long term operation, new protocols and data formats), IEEE 802.15.4: Radio Standard, base low power system, power reduction, 6LoWPAN: As small messages as possible, IPv6 over Low power Wireless Personal Area Networks, Kapselung und Kompressionsmechnismen für kürzere Übermittlungszeiten
+
+\subsection{Kommerzielle und Heimnutzung}
+Bluetooth, Ethernet (wired or not wired), nur lokale services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 --
+Anforderungen allgemein:
+-Geschwindigkeit, Skalierung, Fähigkeiten
+-Datensicherheit und Datenschutz, Management von Geräten, Data analytics
+-Grosses Ökosystem: Regulatorische / Rechtliche Schwierigkeiten
+-Unterschiedlich je Subdomäne: http://micrium.com/iot/iot-rtos/
 \section{Anforderungen an Software}
 Stark von Einsatzgebiet abhängig (Kühlschrank vs. Low Energy ohne Stromversorgung)
 
