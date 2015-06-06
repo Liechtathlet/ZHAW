@@ -27,7 +27,7 @@
 |:-----------:|:------------:|:-------------:|:-------------:|:--------:|
 |      0      |  Einleitung  |     90  %     |               |          |
 |      1      | Ausgangslage |     90 %      |               |          |
-|      2      |  Die Domäne  |   In Arbeit   |               |          |
+|      2      |  Die Domäne  |      OK       |     Offen     |          |
 |      3      |  SWE in IOT  |     Offen     |               |          |
 |      4      |  Fallstudie  |     Offen     |               |          |
 

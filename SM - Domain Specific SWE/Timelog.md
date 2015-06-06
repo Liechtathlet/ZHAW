@@ -13,11 +13,13 @@
 | Struktur              | 29.05.2015 | 1.5       |
 | Inhalt 1, 2           | 30.05.2015 | 1.5       |
 | Einrichten Dev        | 30.05.2015 | 1.5       |
+| Iotivity: Server      | 04.06.2015 | 1         |
+| Iotivity: Base        | 05.06.2015 | 2         |
 
 
 ##Calculation-Log
-  - 1, 2.5, 1, 3,2, 2, 1.5, 1.5, 1.5
+  - 1, 2.5, 1, 3,2, 2, 1.5, 1.5, 1.5, 1, 2
 
 
 ##Total
-Total (h):  16
+Total (h):  19

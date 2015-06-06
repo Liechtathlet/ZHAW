@@ -2,18 +2,18 @@
 In diesem Kapitel wird die Domäne "`Internet of Things"' näher beschrieben und die Eigen- und Besonderheiten im Bereich Software Engineering aufgezeigt.
 
 \section{Ziel}
-Das primäre Ziel des \gls{acr:IOT} ist die Vernetzung von Dingen mit der realen Welt und mit anderen Dingen. Die Dinge sollen intelligent miteinander kommunizieren können um so einen Mehrwert zu schaffen. 
+Das primäre Ziel des \gls{acr:IOT} ist die Vernetzung von Dingen mit der realen Welt und mit anderen Dingen. Die Dinge sollen intelligent und autonom mit Party Geräten und Services kommunizieren können um so einen Mehrwert zu schaffen und die eigenen Fähigkeiten zu erweitern.. 
 
 \section{Anwendungsbereich}
-Das \gls{acr:IOT} könnte grundsätzlich überall eingesetzt werden. Sei es in der Landwirtschaft, in der Pflege, in der Medizin oder in der Industrie. Das \gls{acr:IOT} ist mehr ein Konzept, beziehungsweise eine Architektur, als ein konkretes Produkt, Dadurch lässt es sich auf die jeweiligen Bedürfnisse der verschiedenen Unternehmensbereiche individuell anpassen. Neben der Anwendung im geschäftlichen Umfeld, findet das \gls{acr:IOT} auch im privaten Umfeld Anwendung. Das primäre Ziel ist dabei die Heimautomation, das heisst die intelligente Vernetzung verschiedener Geräte und Gegenstände im Haushalt. Nachfolgend einige Beispiele für konkrete Anwendungen des \gls{acr:IOT}
+Das \gls{acr:IOT} könnte grundsätzlich überall eingesetzt werden. Sei es in der Landwirtschaft, in der Pflege, in der Medizin oder in der Industrie. Das \gls{acr:IOT} ist mehr ein Konzept, beziehungsweise eine Architektur, als ein konkretes Produkt, Dadurch lässt es sich auf die jeweiligen Bedürfnisse der verschiedenen Unternehmensbereiche individuell anpassen. Neben der Anwendung im geschäftlichen Umfeld, findet das \gls{acr:IOT} auch im privaten Umfeld Anwendung. Das primäre Ziel ist dabei die Heimautomation, das heisst die intelligente Vernetzung verschiedener Geräte und Gegenstände im Haushalt. Nachfolgend einige Beispiele für konkrete Anwendungen eines \gls{acr:IOT}
 
 \begin{itemize}
-\item Smart City
-\item ÖL-Pipeline
-\item Pflege
-\item Medizin
-\item Energie
-\item Verteidigung
+\item Smart City\\
+Vernetzung wichtiger Infrastruktur
+\item Überwachung einer ÖL-Pipeline
+\item Medizin und Altenpflege
+\item Optimierung Energienutzung und Energieerzeugung
+\item Verteidigung und Militär
 \item Kommunikation
 \item Industrie
 \end{itemize}
@@ -31,170 +31,46 @@ Die Definition eines "`Thing"', beziehungsweise eines "`Dinges"', ist nicht ganz
 Solche "`Embedded Systems"' sind bereits heute überall gegenwärtig. Sei es in Autos, Wearables, Kühlschränken, Kaffeemschinen oder Smartphones.
 
 
-\subsection{Gateway}
-Filtern, managedn Daten, Verbindungshub
-
-Gemäss Intel WhitePaper: 85\% der Geräte nicht für Internet-Kommunikation ausgelegt (Requirements Stack)
-Intermediär Netzwerk und Legacy Things
+\subsection{Gateway / Bridge}
+Die Aufgabe eines Gateways, ab und zu auch als Bridge bezeichnet, ist es, \gls{acr:IOT} Geräte mit einem Netzwerk zu verbinden. Oft sind \gls{acr:IOT}-Geräte nicht in der Lage sich direkt mit einem Netzwerk oder dem Internet zu verbinden. 85 \% aller \gls{acr:IOT}-Endgeräte sind heute nicht in der Lage direkt mit dem Internet zu kommunizieren \cite[S. 2]{E:Intel:WhitePaper:DevelopingSolutionsIoT}. Gemäss In solchen Situationen wird eine Gateway eingesetzt, welches diese Lücke schliesst. Eine weitere Aufgabe eines Gateways kann es sein, die von den verbundenen Geräten erhaltenen Daten zu filtern und anschliessend weiterzuleiten. Die Analyse der Daten erfolgt dann auf einem Server im Netzwerk oder in der Cloud. 
 
 
-Netzwerk und Cloud: Datanalyse der Rohdaten
-Lokales Netzwerk
-Back-End Services (Enterprise Data System, PC, mobile Device)
-
+\subsection{Back-End Systeme}
+Die Backe-End Systeme stehen oft in einem Netzwerk oder in der Public-Cloud, wo diese entsprechend den Bedürfnissen skaliert werden können. Zum Einsatz kommen Systeme zur Analyse (Stichtwort Big Data) und Auswertung der gesammelten Informationen. Je nach Anwendungsbereich können die gesammelten und ausgewerteten Daten über einen Computer oder ein mobiles Gerät abgerufen werden. Handelt es sich um ein Automatisierungssystem ist zusätzlich noch eine Steuer-Komponente integriert, welche auf Basis von Regeln oder Benutzereingaben den Geräten Befehle übermittelt.
 
 
 \section{Unterschied zum Konzept des klassischen Internet}
-Im Gegensatz zum 
-Paradigmenwechsel: Früher Server stellen Daten zur Verfügung.
-Das Konzept verändert sich auch dahingehend, dass nicht mehr nur Server miteinander kommunizieren, sondern auch die Endgeräte.
+In der klassischen Auslegung des Internets stellen zentrale Server die Daten zur Verfügung, welche dann von Anwendern oder Bezügern abgerufen werden können. Die Datenhoheit liegt dabei bei diesen zentralen Servern. Kommuniziert wurde entweder von Server zu Server oder von Anwender / Bezüger zum Server. Es war immer ein Server als intermediär notwendig. Das \gls{acr:IOT} bringt nun einen Paradigmenwechsel mit sich. Die Geräte in einem \gls{acr:IOT} sind oder werden in der Lage sein autonom miteinander zu kommunizieren und zu interagieren. 
 
 \section{Effekte \& Auswirkungen}
-Durch \gls{acr:IOT} kann Mehrwert auf verschiedenen Ebenen geschaffen werden. Zum Beispiel in Industriebetrieben können Produkte schneller und besser entwickelt und produziert werden, was sich am Ende auf die Kosten auswirken wird.
 
--Besseres Shopping vergnügen
--Optimierung Energienutzung / -konsum
+Durch den Einsatz eines \gls{acr:IOT} kann Mehrwert in verschiedensten Bereichen und Ebenen geschaffen werden. Zum Beispiel in Industriebetrieben können Produkte schneller und besser entwickelt und produziert werden, was sich am Ende auf die Kosten auswirken wird. Es werden sich Auswirkungen in allen Bereichen des Lebens bemerkbar machen. Sei es im Privat- oder im Geschäftsumfeld.
+
 
 \section{Subdomänen}
-\subsection{Wireless Sensor Network}
-\gls{acr:WSN} sind Netzwerke von verteilten Sensoren, welche gewisse physikalische Zustände oder Zustände in der Umgebung und Umwelt überwachen. Ein \gls{acr:WSN}-Node ist ein billig produzierbares Gerät, welches nur sehr wenig Strom benötigt. Idealerweise wird dieses über eine Batterie oder eine autonome Energiequelle (zum Beispiel ein Solar-Panel) betrieben. Ein \gls{acr:WSN}-Node besitzt nur eine einzelne Funktion.
+Das \gls{acr:IOT} ist eine riesige Domäne mit zig verschiedenen Anwendungsmöglichkeiten. Nachfolgend werden zwei Ausprägungen von solchen Subdomänen kurz beschrieben.
 
-Ein \gls{acr:WSN}-Edge-Nodes verbindet mehrere \gls{acr:WSN} mit einem Netzwerk, Gateway
 
-\todo{image: http://micrium.com/iot/devices/}	
-Vorwiegend industrie
+\subsection{Wireless Sensor Network}\todo{image: http://micrium.com/iot/devices/}	
+\gls{acr:WSN} sind Netzwerke von verteilten Sensoren, welche gewisse physikalische Zustände oder Zustände in ihrer Umgebung und Umwelt überwachen. Ein \gls{acr:WSN}-Node ist ein billig produzierbares Gerät, welches nur sehr wenig Strom benötigt. Idealerweise wird dieses über eine Batterie oder eine autonome Energiequelle (zum Beispiel ein Solar-Panel) betrieben. Ein \gls{acr:WSN}-Node besitzt nur eine einzelne Funktion und ist in der Regel mit einem \gls{acr:WSN}-Edge-Node verbunden.
 
-WSN-Technologien: Wi-Fi (hohe Verbreitung, hoher Stromverbrauch), Low-Power-Solutions (Low-Power and efficient radios, energy harvesting, mesh networking, long term operation, new protocols and data formats), IEEE 802.15.4: Radio Standard, base low power system, power reduction, 6LoWPAN: As small messages as possible, IPv6 over Low power Wireless Personal Area Networks, Kapselung und Kompressionsmechnismen für kürzere Übermittlungszeiten
+Ein \gls{acr:WSN}-Edge-Nodes verbindet mehrere \gls{acr:WSN} mit einem Netzwerk oder dem Internet. Dieser Edge-Node nimmt die Funktion eines Gateways wahr.
 
-\subsection{Kommerzielle und Heimnutzung}
-Bluetooth, Ethernet (wired or not wired), nur lokale services
+Solche Sensor-Netwerke können vielseitig eingesetzt werden. Verwendung finden diese zum Beispiel in der Industrie oder in Smart Cities.
 
+Als Kommunikationstechnologie kommt entweder Wi-Fi oder eine Low-Power-Lösung zum Einsatz. Der Vorteil von Wi-Fi besteht im hohen Verbreitungsgrad. Jedoch ist der Energieverbrauch für Wi-Fi sehr hoch, was für die \gls{acr:WSN}-Nodes nicht unbedingt ideal ist. Es gibt inzwischen jedoch Low-Power-Lösungen welche für den Einsatz auf solchen Geräten optimiert sind. Sie sind Energieeffizient, sind für lange Laufzeiten ausgelegt und sind zum Teil schon in der Lage ein Mesh-Network zu bilden. In einem Mesh-Network müssen nicht alle Geräte eine direkte Verbindung mit dem Gateway aufweisen. Es ist ausreichend, wenn es in der Nähe eines Nodes einen anderen Node gibt, der entweder direkt oder auch über einen anderen Node mit dem Gateway verbunden ist.
 
+Der IEE 802.15.4 Standard wurde zum Beispiel speziell auf den Einsatz in Low-Power-Systemen zugeschnitten. Ein weiterer Standard ist der 6LoWPAN (IPv6 over Low Power Wireless Personal Area Network) welcher auf Kapselung und Kompressionsmechanismen für kürzere Übermittlungszeiten basiert.
 
 
+\subsection{Heimautomation} \todo{image Heimautomation}
+Bei der Heimautomation steht die Vernetzung und intelligente Kommunikation der Endgeräte untereinander im Vordergrund. Dabei kommt ein bunter Mix an unterschiedlicher Geräte und Technologien zum Einsatz, wodurch eine grössere Herausforderung für die direkte Kommunikation entsteht. Mit dem Einsatz eines Homeautomation- oder Smart-Gateways können diese Herausforderungen reduziert werden. Diese Gateways sind in der Lage unterschiedlichste Geräte über unterschiedliche Kommunikationskanäle und Protokolle zu verbinden.
 
 
 
+\section{Anforderungen an das Produkt und die Software}
+Aufgrund der Besonderheiten der Domäne \gls{acr:IOT} ergeben sich auch einige spezifische Anforderungen an das Produkt und die verwendete Software. Das Gerät und die Software sollten für den sie bestimmten Zweck über ausreichend leistungsfähige Ressourcen verfügen und entsprechend skaliert werden können.  Zugleich muss mit den Ressourcen so schonend, beziehungsweise sparsam, wie möglich umgegangen werden, um eine möglichst lange Laufzeit zu erreichen. \gls{acr:IOT} Geräte verfügen meistens über eine mobile Energiequelle, wie zum Beispiel eine Batterie, einen Akku oder eine erneuerbare Energiequelle. Daneben spielt auch die Sicherheit und der Datenschutz eine grosse Rolle, da die Geräte meistens nicht permanent überwacht werden oder werden können. Hinzu kommen auch regulatorische und rechtliche Aspekte, Herausforderungen und Anforderungen, welche es zu berücksichtigen gibt.
 
+Aufgrund des grossen Anwendungsgebietes ist auch das Spektrum an Anforderungen entsprechend gross. Bei einem Kühlschrank, welcher Teil eines \gls{acr:IOT}'s oder Heimautomationsnetzwerkes ist, steht die Energieeffizient oder Grösse des Gerätes nicht zwingend eine grosse Rolle. Grund dafür ist, dass der Kühlschrank im Vergleich sehr viel Platz aufweist und an eine permanente Stromquelle angeschlossen ist.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---
-Anforderungen allgemein:
--Geschwindigkeit, Skalierung, Fähigkeiten
--Datensicherheit und Datenschutz, Management von Geräten, Data analytics
--Grosses Ökosystem: Regulatorische / Rechtliche Schwierigkeiten
--Unterschiedlich je Subdomäne: http://micrium.com/iot/iot-rtos/
-\section{Anforderungen an Software}
-Stark von Einsatzgebiet abhängig (Kühlschrank vs. Low Energy ohne Stromversorgung)
-
-
-\section{Anforderungen an die Softwarearchitektur}
-
-\section{Anforderungen an die Programmiersprache}
-
-----
-
-\section{Anforderungen / Unterschiede zur "`Standard-Domäne"'}
-In diesem Kapitel werden für die einzelnen Abschnitte des Software Engineering Prozesses die Anforderungen, beziehungsweise die Unterschiede, zum Software Engeineering Prozess in der "`Standard-Domäne"' aufgezeigt. Mit "`Standard-Domäne"' wird in dieser Arbeit Software Engineering im Bereich von Enterprise-Anwendungen bezeichnet.
-
-http://ercim-news.ercim.eu/en98/special/internet-of-things-a-challenge-for-software-engineering
-http://link.springer.com/chapter/10.1007%2F978-3-642-31479-7_47#page-1
-
-Das der Begriff "`Internet of Things"' eigentlich nur ein Oberbegriff ist....
-deckt dieser Begriff auch ein sehr groses Spektrum an verschiedensten Anwendungsmöglichkeiten ab.
-
-\subsection{Software Requirements}
-eindeutig, Komplexität schwierig, nachhaltig (schwieriger Update)
-
-non-consumer-market: regulatorisches Schwierigkeiten, Remote Tracking, Kabellose Implantate, --> Requirements-Phase: Verfolgbarkeit und Prüfbarkeit, Geschickte Verisonierung, Reviews --> Sicherstellung Compliance und Erfolg
-Wetter, Physische Einflüsse, Durch das Gerät erzeugte Hitze, Lange Lebensdauer
-
-SW Muss: Skalierbar für breite Palette an verschiedenen Gerätekategorien
-Modular sein --> nur Auswahl (RAM-Footprint)
-Verbunden (Daten rein/raus)
-Verlässlich:Zertifizierung für kritische Applikationen
-\subsection{Software Design}
-Schlank, Energieeffizient, einfach wartbar?
-
-Berücksichtigung: Protokolle, Standards, Last-Anforderungen
-
-Machine To Machine Connectivity, Wireless, API-Evolution in MInd
-\subsection{Software Construction}
-Je nach Anwendungsbereich: Hardwarenahe, Optimierung
-Für die Entwicklung von Anwendungen für \gls{acr:IOT}-Geräte können
-https://www.rti.com/company/careers/software-engineer.html grundsätzlich
-
-
-Firmware für Spezifische Hardware, Adressierung Netzwerk- und Verbindungsprobleme, Security
-
-
-\subsection{Software Testing}
-Wenn bei Consumer: Update evtl. schwierig, Fehlfunktion schwerwiegend,
-
-Test: Nachbildung physische Umgebung, komplexe Szenarien, Netzwerk-Anforderungen, 
-
-\subsection{Software Maintenance}
-Schwierig,...
-Immer connected --> regular updates, wenn nicht regelmässig upgedatet --> Verlust kritischer Funktionalität, Continuous Delivery
-
-Nicht überall möglich, Low-Bandwith, Hardware-Near Devices
-
-
-\subsection{Software Configuration Management}
-
-
-\subsection{Software Engineering Management}
-
-
-\subsection{Software Engineering Process}
-Defect Tracking, small scale projects, fast product turnaroudn, 
-
-\subsection{Software Engineering Tools and Methods}
-
-
-\subsection{Software Quality}
-Höhere Qualität notwendig
-
-
-
-
-Layer: Transport-Layer: TCP zum Teil overkill für IOT-Device --> UDP
-UDP: beser geeignet für relatime-data, TCPS Acknowledgment and retransmission unnützer overhad für solche Anwendungen (Stück sprache nicht rechtzeitig übermittelt -> Retransmission sinnlos), 
-
-
-Klassische Ansätze nicht alle geeignet für IoT, 
-
-Service-based Application: composition and orchestration of Services
+Im Kapitel \ref{chap:sweInIot} \nameref{chap:sweInIot} werden die Unterschiede und speziellen Anforderungen an das Software Engineering in der Domäne "`Internet of Things"' im Vergleich zur "`Standard Domäne"' aufgezeigt.

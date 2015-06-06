@@ -508,3 +508,148 @@ Phase 2, Alles verschlüsselt, aber noch nicht authentifiziert
 
 ###CREATE_CHILD_SA
 Nochmals Diffie-Hellmann, Sitzungsschlüssel, Pro Child: Nachricht / Schritt 3
+
+
+##Recap IPSec
+IKEv1 / IKEv2: Authentifizierung, Schlüsselaustausch, implizit (über Entschlüsselung), explizit (via Signatur), Diffie-Hellmann, Main- / Aggressive / Quick-Mode, Aggressive: Zusammenfassung Schritte, Shared-Secret, Pre-Shared-Key + Aggressive: Knackbar (Wörterbuch, Known-Cypher, Orakel, Bruteforce), Agressive-Mode (Bei dyn IP), Adressierung via SIP, ISAKMP-Header: UDP Port 500, Verhinderung Replay: Via Cookies, Header + Payload als Verkettete Liste, Quickmode IKEv1 - Create Child SA in IKEv2, IKEv2: INIT (SA festlegen, Schlüsselaustausch), IKE_AUTH, NAT-Traversal: AHA geht nicht, Modes: Transport / Tunnel (funktionieren, bei Transport: IP nachreichen), NAT: Kapselung IP / Port in UDP, IKEv2 Traffic-Selektoren: ähnlich Firewall / Port-Filter-Firewall (Beidseitig), IKEv1: Security Policy (nur beim Absender)
+
+#Kerberos
+Basis: Symmetrische Verschlüsselungsverfahren
+
+**Key Distribution Center (KDC):** Integriert AD, Authentication Server (AS), Ticket Granting Server (TGS), gemeinsame Datenbank  
+
+**Ablauf: **
+  0.  Voraussetzung: Pre-Shared-Secret oder Public-Key bei Schritt 1.
+  1.  Client-Request auf KDC-AS
+      - ID-Client, ID-TGS
+  2.  Response von KDC-AS
+      - $A_{TGS,C}|T_{TGS}$
+      - $A_{TGS,C} = eK_C_KDC(K_{C,TGS})$ (Kann vom Client geöffnet werden)
+      - $T_{TGS} = e_{TGS_KDC}(K_{C,T||TimesGS}||I||ID_C)
+  3.  Würfeln
+  4.  Client-Request an KDC-TGS
+      - $ID_{AP}$ (ID Applikationsserver, Principalname, Realm)
+      - $B1_{C,TGS} = eK_{C,TGS}(ID_C||ZT) (in 2. Erhaltener Schlüssel)$
+      - $T_{TGS} = eK_{TGS,KDC}(K_{C,TGS}||I||ID_C||Times)$ (aus Schritt 2, Weiterschicken, Wenn auspacken möglich -> Authentifiziert)
+  5.  Response von KDC-TGS
+      - $B2_{C,TGS} = eK_{C,TGS}(K_C,AP)$ (Schlüssel aus Schritt 2, 4)
+      - $T_{AP} = eK_{TGS,AP}(K_{C,AP}||I||ID||Times)$
+  6.  Client-Request auf Application Server
+      - $C = eK_{C,AP}(ID_C||ZT||Subkey||#Seq)$
+      - $T_{AP} = eK_{TGS,AP}(K_{C,AP}||I||ID||Times)$
+  7.  Response vom Application Server
+      - $AP_REP = eK_{C,AP}(ZT,Subkey,#Seq)
+
+Pre-Shared-Secret zwischen TGS und Application-Server
+
+**Realm:** "Domäne", Domänenüberlagernd / -übergreifend, mögliche Hierarchische Verschachtelung, Name: immer mit Grossbuchstaben  
+**Kerberos Principals:** ID + Geheimnis, Verwaltung via kadmin, innerhalb REALM  
+**User Principals:** ID aus user@REALM, Geheimnis: Passwort, Instance / rolle: user/instance@REALM (Zuweisung von Rollen)  
+**Service Principals:** ID: Serviceangabe/FQDN des Servers, service/dns.domain.name@REALM (service: http, ftp, pop), Geheimnis: Zufallswert, auf Server hinterlegt (keytab)  
+**KDC: ** AS, TGS, Besondere Sicherheitsmassnahmen, DB mit User- / Serverprincipals, Redundanz via Weitere KDC-Server (Slaves), Abgleich mit Master (Vorzugsweise via IPSec)  
+**Voraussetzungen für Kerberos:** Zeitsynchronisation (max. 5 Min Differenz), Korrekte Einträge im DNS, Spezielle Absicherung, Mind. 2 KDC (Master, Slave), nur Kerberos V, Backup für REALM-DB  
+
+**Schwächen:** Passwort erraten, Synchronisation, Authentisierung nur einseitig
+
+
+#Prüfungsbesprechung
+##Aufgabe 1
+  a.  Stufe D
+  b.  CIA
+  c.  Signatur erstellen, Verschlüsseln, Session-Key transferieren
+  d.  Digital Signature, Key-Encipherment, Content-Commitment
+  e.  id-kp-emailProtection
+
+##Aufgabe 2
+  a.  Unterschied Anwendung Privater Schlüssel explizit und implizite Authentifizierung  
+      Explizit: Private Key zum verschlüsseln, Implizit: Public Key zum verschlüsseln
+  b.  Anforderungen an ausgetauschte Authentifizierungstoken
+      Typischer Angriff: Replay, Random-Number
+  c.  Verfahren / Funktion wird digitale Signatur aufgebaut (nach ISO/IEC 9798 Notation)  
+      SSA(n)) = eSa(H(n))
+  d.  Was ist eine Authentifizierung:  
+      Prozess in dem Sicherheit über Identitäts-Behauptung gewonnen wird
+  e.  Identifikator:
+      AHV-Nummer
+
+##Aufgabe 3
+  a.  Grundobjekte AD-Baum
+      Knoten, Blatt
+  b.  oberstes Element in Verzeichnisbaum?
+      Root
+  c.  Distinguished Name "Nicole Roux":
+      dn={cn=Nicole Roux,ou=Buchhaltung,c=Example,c=ch}
+  d.  Relativ DSN "Frank" unter Example:
+      rn={cn=Frank Roda,ou=Management} (Kontext: Eample)
+  e.  Kontext
+
+##Aufgabe 4
+  a.  Anforderungen an fortgeschrittene Signaturen  
+      - Siehe Script Kurs3_v2
+  b.  Zusätzliche Anfroderungen bei Qualifizierte Signatur
+      Qualifiziertes Zertifikat (Natürliche Person), erzeugt mit sicheren Signaturerstellungseinheit (SSCD)
+  c.  Schweizweit geregelte elektronische Signatur  
+      Qualifizierte Signaturen
+  d.  Qualifiziertes Zertifikat für Web-Server?  
+      nein
+  d.  Bitmap Unterschrift als elek. Siggnatur?  
+      Ja
+  e.  RFC-Standard für Erweiterung, wie wird Segemntqualifier
+      Ja, jeder kann qualifiziertes Zertifikat ausstellen
+
+##Aufgabe 5
+  a.  Typ PSE im Firefox / Microsoft?  
+      Software
+  b.  Standard API Smaartcard Browser  
+      PKCS#11
+  c.  PKCS#7
+  d.  Backup, rollen
+
+##Aufgabe 6
+  a.  Unterschied ASN.1 SEQUENCE, SET  
+      Reihenfolge
+  b.  Beschreibung Element "Description"
+  c.  Klassen Bezeichnerfeld, strukturierte Klasse  
+      6, Constructed, Private, Application
+  d.  Bit-String DER-Kodierung für '10011'B
+
+##Aufgabe 7
+  a.  Zertifikatshierarchie grafisch  
+      Root, CA, Cert
+  b.  Erweiterung für Darstellung Zertifikatspfad im Browser  , Eintrag in Hierarchie  
+      Subject-Key-Identifier, Authority-Key-Identifier
+  c.  Was steht im Subject- / Issuer-Attribut der SwissMarathon Root CA?  
+  d.  2 x das gleiche
+  e.  Unterschieden sich die öffentlichen Schlüssel in einem Root-Zertifikat
+      Nein
+  f.  Was steht im Subject- / Issuer-Attribut Ihres Client-Zertifikats?  
+      Subject: E-Mail, Land, Name (DN)
+  g.  Erweiterung mit Attributfeldern in Zertifkaten wird immer benötigt?
+      Basic Constraints, Wichtig, CA + Pfad-Länge
+  h.  Attribute für Gültigkeitsdauer von 3 Jahren in Ihrem Zertifikat, ausgehend von Heute  
+  i.  Erweiterung für URL für OCSP-Dienst  
+  j.  Erweiterung URL für Verzeichnisdienst CA?  
+      Subject-Info-Access
+
+##Aufgabe 8
+SSL/TLS-Authentifizierung, Endbenutzerzertifikat, Portalzugang mit Authentifizierungssignatur mit SHA1, SHA256, 2 Verschiedene Hashverfahren
+  a.  Mit Endbenutzerzertifikat möglich?  
+      Ja
+  b.  Wenn ja, wo Hashfunktion spezifiziert?
+
+##Aufgabe 9
+  a.  Welches Feld CRL Seriennummer und Datum wiederrufenes Zertifikat  
+      Revoke Certificate
+  b.  Geläufige optionale Erweiterung?  
+      Reason
+
+##Aufgabe 10
+  a.  Mind. Inhalt Antwort in OCSP-Anfrage?
+      Status
+  b.  Welches Attributfeld Referenzwert Wiederruf Zertifikat, wie heisst er?  
+      SingleResponse: Serial-Nummer, Status
+  c.  OCSP-Anfrage mehrere oder ein Zertifikat bezüglich Wiederruf anfragen?  
+      Nur eines
+  d.  Feld Wiederrufsgrund OCSP-Anfrage?  
+      RevokedInfo
+  e.  OCSP-Antwort mit entsprechenden Attributen für ihr Client-Zertifikat

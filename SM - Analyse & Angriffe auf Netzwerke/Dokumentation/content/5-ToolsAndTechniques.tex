@@ -13,15 +13,19 @@ In diesem Kapitel werden einige Techniken und Tools aufgezeigt, welche während 
 Digitale Beweise und Kopien von Images sollten immer auf leere, beziehungsweise zuvor komplett gelöschte Datenträger gesichert werden. Wird dies nicht gemacht, kann es sein, dass Rückstände / Daten von vorherigen Untersuchungen die Analyse beeinflussen.
 
 \subsubsection{dd}
-Unter Linux kann für das Löschen, genauer gesagt das Überschreiben mit Zufallswerten das Tool \textit{dd} verwendet werden.
+Unter Linux kann für das Löschen, genauer gesagt das Überschreiben mit Zufallswerten (1) oder Nullen (2) das Tool \textit{dd} verwendet werden.
+Mit dem Tool \textit{dd} können sowohl ganze Datenträger, als auch einzelne Partitionen überschrieben werden.
 
 \begin{lstlisting}
-dd if=/dev/random of=/dev/<DriveToWipe>
+> dd if=/dev/urandom of=/dev/<DriveToWipe>
+> dd if=/dev/zero of=/dev/<DriveToWipe>
 \end{lstlisting}
 
 \subsubsection{Weitere Tools}
 \begin{itemize}
 \item EnCase
+\item FTK
+\item X-Ways
 \end{itemize}
 
 
@@ -122,7 +126,7 @@ Die Möglichkeiten den Inhalt des Arbeitsspeichers zu sichern, werden im nachfol
 Für die Sicherung von Daten ist die Erstellung von Hashes von essentieller Bedeutung. Jede Datei, Partition oder ähnlich sollte vor und nach der Sicherung gehasht werden, um sicherzustellen, dass diese durch den Sicherungsvorgang nicht verändert wurde. Auch Protokolle, Dokumentation, Ergebnisse der Analyse, etc. sollten immer mit einem Hash versehen und geprüft werden.
 
 \subsubsection{md5sum}
-Mit folgendem Befehl können MD5-Hashes von einzelnen Dateien erstellt werden. Es stehen unter anderm MD2, MD4, MD5, SHA und SHA1 als Algorithmen zur Verfügung.
+Mit folgendem Befehl können MD5-Hashes von einzelnen Dateien erstellt werden. Es stehen unter anderm MD2, MD4, MD5, SHA und SHA1 als Algorithmen zur Verfügung. Der Befehl entspricht jeweils dem Algorithmus. Zum Beispiel für SHA1 wird der Befehl \textit{sha1sum} verwendet.
 
 \begin{lstlisting}
 > md5sum <FileName>
@@ -140,23 +144,50 @@ Mit dem Tool "`md5deppe"' können Hashes von Ordnerinhalten rekursiv erstellt we
 \subsection{Sicherung des Arbeitsspeicher-Inhaltes}
 Bei der Sicherung von Arbeitsspeicher-Inhalten ist grundsätzlich zu beachten, dass die verwendeten Tools und Techniken einen kleinen Memory-Footprint aufweisen. Je mehr Arbeitsspeicher ein Tool verwendet, desto mehr wichtige Daten und somit auch Beweise gehen verloren. Ein weiterer wichtiger Punkt der beachtet werden soll ist, dass die Sicherung nicht im User-Mode, sondern im Kernel-Mode erfolgt. So ist sichergestellt, dass der gesamte Inhalte des Arbeitsspeichers gesichert werden kann. Andernfalls können aufgrund von Berechtigungseinschränkungen nicht alle Daten gesichert werden.
 
-\subsubsection{Kein Zugriff auf das Betriebssystem vorhanden} \todo{Evtl. weitere Details und Beispiele}
+\subsection{Sicherung des Arbeitsspeicher-Inhaltes ohne Zugriff auf das Betriebssystem} \todo{Evtl. weitere Details und Beispiele}
 %http://www.forensicmag.com/articles/2013/05/catching-ghost-how-discover-ephemeral-evidence-through-live-ram-analysis
 %http://forensicswiki.org/wiki/Tools:Memory_Imaging
-Grundsätzlich gilt, dass der Inhalt des Arbeitsspeichers beim herunterfahren des Systems verloren geht. Studien haben gezeigt, dass die Inhalte des Arbeitsspeichers noch bis zu mehreren Minuten nach dem Verlust der Stromversorgung im Arbeitsspeicher vorhanden sind. 
+Grundsätzlich gilt, dass der Inhalt des Arbeitsspeichers beim herunterfahren des Systems verloren geht. Besteht kein Zugriff auf das Betriebssystem und es besteht keine Möglichkeit das Passwort zu erhalten, muss gegbenenfalles eine der nachfolgend beschriebenen Techniken eingesetzt werden. Studien haben gezeigt, dass die Inhalte des Arbeitsspeichers noch bis zu mehreren Minuten nach dem Verlust der Stromversorgung im Arbeitsspeicher vorhanden sind. Bei einigen BIOS-Varianten wird der Arbeitsspeicher beim Herunterfahren des Systemes vollständig gelöscht. Bei diesen Systemen ist ein Auslesen nach dem Herunterfahren nicht mehr möglich.
 
-Für die Sicherung des Arbeitsspeichers ohne zugriff auf das Betriebssystem können unter anderem folgende Techniken eingesetzt werden:
 \begin{itemize}
-\item Kühlung des physikalischen Bausteins\\
+\item Cold Boot\\
+Nach dem harten Shutdown des Systemes wird ein speziell präpariertes USB-Boot-Medium eingesetzt und das System sofort neu gestartet. Dabei ist im BIOS die Bootreihenfolge so zu ändern, dass das USB-Medium als primäres Boot-Medium verwendet wird. Das USB-Medium wurde vorgängig mit einem Minibetriebssystem, einem Spezialtool und einer separaten Partition zur Speicherung des Arbeitsspeicher-Abbildes. Als Tool zur Sicherung kann entweder \textit{Msramdmp} oder der \textit{USB Memory Scraper} verwendet werden.
+
+\item Cold Boot mit Kühlung des physikalischen Bausteins\\
 Bevor das System mit einem harten Shutdown heruntergefahren wird, wird das Gehäuse des Systems geöffnet und der Arbeitsspeicher mit einem Stickstoffspray auf -50 Grad Celsius herutner gekühlt. Nach dem harten Shutdown wird der Arbeitsspeicher ausgebaut und in einem Analyse-System  eingebaut. Das Analyse-System wird mit einer Spezialsoftware gestartet, welche den gesamten Arbeitsspeicher auf einen anderen Datenträger sichert.
 
 \item Firewire-Attacke\\
-Bei der Firewire-Attacke wird eine Schwachstelle der Firewire-Schnittstelle ausgenutzt, um Inhalte des Arbeitsspeichers zu sichern. Die Schwachstelle kann jedoch nur unter bestimmten Bedingungen ausgenutzt werden und es kann nur eine begrenzte Menge an Arbeitsspeicher ausgelesen werden. Weitere Informationen zur Firewire-Attacke sind hier zu finden: \url{https://blogs.gnome.org/muelli/2010/04/reading-ram-using-firewire/}, \url{http://link.springer.com/chapter/10.1007%2F978-3-642-23602-0_14#page-1}
+Bei der Firewire-Attacke wird eine Schwachstelle der Firewire-Schnittstelle ausgenutzt, um Inhalte des Arbeitsspeichers zu sichern. Die Schwachstelle kann jedoch nur unter bestimmten Bedingungen ausgenutzt werden und es kann nur eine begrenzte Menge (aktuell max. 4 GB) an Arbeitsspeicher ausgelesen werden. Als unterstützendes Tool zur Realisierung dieses Angriffes sei an dieser Stelle das Tool \textit{PythonRaw1394} genannt. Weitere Informationen zur Firewire-Attacke sind hier zu finden: \url{https://blogs.gnome.org/muelli/2010/04/reading-ram-using-firewire/}, \url{http://link.springer.com/chapter/10.1007%2F978-3-642-23602-0_14#page-1}
 \end{itemize}
 
+\subsection{Sicherung des Arbeitsspeicher-Inhaltes mit Zugriff auf das Betriebssystem}
+Für die Sicherung gibt es einige verschiedene Tools. Unter früheren Linux-Kerneles konnte direkt auf das Arbeitsspeicher-Device zugegriffen werden. In neuer Versionen wurde dies aus Sicherheitsgründen unterbunden.
 
+\subsubsection{Linux (alte Kernel-Versionen)}
+\begin{lstlisting}
+> dd if=/dev/mem of=ram.dd
+\end{lstlisting}
 
-\subsection{Forensische Duplikation}
+\subsubsection{fmem}
+Nachdem \textit{fmem} (vorgängig) kompiliert wurde, muss das Kernel-Modul zuerst geladen werden. Dazu wird am besten das mitgelieferte Shell-Script \textit{run.sh} verwendet werden. Nach dem das Kernel-Modul geladen wurde, steht unter \textit{/dev/fmem} ein neues Device zur Verfügung. Dieses Device kann mit den im Kapitel \ref{subsec:ToolsTechniques:ForensicDuplicate} \nameref{subsec:ToolsTechniques:ForensicDuplicate} beschriebenen Tools gesichert werden.
+
+\subsubsection{lime}
+Das Tool \textit{lime} ist ein weiteres Kernel-Modul, welches für die Akquisition von Arbeitsspeicher-Inhalten unter Linux und Linux-basierten Systemen verwendet werden kann.
+
+\begin{lstlisting}
+> insmod <PathToLime>/lime.ko "path=<PathToDumpFile> format=<raw|padded|lime>"
+\end{lstlisting}
+
+\subsubsection{Weitere Tools}
+\begin{itemize}
+\item Win32dd und Win64dd
+\item DumpIt
+\item Winen und Winen64
+\item Mdd
+\item FTK Imager
+\end{itemize}
+
+\subsection{Forensische Duplikation} \label{subsec:ToolsTechniques:ForensicDuplicate}
 Bei einer forensischen Duplikation sollte der Quelldatenträger immer Bit-Weise kopiert werden. Zusätzlich ist sicherzustellen, dass der Quelldatenträger Read-Only gemountet oder über einen Writeblocker angeschlossen ist. Ein Writeblocker verhindert physisch, dass Daten auf einen Datenträger geschrieben werden können. Es ist zu empfehlen grundsätzlich immer einen Writeblocker auf Hardware-Basis zu verwenden.
 
 Die Sicherung kann auf folgende Arten durchgeführt werden:
@@ -210,9 +241,30 @@ Im Anschluss muss das Verfahren für jede verfügbare Partition wiederholt werde
 > cryptcat -k <Pssword> -l -p 8000 |dd of=<MountPoint>/<PathToImage>
 \end{lstlisting}
 
+\subsubsection{dcfldd}
+Das Tool \textit{dcfldd} erweitert das Tool \textit{dd} um einige nützliche Funktionen. So können automatisch Hashes für den zu sichernden Datenträger oder die zu sichernde Partition generiert.
+
+\begin{lstlisting}
+> dcfldd if=<PathToDisk> of=<MountPoint>/<FileName.dd> hash=sha256 sha256log=<FileName.sha256> bs=1MB count=1000
+\end{lstlisting}
+
+
+\subsubsection{dc3dd}
+Das Tool \textit{dc3dd} ist ein Erweiterung, beziehungsweise eine gepatchte Version des Tools \textit{dd}.
+
+\begin{lstlisting}
+> dc3dd if=<PathToDisk> of=<MountPoint>/<FileName.dd> hash=md5 progress=on
+\end{lstlisting}
+
+
 \subsubsection{Weitere Tools}
-\todo{Weitere Tools}
-Adepto: Wizard für die gängigen Tools
+
+\begin{itemize}
+\item Adepto
+\item Guymager
+\item ewfacquire
+\item Raptor Toolbox
+\end{itemize}
 
 
 
@@ -224,7 +276,11 @@ Vor und nach der Verwendung eines forensischen Duplikates oder eines Beweisstüc
 Mit diesen beiden Tools wird manuell ein neuer Hash generiert, welcher mit dem dokumentierten Hash des Duplikates oder des Beweisstückes verglichen wird.
 
 \subsubsection{dcfldd}
-\todo{Inhalt}
+Mit \textit{tcfldd} kann geprüft werden, ob der Hash eines Quelldatenträgers und eines bereits erstellten Images identisch sind.
+
+\begin{lstlisting}
+> dcfldd if=<PathToSourceDevice> vf=<PathToImage.dd> verifylog=<PathToLogFile.log>
+\end{lstlisting}
 
 \subsubsection{Weitere Tools} \todo{Inhalt}
 EnCase (Seite 72)
@@ -252,123 +308,134 @@ Die Sicherung von flüchtigen Daten muss effizient, schnell und korrekt erfolgen
 \begin{itemize}
 \item Informationen über den Prozessor 
 \begin{lstlisting}
-cat /proc/cpuinfo
+> cat /proc/cpuinfo
 \end{lstlisting}
 
 \item Grösse und Anzahl der eingebundenen Partitionen und deren Füllungsgrad 
 \begin{lstlisting}
-df -h
+> df -h
 \end{lstlisting}
 
 \item  Informationen über den physischen Datengräger und die Partitionierung
 \begin{lstlisting}
-fdisk -l
+> fdisk -l
 \end{lstlisting}
 
 \item  Information über den aktiven Kernel, Compiler-Version und Kommpilierdatum, etc.
 \begin{lstlisting}
-cat /proc/version
+> cat /proc/version
 \end{lstlisting}
 
 \item  Anzeige der aktiven Boot-Parameter
 \begin{lstlisting}
-cat /proc/cmdline
+> cat /proc/cmdline
 \end{lstlisting}
 
 
 \item  Anzeige der Shell-Umgebungsvariablen
 \begin{lstlisting}
-env
+> env
 \end{lstlisting}
 
 \item  Anzeige der angemeldeten User
 \begin{lstlisting}
-who
+> who
 \end{lstlisting}
 
 \item  Liste der alufenden Prozesse
 \begin{lstlisting}
-ps -efl
+> ps -efl
 \end{lstlisting}
 
 \item  Informationen über die konfigurierten Netzwerk-Interfaces und deren Statistik 
 \begin{lstlisting}
-ifconfig -a, ifconfig -s
+> ifconfig -a, ifconfig -s
 \end{lstlisting}
 
 \item  Anzeige der Einträge der Arp-Table
 \begin{lstlisting}
-arp -n, arp -n
+> arp -n
 \end{lstlisting}
 
 \item  Anzeige des Inhalts des Host-File
 \begin{lstlisting}
-cat /etc/hosts
+> cat /etc/hosts
 \end{lstlisting}
 
 \item  Anzeige der DNS-Konfiguration
 \begin{lstlisting}
-cat /etc/resolv.conf
+> cat /etc/resolv.conf
 \end{lstlisting}
 
 \item  Inhalt der Passwortdatei
 \begin{lstlisting}
-cat /etc/passwd
+> cat /etc/passwd
 \end{lstlisting}
 
 \item  Inhalt der Shadow-Datei
 \begin{lstlisting}
-cat /etc/shadow
+> cat /etc/shadow
 \end{lstlisting}
 
 \item  Anzeige der aktiven Netzwerkverbindungen
 \begin{lstlisting}
-netstat -anp
+> netstat -anp
+\end{lstlisting}
+
+\item Anzeige der aktiven Netzwerkverbindungen und der dazugehörigen Programmej
+\begin{lstlisting}
+> netstat -tunp
 \end{lstlisting}
 
 \item  Anzeige der Routing-Tabelle
 \begin{lstlisting}
-netstat -rn
+> netstat -rn
+> route
 \end{lstlisting}
 
 \item Anzeige der geöffneten und aktiven Ports 
 \begin{lstlisting}
-lsof -P -i -n
+> lsof -P -i -n
 \end{lstlisting}
 
 \item  Komplette Ausgabe aller durch Prozesse geöffneten Dateien
 \begin{lstlisting}
-lsof
+> lsof
 \end{lstlisting}
 
 \item  Informationen über den Hauptspeicher
 \begin{lstlisting}
-cat /proc/meminfo
+> cat /proc/meminfo
 \end{lstlisting}
 
 \item  Information über aktive Module
 \begin{lstlisting}
-cat /proc/modules
+> cat /proc/modules
 \end{lstlisting}
 
 \item  Informationen über die gemounteten Dateisysteme
 \begin{lstlisting}
-cat /proc/mounts
+> cat /proc/mounts
 \end{lstlisting}
 
 \item  Informationen über die Swap-Konfiguration
 \begin{lstlisting}
-cat /proc/swap
+> cat /proc/swap
 \end{lstlisting}
 
 \item  Konfiguration der Mountpoints
 \begin{lstlisting}
-cat /etc/fastab
+> cat /etc/fastab
+\end{lstlisting}
+
+\item Geöffnete Daeisysteme
+\begin{lstlisting}
+> mount -v
 \end{lstlisting}
 
 \item  Pro Prozess: Umgebungsvariablen, verwendete Speicherbereiche, etc.
 \begin{lstlisting}
-ls /proc | sort -n | grep -v [a-z,A-Z] | while read PID
+> ls /proc | sort -n | grep -v [a-z,A-Z] | while read PID
 	do
 		echo "`Prozess ID $PID:"`
 		cat /proc/$PID/cmdline
@@ -634,6 +701,73 @@ Nachfolgend werden weitere Analysemöglichkeiten aufgezeigt, welche in diesem Ka
 \item Analyse von Netzwerkmitschnitten
 \end{itemize}
 
+\subsection{Konvertierung von Images}
+Ab und zu kann es notwendig sein, die erstellten Images in ein anders Format zu konvertieren. 
+
+\subsubsection{ewfacquire}
+\textbf{Konvertierung von DD nach E01}\\
+\begin{lstlisting}
+> ewfacquire -t <PathToSourceImage.dd> <PathToTargetImage.E01>
+\end{lstlisting}
+
+\textbf{Konvertierung von E01 nach DD}\\
+\begin{lstlisting}
+> ewfeport <PathToSourceImage.E01>
+\end{lstlisting}
+
+\subsubsection{xmount}
+\textbf{Konvertierung von vmdk nach E01}\\
+\begin{lstlisting}
+> xmount --in ewf --out vmdk <PathToSourceImage.E01> <DestinationPath>
+\end{lstlisting}
+
+\textbf{Konvertierung von E01 nach vmdk}\\
+\begin{lstlisting}
+> xmount --in vmdk --out ewf <PathToSourceDisk.vmdk> <DestinationPath>
+\end{lstlisting}
+
+
+\subsubsection{Weitere Tools}
+\begin{itemize}
+\item FTK Imager
+\item VHD Tool
+\end{itemize}
+
+
+
+\subsection{Analyse des Master Boot Records}
+Der Master Boot Record ist für den Bootvorgang von essentieller Bedeutung und kann auch bei einer forensischen Analyse hilfreiche Informationen bezüglich Partitionierung und verwendeten Dateisystemen beinhalten. Der Master Boot Record ist wie folgt aufgebaut:
+
+\begin{itemize}
+\item Bootcode (Bytes 0-439)
+\item Disksignatur (Bytes 440-443)
+\item Reservierter Bereich (Bytes 444-445)
+\item Partitionstabelle (Bytes 446-509)
+\item Signatur \textit{0x55 0xAA} (Bytes 510-511)
+\end{itemize}
+
+\subsubsection{Sicherung des Master Boot Records}
+Mit Hilfe des Tools \textit{dd} oder eines ähnlichen Tools kann der Master Boot Record wie folgt gesichert werden:
+
+\begin{lstlisting}
+> dd if=<PathToSource> of=<PathToTargetFile.dd> bs=512 count=1 skip=0
+\end{lstlisting}
+
+
+\subsubsection{Sicherung des Master Boot Records}
+Mit Hilfe des Tools \textit{dd} oder eines ähnlichen Tools kann der Master Boot Record wie folgt gesichert werden:
+
+\begin{lstlisting}
+> dd if=<PathToSource> of=<PathToTargetFile.dd> bs=512 count=1 skip=0
+\end{lstlisting}
+
+
+\subsubsection{Extraktion des Master Boot Records aus einem image}
+\begin{lstlisting}
+> dd if=<PathToSourceImage.dd> of=<PathToTargetFile.dd> bs=512 count=1 skip=0
+\end{lstlisting}
+
+
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Reporting}
@@ -718,6 +852,8 @@ Post-Mortem Analyse Unix-Systeme,
 Sammlung von Tools, diverse Formate
 \item Autopsy Forensic Browser\\
 Grafische Oberfläche für Sleuth Kit, neuste Version nur Windows
+\item Raptor Live-CD\\
+Gratis, intuitieve Bedienung, Raptor Toolbox
 \end{itemize}
 
 

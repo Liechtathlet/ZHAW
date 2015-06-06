@@ -1,0 +1,188 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{E:Intel:WhitePaper:DevelopingSolutionsIoT}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Corporation}{C.}%
+     {Intel}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Intel Corporation}%
+  }
+  \strng{namehash}{CI1}
+  \strng{fullhash}{CI1}
+  \field{labelalpha}{Cor14}
+  \field{sortinit}{C}
+  \field{title}{Developing Solutions for the Internet of Things}
+  \verb{url}
+  \verb http://www.intel.com/content/www/us/en/internet-of-things/white-papers/
+  \verb developing-solutions-for-iot.html
+  \endverb
+  \field{year}{2014}
+\endentry
+
+\entry{E:RealTimeInnovations:UnderstandingIoTProtocols}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Innovations}{I.}%
+     {Real-Time}{R.-T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Real-Time Innovations (RTI)}%
+  }
+  \strng{namehash}{IRT1}
+  \strng{fullhash}{IRT1}
+  \field{labelalpha}{Inn14}
+  \field{sortinit}{I}
+  \field{title}{Unterstanding the Internet of Things Protocols}
+  \verb{url}
+  \verb http://de.slideshare.net/RealTimeInnovations/io-34485340
+  \endverb
+  \field{year}{2014}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Schneider:UnterstandingIoTProtocols}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Schneider}{S.}%
+     {Stan}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {English}%
+  }
+  \strng{namehash}{SS1}
+  \strng{fullhash}{SS1}
+  \field{labelalpha}{Sch13}
+  \field{sortinit}{S}
+  \field{howpublished}{Web}
+  \field{title}{Understanding The Protocols Behind The Internet Of Things}
+  \verb{url}
+  \verb http://electronicdesign.com/embedded/understanding-protocols-behind-int
+  \verb ernet-things
+  \endverb
+  \field{year}{2013}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{B:IEEE:SWEBOOK}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Society}{S.}%
+     {IEEE~Computer}{I.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SIC1}
+  \strng{fullhash}{SIC1}
+  \field{labelalpha}{Soc04}
+  \field{sortinit}{S}
+  \field{title}{Software Engineering Body of Knowledge}
+  \verb{url}
+  \verb http://www.computer.org/web/swebok/index
+  \endverb
+  \field{year}{2004}
+\endentry
+
+\entry{ZHAW:2012:Seminararbeit:Reglemente}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Stern}{S.}%
+     {Olaf}{O.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {Deutsch}%
+  }
+  \list{organization}{1}{%
+    {ZHAW}%
+  }
+  \strng{namehash}{SO1}
+  \strng{fullhash}{SO1}
+  \field{labelalpha}{Ste12}
+  \field{sortinit}{S}
+  \field{title}{Reglement: Seminararbeit}
+  \verb{url}
+  \verb https://ebs.zhaw.ch/files/documents/informatik/Reglemente/Bachelor/Semi
+  \verb nararbeit/a_Reglement-Seminar_Studiengang-Informatik_V2.1.docx
+  \endverb
+  \field{year}{2012}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Subramaniam:CreatingDSLinJava}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Subramaniam}{S.}%
+     {Venkat}{V.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {JavaWorld}%
+  }
+  \strng{namehash}{SV1}
+  \strng{fullhash}{SV1}
+  \field{labelalpha}{Sub08}
+  \field{sortinit}{S}
+  \field{title}{Creating a DSL in Java}
+  \verb{url}
+  \verb http://www.javaworld.com/article/2077865/core-java/core-java-creating-d
+  \verb sls-in-java-part-1-what-is-a-domain-specific-language.html
+  \endverb
+  \field{year}{2008}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:tbd}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {tbd}{t.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{t1}
+  \strng{fullhash}{t1}
+  \field{labelalpha}{tbd}
+  \field{sortinit}{T}
+  \field{title}{tbd}
+  \verb{url}
+  \verb http://www.networkworld.com/article/2456421/internet-of-things/a-guide-
+  \verb to-the-confusing-internet-of-things-standards-world.html
+  \endverb
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

@@ -58,86 +58,92 @@
 \contentsline {section}{\numberline {5.2}Phasen}{24}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Readiness (Vorbereitung)}{24}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Secure (Sicherstellen)}{25}{subsection.5.2.2}
-\contentsline {subsubsection}{Environment (Umgebung)}{25}{subsubsection*.8}
+\contentsline {subsubsection}{Environment (Umgebung)}{26}{subsubsection*.8}
 \contentsline {subsubsection}{Identify (Identifizieren)}{26}{subsubsection*.9}
 \contentsline {subsubsection}{Asses and Decide (Beurteilen und Entscheiden)}{26}{subsubsection*.10}
-\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{26}{subsubsection*.11}
-\contentsline {subsection}{\numberline {5.2.3}Analysis (Analyse)}{28}{subsection.5.2.3}
+\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{27}{subsubsection*.11}
+\contentsline {subsection}{\numberline {5.2.3}Analysis (Analyse)}{29}{subsection.5.2.3}
 \contentsline {subsubsection}{Preparation (Vorbereitung)}{29}{subsubsection*.12}
-\contentsline {subsubsection}{Analysis (Analyse)}{29}{subsubsection*.13}
-\contentsline {paragraph}{Unterst\IeC {\"u}tzende Fragestellungen}{30}{paragraph*.14}
+\contentsline {subsubsection}{Analysis (Analyse)}{30}{subsubsection*.13}
+\contentsline {paragraph}{Unterst\IeC {\"u}tzende Fragestellungen}{31}{paragraph*.14}
 \contentsline {subsection}{\numberline {5.2.4}Reporting (Dokumentation)}{31}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Present (Pr\IeC {\"a}sentation)}{32}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Review (R\IeC {\"u}ckblick)}{32}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}Beweiskette und Beweissicherung}{32}{section.5.3}
+\contentsline {section}{\numberline {5.3}Beweiskette und Beweissicherung}{33}{section.5.3}
 \contentsline {section}{\numberline {5.4}Hinweise zur forensischen Analyse}{33}{section.5.4}
 \contentsline {chapter}{\numberline {6}Tools und Techniken}{35}{chapter.6}
 \contentsline {section}{\numberline {6.1}Readiness}{35}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Datentr\IeC {\"a}ger l\IeC {\"o}schen}{35}{subsection.6.1.1}
 \contentsline {subsubsection}{dd}{35}{subsubsection*.15}
 \contentsline {subsubsection}{Weitere Tools}{35}{subsubsection*.16}
-\contentsline {section}{\numberline {6.2}Secure}{35}{section.6.2}
+\contentsline {section}{\numberline {6.2}Secure}{36}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Auslesen der Zeitkonfiguration}{36}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Bestimmung der Linux-Distribution}{36}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}Shutdown eines Systemes}{37}{subsection.6.2.3}
 \contentsline {subsection}{\numberline {6.2.4}Erstellen von Hashes}{38}{subsection.6.2.4}
 \contentsline {subsubsection}{md5sum}{38}{subsubsection*.17}
 \contentsline {subsubsection}{md5deep}{38}{subsubsection*.18}
-\contentsline {subsection}{\numberline {6.2.5}Sicherung des Arbeitsspeicher-Inhaltes}{38}{subsection.6.2.5}
-\contentsline {subsubsection}{Kein Zugriff auf das Betriebssystem vorhanden}{39}{subsubsection*.19}
-\contentsline {subsection}{\numberline {6.2.6}Forensische Duplikation}{39}{subsection.6.2.6}
-\contentsline {subsubsection}{Einsatz von Standard-Linux Tools}{40}{subsubsection*.21}
-\contentsline {subsubsection}{Weitere Tools}{41}{subsubsection*.22}
-\contentsline {subsection}{\numberline {6.2.7}Verifikation eines forensischen Duplikates oder eines Beweisst\IeC {\"u}ckes}{41}{subsection.6.2.7}
-\contentsline {subsubsection}{md5sum und md5deep}{41}{subsubsection*.24}
-\contentsline {subsubsection}{dcfldd}{41}{subsubsection*.25}
-\contentsline {subsubsection}{Weitere Tools}{41}{subsubsection*.27}
-\contentsline {subsection}{\numberline {6.2.8}Sicherung der Bin\IeC {\"a}rdatei von ausgef\IeC {\"u}hrten Prozessen}{41}{subsection.6.2.8}
-\contentsline {subsubsection}{Linux}{41}{subsubsection*.29}
-\contentsline {subsection}{\numberline {6.2.9}Sicherung fl\IeC {\"u}chtiger Daten}{41}{subsection.6.2.9}
-\contentsline {subsubsection}{Linux}{42}{subsubsection*.30}
-\contentsline {section}{\numberline {6.3}Analysis}{44}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Image mounten}{44}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Linux}{44}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{44}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Gel\IeC {\"o}schte Partitionstabelle}{44}{subsection.6.3.4}
-\contentsline {subsubsection}{Tools}{45}{subsubsection*.32}
-\contentsline {subsection}{\numberline {6.3.5}Analyse von gel\IeC {\"o}schten Dateien}{45}{subsection.6.3.5}
-\contentsline {subsubsection}{Sleuth Kit}{45}{subsubsection*.34}
-\contentsline {subsubsection}{Weitere Tools}{45}{subsubsection*.35}
-\contentsline {subsection}{\numberline {6.3.6}Analyse von versteckten Dateien}{45}{subsection.6.3.6}
-\contentsline {subsection}{\numberline {6.3.7}Dateien oder Fragemente wiederherstellen}{46}{subsection.6.3.7}
-\contentsline {subsubsection}{foremost}{46}{subsubsection*.38}
-\contentsline {subsubsection}{Fatback}{46}{subsubsection*.39}
-\contentsline {subsubsection}{unrm und lazarus}{46}{subsubsection*.40}
-\contentsline {subsubsection}{Weitere Tools}{46}{subsubsection*.41}
-\contentsline {subsection}{\numberline {6.3.8}Analyse des File Slacks}{47}{subsection.6.3.8}
-\contentsline {subsection}{\numberline {6.3.9}Timeline-Analyse}{47}{subsection.6.3.9}
-\contentsline {subsubsection}{Sleuth Kit}{48}{subsubsection*.44}
-\contentsline {subsection}{\numberline {6.3.10}Analyse von Auslagerungsdateien}{48}{subsection.6.3.10}
-\contentsline {subsection}{\numberline {6.3.11}Unbekannte Bin\IeC {\"a}rdateien analysieren}{48}{subsection.6.3.11}
-\contentsline {subsection}{\numberline {6.3.12}Suche nach Rootkits}{49}{subsection.6.3.12}
-\contentsline {subsubsection}{chkrootkit}{49}{subsubsection*.47}
-\contentsline {subsection}{\numberline {6.3.13}Systemprotokolle}{49}{subsection.6.3.13}
-\contentsline {subsection}{\numberline {6.3.14}Untersuchung der Shell (Bash)}{49}{subsection.6.3.14}
-\contentsline {subsection}{\numberline {6.3.15}Untersuchung der Druckerjobs und der Druckerqueue}{50}{subsection.6.3.15}
-\contentsline {subsection}{\numberline {6.3.16}Untersuchung der Dateien / Dateiendungen}{50}{subsection.6.3.16}
-\contentsline {subsection}{\numberline {6.3.17}Untersuchung von User Aktivit\IeC {\"a}ten}{50}{subsection.6.3.17}
-\contentsline {subsection}{\numberline {6.3.18}Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}{50}{subsection.6.3.18}
-\contentsline {subsection}{\numberline {6.3.19}Suche nach SUID und GID-Dateien}{50}{subsection.6.3.19}
-\contentsline {subsection}{\numberline {6.3.20}Datei- und Verzeichnisrechte}{50}{subsection.6.3.20}
-\contentsline {subsection}{\numberline {6.3.21}Weitere Analyse-M\IeC {\"o}glichkeiten}{51}{subsection.6.3.21}
-\contentsline {section}{\numberline {6.4}Reporting}{51}{section.6.4}
-\contentsline {section}{\numberline {6.5}Hinweise zu Tooleinsatz}{51}{section.6.5}
-\contentsline {section}{\numberline {6.6}Tool-Sammmlungen}{52}{section.6.6}
-\contentsline {section}{\numberline {6.7}Tool-Suiten}{52}{section.6.7}
-\contentsline {section}{\numberline {6.8}Kommerzielle Tools}{53}{section.6.8}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{55}{chapter*.51}
-\contentsline {part}{Anhang}{61}{chapter*.55}
+\contentsline {subsection}{\numberline {6.2.5}Sicherung des Arbeitsspeicher-Inhaltes}{39}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Sicherung des Arbeitsspeicher-Inhaltes ohne Zugriff auf das Betriebssystem}{39}{subsection.6.2.6}
+\contentsline {subsection}{\numberline {6.2.7}Sicherung des Arbeitsspeicher-Inhaltes mit Zugriff auf das Betriebssystem}{40}{subsection.6.2.7}
+\contentsline {subsubsection}{Linux (alte Kernel-Versionen)}{40}{subsubsection*.20}
+\contentsline {subsubsection}{fmem}{40}{subsubsection*.21}
+\contentsline {subsubsection}{lime}{40}{subsubsection*.22}
+\contentsline {subsubsection}{Weitere Tools}{40}{subsubsection*.23}
+\contentsline {subsection}{\numberline {6.2.8}Forensische Duplikation}{40}{subsection.6.2.8}
+\contentsline {subsubsection}{Einsatz von Standard-Linux Tools}{41}{subsubsection*.24}
+\contentsline {subsubsection}{dcfldd}{42}{subsubsection*.25}
+\contentsline {subsubsection}{Weitere Tools}{42}{subsubsection*.26}
+\contentsline {subsection}{\numberline {6.2.9}Verifikation eines forensischen Duplikates oder eines Beweisst\IeC {\"u}ckes}{42}{subsection.6.2.9}
+\contentsline {subsubsection}{md5sum und md5deep}{42}{subsubsection*.28}
+\contentsline {subsubsection}{dcfldd}{42}{subsubsection*.29}
+\contentsline {subsubsection}{Weitere Tools}{42}{subsubsection*.31}
+\contentsline {subsection}{\numberline {6.2.10}Sicherung der Bin\IeC {\"a}rdatei von ausgef\IeC {\"u}hrten Prozessen}{43}{subsection.6.2.10}
+\contentsline {subsubsection}{Linux}{43}{subsubsection*.33}
+\contentsline {subsection}{\numberline {6.2.11}Sicherung fl\IeC {\"u}chtiger Daten}{43}{subsection.6.2.11}
+\contentsline {subsubsection}{Linux}{43}{subsubsection*.34}
+\contentsline {section}{\numberline {6.3}Analysis}{45}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Image mounten}{45}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Linux}{45}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{45}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Gel\IeC {\"o}schte Partitionstabelle}{46}{subsection.6.3.4}
+\contentsline {subsubsection}{Tools}{46}{subsubsection*.36}
+\contentsline {subsection}{\numberline {6.3.5}Analyse von gel\IeC {\"o}schten Dateien}{46}{subsection.6.3.5}
+\contentsline {subsubsection}{Sleuth Kit}{46}{subsubsection*.38}
+\contentsline {subsubsection}{Weitere Tools}{46}{subsubsection*.39}
+\contentsline {subsection}{\numberline {6.3.6}Analyse von versteckten Dateien}{47}{subsection.6.3.6}
+\contentsline {subsection}{\numberline {6.3.7}Dateien oder Fragemente wiederherstellen}{47}{subsection.6.3.7}
+\contentsline {subsubsection}{foremost}{47}{subsubsection*.42}
+\contentsline {subsubsection}{Fatback}{47}{subsubsection*.43}
+\contentsline {subsubsection}{unrm und lazarus}{48}{subsubsection*.44}
+\contentsline {subsubsection}{Weitere Tools}{48}{subsubsection*.45}
+\contentsline {subsection}{\numberline {6.3.8}Analyse des File Slacks}{48}{subsection.6.3.8}
+\contentsline {subsection}{\numberline {6.3.9}Timeline-Analyse}{48}{subsection.6.3.9}
+\contentsline {subsubsection}{Sleuth Kit}{49}{subsubsection*.48}
+\contentsline {subsection}{\numberline {6.3.10}Analyse von Auslagerungsdateien}{49}{subsection.6.3.10}
+\contentsline {subsection}{\numberline {6.3.11}Unbekannte Bin\IeC {\"a}rdateien analysieren}{50}{subsection.6.3.11}
+\contentsline {subsection}{\numberline {6.3.12}Suche nach Rootkits}{50}{subsection.6.3.12}
+\contentsline {subsubsection}{chkrootkit}{50}{subsubsection*.51}
+\contentsline {subsection}{\numberline {6.3.13}Systemprotokolle}{50}{subsection.6.3.13}
+\contentsline {subsection}{\numberline {6.3.14}Untersuchung der Shell (Bash)}{51}{subsection.6.3.14}
+\contentsline {subsection}{\numberline {6.3.15}Untersuchung der Druckerjobs und der Druckerqueue}{51}{subsection.6.3.15}
+\contentsline {subsection}{\numberline {6.3.16}Untersuchung der Dateien / Dateiendungen}{51}{subsection.6.3.16}
+\contentsline {subsection}{\numberline {6.3.17}Untersuchung von User Aktivit\IeC {\"a}ten}{51}{subsection.6.3.17}
+\contentsline {subsection}{\numberline {6.3.18}Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}{51}{subsection.6.3.18}
+\contentsline {subsection}{\numberline {6.3.19}Suche nach SUID und GID-Dateien}{51}{subsection.6.3.19}
+\contentsline {subsection}{\numberline {6.3.20}Datei- und Verzeichnisrechte}{52}{subsection.6.3.20}
+\contentsline {subsection}{\numberline {6.3.21}Weitere Analyse-M\IeC {\"o}glichkeiten}{52}{subsection.6.3.21}
+\contentsline {section}{\numberline {6.4}Reporting}{52}{section.6.4}
+\contentsline {section}{\numberline {6.5}Hinweise zu Tooleinsatz}{52}{section.6.5}
+\contentsline {section}{\numberline {6.6}Tool-Sammmlungen}{53}{section.6.6}
+\contentsline {section}{\numberline {6.7}Tool-Suiten}{53}{section.6.7}
+\contentsline {section}{\numberline {6.8}Kommerzielle Tools}{54}{section.6.8}
+\contentsline {chapter}{\nonumberline Quellenverzeichnis}{55}{chapter*.55}
+\contentsline {part}{Anhang}{61}{chapter*.59}
 \contentsline {chapter}{\numberline {A}Vorlage: Formular Incident-Meldung}{61}{appendix.A}
 \contentsline {chapter}{\numberline {B}Vorlage Formular Ermittlung}{63}{appendix.B}
 \contentsline {chapter}{\numberline {C}Vorlage: Protokoll}{65}{appendix.C}
 \contentsline {chapter}{\numberline {D}Vorlage: Beweiszettel}{67}{appendix.D}
 \contentsline {chapter}{\numberline {E}Ablauf einer forensischen Analyse}{69}{appendix.E}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{71}{section*.57}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{71}{section*.61}
 \contentsfinish

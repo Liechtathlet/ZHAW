@@ -1,4 +1,119 @@
-\chapter{Software Engineering in der Domäne "`Internet of Things"'}
+\chapter{Software Engineering in der Domäne "`Internet of Things"'} \label{chap:sweInIot}
+In diesem Kapitel werden die Anforderungen, Eigenheiten und Unterschiede des Software Engineering in der Domäne "`Internet of Things"' im Vergleich zur "`Standard Domäne"' aufgezeigt.
+
+Die Struktur dieses Kapitels orientiert sich an der Struktur des Buches "`Software Engineering Body of Knowledge"' \cite{B:IEEE:SWEBOOK}.
+
+
+
+\subsection{Software Requirements}
+Im Requriements Engineering der Software Requriements gibt es im Vergleich zur Standard Domäne nur wenige Unterschiede. Der Hauptunterschied liegt darin, dass gewisse Anforderungen implizit durch die Domäne vorgegeben sind. Betroffen sind dabei sowohl Anforderungen auf Ebene Produkt, als auch auf Ebene Prozess. Nachfolgend werden einige Beispiele möglicher impliziter Anforderungen aufgelistet.
+
+\begin{itemize}
+\item Kostengünstig
+\item Energieeffizient
+\item Betrieb ohne Stromanschluss
+\item Massiv skalierbar
+\item Lange Lebensdauer
+\item Verlässlich
+\item Vertrauenswürdig
+\item Möglichkeit für das Einspielen von Updates
+\end{itemize}
+
+Die Anforderungen auf Ebene Produkt haben einen direkten und starken Einfluss auf die Hardware, die verwendet werden kann oder verwendet werden soll. Je nach dem steuern die Anforderungen an das Produkt die Hardware oder es gibt explizite Anforderungen an die Hardware, welche die Anforderungen an die Software beeinflussen und gegebenenfalls einschränken. 
+
+Im Bereich \gls{acr:IOT} ist es wichtig, dass die Anforderungen genau spezifiziert und korrekt umgesetzt werden. Eine spätere Korrektur kann sich unter Umständen als schwierig herausstellen. Wurden zum Beispiel für ein Sensor-Netzwerk mehrere Tausend Sensoren verteilt, welche nicht direkt mit dem Internet kommunizieren können, kann der Update-Prozess sehr aufwändig sein. Daher müssen auch sämtliche Anforderungen umgesetzt werden, welche zwingend benötigt werden.
+
+Weitere Herausforderungen sind der Einsatz in einem unbekannten Umfeld (Umwelt \& Technisch) und die schwierige Feststellbarkeit von Fehlern. Liefert zum Beispiel ein Sensor konstant falsche Werte, kann dies aus der Ferne, beziehungsweise ohne Vergleichswert praktisch nicht festgestellt werden. Ein mögliches Szenario wäre ein Sensor, welche in einer Fertigungsanlage auf einem Fliessband die Stückzahlen erfasst. Sind diese nun nicht korrekt und ein Backe-End-System bestellt auf Basis dieser Stückzahlen Nachschub für Einzelteile kann dies massive Auswirkungen haben.
+
+Neben den Anforderungen von Seiten des Kunden, beziehungsweise des Herstellers, gibt es auch noch regulatorische und gesetzliche Anforderungen zu erfüllen. Hier stellt sich zum Beispiel die Frage der Haftung, wenn ein System auf Basis der Informationen eines anderen Systemes eine Aktion auslöst und die gelieferten Informationen nicht korrekt sind.
+
+
+
+\subsection{Software Design}
+berücksichtigung design hw, nicht viel spielraum, u.u. keine frameworks, hochsprachen
+Software Design um Anforderungen zu erfüllen, Funktionalität: as much as , as less as possible, wenig / einfache Funktionalität (Endgerät), Gateway etwas mehr, schlank
+
+Effiziente Nutzung Ressourcen (Prozesse Threads) Real-Time-OS, Verteilung sW auf HW, Wie Komponenten kommunizieren, Evtl. Einsatz on Middleware
+
+I.d.R: Keine Präsentations-Schicht, Data-Persistence: Vorhaltung nicht sinnvoll --> Realtime informationen, 
+
+Berücksichtigung: Protokolle, Standards, Last-Anforderungen (Matching Standards / Protokolle und HW mit Anforderungen)
+
+Machine To Machine Connectivity, Wireless, API-Evolution in MInd
+
+
+
+\subsection{Software Construction} Chapter 4 / S. 61
+Je nach Anwendungsbereich: Hardwarenahe, Optimierung
+Für die Entwicklung von Anwendungen für \gls{acr:IOT}-Geräte können
+https://www.rti.com/company/careers/software-engineer.html grundsätzlich
+
+
+Firmware für Spezifische Hardware, Adressierung Netzwerk- und Verbindungsprobleme, Security
+
+
+
+\subsection{Software Testing}
+Wenn bei Consumer: Update evtl. schwierig, Fehlfunktion schwerwiegend,
+
+Test: Nachbildung physische Umgebung, komplexe Szenarien, Netzwerk-Anforderungen, 
+
+
+
+\subsection{Software Maintenance}
+Schwierig,...
+Immer connected --> regular updates, wenn nicht regelmässig upgedatet --> Verlust kritischer Funktionalität, Continuous Delivery
+
+Nicht überall möglich, Low-Bandwith, Hardware-Near Devices
+
+
+
+\subsection{Software Configuration Management}
+
+
+
+\subsection{Software Engineering Management}
+
+
+
+\subsection{Software Engineering Process}
+Defect Tracking, small scale projects, fast product turnaroudn, 
+
+
+
+\subsection{Software Engineering Tools and Methods}
+
+
+
+\subsection{Software Quality}
+Höhere Qualität notwendig
+
+
+
+
+
+
+
+
+Wetter, Physische Einflüsse, Durch das Gerät erzeugte Hitze, Lange Lebensdauer
+
+SW Muss: Skalierbar für breite Palette an verschiedenen Gerätekategorien
+Modular sein --> nur Auswahl (RAM-Footprint)
+Verbunden (Daten rein/raus)
+Verlässlich:Zertifizierung für kritische Applikationen
+
+
+http://ercim-news.ercim.eu/en98/special/internet-of-things-a-challenge-for-software-engineering
+http://link.springer.com/chapter/10.1007%2F978-3-642-31479-7_47#page-1
+
+Layer: Transport-Layer: TCP zum Teil overkill für IOT-Device --> UDP
+UDP: beser geeignet für relatime-data, TCPS Acknowledgment and retransmission unnützer overhad für solche Anwendungen (Stück sprache nicht rechtzeitig übermittelt -> Retransmission sinnlos), 
+
+
+Klassische Ansätze nicht alle geeignet für IoT, 
+
+Service-based Application: composition and orchestration of Services
+
 
 
 Evtl. Struktur nach kategorie: Connectivity, Management, Security, API, ...
@@ -6,7 +121,7 @@ Evtl. Struktur nach kategorie: Connectivity, Management, Security, API, ...
 Real-Time schwierig, trade off datenverlust, oft TCP als Datenbasis -> messung mit Quality of service besser
 
 http://postscapes.com/internet-of-things-software-guide
-https://www.silabs.com/Support%20Documents/TechnicalDocs/bringing-the-internet-of-things-to-life.pdf
+	https://www.silabs.com/Support%20Documents/TechnicalDocs/bringing-the-internet-of-things-to-life.pdf
 http://www.datamation.com/open-source/35-open-source-tools-for-the-internet-of-things-1.html
 https://blog.profitbricks.com/top-49-tools-internet-of-things/
 http://www.businesscloudnews.com/2015/05/14/samsung-announces-open-internet-of-things-platform/
