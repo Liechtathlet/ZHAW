@@ -2,34 +2,43 @@
 In diesem Kapitel wird die Domäne "`Internet of Things"' näher beschrieben und die Eigen- und Besonderheiten im Bereich Software Engineering aufgezeigt.
 
 \section{Ziel}
-Das primäre Ziel des \gls{acr:IOT} ist die Vernetzung von Dingen mit der realen Welt und mit anderen Dingen. Die Dinge sollen intelligent und autonom mit Party Geräten und Services kommunizieren können um so einen Mehrwert zu schaffen und die eigenen Fähigkeiten zu erweitern.. 
+Das primäre Ziel des \gls{acr:IOT} ist die Vernetzung von Dingen mit der realen Welt und mit anderen Dingen. Die Dinge sollen intelligent und autonom mit Party Geräten und Services kommunizieren können um so einen Mehrwert zu schaffen und die eigenen Fähigkeiten zu erweitern. 
 
 \section{Anwendungsbereich}
 Das \gls{acr:IOT} könnte grundsätzlich überall eingesetzt werden. Sei es in der Landwirtschaft, in der Pflege, in der Medizin oder in der Industrie. Das \gls{acr:IOT} ist mehr ein Konzept, beziehungsweise eine Architektur, als ein konkretes Produkt, Dadurch lässt es sich auf die jeweiligen Bedürfnisse der verschiedenen Unternehmensbereiche individuell anpassen. Neben der Anwendung im geschäftlichen Umfeld, findet das \gls{acr:IOT} auch im privaten Umfeld Anwendung. Das primäre Ziel ist dabei die Heimautomation, das heisst die intelligente Vernetzung verschiedener Geräte und Gegenstände im Haushalt. Nachfolgend einige Beispiele für konkrete Anwendungen eines \gls{acr:IOT}
 
+\todo{Subdomänen}
+-Smart Cities, Smart Environement, Smart Water, Smart Metering, Security and Emergency, Retail, Logistics, Industrial Control, Smart Agriculture, Smart Animal Farming, Domotics and Home Automation, e-Health
 \begin{itemize}
-\item Smart City\\
-Vernetzung wichtiger Infrastruktur
-\item Überwachung einer ÖL-Pipeline
+\item Smart Cities
+\item Smart Environement
 \item Medizin und Altenpflege
 \item Optimierung Energienutzung und Energieerzeugung
 \item Verteidigung und Militär
-\item Kommunikation
-\item Industrie
+\item Kommunikationstechnologie
+\item Industrie (Produktion \& Fertigung)
 \end{itemize}
 
 Auch im Bereich Big Data stellt \gls{acr:IOT} ein weiterer Meilenstein dar. Durch die Vernetzung von Millionen von Geräten können riesige Datenmengen gesammelt, analysiert und ausgewertet werden.
-
 
 
 \section{Architektur \& Aufbau}
 
 
 \subsection{Das "`Thing"'}
-Die Definition eines "`Thing"', beziehungsweise eines "`Dinges"', ist nicht ganz einfach. Grundsätzlich handelt es sich um ein "`Embedded System"' welches Informationen über ein Netzwerk versendet und empfängt. Ein "`Embedded System"' basiert auf einem Mikrocontroller, verfügt relativ gesehen nur über einen geringe Ressourcen (Prozessor und Arbeitsspeicher) und ist in der Regel auf Energieeffizienz ausgelegt. Das "`Embedded System"' verfügt über einen Kommunikationsstack mit 1 bis n Kommunikationsprotokollen welcher entweder direkt oder über ein Gateway mit einem Netzwerk kommuniziert. Die gesammelten Daten werden entweder auf dem Gerät oder auf einem Gateway gefiltert. 
+Die Definition eines "`Thing"', beziehungsweise eines "`Dinges"', ist nicht ganz einfach. Grundsätzlich handelt es sich um einen physischen Gegenstand mit einem "`Embedded System"' (auch Embedded Device genannt) welches gewisse Funktionalitäten anbietet. Handelt es sich bei diesem "`Ding"' um einen Alltagsgegenstand, wird dieser auch als "`Smart Object"' bezeichnet. Ein "`Embedded Device"' basiert auf einem Mikrocontroller, verfügt relativ gesehen nur über geringe Ressourcen (Prozessor und Arbeitsspeicher) und ist in der Regel auf Energieeffizienz ausgelegt. Das "`Embedded Device"' verfügt in der Regel über einen beliebigen Kommunikationsstack mit 1 bis n Kommunikationsprotokollen welcher entweder direkt oder über ein Gateway mit einem Netzwerk kommuniziert. Die gesammelten Daten werden entweder auf dem Gerät oder auf einem Gateway gefiltert. 
 
-Solche "`Embedded Systems"' sind bereits heute überall gegenwärtig. Sei es in Autos, Wearables, Kühlschränken, Kaffeemschinen oder Smartphones.
+Diese "`Dinge"' und "`Smart Objects"' sind keine Erfindung des \gls{acr:IOT}. Es gibt sie schon eine längere Zeit. Mit dem \gls{acr:IOT} haben diese jedoch gelernt miteinander oder mit anderen Systemen (autonom) zu interagieren. Solche "`Embedded Systems"' sind bereits heute überall gegenwärtig. Sei es in Autos, Wearables, Kühlschränken, Kaffeemschinen oder Smartphones.
 
+Nachfolgend werden die verschiedenen Phasen aufgelistet, welche die Entwicklung dieser "`Dinge"' bis heute durchlaufen haben.
+
+\todo{Grafik S. 4, DataAwareArchitecutre}
+\begin{itemize} 
+\item Polling (Reaktive Auslieferung) der Informationen auf dem Gerät
+\item Proaktive- (Push-) Auslieferung der Informationen vom Gerät.
+\item Fernsteuerung der Geräte
+\item Fernwartung der Geräte
+\end{itemize}
 
 \subsection{Gateway / Bridge}
 Die Aufgabe eines Gateways, ab und zu auch als Bridge bezeichnet, ist es, \gls{acr:IOT} Geräte mit einem Netzwerk zu verbinden. Oft sind \gls{acr:IOT}-Geräte nicht in der Lage sich direkt mit einem Netzwerk oder dem Internet zu verbinden. 85 \% aller \gls{acr:IOT}-Endgeräte sind heute nicht in der Lage direkt mit dem Internet zu kommunizieren \cite[S. 2]{E:Intel:WhitePaper:DevelopingSolutionsIoT}. Gemäss In solchen Situationen wird eine Gateway eingesetzt, welches diese Lücke schliesst. Eine weitere Aufgabe eines Gateways kann es sein, die von den verbundenen Geräten erhaltenen Daten zu filtern und anschliessend weiterzuleiten. Die Analyse der Daten erfolgt dann auf einem Server im Netzwerk oder in der Cloud. 
@@ -38,6 +47,9 @@ Die Aufgabe eines Gateways, ab und zu auch als Bridge bezeichnet, ist es, \gls{a
 \subsection{Back-End Systeme}
 Die Backe-End Systeme stehen oft in einem Netzwerk oder in der Public-Cloud, wo diese entsprechend den Bedürfnissen skaliert werden können. Zum Einsatz kommen Systeme zur Analyse (Stichtwort Big Data) und Auswertung der gesammelten Informationen. Je nach Anwendungsbereich können die gesammelten und ausgewerteten Daten über einen Computer oder ein mobiles Gerät abgerufen werden. Handelt es sich um ein Automatisierungssystem ist zusätzlich noch eine Steuer-Komponente integriert, welche auf Basis von Regeln oder Benutzereingaben den Geräten Befehle übermittelt.
 
+
+\subsection{Das "`Web of Things"'}
+Das "`Web of Things"' ist eine Architekturansatz, welcher vorsieht alle \gls{acr:IOT}-Geräte in das bestehende Internet / Web einzubinden. Dazu sollen bereits für das Web etablierte Standards wie zum Beispiel REST zum Einsatz kommen. Auf jedem Gerät müsste ein minimaler Web-Server vorhanden sein, durch welchen die Integration in das Web erfolgt. Der Vorteil dieser Architektur liegt darin, dass alle bestehenden Möglichkeiten des Webs voll ausgenutzt werden können. Der grösste Nachteil ist, dass die heutigen Web-Protokoll nicht sehr sparsam mit Ressourcen (Hardware, Strom) umgehen.
 
 \section{Unterschied zum Konzept des klassischen Internet}
 In der klassischen Auslegung des Internets stellen zentrale Server die Daten zur Verfügung, welche dann von Anwendern oder Bezügern abgerufen werden können. Die Datenhoheit liegt dabei bei diesen zentralen Servern. Kommuniziert wurde entweder von Server zu Server oder von Anwender / Bezüger zum Server. Es war immer ein Server als intermediär notwendig. Das \gls{acr:IOT} bringt nun einen Paradigmenwechsel mit sich. Die Geräte in einem \gls{acr:IOT} sind oder werden in der Lage sein autonom miteinander zu kommunizieren und zu interagieren. 

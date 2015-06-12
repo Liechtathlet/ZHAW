@@ -4,8 +4,10 @@ In diesem Kapitel werden die Anforderungen, Eigenheiten und Unterschiede des Sof
 Die Struktur dieses Kapitels orientiert sich an der Struktur des Buches "`Software Engineering Body of Knowledge"' \cite{B:IEEE:SWEBOOK}.
 
 
+\todo{Elem: Embedded Systems}
+Allgemein: Aufteilung nach IOT-Endgerät, Gateway, Back-End, Client, Querschnittsdomänen
 
-\subsection{Software Requirements}
+\section{Software Requirements}
 Im Requriements Engineering der Software Requriements gibt es im Vergleich zur Standard Domäne nur wenige Unterschiede. Der Hauptunterschied liegt darin, dass gewisse Anforderungen implizit durch die Domäne vorgegeben sind. Betroffen sind dabei sowohl Anforderungen auf Ebene Produkt, als auch auf Ebene Prozess. Nachfolgend werden einige Beispiele möglicher impliziter Anforderungen aufgelistet.
 
 \begin{itemize}
@@ -29,64 +31,236 @@ Neben den Anforderungen von Seiten des Kunden, beziehungsweise des Herstellers, 
 
 
 
-\subsection{Software Design}
-berücksichtigung design hw, nicht viel spielraum, u.u. keine frameworks, hochsprachen
-Software Design um Anforderungen zu erfüllen, Funktionalität: as much as , as less as possible, wenig / einfache Funktionalität (Endgerät), Gateway etwas mehr, schlank
+\section{Software Design}
+Aufgrund der Ausgangslage dieser Domäne gibt es einige Restriktionen im Bereich Software Design. Aufgrund der Einschränkungen auf Hardware-Seite können unter Umständen keine Hochsprachen oder grössere / komplexere Frameworks eingesetzt werden um die benötigte Software zu implementieren. Dies macht sich im Software Design bemerkbar, wo nach dem Prinzip "`As much as needed, as less as possible"' gearbeitet werden sollte. Nicht benötigte Funktionalitäten und Gimmicks verbrauchen auf \gls{acr:IOT}-Endgeräten wertvolle Ressourcen.
 
-Effiziente Nutzung Ressourcen (Prozesse Threads) Real-Time-OS, Verteilung sW auf HW, Wie Komponenten kommunizieren, Evtl. Einsatz on Middleware
+Handelt es sich bei der zu designenden Software um eine Software für ein \gls{acr:IOT}-Gateway oder ein \gls{acr:IOT}-Endgerät mit integriertem Gateway sieht es meistens etwas anders aus und der Einsatz einer Hochsprache und von spezialisierten Frameworks ist grundsätzlich sinnvoll. Aber auch hier wird es Hardware-Seitige Einschränkungen geben, welche berücksichtigt werden müssen.
 
-I.d.R: Keine Präsentations-Schicht, Data-Persistence: Vorhaltung nicht sinnvoll --> Realtime informationen, 
+Im Gegensatz zu einem Gateway stellt ein Endgerät in der Regel nur ein kleines Set an Funktionalitäten zur Verfügung. Zum Beispiel die Bereitstellung der Daten eines oder mehreren Sensoren. Der komplexeste Teil der Software stellt die Bereitstellung eines Kommunikationsstacks dar. Hier sollte wenn immer möglich ein geeigneter Standard oder etablierter proprietäres Protokoll genutzt werden. In der Regel stellt ein \gls{acr:IOT}-Endgerät keine direkte Präsentationsschicht und Datenhaltungsschicht zur Verfügung. Die Präsentation erfolgt entweder über ein Gateway oder über ein Back-End-System. Die Datenhaltung, beziehungsweise Historisierung, wird durch ein Back-End-System sichergestellt. 
 
-Berücksichtigung: Protokolle, Standards, Last-Anforderungen (Matching Standards / Protokolle und HW mit Anforderungen)
+Um eine gute und einfache Maschinen zu Maschinen Kommunikation zu ermöglichen, sollte ein möglichst hoher Abstraktionsgrad angestrebt werden. Durch den Einsatz von geeigneten Standard-Protokollen und Frameworks kann dies gut realisiert werden. Aktuell gibt es jedoch noch keine, beziehungsweise nur wenige, grossflächig etablierte Protokolle und Standards, welche speziell auf die Domäne \gls{acr:IOT} zugeschnitten sind. 
 
-Machine To Machine Connectivity, Wireless, API-Evolution in MInd
+\subsection{Betriebssysteme}
+Für \gls{acr:IOT}-Endgeräte und -Gateways werden in der Regel "`Embedded Operating Systems"' verwendet. Die Back-End-Systeme, und je nach Situation auch die Gateways, werden mit einem normalen Betriebssystem betrieben. Nachfolgend werden einige "`Embedded Operating Systems"' aufgelistet, welche heute verfügbar sind.
+
+\begin{itemize}
+\item TinyOS
+\item Contiki
+\item Mantis
+\item FreeRTOS
+\end{itemize}
+
+\subsection{Programmiersprachen}
+Je nach verwendeter Hardware und verwendetem Betriebssystem können verschiedenste Programmiersprachen zum Einsatz kommen.
+
+In den nachfolgenden Abschnitten werden ein paar Programmiersprachen im Kontext von \gls{acr:IOT} erläutert. Diese dienen aber nur als Illustration. Es gibt noch zahlreiche weitere Programmiersprachen, welche für die Entwicklung von Software in dieser Domäne eingesetzt werden können.
+
+\subsubsection{Assembler}
+Eine Implementation in Assembler kann unter bestimmten Voraussetzungen die beste Lösung für ein bestimmtes Problem sein. In der Regel wird der Assembler-Ansatz gewählt, wenn das Programm so effizient und sparsam wie möglich ablaufen und mit so wenig Ressourcen als möglich auskommen soll. Im Gegenzug erfordert die Entwicklung und Wartung mehr Aufwand und der Code ist erheblich komplexer, als wenn dieser in einer Hochsprache geschrieben wurde.
+
+Allenfalls kann es sinnvoll sein, nur gewisse kritische Teile der Anwendung in Assembler zu implementieren.
 
 
 
-\subsection{Software Construction} Chapter 4 / S. 61
+\subsubsection{C / C++}
+C und C++ kommen dann zum Einsatz, wenn ein hardwarenahe Programmierung erforderlich, aber trotzdem ein gewisses Niveau an Komfort und Abstraktion bei der Programmierung angestrebt wird. C und C++ werden im grossen und ganzen auf allen gängigen Betriebssystemen unterstützt. Der Code ist zwar nicht ohne Anpassung auf jedem Betriebssystem lauffähig. Der Aufwand dafür sollte sich in der Regel jedoch in Grenzen halten.
+
+
+
+\subsubsection{Java / .NET}
+Insbesondere bei Gateways und Back-End-Systemen ist die Implementation in einer Hochsprache wie Java und .NET sinnvoll.
+Eine Hochsprache benötigt jedoch mehr Ressourcen, was auf Endgeräten und Gateways unter Umständen zu Problemen führen kann. Für einige Hochsprachen gibt es eine Embedded-Variante (Zum Beispiel Java ME Embedded), welche für den Einsatz auf solchen Systemen optimiert sind. Im Vergleich zu einer Implementation in C oder C++ werden jedoch immer noch relativ viele Hardwareressourcen benötigt und werden daher meistens nur auf fähigeren, beziehungsweise teureren, Systemen eingesetzt.
+
+Für die Implementation kann es durchaus sinnvoll sein eine Hochsprache, wie Java oder .NET C\# einzusetzen. 
+
+
+
+\subsection{Standards}
+Existieren in einer Domäne Standards für die häufigsten Problemstellungen hat dies für den Endkonsumenten einen positiven Effekt. Durch die Standardisierung muss er sich nicht an einen spezifischen Hersteller binden und kann Produkte von verschiedenen Herstellern miteinander kombinieren. Er hat bei der Auswahl seiner Geräte beinahe völlige Wahlfreiheit. Im Gegensatz dazu sind die grossen Hersteller bestrebt, die Kunden so fest als möglich an sich zu binden, damit diese weitere Produkte aus ihrer Angebotspalette kaufen. Eine Standardisierung wird daher oft von grösseren Unternehmen erschwert. Oft werdne Standards erst definiert, wenn sich ein Protokoll oder eine Methodik erst etabliert, wenn sich diese auf dem Markt durchgesetzt hat. Mit dem \gls{acr:IOT} besteht nun die Chance bereits früh einen gewissen Grad an Standardisierung zu erreichen. Ein hoher Grad an Standardisierung impliziert einen höheren Abstraktionsgrad, was wiederum einige positive Effekte auf die Verwendung und Entwicklung der Produkte hat. \gls{acr:IOT} bereits begonnen gewisse Standards zu entwickeln. \todo{Bsp AllJoyn vs. iotivity}
+ 
+
+\subsection{Standards: Kommunikationsprotokolle}
+Die ersten Standards für die \gls{acr:IOT}-Welt haben sich im Bereich der Kommunikationsprotokolle entwickelt. Einige dieser Kommunikationsprotokolle wurden spezifisch für das \gls{acr:IOT} entwickelt, andere gibt es schon länger und wurden ursprünglich für einen anderen Zweck definiert.
+
+Nachfolgend werden die wichtigsten Kommunikationsprotokolle für den Bereich \gls{acr:IOT} beschrieben.
+
+Grafik: http://electronicdesign.com/embedded/understanding-protocols-behind-internet-things 
+
+
+\subsubsection{MQTT}
+Das \gls{acr:MQTT} ist ein leichtgewichtiges "`Publish / Subscribe"' Protokoll welches für die Fermessung, Remote Monitoring und Datensammlung eingesetzt wird. Es wird vorwiegend in grossen Netzwerken mit vielen kleinen Geräten eingesetzt, welche überwacht und kontrolliert werden müssen. Die Hauptaufgabe von \gls{acr:MQTT} liegt beim Sammeln von Daten von vielen verschiedenen Endgeräten. \gls{acr:MQTT} hat ein einfache Paket-Struktur und basiert auf \gls{acr:TCPIP}, wodurch sichergestellt wird, dass keine Daten verloren gehen. \gls{acr:MQTT} ist dafür ausgelegt die Daten zu Sammeln und anschliessend an Enterprise Technologien, wie zum Beispiel einen \gls{acr:ESB}, weiterzugeben.
+
+Das Protokoll ist jedoch nicht für die direkte \gls{acr:D2D}-Kommunikation geeignet und arbeitet nicht in Real Time. Die Daten werden mit einer Verzögerung von bis zu mehreren Sekunden übermittelt und verteilt.
+
+Für \gls{acr:MQTT} wird ein zentrale Server, ein sogenannter \gls{acr:MQTT}- oder Message-Broker benötigt. Dieser ist dafür zuständig die eingehenden Nachrichten den interessierten Clients zu verteilen. Die Clients senden dem Message-Broker entweder Daten für ein bestimmtes Thema ("`Topic"') oder registrieren sich für ein bestimmtes Thema, um die übermittelten Daten zu erhalten.
+
+
+
+\subsubsection{XMPP}
+Das \gls{acr:XMPP} wurde ursprünglich als Protokoll für den Instant Messaging Dienst Jabber entwickelt. \gls{acr:XMPP} ermöglicht eine Text-Kommunikation zwischen "`Punkten"'. Die Kommuunikation erfolgt nicht direkt von Punkt zu Punkt sondern über einen dezentralisierten Server. \gls{acr:XMPP} ist ein offener Standard und somit kann jeder seinen eigenen Server betreiben. Die Stärken von \gls{acr:XMPP} liegen bei der Adressierung, der Sicherheit und der Skalierbarkeit, wobei aktuell noch keine End-To-End Verschlüsselung unterstützt wird. Die Adressierung erfolgt über das Schema \textit{username@domain.com/resource}. Das Protokoll ist ideal für Consumer-Orientierte Anwendungen.
+
+Auch \gls{acr:XMPP} basiert auf \gls{acr:TCPIP}, kann aber auch über \gls{acr:HTTP} oder \gls{gls:WebSocket}'s. Der Datenaustausch erfolgt in "`near-real-time"', also beinahe Echtzeit.
+
+
+
+\subsubsection{AMQP}
+Das \gls{acr:AMQP} ist ein binäres transaktionsbasiertes Nachrichten Protokoll, welches für den Einsatz in Nachrichten-orientierter Middleware konzipiert wurde. Es ist in der Lage tausende von zwischengespeicherten Transaktionen ohne Datenverlust zu verarbeiten. Das Protokoll ist darauf ausgelegt keine Daten zu verlieren. Als Basis dient ein zuverlässiges, beziehungsweise im Hinblick auf Daten verlustfreies, Transport-Protokoll wie zum Beispiel \gls{acr:TCPIP} und verschieden definierbare Nachrichtenübermittlungsgarantien. \gls{acr:AMQP} bietet verschiedene Kommunikationsarten wie Zum Beispiel "`Publish / Subscribe"', "`Request / Response"' und "`Store and Forward"'. 
+
+Im Gegensatz zu anderen Standardisierungsversuchen im Middleware-Bereich setzt \gls{acr:AMQP} nicht auf dem API-Level, sondern auf dem Wire-Level. Somit wird eine Kommunikation zwischen verschiedenen Middleware-Plattformen ermöglicht.
+
+
+
+\subsubsection{HTTP}
+Das \gls{acr:HTTP} ist ein auf \gls{acr:TCPIP} zustandsloses Protokoll zur Übermittlung von Daten auf Anwendungsebene. \glossary{acr:HTTP} wird im Web praktisch überall eingesetzt und kann sich auch für den Einsatz im \gls{acr:IOT} eigenen.
+
+
+
+\subsubsection{WebSocket}
+WebSocket ist ein ermöglicht eine Voll-Duplex Kommunikation über eine einzelne \gls{acr:TCP}-Verbindung. Das WebSocket Protokoll ermöglicht eine bessere Kommunikation zwischen Browsern und Webseiten / Servern. Jeder der Verbindungsteilnehmer kann jederzeit Daten an den anderen Teilnehmer senden.
+
+
+
+\subsubsection{CoAP}
+Das \gls{acr:COAP} ist ein leichtgewichtes, binäres Protokoll, welches speziell für kleine, beziehungsweise ressourcenarme  Geräte konzipiert wurde. Semantisch ist \gls{acr:COAP} and \gls{acr:HTTP} ausgerichtet und die Übersetzung von \gls{acr:COAP} nach \gls{acr:HTTP} ist möglich. Wie auch \gls{acr:HTTP} basiert \gls{acr:COAP} auch auf dem \gls{gls:REST}-Modell. Es können somit Ressourcen unter bestimmten URL's angeboten werden, welche über GET, POST, PUT und DELETE angesprochen werden können. \gls{acr:COAP} zeichnet sich durch seine Einfachheit, Multicasting-Fähigkeit, den geringen Overhead, die Unterstützung von Geräte-Erkennug (Device-Discovery), einen einfachen "`Publish / Subscribe"'-Mechanismus und ein einfaches Caching aus. \gls{acr:COAP} verwendet \gls{acr:UDP} als Transportprotokoll.
+
+
+\subsubsection{ZigBee}
+
+\subsubsection{Z-Wave}
+
+\subsubsection{6LoWPAN}
+
+\subsubsection{ANT}
+
+\subsubsection{Bluetooth}
+
+\subsubsection{EnOcean}
+
+\subsubsection{DASH7}
+
+\subsubsection{ISA100}
+
+\subsubsection{Wireless HART}
+
+\subsubsection{Wireless M-Bus}
+
+\subsubsection{EtherCAT}
+
+\subsubsection{Modbus}
+
+\subsubsection{Profinet}
+
+\subsubsection{HomePlug}
+
+\subsubsection{HomeGrid}
+
+\subsection{Standards: Middleware}
+\subsubsection{DDS}
+Das \gls{acr:DDS} 
+Data Distribution Service, Geräte welche direkt Geräte-Daten verwenden, Verteilung zu anderen Geräten, Interaktion mit Infrastruktur unterstützt, Daten-zentrierter Middleware-Standard, Wurzeln: High-Performance Verteidigung, Industrie, Embeddedd Applications, effektiv: millionen von nachrichten pro sekunde zu mehreren gleichzeitigen empfängern
+
+
+Publish, Subscribe Architecture
+
+Unterschied: Daten an Infrastruktur oder an anderes Gerät, Geräte sind schnell, mit vielen Geräten kommunizieren, TCP Point to Point to restriktiv, DDS: Detailierte qualitiy of service conrol, multicast, konfigurierbare verfügbarkeit, Redundanz
+
+Filter und Selektion von Daten, bzw. Bestimmung was wohin geht
+
+Direct Device-to-device bus, relational data model, ähnlich Datenbank, 
+
+Z.B.: Militär, Windparks, Asset-Tracking, Fahrzeug Test und Sicherheit
+ Distribute Device Data, fast bus for integrating intelligent machines (D2D)
+
+Wann: Chaos / Desaster wenn für 5min offline?, Performance sehr wichtig (ms / us) / mehr als 100 Anwendungen / mehr als 10'000 Datenwerte, code mehr als 3 Jahre entwickelt?
+
+\subsection{Weitere Protokolle}
+Device-Discovery
+
+\subsection{Frameworks}
+In diesem Kapitel werden einige Frameworks vorgestellt, welche ....
+
+Frameworks --> mobile / web --> Vereinfachung Entwiclung, Abstraktion Implementations-Details, 
+apache ISIS?
+http://iot.eclipse.org/java/open-iot-stack-for-java.html
+
+AllSeen
+IOTIVITY
+
+\subsection{Thread}
+Protokolle: Thread, Netzwerk-Protokoll, Fokus: Security, Low Energy, notwendiger Chip, schon in vielen Geräten vorhanden, gestützt auf 6LoWPAN, IPv6 over Low power Wireless Personal Area Network, 
+
+
+\subsection{AllJoyn}
+Qualcomm entwickelt, anschliessend: Linux Foundation, AllSeen Alliance (Cisco, Microsoft, LG, HTC, ...)
+Verbindung, Wartung Geräte in WLAN-Netzwerk, Kontrolle, Benachrichtungs Service, 
+
+
+\subsection{Komplett-Lösungen}
+
+
+
+\section{Software Construction} 
+
+Unit, Integration Testing, Standards verwenden --> Sicherstellung Wiederverwendbarkeit, Kompatibilität, Update-Möglichkeit einbauen, evtl. sehr langer Einsatz ohne Update, Hardware berücksichtigen, Configuration Language, Toolkis Languages, Programming languages, Optimierung, Tuning, Reuse
+
 Je nach Anwendungsbereich: Hardwarenahe, Optimierung
-Für die Entwicklung von Anwendungen für \gls{acr:IOT}-Geräte können
-https://www.rti.com/company/careers/software-engineer.html grundsätzlich
-
-
-Firmware für Spezifische Hardware, Adressierung Netzwerk- und Verbindungsprobleme, Security
+Für die Entwicklung von Anwendungen für \gls{acr:IOT}-Geräte können grundsätzlich, 
+Firmware für Spezifische Hardware, Adressierung Netzwerk- und Verbindungsprobleme, Security, oft nur eine spezifische Aufgabe, Integration Test wichtig HW, System Test (Interaktion mit Gateway, Netz, andere Geräte), Test update-Prozess, Test in Echtumgebung, keine Oberfläche
 
 
 
-\subsection{Software Testing}
-Wenn bei Consumer: Update evtl. schwierig, Fehlfunktion schwerwiegend,
+\section{Software Testing}
+Das Testing, ist wie in allen Domänen, ein essentieller Bestandteil des Software Entwicklungs Prozesses. In dieser Domäne ist das Testing noch wichtiger, da die \gls{acr:IOT}-Endgeräte allenfalls niemals ein Update erhalten (können). \gls{acr:IOT}-Geräte werden in grossen Massen hergestellt und auch eingesetzt. Wurden zum Beispiel in einer Öl-Pipeline durch die Wüste mehrere Tausend Sensoren installiert, welche Messwerte und Überwachungsdaten liefern, kann sich die Korrektur eines Fehlers als sehr schwierig herausstellen. Entweder verfügt das Gerät über eine entsprechende Update-Funktionalität und hat eine Verbindung zu einem Backend-System, der Update erfolgt manuell durch einen technischen Mitarbeiter oder das Gerät wird komplett ausgetauscht. Trotzdem, dass ein Gerät über eine Update-Schnittstelle und eine Verbindung zu einem Netzwerk verfügen kann, kann es vorkommen, dass ein Update aufgrund mangelnder Hardware-Ressourcen oder zu geringer Bandbreite nicht übertragen oder eingespielt werden kann.
 
-Test: Nachbildung physische Umgebung, komplexe Szenarien, Netzwerk-Anforderungen, 
+Auch haben Fehler üblicherweise grosse Auswirkungen und sind oft von der Ferne nur schwer festzustellen. Liefern die Sensoren der erwähnten Öl-Pipeline falsche Daten über den Zustand der Leitung, wird gegebenenfalls ein Leck oder ein entstehender Riss nicht rechtzeitig entdeckt.
 
+Dies führt auch bereits zu einem weiteren wichtigen Punkt. \gls{acr:IOT}-Endgeräte und zum Teil auch Gateways können unter verschiedensten physikalischen Bedingungen eingesetzt werden. Bei Servern kann man in der Regel davon ausgehen, dass diese in einem mehr oder weniger gut klimatisierten Rechenzentrum oder einem Server-Raum stehen. Die Bandbreite an physikalischen Einflüssen ist relativ überschaubar. Bei \gls{acr:IOT}-Geräten sieht das etwas anders aus, dort sind die Einflüsse und Bedingungen nur schwer vorhersehbar. Daher haben die meisten Hersteller entsprechende Labor-Umgebungen, wo Hard- und Software unter Extrembedingungen getestet werden.
 
+Nicht nur die Umwelt kann einen Einfluss auf die Geräte haben, sondern auch das verwendete Netzwerk oder die Architektur des Netzwerkes. Auch dafür werden entsprechende Testumgebungen benötigt. Zusätzlich muss die Interaktion mit unbekannten Drittgeräten getestet werden.
 
-\subsection{Software Maintenance}
-Schwierig,...
-Immer connected --> regular updates, wenn nicht regelmässig upgedatet --> Verlust kritischer Funktionalität, Continuous Delivery
-
-Nicht überall möglich, Low-Bandwith, Hardware-Near Devices
+Ein intensives und umfassendes Testing resultiert in einer hohen Qualität. Da auf den Endgeräten nur ein geringes Set an Funktionalitäten verfügbar sind, gestaltet sich das Testing an dieser Stelle etwas einfacher, was aber durch die umfangreicheren Tests mit externen Einflüssen kompensiert wird.
 
 
 
-\subsection{Software Configuration Management}
+\section{Software Maintenance}
+Die Maintenance von Software welche für \gls{acr:IOT}-Endgeräte entwickelt wurde ist schwierig, beziehungsweise aufwändig. Wie bereits im vorangehenden Kapitel aufgezeigt, kann die Software auf \gls{acr:IOT}-Endgeräte schwierig zum updaten sein. Ist ein entsprechender Update-Mechanismus vorhanden, ist ein besonders Augenmerk auf den Rollout zu legen, da schnell mehrere 10'000 Geräte betroffen sein können. Muss das Gerät ausgetauscht, die Energiequelle erneuert oder die Software manuell aktualisiert werden, können hohe Maintenance-Kosten entstehen. 
+
+
+\section{Software Configuration Management}
+Das Software Configuration Management ist für den Rollout von Updates sehr wichtig, da unter Umständen verschiedene Versionen von Hardware und Software im Einsatz sein können. Stürzt ein gerät
+
+
+Wichtig für ausrollen von Updates, Kompatibilität evtl. Firmware auf verschiedenen HW-Typen, hand in hand mit Configuration Mgmt, Software Configuration Control: wichtige Aufgabe, Freigabe: SW configration Control board, 
+
+Wichtig Prozess, intensive Retests
+
+SW Release Management and Delivery
 
 
 
-\subsection{Software Engineering Management}
+\section{Software Engineering Management}
+Das Software Engineering Management entspricht grundsätzlich dem Vorgehen in der Standard-Domäne. Es müssen jedoch allen Beteiligten die Eigen- und Besonderheiten dieser Domäne bekannt sein. Besonderes Gewicht ist dem Risk und Quality Management beizumessen.
 
 
 
-\subsection{Software Engineering Process}
+\section{Software Engineering Process}
 Defect Tracking, small scale projects, fast product turnaroudn, 
 
 
 
-\subsection{Software Engineering Tools and Methods}
+\section{Software Engineering Tools and Methods}
+SW-Construction: Specific für SW, 
+SW-Testin: speziell, evtl. spezifisch programmiert, 
+
+Methoden: Entweder Strukturiert, Daten-Orientiert, Objekt-Orientiert oder Spezifisch (z.B. Real-Time)
 
 
+\section{Software Quality}
+Höhere Qualität notwendig, übergeordnetes ziel, 
 
-\subsection{Software Quality}
-Höhere Qualität notwendig
+
+\section{Verwandte Disziplinen}
+Es gibt einige weitere Disziplinen, welche aufgrund der starken Innovationskraft einen grossen Einfluss auf die Domäne "`Internet of Things"' und das Software Egineering haben. Dies sind unter anderem das Computer Engineering, Computer Science, Mathematik und System Engineering.
 
 
 
@@ -109,8 +283,6 @@ http://link.springer.com/chapter/10.1007%2F978-3-642-31479-7_47#page-1
 Layer: Transport-Layer: TCP zum Teil overkill für IOT-Device --> UDP
 UDP: beser geeignet für relatime-data, TCPS Acknowledgment and retransmission unnützer overhad für solche Anwendungen (Stück sprache nicht rechtzeitig übermittelt -> Retransmission sinnlos), 
 
-
-Klassische Ansätze nicht alle geeignet für IoT, 
 
 Service-based Application: composition and orchestration of Services
 
@@ -142,141 +314,6 @@ http://link.springer.com/chapter/10.1007%2F978-3-642-36818-9_6#page-1
 
 
 Protokolle / Standards für verschieden Phasen: Collect Data, Access, Process, Collect, Control / distribute
-
-\section{Programmiersprachen}
-
-C, C++, Zum Teil: Java --> OS benötigt, von daher C,C++ und Java
-Java benötigt nicht zu vernachlässigendd Ressourcen, z.B. Oracle Java ME Embedded: Memory: 130 KB - 700 KB, ROM: 350 KB - 2000 KB, + Netzwerkstack, Kernel, nicht mehr ein embedded system, Java nur auf fähigeren, teurerern Systemen
-
-\subsection{Assembler}
-Eine Implementation in Assembler kann unter bestimmten Voraussetzungen die beste Lösung für ein bestimmtes Problem sein. In der Regel wird der Assembler-Ansatz gewählt, wenn das Programm so effizient und sparsam wie möglich ablaufen und mit so wenig Ressourcen als möglich auskommen soll.
-
-
-
-\subsection{C / C++}
-
-
-\subsection{Java / .NET}
-Für die Implementation kann es durchaus sinnvoll sein eine Hochsprache, wie Java oder .NET C\# einzusetzen. 
-
-\section{Protokolle und Standards}
-
-Grafik: http://electronicdesign.com/embedded/understanding-protocols-behind-internet-things 
-
-Viele Implementationen:
-MQTT: Collect device data, send to server, D2S
-CoAP
-XBEE
-XMPP: Access device data, connect device to people, D2S
-DDS: Distribute Device Data, fast bus for integrating intelligent machines (D2D)
-HTTP
-AMQP (IOT-Client-Seitig?), Queuing system to connect servers to servers (S2S)
-
-https://www.sparkfun.com/news/1705
-http://micrium.com/iot/internet-protocols/
-
-\subsection{MQTT}
-Message Queue Telemetry Transport, Device Data Collection, Haupfaufgabe: Fernmessung, Remote Monitoring, Datensammeln und an Infrastruktur ausliefern, Anwendungszweck: Grosse Netzwerke von kleinen Geräte, welche überwacht und kontrolliert werden müssen. Basis: TCP (kein Datenverlust)
-
-Publish / Subscribe, central Server, Subscribe to Topics, MQTT-Broker, Notify all connected devices, 
-Hub and Spoke System: Geräte --> Data Verbindung zu Server, System ist designt, um daten an enterprise technologien weiter zu geben (z.B. ESB)
-
-Kein Protokoll für D2D, nicht mehrere Empfänger der Daten, wenige Kontrollmöglichkeiten, muss nicht schnell sein --> kein rela time (sekunden)
-
-Ziel: Conserve Power and Management
-Bsp: ÖL Pipeline, Energieverbrauch Überwachung, Licht-Kontrolle
-
-Lightweight packet structure, dokumentation auf einer Seite
-
-
-Wann: Thing of it as a Collection?  Wenig Device2Device Kommunikation? Sehr viele Geräte?, Sehr kleine Geräte? 
-
-\subsection{XMPP}
-Ursprünglich: Jabber, entwickelt für Instant messaging
-Extensible Messaging and Presence Protocol
-
-Text-Kommunikation zwischen Punkten
-
-XML, über TCP (oder HTTP over TcP?)
-
-Stärke: Adressierungs-Schema: name@domain.com, Security, Skalierbarkeit 
---> Ideal für Consumer-Oriented applications
-
-Einfacher Weg Gerät zu adressieren, nicht schnell --> Polling oder Check for Updates on demand, 
-
-Einsatz: z.B. Heimautoation --> Thermostat mit Web verbinden
-
-Wann: Use the word "`my"'?, Wenige Verbindungspunkte in grossem Netz? Speed / CPU nicht wichtig? Immer Verbunden?
-
-\subsection{DDS}
-Data Distribution Service, Geräte welche direkt Geräte-Daten verwenden, Verteilung zu anderen Geräten, Interaktion mit Infrastruktur unterstützt, Daten-zentrierter Middleware-Standard, Wurzeln: High-Performance Verteidigung, Industrie, Embeddedd Applications, effektiv: millionen von nachrichten pro sekunde zu mehreren gleichzeitigen empfängern
-
-
-Publish, Subscribe Architecture
-
-Unterschied: Daten an Infrastruktur oder an anderes Gerät, Geräte sind schnell, mit vielen Geräten kommunizieren, TCP Point to Point to restriktiv, DDS: Detailierte qualitiy of service conrol, multicast, konfigurierbare verfügbarkeit, Redundanz
-
-Filter und Selektion von Daten, bzw. Bestimmung was wohin geht
-
-Direct Device-to-device bus, relational data model, ähnlich Datenbank, 
-
-Z.B.: Militär, Windparks, Asset-Tracking, Fahrzeug Test und Sicherheit
-
-
-Wann: Chaos / Desaster wenn für 5min offline?, Performance sehr wichtig (ms / us) / mehr als 100 Anwendungen / mehr als 10'000 Datenwerte, code mehr als 3 Jahre entwickelt?
-\subsection{AMQP}
-Advanced Message Queuing Protocol, ab und zu: IOT-Protokoll, transaktionsbasierte Nachrichen zwischen Servern, message-centric-middleware, proces thousands of reliable queued transactions, Fokus: kein Nachrichtenverlust, Publishers --> Exchanges, queues to subscribers: TCP, acknowledge acceptance of message, optional transaction mode with formal multiphase commit sequence
-
-Hauptsächlich: Business messaging, device - back-office data centers
-
-IOT: appropriate for control plane oder server-basierte analyse funktionen
-
-Wann: Verteilung von Arbeit / nicht information?, Nur a zu B senden? Speed / CPU nicht wichtig? Nichts darf verloren gehen?
-\subsection{HTTP}
-Basis für Client-Server-Model im Web, Sichere Methode: auf Device nur Client implementiersen
-
-\subsection{WebSocket}
-Protokoll, Full-Duplex Communication über einzelne TCP-Verbindung zwischen Client und Server, Zeilt HTML5 Spec
-
-\subsection{CoAP}
-Web-Protokolle z.T. zu schwer für IOT-Geräte, Constrained Application Protocol for low-power and constrained networks, RESTful protocol, semantisch an HTTP ausgerichtet, 1:1 Mapping von / zu HTTP
-
-UDP, + einige nachgebildete TCP-Funktionen, Request / Responses: Asynchron via CoAP Messages, Header, Method, Status Codes binary encoded, Reduktion Overhead, Caching abhängig von Response-Code (HTTP: Request Method)
-
-Comparison of Protocol-Stacks: http://micrium.com/iot/internet-protocols/
-
-Leichtgewichtige Alternative zu HTTP, CoAP Packets: all around bitmapping
-
-\subsection{Thread}
-Protokolle: Thread, Netzwerk-Protokoll, Fokus: Security, Low Energy, notwendiger Chip, schon in vielen Geräten vorhanden, gestützt auf 6LoWPAN, IPv6 over Low power Wireless Personal Area Network, 
-
-
-\subsection{AllJoyn}
-Qualcomm entwickelt, anschliessend: Linux Foundation, AllSeen Alliance (Cisco, Microsoft, LG, HTC, ...)
-Verbindung, Wartung Geräte in WLAN-Netzwerk, Kontrolle, Benachrichtungs Service, 
-
-\section{Frameworks}
-In diesem Kapitel werden einige Frameworks vorgestellt, welche ....
-
-Frameworks --> mobile / web --> Vereinfachung Entwiclung, Abstraktion Implementations-Details, 
-apache ISIS?
-http://iot.eclipse.org/java/open-iot-stack-for-java.html
-
-\subsection{Kommunikation zwischen \gls{acr:IOT}-Geräten}
-AllSeen
-IOTIVITY
-Z-Wave
-
-
-
-
-
-
-6LoWPAN, ANT, Bluetooth, DASH7, ISA100, Wireless HART, Wireless M-Bus, Z-Wave, Zigbee / Zigbee IP, EnOcean, EtherCAT, Modbus, Profinet, HomePlug, HomeGrid
-
-
-Voraussetzung Zugriff Internet: IPv6 Pflicht, Non-IP Geräte; Gateway
-
 
 Middleware / Platforms / OS: http://postscapes.com/internet-of-things-software-guide
 

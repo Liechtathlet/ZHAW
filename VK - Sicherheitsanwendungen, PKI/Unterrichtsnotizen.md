@@ -554,102 +554,191 @@ Pre-Shared-Secret zwischen TGS und Application-Server
 
 #Prüfungsbesprechung
 ##Aufgabe 1
-  a.  Stufe D
-  b.  CIA
-  c.  Signatur erstellen, Verschlüsseln, Session-Key transferieren
-  d.  Digital Signature, Key-Encipherment, Content-Commitment
-  e.  id-kp-emailProtection
+  -  Stufe D
+  -  CIA
+  -  Signatur erstellen, Verschlüsseln, Session-Key transferieren
+  -  Digital Signature, Key-Encipherment, Content-Commitment
+  -  id-kp-emailProtection
 
 ##Aufgabe 2
-  a.  Unterschied Anwendung Privater Schlüssel explizit und implizite Authentifizierung  
+  -  Unterschied Anwendung Privater Schlüssel explizit und implizite Authentifizierung
       Explizit: Private Key zum verschlüsseln, Implizit: Public Key zum verschlüsseln
-  b.  Anforderungen an ausgetauschte Authentifizierungstoken
+  -  Anforderungen an ausgetauschte Authentifizierungstoken  
       Typischer Angriff: Replay, Random-Number
-  c.  Verfahren / Funktion wird digitale Signatur aufgebaut (nach ISO/IEC 9798 Notation)  
+  -  Verfahren / Funktion wird digitale Signatur aufgebaut (nach ISO/IEC 9798 Notation)  
       SSA(n)) = eSa(H(n))
-  d.  Was ist eine Authentifizierung:  
+  -  Was ist eine Authentifizierung:  
       Prozess in dem Sicherheit über Identitäts-Behauptung gewonnen wird
-  e.  Identifikator:
+  -  Identifikator:
       AHV-Nummer
 
 ##Aufgabe 3
-  a.  Grundobjekte AD-Baum
+  -  Grundobjekte AD-Baum  
       Knoten, Blatt
-  b.  oberstes Element in Verzeichnisbaum?
+  -  oberstes Element in Verzeichnisbaum?  
       Root
-  c.  Distinguished Name "Nicole Roux":
+  -  Distinguished Name "Nicole Roux":  
       dn={cn=Nicole Roux,ou=Buchhaltung,c=Example,c=ch}
-  d.  Relativ DSN "Frank" unter Example:
+  -  Relativ DSN "Frank" unter Example:  
       rn={cn=Frank Roda,ou=Management} (Kontext: Eample)
-  e.  Kontext
+  -  Kontext
 
 ##Aufgabe 4
-  a.  Anforderungen an fortgeschrittene Signaturen  
+  -  Anforderungen an fortgeschrittene Signaturen
       - Siehe Script Kurs3_v2
-  b.  Zusätzliche Anfroderungen bei Qualifizierte Signatur
+  -  Zusätzliche Anfroderungen bei Qualifizierte Signatur  
       Qualifiziertes Zertifikat (Natürliche Person), erzeugt mit sicheren Signaturerstellungseinheit (SSCD)
-  c.  Schweizweit geregelte elektronische Signatur  
+  -  Schweizweit geregelte elektronische Signatur
       Qualifizierte Signaturen
-  d.  Qualifiziertes Zertifikat für Web-Server?  
+  -  Qualifiziertes Zertifikat für Web-Server?
       nein
-  d.  Bitmap Unterschrift als elek. Siggnatur?  
+  -  Bitmap Unterschrift als elek. Siggnatur?
       Ja
-  e.  RFC-Standard für Erweiterung, wie wird Segemntqualifier
+  -  RFC-Standard für Erweiterung, wie wird Segemntqualifier  
       Ja, jeder kann qualifiziertes Zertifikat ausstellen
 
 ##Aufgabe 5
-  a.  Typ PSE im Firefox / Microsoft?  
+  -  Typ PSE im Firefox / Microsoft?  
       Software
-  b.  Standard API Smaartcard Browser  
+  -   Standard API Smaartcard Browser  
       PKCS#11
-  c.  PKCS#7
-  d.  Backup, rollen
+  -  PKCS#7  
+  -  Backup, rollen  
 
 ##Aufgabe 6
-  a.  Unterschied ASN.1 SEQUENCE, SET  
+  -  Unterschied ASN.1 SEQUENCE, SET  
       Reihenfolge
-  b.  Beschreibung Element "Description"
-  c.  Klassen Bezeichnerfeld, strukturierte Klasse  
+  -  Beschreibung Element "Description"
+  -  Klassen Bezeichnerfeld, strukturierte Klasse  
       6, Constructed, Private, Application
-  d.  Bit-String DER-Kodierung für '10011'B
+  -  Bit-String DER-Kodierung für '10011'B
 
 ##Aufgabe 7
-  a.  Zertifikatshierarchie grafisch  
+  -  Zertifikatshierarchie grafisch  
       Root, CA, Cert
-  b.  Erweiterung für Darstellung Zertifikatspfad im Browser  , Eintrag in Hierarchie  
+  -  Erweiterung für Darstellung Zertifikatspfad im Browser  , Eintrag in Hierarchie  
       Subject-Key-Identifier, Authority-Key-Identifier
-  c.  Was steht im Subject- / Issuer-Attribut der SwissMarathon Root CA?  
-  d.  2 x das gleiche
-  e.  Unterschieden sich die öffentlichen Schlüssel in einem Root-Zertifikat
+  -  Was steht im Subject- / Issuer-Attribut der SwissMarathon Root CA?  
+  -  2 x das gleiche
+  -  Unterschieden sich die öffentlichen Schlüssel in einem Root-Zertifikat
       Nein
-  f.  Was steht im Subject- / Issuer-Attribut Ihres Client-Zertifikats?  
+  -  Was steht im Subject- / Issuer-Attribut Ihres Client-Zertifikats?  
       Subject: E-Mail, Land, Name (DN)
-  g.  Erweiterung mit Attributfeldern in Zertifkaten wird immer benötigt?
+  -  Erweiterung mit Attributfeldern in Zertifkaten wird immer benötigt?
       Basic Constraints, Wichtig, CA + Pfad-Länge
-  h.  Attribute für Gültigkeitsdauer von 3 Jahren in Ihrem Zertifikat, ausgehend von Heute  
-  i.  Erweiterung für URL für OCSP-Dienst  
-  j.  Erweiterung URL für Verzeichnisdienst CA?  
+  -  Attribute für Gültigkeitsdauer von 3 Jahren in Ihrem Zertifikat, ausgehend von Heute  
+  -  Erweiterung für URL für OCSP-Dienst  
+  -  Erweiterung URL für Verzeichnisdienst CA?  
       Subject-Info-Access
 
 ##Aufgabe 8
 SSL/TLS-Authentifizierung, Endbenutzerzertifikat, Portalzugang mit Authentifizierungssignatur mit SHA1, SHA256, 2 Verschiedene Hashverfahren
-  a.  Mit Endbenutzerzertifikat möglich?  
+  -  Mit Endbenutzerzertifikat möglich?  
       Ja
-  b.  Wenn ja, wo Hashfunktion spezifiziert?
+  -  Wenn ja, wo Hashfunktion spezifiziert?
 
 ##Aufgabe 9
-  a.  Welches Feld CRL Seriennummer und Datum wiederrufenes Zertifikat  
+  -  Welches Feld CRL Seriennummer und Datum wiederrufenes Zertifikat  
       Revoke Certificate
-  b.  Geläufige optionale Erweiterung?  
+  -  Geläufige optionale Erweiterung?  
       Reason
 
 ##Aufgabe 10
-  a.  Mind. Inhalt Antwort in OCSP-Anfrage?
+  -  Mind. Inhalt Antwort in OCSP-Anfrage?
       Status
-  b.  Welches Attributfeld Referenzwert Wiederruf Zertifikat, wie heisst er?  
+  -  Welches Attributfeld Referenzwert Wiederruf Zertifikat, wie heisst er?  
       SingleResponse: Serial-Nummer, Status
-  c.  OCSP-Anfrage mehrere oder ein Zertifikat bezüglich Wiederruf anfragen?  
+  -  OCSP-Anfrage mehrere oder ein Zertifikat bezüglich Wiederruf anfragen?  
       Nur eines
-  d.  Feld Wiederrufsgrund OCSP-Anfrage?  
+  -  Feld Wiederrufsgrund OCSP-Anfrage?  
       RevokedInfo
-  e.  OCSP-Antwort mit entsprechenden Attributen für ihr Client-Zertifikat
+  -  OCSP-Antwort mit entsprechenden Attributen für ihr Client-Zertifikat
+
+
+#Chip-Karten
+ID-1: z.B. Krankenkassen-Karte, ID-00: z.B. SIM-Karte, ID-000: Nano, Micro SIM-karten
+
+**Kartentypen:** Reine Speicherkarte (256 Byte EEPROM), Intelligente Speicherkarte (Sicherheitslogik R/W --> SIM), Mikroprozessorkarte (Smartcard, Speicher + CPU mit OS), Kryptokarte (Prozessorkarte + Coprozessor für Krypto), Multi-Applikations-Karte (z.B. JAvaCard mit JVM)
+
+**Karte:** Einschub in Lesegerät, immer Reset
+
+**Kontaktlose Chipkarten:** Induktive Kopplung (über spule, z.B. via Amplitudenmodulation), Kapazitive Koppelung (leitende Fläche, Kondensatorplatten, nur für Datenübermittlung), Kombination möglich
+
+**Aufbau einer Chipkarten-Applikation:** Sequentiell APDU-Befehle absetzen, nacheinander, State-Machine aus Sicherheitsgründen, Hash-Wert der PIN auf Karte, Klass 2/3-Leser (2: Nur Tastatur, 3: + Display), Zertifiziert, sodass Daten nicht ausgelesen werden können, APDUs auf Schicht 7, nur Schichten 1,2,7, 9600 Bit/Sekunde, nicht für grosse Datenmengen,
+
+##Kommunikation mit dem Terminal
+  - Request:
+    - CLA:  Normal 00
+    - INS:  Instruktion für Chip (1 Byte)
+    - P1, Pa: Parameter für Befehl / Instruktion
+    - Le:   Längenfeld der mitgesendeten Daten
+    - Data: Daten (max 64 kBytes)
+    - Le:   Länge erwarteten Daten
+  - Response
+    - Data: Datenfeld (otpional)
+    - SW1, SW2: Returncodes
+###Protokoll T0
+Kleinste übertragene Einheit: Byte, Bitorientiert, Rückwärtskompatibilität, max 256 Byte übertragen, Layer 2
+
+###Protokoll T1
+Kleinste übertragene Einheit: Datenblock, Abbildung APDU, sicherer, 64 kByte transferieren
+
+##Chipkarten OS
+Native (C) und interpreterbasierte OS (C, Java), JAvaCard, BasicCard, Multos
+
+##Struktur des Dateisystemes
+Aufbau: Master-File (3F00), Dedicated Files (Ordner), Elementary Files (Dateien), EF unter MF oder DF, **File Identifier: ** Adressierung Files (meistens 2 Byte oder 1 Byte), zum Tei Identifier fix (z.B. MF: 3F00), **Application Identifier (AD):** DF einer AID zugeordnet, Java-Card: Security Domains, Vergabe via AID
+
+###Dateistrukturen EFs
+**Transparent:** Read / Write / Update Binary, ähnlich Floppy-Disk, keine innere Struktur, byte- oder blockweise
+**Linear Fixed:** Record-Struktur, feste Struktur mit fester Länge, Struktur im FCP
+**Linear variable:** Record-Struktur, variable Länge Struktur, Nicht Änderbar (Löschbar) nach dem Anlegen
+**Cyclic:** Record-Struktur, fix, zyklisch organisiert, Ring-Puffer (überschreiben), z.B. für Logs / Protokoll
+
+###Aufbau Dateiverwaltungsinformation
+File Control Parameter (FCP): Parametrisierung DF, Datenstruktur, für alle File-Typen, Starre Struktur / Record, Internal-Files (nicht zugreif- / lesbar, z.B. Krypto, OS), Working EFs: Nach aussen sichtbar, les- / schreibbar
+
+##Sicherheitsstatus
+Get-Challenge: Zufallswert generieren, internal / external Authenticate, A challenge B via T,
+
+###Sicherheitsmechanismen
+Entity-Authentifizierung mit Passwort / Schlüssel, Daten-Authentifizierung, Daten-Entschlüsselung
+
+##APDU
+Zugriff auf Dateien über Dateibezeichner, Pfad, SFID, DF-name
+
+##Java-Card
+Verschiedene Security-Domain, Issuer-Security-Domain, Weitere Domain, jede SD: AID, Applets können in SD geladen werden, SD sind getrennt und isoliert, Laden der Apps auf Karte: Global Plattform Standard, Pro SD: Authentifizierunsschlüssel
+
+#Prüfungsbesprechung Prüfung 2
+##Aufgabe 1
+  -  Wird Doument zuerst signiert und nachher Zeigestempelt?  
+    Zuerst Zeitstempel, dann Signatur
+  -  Können Sie in einer Anfrage mehrere Dokumente zur Zeitstempelung einbeziehen.  
+      Nein
+  -  Beschreiben Sie kurz die Erstellung eines Zeitstempels.
+      Hash der Nachricht, Zeitstempel erzeugen, Signierung Hash + Zeitstempel, Anhängen Zeitstempel  
+  -  Zälen Sie kurz die Attributfelder einer Zeitstempelanfrage auf? Bennenen Sie Attributfeld für   zeitzustempelndes Dokument  
+      version, MessageImprint, hashAlogrithm, hashedMessage, certReq
+  -  Schutz for Replay  
+      Nonce
+
+##Aufgabe 2
+  -  Welches Trustmodell wird insbesondere durch PGP unterstützt?  
+    Benutzer Trustmodell
+  -  Zählen Sie diem öglichen Gültigkeitsmodelle für CA-Zertifikate auf.  
+      Schalen, Hybrid, Kettenmodell
+  -  Bei welchem Gültigkeitsmodell endet die Gültigkeitsdauer eines Endbenutzerzertifikates spätestens mit der Gültigkeitsdauer der ausstellenden CA?
+      Schalenmodell
+
+##Aufgabe 3
+  -  Wie heisst das Protokoll auf dem eine SSL/TLS Nachrichtenübertragung aufgebaut wird?  
+      Record-Protokoll
+  -  Zählen Sie die Schritte auf, wmit welchen die Anwendungsdaten in das oben bezeichnete Protokoll eingebettet werden.
+      Fragmentierung, Komprimierung, MAC+Verschlüsselung
+  -  Wie heissen die nächsthöheren protokolle bezogen auf Aufgabe 4a) und in welchem Feld werden diese Punkte definiert?
+      Hand-Shake, Content-Type
+  -  Benennen Sie die Nachrichtentypen, welche sich beim SSL/TLS-Kommunikationsaufbau zwischen den Verfahren "Client anonym", "Client Auth mit Zertifikat" unterscheiden.
+      Anonym ohne: CertificateRequest, Certificate, CertificateVerify
+  -  Bescheiben Sie kurz chronologisch, was beim handshake im Teilschritt "certificate_verify" für Verfahren durchgeführt werden müssen, wenn DHE angewendet werden soll.
+      Signatur verifizieren von sämtlichen Hand-Shakes von allen bisher stattgefundenen Kommunikationen, Input für Verifikation: Hashes von allen Handshakes (von Client, Prüfung gegen auf Server hinterlegten)

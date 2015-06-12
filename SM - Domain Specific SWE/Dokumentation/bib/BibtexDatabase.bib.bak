@@ -26,6 +26,18 @@
   Timestamp                = {2015.05.30}
 }
 
+@Electronic{E:Sparkfun:Iot:Protocols,
+  Title                    = {Exploring the Protocols of IoT},
+  Author                   = {JIMBO},
+  Language                 = {EN},
+  Month                    = {Januar},
+  Url                      = {https://www.sparkfun.com/news/1705},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.06.11}
+}
+
 @Electronic{E:Schneider:UnterstandingIoTProtocols,
   Title                    = {Understanding The Protocols Behind The Internet Of Things},
   Author                   = {Stan Schneider},
@@ -79,5 +91,49 @@
 
   Owner                    = {dani},
   Timestamp                = {2015.05.11}
+}
+
+@Electronic{E:Parse:IOT,
+  Title                    = {Connecting Hardware with the Cloud: Parse for IoT},
+  Author                   = {James Yu},
+  Language                 = {EN},
+  Month                    = {März},
+  Url                      = {http://blog.parse.com/learn/connecting-hardware-with-the-cloud-parse-for-iot/},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.06.11}
+}
+
+@Book{,
+  Title                    = {Internet of Things
+Challenges and Opportunities},
+  Editor                   = {Subhas Chandra Mukhopadhyay},
+  Publisher                = {Springer International Publishing Switzerland},
+  Year                     = {2014},
+  Number                   = {ISBN: 978-3-319-04222-0},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.06.12}
+}
+
+@Electronic{E:Micrium:IOT,
+  Title                    = {Designing the Internet of Things},
+  Language                 = {EN},
+  Organization             = {Micrium},
+  Url                      = {http://micrium.com/iot/overview/},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.06.11}
+}
+
+@Electronic{E:PostScapes:IOT:SWGuide,
+  Title                    = {Internet of Things Software},
+  Language                 = {EN},
+  Organization             = {Postscapes},
+  Url                      = {http://postscapes.com/internet-of-things-software-guide},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.06.12}
 }
 

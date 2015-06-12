@@ -17,46 +17,67 @@
 \contentsline {section}{\numberline {3.3}Architektur \& Aufbau}{8}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Das "`Thing"'}{8}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Gateway / Bridge}{8}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Back-End Systeme}{8}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Back-End Systeme}{9}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Das "`Web of Things"'}{9}{subsection.3.3.4}
 \contentsline {section}{\numberline {3.4}Unterschied zum Konzept des klassischen Internet}{9}{section.3.4}
 \contentsline {section}{\numberline {3.5}Effekte \& Auswirkungen}{9}{section.3.5}
 \contentsline {section}{\numberline {3.6}Subdom\IeC {\"a}nen}{9}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Wireless Sensor Network}{9}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.1}Wireless Sensor Network}{10}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}Heimautomation}{10}{subsection.3.6.2}
 \contentsline {section}{\numberline {3.7}Anforderungen an das Produkt und die Software}{10}{section.3.7}
-\contentsline {chapter}{\numberline {4}Software Engineering in der Dom\IeC {\"a}ne "`Internet of Things"'}{11}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.1}Software Requirements}{11}{subsection.4.0.1}
-\contentsline {subsection}{\numberline {4.0.2}Software Design}{11}{subsection.4.0.2}
-\contentsline {subsection}{\numberline {4.0.3}Software Construction}{12}{subsection.4.0.3}
-\contentsline {subsection}{\numberline {4.0.4}Software Testing}{12}{subsection.4.0.4}
-\contentsline {subsection}{\numberline {4.0.5}Software Maintenance}{12}{subsection.4.0.5}
-\contentsline {subsection}{\numberline {4.0.6}Software Configuration Management}{12}{subsection.4.0.6}
-\contentsline {subsection}{\numberline {4.0.7}Software Engineering Management}{12}{subsection.4.0.7}
-\contentsline {subsection}{\numberline {4.0.8}Software Engineering Process}{12}{subsection.4.0.8}
-\contentsline {subsection}{\numberline {4.0.9}Software Engineering Tools and Methods}{12}{subsection.4.0.9}
-\contentsline {subsection}{\numberline {4.0.10}Software Quality}{12}{subsection.4.0.10}
-\contentsline {section}{\numberline {4.1}Programmiersprachen}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Assembler}{13}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}C / C++}{13}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Java / .NET}{13}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Protokolle und Standards}{14}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}MQTT}{14}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}XMPP}{14}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}DDS}{15}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}AMQP}{15}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}HTTP}{15}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}WebSocket}{15}{subsection.4.2.6}
-\contentsline {subsection}{\numberline {4.2.7}CoAP}{16}{subsection.4.2.7}
-\contentsline {subsection}{\numberline {4.2.8}Thread}{16}{subsection.4.2.8}
-\contentsline {subsection}{\numberline {4.2.9}AllJoyn}{16}{subsection.4.2.9}
-\contentsline {section}{\numberline {4.3}Frameworks}{16}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Kommunikation zwischen \gls {acr:IOT}-Ger\IeC {\"a}ten}{16}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}middleware}{17}{section.4.4}
-\contentsline {chapter}{\numberline {5}Case-Study "`iotivity}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Aufsetzen der Entwicklungsumgebung}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Entwicklung}{19}{section.5.2}
-\contentsline {section}{\numberline {5.3}Deployment und Betrieb}{19}{section.5.3}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{21}{chapter*.9}
-\contentsline {part}{Anhang}{27}{chapter*.13}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{27}{section*.15}
+\contentsline {chapter}{\numberline {4}Software Engineering in der Dom\IeC {\"a}ne "`Internet of Things"'}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Software Requirements}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}Software Design}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Betriebssysteme}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Programmiersprachen}{15}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Assembler}{15}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}C / C++}{15}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Java / .NET}{15}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Standards}{15}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}Standards: Kommunikationsprotokolle}{16}{subsection.4.2.7}
+\contentsline {subsubsection}{MQTT}{16}{subsubsection*.11}
+\contentsline {subsubsection}{XMPP}{16}{subsubsection*.12}
+\contentsline {subsubsection}{AMQP}{17}{subsubsection*.13}
+\contentsline {subsubsection}{HTTP}{17}{subsubsection*.14}
+\contentsline {subsubsection}{WebSocket}{17}{subsubsection*.15}
+\contentsline {subsubsection}{CoAP}{17}{subsubsection*.16}
+\contentsline {subsubsection}{ZigBee}{18}{subsubsection*.17}
+\contentsline {subsubsection}{Z-Wave}{18}{subsubsection*.18}
+\contentsline {subsubsection}{6LoWPAN}{18}{subsubsection*.19}
+\contentsline {subsubsection}{ANT}{18}{subsubsection*.20}
+\contentsline {subsubsection}{Bluetooth}{18}{subsubsection*.21}
+\contentsline {subsubsection}{EnOcean}{18}{subsubsection*.22}
+\contentsline {subsubsection}{DASH7}{18}{subsubsection*.23}
+\contentsline {subsubsection}{ISA100}{18}{subsubsection*.24}
+\contentsline {subsubsection}{Wireless HART}{18}{subsubsection*.25}
+\contentsline {subsubsection}{Wireless M-Bus}{18}{subsubsection*.26}
+\contentsline {subsubsection}{EtherCAT}{18}{subsubsection*.27}
+\contentsline {subsubsection}{Modbus}{18}{subsubsection*.28}
+\contentsline {subsubsection}{Profinet}{18}{subsubsection*.29}
+\contentsline {subsubsection}{HomePlug}{18}{subsubsection*.30}
+\contentsline {subsubsection}{HomeGrid}{18}{subsubsection*.31}
+\contentsline {subsection}{\numberline {4.2.8}Standards: Middleware}{18}{subsection.4.2.8}
+\contentsline {subsubsection}{DDS}{18}{subsubsection*.32}
+\contentsline {subsection}{\numberline {4.2.9}Weitere Protokolle}{19}{subsection.4.2.9}
+\contentsline {subsection}{\numberline {4.2.10}Frameworks}{19}{subsection.4.2.10}
+\contentsline {subsection}{\numberline {4.2.11}Thread}{19}{subsection.4.2.11}
+\contentsline {subsection}{\numberline {4.2.12}AllJoyn}{19}{subsection.4.2.12}
+\contentsline {subsection}{\numberline {4.2.13}Komplett-L\IeC {\"o}sungen}{19}{subsection.4.2.13}
+\contentsline {section}{\numberline {4.3}Software Construction}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}Software Testing}{20}{section.4.4}
+\contentsline {section}{\numberline {4.5}Software Maintenance}{20}{section.4.5}
+\contentsline {section}{\numberline {4.6}Software Configuration Management}{21}{section.4.6}
+\contentsline {section}{\numberline {4.7}Software Engineering Management}{21}{section.4.7}
+\contentsline {section}{\numberline {4.8}Software Engineering Process}{21}{section.4.8}
+\contentsline {section}{\numberline {4.9}Software Engineering Tools and Methods}{21}{section.4.9}
+\contentsline {section}{\numberline {4.10}Software Quality}{21}{section.4.10}
+\contentsline {section}{\numberline {4.11}Verwandte Disziplinen}{22}{section.4.11}
+\contentsline {section}{\numberline {4.12}middleware}{23}{section.4.12}
+\contentsline {chapter}{\numberline {5}Case-Study "`iotivity}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Aufsetzen der Entwicklungsumgebung}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Entwicklung}{25}{section.5.2}
+\contentsline {section}{\numberline {5.3}Deployment und Betrieb}{25}{section.5.3}
+\contentsline {chapter}{\nonumberline Quellenverzeichnis}{27}{chapter*.34}
+\contentsline {part}{Anhang}{33}{chapter*.38}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{33}{section*.40}
 \contentsfinish
