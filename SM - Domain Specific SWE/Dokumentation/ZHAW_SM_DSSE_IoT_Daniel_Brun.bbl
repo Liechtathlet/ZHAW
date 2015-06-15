@@ -16,6 +16,28 @@
   {}
 \endgroup
 
+\entry{E:ThisIsANT}{online}{}
+  \field{labelalpha}{Eth}
+  \field{sortinit}{A}
+  \field{title}{ANT}
+  \verb{url}
+  \verb http://www.thisisant.com/
+  \endverb
+\endentry
+
+\entry{E:Wiki:ANT}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \field{labelalpha}{Ewi}
+  \field{extraalpha}{1}
+  \field{sortinit}{A}
+  \field{title}{ANT}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/ANT_(network)
+  \endverb
+\endentry
+
 \entry{E:Intel:WhitePaper:DevelopingSolutionsIoT}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -35,6 +57,67 @@
   \verb{url}
   \verb http://www.intel.com/content/www/us/en/internet-of-things/white-papers/
   \verb developing-solutions-for-iot.html
+  \endverb
+  \field{year}{2014}
+\endentry
+
+\entry{E:APress:RethinkingIOT:Arch}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {daCosta}{d.}%
+     {Francis}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Apress Media LLC}%
+  }
+  \strng{namehash}{dF1}
+  \strng{fullhash}{dF1}
+  \field{labelalpha}{daC13}
+  \field{sortinit}{D}
+  \field{number}{ISBN: 978-1-4302-5740-0}
+  \field{title}{Rethinking the Internet of Things: A Scalable Approach to
+  Connecting Everything}
+  \field{year}{2013}
+\endentry
+
+\entry{E:Micrium:IOT}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Micrium}%
+  }
+  \field{labelalpha}{Emi}
+  \field{sortinit}{D}
+  \field{title}{Designing the Internet of Things}
+  \verb{url}
+  \verb http://micrium.com/iot/overview/
+  \endverb
+\endentry
+
+\entry{E:IEC:WhitePaper:IOT:WSN}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {IEC}{I.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {International Electrotechnical Commision (IEC)}%
+  }
+  \strng{namehash}{I1}
+  \strng{fullhash}{I1}
+  \field{labelalpha}{IEC14}
+  \field{sortinit}{I}
+  \field{title}{Internet of Things: Wireless Sensor Networks}
+  \verb{url}
+  \verb http://www.iec.ch/whitepaper/pdf/iecWP-internetofthings-LR-en.pdf
   \endverb
   \field{year}{2014}
 \endentry
@@ -62,6 +145,116 @@
   \verb http://de.slideshare.net/RealTimeInnovations/io-34485340
   \endverb
   \field{year}{2014}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:PostScapes:IOT:SWGuide}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Postscapes}%
+  }
+  \field{labelalpha}{Epo}
+  \field{sortinit}{I}
+  \field{title}{Internet of Things Software}
+  \verb{url}
+  \verb http://postscapes.com/internet-of-things-software-guide
+  \endverb
+\endentry
+
+\entry{E:Sparkfun:Iot:Protocols}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {JIMBO}{J.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \strng{namehash}{J1}
+  \strng{fullhash}{J1}
+  \field{labelalpha}{JIM15}
+  \field{sortinit}{J}
+  \field{title}{Exploring the Protocols of IoT}
+  \verb{url}
+  \verb https://www.sparkfun.com/news/1705
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:MachinaResearch:IoTWhitePaper}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Morish}{M.}%
+     {Jim}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Machina Research}%
+  }
+  \strng{namehash}{MJ1}
+  \strng{fullhash}{MJ1}
+  \field{labelalpha}{Mor13}
+  \field{sortinit}{M}
+  \field{title}{The Emergence of M2M/IoT Application Platforms}
+  \verb{url}
+  \verb https://machinaresearch.com/static/media/uploads/Machina%20Research%20W
+  \verb hite%20Paper%20-%20M2M_IoT%20Application%20Platforms.pdf
+  \endverb
+  \field{year}{2013}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{}{book}{}
+  \name{editor}{1}{}{%
+    {{}%
+     {Mukhopadhyay}{M.}%
+     {Subhas~Chandra}{S.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer International Publishing Switzerland}%
+  }
+  \strng{namehash}{MSC1}
+  \strng{fullhash}{MSC1}
+  \field{labelalpha}{Muk14}
+  \field{sortinit}{M}
+  \field{number}{ISBN: 978-3-319-04222-0}
+  \field{title}{Internet of Things Challenges and Opportunities}
+  \field{year}{2014}
+\endentry
+
+\entry{E:HAL:Iot:HighLevelAppDev}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Patel}{P.}%
+     {Pankesh}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \strng{namehash}{PP1}
+  \strng{fullhash}{PP1}
+  \field{labelalpha}{Pat12}
+  \field{sortinit}{P}
+  \field{note}{hal-00732094}
+  \field{title}{Enabling High-Level Application Development in Internet of
+  Things}
+  \verb{url}
+  \verb https://hal.inria.fr/hal-00732094/file/main.pdf
+  \endverb
+  \field{year}{2012}
   \warn{\item Invalid format of field 'month'}
 \endentry
 
@@ -179,6 +372,96 @@
   \verb{url}
   \verb http://www.networkworld.com/article/2456421/internet-of-things/a-guide-
   \verb to-the-confusing-internet-of-things-standards-world.html
+  \endverb
+\endentry
+
+\entry{E:EMC:DigitalUniverseOfOpportunities}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {EMC2}%
+  }
+  \field{labelalpha}{Eem}
+  \field{sortinit}{T}
+  \field{note}{Research by IDC}
+  \field{title}{The Digital Universe of Opportunities}
+  \field{year}{2014}
+\endentry
+
+\entry{E:Parse:IOT}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Yu}{Y.}%
+     {James}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \strng{namehash}{YJ1}
+  \strng{fullhash}{YJ1}
+  \field{labelalpha}{Yu15}
+  \field{sortinit}{Y}
+  \field{title}{Connecting Hardware with the Cloud: Parse for IoT}
+  \verb{url}
+  \verb http://blog.parse.com/learn/connecting-hardware-with-the-cloud-parse-fo
+  \verb r-iot/
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Wiki:ZWave}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \field{labelalpha}{Ewi}
+  \field{extraalpha}{2}
+  \field{sortinit}{Z}
+  \field{title}{Z-Wave}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Z-Wave
+  \endverb
+\endentry
+
+\entry{E:Digi:ZigBee}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Digi}%
+  }
+  \field{labelalpha}{Edi}
+  \field{sortinit}{Z}
+  \field{title}{ZigBee}
+  \verb{url}
+  \verb http://www.digi.com/technology/rf-articles/wireless-zigbee
+  \endverb
+\endentry
+
+\entry{E:ZigBee:ZigBeeAlliance}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \field{labelalpha}{Ezi}
+  \field{sortinit}{Z}
+  \field{title}{ZigBee}
+  \verb{url}
+  \verb http://www.zigbee.org/
+  \endverb
+\endentry
+
+\entry{E:ZWave}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \field{labelalpha}{Ezw}
+  \field{sortinit}{Z}
+  \field{title}{ZWave}
+  \verb{url}
+  \verb http://www.z-wave.com/
   \endverb
 \endentry
 

@@ -1,70 +1,51 @@
 \chapter{Die Domäne "`Internet of Things"'}
 In diesem Kapitel wird die Domäne "`Internet of Things"' näher beschrieben und die Eigen- und Besonderheiten im Bereich Software Engineering aufgezeigt.
 
+
+
 \section{Ziel}
 Das primäre Ziel des \gls{acr:IOT} ist die Vernetzung von Dingen mit der realen Welt und mit anderen Dingen. Die Dinge sollen intelligent und autonom mit Party Geräten und Services kommunizieren können um so einen Mehrwert zu schaffen und die eigenen Fähigkeiten zu erweitern. 
+
+
 
 \section{Anwendungsbereich}
 Das \gls{acr:IOT} könnte grundsätzlich überall eingesetzt werden. Sei es in der Landwirtschaft, in der Pflege, in der Medizin oder in der Industrie. Das \gls{acr:IOT} ist mehr ein Konzept, beziehungsweise eine Architektur, als ein konkretes Produkt, Dadurch lässt es sich auf die jeweiligen Bedürfnisse der verschiedenen Unternehmensbereiche individuell anpassen. Neben der Anwendung im geschäftlichen Umfeld, findet das \gls{acr:IOT} auch im privaten Umfeld Anwendung. Das primäre Ziel ist dabei die Heimautomation, das heisst die intelligente Vernetzung verschiedener Geräte und Gegenstände im Haushalt. Nachfolgend einige Beispiele für konkrete Anwendungen eines \gls{acr:IOT}
 
-\todo{Subdomänen}
--Smart Cities, Smart Environement, Smart Water, Smart Metering, Security and Emergency, Retail, Logistics, Industrial Control, Smart Agriculture, Smart Animal Farming, Domotics and Home Automation, e-Health
+
 \begin{itemize}
-\item Smart Cities
-\item Smart Environement
-\item Medizin und Altenpflege
-\item Optimierung Energienutzung und Energieerzeugung
-\item Verteidigung und Militär
-\item Kommunikationstechnologie
-\item Industrie (Produktion \& Fertigung)
+\item Überwachung von Pflegepatienten (Notruf, Stürze)
+\item Hausautomation (Einbrecherschutz, Energieoptimierung)
+\item Überwachung von herstellungs- und Fertigungsprozessen
+\item Überwachung von Gefahrensituationen in der Natur (zum Beispiel Waldbrände, Erdbeben, Felsstürze)
 \end{itemize}
 
 Auch im Bereich Big Data stellt \gls{acr:IOT} ein weiterer Meilenstein dar. Durch die Vernetzung von Millionen von Geräten können riesige Datenmengen gesammelt, analysiert und ausgewertet werden.
 
 
-\section{Architektur \& Aufbau}
+\section{Subdomänen und Verwandte Domänen}
+Das \gls{acr:IOT} ist eine riesige Domäne mit zig verschiedenen Anwendungsmöglichkeiten. Nachfolgend werden einige Verwandte Domänen und Subdomänen aufgelistet und zwei spezifisch erläutert.
 
-
-\subsection{Das "`Thing"'}
-Die Definition eines "`Thing"', beziehungsweise eines "`Dinges"', ist nicht ganz einfach. Grundsätzlich handelt es sich um einen physischen Gegenstand mit einem "`Embedded System"' (auch Embedded Device genannt) welches gewisse Funktionalitäten anbietet. Handelt es sich bei diesem "`Ding"' um einen Alltagsgegenstand, wird dieser auch als "`Smart Object"' bezeichnet. Ein "`Embedded Device"' basiert auf einem Mikrocontroller, verfügt relativ gesehen nur über geringe Ressourcen (Prozessor und Arbeitsspeicher) und ist in der Regel auf Energieeffizienz ausgelegt. Das "`Embedded Device"' verfügt in der Regel über einen beliebigen Kommunikationsstack mit 1 bis n Kommunikationsprotokollen welcher entweder direkt oder über ein Gateway mit einem Netzwerk kommuniziert. Die gesammelten Daten werden entweder auf dem Gerät oder auf einem Gateway gefiltert. 
-
-Diese "`Dinge"' und "`Smart Objects"' sind keine Erfindung des \gls{acr:IOT}. Es gibt sie schon eine längere Zeit. Mit dem \gls{acr:IOT} haben diese jedoch gelernt miteinander oder mit anderen Systemen (autonom) zu interagieren. Solche "`Embedded Systems"' sind bereits heute überall gegenwärtig. Sei es in Autos, Wearables, Kühlschränken, Kaffeemschinen oder Smartphones.
-
-Nachfolgend werden die verschiedenen Phasen aufgelistet, welche die Entwicklung dieser "`Dinge"' bis heute durchlaufen haben.
-
-\todo{Grafik S. 4, DataAwareArchitecutre}
-\begin{itemize} 
-\item Polling (Reaktive Auslieferung) der Informationen auf dem Gerät
-\item Proaktive- (Push-) Auslieferung der Informationen vom Gerät.
-\item Fernsteuerung der Geräte
-\item Fernwartung der Geräte
+\begin{itemize}
+\item Intelligente Städte ("`Smart Cities"')
+\item Intelligentes Umweltmanagement ("`Smart Environment"')
+\item Intelligentes Wassermanagement ("`Smart Water"')
+\item Intelligente Messeinrichtungen ("`Smart Measuring"')
+\item Sicherheit und Notfall ("`Security and Emergency"')
+\item Logistik im Einzelhandel ("`Retail Logistics"')
+\item Überwachung in der Industrie ("`Industrial Control"')
+\item Intelligente Landwirtschaft ("`Smart Agriculture"')
+\item Intelligente Massentierhaltung ("`Smart Animal Farming"')
+\item Haushaltsautomatisierung ("`Domotics and Homeautomation"')
+\item e-Health
 \end{itemize}
-
-\subsection{Gateway / Bridge}
-Die Aufgabe eines Gateways, ab und zu auch als Bridge bezeichnet, ist es, \gls{acr:IOT} Geräte mit einem Netzwerk zu verbinden. Oft sind \gls{acr:IOT}-Geräte nicht in der Lage sich direkt mit einem Netzwerk oder dem Internet zu verbinden. 85 \% aller \gls{acr:IOT}-Endgeräte sind heute nicht in der Lage direkt mit dem Internet zu kommunizieren \cite[S. 2]{E:Intel:WhitePaper:DevelopingSolutionsIoT}. Gemäss In solchen Situationen wird eine Gateway eingesetzt, welches diese Lücke schliesst. Eine weitere Aufgabe eines Gateways kann es sein, die von den verbundenen Geräten erhaltenen Daten zu filtern und anschliessend weiterzuleiten. Die Analyse der Daten erfolgt dann auf einem Server im Netzwerk oder in der Cloud. 
-
-
-\subsection{Back-End Systeme}
-Die Backe-End Systeme stehen oft in einem Netzwerk oder in der Public-Cloud, wo diese entsprechend den Bedürfnissen skaliert werden können. Zum Einsatz kommen Systeme zur Analyse (Stichtwort Big Data) und Auswertung der gesammelten Informationen. Je nach Anwendungsbereich können die gesammelten und ausgewerteten Daten über einen Computer oder ein mobiles Gerät abgerufen werden. Handelt es sich um ein Automatisierungssystem ist zusätzlich noch eine Steuer-Komponente integriert, welche auf Basis von Regeln oder Benutzereingaben den Geräten Befehle übermittelt.
-
-
-\subsection{Das "`Web of Things"'}
-Das "`Web of Things"' ist eine Architekturansatz, welcher vorsieht alle \gls{acr:IOT}-Geräte in das bestehende Internet / Web einzubinden. Dazu sollen bereits für das Web etablierte Standards wie zum Beispiel REST zum Einsatz kommen. Auf jedem Gerät müsste ein minimaler Web-Server vorhanden sein, durch welchen die Integration in das Web erfolgt. Der Vorteil dieser Architektur liegt darin, dass alle bestehenden Möglichkeiten des Webs voll ausgenutzt werden können. Der grösste Nachteil ist, dass die heutigen Web-Protokoll nicht sehr sparsam mit Ressourcen (Hardware, Strom) umgehen.
-
-\section{Unterschied zum Konzept des klassischen Internet}
-In der klassischen Auslegung des Internets stellen zentrale Server die Daten zur Verfügung, welche dann von Anwendern oder Bezügern abgerufen werden können. Die Datenhoheit liegt dabei bei diesen zentralen Servern. Kommuniziert wurde entweder von Server zu Server oder von Anwender / Bezüger zum Server. Es war immer ein Server als intermediär notwendig. Das \gls{acr:IOT} bringt nun einen Paradigmenwechsel mit sich. Die Geräte in einem \gls{acr:IOT} sind oder werden in der Lage sein autonom miteinander zu kommunizieren und zu interagieren. 
-
-\section{Effekte \& Auswirkungen}
-
-Durch den Einsatz eines \gls{acr:IOT} kann Mehrwert in verschiedensten Bereichen und Ebenen geschaffen werden. Zum Beispiel in Industriebetrieben können Produkte schneller und besser entwickelt und produziert werden, was sich am Ende auf die Kosten auswirken wird. Es werden sich Auswirkungen in allen Bereichen des Lebens bemerkbar machen. Sei es im Privat- oder im Geschäftsumfeld.
-
-
-\section{Subdomänen}
-Das \gls{acr:IOT} ist eine riesige Domäne mit zig verschiedenen Anwendungsmöglichkeiten. Nachfolgend werden zwei Ausprägungen von solchen Subdomänen kurz beschrieben.
 
 
 \subsection{Wireless Sensor Network}\todo{image: http://micrium.com/iot/devices/}	
-\gls{acr:WSN} sind Netzwerke von verteilten Sensoren, welche gewisse physikalische Zustände oder Zustände in ihrer Umgebung und Umwelt überwachen. Ein \gls{acr:WSN}-Node ist ein billig produzierbares Gerät, welches nur sehr wenig Strom benötigt. Idealerweise wird dieses über eine Batterie oder eine autonome Energiequelle (zum Beispiel ein Solar-Panel) betrieben. Ein \gls{acr:WSN}-Node besitzt nur eine einzelne Funktion und ist in der Regel mit einem \gls{acr:WSN}-Edge-Node verbunden.
+
+\gls{acr:WSN} sind Netzwerke von vielen verteilten Sensoren, welche gewisse physikalische Zustände oder Zustände in ihrer Umgebung und Umwelt überwachen. Die Forschung im Bezug auf \gls{acr:WSN}'s begann bereits in den 1980er und begann sich dann nach der Jahrtausendwende in der Industrie zu etablieren. \gls{acr:WSN}'s entwickelten sich lange unabhängig vom \gls{acr:IOT}. Der Begriff \gls{acr:IOT} wurde zum ersten Mal um das Jahr 1999 erwähnt auf und tauchte in den darauffolgenden Jahren immer wieder auf. Heute kann gesagt werden, dass die beiden Bereiche immer mehr und mehr verschmelzen und die \gls{acr:WSN}'s als Teilbereich des \gls{acr:IOT} angesehen werden können. \gls{acr:WSN} kommen häufig in den Bereichen Industrie, Smart Cities, Smart Environment und Smart Measuring zum Einsatz.
+
+
+Ein \gls{acr:WSN}-Node ist ein billig produzierbares Gerät, welches nur sehr wenig Strom benötigt. Idealerweise wird dieses über eine Batterie oder eine autonome Energiequelle (zum Beispiel ein Solar-Panel) betrieben. \gls{acr:WSN}-Nodes besitzen meistens nur eine einzelne Funktion und sind in der Regel mit einem \gls{acr:WSN}-Edge-Node verbunden.
 
 Ein \gls{acr:WSN}-Edge-Nodes verbindet mehrere \gls{acr:WSN} mit einem Netzwerk oder dem Internet. Dieser Edge-Node nimmt die Funktion eines Gateways wahr.
 
@@ -77,6 +58,89 @@ Der IEE 802.15.4 Standard wurde zum Beispiel speziell auf den Einsatz in Low-Pow
 
 \subsection{Heimautomation} \todo{image Heimautomation}
 Bei der Heimautomation steht die Vernetzung und intelligente Kommunikation der Endgeräte untereinander im Vordergrund. Dabei kommt ein bunter Mix an unterschiedlicher Geräte und Technologien zum Einsatz, wodurch eine grössere Herausforderung für die direkte Kommunikation entsteht. Mit dem Einsatz eines Homeautomation- oder Smart-Gateways können diese Herausforderungen reduziert werden. Diese Gateways sind in der Lage unterschiedlichste Geräte über unterschiedliche Kommunikationskanäle und Protokolle zu verbinden.
+
+
+
+\section{Architektur \& Aufbau}
+Das \gls{acr:IOT} besteht aus vereinfacht dargestellt aus "`Things"', "`Gateways"' und "`Back-End Systems"', welche miteinander kommunizieren. In diesem Kapitel werden diese drei Elemente und einige mögliche Architekturen beschrieben.
+
+\todo{Bild: Ablauf Node: Beispiel Sensor: Acquire - Process - Notify (Funkt / Protokoll) Gateway: listen - Process - Foreward
+Server: Listen - Process - Display - Notify}
+
+\subsection{Das "`Thing"'}
+Die Definition eines "`Thing"' (oder auch "`Smart Thing"'), beziehungsweise eines "`Dinges"', ist nicht ganz einfach. Grundsätzlich handelt es sich um einen physischen Gegenstand mit einem "`Embedded Device"' (auch Embedded System genannt) welches gewisse Funktionalitäten anbietet. Dies können Sensoren, Bedienelemente oder gewisse Steuerungselemente sein. Handelt es sich bei diesem "`Ding"' um einen Alltagsgegenstand, wird dieser auch als "`Smart Object"' bezeichnet. Ein "`Embedded Device"' basiert auf einem Mikrocontroller, verfügt relativ gesehen nur über geringe Ressourcen (Prozessor und Arbeitsspeicher) und ist in der Regel auf Energieeffizienz ausgelegt. Das "`Embedded Device"' verfügt in der Regel über einen beliebigen Kommunikationsstack mit 1 bis n Kommunikationsprotokollen welcher entweder direkt oder über ein Gateway mit einem Netzwerk kommuniziert. Die gesammelten Daten werden entweder auf dem Gerät oder auf einem Gateway gefiltert. 
+
+Diese "`Dinge"' und "`Smart Objects"' sind keine Erfindung des \gls{acr:IOT}. Es gibt sie schon eine längere Zeit. Mit dem \gls{acr:IOT} haben diese jedoch gelernt miteinander oder mit anderen Systemen (autonom) zu interagieren. Solche "`Embedded Systems"' sind bereits heute überall gegenwärtig. Sei es in Autos, Wearables, Kühlschränken, Kaffeemschinen oder Smartphones.
+
+Gemäss \cite{E:MachinaResearch:IoTWhitePaper} haben die "`Dinge"', beziehungsweise allgemein die \gls{acr:M2M}-Kommunikation folgende Phasen durchlaufen:
+
+\begin{itemize} 
+\item Reaktive Information \\Polling der Geräte für Informationen
+\item Proaktive Information \\Geräte Kommunizieren Informationen, wenn notwendig
+\item Remotely controllable \\Geräte sind aus der Ferne steuerbar
+\item Remotely serviceable \\Geräte sind aus der Ferne wartbar
+\item Intelligent processes \\Geräte sind Teil von intelligenten Prozessen
+\item Optimised propositions \\Informationen der Geräte können für die Entwicklung von neuen Produkten verwendet werden
+\item New business models \\Neue Möglichkeiten für Geschäftsmodelle
+\item The Internet of Things \\Teilung von Informationen mit Geräten von Dritt-Herstellern, um im gesamten einen Mehrwert zu generieren
+\end{itemize}
+
+\subsection{Gateway / Bridge}
+Die Aufgabe eines Gateways, ab und zu auch als Bridge bezeichnet, ist es, \gls{acr:IOT} Geräte mit einem Netzwerk zu verbinden. Oft sind \gls{acr:IOT}-Geräte nicht in der Lage sich direkt mit einem Netzwerk oder dem Internet zu verbinden. 85 \% aller \gls{acr:IOT}-Endgeräte sind heute nicht in der Lage direkt mit dem Internet zu kommunizieren \cite[S. 2]{E:Intel:WhitePaper:DevelopingSolutionsIoT}. Gemäss In solchen Situationen wird eine Gateway eingesetzt, welches diese Lücke schliesst. Eine weitere Aufgabe eines Gateways kann es sein, die von den verbundenen Geräten erhaltenen Daten zu filtern und anschliessend weiterzuleiten. Die Analyse der Daten erfolgt dann auf einem Server im Netzwerk oder in der Cloud. 
+
+
+\subsection{Back-End Systeme}
+Die Backe-End Systeme stehen oft in einem Netzwerk oder in der Public-Cloud, wo diese entsprechend den Bedürfnissen skaliert werden können. Zum Einsatz kommen Systeme zur Analyse (Stichtwort Big Data) und Auswertung der gesammelten Informationen. Je nach Anwendungsbereich können die gesammelten und ausgewerteten Daten über einen Computer oder ein mobiles Gerät abgerufen werden. Handelt es sich um ein Automatisierungssystem ist zusätzlich noch eine Steuer-Komponente integriert, welche auf Basis von Regeln oder Benutzereingaben den Geräten Befehle übermittelt.
+
+
+\subsection{Das "`Web of Things"'}
+Das "`Web of Things"' hat sich aus dem \gls{acr:IOT} entwickelt und ist eine Architekturansatz, welcher vorsieht alle \gls{acr:IOT}-Geräte in das bestehende Internet / Web einzubinden. Dazu sollen bereits für das Web etablierte Standards wie zum Beispiel HTTP, HTTPS, RSS oder REST zum Einsatz kommen. Auf jedem Gerät müsste ein minimaler Web-Server vorhanden sein, durch welchen die Integration in das Web erfolgt. Der Vorteil dieser Architektur liegt darin, dass alle bestehenden Möglichkeiten des Webs voll ausgenutzt werden können. Der grösste Nachteil ist, dass die heutigen Web-Protokoll nicht sehr sparsam mit Ressourcen (Hardware, Strom) umgehen.
+
+\subsection{Referenz Modelle und Referenz Architekturen}
+Zum heutigen Zeitpunkt gibt es bereits mehrere Ansätze ein Referenz Model und eine Referenz Architektur für das \gls{acr:IOT} zu schaffen.
+
+Nachfolgend werden einige dieser Referenz Modelle und Architekturen aufgelistet, jedoch nicht im Detail erläutert.
+
+\begin{itemize}
+\item \textbf{IoT-A}\\
+\url{http://www.iot-a.eu/}
+\item \textbf{WSO2 - A Reference Architecture for the Internet of Things}\\
+\url{http://wso2.com/whitepapers/a-reference-architecture-for-the-internet-of-things/}
+\item \textbf{IoT@Work - Final Framework Architecture Speciffication}\\
+\url{https://www.iot-at-work.eu/downloads.html}
+\item \textbf{Internet of Things Architecture (u.a. Cisco, IBM, Intel)}\\
+\url{https://www.iotwf.com/iotwf2014/breakout}
+\end{itemize}
+
+
+\section{Unterschied zum Konzept des klassischen Internet}
+In der klassischen Auslegung des Internets stellen zentrale Server die Daten zur Verfügung, welche dann von Anwendern oder Bezügern abgerufen werden können. Die Datenhoheit liegt dabei bei diesen zentralen Servern. Kommuniziert wird entweder von Server zu Server oder von Anwender / Bezüger zu Server. Es war immer ein Server als intermediär notwendig. Das \gls{acr:IOT} bringt nun einen Paradigmenwechsel mit sich. Die Geräte in einem \gls{acr:IOT} sind oder werden in der Lage sein autonom miteinander zu kommunizieren und zu interagieren. Im klassischen Internet werden im Vergleich grosse Datenmenge pro Packet transportiert. Im \gls{acr:IOT} ist dies nicht mehr notwendig, dort werden in der Regel nur kleine Datenmengen, jedoch in sehr grossen Mengen, übermittelt. Auch ist es nicht essentiell, dass alle Pakete auch beim Ziel ankommen, da der Wert eines einzelnen Datenpacketes	 sehr gering ist.
+
+
+\gls{acr:IP} und \gls{acr:TCPIP} sind auf stabile, beziehungsweise mehr oder weniger statische, Netzwerke ausgelegt, in welchem grosse Datenmengen zuverlässig transportiert werden müssen. Die Anforderungen des \gls{acr:IOT} nach sich verändernden und dynamischen Netzwerken, sehr kleinen Datenmengen, vielen Requests und eingeschränkten Geräten werden durch \gls{acr:IP} nicht optimal abgedeckt. Um den maximalen Nutzen zu erreichen werden neue, spezifische Protokolle benötigt
+
+\section{Effekte \& Auswirkungen}
+
+Durch den Einsatz eines \gls{acr:IOT} kann Mehrwert in verschiedensten Bereichen und Ebenen geschaffen werden. Das \gls{acr:IOT} wird zahlreiche neue Geschäftsmodelle und Produktpaletten hervorbringen, welche sowohl einen Mehrwert für den Hersteller, als auch für den Konsumenten generieren. Neben den positiven Effekten wird es sicherlich auch negative Effekte geben. Im Kapitel \ref{sec:DomainIoT:Challenges} \nameref{sec:DomainIoT:Challenges} werden die verschiedenen Herausforderungen erläutert, welche das \gls{acr:IOT} mit sich bringt. 
+
+
+\section{Herausforderungen} \label{sec:DomainIoT:Challenges}
+Im \gls{acr:IOT} gibt es viele Herausforderungen zu bewältigen. Die wichtigsten werden nachfolgend aufgelistet:
+
+\begin{itemize}
+\item Verfügbarkeit eines Internet-Zuganges am Einsatz- / Verwendungsort
+\item Sicherheit und Datenschutz
+\item Tiefe Kosten für Hard- und Software
+\item Energieversorgung
+\item Energieverbrauch
+\item Skalierbarkeit
+\item Fehlertoleranz
+\item Akzeptanz
+\item Robustheit (physisch und logisch)
+\item Entdecken von Geräten und Services (Device Discovery)
+\end{itemize}
+
+Einige dieser Herausforderungen haben grössere Auswirkungen auf die Software-Entwicklung. Ist in der normalen Softwareentwicklung eine Trennung der Themen (Separation of Concerns) ohne weiteres möglich, ist dies im \gls{acr:IOT} nicht mehr der Fall. Für die Entwicklung eines \gls{acr:IOT}-Endgerätes sind Fähigkeiten aus den Bereichen "`Distributed Systems"', "`Embedded Systems"', "`Networking"', "`Operating Systems"' und "`Software Development"' erforderlich. Entweder muss ein Entwickler all diese Skills mitbringen oder die Architektur erlaubt die Trennung / Abstraktion der verschiedenen Schwerpunkte, sodass diese vom jeweiligen Spezialisten implementiert werden können. Um diesem breiten Spektrum an notwendigen Fähigkeiten gerecht zu werden sind heutige allgemeine \gls{acr:DSL}'s nicht geeignet. Der Ansatz "`one size fits all"' ist hier nicht ideal. Eine \gls{acr:IOT} \gls{acr:DSL} sollte entsprechende Mittel zur Abstraktion und Trennung bieten, um eine effiziente Entwicklung zu ermöglichen. Weitere Herausforderungen sind die Heterogenität der Geräte, die Skalierbarkeit und die Implikationen im Bezug auf die rechtlichen Aspekte. Zu klären ist hier, wem die gesammelten Daten gehören (dem Betreiber des Gerätes? dem Betreiber des Back-End-Systemes, welches für die Analyse benötigt wird?) und wer für Aktionen verantwortlich ist, welche das Gerät selbstständig ausgeführt hat. Beispiel: Ein Kühlschrank bestellt bei einem Lebensmittelhändler eine grosse Menge an Milch nach, da gemäss den Berechnungen und Analysen des Systems der Milchvorrat zu niedrig ist. Der Besitzer benötigt diese Milch jedoch gar nicht. Da der Kühlschrank nicht haftbar ist, stellt sich nun die Frage nach einer haftbaren Person. Ist es der Besitzer? Die Herstellerfirma? Der Entwickler? Dieses Beispiel mag banal sein, aber in der Industrie können kleine Berechnungsfehler oder Fehleinschätzungen massive Auswirkungen haben, was auch entsprechend hohe Kosten nach sich ziehen kann.
 
 
 

@@ -1,59 +1,91 @@
 \chapter{Software Engineering in der Domäne "`Internet of Things"'} \label{chap:sweInIot}
-In diesem Kapitel werden die Anforderungen, Eigenheiten und Unterschiede des Software Engineering in der Domäne "`Internet of Things"' im Vergleich zur "`Standard Domäne"' aufgezeigt.
+In diesem Kapitel werden die Anforderungen, Eigenheiten und Unterschiede des Software Engineering in der Domäne "`Internet of Things"' im Vergleich zur "`Standard Domäne"' (Domäne der normalen Software Entwicklung) aufgezeigt.
 
 Die Struktur dieses Kapitels orientiert sich an der Struktur des Buches "`Software Engineering Body of Knowledge"' \cite{B:IEEE:SWEBOOK}.
 
+Die Unterschiede zur "`Standard Domäne"' sind je nach Element unterschiedlich. Die Entwicklung eines Back-End-Systemes unterscheidet sich grundlegend von der Entwicklung eines \gls{acr:IOT}-Endgerätes und eines Gateways. Auch gibt es weitere Unterschiede je nach Subdomäne, für welche eine Entwicklung stattfindet. In dieser Arbeit wird der Fokus auf die \gls{acr:IOT}-Endgeräte und Gateways gelegt. Die Entwicklung für diese beiden Elemente wird stark durch die Domäne der "`Embedded"' Systems geprägt.
 
-\todo{Elem: Embedded Systems}
-Allgemein: Aufteilung nach IOT-Endgerät, Gateway, Back-End, Client, Querschnittsdomänen
+
 
 \section{Software Requirements}
-Im Requriements Engineering der Software Requriements gibt es im Vergleich zur Standard Domäne nur wenige Unterschiede. Der Hauptunterschied liegt darin, dass gewisse Anforderungen implizit durch die Domäne vorgegeben sind. Betroffen sind dabei sowohl Anforderungen auf Ebene Produkt, als auch auf Ebene Prozess. Nachfolgend werden einige Beispiele möglicher impliziter Anforderungen aufgelistet.
+Im Requriements Engineering der Software Requriements gibt es im Vergleich zur Standard Domäne nur wenige Unterschiede. Der Hauptunterschied liegt darin, dass gewisse Anforderungen implizit durch die Domäne vorgegeben sind. Betroffen sind dabei sowohl Anforderungen auf Ebene Produkt, als auch auf Ebene Prozess. Nachfolgend werden primären Anforderungen aufgelistet.
 
 \begin{itemize}
 \item Kostengünstig
 \item Energieeffizient
+\item Optimale Ressourcenausnutzung
 \item Betrieb ohne Stromanschluss
 \item Massiv skalierbar
 \item Lange Lebensdauer
 \item Verlässlich
 \item Vertrauenswürdig
+\item Adäquate Kommunikationsprotokolle
 \item Möglichkeit für das Einspielen von Updates
 \end{itemize}
 
-Die Anforderungen auf Ebene Produkt haben einen direkten und starken Einfluss auf die Hardware, die verwendet werden kann oder verwendet werden soll. Je nach dem steuern die Anforderungen an das Produkt die Hardware oder es gibt explizite Anforderungen an die Hardware, welche die Anforderungen an die Software beeinflussen und gegebenenfalls einschränken. 
+Die Anforderungen auf Ebene Produkt haben einen direkten und starken Einfluss auf die Hardware, die verwendet werden kann oder verwendet werden soll. Je nach dem steuern die Anforderungen an das Produkt die Hardware oder es gibt explizite Anforderungen an die Hardware, welche Anforderungen und Rahmenbedingungen an die Software vorgeben. 
 
-Im Bereich \gls{acr:IOT} ist es wichtig, dass die Anforderungen genau spezifiziert und korrekt umgesetzt werden. Eine spätere Korrektur kann sich unter Umständen als schwierig herausstellen. Wurden zum Beispiel für ein Sensor-Netzwerk mehrere Tausend Sensoren verteilt, welche nicht direkt mit dem Internet kommunizieren können, kann der Update-Prozess sehr aufwändig sein. Daher müssen auch sämtliche Anforderungen umgesetzt werden, welche zwingend benötigt werden.
+Im Bereich \gls{acr:IOT} ist es wichtig, dass die Anforderungen genau spezifiziert und korrekt umgesetzt werden. Eine spätere Korrektur kann sich unter Umständen als schwierig herausstellen. Wurden zum Beispiel für ein Sensor-Netzwerk mehrere Tausend Sensoren verteilt, welche nicht direkt mit dem Internet kommunizieren können, kann der Update-Prozess sehr aufwändig werden. Daher müssen auch sämtliche Anforderungen umgesetzt werden, welche zwingend benötigt werden.
 
-Weitere Herausforderungen sind der Einsatz in einem unbekannten Umfeld (Umwelt \& Technisch) und die schwierige Feststellbarkeit von Fehlern. Liefert zum Beispiel ein Sensor konstant falsche Werte, kann dies aus der Ferne, beziehungsweise ohne Vergleichswert praktisch nicht festgestellt werden. Ein mögliches Szenario wäre ein Sensor, welche in einer Fertigungsanlage auf einem Fliessband die Stückzahlen erfasst. Sind diese nun nicht korrekt und ein Backe-End-System bestellt auf Basis dieser Stückzahlen Nachschub für Einzelteile kann dies massive Auswirkungen haben.
+Weitere Herausforderungen sind der Einsatz in einem unbekannten Umfeld (Umwelt \& Technisch) und die schwierige Feststellbarkeit von Fehlern. Liefert zum Beispiel ein Sensor konstant falsche Werte, kann dies aus der Ferne, beziehungsweise ohne Vergleichswert praktisch nicht festgestellt werden. Ein mögliches Szenario wäre ein Sensor, welche in einer Fertigungsanlage auf einem Fliessband die Stückzahlen erfasst. Sind diese nicht korrekt, beziehungsweise weichen von der effektiven Anzahl um ein paar Prozent ab, und ein Back-End-System bestellt auf Basis dieser Stückzahlen Nachschub für Einzelteile, kann dies massive Auswirkungen haben.
 
-Neben den Anforderungen von Seiten des Kunden, beziehungsweise des Herstellers, gibt es auch noch regulatorische und gesetzliche Anforderungen zu erfüllen. Hier stellt sich zum Beispiel die Frage der Haftung, wenn ein System auf Basis der Informationen eines anderen Systemes eine Aktion auslöst und die gelieferten Informationen nicht korrekt sind.
+Neben den Anforderungen von Seiten des Kunden, beziehungsweise des Herstellers, gibt es auch noch regulatorische und gesetzliche Anforderungen zu erfüllen. Hier stellt sich zum Beispiel die Frage der Haftung, wenn ein System auf Basis der Informationen eines anderen Systemes autonom eine Aktion auslöst, wobei die gelieferten Informationen nicht korrekt waren.
+
+Die Funktionalen Anforderungen an die Software an \gls{acr:IOT}-Endgeräte weisen in der Regel eine geringe bis mittlere Komplexität auf. Grund dafür ist die Aufgabe des Gerätes. Diese besteht in der Regel darin Sensorwerte auszulesen und an ein Gateway zu senden. Die Anforderungen an ein Gateway wiederum, können sehr komplex sein, da unter Umständen verschiedenste Protokolle unterstützt, Daten gefiltert und aggregiert und an das Back-End-System gesendet werden müssen. Auch obliegt es oft den Gateways die Back-End Systeme vor einer Überflutung mit Daten zu bewahren. Sie entscheiden wann ein Datenpacket an das Back-End System weitergeleitet wird. Die Anforderungen an Back-End Systeme entsprechen im grossen und ganzen denjenigen von Big-Data Systemen.
 
 
 
-\section{Software Design}
-Aufgrund der Ausgangslage dieser Domäne gibt es einige Restriktionen im Bereich Software Design. Aufgrund der Einschränkungen auf Hardware-Seite können unter Umständen keine Hochsprachen oder grössere / komplexere Frameworks eingesetzt werden um die benötigte Software zu implementieren. Dies macht sich im Software Design bemerkbar, wo nach dem Prinzip "`As much as needed, as less as possible"' gearbeitet werden sollte. Nicht benötigte Funktionalitäten und Gimmicks verbrauchen auf \gls{acr:IOT}-Endgeräten wertvolle Ressourcen.
+\section{Software Design \& Software Construction}
+Software Design und Software Construction unterscheiden sich bei den drei Hauptelementen des \gls{acr:IOT} (Endgeräte, Gateways, Back-End Systeme) sehr stark voneinander. Über alles hinweg gesehen sollte ein möglichst hoher Abstraktionsgrad angestrebt werden, um die Interaktion mit unbekannten Geräten zu ermöglichen. Durch den konsequenten Einsatz von Standards kann die Komplexität erheblich reduziert und die Wiederverwendbarkeit erhöht werden. Vor allem im Bereich Kommunikationsprotokolle gibt es einige \gls{acr:IOT} spezifische Standards, welche sich jedoch noch nicht flächendeckend durchgesetzt haben. Standards im Bereich Architektur, Device-Discovery und Service Beschreibung haben sich noch nicht etabliert.
 
-Handelt es sich bei der zu designenden Software um eine Software für ein \gls{acr:IOT}-Gateway oder ein \gls{acr:IOT}-Endgerät mit integriertem Gateway sieht es meistens etwas anders aus und der Einsatz einer Hochsprache und von spezialisierten Frameworks ist grundsätzlich sinnvoll. Aber auch hier wird es Hardware-Seitige Einschränkungen geben, welche berücksichtigt werden müssen.
+Zwei weitere zentrale Punkte sind Sicherheit und Vertraulichkeit. Sicherheit und Vertraulichkeit der Systeme und Daten sollte auf jeder Ebene, vom Endgerät bis zum Back-End System, berücksichtigt werden. Ein wichtiger Merkpunkt ist hier, je kleiner der implementierte Stack an Funktionalitäten, desto kleiner die Angriffsfläche des Systemes.
 
-Im Gegensatz zu einem Gateway stellt ein Endgerät in der Regel nur ein kleines Set an Funktionalitäten zur Verfügung. Zum Beispiel die Bereitstellung der Daten eines oder mehreren Sensoren. Der komplexeste Teil der Software stellt die Bereitstellung eines Kommunikationsstacks dar. Hier sollte wenn immer möglich ein geeigneter Standard oder etablierter proprietäres Protokoll genutzt werden. In der Regel stellt ein \gls{acr:IOT}-Endgerät keine direkte Präsentationsschicht und Datenhaltungsschicht zur Verfügung. Die Präsentation erfolgt entweder über ein Gateway oder über ein Back-End-System. Die Datenhaltung, beziehungsweise Historisierung, wird durch ein Back-End-System sichergestellt. 
+Das Design sollte zudem berücksichtigen, dass die Endgeräte über lange Zeit ohne Software-Update in Betrieb sind, wohingegen sich die Back-End Systeme (und allenfalls Gateways) laufend weiterentwickeln. Vor allem an den Schnittstellen sind hier entsprechende Vorkehrungen zu treffen.
 
-Um eine gute und einfache Maschinen zu Maschinen Kommunikation zu ermöglichen, sollte ein möglichst hoher Abstraktionsgrad angestrebt werden. Durch den Einsatz von geeigneten Standard-Protokollen und Frameworks kann dies gut realisiert werden. Aktuell gibt es jedoch noch keine, beziehungsweise nur wenige, grossflächig etablierte Protokolle und Standards, welche speziell auf die Domäne \gls{acr:IOT} zugeschnitten sind. 
+Wie auch in normaler Software sollten alle Funktionalitäten mit Unit- und Integrations-Tests geprüft werden.
+
+\subsection{\gls{acr:IOT}-Endgeräte}
+Aufgrund der Ressourceneinschränkungen auf \gls{acr:IOT}-Endgeräten wird meistens eine Hardwarenahe Programmiersprache wie C oder C++ verwendet. der Vorteil dieser Sprachen liegt darin, dass sie im Vergleich wenige Ressourcen benötigen jedoch doch einen gewissen Komfort und Abstraktionsmöglichkeit bieten. Auch der Einsatz von Assembler kann sinnvoll sein, gerade wenn es sich um ein Endgerät handelt, welches über eine serielle oder parallele Schnittstelle mit einem Gateway verbunden ist.
+
+Für die Kommunikation mit dem Gateway sollte ein einfaches und sparsames Protokoll verwendet werden. Die übermittelte Datenmenge ist grundsätzlich immer sehr klein und die Wichtigkeit eins einzelnen Datenpaket ist sehr gering. Daher sind für die Kommunikation leichtgewichtige Protokolle zu bevorzugen. Meistens ist es auch nicht notwendig auf dem Gerät den vollen Protokoll-Stack zu implementieren. Der Client-Teil zur Übermittlung der Daten ist oft ausreichend (Read-Only).
+
+Das Endgerät selbst bietet nur ein geringes Set an Funktionalitäten an. Die komplexen Funktionen sind entweder in den Back-End Systemen oder den Gateways realisiert. Nicht benötigte Funktionen sollten unbedingt weggelassen werden. Der Einsatz von Frameworks bietet sich insbesondere für die Abstraktion des Kommunikationsprotokolls und allfälliger Device-Management-Features an. Dabei ist jedoch der Ressourcenverbrauch der Frameworks bei der Auswahl zu berücksichtigen.
+
+Das Endgerät stellt typischerweise keine direkte Präsentationsschicht und Datenhaltungsschicht zur Verfügung. Die Präsentation erfolgt entweder über ein Gateway oder über ein Back-End-System. Die Datenhaltung, beziehungsweise Historisierung, wird auch durch ein Back-End System oder ein Gateway implementiert. 
+
+
+\subsection{\gls{acr:IOT}-Gateways}
+Ein Gateway verfügt meistens über leistungsfähigere Hardware als ein Endgerät, da es einen grösseren Umfang an Funktionalitäten abdecken muss. Auf einem Gateway ist der Einsatz einer Hochsprache in der Regel sinnvoll, da dadurch ein wesentlich höherer Abstraktionsgrad erreicht werden kann. Auch der Einsatz von Frameworks ist sinnvoll um Querschnittfunktionalitäten umzusetzen.
+
+
+Da das Gateway über leistungsfähigere Ressourcen verfügt ist die Auswahl des Betriebssystemes und der Programmiersprache nicht mehr so essentiell, wie bei einem Endgerät. Wichtig ist, dass das Gateway eine breite Palette an Kommunikationsprotokollen unterstützt. Sowohl in Richtung der Endgeräte, als auch in Richtung der Back-End Systeme.
+
+
+\subsection{\gls{acr:IOT}-Back-End Systeme}
+Bei Back-End Systemen kommen klassische Enterprise- und Big-Data-Technologien zum Einsatz. Die Auswahl an verschiedenen Technologien und Produkten ist sehr umfangreich und wird deshalb hier nicht näher erläutert. Der verfügbare Stack an Protokollen spielt hier nicht mehr eine so grosse Rolle. Die Datenübertragung zwischen Gateway und Back-End System erfolgt über \gls{acr:IP} (v4 oder v6).
+
+
 
 \subsection{Betriebssysteme}
-Für \gls{acr:IOT}-Endgeräte und -Gateways werden in der Regel "`Embedded Operating Systems"' verwendet. Die Back-End-Systeme, und je nach Situation auch die Gateways, werden mit einem normalen Betriebssystem betrieben. Nachfolgend werden einige "`Embedded Operating Systems"' aufgelistet, welche heute verfügbar sind.
+Für \gls{acr:IOT}-Endgeräte und -Gateways werden in der Regel "`Embedded Operating Systems"' verwendet. Nachfolgend werden einige "`Embedded Operating Systems"' aufgelistet, welche heute verfügbar sind.
 
 \begin{itemize}
 \item TinyOS
 \item Contiki
 \item Mantis
 \item FreeRTOS
+\item LiteOS
+\item RIOT
+\item Saphire OS
+\item Google Brillo (Betriebssystem für Smart Homes)
 \end{itemize}
 
-\subsection{Programmiersprachen}
-Je nach verwendeter Hardware und verwendetem Betriebssystem können verschiedenste Programmiersprachen zum Einsatz kommen.
 
-In den nachfolgenden Abschnitten werden ein paar Programmiersprachen im Kontext von \gls{acr:IOT} erläutert. Diese dienen aber nur als Illustration. Es gibt noch zahlreiche weitere Programmiersprachen, welche für die Entwicklung von Software in dieser Domäne eingesetzt werden können.
+
+\subsection{Programmiersprachen}
+In den nachfolgenden Abschnitten werden einige paar Programmiersprachen, beziehungsweise Gruppen von Programmiersprachen, im Kontext von \gls{acr:IOT} erläutert. Diese dienen aber nur als Illustration. Es gibt noch zahlreiche weitere Programmiersprachen, welche für die Entwicklung von Software in dieser Domäne geeignet sind.
+
+\gls{acr:IOT} \gls{acr:DSL}'s gibt es in vielerlei Ausprägungen. Diese sind in der Regel Teil eines spezifischen Frameworks, beziehungsweise einer Library. Im vierten Quartal von diesem Jahr wird voraussichtlich Google Weave erscheinen. Google Weave ist eine API und eine Sammlung von Tools für die Kommunikation von \gls{acr:IOT}-Geräte welche das Betriebssystem Google Brillo verwenden. Google Weave wäre eine \gls{acr:DSL}, welche im Kontext von Google Brillo eingesetzt wird.
 
 \subsubsection{Assembler}
 Eine Implementation in Assembler kann unter bestimmten Voraussetzungen die beste Lösung für ein bestimmtes Problem sein. In der Regel wird der Assembler-Ansatz gewählt, wenn das Programm so effizient und sparsam wie möglich ablaufen und mit so wenig Ressourcen als möglich auskommen soll. Im Gegenzug erfordert die Entwicklung und Wartung mehr Aufwand und der Code ist erheblich komplexer, als wenn dieser in einer Hochsprache geschrieben wurde.
@@ -61,10 +93,8 @@ Eine Implementation in Assembler kann unter bestimmten Voraussetzungen die beste
 Allenfalls kann es sinnvoll sein, nur gewisse kritische Teile der Anwendung in Assembler zu implementieren.
 
 
-
 \subsubsection{C / C++}
 C und C++ kommen dann zum Einsatz, wenn ein hardwarenahe Programmierung erforderlich, aber trotzdem ein gewisses Niveau an Komfort und Abstraktion bei der Programmierung angestrebt wird. C und C++ werden im grossen und ganzen auf allen gängigen Betriebssystemen unterstützt. Der Code ist zwar nicht ohne Anpassung auf jedem Betriebssystem lauffähig. Der Aufwand dafür sollte sich in der Regel jedoch in Grenzen halten.
-
 
 
 \subsubsection{Java / .NET}
@@ -76,15 +106,11 @@ Für die Implementation kann es durchaus sinnvoll sein eine Hochsprache, wie Jav
 
 
 \subsection{Standards}
-Existieren in einer Domäne Standards für die häufigsten Problemstellungen hat dies für den Endkonsumenten einen positiven Effekt. Durch die Standardisierung muss er sich nicht an einen spezifischen Hersteller binden und kann Produkte von verschiedenen Herstellern miteinander kombinieren. Er hat bei der Auswahl seiner Geräte beinahe völlige Wahlfreiheit. Im Gegensatz dazu sind die grossen Hersteller bestrebt, die Kunden so fest als möglich an sich zu binden, damit diese weitere Produkte aus ihrer Angebotspalette kaufen. Eine Standardisierung wird daher oft von grösseren Unternehmen erschwert. Oft werdne Standards erst definiert, wenn sich ein Protokoll oder eine Methodik erst etabliert, wenn sich diese auf dem Markt durchgesetzt hat. Mit dem \gls{acr:IOT} besteht nun die Chance bereits früh einen gewissen Grad an Standardisierung zu erreichen. Ein hoher Grad an Standardisierung impliziert einen höheren Abstraktionsgrad, was wiederum einige positive Effekte auf die Verwendung und Entwicklung der Produkte hat. \gls{acr:IOT} bereits begonnen gewisse Standards zu entwickeln. \todo{Bsp AllJoyn vs. iotivity}
+Existieren in einer Domäne Standards für die häufigsten Problemstellungen hat dies für den Endkonsumenten einen positiven Effekt. Durch die Standardisierung muss er sich nicht an einen spezifischen Hersteller binden und kann Produkte von verschiedenen Herstellern miteinander kombinieren. Er hat bei der Auswahl seiner Geräte beinahe völlige Wahlfreiheit. Im Gegensatz dazu sind die grossen Hersteller bestrebt, die Kunden so fest als möglich an sich zu binden, damit diese weitere Produkte aus ihrer Angebotspalette kaufen. Eine Standardisierung wird daher oft von grösseren Unternehmen erschwert. Oft werdne Standards erst definiert, wenn sich ein Protokoll oder eine Methodik erst etabliert, wenn sich diese auf dem Markt durchgesetzt hat. Mit dem \gls{acr:IOT} besteht nun die Chance bereits früh einen gewissen Grad an Standardisierung zu erreichen. Ein hoher Grad an Standardisierung impliziert einen höheren Abstraktionsgrad, was wiederum einige positive Effekte auf die Verwendung und Entwicklung der Produkte hat. Da das \gls{acr:IOT} an sich nichts neues ist, sondern nur eine weiterer Schritt ein einer langen Kette von Entwicklungen, wurden bereits einige spezifische Standards entwickelt. Insbesondere für Übertragungs- und Kommunikationsprotokolle wurden mehrere Standards definiert. Wohingegen für andere Aspekte wie die Device Discovery oder die Service Beschreibung noch übergreifende Standards fehlen.
  
 
 \subsection{Standards: Kommunikationsprotokolle}
-Die ersten Standards für die \gls{acr:IOT}-Welt haben sich im Bereich der Kommunikationsprotokolle entwickelt. Einige dieser Kommunikationsprotokolle wurden spezifisch für das \gls{acr:IOT} entwickelt, andere gibt es schon länger und wurden ursprünglich für einen anderen Zweck definiert.
-
-Nachfolgend werden die wichtigsten Kommunikationsprotokolle für den Bereich \gls{acr:IOT} beschrieben.
-
-Grafik: http://electronicdesign.com/embedded/understanding-protocols-behind-internet-things 
+Die ersten Standards für die \gls{acr:IOT}-Welt haben sich im Bereich der Kommunikationsprotokolle entwickelt. Einige dieser Kommunikationsprotokolle wurden spezifisch für das \gls{acr:IOT} entwickelt, andere gibt es schon länger und wurden ursprünglich für einen anderen Zweck entwickelt. Nachfolgend werden die wichtigsten Kommunikationsprotokolle für den Bereich \gls{acr:IOT} beschrieben.
 
 
 \subsubsection{MQTT}
@@ -124,117 +150,124 @@ WebSocket ist ein ermöglicht eine Voll-Duplex Kommunikation über eine einzelne
 Das \gls{acr:COAP} ist ein leichtgewichtes, binäres Protokoll, welches speziell für kleine, beziehungsweise ressourcenarme  Geräte konzipiert wurde. Semantisch ist \gls{acr:COAP} and \gls{acr:HTTP} ausgerichtet und die Übersetzung von \gls{acr:COAP} nach \gls{acr:HTTP} ist möglich. Wie auch \gls{acr:HTTP} basiert \gls{acr:COAP} auch auf dem \gls{gls:REST}-Modell. Es können somit Ressourcen unter bestimmten URL's angeboten werden, welche über GET, POST, PUT und DELETE angesprochen werden können. \gls{acr:COAP} zeichnet sich durch seine Einfachheit, Multicasting-Fähigkeit, den geringen Overhead, die Unterstützung von Geräte-Erkennug (Device-Discovery), einen einfachen "`Publish / Subscribe"'-Mechanismus und ein einfaches Caching aus. \gls{acr:COAP} verwendet \gls{acr:UDP} als Transportprotokoll.
 
 
+\subsubsection{LWM2M}
+Das Lightweight \gls{acr:M2M} Protokoll ist ein Device-Management-Standard der Open Mobile Alliance. Das Protokoll selbst basiert auf \gls{acr:COAP} und ist als Client-Server-Protokoll ausgelegt.
+
+
+\subsection{Standards: Übertragungsprotokolle}
+Die Anforderungen der Domäne \gls{acr:IOT} erfordenr auch Neuerungen im Bereich der Übertragungsprotokollen und -standards. Nachfolgend werden die wichtigsten Übertragungsprotokolle und -standards für den Bereich \gls{acr:IOT} kurz beschrieben.
+
+
+\subsubsection{IEEE 802.15.4}
+Der Standard IEEE 802.15.4 wurde speziell für den Einsatz auf eingeschränkten Geräten, beziehungsweise eingeschränkten Netzwerken entwickelt und gilt als Schlüsselfaktor für die Etablierung des \gls{acr:IOT}. Dieser Standard bildet die Basis für weitere Protokolle und Standards wie ZigBee, WirelessHART oder 6LoWPAN. Der Standard definiert für die Übertragung die Frequenzbänder 868/915 MHz und 2.4 GHz. Es werden Stern und Punkt-zu-Punkt Netzwerke unterstützt.
+
+
 \subsubsection{ZigBee}
+ZigBee ist ein offener Standard für drahtlose Netzwerke, welcher von der ZigBee Alliance entwickelt wird. Die Basis von ZigBee bildet der Standard IEEE 802.15.4. ZigBee ist speziell für \gls{acr:IOT}-Endgeräte ausgelegt und arbeitet daher besonders Energieeffizient und Ressourcenschonend. Aktuell werden Punkt-zu-Punkt, Stern und Mesh Netzwerk-Topologien unterstützt. Es werden verschlüsselte Verbindungen, Collision-Avoidance und Acknowledgements unterstützt. Innerhalb von ZigBee gibt es weitere Standards auf Applikations-Ebene für bestimmte Anwendungsbereiche wie zum Beispiel Home-Automation oder Smart Energy. Die Reichweite des normalen ZigBee Standards im Freien beträgt zwischen 10 und 100 Metern.
+
 
 \subsubsection{Z-Wave}
+Z-Wave ist ein Kommunikationsstandard für die drahtlose Übermittlung von Daten im Bereich der Heimautomation. Er wird von der Firma Sigma Designs in Zusammenarbeit mit der Z-Wave Alliance entwickelt und ist ebenfalls auf einen geringen Energieverbrauch ausgelegt. Der Standard verwendet Frequenzen im Bereich von 850 bis 950 MHz und ist als Mesh-Netzwerk ausgelegt, wobei maximal 4 Hops und maixmal 232 Geräte zugelassen sind. Die Verwaltung des Netzwerkes erfolgt durch einen Primärcontroller. Die Reichweite im freien Gelände beträgt ca. 150 Meter. 
+
+Zusätzlich zum Übertragungsstandard können Z-Wave-Geräte auf Anwendungsebene in verschiedene Klassen eingeteilt werden. Pro Geräteklasse müssen durch den Hersteller bestimmte Pflichtkommandos implementiert werden. neben den Pflichtkommandos kann der Hersteller weitere Funktionalitäten implementieren. Diese müssen jedoch mit dem Z-Wave-Standard konform sein.
 
 \subsubsection{6LoWPAN}
+6LoWPAN steht für "`IPv6 over Low Power Wireless Personal Area Networks"' und ist ein auf dem Standard IEEE 802.15.4 basierendes Protokoll zur drahtlosen Datenübermittlung. Es ermöglicht die Übermittlung von IPv6-Packeten über den IEEE 802.15.4 Standard und wurde spezifisch für den Einsatz auf eingeschränkten Geräten entwickelt. 
+
+6LoWPAN kann mit jedem anderen \gls{acr:IP}-Netzwerk (Ethernet oder Wi-Fi), beziungsweise \gls{acr:IP} fähigen Gerät kommunizieren. 
 
 \subsubsection{ANT}
+ANT ist ein proprietärer Funkstandard der Firma Dynastream und wurde ursprünglich für die Messung und Überwachung im Bereich Sport und Fitness geschaffen. Mit ANT können drahtlose \gls{acr:PAN}'s gebildet werden. Ebenfalls wird Mesh-Networking unterstützt. Auch ANT verwendet das Frequenzband um 2.4 GHz.
 
-\subsubsection{Bluetooth}
+
+\subsubsection{Bluetooth Smart / Bluetooth Low Energy}
+Bluetooth Low Energy (oder auch Bluetooth Smart) ist eine optionale Erweiterung des Bluetooth Standards und ist auf den Einsatz auf eingeschränkten Geräten optimiert. wie auch der normale Bluetooth Standard verwendet Bluetooth Low Energy das 2.4 GHz Frequenzband.
+
 
 \subsubsection{EnOcean}
-
-\subsubsection{DASH7}
-
-\subsubsection{ISA100}
-
-\subsubsection{Wireless HART}
-
-\subsubsection{Wireless M-Bus}
-
-\subsubsection{EtherCAT}
-
-\subsubsection{Modbus}
-
-\subsubsection{Profinet}
-
-\subsubsection{HomePlug}
-
-\subsubsection{HomeGrid}
-
-\subsection{Standards: Middleware}
-\subsubsection{DDS}
-Das \gls{acr:DDS} 
-Data Distribution Service, Geräte welche direkt Geräte-Daten verwenden, Verteilung zu anderen Geräten, Interaktion mit Infrastruktur unterstützt, Daten-zentrierter Middleware-Standard, Wurzeln: High-Performance Verteidigung, Industrie, Embeddedd Applications, effektiv: millionen von nachrichten pro sekunde zu mehreren gleichzeitigen empfängern
+EnOacean ist ein Funkstandard der gleichnamigen Firma EnOcean. Das Hauptmerkmal dieser Technologie ist der Fakt, dass auf der Sender-Seite nicht zwingend eine Energie-Quelle vorhanden sein muss. Die zur Übermittlung notwendige Energie wird durch eine physische Interaktion gewonnen (zum Beispiel Betätigung eines Lichtschalters). EnOacean verwendet die Frequenzen 902 MHz, 928.35 MHz und 315 MHz.
 
 
-Publish, Subscribe Architecture
+\subsubsection{Weitere Standards}
+\begin{itemize}
+\item DASH7 (Open Source RFID-Standard)
+\item ISA100.11a (Drahtloser Netzwerk-Standard der International Society of Automation (ISA), basiert auf IEEE 802.15.4)
+\item MiWi (Proprietäres drahtloses Netzwerkprotokoll basierend auf IEEE 802.15.4)
+\item WirelessHART (Protokoll für drahtlose Sensor-Netzwerke basierend auf IEEE 802.15.4 und dem \gls{acr:HART})
+\item EtherCAT (Ethernet for Control Automation Technology, Echtzeit-Ethernet Protokoll)
+\item NFC (Near Field Communication, Standard zum drahtlosen Austausch von Daten über kurze Distanz)
+\item RFID (Radio Frequency Identification, Standard zur berührungslosen Identifikation und Lokalisierung )
+\item WAMP (Web Application Messaging Protocol, Offener Standard, Subprotokoll des WebSockets Protokoll)
+\end{itemize}
 
-Unterschied: Daten an Infrastruktur oder an anderes Gerät, Geräte sind schnell, mit vielen Geräten kommunizieren, TCP Point to Point to restriktiv, DDS: Detailierte qualitiy of service conrol, multicast, konfigurierbare verfügbarkeit, Redundanz
 
-Filter und Selektion von Daten, bzw. Bestimmung was wohin geht
-
-Direct Device-to-device bus, relational data model, ähnlich Datenbank, 
-
-Z.B.: Militär, Windparks, Asset-Tracking, Fahrzeug Test und Sicherheit
- Distribute Device Data, fast bus for integrating intelligent machines (D2D)
-
-Wann: Chaos / Desaster wenn für 5min offline?, Performance sehr wichtig (ms / us) / mehr als 100 Anwendungen / mehr als 10'000 Datenwerte, code mehr als 3 Jahre entwickelt?
-
-\subsection{Weitere Protokolle}
+\todo{Kapitel noch nicht vollständig}
+\subsection{Weitere Protokolle} \todo{Evtl. rausnehmen}
 Device-Discovery
 
-\subsection{Frameworks}
-In diesem Kapitel werden einige Frameworks vorgestellt, welche ....
+DDS, Data Distribution Service, Middleware, Publish-Subscribe Architektur
 
-Frameworks --> mobile / web --> Vereinfachung Entwiclung, Abstraktion Implementations-Details, 
-apache ISIS?
-http://iot.eclipse.org/java/open-iot-stack-for-java.html
-
-AllSeen
-IOTIVITY
-
-\subsection{Thread}
-Protokolle: Thread, Netzwerk-Protokoll, Fokus: Security, Low Energy, notwendiger Chip, schon in vielen Geräten vorhanden, gestützt auf 6LoWPAN, IPv6 over Low power Wireless Personal Area Network, 
+\subsection{Frameworks / Erweiterte Protokoll-Stacks}
+In diesem Kapitel werden einige Frameworks und Erweiterungen von Protokoll-Stacks vorgestellt. Frameworks vereinfachen die Entwicklung und erlauben einen höheren Abstraktionsgrad in der Anwendung.
 
 
-\subsection{AllJoyn}
-Qualcomm entwickelt, anschliessend: Linux Foundation, AllSeen Alliance (Cisco, Microsoft, LG, HTC, ...)
-Verbindung, Wartung Geräte in WLAN-Netzwerk, Kontrolle, Benachrichtungs Service, 
+\subsubsection{Thread}
+Thread ist eine drahtloses Netzwerk-Protokoll welches auf 6LoWPAN und somit auf dem Standard IEEE 802.15.4 und IPv6 basiert. Thread erweitert 6LoWPAN um zusätzliche Funktionalitäten im Bereich Sicherheit, Routing und Setup des Gerätes. Genauere Details zu Thread konnten nicht gefunden werden. Weitere Informationen sind nur über eine kostenpflichtige Mitgliedschaft in der ThreadGroup erhältlich. Thread steht in direkter Konkurrenz zu Iotivity und AllJoyn.
 
 
-\subsection{Komplett-Lösungen}
+\subsubsection{IoTivity}
+IoTivity ist ein Open Source Software Framework des Open Interconnect Consortium (OIC). Ziel von IoTivity ist eine Referenz-Implementation der vom OIC definierten \gls{acr:IOT}-Standards. Das Framework bietet Funktionen zur Device Discovery, Verbindungs- und Ressourcen-Management. Zusätzlich sind folgende Module enthalten:
 
+\begin{itemize}
+\item Virtual (Soft) Sensor Manager \\
+Aggregierung des Inputs von einem oder mehreren Sensoren und Darstellung als virtuelle Ressource. Die Sensor-Daten können über Queries abgefragt werden.
+\item Protocol Plugin Manager\\
+Integrationsmöglichkeit für nicht \gls{acr:OIC}-Protokolle.
+\item Things Manager\\
+Verwaltung von Ressourcen-Gruppen und Ausführen von Gruppen-Aktionen.
+\item Ressource Offloading / Notification Manager\\
+Verwaltung von Ressourcen für eingeschränkte Geräte.
+\item Smart Home Protocol\\
+Framework mit Services zur Implementation eines Heimautomations-Controllers.
+\end{itemize}
 
+Bei \gls{acr:OIC} Mitglied sind unter anderem Cisco, Intel, Atmel, Honeywell, Dell, Siemens, Acer, Realtek und Hewlett Packard.
 
-\section{Software Construction} 
+\subsubsection{AllJoyn}
+AllJoyn ist ein Open Source Framework  der Allseen Alliance. Das Framework bietet Kern-Services zur Erkennung (Discovery) von Geräten und Anwendungen und vereinfacht die Kommunikation und Interaktion mit unbekannten Geräten und Anwendungen. Die Allseen Alliance hat eine grosse Anzahl an Mitgliedern, darunter Canon, Microsoft, Qualcomm, Sony, Cisco, HTC und Lenovo.
 
-Unit, Integration Testing, Standards verwenden --> Sicherstellung Wiederverwendbarkeit, Kompatibilität, Update-Möglichkeit einbauen, evtl. sehr langer Einsatz ohne Update, Hardware berücksichtigen, Configuration Language, Toolkis Languages, Programming languages, Optimierung, Tuning, Reuse
-
-Je nach Anwendungsbereich: Hardwarenahe, Optimierung
-Für die Entwicklung von Anwendungen für \gls{acr:IOT}-Geräte können grundsätzlich, 
-Firmware für Spezifische Hardware, Adressierung Netzwerk- und Verbindungsprobleme, Security, oft nur eine spezifische Aufgabe, Integration Test wichtig HW, System Test (Interaktion mit Gateway, Netz, andere Geräte), Test update-Prozess, Test in Echtumgebung, keine Oberfläche
-
+\subsection{Weitere}
+\begin{itemize}
+\item ZeroMQ von iMatix
+\item mbed von ARM
+\item Internet of Things Platform von Intel
+\end{itemize}
 
 
 \section{Software Testing}
-Das Testing, ist wie in allen Domänen, ein essentieller Bestandteil des Software Entwicklungs Prozesses. In dieser Domäne ist das Testing noch wichtiger, da die \gls{acr:IOT}-Endgeräte allenfalls niemals ein Update erhalten (können). \gls{acr:IOT}-Geräte werden in grossen Massen hergestellt und auch eingesetzt. Wurden zum Beispiel in einer Öl-Pipeline durch die Wüste mehrere Tausend Sensoren installiert, welche Messwerte und Überwachungsdaten liefern, kann sich die Korrektur eines Fehlers als sehr schwierig herausstellen. Entweder verfügt das Gerät über eine entsprechende Update-Funktionalität und hat eine Verbindung zu einem Backend-System, der Update erfolgt manuell durch einen technischen Mitarbeiter oder das Gerät wird komplett ausgetauscht. Trotzdem, dass ein Gerät über eine Update-Schnittstelle und eine Verbindung zu einem Netzwerk verfügen kann, kann es vorkommen, dass ein Update aufgrund mangelnder Hardware-Ressourcen oder zu geringer Bandbreite nicht übertragen oder eingespielt werden kann.
+Das Testing, ist wie in allen Domänen, ein essentieller Bestandteil des Software Entwicklungs Prozesses. In dieser Domäne ist das Testing noch wichtiger, da die \gls{acr:IOT}-Endgeräte allenfalls niemals ein Update erhalten (können). \gls{acr:IOT}-Endgeräte werden in grossen Massen hergestellt und auch eingesetzt. Wurden zum Beispiel in einer Öl-Pipeline durch die Wüste mehrere Tausend Sensoren installiert, welche Messwerte und Überwachungsdaten liefern, kann sich die Korrektur eines Fehlers als sehr schwierig herausstellen. Entweder verfügt das Gerät über eine entsprechende Update-Funktionalität und hat eine Verbindung zu einem Backend-System, der Update erfolgt manuell durch einen technischen Mitarbeiter oder das Gerät wird komplett ausgetauscht. Trotzdem, dass ein Gerät über eine Update-Schnittstelle und eine Verbindung zu einem Netzwerk verfügen kann, kann es vorkommen, dass ein Update aufgrund mangelnder Hardware-Ressourcen oder zu geringer Bandbreite nicht übertragen oder eingespielt werden kann.
 
-Auch haben Fehler üblicherweise grosse Auswirkungen und sind oft von der Ferne nur schwer festzustellen. Liefern die Sensoren der erwähnten Öl-Pipeline falsche Daten über den Zustand der Leitung, wird gegebenenfalls ein Leck oder ein entstehender Riss nicht rechtzeitig entdeckt.
+Auch haben Fehler üblicherweise grosse Auswirkungen und sind oft von der Ferne nur schwer festzustellen. Liefern die Sensoren der erwähnten Öl-Pipeline falsche Daten über den Zustand der Leitung, wird gegebenenfalls ein Leck oder ein entstehender Riss nicht rechtzeitig entdeckt, was schlussendlich in einem finanziellen Schaden resultiert.
 
-Dies führt auch bereits zu einem weiteren wichtigen Punkt. \gls{acr:IOT}-Endgeräte und zum Teil auch Gateways können unter verschiedensten physikalischen Bedingungen eingesetzt werden. Bei Servern kann man in der Regel davon ausgehen, dass diese in einem mehr oder weniger gut klimatisierten Rechenzentrum oder einem Server-Raum stehen. Die Bandbreite an physikalischen Einflüssen ist relativ überschaubar. Bei \gls{acr:IOT}-Geräten sieht das etwas anders aus, dort sind die Einflüsse und Bedingungen nur schwer vorhersehbar. Daher haben die meisten Hersteller entsprechende Labor-Umgebungen, wo Hard- und Software unter Extrembedingungen getestet werden.
+Dies führt auch bereits zu einem weiteren wichtigen Punkt. \gls{acr:IOT}-Endgeräte und zum Teil auch Gateways können unter verschiedensten physikalischen Bedingungen eingesetzt werden. Bei Servern kann man in der Regel davon ausgehen, dass diese in einem mehr oder weniger gut klimatisierten Rechenzentrum oder einem Server-Raum stehen. Die Bandbreite an physikalischen Einflüssen ist relativ überschaubar. Bei \gls{acr:IOT}-Geräten sieht das etwas anders aus, dort sind die Einflüsse und Bedingungen nur schwer vorhersehbar. Daher haben die meisten Hersteller entsprechende Labor-Umgebungen, wo Hard- und Software unter Extrem- und Ausnahmebedingungen getestet werden.
 
 Nicht nur die Umwelt kann einen Einfluss auf die Geräte haben, sondern auch das verwendete Netzwerk oder die Architektur des Netzwerkes. Auch dafür werden entsprechende Testumgebungen benötigt. Zusätzlich muss die Interaktion mit unbekannten Drittgeräten getestet werden.
 
-Ein intensives und umfassendes Testing resultiert in einer hohen Qualität. Da auf den Endgeräten nur ein geringes Set an Funktionalitäten verfügbar sind, gestaltet sich das Testing an dieser Stelle etwas einfacher, was aber durch die umfangreicheren Tests mit externen Einflüssen kompensiert wird.
+Der Funktionsumfang der \gls{acr:IOT}-Endgeräte ist in der Regel sehr überschaubar und die Funktionalitäten weisen eine geringe Komplexität auf. Dadurch wird der Test der eigentlichen Funktionalität etwas vereinfacht, was aber durch die bereits oben erwähnten Punkte mehr als kompensiert wird.
 
+
+Für Gateways und Back-End Systeme wird für das Software Testing analog der Standard-Domäne verfahren. Bei den Gateways ist zusätzlich sicherzustellen, dass diese über die korrekten Versionen der eingesetzten Kommunikationsstacks verfügen. Ist dies nicht der Fall, können die \gls{acr:IOT}-Endgeräte unter Umständen nicht mehr mit dem Gateway kommunizieren.
 
 
 \section{Software Maintenance}
-Die Maintenance von Software welche für \gls{acr:IOT}-Endgeräte entwickelt wurde ist schwierig, beziehungsweise aufwändig. Wie bereits im vorangehenden Kapitel aufgezeigt, kann die Software auf \gls{acr:IOT}-Endgeräte schwierig zum updaten sein. Ist ein entsprechender Update-Mechanismus vorhanden, ist ein besonders Augenmerk auf den Rollout zu legen, da schnell mehrere 10'000 Geräte betroffen sein können. Muss das Gerät ausgetauscht, die Energiequelle erneuert oder die Software manuell aktualisiert werden, können hohe Maintenance-Kosten entstehen. 
+Die Maintenance von Software welche für \gls{acr:IOT}-Endgeräte entwickelt wurde ist schwierig, beziehungsweise aufwändig. Wie bereits im vorangehenden Kapitel aufgezeigt, kann die Software auf \gls{acr:IOT}-Endgeräte schwierig zum updaten sein. Ist ein entsprechender Update-Mechanismus vorhanden, ist ein besonders Augenmerk auf den Rollout zu legen, da schnell mehrere 10'000 Geräte betroffen sein können. Hier stellen sich Fragen wie: Wann wird das Update eingespielt? Welche Geräte erhalten das Update in welcher Reihenfolge? Was sind die Auswirkungen während / nach dem Update? Wie werden die Besitzer der Geräte informiert? Gibt es Abhängigkeiten zwischen verschiedenen Software-Versionen? Gibt es Abhängigkeiten zwischen Endgerät, Gateway und Back-End System?
+
+Unter Umständen können gewisse Geräte nicht aktualisiert werden. Daher muss sichergestellt werden dass das Gateway und gegebenenfalls auch das Back-End System rückwärts kompatibel bleiben. Durch ein vorausschauendes und gutes Schnittstellendesign kann diese Situation umgangen oder entschärft werden.
+
 
 
 \section{Software Configuration Management}
-Das Software Configuration Management ist für den Rollout von Updates sehr wichtig, da unter Umständen verschiedene Versionen von Hardware und Software im Einsatz sein können. Stürzt ein gerät
-
-
-Wichtig für ausrollen von Updates, Kompatibilität evtl. Firmware auf verschiedenen HW-Typen, hand in hand mit Configuration Mgmt, Software Configuration Control: wichtige Aufgabe, Freigabe: SW configration Control board, 
-
-Wichtig Prozess, intensive Retests
-
-SW Release Management and Delivery
+Um ein Software-Update erfolgreich auszurollen ist das Configuration Management sehr wichtig. Zuerst muss der Update-Prozess in einer Testumgebung für die sich im Betrieb befindlichen Geräte getestet werden. Dafür müssen Informationen bezüglich eingesetzten Versionen von Hard- und Software aus dem Configuration Management herangezogen werden. Sind sämtliche Tests gut verlaufen kann der entsprechende Update ausgerollt und nach und nach die dazugehörigen Configuration Items aktualisiert werden.
 
 
 
@@ -244,81 +277,19 @@ Das Software Engineering Management entspricht grundsätzlich dem Vorgehen in de
 
 
 \section{Software Engineering Process}
-Defect Tracking, small scale projects, fast product turnaroudn, 
+Der Software Entwicklungsprozess von \gls{acr:IOT}-Anwendungen ist je nach Element unterschiedlich. Die Entwicklung für ein \gls{acr:IOT}-Endgerät ist relativ kurz, wobei für die Implementation viele verschiedene Fähigkeiten erforderlich sind. Im Gegensatz dazu ist der Entwicklungsprozess von Gateways und Back-End Systemen aufwändiger und entspricht eher dem Entwicklungsprozess in der Standard-Domäne.
 
 
 
 \section{Software Engineering Tools and Methods}
-SW-Construction: Specific für SW, 
-SW-Testin: speziell, evtl. spezifisch programmiert, 
+Die eingesetzten Tools und Methoden sind wiederum vom betroffenen Element abhängig. Bei Endgeräten kommen Werkzeuge und Methoden zum Einsatz, welche sich besonders für die Entwicklung und das Testing von Embedded Systems eignet. Allenfalls müssen sogar eigene Tools entwickelt werden, um den Software Entwicklungsprozess und das Testing optimal zu unterstützen. Denkbar wäre hier zum Beispiel eine Simulationsanlage zum automatisierten Testen der Geräte unter verschiedenen physikalischen Bedingungen und Umwelteinflüssen. Als Programmiermethoden kommen eher strukturierte, objektorientierte oder spezifische (zum Beispiel bei Real-Time Anwendungen / Betriebssystemen) Methoden zur Anwendung.
 
-Methoden: Entweder Strukturiert, Daten-Orientiert, Objekt-Orientiert oder Spezifisch (z.B. Real-Time)
+Die Entwicklung der Gateways und Back-End Systeme bedient sich im grossen und ganzen der Werkzeuge und Methodiken der Standard- und Big-Data Domäne. 
 
 
 \section{Software Quality}
-Höhere Qualität notwendig, übergeordnetes ziel, 
+Die Software Qualität ist im Bereich \gls{acr:IOT} extrem wichtig, insbesondere im Bereich der Endgeräte. Da das Ziel der klassischen Softwareentwicklung ebenfalls ein hohe Qualität ist, gibt es auch hier grundsätzlich keinen Unterschied im Rahmen der Software Entwicklung.
 
 
 \section{Verwandte Disziplinen}
 Es gibt einige weitere Disziplinen, welche aufgrund der starken Innovationskraft einen grossen Einfluss auf die Domäne "`Internet of Things"' und das Software Egineering haben. Dies sind unter anderem das Computer Engineering, Computer Science, Mathematik und System Engineering.
-
-
-
-
-
-
-
-
-Wetter, Physische Einflüsse, Durch das Gerät erzeugte Hitze, Lange Lebensdauer
-
-SW Muss: Skalierbar für breite Palette an verschiedenen Gerätekategorien
-Modular sein --> nur Auswahl (RAM-Footprint)
-Verbunden (Daten rein/raus)
-Verlässlich:Zertifizierung für kritische Applikationen
-
-
-http://ercim-news.ercim.eu/en98/special/internet-of-things-a-challenge-for-software-engineering
-http://link.springer.com/chapter/10.1007%2F978-3-642-31479-7_47#page-1
-
-Layer: Transport-Layer: TCP zum Teil overkill für IOT-Device --> UDP
-UDP: beser geeignet für relatime-data, TCPS Acknowledgment and retransmission unnützer overhad für solche Anwendungen (Stück sprache nicht rechtzeitig übermittelt -> Retransmission sinnlos), 
-
-
-Service-based Application: composition and orchestration of Services
-
-
-
-Evtl. Struktur nach kategorie: Connectivity, Management, Security, API, ...
-
-Real-Time schwierig, trade off datenverlust, oft TCP als Datenbasis -> messung mit Quality of service besser
-
-http://postscapes.com/internet-of-things-software-guide
-	https://www.silabs.com/Support%20Documents/TechnicalDocs/bringing-the-internet-of-things-to-life.pdf
-http://www.datamation.com/open-source/35-open-source-tools-for-the-internet-of-things-1.html
-https://blog.profitbricks.com/top-49-tools-internet-of-things/
-http://www.businesscloudnews.com/2015/05/14/samsung-announces-open-internet-of-things-platform/
-https://www.rti.com/company/news/iot-connectivity-webinar.html
-http://www.iotsworldcongress.com/documents/4643185/4c3cc80c-03b0-41be-baf0-6a1a0fa7db07
-%https://www.mapr.com/blog/key-requirements-iot-data-platform#.VVuNi3W1FBc
-
-
-SWE:
-https://hal.inria.fr/hal-01064075/document
-http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7030178
-http://www.cio.com/article/2843814/developer/how-to-develop-applications-for-the-internet-of-things.html
-http://www.appdevelopersalliance.org/internet-of-things/
-%http://www.fit.fraunhofer.de/de/fb/ucc/lehre/scrum-based_softwaredevelopmentofinternet-of-thingsapplications.html
-%http://insights.wired.com/profiles/blogs/winning-strategies-software-development-for-the-internet-of#axzz3anWNtzAE
-
-http://link.springer.com/chapter/10.1007%2F978-3-642-36818-9_6#page-1
-
-
-Protokolle / Standards für verschieden Phasen: Collect Data, Access, Process, Collect, Control / distribute
-
-Middleware / Platforms / OS: http://postscapes.com/internet-of-things-software-guide
-
-Weitere-Protokolle: http://postscapes.com/internet-of-things-protocols
-Tools: http://www.datamation.com/open-source/35-open-source-tools-for-the-internet-of-things-1.html
-
-\section{middleware}
-Arten: Point-To-Point, Client/Server, Publish/Subscribe, Queuing, Data-Centric

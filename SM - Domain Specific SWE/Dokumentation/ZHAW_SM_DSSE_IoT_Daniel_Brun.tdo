@@ -1,8 +1,9 @@
 \contentsline {todo}{Abgrenzung}{1}{section*.3}
 \contentsline {todo}{ Struktur abschliessend verifizieren}{2}{section*.4}
-\contentsline {todo}{Prognose / Zahlen --> Aus PDF von LIEBH}{3}{section*.5}
-\contentsline {todo}{Grafik S. 4, DataAwareArchitecutre}{8}{section*.6}
-\contentsline {todo}{image: http://micrium.com/iot/devices/}{10}{section*.7}
-\contentsline {todo}{image Heimautomation}{10}{section*.8}
-\contentsline {todo}{Elem: Embedded Systems}{13}{section*.9}
-\contentsline {todo}{Bsp AllJoyn vs. iotivity}{16}{section*.10}
+\contentsline {todo}{image: http://micrium.com/iot/devices/}{8}{section*.5}
+\contentsline {todo}{image Heimautomation}{9}{section*.6}
+\contentsline {todo}{Bild: Ablauf Node: Beispiel Sensor: Acquire - Process - Notify (Funkt / Protokoll) Gateway: listen - Process - Foreward Server: Listen - Process - Display - Notify}{9}{section*.7}
+\contentsline {todo}{Kapitel noch nicht vollst\IeC {\"a}ndig}{24}{section*.25}
+\contentsline {todo}{Evtl. rausnehmen}{24}{section*.26}
+\contentsline {todo}{Praxistest: iotivity}{29}{section*.29}
+\contentsline {todo}{Reflexion}{29}{section*.30}
