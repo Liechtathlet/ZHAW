@@ -24,46 +24,44 @@ Database file #2: bib/BibtexDatabase.bib
 Biblatex version: 2.8
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Warning--Missing citation key
 You've used 24 entries,
             6047 wiz_defined-function locations,
-            1265 strings with 11854 characters,
-and the built_in function-call counts, 64956 in all, are:
+            1269 strings with 12008 characters,
+and the built_in function-call counts, 65038 in all, are:
 = -- 2735
-> -- 1513
-< -- 885
+> -- 1516
+< -- 886
 + -- 506
 - -- 414
-* -- 3612
-:= -- 3104
+* -- 3633
+:= -- 3106
 add.period$ -- 0
 call.type$ -- 24
-change.case$ -- 522
-chr.to.int$ -- 42
-cite$ -- 63
-duplicate$ -- 7755
-empty$ -- 7707
+change.case$ -- 524
+chr.to.int$ -- 43
+cite$ -- 64
+duplicate$ -- 7764
+empty$ -- 7716
 format.name$ -- 757
-if$ -- 15337
+if$ -- 15352
 int.to.chr$ -- 0
 int.to.str$ -- 67
 missing$ -- 0
-newline$ -- 469
+newline$ -- 471
 num.names$ -- 962
-pop$ -- 7566
+pop$ -- 7560
 preamble$ -- 1
-purify$ -- 463
+purify$ -- 465
 quote$ -- 0
 skip$ -- 3765
 stack$ -- 0
-substring$ -- 1873
-swap$ -- 2462
+substring$ -- 1876
+swap$ -- 2477
 text.length$ -- 615
 text.prefix$ -- 37
 top$ -- 1
 type$ -- 880
-warning$ -- 1
-while$ -- 374
+warning$ -- 0
+while$ -- 375
 width$ -- 0
-write$ -- 444
-(There was 1 warning)
+write$ -- 446

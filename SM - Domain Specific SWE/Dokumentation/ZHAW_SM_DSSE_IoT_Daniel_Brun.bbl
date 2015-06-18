@@ -213,7 +213,7 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
-\entry{}{book}{}
+\entry{E:Springer:IoT:ChallengesAndOpportunities}{book}{}
   \name{editor}{1}{}{%
     {{}%
      {Mukhopadhyay}{M.}%
@@ -231,6 +231,27 @@
   \field{number}{ISBN: 978-3-319-04222-0}
   \field{title}{Internet of Things Challenges and Opportunities}
   \field{year}{2014}
+\endentry
+
+\entry{E:tbd}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Neagle}{N.}%
+     {Colin}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NC1}
+  \strng{fullhash}{NC1}
+  \field{labelalpha}{Nea14}
+  \field{sortinit}{N}
+  \field{title}{A guide to the confusing Internet of Things standards world}
+  \verb{url}
+  \verb http://www.networkworld.com/article/2456421/internet-of-things/a-guide-
+  \verb to-the-confusing-internet-of-things-standards-world.html
+  \endverb
+  \field{year}{2014}
+  \warn{\item Invalid format of field 'month'}
 \endentry
 
 \entry{E:HAL:Iot:HighLevelAppDev}{online}{}
@@ -354,25 +375,6 @@
   \endverb
   \field{year}{2008}
   \warn{\item Invalid format of field 'month'}
-\endentry
-
-\entry{E:tbd}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {tbd}{t.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{t1}
-  \strng{fullhash}{t1}
-  \field{labelalpha}{tbd}
-  \field{sortinit}{T}
-  \field{title}{tbd}
-  \verb{url}
-  \verb http://www.networkworld.com/article/2456421/internet-of-things/a-guide-
-  \verb to-the-confusing-internet-of-things-standards-world.html
-  \endverb
 \endentry
 
 \entry{E:EMC:DigitalUniverseOfOpportunities}{online}{}

@@ -154,7 +154,7 @@
   Timestamp                = {2015.06.11}
 }
 
-@Book{,
+@Book{E:Springer:IoT:ChallengesAndOpportunities,
   Title                    = {Internet of Things Challenges and Opportunities},
   Editor                   = {Subhas Chandra Mukhopadhyay},
   Publisher                = {Springer International Publishing Switzerland},
@@ -193,6 +193,14 @@
 
   Owner                    = {dani},
   Timestamp                = {2015.06.12}
+}
+
+@Electronic{E:ThisIsANT,
+  Title                    = {ANT},
+  Url                      = {http://www.thisisant.com/},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.06.15}
 }
 
 @Electronic{E:Wiki:ANT,

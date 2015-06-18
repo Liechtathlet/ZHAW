@@ -44,3 +44,14 @@
 
 % -- Table Header rotat
 \newcommand*\THrot{\rotatebox{90}}
+
+% -- Image Source --
+\newcommand{\source}[1]{\caption*{Quelle: {#1}} }
+
+\newcommand*{\captionsource}[2]{%
+  \caption[{#1}]{%
+    #1%
+    \\\hspace{\linewidth}%
+    \textbf{Quelle:} #2%
+  }%
+}
