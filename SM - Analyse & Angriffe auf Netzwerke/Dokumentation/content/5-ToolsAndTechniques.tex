@@ -22,6 +22,7 @@ Mit dem Tool \textit{dd} können sowohl ganze Datenträger, als auch einzelne Pa
 \end{lstlisting}
 
 \subsubsection{Weitere Tools}
+Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäten:
 \begin{itemize}
 \item EnCase
 \item FTK
@@ -52,7 +53,6 @@ Das Datum und die Uhrzeit kann über nachfolgenden Befehl ausgelesen werden. Zu 
 > date
 Fre Mai 29 08:00:00 CEST 2015
 \end{lstlisting}
-
 
 
 \subsection{Bestimmung der Linux-Distribution}
@@ -100,7 +100,7 @@ Linux Mint 17 Qiana \n \l
 [    0.000000] e820: BIOS-provided physical RAM map:
 \end{lstlisting}
 
-Oft gibt auch der verwendete Package-Manager ein Hinweis auf die verwendete Distribution:\\
+Oft gibt auch der verwendete Package-Manager ein Hinweis auf die verwendete Distribution:
 \begin{itemize}
 \item Ubuntu Linux: APT, Synaptic
 \item Red Hat / Fedora Linux: RPM
@@ -144,9 +144,7 @@ Mit dem Tool "`md5deppe"' können Hashes von Ordnerinhalten rekursiv erstellt we
 \subsection{Sicherung des Arbeitsspeicher-Inhaltes}
 Bei der Sicherung von Arbeitsspeicher-Inhalten ist grundsätzlich zu beachten, dass die verwendeten Tools und Techniken einen kleinen Memory-Footprint aufweisen. Je mehr Arbeitsspeicher ein Tool verwendet, desto mehr wichtige Daten und somit auch Beweise gehen verloren. Ein weiterer wichtiger Punkt der beachtet werden soll ist, dass die Sicherung nicht im User-Mode, sondern im Kernel-Mode erfolgt. So ist sichergestellt, dass der gesamte Inhalte des Arbeitsspeichers gesichert werden kann. Andernfalls können aufgrund von Berechtigungseinschränkungen nicht alle Daten gesichert werden.
 
-\subsection{Sicherung des Arbeitsspeicher-Inhaltes ohne Zugriff auf das Betriebssystem} \todo{Evtl. weitere Details und Beispiele}
-%http://www.forensicmag.com/articles/2013/05/catching-ghost-how-discover-ephemeral-evidence-through-live-ram-analysis
-%http://forensicswiki.org/wiki/Tools:Memory_Imaging
+\subsection{Sicherung des Arbeitsspeicher-Inhaltes ohne Zugriff auf das Betriebssystem}
 Grundsätzlich gilt, dass der Inhalt des Arbeitsspeichers beim herunterfahren des Systems verloren geht. Besteht kein Zugriff auf das Betriebssystem und es besteht keine Möglichkeit das Passwort zu erhalten, muss gegbenenfalles eine der nachfolgend beschriebenen Techniken eingesetzt werden. Studien haben gezeigt, dass die Inhalte des Arbeitsspeichers noch bis zu mehreren Minuten nach dem Verlust der Stromversorgung im Arbeitsspeicher vorhanden sind. Bei einigen BIOS-Varianten wird der Arbeitsspeicher beim Herunterfahren des Systemes vollständig gelöscht. Bei diesen Systemen ist ein Auslesen nach dem Herunterfahren nicht mehr möglich.
 
 \begin{itemize}
@@ -179,6 +177,7 @@ Das Tool \textit{lime} ist ein weiteres Kernel-Modul, welches für die Akquisiti
 \end{lstlisting}
 
 \subsubsection{Weitere Tools}
+Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäten:
 \begin{itemize}
 \item Win32dd und Win64dd
 \item DumpIt
@@ -206,40 +205,44 @@ Das Image des Quelldatenträgers kann entweder auf einem separaten, sterilen Dat
 
 \subsubsection{Einsatz von Standard-Linux Tools}
 
-\textbf{Mounten des Zieldatenträgers}
+\begin{enumerate}
+\item Mounten des Zieldatenträgers
 \begin{lstlisting}
 > mount -t <Dateisystem> <PathToDisk> <MountPoint>
 \end{lstlisting}
 
-\textbf{Sicherung der Partitionstabelle}
+\item Sicherung der Partitionstabelle
 \begin{lstlisting}
 > fdisk -l <PathToDisk> > <MountPoint>/<FileName.fdisk>
 
 > parted -l <PathToDisk> > <MountPoint>/<FileName.fdisk>
 \end{lstlisting}
 
-\textbf{Generierung eines Hashes}\\
+\item Generierung eines Hashes\\
 Vor der Duplikation wird ein Hash des zu sichernden Datenträgers / Partition gemäss Kapitel \ref{subsec:ToolsTechniques:Secure:Hash} \nameref{subsec:ToolsTechniques:Secure:Hash} erstellt und dokumentiert.
 
-\textbf{Duplikation}
+\item Duplikation
 \begin{lstlisting}
 > dd conv=noerror bs=512k if=<PathToDisk> of=<MountPoint>/<FileName.dd>
 \end{lstlisting}
 
-\textbf{Generierung eines Hashes}\\
+\item Generierung eines Hashes\\
 Nach der Duplikation wird ein Hash des zu sichernden Datenträgers / Partition gemäss Kapitel \ref{subsec:ToolsTechniques:Secure:Hash} \nameref{subsec:ToolsTechniques:Secure:Hash} erstellt und mit dem dokumentierten Hash verglichen. Dies stellt sicher, dass der Datenträger während der Duplikation nicht unbemerkt verändert wurde. Anschliessend ist vom erstellten Image ebenfalls ein Hash zu erstellten, welcher mit dem dokumentierten verglichen werden muss. Ist dieser mit dem dokumentierten Hash identisch, wurde der Datenträger / die Partition korrekt dupliziert.
 
 Im Anschluss muss das Verfahren für jede verfügbare Partition wiederholt werden.
 
-\textbf{Transfer des Images via Netzwerk}
+\item Transfer des Images via Netzwerk
 \begin{lstlisting}
 > nc -l -p 8000 |dd of=<MountPoint>/<PathToImage>
 \end{lstlisting}
 
-\textbf{Transfer des Images via Netzwerk (Verschlüsselt)}
+\item Transfer des Images via Netzwerk (Verschlüsselt)
 \begin{lstlisting}
 > cryptcat -k <Pssword> -l -p 8000 |dd of=<MountPoint>/<PathToImage>
 \end{lstlisting}
+
+\end{enumerate}
+
 
 \subsubsection{dcfldd}
 Das Tool \textit{dcfldd} erweitert das Tool \textit{dd} um einige nützliche Funktionen. So können automatisch Hashes für den zu sichernden Datenträger oder die zu sichernde Partition generiert.
@@ -258,7 +261,7 @@ Das Tool \textit{dc3dd} ist ein Erweiterung, beziehungsweise eine gepatchte Vers
 
 
 \subsubsection{Weitere Tools}
-
+Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäten:
 \begin{itemize}
 \item Adepto
 \item Guymager
@@ -279,16 +282,17 @@ Mit diesen beiden Tools wird manuell ein neuer Hash generiert, welcher mit dem d
 Mit \textit{tcfldd} kann geprüft werden, ob der Hash eines Quelldatenträgers und eines bereits erstellten Images identisch sind.
 
 \begin{lstlisting}
-> dcfldd if=<PathToSourceDevice> vf=<PathToImage.dd> verifylog=<PathToLogFile.log>
+> dcfldd if=<PathToSourceDevice> vf=<PathToImage.dd> verifylog=<PathToLog.log>
 \end{lstlisting}
 
-\subsubsection{Weitere Tools} \todo{Inhalt}
-EnCase (Seite 72)
-Linux: Device Name ermitteln: /proc/partitions oder logs, dann: "`dd if=/dev/<suspect drive> of=/some dir/image name"', "`md5sum /some dir/image name"', "`md5sum /dev/<suspect drive>"'
-FreeHelix
+\subsubsection{Weitere Tools}
+Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäten:
 
-FTKImager (Windows)
-
+\begin{itemize}
+\item EnCase
+\item FreeHelix
+\item FTKImager
+\end{itemize}
 
 
 \subsection{Sicherung der Binärdatei von ausgeführten Prozessen}
@@ -318,7 +322,9 @@ Die Sicherung von flüchtigen Daten muss effizient, schnell und korrekt erfolgen
 
 \item  Informationen über den physischen Datengräger und die Partitionierung
 \begin{lstlisting}
-> fdisk -l
+> fdisk -lu <PathToHarddisk>
+> mmls <PathToHarddisk> (The Sleuth Kit)
+> mmls -o <StartSector> <PathToBSDHarddiskSlice> (The Sleuth Kit, FreeBSD)
 \end{lstlisting}
 
 \item  Information über den aktiven Kernel, Compiler-Version und Kommpilierdatum, etc.
@@ -428,10 +434,25 @@ Die Sicherung von flüchtigen Daten muss effizient, schnell und korrekt erfolgen
 > cat /etc/fastab
 \end{lstlisting}
 
-\item Geöffnete Daeisysteme
+\item Geöffnete Dateisysteme
 \begin{lstlisting}
 > mount -v
 \end{lstlisting}
+
+\item Installierte Software (via Packet-Manager installiert)
+\begin{lstlisting}
+> dpkg -l
+> rpm -qa
+\end{lstlisting}
+
+\item Installierte Software (manuell installiert, Eintrag im \textit{\$PATH})
+\begin{lstlisting}
+> echo $PATH
+> whereis <NameOfProgram>
+> which <NameOfProgram>
+> locate <NameOfProgram>
+\end{lstlisting}
+
 
 \item  Pro Prozess: Umgebungsvariablen, verwendete Speicherbereiche, etc.
 \begin{lstlisting}
@@ -467,26 +488,38 @@ In diesem Kapitel werden einige Techniken und Tools aufgezeigt, welche während 
 \subsection{Image mounten}
 Ein forensisches Duplikat, beziehungsweise ein Image, sollte immer Read-Only gemountet werden. Um sicherzustellen, dass das Image nicht verändert wird, sollte vor und nach dem Mounten jeweils ein Hash des Images erzeugt werden.
 
-\subsection{Linux}
+\subsection{Linux (dd)}
 \begin{lstlisting}
 > mount -r -o loop <PathToImage> <MountPoint>
 \end{lstlisting}
 
+\subsection{ewfmount}
+\begin{lstlisting}
+> ewfmount /<PathToImage>.E01 <MountPoint>
+\end{lstlisting}
 
+\subsection{xmount}
+\begin{lstlisting}
+> xmount -in <InFormat> --out <OutFormat> <PathToImage> <MountPointForConvertedImage>
+> mount -o ro <MountPointForConvertedImage> <MountPoint>
+\end{lstlisting}
 
 \subsection{Gelöschte Datenträger}
-Ist ein gesicherter Datenträger leer, beziehungsweise hat den Anschein, als wäre dieser leer, könnte eine Löschsoftware zur Verwischung von Spuren eingesetzt worden sein. Ist dies der Fall sollte zuerst versucht werden herauszufinden, welche Löschsoftware eingesetzt wurde. Allenfalls wurden dazu Hinweise oder Spuren auf anderen Datenträgern hinterlassen. Gewisse Produkte arbeiten beim Löschen nicht mit reinen Zufallswerten, sondern verwenden Löschpattern. Dies kann einen weiteren Hinweis auf die verwendete Löschsoftware liefern. Oft arbeiten auch die Produkte nicht zuverlässig, und es bleiben gewisse temporäre Dateien, Registry-Einträge oder Protokolle übrig, welche für eine Analyse herangezogen werden können. Wurde der Datenträger mehrfach mit echten zufälligen Bitmustern oder Nullen überschrieben, besteht in der Regel praktisch keine Möglichkeit zur Datenwiederherstellung mehr.
-
-\todo{Wiederherstellung?}
+Ist ein gesicherter Datenträger leer, beziehungsweise hat den Anschein, als wäre dieser leer, könnte eine Löschsoftware zur Verwischung von Spuren eingesetzt worden sein. Ist dies der Fall sollte zuerst versucht werden herauszufinden, welche Löschsoftware eingesetzt wurde. Allenfalls wurden dazu Hinweise oder Spuren auf anderen Datenträgern hinterlassen. Gewisse Produkte arbeiten beim Löschen nicht mit reinen Zufallswerten, sondern verwenden Löschpattern. Dies kann einen weiteren Hinweis auf die verwendete Löschsoftware liefern. Oft arbeiten auch die Produkte nicht zuverlässig, und es bleiben gewisse temporäre Dateien, Registry-Einträge oder Protokolle übrig, welche für eine Analyse herangezogen werden können. Wurde der Datenträger mehrfach mit echten zufälligen Bitmustern oder Nullen überschrieben, besteht in der Regel praktisch keine Möglichkeit zur Datenwiederherstellung.
 
 
-
+	
 \subsection{Gelöschte Partitionstabelle}
 Hat ein Datenträger den Anschein gelöscht worden zu sein, sollte diese in jedem Fall trotzdem untersucht werden. Befinden sich auf dem Datenträger noch Daten kann ein Versuch unternommen werden, das Dateisystem zu rekonstruieren. Im Falle eines ext-Dateisystems muss der Datenträger nach einer bestimmten Signatur (0xef53) durchsucht werden. Diese Signatur kennzeichnet den Superblock des Dateisystems. Ein Backup dieses Superblocks wird in der Regel redundant an mehreren Stellen des Dateisystems abgelegt. Der Superblock ermöglicht die Rekonstruktion des ganzen oder eines grossen Teiles des Dateisystems.
 
-\subsubsection{Tools} \todo{Details}
-SMART, findsuper, PartitionMagic
+\subsubsection{Tools} 
+Die nachfolgenden Tools bieten gewisse Funktionalitäten, um gelöschte Partitionstabellen zu rekonstruieren.
 
+\begin{itemize}
+\item SMART
+\item findsuper
+\item PartitionMagic
+\end{itemize}
 
 
 \subsection{Analyse von gelöschten Dateien}
@@ -508,18 +541,18 @@ Die Wiederherstellung von gelöschten Daten mit Hilfe der Tools aus dem Sleuth K
 \end{enumerate}
 
 \subsubsection{Weitere Tools}
-\todo{ Complete}
-TASK, 
-SMART (Ext2, ext3) Suche in unalloziertem Bereich, Auffindung gelöschte Files
-
+Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäten:
+\begin{itemize}
+\item TASK
+\item SMART (für Ext2 und Ext3)
+\end{itemize}
 
 
 \subsection{Analyse von versteckten Dateien}
 Auf einer Festplatte können an einigen Stellen Daten versteckt werden. Aufgrund des Aufbaus und der Aufteilung einer Festplatte in Sektoren fester Grösse über die gesamte Fläche, können am Rand Abstände zwischen den Sektoren entstehen. In diesen sogenannten Gaps können Daten versteckt werden. Eine weitere Möglichkeit Daten zu verstekcen sind die Partition-Gaps (Abstände zwischen Partitionen) und unpartitionierte Bereiche der Festplatte. Eine etwas andere Methode ist die Verwendung von Blöcken, welche vom Betriebssystem als unbrauchbar markiert wurden (Bad Blocks).  Die einfachste Art um Dateien zu verstecken, ist die Verwendung des Hidden-Attributes des Betriebssystems. Dieses existiert in der einen oder anderen Form in den meisten gängigen Betriebssystemen.
 
-Auch mit Hilfe von Rootkits lassen sich Dateien und Verzeichnisse verstecken. Darüber hinaus können unter anderem auch Prozesse und Netzwerkverbindungen verborgen werden. Normale Rootkits verwenden dafür trojanisierte (manipulierte) Systemprogramme, welche die entsprechenden Dateien, Verzeichnise, etc. herausfiltern. kernel-Level-Rootkits verwenden keine trojanisierten Systemprogramme, sondern manipulieren die Syscall-Tabelle. Einige Kernel-Level-Rootkits verändern sogar direkt den Syscall-Code. Diese Art von Rootkits sind auf dem System sehr schwer aufzuspüren. Um diese zu finden, müssen die Strukturen analysiert und das System beobachtet und mit einem Referenz-System verglichen werden.
+Auch mit Hilfe von Rootkits lassen sich Dateien und Verzeichnisse verstecken. Darüber hinaus können unter anderem auch Prozesse und Netzwerkverbindungen verborgen werden. Normale Rootkits verwenden dafür trojanisierte (manipulierte) Systemprogramme, welche die entsprechenden Dateien, Verzeichnise, etc. herausfiltern. kernel-Level-Rootkits verwenden keine trojanisierten Systemprogramme, sondern manipulieren die Syscall-Tabelle. Einige Kernel-Level-Rootkits verändern sogar direkt den Syscall-Code. Diese Art von Rootkits sind auf dem System sehr schwer aufzuspüren. Um diese zu finden, müssen die Strukturen analysiert, das System beobachtet und mit einem Referenz-System verglichen werden.
 
-\todo{Tools}
 
 
 \subsection{Dateien oder Fragemente wiederherstellen}
@@ -544,24 +577,56 @@ File-Carving-Tool um FAT-Dateisysteme unter Unix zu untersuchen.
 \subsubsection{unrm und lazarus}
 Mit den Tools unrm und lazarus können Dateien aus dem unallozierten Bereich der Festplatte wiederhergestellt werden. Bei diesem Vorgang fällt eine sehr grosse Menge an Rohdaten an, es sollte daher entsprechend Speicherplatz zur Verfügung stehen.
 \begin{lstlisting}
-unrm <PathToDisk> > <OutputPath>
-lazarus -h <OutputPath>
+> unrm <PathToDisk> > <OutputPath>
+> lazarus -h <OutputPath>
 \end{lstlisting}
 
 
-\subsubsection{Weitere Tools} \todo{Weitere}
-Weitere: Scalpel, Foregone
+\subsubsection{Weitere Tools} 
+Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäten:
+\begin{itemize}
+\item Scalpel
+\item Foregone
+\end{itemize}
 
+\subsection{Entpacken von Dateien}
+Dateien können auf einem System in Archiven verpackt werden. Wird bei einer Analyse ein File gesucht, welches sich in einem Archiv befindet, kann dies nicht gefunden werden. Daher sollte man in Erwägung ziehen, die Archive zu Beginn einer Analyse zu entpacken. Dabei können jedoch sehr grosse, zusätzliche Datenmengen anfallen.
+
+\subsubsection{Linux} 
+\begin{lstlisting}
+> find <PathToImage> -iname "*.tar.gz" -exec tar xvzf {} -C <OutputPath> \;
+> find <PathToImage> -iname "*.zip" -exec unzip {} -d <OutputPath> \;
+\end{lstlisting}
+
+\subsubsection{7-Zip}
+Mit 7-Zip können weitere Archivtypen entpackt werden.
+
+\begin{lstlisting}
+> find <PathToImage> -iname "*.rar" -exec 7z e {} -C <OutputPath> \;
+\end{lstlisting}
+
+\subsection{Suche nach Dateien / Filterung von Dateien}
+Muss auf einem System eine bestimmte Datei gefunden werden oder sollen als ungefährlich eingestufte Dateien aus der Gesamtheit der zu analysierenden Daten herausfiltriert werden, kann dies über Hash-Listen gemacht werden.
+
+Für den ersten Fall wird für jede gesuchte Datei ein Hash erzeugt und in einer Datei abgelegt. Die zu suchende Datei muss zwingend bis auf das letzte Bit identisch mit der zu suchenden Datei sein. Andernfalls kann diese nicht gefunden werden. Für solche Fälle könnte die Datei-Blockweise gehasht und anschliessend nach diesen Teil-Hashes gesucht werden.
+
+\subsubsection{Linux}
+\begin{lstlisting}
+> find . -type f -print0 | xargs -o md5sum > <PathToHashlist>
+> find <PathToFilesToSearch> -type f -print0 | xargs -o md5sum | awk '{
+print $1}' > <PathToHashesOfFilesToSearch>
+> grep -f <PathToHashlist> <PathToHashesOfFilesToSearch>
+\end{lstlisting}
 
 
 \subsection{Analyse des File Slacks}
-Aufgrund der Besonderheiten einiger Dateisysteme können auf Datenträgern mit einem solchen Dateisystem Dateien versteckt werden. Der Grund dafür liegt, darin das eine Datei auf dem Datenträger in sogenannten Dateiblöcken mit einer festen Länge (Sektoren) gespeichert werden. Füllt eine Datei nicht den gesamten Dateiblock aus entsteht ein ungenutzter Bereich. Dieser Bereich wird File Slack, genauer gesagt Sektor-Slack, genannt und wird vom Betriebssystem mit zufälligen Daten aufgefüllt. Unter Windows werden für das Auffüllen des Slacks zum Beispiel Inhalte aus dem Arbeitsspeicher verwendet. Dies wird dann als RAM-Slack bezeichnet. 
+Aufgrund der Besonderheiten einiger Dateisysteme können auf Datenträgern mit einem solchen Dateisystem Dateien versteckt werden. Der Grund dafür liegt, darin das eine Datei auf dem Datenträger in sogenannten Dateiblöcken mit einer festen Länge (Sektoren) gespeichert werden. Die kleinste beschreibbare Einheit besteht dabei aus einer Gruppe (typischerweise 8) von Sektoren. Eine solcher Gruppe von Sektoren wird als Cluster bezeichnet. Füllt eine Datei nicht den gesamten Dateiblock aus entsteht ein ungenutzter Bereich. Dieser Bereich wird File Slack genannt und wird vom Betriebssystem mit zufälligen Daten aufgefüllt. Dieser Slack unterteilt sich zum einen in RAM-Slack, welcher früher unter Windows mit Inhalten aus dem Arbeitsspeicher aufgefüllt wurde (heute mit Nullen), und zum anderen in Drive-Slack. Der RAM-Slack erstreckt sich vom letzten Byte der Datei bis zur nächsten Sektorgrenze. Der Drive-Slack (auch Sektor- oder Cluster-Slack genannt) ist der restliche Bereich zwischen dem Ende des RAM-Slacks und der Cluster-Grenze.
 
-\todo{Dateisysteme mit FileSlack, Drive-Slack, etc.}
-%http://www.florianwoerter.at/publications/fileslack.pdf
+Im Drive-Slack können sicht unter Umständen wertvolle Informationen für die weitere Analyse befinden. Wichtig zu wissen ist hier, das ein Beweis eindeutig einer Person zugeordnet werdene können muss. Dies ist beim Drive-Slack nicht der Fall.
 
-Die File Slack Analyse ermöglicht dem Ermittler unter Umständen auf Inhalte zuzugreifen, welcher der Täter gelöscht hat.
+Neben dem File-Slack gibt es auf einem Computer-System noch weitere Slack-Bereiche wie zum Beispiel der Partition-Slack oder Disk-Slack.
 
+Die File Slack Analyse ermöglicht dem Ermittler unter Umständen auf Inhalte zuzugreifen, welcher der Täter bereits gelöscht hat.
 
 
 \subsection{Timeline-Analyse}
@@ -601,37 +666,19 @@ mactime -b body.fls
 \end{lstlisting}
 \end{enumerate}
 
+\subsubsection{log2timeline}
+Das Tool \textit{log2timeline} ist in der Lage Zeitlinien von verschiedensten Log-Dateien zu erstellen. Darunter die Logs des Apache WebServers, Firefox, Chrome, Windows-Ereignisprotokolle, Mactime-formatierte Dateien und viele mehr.
+
+\begin{lstlisting}
+> log2timeline -z CET -f apache_access -o sqlite -w /case/1234/mactime.sqlite /mnt/image/avar/log/apache2
+> log2timeline -z CET -f <InputModule> -o <OutputModule> -w <OutputPath>
+\end{lstlisting}
+
+Das Tool \textit{log2timeline} besitzt viele Optionen und Parameter. Eine Vereinfachung des Tools stellt \textit{log2timeline-sift} dar. Eine Weiterentwicklung und Optimierung von \textit{log2timeline} wird unter dem Namen \textit{plaso} entwickelt. Die gesammelten Daten können entweder mit einem Forensik-Tool oder aber einer Anwendung zum Erstellen von Diagrammen und Statistiken grafisch dargestellt werden. Unter Linux können die Daten zum Beispiel mit Hilfe von \textit{GnuPlot} visualisiert werden.
 
 
 \subsection{Analyse von Auslagerungsdateien}
 Fast alle Betriebssysteme kennen das Prinzip der Auslagerungsdatei, bzw. Swap-Datei. Diese Auslagerungsdatei erweitert entweder den physisch nutzbaren Arbeitsspeicherbereich oder dient der Auslagerung von kurzfristig nicht benötigten Speicherinhalten. Dieser Swap-Bereich ist entweder eine Datei oder ein eigenes physisches oder virtuelles Dateisystem. Unter Windows wird das Page-File (früher Swap-File) beim Shutdown nicht gelöscht und kann somit bei einer Analyse interessante Informationen beinhalten. Wird ein System in den Ruhezustand, beziehungsweise Suspend-to-Disk-Modus versetzt, wird der gesamte Arbeitsspeicherinhalt auf die Festplatte gesichert. Dieser wird bei Reaktivierung wieder geladen, um den Zustand des Systemes wiederherzustellen. Unter Windows heisst diese Datei \textit{hyberfil.sys} und liegt im Wurzelverzeichnis des Systemlaufwerkes.
-
-\todo{Detail swap? Linux wie Binärdatei?}
-
-
-
-\subsection{Unbekannte Binärdateien analysieren}
-Werden auf dem System unbekannte Binärdateien gefunden, können diese unter Umständen Hinweis auf den Täter oder die Absichten des Täters enthalten. 
-
-\todo{Vervollständigen mit Bild CF: Seite 141}
-Fund Binärdateien (z.B. Rootkits, Tools) --> Analyse --> Hinweise / Absichten Täter, Vergleich Prüfsumme (Originaldatei?), Analyse auf Analysesystem --> Ausführung in isolierter Testumgebung
-
-Ablauf gemäss CF: Seite 141
-
--DAteityp ermitteln (file), Virusscan, 
-
-Tools: PEiD: Analyse Windows-Datei, kann getäuscht werden.
-String-Analyse: Suche aller lesbaren Zeichen in Binärdatei --> Hilfetexte, Infos Autor, Copyright
-Tools: Unix/Cygwin: strings, BinText, WinHex, IDA Pro
-
-Laufzeitanalyse in isolierter Umgebung (Prozess, netzwerk-, Dateisystemaktivitäten), Analyse Hauptspeicher, Virtuelle Umgebung
-
-Unix: strace, truss --> Zugriff auf welche Ressourcen
-
-Auffinden von nicht angepassten STandard Kits / Tools relativ einfach
-
-weitere Möglichkeit: Analyse dynamisch eingebundener Bibliotheken --> Grundfunktion nachvollziehen
-ldd
 
 
 
@@ -639,14 +686,18 @@ ldd
 Die Suche nach Rootkits auf einem System kann sich unter Umständen als sehr schwierig und zeitintensiv herausstellen. Handelt es sich um ein Standard-Rootkit gibt es einige Tools, welche die Rootkits anhand von File- und Hash-Analysen aufspüren können. 
 
 
-\subsubsection{chkrootkit} \todo{Mehr Infos}
+\subsubsection{chkrootkit}
 \begin{lstlisting}
 > chkrootkit
 \end{lstlisting}
 
+\subsubsection{rkhunter}
+\begin{lstlisting}
+> rkhunter --check
+\end{lstlisting}
 
 
-\subsection{Systemprotokolle}ns
+\subsection{Systemprotokolle}
 Systemprotokolle bieten in der Regel gute Hinweise auf einen zukünftigen oder bereits erfolgten Angriff. Die Analyse der Systemprotokolle ist meistens nicht Teil der Post-Mortem-Analyse, da der Angriff erst durch die Systemprotokolle entdeckt wird. In den Systemprotokollen lassen sich die Meldungen grundsätzlich in drei Kategorien einteilen. Zum einen die normalen Meldungen aus dem Tagesbetrieb und zum anderen kritische und unbekannte Meldungen, welche einen Hinweis auf einen Angriff darstellen können. Weitere Informationen zu diesem Thema sind im Kapitel \ref{sec:IncidentDetection} \nameref{sec:IncidentDetection} aufgezeigt.
 
 
@@ -663,71 +714,95 @@ Die vom System aufgegebenen Druckerjobs können interessante Informationen entha
 
 
 \subsection{Untersuchung der Dateien / Dateiendungen}
-\todo{HECF: S. 172}
+Oft wird eine Datei über deren Dateiendung identifiziert. Wurde diese absichtlich verändert, kann der Dateityp weiterhin bestimmt werden. Dies wird durch File-Signatur, beziehungsweise den File-Header, ermöglicht. Durch eine Signaturanalyse können auf einem System Dateien gefunden werden, bei denen Dia Signatur nicht mit der Dateiendung übereinstimmt. Die Ergebnisse einer solchen Analyse sind jedoch mit Vorsicht zu geniessen, da der File-Header auch falsch sein kann. Ein Beispiel wäre eine Text (txt) Datei mit dem Inhalt "`FLV ist ein cooles Format"'. Die Signatur würde dann nahelegen, dass es sich um ein File im "`FLV"' Format handelt. In Wirklichkeit handelt es sich jedoch um ein txt-File.
 
-\subsection{Untersuchung von User Aktivitäten}
 
-\subsection{Vertiefte Analyse bei Verdacht auf Anti-Forensik-Techniken}
+\subsubsection{Linux}
+Der File Befehl ermittelt gestützt auf das \textit{magic} File den File-Header der Datei. Diese Datei befindet sich oft in einem der folgenden Verzeichnisse: \textit{/usr/magic}, \textit{/etc/gnome-vfs-mime-magic}, \textit{/usr/share/mimelnk/magic}.
 
-\subsection{Suche nach SUID und GID-Dateien}
-Veränderung MAC
 \begin{lstlisting}
-find / -perm -2000 -o -perm -4000 -print | xargs /ls -l {}
+> file <PathToFile>
+
+> file ./Test.txt
+Test.txt: Macromedia Flash Video
 \end{lstlisting}
 
 \subsection{Datei- und Verzeichnisrechte}
-Veränderung MAC
+Auch die Untersuchung der Datei-Verzeichnisrechte, beziehungsweise deren Veränderung der MAC-Time, kann wichtige Hinweise für die Analyse liefern.
+
+\subsubitem{Linux}
 \begin{lstlisting}
-ls -lrta /etc/
-ls -lrta /bin
-ls -lrta /sbin
-ls -Rlrta /usr
-ls -Rlrta /var
-ls -Rlrta /dev
-ls -Rlrta /home
-ls -Rlrta /lib
+>  -lrta /etc/
+> ls -lrta /bin
+> ls -lrta /sbin
+> ls -Rlrta /usr
+> ls -Rlrta /var
+> ls -Rlrta /dev
+> ls -Rlrta /home
+> ls -Rlrta /lib
 \end{lstlisting}
 
-\subsection{Weitere Analyse-Möglichkeiten}
-Nachfolgend werden weitere Analysemöglichkeiten aufgezeigt, welche in diesem Kapitel nicht näher beschrieben werden.
+\subsection{Analyse des RAM-Dumps}
+Die Auswertung von RAM-Dumps kann sehr zeitaufwändig sein, da sich die Struktur des RAMs grundlegend von der Struktur von normalen Filesystemen unterscheidet. Hinzu kommt, dass im RAM oft nur Fragemente von Dateien abgelegt sind.
+
+\subsubsection{Volatility}
+\textit{Volatility} ist ein Framework zur Analyse von RAM-Dumps. Das Framework bietet unzählige Optionen und Einstellmöglichkeiten. Nachfolgend werden einige grundlegende Befehle aufgezeigt.
+
 \begin{itemize}
-\item Analyse der Master File Table
-\item Analyse von NTFS-Streams
-\item Analyse von NTFS TxF
-\item NTFS-Volumen-Schattenkopien
-\item Analyse der Windows-Registry
-\item Analyse der Windows UserAssist Keys
-\item Analyse der Windows Prefetch-Dateien
-\item Analyse von Netzwerkmitschnitten
+\item Allgemeine Informationen
+\begin{lstlisting}
+> python vol.py -f <PathToImage> imageinfo
+\end{lstlisting}
+
+\item Liste aller Prozesse
+\begin{lstlisting}
+> python vol.py --profile=<Profile> -f <PathToImage> pslist
+\end{lstlisting}
+
+\item Prozesse als Baumstruktur
+\begin{lstlisting}
+> python vol.py --profile=<Profile> -f <PathToImage> pstree
+\end{lstlisting}
+
+\item Liste von Dateiobjekten
+\begin{lstlisting}
+> python vol.py --profile=<Profile> -f <PathToImage> filescan
+\end{lstlisting}
+
 \end{itemize}
 
 \subsection{Konvertierung von Images}
 Ab und zu kann es notwendig sein, die erstellten Images in ein anders Format zu konvertieren. 
 
 \subsubsection{ewfacquire}
-\textbf{Konvertierung von DD nach E01}\\
+\begin{itemize}
+\item Konvertierung von DD nach E01
 \begin{lstlisting}
 > ewfacquire -t <PathToSourceImage.dd> <PathToTargetImage.E01>
 \end{lstlisting}
 
-\textbf{Konvertierung von E01 nach DD}\\
+\item Konvertierung von E01 nach DD
 \begin{lstlisting}
 > ewfeport <PathToSourceImage.E01>
 \end{lstlisting}
+\end{itemize}
+
 
 \subsubsection{xmount}
-\textbf{Konvertierung von vmdk nach E01}\\
+\begin{itemize}
+\item Konvertierung von vmdk nach E01
 \begin{lstlisting}
 > xmount --in ewf --out vmdk <PathToSourceImage.E01> <DestinationPath>
 \end{lstlisting}
 
-\textbf{Konvertierung von E01 nach vmdk}\\
+\item Konvertierung von E01 nach vmdk
 \begin{lstlisting}
 > xmount --in vmdk --out ewf <PathToSourceDisk.vmdk> <DestinationPath>
 \end{lstlisting}
-
+\end{itemize}
 
 \subsubsection{Weitere Tools}
+Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäten:
 \begin{itemize}
 \item FTK Imager
 \item VHD Tool
@@ -768,6 +843,29 @@ Mit Hilfe des Tools \textit{dd} oder eines ähnlichen Tools kann der Master Boot
 \end{lstlisting}
 
 
+\subsection{Weitere Analyse-Möglichkeiten}
+Nachfolgend werden weitere Analysemöglichkeiten aufgezeigt, welche in diesem Kapitel nicht näher beschrieben werden.
+\begin{itemize}
+\item Analyse unbekannter Binärdateien
+\item Analyse von User Aktivitäten
+\item Analyse bei Verdacht auf Anti-Forensik-Techniken
+\item File-Carving
+\item Block-Hashing
+\item Suche nach Regulären Ausdrücken (Regex)
+\item Erstellen von Datei-Listen
+\item Sammeln von bestimmten Dateitypen
+\item Suche und Auswertung von Log-Files
+\item Suche nach SUID und GID-Dateien
+\item Analyse der Master File Table
+\item Analyse von NTFS-Streams
+\item Analyse von NTFS TxF
+\item Analyse der Windows-Registry
+\item Analyse der Windows UserAssist Keys
+\item Analyse der Windows Prefetch-Dateien
+\item Analyse von Netzwerkmitschnitten
+\item NTFS-Volumen-Schattenkopien
+\end{itemize}
+
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Reporting}
@@ -776,91 +874,78 @@ Gewisse Tools und Tool-Suiten bieten eine integrierte Möglichkeit um Berichte u
 
 %---------------------------------------------------------------------------------------------------------------
 \section{Hinweise zu Tooleinsatz}
--Frage des Tools oft anlass für Gundsatzdiskussion Ermittlungsmethoden
-Verständnis unterschiedlicher Ansätze der diversen Forensik-Lösungen, 
+Nachfolgend einige Hinweise zum Einsatz von Tools bei einer forensischen Analyse:
 
-nicht-kommerzielle Werkzeuge: notwendige Transparenz für Bewertung von Beweissicherungsverfahren
-Open Source vs Kommmerziell: klassische ideologische Diskussionen, für juristische Verwendunung beides OK, wenn etabliert
+\begin{itemize}
+\item Auswahl des Tools kann Grundsatzdiskussionen zu den Ermittlungsmethoden auswählen.
+\item Verständnis der unterschiedlichen Ansätze verschiedener Forensik-Tools und -Tool-Suiten.
+\item Open Source vs. Kommerzielle Tools: Klassische ideologische Diskussion. Für die juristische Verwendbarkeit sind beide Ansätze legitim, sofern die gewählten Tools akzeptiert und etabliert sind.
+\item Einsatz von Script-Sammlungen (Konsolen-Befehle) vs. GUI-Anwendungen. Der Einsatz von GUI-Anwendungen bietet erheblich mehr komfort als der Einsatz von Script-Sammlungen, beziehungsweise dem Absetzen von Konsolen-Befehlen. Der Nachteil der GUI-Anwendungen ist jedoch, dass diese einen höheren RAM-Bedarf haben. Daher sollte bei einer Live-Analyse auf den Einsatz von grafischen Tools wann immer möglich verzichtet werden.
+\item Die einzusetzenden Tools sind stark von der jeweiligen Situation und dem zu untersuchenden System abhängig. Die Toolsammlung sollte daher jeweils den Umständen entsprechend angepasst werden.
+\item Der Umgang mit den verschiedenen Tools sollte regelmässig geübt werden, damit bei der Untersuchung schnell, effizient und korrekt gearbeitet werden kann.
+\item Bei der Live-Analyse sollten immer nur statisch vorkompilierte Systembefehle verwendet werden. Andernfalls ist die Korrektheit der so gesammelten Daten nicht gewährleistet.
+\item Das Analyse-System des Ermittlers sollten immer abgesichert sein.
+\item Die Ergebnisse der Analyse sollten verschlüsselt abgespeichert werden.
+\end{itemize}
 
-CF erfordert oft Einsatz von Werkzeugen für zuverlässige Sammlung / Asuwertung, Schwierigkeiten beginnen schon bei Sammlung Scripte von Kommandozeilenwerkzeuge vs. GUI basierte Anwendungen
-
-Oft je nach Situation andere Tools notwenidjg, z.bB. Windows Analyse -> Windows System, Linux ext-Dateiystem --> Linux
-
-Üben und auseinandersetzen mit Tools
-
-Absicherung Workstation des Ermittlers, lokal gespeicherte Ergebnisse, Notizen, etc. --> verschlüsseln
-
-Hinweis zu verwendung statisch vorkompilierte Systembefehle
-
-http://www.computer-forensik.org/tools/
 
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-%http://forensicswiki.org/wiki/Tools#Forensics_Live_CDs
+\section{Tool-Suiten und Toolsammlungen}
+Nachfolgend werden enige Tool-Suiten und Toolsammlungen für die forensische Analyse aufgelistet:
 
-\section{Tool-Sammmlungen}
 \begin{itemize}
 \item F.R.E.D. (First Responder's Evidence Disk)\\
-Schnell Statusinformationen von Live-systemen, Prüfsummen, Statische kompiliert, Batch-Datei --> Anpassbar
+Schnelle Sammlung von Statusinformationen auf Live-Systemen, statisch vorkompilierte Vefehle, anpassbares und erweiterbares Batch- / Shell-Script
+
 \item Incident Response Collection Report (IRCR)\\
-Windows, Sammlung Werkzeuge zur Sammlung kritischer Systemdaten, Verwendung Systembefehle (nicht spurlos)
+Sammlung von Werkzeugen zur Sammlung kritischer Systemdaten, Tool für Windows, Verwendung von Systembefehlen zur Sammlung der Daten (hinterlässt Spuren auf dem System)
+
 \item Windows Forensic Toolchest (WFT)\\
-Live-System, Windows, Sammlung, Privat: Kostenfrei, Zerstört im Vergleich wenig Spuren, flexible Anpassungen, Reports
+Tool-Sammlung zur Analyse von Live-Systemen unter Windows, Hinterlässt wenige Spuren, Flexible Anpassung der generierten Reports
+
 \item Live View\\
-Windows, Java-Anwendung, Erstellung einer VM Ware Virtual Machine aus dd Image oder physischem Datenräger, readonly image
-\end{itemize}
+Java-Anwendung zur Generierung einer read-only VM-Ware Virtual Machiene aus einem dd Image oder einem physischen Datenträger unter Windows.
 
-\section{Tool-Suiten}
-\begin{itemize}
-\item Encase \\
-Windows-Tool, Analyse für Dateisysteme von Windows, Mac OS, Linux, Solaris, AIX, HP UX, ...
-Automatisierung mit EnScript, sehr grosse Palette an Tools, breite Auswahl an Untersützten Anwendungen, OS, Mehrsprachig
-Enterprise-Version
+\item EnCase \\
+Windows-Anwendung zur Analyse von verschiedenen Dateisystemen (Windows, Mac OS, Linux, Solaris, AIX, HP UX, ...), Automatisierung von verschiedenen Aufgaben via EnScript, Breite Palette an Tools, Analyse von verschiedensten Anwendungsdaten, Mehrsprachig, erhältlich als Enterprise-Version
+
 \item F.I.R.E\\
-Free, Toolsammlung
-Forensische Analyse / Datenrettung (sleuth Kit, Autopsy Forensic Browser, ...)
-Incident Response an Live-systemen
-Virusscan
-Penetrationstest
-Windows, Linux, Solaris
-Not maintained anymore,
-RAM-Disk
-\\item Knoppix Security Tools Distribution\\
-Security-Tools, Penetration-Testing, Vulnerability Assemssment, Forensik / Incident-Response-Werkzeuge
-Not maintained anymore
+Freie Toolsammlung zur forensischen Analyse und Datenrettung. Beinhaltet das Sleuth Kit, den Autopsy Forensic Browser und viele mehr, geeignet für die Incident Response an Live-Systemen und Penetrationstests, Erhältlich für Windows, Linux und Solaris, Keine Wartung / Weiterentwicklung
+
+\item Knoppix Security Tools Distribution\\
+Sammlung von Security-Tools für Penetrations-Tests, Forensische Analysen und Incident-Response, Keine Wartung / Weiterentwicklung
+
 \item Helix
-Statisch vorkompilierte Dateien für LInux, Solaris, Windows
-Free, Enterprise Version: Case Management WErkzeuge, Umfangreiche Supportmöglichkeiten durch hersteller
-Windows: Live-Response-Funktionalität, Hoher Integrationsgrad
-RAM-Disk
+Forensisches Toolkit inklusive Case-Management (Enterprise-Version), statisch vorkompilierte Dateien für LInux, Solaris und Windows, Support durch Hersteller, hoher Integrationsgrad, Live-Response für Windows
+
+
 \item ForensiX-CD\\
-Windows + Linux, Toolsammlung, statisch vorkompiiert
-\item C.A.I.N.E und WinTayloer \\
-Live-CD
-WinTayler: Windows-Teil, Incident-Response-Sammlung, Nachteil: Basis Visual Basic 6, benötigt entsprechende Bilbiotheken, 
+Toolsammlung für Windows und Linux, Statisch vorkompilierte Systemprogramme
+
+\item C.A.I.N.E und WinTaylor \\
+Live-CD für Windows (WinTaylor) und Linux (C.A.I.N.E), Sammlung von Incident-Response-Tools, Benötigt als Basis Visual Basic 6 (entsprechende Bibliotheken werden auf dem System benötigt)
+
 \item DEFT und DEFT-Extra\\
-Linux, Windows, Win-Werkzeuge unter linux mit WINE
-Windows-Teil: EFT-Etra
-Live-Response
+Werkzeug-Sammlung für die Live-Response unter Linux und Windows.
+
 \item Forensic Acquisition Utilities \\
-Tool-Sammlung, Voraussetzung: Windows 200 oder höher
-\item AccessData Forensic Toolkit
-Komplette Analyseumgebung für unix- und Windows-Dateisysteme, Mehrbenutzerfähig (via DB-SErver)
+Tool-Sammlung für die forensische Analyse, beziehungsweise Datenesammlung
+
+\item AccessData Forensic Toolkit \\
+Komplette Analyseumgebung für Unix- und Windows-Dateisysteme, Mehrbenutzerfähig (via Datenbank-Server)
+
 \item The Coroner's Toolkit and TCTUtils\\
-Post-Mortem Analyse Unix-Systeme, 
+Tool-Sammlung für die Post-Mortem Analyse von Unix-Systemen.
+
 \item The Sleuth Kit\\
-Sammlung von Tools, diverse Formate
+Sammlung von diversen Tools zur forensischen Analyse, Unterstützt eine breite Palette an Formaten.
+
 \item Autopsy Forensic Browser\\
-Grafische Oberfläche für Sleuth Kit, neuste Version nur Windows
-\item Raptor Live-CD\\
-Gratis, intuitieve Bedienung, Raptor Toolbox
+Grafische Oberfläche für "`The Leuth Kit"', Neuste Version nur für Windows verfügbar
+
 \end{itemize}
 
 
-Tools: CF: S. 175
 
 
-
-\section{Kommerzielle Tools}
--SMART
--Helix (ein Teil Freeware)

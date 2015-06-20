@@ -2,18 +2,6 @@
 % Encoding: UTF-8
 
 
-@Electronic{E:Sparkfun:Iot:Protocols,
-  Title                    = {Exploring the Protocols of IoT},
-  Author                   = {JIMBO},
-  Language                 = {EN},
-  Month                    = {Januar},
-  Url                      = {https://www.sparkfun.com/news/1705},
-  Year                     = {2015},
-
-  Owner                    = {dani},
-  Timestamp                = {2015.06.11}
-}
-
 @Electronic{E:2013:Belkasoft:LiveRAMAnalysis,
   Author                   = {Oleg Afonin, Yuri Gubanov},
   Organization             = {Belkasoft Research},
@@ -22,6 +10,19 @@
 
   Owner                    = {dani},
   Timestamp                = {2015.05.22}
+}
+
+@Electronic{,
+  Title                    = {Catching the Ghost: How to Discover Ephemeral Evidence trough Live RAM Analysis},
+  Author                   = {Oleg Afonin, Yuri Gubanov},
+  Language                 = {EN},
+  Month                    = {Mai},
+  Organization             = {Digital Forensic Investigator (DFI)},
+  Url                      = {http://www.forensicmag.com/articles/2013/05/catching-ghost-how-discover-ephemeral-evidence-through-live-ram-analysis},
+  Year                     = {2013},
+
+  Owner                    = {dani},
+  Timestamp                = {2015.06.19}
 }
 
 @Electronic{Lex:Springer:Forensik,
@@ -58,28 +59,6 @@
 
   Owner                    = {dani},
   Timestamp                = {2015.04.22}
-}
-
-@Electronic{E:Parse:IOT,
-  Title                    = {Connecting Hardware with the Cloud: Parse for IoT},
-  Author                   = {James Yu},
-  Language                 = {EN},
-  Month                    = {März},
-  Url                      = {http://blog.parse.com/learn/connecting-hardware-with-the-cloud-parse-for-iot/},
-  Year                     = {2015},
-
-  Owner                    = {dani},
-  Timestamp                = {2015.06.11}
-}
-
-@Electronic{E:Micrium:IOT,
-  Title                    = {Designing the Internet of Things},
-  Language                 = {EN},
-  Organization             = {Micrium},
-  Url                      = {http://micrium.com/iot/overview/},
-
-  Owner                    = {dani},
-  Timestamp                = {2015.06.11}
 }
 
 @Electronic{E:2015:GOV:Attacks,

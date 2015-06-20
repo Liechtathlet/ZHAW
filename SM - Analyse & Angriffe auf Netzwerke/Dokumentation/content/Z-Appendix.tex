@@ -4,18 +4,14 @@
 %
 % add files for appendix chapter here
 
-%\input{content/Z-App-Survey.tex} \label{appendix:Survey}
 
-%\input{content/Z-App-SurveyResults.tex} \label{appendix:SurveyResults}
+%\includepdf[pages=-,picturecommand*={\put(133,660)\chapter{Vorlage: Formular Incident-Meldung} \label{appx:Template:IncidentMessage}}}]{content/appendix/Appendix_A_Formular_Incident_Meldung.pdf}
+     
+%\chapter{Vorlage: Formular Incident-Meldung}\label{appx:Template:IncidentMessage}
 
-\chapter{Vorlage: Formular Incident-Meldung} \label{appx:Template:IncidentMessage}
--Melder
+\includepdf[pages=1,noautoscale=true,scale=0.9,fitpaper=true, offset=-0.6cm -7cm,pagecommand={\chapter{Vorlage: Formular Incident-Meldung}\label{appx:Template:IncidentMessage}}]{content/appendix/Appendix_A_Formular_Incident_Meldung.pdf}
 
--Richtige Informationen abfragen (Merkblatt / Chekliste)
---Basisinfos: Aktuelle Uhrzeit, Wer / Welches System berichtet Vorfall, Art und Weise Vorfall, Vermuteter Zeitpunkt Vorfall, mittelbar / unmittelbar betroffene HW / SW, evtl. Auswirkungen, Schaden, Kontakstelle für ISR und Ermittler
---Infos über betroffenes System sammeln (!! möglichst nicht vom System abfragen, Datenklassifizierung? Klassifizierung? Ort?, Physischer Zugang?  allgemeiner Systemzustand,)
---Angreifer: Infos? noch aktiv? Systeme / Daten manipuliert / zerstört, Vermutungen?
---Getroffene Massnahmen / System verändert? Andere Perosnen benachrichtigt?
+\includepdf[pages=2-last,noautoscale=true,scale=0.9,fitpaper=true,pagecommand={\thispagestyle{plain}}]{content/appendix/Appendix_A_Formular_Incident_Meldung.pdf}
 
 \chapter{Vorlage Formular Ermittlung}
 -Fallnummer
