@@ -5,47 +5,50 @@
 % add files for appendix chapter here
 
 
-%\includepdf[pages=-,picturecommand*={\put(133,660)\chapter{Vorlage: Formular Incident-Meldung} \label{appx:Template:IncidentMessage}}}]{content/appendix/Appendix_A_Formular_Incident_Meldung.pdf}
-     
-%\chapter{Vorlage: Formular Incident-Meldung}\label{appx:Template:IncidentMessage}
+% Appendix A
+% Chapter: Vorlage: Formular Incident-Meldung
 
 \includepdf[pages=1,noautoscale=true,scale=0.9,fitpaper=true, offset=-0.6cm -7cm,pagecommand={\chapter{Vorlage: Formular Incident-Meldung}\label{appx:Template:IncidentMessage}}]{content/appendix/Appendix_A_Formular_Incident_Meldung.pdf}
 
 \includepdf[pages=2-last,noautoscale=true,scale=0.9,fitpaper=true,pagecommand={\thispagestyle{plain}}]{content/appendix/Appendix_A_Formular_Incident_Meldung.pdf}
 
-\chapter{Vorlage Formular Ermittlung}
--Fallnummer
--Datum / Zeit
--Wieso forensische untersuchung (Verdacht?)
--Grund
--Ermittlungsleiter
--Ermittlungsteam
--Betroffene Systeme / Geräte / Anwendungen 8(Seriennummern und interne Bezeichnung)
--Verantwortliche Administratoren
--Protokolle, Incident Meldung, Beweiszettel
-
-Täterprofil
--Was waren / sind mögliche Ziele
--Was ist der Grund für den Angriff / Einbruch?
--(Interne) komplizen?
--Tools / Techniken?
--Spuren?
-....
-\chapter{Vorlage: Protokoll}
 
 
-Tabelle mit : Laufnummer, Zeit, Befehl / Aktion, Hash Ergebnisdatei, Kommentar
-CF Seite 84
+% Appendix B
+% Chapter: Vorlage: Protokoll
+\cleardoublepage
+\includepdf[pages=1,noautoscale=true,scale=0.9,fitpaper=true, offset=-0.6cm -7cm,pagecommand={\chapter{Vorlage: Protokoll}\label{appx:Template:Protocol}}]{content/appendix/Appendix_B_Formular_Protokoll.pdf}
 
-\chapter{Vorlage: Beweiszettel} \label{appx:Template:ProofPaper}
-Buch CF: Seite 85
-
-Beweiskette:
-
-Laufwerke: Manufacturer, Model, Serial Number, Evidence Description (Name of suspect, Technologie: SATA, IDE, ...)
+\includepdf[pages=2-last,landscape=true,noautoscale=true,scale=0.9,fitpaper=true,pagecommand={\thispagestyle{plain}}]{content/appendix/Appendix_B_Formular_Protokoll.pdf}
 
 
 
+% Appendix C
+% Chapter: Vorlage: Formular Ermittlung
+\cleardoublepage
+\includepdf[pages=1,noautoscale=true,scale=0.9,fitpaper=true, offset=-0.6cm -7cm,pagecommand={\chapter{Vorlage: Formular Ermittlung}\label{appx:Template:Investigation}}]{content/appendix/Appendix_C_Formular_Ermittlung.pdf}
+
+\includepdf[pages=2-last,noautoscale=true,scale=0.9,fitpaper=true,pagecommand={\thispagestyle{plain}}]{content/appendix/Appendix_C_Formular_Ermittlung.pdf}
 
 
+
+% Appendix D
+% Chapter: Vorlage: Beweiszettel
+\cleardoublepage
+\includepdf[pages=1,noautoscale=true,scale=0.9,fitpaper=true, offset=-0.6cm -7cm,pagecommand={\chapter{Vorlage: Beweiszettel}\label{appx:Template:ProofPaper}}]{content/appendix/Appendix_D_Formular_Beweiszettel.pdf}
+
+\includepdf[pages=2,noautoscale=true,landscape=true,scale=0.9,fitpaper=true,pagecommand={\thispagestyle{plain}}]{content/appendix/Appendix_D_Formular_Beweiszettel.pdf}
+
+\includepdf[pages=3-last,noautoscale=true,scale=0.9,fitpaper=true,pagecommand={\thispagestyle{plain}}]{content/appendix/Appendix_D_Formular_Beweiszettel.pdf}
+
+
+
+% Appendix E
+% Chapter: Ablauf einer forensischen Analyse
+\cleardoublepage
 \chapter{Ablauf einer forensischen Analyse}
+Auf der nachfolgenden Seite wird der schematiche Ablauf einer forensischen Analyse aufgezeigt.
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=16cm]{./images/AblaufForensischeAnalyse}
+\end{figure}

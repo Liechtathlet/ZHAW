@@ -12,156 +12,154 @@
 \contentsline {section}{\numberline {2.1}Angriffstypen}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Kategorien von Schwachstellen}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Komplexit\IeC {\"a}t}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}T\IeC {\"a}ter-Typen}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Typischer Ablauf}{7}{section.2.5}
+\contentsline {section}{\numberline {2.4}T\IeC {\"a}ter-Typen}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Typischer Ablauf}{8}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Survey (Untersuchung)}{8}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Delivery (Positionierung)}{8}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Breach (Ausnutzung)}{8}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Affect (Beeintr\IeC {\"a}chtigung / Infizierung)}{8}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Clean Up (Aufr\IeC {\"a}umen)}{8}{subsection.2.5.5}
-\contentsline {chapter}{\numberline {3}Incident Detection \& Incident Response}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Incident Detection (Erkennung eines Vorfalls)}{9}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Hinweise Netzwerkseitig}{9}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Hinweise Serverseitig}{9}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Hinweise durch Intrusion-Detection-Systeme}{10}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Weitere Hinweise}{10}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Meldung eines Vorfalles}{10}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}Incident Response Team}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Incident Response}{12}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Organisatorische Vorbereitung}{12}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Incident Response Prozess}{13}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Ablauf}{13}{section.3.4}
-\contentsline {chapter}{\numberline {4}Computer Forensik}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Einbettung und Definition}{17}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Forensik}{17}{subsection.4.1.1}
-\contentsline {subsubsection}{Ursprung}{17}{subsubsection*.4}
-\contentsline {subsubsection}{Bedeutung}{17}{subsubsection*.5}
-\contentsline {subsubsection}{Teilbereiche}{18}{subsubsection*.6}
-\contentsline {subsection}{\numberline {4.1.2}IT- / Digitale Forensik}{18}{subsection.4.1.2}
-\contentsline {subsubsection}{Teilbereiche}{18}{subsubsection*.7}
-\contentsline {subsection}{\numberline {4.1.3}Computer Forensik}{19}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Einf\IeC {\"u}hrung}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}Anwendungsbereich}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}Kategorien von Daten}{20}{section.4.4}
-\contentsline {section}{\numberline {4.5}Anti-Forensik und Anti-Detection}{20}{section.4.5}
-\contentsline {section}{\numberline {4.6}Ausbildung \& Zertifizierung}{21}{section.4.6}
-\contentsline {section}{\numberline {4.7}Hinweise f\IeC {\"u}r die juristische Verwertbarkeit}{21}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Methoden, Techniken und Programme}{21}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Glaubw\IeC {\"u}rdigkeit und Reproduzierbarkeit}{22}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Integrit\IeC {\"a}t}{22}{subsection.4.7.3}
-\contentsline {subsection}{\numberline {4.7.4}Pr\IeC {\"a}sentation und Dokumentation}{22}{subsection.4.7.4}
-\contentsline {subsection}{\numberline {4.7.5}Beweiskraft}{22}{subsection.4.7.5}
-\contentsline {section}{\numberline {4.8}Hinweise zum Datenschutz}{22}{section.4.8}
-\contentsline {chapter}{\numberline {5}Forensische Analyse}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{23}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Ein guter Prozess}{24}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Phasen}{24}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Readiness (Vorbereitung)}{24}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Secure (Sicherstellen)}{25}{subsection.5.2.2}
-\contentsline {subsubsection}{Environment (Umgebung)}{26}{subsubsection*.8}
-\contentsline {subsubsection}{Identify (Identifizieren)}{26}{subsubsection*.9}
-\contentsline {subsubsection}{Asses and Decide (Beurteilen und Entscheiden)}{26}{subsubsection*.10}
-\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{27}{subsubsection*.11}
-\contentsline {subsection}{\numberline {5.2.3}Analysis (Analyse)}{29}{subsection.5.2.3}
-\contentsline {subsubsection}{Preparation (Vorbereitung)}{29}{subsubsection*.12}
-\contentsline {subsubsection}{Analysis (Analyse)}{30}{subsubsection*.13}
-\contentsline {paragraph}{Unterst\IeC {\"u}tzende Fragestellungen}{31}{paragraph*.14}
-\contentsline {subsection}{\numberline {5.2.4}Reporting (Dokumentation)}{31}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Present (Pr\IeC {\"a}sentation)}{32}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Review (R\IeC {\"u}ckblick)}{32}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}Beweiskette und Beweissicherung}{33}{section.5.3}
-\contentsline {section}{\numberline {5.4}Hinweise zur forensischen Analyse}{33}{section.5.4}
-\contentsline {chapter}{\numberline {6}Tools und Techniken}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}Readiness}{35}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Datentr\IeC {\"a}ger l\IeC {\"o}schen}{35}{subsection.6.1.1}
-\contentsline {subsubsection}{dd}{35}{subsubsection*.15}
-\contentsline {subsubsection}{Weitere Tools}{36}{subsubsection*.16}
-\contentsline {section}{\numberline {6.2}Secure}{36}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Auslesen der Zeitkonfiguration}{36}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Bestimmung der Linux-Distribution}{36}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Shutdown eines Systemes}{38}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Erstellen von Hashes}{38}{subsection.6.2.4}
-\contentsline {subsubsection}{md5sum}{38}{subsubsection*.17}
-\contentsline {subsubsection}{md5deep}{39}{subsubsection*.18}
-\contentsline {subsection}{\numberline {6.2.5}Sicherung des Arbeitsspeicher-Inhaltes}{39}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}Sicherung des Arbeitsspeicher-Inhaltes ohne Zugriff auf das Betriebssystem}{39}{subsection.6.2.6}
-\contentsline {subsection}{\numberline {6.2.7}Sicherung des Arbeitsspeicher-Inhaltes mit Zugriff auf das Betriebssystem}{40}{subsection.6.2.7}
-\contentsline {subsubsection}{Linux (alte Kernel-Versionen)}{40}{subsubsection*.19}
-\contentsline {subsubsection}{fmem}{40}{subsubsection*.20}
-\contentsline {subsubsection}{lime}{40}{subsubsection*.21}
-\contentsline {subsubsection}{Weitere Tools}{40}{subsubsection*.22}
-\contentsline {subsection}{\numberline {6.2.8}Forensische Duplikation}{41}{subsection.6.2.8}
-\contentsline {subsubsection}{Einsatz von Standard-Linux Tools}{41}{subsubsection*.23}
-\contentsline {subsubsection}{dcfldd}{42}{subsubsection*.24}
-\contentsline {subsubsection}{dc3dd}{42}{subsubsection*.25}
-\contentsline {subsubsection}{Weitere Tools}{42}{subsubsection*.26}
-\contentsline {subsection}{\numberline {6.2.9}Verifikation eines forensischen Duplikates oder eines Beweisst\IeC {\"u}ckes}{43}{subsection.6.2.9}
-\contentsline {subsubsection}{md5sum und md5deep}{43}{subsubsection*.27}
-\contentsline {subsubsection}{dcfldd}{43}{subsubsection*.28}
-\contentsline {subsubsection}{Weitere Tools}{43}{subsubsection*.29}
-\contentsline {subsection}{\numberline {6.2.10}Sicherung der Bin\IeC {\"a}rdatei von ausgef\IeC {\"u}hrten Prozessen}{43}{subsection.6.2.10}
-\contentsline {subsubsection}{Linux}{43}{subsubsection*.30}
-\contentsline {subsection}{\numberline {6.2.11}Sicherung fl\IeC {\"u}chtiger Daten}{43}{subsection.6.2.11}
-\contentsline {subsubsection}{Linux}{44}{subsubsection*.31}
-\contentsline {section}{\numberline {6.3}Analysis}{46}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Image mounten}{46}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Linux (dd)}{46}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}ewfmount}{46}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}xmount}{47}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{47}{subsection.6.3.5}
-\contentsline {subsection}{\numberline {6.3.6}Gel\IeC {\"o}schte Partitionstabelle}{47}{subsection.6.3.6}
-\contentsline {subsubsection}{Tools}{47}{subsubsection*.32}
-\contentsline {subsection}{\numberline {6.3.7}Analyse von gel\IeC {\"o}schten Dateien}{47}{subsection.6.3.7}
-\contentsline {subsubsection}{Sleuth Kit}{48}{subsubsection*.33}
-\contentsline {subsubsection}{Weitere Tools}{48}{subsubsection*.34}
-\contentsline {subsection}{\numberline {6.3.8}Analyse von versteckten Dateien}{48}{subsection.6.3.8}
-\contentsline {subsection}{\numberline {6.3.9}Dateien oder Fragemente wiederherstellen}{49}{subsection.6.3.9}
-\contentsline {subsubsection}{foremost}{49}{subsubsection*.35}
-\contentsline {subsubsection}{Fatback}{49}{subsubsection*.36}
-\contentsline {subsubsection}{unrm und lazarus}{49}{subsubsection*.37}
-\contentsline {subsubsection}{Weitere Tools}{49}{subsubsection*.38}
-\contentsline {subsection}{\numberline {6.3.10}Entpacken von Dateien}{49}{subsection.6.3.10}
-\contentsline {subsubsection}{Linux}{50}{subsubsection*.39}
-\contentsline {subsubsection}{7-Zip}{50}{subsubsection*.40}
-\contentsline {subsection}{\numberline {6.3.11}Suche nach Dateien / Filterung von Dateien}{50}{subsection.6.3.11}
-\contentsline {subsubsection}{Linux}{50}{subsubsection*.41}
-\contentsline {subsection}{\numberline {6.3.12}Analyse des File Slacks}{50}{subsection.6.3.12}
-\contentsline {subsection}{\numberline {6.3.13}Timeline-Analyse}{51}{subsection.6.3.13}
-\contentsline {subsubsection}{Sleuth Kit}{51}{subsubsection*.42}
-\contentsline {subsubsection}{log2timeline}{52}{subsubsection*.43}
-\contentsline {subsection}{\numberline {6.3.14}Analyse von Auslagerungsdateien}{52}{subsection.6.3.14}
-\contentsline {subsection}{\numberline {6.3.15}Suche nach Rootkits}{52}{subsection.6.3.15}
-\contentsline {subsubsection}{chkrootkit}{53}{subsubsection*.44}
-\contentsline {subsubsection}{rkhunter}{53}{subsubsection*.45}
-\contentsline {subsection}{\numberline {6.3.16}Systemprotokolle}{53}{subsection.6.3.16}
-\contentsline {subsection}{\numberline {6.3.17}Untersuchung der Shell (Bash)}{53}{subsection.6.3.17}
-\contentsline {subsection}{\numberline {6.3.18}Untersuchung der Druckerjobs und der Druckerqueue}{53}{subsection.6.3.18}
-\contentsline {subsection}{\numberline {6.3.19}Untersuchung der Dateien / Dateiendungen}{54}{subsection.6.3.19}
-\contentsline {subsubsection}{Linux}{54}{subsubsection*.46}
-\contentsline {subsection}{\numberline {6.3.20}Datei- und Verzeichnisrechte}{54}{subsection.6.3.20}
-\contentsline {subsection}{\numberline {6.3.21}Analyse des RAM-Dumps}{54}{subsection.6.3.21}
-\contentsline {subsubsection}{Volatility}{55}{subsubsection*.47}
-\contentsline {subsection}{\numberline {6.3.22}Konvertierung von Images}{55}{subsection.6.3.22}
-\contentsline {subsubsection}{ewfacquire}{55}{subsubsection*.48}
-\contentsline {subsubsection}{xmount}{55}{subsubsection*.49}
-\contentsline {subsubsection}{Weitere Tools}{56}{subsubsection*.50}
-\contentsline {subsection}{\numberline {6.3.23}Analyse des Master Boot Records}{56}{subsection.6.3.23}
-\contentsline {subsubsection}{Sicherung des Master Boot Records}{56}{subsubsection*.51}
-\contentsline {subsubsection}{Sicherung des Master Boot Records}{56}{subsubsection*.52}
-\contentsline {subsubsection}{Extraktion des Master Boot Records aus einem image}{56}{subsubsection*.53}
-\contentsline {subsection}{\numberline {6.3.24}Weitere Analyse-M\IeC {\"o}glichkeiten}{56}{subsection.6.3.24}
-\contentsline {section}{\numberline {6.4}Reporting}{57}{section.6.4}
-\contentsline {section}{\numberline {6.5}Hinweise zu Tooleinsatz}{57}{section.6.5}
-\contentsline {section}{\numberline {6.6}Tool-Suiten und Toolsammlungen}{58}{section.6.6}
-\contentsline {chapter}{\numberline {7}Schlusswort}{61}{chapter.7}
-\contentsline {section}{\numberline {7.1}Fazit}{61}{section.7.1}
-\contentsline {section}{\numberline {7.2}Reflexion}{61}{section.7.2}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{63}{chapter*.55}
-\contentsline {part}{Anhang}{69}{chapter*.59}
-\contentsline {chapter}{\numberline {A}Vorlage: Formular Incident-Meldung}{69}{appendix.A}
-\contentsline {chapter}{\numberline {B}Vorlage Formular Ermittlung}{71}{appendix.B}
-\contentsline {chapter}{\numberline {C}Vorlage: Protokoll}{73}{appendix.C}
+\contentsline {subsection}{\numberline {2.5.2}Delivery (Positionierung)}{9}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Breach (Ausnutzung)}{9}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Affect (Beeintr\IeC {\"a}chtigung / Infizierung)}{9}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Clean Up (Aufr\IeC {\"a}umen)}{9}{subsection.2.5.5}
+\contentsline {chapter}{\numberline {3}Incident Detection \& Incident Response}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Incident Detection (Erkennung eines Vorfalls)}{11}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Hinweise Netzwerkseitig}{11}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Hinweise Serverseitig}{11}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Hinweise durch Intrusion-Detection-Systeme}{12}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Weitere Hinweise}{12}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Meldung eines Vorfalles}{12}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Incident Response}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Organisatorische Vorbereitung}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Incident Response Team}{14}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Incident Response Prozess}{15}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Ablauf}{15}{section.3.3}
+\contentsline {chapter}{\numberline {4}Computer Forensik}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Einbettung und Definition}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Forensik}{19}{subsection.4.1.1}
+\contentsline {subsubsection}{Ursprung}{19}{subsubsection*.4}
+\contentsline {subsubsection}{Bedeutung}{19}{subsubsection*.5}
+\contentsline {subsubsection}{Teilbereiche}{20}{subsubsection*.6}
+\contentsline {subsection}{\numberline {4.1.2}IT- / Digitale Forensik}{20}{subsection.4.1.2}
+\contentsline {subsubsection}{Teilbereiche}{20}{subsubsection*.7}
+\contentsline {subsection}{\numberline {4.1.3}Computer Forensik}{21}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Einf\IeC {\"u}hrung}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Anwendungsbereich}{21}{section.4.3}
+\contentsline {section}{\numberline {4.4}Kategorien von Daten}{22}{section.4.4}
+\contentsline {section}{\numberline {4.5}Anti-Forensik und Anti-Detection}{22}{section.4.5}
+\contentsline {section}{\numberline {4.6}Ausbildung \& Zertifizierung}{23}{section.4.6}
+\contentsline {section}{\numberline {4.7}Hinweise f\IeC {\"u}r die juristische Verwertbarkeit}{23}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Methoden, Techniken und Programme}{23}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Glaubw\IeC {\"u}rdigkeit und Reproduzierbarkeit}{24}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Integrit\IeC {\"a}t}{24}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Pr\IeC {\"a}sentation und Dokumentation}{24}{subsection.4.7.4}
+\contentsline {subsection}{\numberline {4.7.5}Beweiskraft}{24}{subsection.4.7.5}
+\contentsline {section}{\numberline {4.8}Hinweise zum Datenschutz}{24}{section.4.8}
+\contentsline {chapter}{\numberline {5}Forensische Analyse}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{25}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Ein guter Prozess}{26}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Phasen}{26}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Readiness (Vorbereitung)}{26}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Secure (Sicherstellen)}{27}{subsection.5.2.2}
+\contentsline {subsubsection}{Environment (Umgebung)}{28}{subsubsection*.8}
+\contentsline {subsubsection}{Identify (Identifizieren)}{28}{subsubsection*.9}
+\contentsline {subsubsection}{Assess and Decide (Beurteilen und Entscheiden)}{28}{subsubsection*.10}
+\contentsline {subsubsection}{Collect (Sammeln) and Preserve (Aufbewahren)}{29}{subsubsection*.11}
+\contentsline {subsection}{\numberline {5.2.3}Analysis (Analyse)}{31}{subsection.5.2.3}
+\contentsline {subsubsection}{Preparation (Vorbereitung)}{31}{subsubsection*.12}
+\contentsline {subsubsection}{Analysis (Analyse)}{32}{subsubsection*.13}
+\contentsline {paragraph}{Unterst\IeC {\"u}tzende Fragestellungen}{33}{paragraph*.14}
+\contentsline {subsection}{\numberline {5.2.4}Report (Dokumentation)}{33}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Present (Pr\IeC {\"a}sentation)}{34}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Review (R\IeC {\"u}ckblick)}{34}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Beweiskette und Beweissicherung}{35}{section.5.3}
+\contentsline {section}{\numberline {5.4}Hinweise zur forensischen Analyse}{35}{section.5.4}
+\contentsline {chapter}{\numberline {6}Tools und Techniken}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Readiness}{37}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Datentr\IeC {\"a}ger l\IeC {\"o}schen}{37}{subsection.6.1.1}
+\contentsline {subsubsection}{dd}{37}{subsubsection*.15}
+\contentsline {subsubsection}{Weitere Tools}{38}{subsubsection*.16}
+\contentsline {section}{\numberline {6.2}Secure}{38}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Auslesen der Zeitkonfiguration}{38}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Bestimmung der Linux-Distribution}{38}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Shutdown eines Systemes}{40}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Erstellen von Hashes}{40}{subsection.6.2.4}
+\contentsline {subsubsection}{md5sum}{40}{subsubsection*.17}
+\contentsline {subsubsection}{md5deep}{41}{subsubsection*.18}
+\contentsline {subsection}{\numberline {6.2.5}Sicherung des Arbeitsspeicher-Inhaltes}{41}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Sicherung des Arbeitsspeicher-Inhaltes ohne Zugriff auf das Betriebssystem}{41}{subsection.6.2.6}
+\contentsline {subsection}{\numberline {6.2.7}Sicherung des Arbeitsspeicher-Inhaltes mit Zugriff auf das Betriebssystem}{42}{subsection.6.2.7}
+\contentsline {subsubsection}{Linux (alte Kernel-Versionen)}{42}{subsubsection*.19}
+\contentsline {subsubsection}{fmem}{42}{subsubsection*.20}
+\contentsline {subsubsection}{lime}{42}{subsubsection*.21}
+\contentsline {subsubsection}{Weitere Tools}{42}{subsubsection*.22}
+\contentsline {subsection}{\numberline {6.2.8}Forensische Duplikation}{43}{subsection.6.2.8}
+\contentsline {subsubsection}{Einsatz von Standard-Linux Tools}{43}{subsubsection*.23}
+\contentsline {subsubsection}{dcfldd}{44}{subsubsection*.24}
+\contentsline {subsubsection}{dc3dd}{44}{subsubsection*.25}
+\contentsline {subsubsection}{Weitere Tools}{44}{subsubsection*.26}
+\contentsline {subsection}{\numberline {6.2.9}Verifikation eines forensischen Duplikates oder eines Beweisst\IeC {\"u}ckes}{45}{subsection.6.2.9}
+\contentsline {subsubsection}{md5sum und md5deep}{45}{subsubsection*.27}
+\contentsline {subsubsection}{dcfldd}{45}{subsubsection*.28}
+\contentsline {subsubsection}{Weitere Tools}{45}{subsubsection*.29}
+\contentsline {subsection}{\numberline {6.2.10}Sicherung der Bin\IeC {\"a}rdatei von ausgef\IeC {\"u}hrten Prozessen}{45}{subsection.6.2.10}
+\contentsline {subsubsection}{Linux}{45}{subsubsection*.30}
+\contentsline {subsection}{\numberline {6.2.11}Sicherung fl\IeC {\"u}chtiger Daten}{45}{subsection.6.2.11}
+\contentsline {subsubsection}{Linux}{46}{subsubsection*.31}
+\contentsline {section}{\numberline {6.3}Analysis}{48}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Image mounten}{48}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Linux (dd)}{48}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}ewfmount}{48}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}xmount}{49}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Gel\IeC {\"o}schte Datentr\IeC {\"a}ger}{49}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Gel\IeC {\"o}schte Partitionstabelle}{49}{subsection.6.3.6}
+\contentsline {subsubsection}{Tools}{49}{subsubsection*.32}
+\contentsline {subsection}{\numberline {6.3.7}Analyse von gel\IeC {\"o}schten Dateien}{49}{subsection.6.3.7}
+\contentsline {subsubsection}{Sleuth Kit}{50}{subsubsection*.33}
+\contentsline {subsubsection}{Weitere Tools}{50}{subsubsection*.34}
+\contentsline {subsection}{\numberline {6.3.8}Analyse von versteckten Dateien}{50}{subsection.6.3.8}
+\contentsline {subsection}{\numberline {6.3.9}Dateien oder Fragemente wiederherstellen}{51}{subsection.6.3.9}
+\contentsline {subsubsection}{foremost}{51}{subsubsection*.35}
+\contentsline {subsubsection}{Fatback}{51}{subsubsection*.36}
+\contentsline {subsubsection}{unrm und lazarus}{51}{subsubsection*.37}
+\contentsline {subsubsection}{Weitere Tools}{51}{subsubsection*.38}
+\contentsline {subsection}{\numberline {6.3.10}Entpacken von Dateien}{51}{subsection.6.3.10}
+\contentsline {subsubsection}{Linux}{52}{subsubsection*.39}
+\contentsline {subsubsection}{7-Zip}{52}{subsubsection*.40}
+\contentsline {subsection}{\numberline {6.3.11}Suche nach Dateien / Filterung von Dateien}{52}{subsection.6.3.11}
+\contentsline {subsubsection}{Linux}{52}{subsubsection*.41}
+\contentsline {subsection}{\numberline {6.3.12}Analyse des File Slacks}{52}{subsection.6.3.12}
+\contentsline {subsection}{\numberline {6.3.13}Timeline-Analyse}{53}{subsection.6.3.13}
+\contentsline {subsubsection}{Sleuth Kit}{53}{subsubsection*.42}
+\contentsline {subsubsection}{log2timeline}{54}{subsubsection*.43}
+\contentsline {subsection}{\numberline {6.3.14}Analyse von Auslagerungsdateien}{54}{subsection.6.3.14}
+\contentsline {subsection}{\numberline {6.3.15}Suche nach Rootkits}{54}{subsection.6.3.15}
+\contentsline {subsubsection}{chkrootkit}{55}{subsubsection*.44}
+\contentsline {subsubsection}{rkhunter}{55}{subsubsection*.45}
+\contentsline {subsection}{\numberline {6.3.16}Systemprotokolle}{55}{subsection.6.3.16}
+\contentsline {subsection}{\numberline {6.3.17}Untersuchung der Shell (Bash)}{55}{subsection.6.3.17}
+\contentsline {subsection}{\numberline {6.3.18}Untersuchung der Druckerjobs und der Druckerqueue}{55}{subsection.6.3.18}
+\contentsline {subsection}{\numberline {6.3.19}Untersuchung der Dateien / Dateiendungen}{56}{subsection.6.3.19}
+\contentsline {subsubsection}{Linux}{56}{subsubsection*.46}
+\contentsline {subsection}{\numberline {6.3.20}Datei- und Verzeichnisrechte}{56}{subsection.6.3.20}
+\contentsline {subsection}{\numberline {6.3.21}Analyse des RAM-Dumps}{56}{subsection.6.3.21}
+\contentsline {subsubsection}{Volatility}{57}{subsubsection*.47}
+\contentsline {subsection}{\numberline {6.3.22}Konvertierung von Images}{57}{subsection.6.3.22}
+\contentsline {subsubsection}{ewfacquire}{57}{subsubsection*.48}
+\contentsline {subsubsection}{xmount}{57}{subsubsection*.49}
+\contentsline {subsubsection}{Weitere Tools}{58}{subsubsection*.50}
+\contentsline {subsection}{\numberline {6.3.23}Analyse des Master Boot Records}{58}{subsection.6.3.23}
+\contentsline {subsubsection}{Sicherung des Master Boot Records}{58}{subsubsection*.51}
+\contentsline {subsubsection}{Sicherung des Master Boot Records}{58}{subsubsection*.52}
+\contentsline {subsubsection}{Extraktion des Master Boot Records aus einem image}{58}{subsubsection*.53}
+\contentsline {subsection}{\numberline {6.3.24}Weitere Analyse-M\IeC {\"o}glichkeiten}{58}{subsection.6.3.24}
+\contentsline {section}{\numberline {6.4}Reporting}{59}{section.6.4}
+\contentsline {section}{\numberline {6.5}Hinweise zu Tooleinsatz}{59}{section.6.5}
+\contentsline {section}{\numberline {6.6}Tool-Suiten und Toolsammlungen}{60}{section.6.6}
+\contentsline {chapter}{\numberline {7}Schlusswort}{63}{chapter.7}
+\contentsline {section}{\numberline {7.1}Fazit}{63}{section.7.1}
+\contentsline {section}{\numberline {7.2}Reflexion}{63}{section.7.2}
+\contentsline {part}{Anhang}{67}{chapter*.56}
+\contentsline {chapter}{\numberline {A}Vorlage: Formular Incident-Meldung}{67}{appendix.A}
+\contentsline {chapter}{\numberline {B}Vorlage: Protokoll}{69}{appendix.B}
+\contentsline {chapter}{\numberline {C}Vorlage: Formular Ermittlung}{71}{appendix.C}
 \contentsline {chapter}{\numberline {D}Vorlage: Beweiszettel}{75}{appendix.D}
-\contentsline {chapter}{\numberline {E}Ablauf einer forensischen Analyse}{77}{appendix.E}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{79}{section*.61}
+\contentsline {chapter}{\numberline {E}Ablauf einer forensischen Analyse}{79}{appendix.E}
 \contentsfinish

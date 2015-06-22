@@ -1,5 +1,5 @@
 \chapter{Tools und Techniken} \label{chap:ToolsTechniques}
-In diesem Kapitel werden die grundlegenden Tools und Techniken einer forensischen Analyse vorgestellt. Die Tools und Techniken werden dabei nach der Phase, in der diese eingesetzt und angewendet werden, gegliedert.
+In diesem Kapitel werden die grundlegenden Tools und Techniken einer forensischen Analyse unter Linux vorgestellt. Die Tools und Techniken werden dabei nach der Phase, in der diese eingesetzt und angewendet werden, gegliedert.
 
 
 
@@ -152,7 +152,7 @@ Grundsätzlich gilt, dass der Inhalt des Arbeitsspeichers beim herunterfahren de
 Nach dem harten Shutdown des Systemes wird ein speziell präpariertes USB-Boot-Medium eingesetzt und das System sofort neu gestartet. Dabei ist im BIOS die Bootreihenfolge so zu ändern, dass das USB-Medium als primäres Boot-Medium verwendet wird. Das USB-Medium wurde vorgängig mit einem Minibetriebssystem, einem Spezialtool und einer separaten Partition zur Speicherung des Arbeitsspeicher-Abbildes. Als Tool zur Sicherung kann entweder \textit{Msramdmp} oder der \textit{USB Memory Scraper} verwendet werden.
 
 \item Cold Boot mit Kühlung des physikalischen Bausteins\\
-Bevor das System mit einem harten Shutdown heruntergefahren wird, wird das Gehäuse des Systems geöffnet und der Arbeitsspeicher mit einem Stickstoffspray auf -50 Grad Celsius herutner gekühlt. Nach dem harten Shutdown wird der Arbeitsspeicher ausgebaut und in einem Analyse-System  eingebaut. Das Analyse-System wird mit einer Spezialsoftware gestartet, welche den gesamten Arbeitsspeicher auf einen anderen Datenträger sichert.
+Bevor das System mit einem harten Shutdown heruntergefahren wird, wird das Gehäuse des Systems geöffnet und der Arbeitsspeicher mit einem Stickstoffspray auf -50 Grad Celsius herunter gekühlt. Dadurch werden die physikalischen Prozesse verlangsamt und die Daten bleiben im physischen Baustein länger erhalten. Nach dem harten Shutdown wird der Arbeitsspeicher ausgebaut und in einem Analyse-System  eingebaut. Das Analyse-System wird mit einer Spezialsoftware gestartet, welche den gesamten Arbeitsspeicher auf einen anderen Datenträger sichert.
 
 \item Firewire-Attacke\\
 Bei der Firewire-Attacke wird eine Schwachstelle der Firewire-Schnittstelle ausgenutzt, um Inhalte des Arbeitsspeichers zu sichern. Die Schwachstelle kann jedoch nur unter bestimmten Bedingungen ausgenutzt werden und es kann nur eine begrenzte Menge (aktuell max. 4 GB) an Arbeitsspeicher ausgelesen werden. Als unterstützendes Tool zur Realisierung dieses Angriffes sei an dieser Stelle das Tool \textit{PythonRaw1394} genannt. Weitere Informationen zur Firewire-Attacke sind hier zu finden: \url{https://blogs.gnome.org/muelli/2010/04/reading-ram-using-firewire/}, \url{http://link.springer.com/chapter/10.1007%2F978-3-642-23602-0_14#page-1}
@@ -348,7 +348,7 @@ Die Sicherung von flüchtigen Daten muss effizient, schnell und korrekt erfolgen
 > who
 \end{lstlisting}
 
-\item  Liste der alufenden Prozesse
+\item  Liste der ablaufenden Prozesse
 \begin{lstlisting}
 > ps -efl
 \end{lstlisting}
@@ -877,7 +877,7 @@ Gewisse Tools und Tool-Suiten bieten eine integrierte Möglichkeit um Berichte u
 Nachfolgend einige Hinweise zum Einsatz von Tools bei einer forensischen Analyse:
 
 \begin{itemize}
-\item Auswahl des Tools kann Grundsatzdiskussionen zu den Ermittlungsmethoden auswählen.
+\item Auswahl des Tools kann Grundsatzdiskussionen zu den Ermittlungsmethoden auslösen.
 \item Verständnis der unterschiedlichen Ansätze verschiedener Forensik-Tools und -Tool-Suiten.
 \item Open Source vs. Kommerzielle Tools: Klassische ideologische Diskussion. Für die juristische Verwendbarkeit sind beide Ansätze legitim, sofern die gewählten Tools akzeptiert und etabliert sind.
 \item Einsatz von Script-Sammlungen (Konsolen-Befehle) vs. GUI-Anwendungen. Der Einsatz von GUI-Anwendungen bietet erheblich mehr komfort als der Einsatz von Script-Sammlungen, beziehungsweise dem Absetzen von Konsolen-Befehlen. Der Nachteil der GUI-Anwendungen ist jedoch, dass diese einen höheren RAM-Bedarf haben. Daher sollte bei einer Live-Analyse auf den Einsatz von grafischen Tools wann immer möglich verzichtet werden.

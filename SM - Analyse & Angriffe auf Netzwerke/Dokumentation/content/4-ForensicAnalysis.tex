@@ -72,11 +72,13 @@ Um während der Untersuchung Fehler zu verhindern und wertvolle Zeit zu sparen, 
 \end{itemize}
 
 \subsection{Secure (Sicherstellen)}
-Die Phase "`Secure"' lässt sich weiter in die Phasen "`Environment (Umgebung)"', "`Identify (Identifizieren)"', "`Asses and Decide (Beurteilen und Entscheiden)"', "`Collect (Sammeln)"' und "`Preserve (Aufbewahren)"' unterteilen.
+Die Phase "`Secure"' lässt sich weiter in die Phasen "`Environment (Umgebung)"', "`Identify (Identifizieren)"', "`Assess and Decide (Beurteilen und Entscheiden)"', "`Collect (Sammeln)"' und "`Preserve (Aufbewahren)"' unterteilen.
 
 
 \subsubsection{Environment (Umgebung)}
-Diese Phase muss grundsätzlich nur berücksichtigt werden, wenn es sich bei der Untersuchung um eine Ermittlung im Rahmen einer Incident Response oder einer Tatortssicherung handelt.
+Diese Phase gibt es grundsätzlich nur, wenn der Ermittler eine Sicherung und gegebenenfalls Analyse an einem Ermittlungsort durchführen muss. Handelt es sich um eine Sicherung und Analyse in der Laborumgebung ist diese Phase nicht von Bedeutung.
+
+Diese Phase gibt es grundsätzlich nur, wenn es sich bei der Untersuchung um eine Ermittlung im Rahmen einer Incident Response oder eine Tatortssicherung handelt.
 
 Bei Ankunft des Ermittlers am "`Tatort"' sollte er sogleich sicherstellen, dass nur noch berechtigte Personen Zugang zum Tatort und der näheren Umgebung haben. Bevor die Personen den Tatort verlassen, sind zum einen die Kontaktdaten für spätere Rückfragen und zum anderen weitere Informationen (zum Beispiel: Passwörter, Besonderheiten des Systems) zu protokollieren. Sofern noch nicht erfolgt, sollte der Tatort isoliert und dokumentiert werden. Für die Tatortdokumentation sind Fotos und Skizzen sehr gut geeignet.
 
@@ -85,7 +87,7 @@ Zuerst müssen sämtliche Datenquellen am Tatort und in der näheren Umgebung id
 
 Falls gestattet, sollte in der näheren Umgebung, zum Beispiel im Aktenschrank oder im Korpus, nach weiteren Datenquellen gesucht werden. Eine mehr oder weniger gut versteckte Passwortliste kann die Arbeit erheblich erleichtern. Wurden nicht an ein System angeschlossene Datenträger, Medien  und Dokumente gefunden ist dies sofort zu dokumentieren und der Beweisgegenstand fachgerecht zu sichern. Mehr dazu im nächsten Kapitel.
 
-\subsubsection{Asses and Decide (Beurteilen und Entscheiden)}
+\subsubsection{Assess and Decide (Beurteilen und Entscheiden)}
 Mit dem aktuellen Wissensstand muss der Ermittler nun eine Lagebeurteilung durchführen und eine Strategie für das weitere Vorgehen auswählen. Je nach Situation muss an dieser Stelle das Incident Response Team, ein Mitglied des Managements oder der Ermittlungsleiter involviert werden, um das weitere Vorgehen abzusprechen und zu genehmigen.
 
 Der Ermittler kann entweder eine Live-Analyse oder eine Post-Mortem-Analyse durchführen. Bei einer Live-Analyse wird das System nicht heruntergefahren und es wird versucht so viele Daten als möglich zu sichern, ohne den Zustand des Systemes allzu stark zu verändern, beziehungsweise eigene Spuren zu hinterlassen. Eine Live-Analyse wird typischerweise durchgeführt, wenn ein unternehmenskritisches System betroffen ist, welches nicht heruntergefahren werden kann. Hier gilt es sorgfältig das Kosten / Nutzen-Verhältnis abzuwägen. Handelt es sich um ein kritisches System, der Schaden ist vergleichsweise klein und die Wahrscheinlichkeit den Täter ausfindig zu machen sehr gering, lohnt sich ein herunterfahren aus wirtschaftlicher Sicht oft nicht. Für eine Live-Analyse muss zwingend ein Zugang zum System bestehen.
@@ -206,7 +208,7 @@ Ja: Kontrolle der physischen Überwachung und Zutrittskontrolle.
 \end{itemize}
 
 %--------------------------------------------------
-\subsection{Reporting (Dokumentation)}
+\subsection{Report (Dokumentation)}
 Die gesamte forensische Untersuchung muss im Detail protokolliert und dokumentiert werden. Es müssen sämtliche Arbeitsschritte nachvollzogen und gegebenenfalls durch einen anderen Experten reproduziert werden können. Die eingesetzten Tools (inkl. Version) und Techniken sollten kurz beschrieben werden Im Rahmen einer Strafuntersuchung müssen die durchgeführten Schritte und angewandten Techniken so erläutert werden, dass diese von Laien verstanden und nachvollzogen werden können.
 
 Die Dokumentation der Untersuchung sollte soweit als möglich und praktikabel sofort bei der Durchführung erstellt werden, da ansonsten wichtige Informationen, Gedanken und Arbeitsschritte verloren gehen. Sie sollte klar, einfach und auf Fakten aufbauend geschrieben und mit Visualisierungen, Screenshots oder gegebenenfalls Fotos, welche mit der Digitalkamera aufgenommen wurden, unterlegt werden. 

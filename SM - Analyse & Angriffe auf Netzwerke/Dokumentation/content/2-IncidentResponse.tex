@@ -34,35 +34,9 @@ Intrusion-Detection-Systeme sind dazu da Angriffe möglichst früh zu erkennen u
 Weitere Hinweise können durch Kunden, Partner, Mitarbeiter, Strafverfolgungsbehörden oder die Presse erfolgen.
 
 \subsection{Meldung eines Vorfalles}\label{subsec:IncidentDetection:MeldungVorfall}
-Wurde ein möglicher Sicherheitsvorfall oder ein Angriff gemeldet, ist es wichtig, dass die Person, welche die Meldung entgegen nimmt korrekt und schnell reagiert. Personen welche solche Meldungen entgegen nehmen könnten (z.B. Mitarbeiter des Service Desks) sollten geschult und mit einem entsprechenden Merkblatt und einer Checkliste / Formular ausgestattet werden. Die entgegenehmende Person muss vom Melder so viele Informationen wie möglich erfragen, damit anschliessend schnellere und effizientere Entscheidungen getroffen werden können. Dabei sind sowohl Informationen zum Melder, als auch über die Symptome und den Zustand des Systemes von Interesse. Ein Beispiel für ein solches Formular ist im Anhang \ref{appx:Template:IncidentMessage} \nameref{appx:Template:IncidentMessage} zu finden.
+Wurde ein möglicher Sicherheitsvorfall oder ein Angriff gemeldet, ist es wichtig, dass die Person, welche die Meldung entgegen nimmt korrekt und schnell reagiert. Personen welche solche Meldungen entgegen nehmen könnten (z.B. Mitarbeiter des Service Desks) sollten geschult und mit einem entsprechenden Merkblatt und einer Checkliste / Formular ausgestattet werden. Die entgegenehmende Person muss vom Melder so viele Informationen wie möglich erfragen, damit anschliessend schnellere und effizientere Entscheidungen getroffen werden können. Dabei sind sowohl Informationen zum Melder, als auch die Symptome und den Zustand des Systemes von Interesse. Ein Beispiel für ein solches Formular ist im Anhang \ref{appx:Template:IncidentMessage} \nameref{appx:Template:IncidentMessage} zu finden.
 
 Sollte die Meldung des Vorfalles nicht direkt an das Incident Response Team gelangt sein, muss der Vorfall unverzüglich dem zuständigen Incident Response Team gemeldet werden. Ist kein ständiges Incident Response Team vorhanden, muss dieses entsprechend aufgeboten werden. Gibt es in der Organisation kein Incident Response Team und keinen Incident Response Plan ist das weitere Vorgehen mit dem Vorgesetzten und allenfalls einem Mitglied des höheren Managements abzustimmen. Übereilte Reaktionen sollten vermieden werden, da dadurch Beweisspuren verwischt oder vernichtet werden können. 
-
-\section{Incident Response Team}
-Das Incident Response Team ist die Eingreiftruppe beim Eintreten eines Sicherheitsvorfalles. Die Aufgabe dieses Team ist es im Falle eines Incidents auf Basis der vorhandenen Informationen eine Lagebeurteilung und Risikoeinschätzung durchzuführen und anschliessend entsprechende Massnahmen einzuleiten.
-
-In einem Incident Response Team sollten folgende Rollen besetzt werden.
-
-\begin{itemize}
-\item \textbf{Kern-Team} \\
-\begin{itemize}
-\item Koordinator / Leiter mit direktem Zugang zum Management
-\item Kontaktstelle zur Entgegennahme von Verdachtsmeldungen
-\item Incident-Spezialist oder einen Ermittler aus dem Bereich der Computer Forensik
-\end{itemize}
-\item \textbf{Erweitertes Team} \\
-\begin{itemize}
-\item Juristischer Berater
-\item Auditor
-\item Mitarbeiter der physikalischen Sicherheit
-\item HR-Mitarbeiter
-\item Fachspezialisten (z.B. Netzwerk-, Sicherheits- oder Datenbankadministratoren)
-\end{itemize}
-\end{itemize}
-
-Die Mitarbeiter dieses Teams sollten über längere Erfahrung in ihrem Tätigkeitsbereich verfügen, gute Kommunikationsfähigkeiten besitzen, teamfähig sein und gut integriert und zuverlässig sein. Darüber hinaus müssen sie in der Lage sein unter Stress effiziente und akzeptable Entscheide zu treffen, sich an vorgegebene Regeln und Prozeduren zu halten und in sicherheitsrelevanten Aspekten als Vorbild dienen. Sie müssen in der Lage sein sich unter Stress an vorgegebene Regeln und Prozeduren zu halten.
-
-Bei grossen Organisationen kann das Incident Response Team als Dauerhaftes Team vorhanden ist, welches auch noch andere Aufgaben im Sicherheitsbereich wahrnimmt. Bei kleineren Organisationen kann es sich um ein Team mit Mitgliedern aus mehreren Organisationseinheiten handeln, welche im Notfall zusammengerufen werden können. Denkbar ist es auch, dass das ganze Incident Response Team oder einen Teil davon (z.B. den Incident-Spezialisten) durch eine externe spezialisierte Unternehmung wahrgenommen wird.
 
 
 \section{Incident Response}
@@ -85,14 +59,41 @@ Bewusstsein für mögliche Sicherheitsvorfälle bei Mitarbeitern fördern.
 \item Konzept / Prozess für die Behandlung eines Sicherheitsvorfalles (Incident Response Prozess)
 \item Aufbau einer Datenbank mit den File-Hashes von bekannten / installierten und als ungefährlich eingestuften Betriebssystemen und Anwendungen.
 \item Verfassung und Etablierung von entsprechenden Policies, Guidelines und Procedures
+\item Aufbau eines Incident Response Teams
 \end{itemize}
 
 Auch sollte der Kontakt zur Ermittlungsbehörde bereits im Vorfeld hergestellt werden, damit im Ernstfall ein entsprechender Kontakt bereits vorhanden ist und rasch reagiert werden kann. Gegebenenfalls ist es auch sinnvoll den Kontakt zu einem externen Security-Spezialisten herzustellen, falls nicht ausreichend Know-How vorhanden ist.
 
+\subsection{Incident Response Team}
+Das Incident Response Team ist die Eingreiftruppe beim Eintreten eines Sicherheitsvorfalles. Die Aufgabe dieses Team ist es im Falle eines Incidents auf Basis der vorhandenen Informationen eine Lagebeurteilung und Risikoeinschätzung durchzuführen und anschliessend entsprechende Massnahmen einzuleiten.
+
+In einem Incident Response Team sollten folgende Rollen besetzt werden.
+
+\begin{itemize}
+\item \textbf{Kern-Team} \\
+\begin{itemize}
+\item Koordinator / Leiter mit direktem Zugang zum Management
+\item Kontaktstelle zur Entgegennahme von Verdachtsmeldungen
+\item Incident-Spezialist oder einen Ermittler aus dem Bereich der Computer Forensik
+\end{itemize}
+\item \textbf{Erweitertes Team} \\
+\begin{itemize}
+\item Juristischer Berater
+\item Auditor
+\item Mitarbeiter der physikalischen Sicherheit
+\item HR-Mitarbeiter
+\item Fachspezialisten (z.B. Netzwerk-, Sicherheits- oder Datenbankadministratoren)
+\end{itemize}
+\end{itemize}
+
+Die Mitarbeiter dieses Teams sollten über längere Erfahrung in ihrem Tätigkeitsbereich verfügen, gute Kommunikationsfähigkeiten besitzen, teamfähig, gut integriert und zuverlässig sein. Darüber hinaus müssen sie in der Lage sein unter Stress effiziente und akzeptable Entscheide zu treffen, sich an vorgegebene Regeln und Prozeduren zu halten und in sicherheitsrelevanten Aspekten als Vorbild dienen. 
+
+Bei grossen Organisationen kann das Incident Response Team als dauerhaftes Team vorhanden sein, welches auch noch andere Aufgaben im Sicherheitsbereich wahrnimmt. Bei kleineren Organisationen kann es sich um ein Team mit Mitgliedern aus mehreren Organisationseinheiten handeln, welche im Notfall zusammengerufen werden können. Denkbar ist es auch, dass das ganze Incident Response Team oder ein Teil davon (z.B. den Incident-Spezialisten) durch eine externe spezialisierte Unternehmung wahrgenommen wird.
+
 \subsection{Incident Response Prozess}
 Wurde ein Vorfall gemeldet gilt es zuerst zu beurteilen, ob es sich um einen wirklichen Sicherheitsvorfalle handelt, oder ob es sich um eine Betriebsstörung handelt.
 
-Handelt es sich um einen Sicherheitsvorfall muss auf Basis der vorhandenen Informationen eine erste Einschätzung durchgeführt werden. Um für die Einschätzung alle relevanten Informationen zur Verfügung zu haben, ist es essentiell, dass bei der Entgegennahme der Meldung die entsprechenden Informationen erfragt werden (Siehe dazu Kapitel \ref{subsec:Angriff:MeldungVorfall}). Sind zu wenig Informationen vorhanden, kann bereits eine erste Analyse durchgeführt werden. Es ist jedoch darauf zu achten, dass keine Beweise durch unbedachtes / übereiltes handeln zerstört werden. Ist kein polizeilicher Ermittler oder ein entsprechend ausgebildeter Spezialist vor Ort, sollte auf voreilige Aktionen verzichtet werden, da diese oft mehr Schaden als Nutzen anrichtet.
+Handelt es sich um einen Sicherheitsvorfall muss auf Basis der vorhandenen Informationen eine erste Einschätzung durchgeführt werden. Um für die Einschätzung alle relevanten Informationen zur Verfügung zu haben, ist es essentiell, dass bei der Entgegennahme der Meldung die entsprechenden Informationen erfragt werden (Siehe dazu Kapitel \ref{subsec:IncidentDetection:MeldungVorfall} \nameref{subsec:IncidentDetection:MeldungVorfall}). Sind zu wenig Informationen vorhanden, kann bereits eine erste Analyse durchgeführt werden. Es ist jedoch darauf zu achten, dass keine Beweise durch unbedachtes / übereiltes Handeln zerstört werden. Ist kein polizeilicher Ermittler oder ein entsprechend ausgebildeter Spezialist vor Ort, sollte auf voreilige Aktionen verzichtet werden, da diese oft mehr Schaden als Nutzen anrichten.
 
 
 \section{Ablauf}
@@ -100,15 +101,16 @@ Der Ablauf einer Incident Response ist immer stark von der jeweiligen Situation 
 
 Bei einem kritischen System würde der Angriff wahrscheinlich so rasch als möglich unterbunden, das System gehärtet und anschliessend wieder in Betrieb genommen werden.
 
-Eine weiteren Einfluss auf den Ablauf hat auch der Zeitpunkt des Angriffes. Je nach dem, wann die Meldung über den Sicherheitsvorfall eingegangen ist, kann der Angriff im vollen Gange oder aber schon vorbei sein. Es kann auch vorkommen, dass der eigentliche Angriff selbst noch gar nicht stattgefunden hat, aber zum Beispiel durch das Monitoring oder ein Intrusion Detection System Hinweise auf einen bevorstehenden Angriff erkannt wurden. 
+Eine weiteren Einfluss auf den Ablauf hat auch der Zeitpunkt des Angriffes. Je nachdem, wann die Meldung über den Sicherheitsvorfall eingegangen ist, kann der Angriff im vollen Gange oder aber schon vorbei sein. Es kann auch vorkommen, dass der eigentliche Angriff selbst noch gar nicht stattgefunden hat, aber zum Beispiel durch das Monitoring oder ein Intrusion Detection System Hinweise auf einen bevorstehenden Angriff erkannt wurden. 
 
-\begin{enumerate}
-\item \textbf{Identify (Identifizierung)}\\
+\begin{enumerate}[font=\bfseries]
+
+\item \textbf{Identify (Identifizierung)}
 \begin{enumerate}
 \item Eingang eines Hinweises für einen Verdachtsmoment \\(Siehe dazu Kapitel \ref{subsec:IncidentDetection:MeldungVorfall} \nameref{subsec:IncidentDetection:MeldungVorfall})
 \end{enumerate}
 
-\item \textbf{Assess (Beurteilung)}\\
+\textbf{\item Assess (Beurteilung)}
 \begin{enumerate}
 \item Identifizierung der betroffenen Systeme
 \item Durchführen einer ersten Analyse / Sicherstellung von Spuren
@@ -117,7 +119,7 @@ Eine weiteren Einfluss auf den Ablauf hat auch der Zeitpunkt des Angriffes. Je n
 \item Information des Managements und weiteren zu involvierende Stellen.
 \end{enumerate}
 
-\item \textbf{Respond (Reagieren)}\\
+\textbf{\item Respond (Reagieren)}
 \begin{enumerate}
 \item Klassifizierung des Vorfalles \\
 Mögliche Klassifizierungen:
@@ -151,13 +153,13 @@ Zu berücksichtigende Faktoren:
 \item Meldung des Vorfalles an die Strafverfolgungsbehörde (falls notwendig)
 \end{enumerate}
 
-\item \textbf{Report (Bericht)}\\
+\textbf{\item Report (Bericht)}
 \begin{enumerate}
 \item Aufzeigen der Kennzahlen: Reaktionszeit, Wirksamkeit, Kosten, etc.
 \item Verfassung eines detaillierten Berichtes über den Vorfall und die forensische Analyse.
 \end{enumerate}
 
-\item \textbf{Review (Rückblick)}\\
+\textbf{\item Review (Rückblick)}
 \begin{enumerate}
 \item Analyse Ermittlungsablauf
 \item Optimierung / Verbesserung Incident Response Prozess
