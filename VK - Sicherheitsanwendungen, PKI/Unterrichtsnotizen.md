@@ -524,7 +524,7 @@ Basis: Symmetrische Verschlüsselungsverfahren
       - ID-Client, ID-TGS
   2.  Response von KDC-AS
       - $A_{TGS,C}|T_{TGS}$
-      - $A_{TGS,C} = eK_C_KDC(K_{C,TGS})$ (Kann vom Client geöffnet werden)
+      - $A_{TGS,C} = eK_{C_KDC}(K_{C,TGS})$ (Kann vom Client geöffnet werden)
       - $T_{TGS} = e_{TGS_KDC}(K_{C,T||TimesGS}||I||ID_C)
   3.  Würfeln
   4.  Client-Request an KDC-TGS
@@ -535,10 +535,10 @@ Basis: Symmetrische Verschlüsselungsverfahren
       - $B2_{C,TGS} = eK_{C,TGS}(K_C,AP)$ (Schlüssel aus Schritt 2, 4)
       - $T_{AP} = eK_{TGS,AP}(K_{C,AP}||I||ID||Times)$
   6.  Client-Request auf Application Server
-      - $C = eK_{C,AP}(ID_C||ZT||Subkey||#Seq)$
+      - $C = eK_{C,AP}(ID_C||ZT||Subkey||Seq)$
       - $T_{AP} = eK_{TGS,AP}(K_{C,AP}||I||ID||Times)$
   7.  Response vom Application Server
-      - $AP_REP = eK_{C,AP}(ZT,Subkey,#Seq)
+      - $AP_REP = eK_{C,AP}(ZT,Subkey,Seq)
 
 Pre-Shared-Secret zwischen TGS und Application-Server
 

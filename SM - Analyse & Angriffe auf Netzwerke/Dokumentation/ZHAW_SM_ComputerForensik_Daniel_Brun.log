@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.23)  22 JUN 2015 14:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.23)  29 JUN 2015 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3566,9 +3566,50 @@ Package biblatex Warning: Data encoding is 'utf8'.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'ZHAW_SM_ComputerForensik_Daniel_Brun.bbl' not 
-found.
-No file ZHAW_SM_ComputerForensik_Daniel_Brun.bbl.
+Package biblatex Info: ... file 'ZHAW_SM_ComputerForensik_Daniel_Brun.bbl' foun
+d.
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.bbl
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'E:2008:CFBlog:RAMAnalyse':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'E:2015:GOV:Attacks':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'E:2010:MSISAC:IncidentResponseGuide':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'E:2006:NIST:Guide:IncidentResponse':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'E:2015:Wikipedia:Computersicherheit':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'E:2013:DFI:RamAnalysis':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'E:SearchSecurity:SpearPhising':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'ZHAW:2012:Seminararbeit:Reglemente':
+(biblatex)                - Invalid format of field 'month'.
+
+)
 Package biblatex Info: Reference section=0 on input line 146.
 Package biblatex Info: Reference segment=0 on input line 146.
 Package caption Info: Begin \AtBeginDocument code.
@@ -3576,7 +3617,7 @@ Package caption Info: floatrow package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -3880,10 +3921,6 @@ k_Daniel_Brun.mw)
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.ist'.
 
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
 
 
 
@@ -4145,16 +4182,16 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
 LaTeX Font Warning: Font shape `T1/lmss/m/b' undefined
-(Font)              using `T1/lmss/m/n' instead on input line 40.
+(Font)              using `T1/lmss/m/n' instead on input line 41.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 [1] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
@@ -4358,16 +4395,16 @@ text indent by \l@... (toc, 2):  35.03995pt
 number indent by parent (toc, 2):  35.41965pt
 text indent calculated (toc, 2): 33.45824pt
 number indent calculated (toc, 2): 35.41965pt
-Package cleveref Info: loaded `ngerman' language definitions on input line 102.
+Package cleveref Info: loaded `ngerman' language definitions on input line 103.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 [2] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
@@ -4536,16 +4573,16 @@ text indent by \l@... (toc, 1):  25.18501pt
 number indent by parent (toc, 1):  15.95303pt
 text indent calculated (toc, 1): 19.46661pt
 number indent calculated (toc, 1): 15.95303pt
-number indent by \l@... (toc, -1):  0.0pt
-text indent by \l@... (toc, -1):  21.9pt
-number indent by parent (toc, -1):  0.0pt
-text indent calculated (toc, -1): 21.9pt
-number indent calculated (toc, -1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
 text indent calculated (toc, 0): 15.95303pt
 number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, -1):  0.0pt
+text indent by \l@... (toc, -1):  21.9pt
+number indent by parent (toc, -1):  0.0pt
+text indent calculated (toc, -1): 21.9pt
+number indent calculated (toc, -1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
@@ -4579,69 +4616,43 @@ text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
 text indent calculated (toc, 0): 15.95303pt
 number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 0):  0.0pt
+text indent by \l@... (toc, 0):  16.42499pt
+number indent by parent (toc, 0):  0.0pt
+text indent calculated (toc, 0): 15.95303pt
+number indent calculated (toc, 0): 0.0pt
 )
 \tf@toc=\write13
-Package cleveref Info: loaded `ngerman' language definitions on input line 188.
+Package cleveref Info: loaded `ngerman' language definitions on input line 178.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 178.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [4] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-No file ZHAW_SM_ComputerForensik_Daniel_Brun.acr.
-No file ZHAW_SM_ComputerForensik_Daniel_Brun.syi.
-No file ZHAW_SM_ComputerForensik_Daniel_Brun.gls.
-Package cleveref Info: loaded `ngerman' language definitions on input line 190.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
-[5] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
- [6]
-(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-
-
 \c@pagesLTS.roman.1.local.count=\count519
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 178.
 \c@pagesLTS.pnc.arabic=\count520
 \c@pagesLTS.double.arabic=\count521
 \c@pagesLTS.current.local.arabic=\count522
@@ -4657,25 +4668,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
-
-LaTeX Warning: Citation 'ZHAW:2012:Seminararbeit:Reglemente' on page 1 undefine
-d on input line 12.
-
-
-Overfull \hbox (16.68578pt too wide) in paragraph at lines 12--13
-\T1/lmr/m/n/10.95 (-20) gle-ment zur Ver-fas-sung ei-ner Se-mi-nar-ar-beit ([[]
-]) 
- []
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 22.
+(babel)             in language  on input line 15.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 20.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -4694,43 +4695,45 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 
+
+
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 32.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 32.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
-Package cleveref Info: loaded `ngerman' language definitions on input line 51.
+(babel)             in language  on input line 40.
+Package cleveref Info: loaded `ngerman' language definitions on input line 53.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
+(babel)             in language  on input line 53.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [2]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw))
-Package cleveref Info: loaded `ngerman' language definitions on input line 195.
+Package cleveref Info: loaded `ngerman' language definitions on input line 183.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 195.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 195.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 195.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 195.
+(babel)             in language  on input line 183.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [3]
@@ -4764,10 +4767,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
-
-LaTeX Warning: Citation 'E:SearchSecurity:SpearPhising' on page 5 undefined on 
-input line 12.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4791,7 +4790,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-iso-8859-1.def
 File: se-iso-8859-1.def 2011/12/02 v1.10 stringenc: ISO-8859-1
 )
-<./images/AttackKnowledgeChart.jpg, id=323, 577.15625pt x 432.61626pt>
+<./images/AttackKnowledgeChart.jpg, id=320, 577.15625pt x 432.61626pt>
 File: ./images/AttackKnowledgeChart.jpg Graphic file (type jpg)
 
 <use ./images/AttackKnowledgeChart.jpg>
@@ -4866,16 +4865,16 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 81.
 )
-Package cleveref Info: loaded `ngerman' language definitions on input line 196.
+Package cleveref Info: loaded `ngerman' language definitions on input line 184.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 184.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [9]
@@ -5039,16 +5038,16 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 [16] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw))
-Package cleveref Info: loaded `ngerman' language definitions on input line 197.
+Package cleveref Info: loaded `ngerman' language definitions on input line 185.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 197.
+(babel)             in language  on input line 185.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 197.
+(babel)             in language  on input line 185.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 197.
+(babel)             in language  on input line 185.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 197.
+(babel)             in language  on input line 185.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [17]
@@ -5083,177 +5082,200 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
-
-LaTeX Warning: Citation 'E:Metapedia:Forensik' on page 19 undefined on input li
-ne 8.
-
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
-
-LaTeX Warning: Citation 'E:2006:NIST:Guide:IncidentResponse' on page 19 undefin
-ed on input line 16.
-
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 22.
-
-LaTeX Warning: Citation 'E:Gabler:Forensik' on page 19 undefined on input line 
-23.
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 22.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 [19] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 53.
-Package cleveref Info: loaded `ngerman' language definitions on input line 56.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 44.
+Package cleveref Info: loaded `ngerman' language definitions on input line 50.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 50.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [20]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 59.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 59.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
-Package cleveref Info: loaded `ngerman' language definitions on input line 80.
+(babel)             in language  on input line 68.
+Package cleveref Info: loaded `ngerman' language definitions on input line 76.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 76.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [21]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
-Package cleveref Info: loaded `ngerman' language definitions on input line 96.
+(babel)             in language  on input line 87.
+Package cleveref Info: loaded `ngerman' language definitions on input line 93.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 93.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [22]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 127.
-Package cleveref Info: loaded `ngerman' language definitions on input line 129.
+(babel)             in language  on input line 126.
+Package cleveref Info: loaded `ngerman' language definitions on input line 128.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [23]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 137.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 137.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 139.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 144.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 144.
 )
-Package cleveref Info: loaded `ngerman' language definitions on input line 198.
+Package cleveref Info: loaded `ngerman' language definitions on input line 186.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [24]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+Package cleveref Info: loaded `ngerman' language definitions on input line 186.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 186.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 186.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 186.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 186.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+ [25]
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 \openout2 = `content/4-ForensicAnalysis.aux'.
 
  (./content/4-ForensicAnalysis.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+
+[26] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+
+
+
+
+
 Kapitel 5.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -5268,20 +5290,16 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-[25] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-
-
-
-
+[27] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5301,16 +5319,16 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 54.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [26]
+ [28]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 74.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 74.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 80.
 Package cleveref Info: loaded `ngerman' language definitions on input line 84.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 84.
@@ -5322,131 +5340,139 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 84.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [27]
-(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 90.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 90.
-Package cleveref Info: loaded `ngerman' language definitions on input line 96.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
- [28]
-(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 97.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 97.
-Package cleveref Info: loaded `ngerman' language definitions on input line 113.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 113.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 113.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 113.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 113.
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
  [29]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-Package cleveref Info: loaded `ngerman' language definitions on input line 143.
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 143.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 143.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 143.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 143.
+(babel)             in language  on input line 92.
+Package cleveref Info: loaded `ngerman' language definitions on input line 98.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 98.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [30]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 99.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 145.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 150.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 150.
-Package cleveref Info: loaded `ngerman' language definitions on input line 163.
+(babel)             in language  on input line 99.
+Package cleveref Info: loaded `ngerman' language definitions on input line 115.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 115.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 115.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 115.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 115.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [31]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 167.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 167.
-Package cleveref Info: loaded `ngerman' language definitions on input line 196.
+Package cleveref Info: loaded `ngerman' language definitions on input line 145.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 145.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [32]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 211.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 211.
-Package cleveref Info: loaded `ngerman' language definitions on input line 229.
+(babel)             in language  on input line 152.
+Package cleveref Info: loaded `ngerman' language definitions on input line 164.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 164.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [33]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 237.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 237.
+(babel)             in language  on input line 169.
+Package cleveref Info: loaded `ngerman' language definitions on input line 195.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 240.
+(babel)             in language  on input line 195.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 240.
+(babel)             in language  on input line 195.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 195.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+ [34]
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 200.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 200.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 213.
+Package cleveref Info: loaded `ngerman' language definitions on input line 228.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 228.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 228.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 228.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 228.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+ [35]
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 238.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 238.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 241.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 241.
 Package cleveref Info: loaded `ngerman' language definitions on input line 243.
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -5459,43 +5485,43 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 243.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [34]
+ [36]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 243.
+(babel)             in language  on input line 244.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 243.
+(babel)             in language  on input line 244.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 250.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 249.
-Package cleveref Info: loaded `ngerman' language definitions on input line 263.
+(babel)             in language  on input line 250.
+Package cleveref Info: loaded `ngerman' language definitions on input line 260.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 260.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [35]
+ [37]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw))
-Package cleveref Info: loaded `ngerman' language definitions on input line 199.
+Package cleveref Info: loaded `ngerman' language definitions on input line 187.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 187.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [36]
+ [38]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 \openout2 = `content/5-ToolsAndTechniques.aux'.
 
@@ -5533,7 +5559,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 30.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-[37] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+[39] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
 
@@ -5578,7 +5604,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 70.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [38]
+ [40]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
@@ -5596,7 +5622,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 108.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-[39] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+[41] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5625,7 +5651,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 137.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [40]
+ [42]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 144.
@@ -5654,7 +5680,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 159.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-[41] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+[43] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
@@ -5691,7 +5717,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 191.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [42]
+ [44]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 206.
@@ -5709,7 +5735,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 231.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [43]
+ [45]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 247.
@@ -5743,7 +5769,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 281.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [44]
+ [46]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 281.
@@ -5781,7 +5807,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 314.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [45]
+ [47]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package cleveref Info: loaded `ngerman' language definitions on input line 384.
 
@@ -5795,7 +5821,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 384.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [46]
+ [48]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package cleveref Info: loaded `ngerman' language definitions on input line 449.
 
@@ -5809,7 +5835,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 449.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [47]
+ [49]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 483.
@@ -5843,7 +5869,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 502.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [48]
+ [50]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 507.
@@ -5877,7 +5903,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 532.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [49]
+ [51]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 543.
@@ -5903,7 +5929,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 560.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [50]
+ [52]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 561.
@@ -5945,7 +5971,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 604.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [51]
+ [53]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 608.
@@ -5971,7 +5997,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 628.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [52]
+ [54]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 632.
@@ -5993,7 +6019,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 657.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [53]
+ [55]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 669.
@@ -6027,7 +6053,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 695.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [54]
+ [56]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 700.
@@ -6057,7 +6083,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 718.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [55]
+ [57]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 720.
@@ -6087,7 +6113,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 752.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [56]
+ [58]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 774.
@@ -6117,95 +6143,91 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 809.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [57]
-(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 813.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 813.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 824.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 824.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 832.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 832.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 840.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 840.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 846.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 846.
-Package cleveref Info: loaded `ngerman' language definitions on input line 853.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 853.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 853.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 853.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 853.
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
- [58]
-(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 871.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 871.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 876.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 876.
-Package cleveref Info: loaded `ngerman' language definitions on input line 884.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 884.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 884.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 884.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 884.
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
  [59]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 894.
+(babel)             in language  on input line 813.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 894.
-Package cleveref Info: loaded `ngerman' language definitions on input line 913.
+(babel)             in language  on input line 813.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 824.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 824.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 832.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 832.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 838.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 838.
+Package cleveref Info: loaded `ngerman' language definitions on input line 849.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 913.
+(babel)             in language  on input line 849.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 913.
+(babel)             in language  on input line 849.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 913.
+(babel)             in language  on input line 849.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 913.
+(babel)             in language  on input line 849.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [60]
-(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw))
-Package cleveref Info: loaded `ngerman' language definitions on input line 200.
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 863.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 863.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 868.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 868.
+Package cleveref Info: loaded `ngerman' language definitions on input line 877.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 877.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 877.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 877.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 877.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
  [61]
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 886.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 886.
+Package cleveref Info: loaded `ngerman' language definitions on input line 910.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 910.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 910.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 910.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 910.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+ [62]
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.mw))
+Package cleveref Info: loaded `ngerman' language definitions on input line 188.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 188.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+ [63]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 \openout2 = `content/6-Fazit.aux'.
 
@@ -6220,7 +6242,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [62]
+ [64]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -6242,16 +6264,21 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 189.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [63] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+ [65] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.acr)
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.syi)
+(./ZHAW_SM_ComputerForensik_Daniel_Brun.gls)
+Package cleveref Info: loaded `ngerman' language definitions on input line 221.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 221.
 Package babel Info: Redefining ngerman shorthand "~
@@ -6262,17 +6289,61 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 221.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [64]
+ [66]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 221.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (0.53537pt too wide) in paragraph at lines 221--221
+[]\T1/lmr/m/it/10.95 (-20) Hacker (Com-pu-ter-si-cher-heit)\T1/lmr/m/n/10.95 (-
+20) . EN. Wi-ki-pe-dia. 2015. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-2
+0) : [][]$\T1/lmtt/c/n/10.95 http : / / de . wikipedia .
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 221.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+[67] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
 
-LaTeX Warning: Empty bibliography on input line 221.
 
+
+Overfull \hbox (9.70366pt too wide) in paragraph at lines 221--221
+\T1/lmtt/c/n/10.95 whitepaper -[] websense -[] advanced -[] persistent -[] thre
+ats -[] and -[] other -[] advanced -[]
+ []
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 224.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 224.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 224.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 224.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 224.
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+[68] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package tocbasic Info: character protrusion at lof deactivated on input line 22
 5.
+
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.lof
 Package cleveref Info: loaded `ngerman' language definitions on input line 3.
 
@@ -6293,7 +6364,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 235.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [65] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+ [69] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
 
@@ -6308,7 +6379,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 235.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [66]
+ [70]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -6317,8 +6388,8 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 238.
  (./content/Z-Appendix.tex
-<content/appendix/Appendix_A_Formular_Incident_Meldung.pdf, id=976, 597.55246pt
- x 845.07718pt>
+<content/appendix/Appendix_A_Formular_Incident_Meldung.pdf, id=1036, 597.55246p
+t x 845.07718pt>
 File: content/appendix/Appendix_A_Formular_Incident_Meldung.pdf Graphic file (t
 ype pdf)
 
@@ -6334,8 +6405,8 @@ Package pdftex.def Info: content/appendix/Appendix_A_Formular_Incident_Meldung.
 pdf used on input line 11.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_A_Formular_Incident_Meldung.pdf, id=979, page=1, 597
-.55246pt x 845.07718pt>
+<content/appendix/Appendix_A_Formular_Incident_Meldung.pdf, id=1039, page=1, 59
+7.55246pt x 845.07718pt>
 File: content/appendix/Appendix_A_Formular_Incident_Meldung.pdf Graphic file (t
 ype pdf)
 
@@ -6380,7 +6451,7 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 
-[67 <./content/appendix/Appendix_A_Formular_Incident_Meldung.pdf>]
+[71 <./content/appendix/Appendix_A_Formular_Incident_Meldung.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -6399,7 +6470,7 @@ Package pdftex.def Info: content/appendix/Appendix_A_Formular_Incident_Meldung.
 pdf used on input line 13.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_A_Formular_Incident_Meldung.pdf, id=1007, page=2, 59
+<content/appendix/Appendix_A_Formular_Incident_Meldung.pdf, id=1069, page=2, 59
 7.55246pt x 845.07718pt>
 File: content/appendix/Appendix_A_Formular_Incident_Meldung.pdf Graphic file (t
 ype pdf)
@@ -6440,9 +6511,9 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 
-[68 <./content/appendix/Appendix_A_Formular_Incident_Meldung.pdf>]
+[72 <./content/appendix/Appendix_A_Formular_Incident_Meldung.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-<content/appendix/Appendix_B_Formular_Protokoll.pdf, id=1012, 597.55246pt x 845
+<content/appendix/Appendix_B_Formular_Protokoll.pdf, id=1074, 597.55246pt x 845
 .07718pt>
 File: content/appendix/Appendix_B_Formular_Protokoll.pdf Graphic file (type pdf
 )
@@ -6458,7 +6529,7 @@ Package pdftex.def Info: content/appendix/Appendix_B_Formular_Protokoll.pdf use
 d on input line 20.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_B_Formular_Protokoll.pdf, id=1015, page=1, 597.55246
+<content/appendix/Appendix_B_Formular_Protokoll.pdf, id=1077, page=1, 597.55246
 pt x 845.07718pt>
 File: content/appendix/Appendix_B_Formular_Protokoll.pdf Graphic file (type pdf
 )
@@ -6503,7 +6574,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 20.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [69 <./content/appendix/Appendix_B_Formular_Protokoll.pdf>]
+ [73 <./content/appendix/Appendix_B_Formular_Protokoll.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -6524,7 +6595,7 @@ Package pdftex.def Info: content/appendix/Appendix_B_Formular_Protokoll.pdf use
 d on input line 22.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_B_Formular_Protokoll.pdf, id=1032, page=2, 845.07718
+<content/appendix/Appendix_B_Formular_Protokoll.pdf, id=1093, page=2, 845.07718
 pt x 597.55246pt>
 File: content/appendix/Appendix_B_Formular_Protokoll.pdf Graphic file (type pdf
 )
@@ -6564,9 +6635,9 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 22.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [70 <./content/appendix/Appendix_B_Formular_Protokoll.pdf>]
+ [74 <./content/appendix/Appendix_B_Formular_Protokoll.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1037, 597.55246pt x 84
+<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1098, 597.55246pt x 84
 5.07718pt>
 File: content/appendix/Appendix_C_Formular_Ermittlung.pdf Graphic file (type pd
 f)
@@ -6582,7 +6653,7 @@ Package pdftex.def Info: content/appendix/Appendix_C_Formular_Ermittlung.pdf us
 ed on input line 29.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1040, page=1, 597.5524
+<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1101, page=1, 597.5524
 6pt x 845.07718pt>
 File: content/appendix/Appendix_C_Formular_Ermittlung.pdf Graphic file (type pd
 f)
@@ -6627,7 +6698,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 29.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [71 <./content/appendix/Appendix_C_Formular_Ermittlung.pdf>]
+ [75 <./content/appendix/Appendix_C_Formular_Ermittlung.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -6648,7 +6719,7 @@ Package pdftex.def Info: content/appendix/Appendix_C_Formular_Ermittlung.pdf us
 ed on input line 31.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1056, page=2, 597.5524
+<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1117, page=2, 597.5524
 6pt x 845.07718pt>
 File: content/appendix/Appendix_C_Formular_Ermittlung.pdf Graphic file (type pd
 f)
@@ -6688,9 +6759,9 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 31.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [72 <./content/appendix/Appendix_C_Formular_Ermittlung.pdf>]
+ [76 <./content/appendix/Appendix_C_Formular_Ermittlung.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
-<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1069, page=3, 597.5524
+<content/appendix/Appendix_C_Formular_Ermittlung.pdf, id=1130, page=3, 597.5524
 6pt x 845.07718pt>
 File: content/appendix/Appendix_C_Formular_Ermittlung.pdf Graphic file (type pd
 f)
@@ -6723,7 +6794,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 31.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [73 <./content/appendix/Appendix_C_Formular_Ermittlung.pdf>]
+ [77 <./content/appendix/Appendix_C_Formular_Ermittlung.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 37.
@@ -6735,12 +6806,12 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 37.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [74]
+ [78]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
 
-<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1078, 597.55246pt x 
+<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1140, 597.55246pt x 
 845.07718pt>
 File: content/appendix/Appendix_D_Formular_Beweiszettel.pdf Graphic file (type 
 pdf)
@@ -6756,7 +6827,7 @@ Package pdftex.def Info: content/appendix/Appendix_D_Formular_Beweiszettel.pdf
 used on input line 38.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1081, page=1, 597.55
+<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1143, page=1, 597.55
 246pt x 845.07718pt>
 File: content/appendix/Appendix_D_Formular_Beweiszettel.pdf Graphic file (type 
 pdf)
@@ -6801,7 +6872,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 38.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [75 <./content/appendix/Appendix_D_Formular_Beweiszettel.pdf>]
+ [79 <./content/appendix/Appendix_D_Formular_Beweiszettel.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -6820,7 +6891,7 @@ Package pdftex.def Info: content/appendix/Appendix_D_Formular_Beweiszettel.pdf
 used on input line 40.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1104, page=2, 845.07
+<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1164, page=2, 845.07
 718pt x 597.55246pt>
 File: content/appendix/Appendix_D_Formular_Beweiszettel.pdf Graphic file (type 
 pdf)
@@ -6860,7 +6931,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 40.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [76 <./content/appendix/Appendix_D_Formular_Beweiszettel.pdf>]
+ [80 <./content/appendix/Appendix_D_Formular_Beweiszettel.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 File: content/appendix/Appendix_D_Formular_Beweiszettel.pdf Graphic file (type 
 pdf)
@@ -6877,7 +6948,7 @@ Package pdftex.def Info: content/appendix/Appendix_D_Formular_Beweiszettel.pdf
 used on input line 42.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1111, page=3, 597.55
+<content/appendix/Appendix_D_Formular_Beweiszettel.pdf, id=1171, page=3, 597.55
 246pt x 845.07718pt>
 File: content/appendix/Appendix_D_Formular_Beweiszettel.pdf Graphic file (type 
 pdf)
@@ -6917,7 +6988,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 42.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [77 <./content/appendix/Appendix_D_Formular_Beweiszettel.pdf>]
+ [81 <./content/appendix/Appendix_D_Formular_Beweiszettel.pdf>]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 48.
@@ -6929,7 +7000,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 48.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [78]
+ [82]
 (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
@@ -6939,20 +7010,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 49.
-<./images/AblaufForensischeAnalyse.png, id=1120, 949.5475pt x 1382.16376pt>
+<./images/AblaufForensischeAnalyse.png, id=1180, 933.4875pt x 1382.16376pt>
 File: ./images/AblaufForensischeAnalyse.png Graphic file (type png)
 
 <use ./images/AblaufForensischeAnalyse.png>
 Package pdftex.def Info: ./images/AblaufForensischeAnalyse.png used on input li
 ne 53.
-(pdftex.def)             Requested size: 455.24408pt x 662.65074pt.
+(pdftex.def)             Requested size: 455.24408pt x 674.06049pt.
 
 Overfull \hbox (28.45268pt too wide) in paragraph at lines 53--54
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 66.85048pt on input line 54.
+LaTeX Warning: Float too large for page by 78.26022pt on input line 54.
 
 )
 
@@ -6968,7 +7039,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 253.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-[79] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
+[83] (./ZHAW_SM_ComputerForensik_Daniel_Brun.mw)
 
 
 Package cleveref Info: loaded `ngerman' language definitions on input line 253.
@@ -6983,7 +7054,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 253.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
- [80 <./images/AblaufForensischeAnalyse.png>] (./ZHAW_SM_ComputerForensik_Danie
+ [84 <./images/AblaufForensischeAnalyse.png>] (./ZHAW_SM_ComputerForensik_Danie
 l_Brun.mw)
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.idx'.
 
@@ -7122,6 +7193,8 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 ) (./content/3-ComputerForensics.aux
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
@@ -7373,8 +7446,6 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
-\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
-
 )
 (./content/6-Fazit.aux
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
@@ -7386,6 +7457,10 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 )
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
+\openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
+
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
 
 \openout3 = `ZHAW_SM_ComputerForensik_Daniel_Brun.mw'.
@@ -7763,6 +7838,7 @@ translator-basic-dictionary-German.dict
 glossaries-dictionary-English.dict    
 glossaries-dictionary-German.dict    
 siunitx-abbreviations.cfg    2013/07/31 v2.5s siunitx: Abbreviated units
+ZHAW_SM_ComputerForensik_Daniel_Brun.bbl
 ltcaption.sty    2013/02/03 v1.3-62 longtable captions (AR)
 fr-longtable.sty    2007/11/28 v0.1b (beta) floatrow: additions for longtable
   ot1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
@@ -7798,6 +7874,9 @@ content/4-ForensicAnalysis.tex
 content/5-ToolsAndTechniques.tex
  ts1lmtt.fd    2009/10/30 v1.6 Font defs for Latin Modern
 content/6-Fazit.tex
+ZHAW_SM_ComputerForensik_Daniel_Brun.acr
+ZHAW_SM_ComputerForensik_Daniel_Brun.syi
+ZHAW_SM_ComputerForensik_Daniel_Brun.gls
 content/Z-Appendix.tex
 content/appendix/Appendix_A_Formular_Incident_Meldung.pdf
 content/appendix/Appendix_A_Formular_Incident_Meldung.pdf
@@ -7835,14 +7914,6 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                ZHAW_SM_ComputerForensik_Daniel_Brun
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'ZHAW_SM_ComputerForensik_Daniel_Brun.
 run.xml'.
 \openout1 = `ZHAW_SM_ComputerForensik_Daniel_Brun.run.xml'.
@@ -7859,31 +7930,31 @@ run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62605 strings out of 493304
- 1285220 string characters out of 6139871
- 1844430 words of memory out of 5000000
- 63532 multiletter control sequences out of 15000+600000
- 122851 words of font info for 188 fonts, out of 8000000 for 9000
+ 62536 strings out of 493304
+ 1284606 string characters out of 6139871
+ 1839897 words of memory out of 5000000
+ 63414 multiletter control sequences out of 15000+600000
+ 123706 words of font info for 198 fonts, out of 8000000 for 9000
  963 hyphenation exceptions out of 8191
  65i,19n,101p,10471b,3815s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-r10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
-t10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on ZHAW_SM_ComputerForensik_Daniel_Brun.pdf (90 pages, 859151 by
+m/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+tti10.pfb>
+Output written on ZHAW_SM_ComputerForensik_Daniel_Brun.pdf (92 pages, 851417 by
 tes).
 PDF statistics:
- 1800 PDF objects out of 2073 (max. 8388607)
- 1604 compressed objects within 17 object streams
- 558 named destinations out of 1000 (max. 500000)
- 49159 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1864 PDF objects out of 2073 (max. 8388607)
+ 1667 compressed objects within 17 object streams
+ 576 named destinations out of 1000 (max. 500000)
+ 50703 words of extra memory for PDF output out of 51595 (max. 10000000)
 

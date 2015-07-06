@@ -46,9 +46,9 @@ spezialisten testen, Test ist geplant (Testvorschrift), Programm gemäss Testvor
 
 ###Software Qualität nach DIN/ISO 9126
 
-![](./images/VK_SWE_Testing_2_Qualität_1.png)
+![](./images/VK_SWE_Testing_2_Qualitaet_1.png)
 
-![](./images/VK_SWE_Testing_2_Qualität_2.png)
+![](./images/VK_SWE_Testing_2_Qualitaet_2.png)
 
 ###Qualitätsanforderungen
 Vorgabe pro Produkt: Welche Güte (Qualitätsniveau) pro Qualitätsmerkmale, Nicht alle QMM lassen sich gleich gut erfüllen, Prioritäten festlegen (Absprache Auftraggeber, Anwender), Bestandteil NFA

@@ -1,0 +1,63 @@
+- _**Prüfungsthemenpaket 1:**_
+    - Datenschutz und Sicherheitsattribute - **Nr.1 S.3-6**
+    - Eigenschaften von Verschlüsselungsalgorithmen - **Nr.1 S.7-9**
+    - Signieren und Verschlüsseln von E-Mail - **Nr.2 S.2-4**
+    - Identität, Identifikation, Entität, Authentifizierung, Autorisierung - **Nr.2 S.6-8**
+- _**Prüfungsthemenpaket 2:**_
+    - Authentifizierungsverfahren mit Darstellung nach ISO 9798-Notation - **Nr.1 S.12-15**
+    - Elektronische Signatur - **Nr.3 S.5-10**
+- _**Prüfungsthemenpaket 3:**_
+    - Padding nach PKCS#1 v1.5 - **Nr.3 S.17**
+    - Verzeichnisdienste - **Nr.2 S.10-25**
+    - Zertifikatserzeugungs- und Signierungsantrag [CSR]
+        - Nr.3 S.24-25
+        - (Nr.2 S.5)
+- _**Prüfungsthemenpaket 4:**_
+    - Komponenten einer PKI - **Nr.3 S.2-5**
+    - PSE: Personal Security Environment - **Nr.3 S.13**
+    - Übersicht PKCS-Standards (PSE) - **Nr.3 S.15-16**
+    - PKCS#10 Zertifikatserzeugungs- und Signierungsantrag - **Nr.6-1**
+    - HSM-Module - **Nr.3 S.11**
+- _**Prüfungsthemenpaket 5:**_
+    - ASN.1 Notation - **Nr.4**
+- _**Prüfungsthemenpaket 6:**_
+    - Endbenutzerzertifikate und deren Attribute nach X.509 (RFC 5280) ohne Themen im nachfolgenden Paket 7 - **Nr.5 S.2-18**
+- _**Prüfungsthemenpaket 7:**_
+    - Qualifizierte, Attribut- und CA-Zertifikate und deren Attribute nach X.509 (RFC 5280 / RFC 3739,usw) - **Nr.5 S.19-22**
+    - Attribut Zertifikate - **Nr.5 S.21-22**
+    - Überprüfung der Zertifikatspfade - **Nr.5 S.23-25**
+- _**Prüfungsthemenpaket 8:**_
+    - CRL und OCSP
+        - CRL: Nr.7
+        - OCSP: Nr.8
+- _**Prüfungsthemenpaket 9:**_
+    - Hashfunktion, MAC und HMAC
+        - Hash: Nr.11
+        - MAC/HMAC: Nr.12
+- _**Prüfungsthemenpaket 10:**_
+    - Zeitstempel - **Nr.10**
+    - Risiken bei Applikationen mit Zertifikaten - **Nr.6**
+- _**Prüfungsthemenpaket 11:**_
+    - Trustketten - **Nr.9 S.2-3**
+    - Kreuzzertifizierung - **Nr.9 S.3-5**
+    - Trustmodelle - **Nr.9 S.7-11**
+    - Zertifikatswechsel bei einer CA - **Nr.9 S.12,16-18**
+    - Gültigkeitsmodell Zertifikatsprüfung - **Nr.9 S.13-15**
+- _**Prüfungsthemenpaket 12:**_
+    - SSL/TLS - **Nr.13**
+- _**Prüfungsthemenpaket 13:**_
+    - Kerberos - **Nr. 12.3**
+- _**Prüfungsthemenpaket 14:**_
+    - IPsec ohne Key-Managementprotokolle (Kap. 1 bis und mit Kap. 9.2) - **Nr.14 S.2-26**
+- _**Prüfungsthemenpaket 15:**_
+    - IPsec: Kap. 9.3.1 ISAKMP - **Nr.14 S.27-35**
+    - IPsec: Kap. 10 Internet Key Exchange (IKEv1) - **Nr.14 S.36-50**
+- _**Prüfungsthemenpaket 16:**_
+    - IPsec: Kap. 9.3.1 ISAKMP - **Nr.14 S.27-35**
+    - IPsec: Kap. 11 Internet Key Exchange Quick Mode (IKEv1) - **Nr.14 S.51-53**
+    - IPsec: Kap. 12 NAT-Traversal - **Nr.14 S.54-64**
+- _**Prüfungsthemenpaket 17:**_
+    - IPsec: Kap. 12 NAT-Traversal - **Nr.14 S.54-64**
+    - IPsec: Kap. 13 Internet Key Exchange (IKEv2) - **Nr.14 S.65-79**
+- _**Prüfungsthemenpaket 18:**_
+    - Chipkarten - **Nr.15**

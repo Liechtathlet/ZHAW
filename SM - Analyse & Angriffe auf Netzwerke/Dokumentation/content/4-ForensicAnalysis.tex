@@ -1,28 +1,28 @@
 \chapter{Forensische Analyse} \label{chap:ForensischeAnalyse}
-In diesem Kapitel wird der Ablauf der Computer forensischen Analyse im Detail aufgezeigt und erklärt. Die Techniken und Tools zur Unterstützung dieses Prozesses werden im Kapitel \ref{chap:ToolsTechniques} \nameref{chap:ToolsTechniques} erläutert.
+In diesem Kapitel wird der Ablauf der computerforensischen Analyse im Detail aufgezeigt und erklärt. Die Techniken und Tools zur Unterstützung dieses Prozesses werden im Kapitel \ref{chap:ToolsTechniques} \nameref{chap:ToolsTechniques} erläutert.
 
 % %\todo{http://de.wikibooks.org/wiki/Disk-Forensik/_Richtlinien/_Reihenfolge_bzw._Vorgehensweise_bei_der_Untersuchung}
 \section{Einführung}
-Der Prozess der forensischen Analyse lässt sich grundsätzlich in die nachfolgenden Phasen unterteilen werden. Die Erläuterung der einzelnen Phasen erfolgt in den nachfolgenden Kapiteln.
+Der Prozess der forensischen Analyse lässt sich grundsätzlich in die nachfolgenden Phasen unterteilen. Die Erläuterung der einzelnen Phasen erfolgt in den nachfolgenden Kapiteln.
 
-\begin{enumerate}
-\item Readiness (Vorbereitung)
-\item Secure (Sicherstellung)
+\begin{enumerate}	
+\item Readiness (Bereitschaft)
+\item Secure (Sichern)
 \item Analysis (Analyse)
 \item Documentation (Dokumentation)
-\item Present (Präsentation)
+\item Present (Präsentieren)
 \item Review (Rückblick)
 \end{enumerate}
 
 Ziel ist es auf den sichergestellten Datenträgern Beweise zu finden. Dazu werden zuerst die Datenträger gesichert und anschliessend die Daten extrahiert. Aus den extrahierten Daten werden dann Informationen gewonnen, welche allenfalls als Beweise im Zusammenhang mit anderen Informationen verwendet werden können.
+ 
 
-
-\subsection{Ein guter Prozess}
-Die Grundlage für eine saubere Beweisaufnahme und eine mögliche juristische Verwertbarkeit dieser Beweise ist ein guter forensischer Prozess. Ein guter Forensischer Analyse Prozess zeichnet sich durch folgende Punkte aus:
+\subsection{Ein guter forensischer Analyseprozess}
+Die Grundlage für eine saubere Beweisaufnahme und eine mögliche juristische Verwertbarkeit dieser Beweise ist ein guter forensischer Analyseprozess. Dieser zeichnet sich durch folgende Punkte aus:
 
 \begin{itemize}
 \item Kreuzvalidierung von essentiellen Ergebnissen mit anderen Tools
-\item Sauberer und Korrekter Umgang mit Beweismaterial
+\item Sauberer und korrekter Umgang mit Beweismaterial
 \item Untersuchung wird vollständig durchgeführt (Berücksichtigung aller Aspekte)
 \item Case-Management für die Verwaltung der Untersuchung
 \item Dokumentation und Archivierung der Beweismittel und der Ergebnisse
@@ -32,7 +32,7 @@ Die Grundlage für eine saubere Beweisaufnahme und eine mögliche juristische Ve
 \end{itemize}
 
 \section{Phasen}
-\subsection{Readiness (Vorbereitung)}
+\subsection{Readiness (Bereitschaft)}
 Um während der Untersuchung Fehler zu verhindern und wertvolle Zeit zu sparen, ist es sinnvoll gewisse Vorbereitungsarbeiten vor jedem Einsatz, beziehungsweise vor jeder Untersuchung, durchzuführen.
 
 \textbf{Vorbereitungsarbeiten}
@@ -51,7 +51,7 @@ Um während der Untersuchung Fehler zu verhindern und wertvolle Zeit zu sparen, 
 \item Taschenlampe
 \item Erdungs- / Anti-Statik-Armband
 \item Dokumente (Manuals, Anleitungen, Abläufe, etc. )
-\item Writeblocker
+\item Writeblocker\footnotemark[1]
 \item Datenträger / Speichermedien
 \item (Mobiles) Analysesystem + Zubehör (Adapter, USB-Hubs, Card-Reader, Multi-Card-Reader, CD/DVD/Blue-Ray Leser / Brenner, Drucker)
 \item ...
@@ -71,7 +71,9 @@ Um während der Untersuchung Fehler zu verhindern und wertvolle Zeit zu sparen, 
 \end{itemize}
 \end{itemize}
 
-\subsection{Secure (Sicherstellen)}
+\footnotetext[1]{Ein Writeblocker ist entweder ein physisches Gerät oder ein Stück Software welches verhindert, dass Daten auf einen Datenträger geschrieben werden können.}
+
+\subsection{Secure (Sichern)}
 Die Phase "`Secure"' lässt sich weiter in die Phasen "`Environment (Umgebung)"', "`Identify (Identifizieren)"', "`Assess and Decide (Beurteilen und Entscheiden)"', "`Collect (Sammeln)"' und "`Preserve (Aufbewahren)"' unterteilen.
 
 
@@ -90,12 +92,12 @@ Falls gestattet, sollte in der näheren Umgebung, zum Beispiel im Aktenschrank o
 \subsubsection{Assess and Decide (Beurteilen und Entscheiden)}
 Mit dem aktuellen Wissensstand muss der Ermittler nun eine Lagebeurteilung durchführen und eine Strategie für das weitere Vorgehen auswählen. Je nach Situation muss an dieser Stelle das Incident Response Team, ein Mitglied des Managements oder der Ermittlungsleiter involviert werden, um das weitere Vorgehen abzusprechen und zu genehmigen.
 
-Der Ermittler kann entweder eine Live-Analyse oder eine Post-Mortem-Analyse durchführen. Bei einer Live-Analyse wird das System nicht heruntergefahren und es wird versucht so viele Daten als möglich zu sichern, ohne den Zustand des Systemes allzu stark zu verändern, beziehungsweise eigene Spuren zu hinterlassen. Eine Live-Analyse wird typischerweise durchgeführt, wenn ein unternehmenskritisches System betroffen ist, welches nicht heruntergefahren werden kann. Hier gilt es sorgfältig das Kosten / Nutzen-Verhältnis abzuwägen. Handelt es sich um ein kritisches System, der Schaden ist vergleichsweise klein und die Wahrscheinlichkeit den Täter ausfindig zu machen sehr gering, lohnt sich ein herunterfahren aus wirtschaftlicher Sicht oft nicht. Für eine Live-Analyse muss zwingend ein Zugang zum System bestehen.
+Der Ermittler kann entweder eine Live-Analyse oder eine Post-Mortem-Analyse durchführen. Bei einer Live-Analyse wird das System nicht heruntergefahren und es wird versucht so viele Daten als möglich zu sichern, ohne den Zustand des Systems allzu stark zu verändern, beziehungsweise eigene Spuren zu hinterlassen. Eine Live-Analyse wird typischerweise durchgeführt, wenn ein unternehmenskritisches System betroffen ist, welches nicht heruntergefahren werden kann. Hier gilt es sorgfältig das Kosten / Nutzen-Verhältnis abzuwägen. Handelt es sich um ein kritisches System, der Schaden ist vergleichsweise klein und die Wahrscheinlichkeit den Täter ausfindig zu machen sehr gering, lohnt sich ein herunterfahren aus wirtschaftlicher Sicht oft nicht. Für eine Live-Analyse muss zwingend ein Zugang zum System bestehen.
 
 Bei einer Post-Mortem-Analyse wird der Grossteil der Sicherungs- und Analyse-Arbeiten erst durchgeführt, wenn das System ausser Betrieb genommen wurde. So ist gewährleistet, dass der Datenstand erhalten bleibt und so wenig Beweise als möglich vernichtet oder beschädigt werden. Einer Post-Mortem-Analyse kann auch eine Live-Analyse vorausgehen. In der Regel wird bei einem laufenden System versucht so viele flüchtige Daten als möglich zu sammeln. Sobald diese gesichert wurden, wird das System ausser Betrieb genommen und die weiteren Sicherungs- und Analyseschritte durchgeführt.
 
 \subsubsection{Collect (Sammeln) and Preserve (Aufbewahren)} \label{subsubsec:FA:Secure:CollectPreserve}
-Nachdem sicher der Ermittler für eine Strategie entschieden hat, sollte auf Basis der identifizierten Datenquellen und der gewählten Strategie eine Planung zur Sicherung der Daten ausgearbeitet werden. Dieser Plan sollte die Sicherungsreihenfolge der Datenquellen anhand ihrer Priorität und die dazu zu verwendenden Tools und Techniken beinhalten. Häufig ist es nicht möglich, sämtliche Datenquellen zu sichern, daher müssen diese auf Basis der Halbwertszeit der Daten, der Erfahrung des Ermittlers, der Einschätzung der Situation und des Aufwandes (Zeit / Kosten / Ausrüstung) um die Daten zu sichern,  priorisiert werden.
+Nachdem sich der Ermittler für eine Strategie entschieden hat, sollte auf Basis der identifizierten Datenquellen und der gewählten Strategie eine Planung zur Sicherung der Daten ausgearbeitet werden. Dieser Plan sollte die Sicherungsreihenfolge der Datenquellen anhand ihrer Priorität und die dazu zu verwendenden Tools und Techniken beinhalten. Häufig ist es nicht möglich, sämtliche Datenquellen zu sichern, daher müssen diese auf Basis der Halbwertszeit der Daten, der Erfahrung des Ermittlers, der Einschätzung der Situation und des Aufwandes (Zeit / Kosten / Ausrüstung) um die Daten zu sichern,  priorisiert werden.
 
 Bei der Sicherung ist zu beachten, dass auf dem System allenfalls trojanisierte Systemprogramme installiert wurden. Es sollten daher für sämtliche Befehle statisch vorkompilierte  Programme verwendet werden. Viele Forensik-Kits bieten einen guten Grundstock von statisch vorkompilierten Anwendungen für die Sicherung und Analyse.
 
@@ -137,18 +139,18 @@ Ist die Sicherung der flüchtigen Daten abgeschlossen sollte das System mit eine
 \textbf{System ist nicht eingeschaltet}\\
 Ist das System ausgeschaltet oder wurde es heruntergefahren wird als erstes das System von der Stromversorgung getrennt. Anschliessend wird das Innen- und Aussenleben dokumentiert und sämtliche Anschlüsse entfernt. Sämtliche Datenträger werden ausgebaut, beziehungsweise entfernt, und beschriftet.
 
-Im Anschluss wird von sämtlichen Datenträgern ein forensisches Duplikat erzeugt. Ein forensisches Duplikat ist eine exakte Kopie (Bitweise 1:1 Kopie) des Quelldatenträgers und sollte immer auf einen Datenträger gesichert werden, der zuvor formatiert wurde. Die Erstellung eines Duplikates ist grundsätzlich immer sinnvoll da dies bessere Analysemöglichkeiten bietet. Ist die Untersuchung ein Teil einer Strafuntersuchung muss in jedem Fall ein Duplikat angefertig werden.
+Im Anschluss wird von sämtlichen Datenträgern ein forensisches Duplikat erzeugt. Ein forensisches Duplikat ist eine exakte Kopie (Bitweise 1:1 Kopie) des Quelldatenträgers und sollte immer auf einen Datenträger gesichert werden, der zuvor formatiert wurde. Die Erstellung eines Duplikates ist grundsätzlich immer sinnvoll da dies bessere Analysemöglichkeiten bietet. Ist die Untersuchung ein Teil einer Strafuntersuchung muss in jedem Fall ein Duplikat angefertigt werden.
 
-Sind sämtliche Datenträger entfernt, sollte das System gestartet und direkt das BIOS aufgerufen werden. Der entsprechende Key um ins BIOS zu wechseln sollte vorab ermittelt / recherchiert werden. Anschliessend sind sämtliche BIOS-Informationen zu dokumentieren. Besonders wichtig sind hier die im BIOS eingestellte Systemzeit und das Datum. Besteht eine Diskrepanz zur aktuellen Zeit oder zur notierten Zeit des Betriebssystemes ist dies entsprechend zu notieren und später bei der Analyse zu berücksichtigen.
+Sind sämtliche Datenträger entfernt, sollte das System gestartet und direkt das \gls{acr:BIOS} aufgerufen werden. Der entsprechende Key um ins \gls{acr:BIOS} zu wechseln sollte vorab ermittelt / recherchiert werden. Anschliessend sind sämtliche \gls{acr:BIOS}-Informationen zu dokumentieren. Besonders wichtig sind hier die im \gls{acr:BIOS} eingestellte Systemzeit und das Datum. Besteht eine Diskrepanz zur aktuellen Zeit oder zur notierten Zeit des Betriebssystems ist dies entsprechend zu notieren und später bei der Analyse zu berücksichtigen.
 
 %--------------------------------------------------
 \subsection{Analysis (Analyse)}
-Die Analyse Phase unterteilt sich zum einen in die Phase "`Preparation (Vorberietung)"' und zum anderen in die eigentliche Analyse-Phase. Der Übergang zwischen diesen beiden Phasen ist fliessend und lässt sich nicht immer klar trennen. Mit Abschluss der Secure-Phase kann der Ermittler sämtliche weiteren Arbeiten im Labor durchführen. Die Anwesenheit am Tatort ist nicht mehr zwingend, da sämtliches Material eingesammelt und gesichert wurde.
+Die Analyse Phase unterteilt sich zum einen in die Phase "`Preparation (Vorbereitung)"' und zum anderen in die eigentliche Analyse-Phase. Der Übergang zwischen diesen beiden Phasen ist fliessend und lässt sich nicht immer klar trennen. Mit Abschluss der Secure-Phase kann der Ermittler sämtliche weiteren Arbeiten im Labor durchführen. Die Anwesenheit am Tatort ist nicht mehr zwingend, da sämtliches Material eingesammelt und gesichert wurde.
 
 Die anzuwendenden Techniken und durchzuführenden Schritte bei der Analyse sind stark von der Situation abhängig. Bei der Untersuchung einer Cyber-Attacke sind oft andere Aspekte relevant, als bei der Untersuchung einer "`normalen"' Straftat. Im nachfolgenden Abschnitt werden einige Ansatzpunkte für eine Untersuchung aufgezeigt.
 
 \subsubsection{Preparation (Vorbereitung)}
-Bevor die Analyse der Daten beginnen kann, muss das forensiche Image gemountet werden. Dafür gibt es verschiedene Vorgehensweisen. In jedem Fall ist jedoch sicherzustellen, dass das Image ReadOnly gemountet wird. Es sollte vor und nach der Analyse jeweils ein Hash des Images erstellt, um zu verifizieren, dass das Image nicht manipuliert wurde.
+Bevor die Analyse der Daten beginnen kann, muss das forensische Image gemountet (eingebunden) werden. Dafür gibt es verschiedene Vorgehensweisen. In jedem Fall ist jedoch sicherzustellen, dass das Image ReadOnly gemountet wird. Es sollte vor und nach der Analyse jeweils eine Hash (Prüfsumme) des Images erstellt werden um zu verifizieren, dass das Image nicht manipuliert wurde.
 
 Nachdem das Image gemountet wurde, wird empfohlen einige weitere Vorbereitungsarbeiten durchzuführen. Zuerst wird versucht so viele Daten wie möglich wiederherzustellen, beziehungsweise sichtbar zu machen, und diese für die anschliessende Analyse zu indexieren.
 
@@ -204,7 +206,7 @@ Ja: Kontrolle der physischen Überwachung und Zutrittskontrolle.
 Ja: Kontrolle der physischen Überwachung und Zutrittskontrolle.
 \item Was für Computerkenntnisse hat der Verdächtige? Was für Computerkenntnisse waren notwendig?
 \item Was hat der Angreifer für Tools hinterlassen?
-\item Wie wurden Tools und Befehle aufterufen? (Manuell / von Hand, via Copy \& Paste,, via Script)
+\item Wie wurden Tools und Befehle aufgerufen? Manuell / von Hand, via Copy \& Paste, via Script
 \end{itemize}
 
 %--------------------------------------------------
@@ -222,28 +224,27 @@ Die Dokumentation der Untersuchung sollte soweit als möglich und praktikabel so
 \end{itemize}
 
 Nachfolgend werden kurz einige verschiedene Typen von Berichten vorgestellt und beschrieben:
-
 \begin{itemize}
-\item Interne Berichte
-Der interne Bericht ist der häufigste, der erstellt werden muss. Er ist nicht formal, hat aber trotzdem Einfluss und Auswirkungen und sollte vor der Herausgabe unbedingt einem Review unterzogen werden. Der Bericht wird allenfalls als Grundlage für eine Erklärung, eine Eidesstattliche Erklärung oder einen Experten-Bericht verwendet. Der Bericht setzt sich aus folgenden Teilen zusammen: Zusammenfassung / Abstract, Resultate und Erkentnisse. Es sollte aufgezeigt werden, was gemacht wurde und was herauskam und was für weitere Schritte beauftragt wurden. Auch sind sämtliche Beweise aufzulisten und aufzuzeigen wieso diese relevant sind.
-\item Erklärungen
-Nachdem ein interner Bericht erstellt wurde und weitere juristische Schritte unternommen werden, wird meistens als erstes eine Erklärung (oder auch Deklaration) erstellt. Diese Erklärung muss von Antwälten, Richtern und Beratern verstanden werden und auch für Leute ohne technischen Hintergrund nachvollziehbar sein. Der Bericht setzt sich aus folgenden Teilen zusammen: Erklärung, Hintergrundinformationen zum Ermittler (Qualifikation, etc.), Hauptteil mit Informationen, Meinungen und Schlussvolgerungen und einem Fazit am Ende. Für den Bericht dürfen nur Beweise aus erster Hand verwendet werden.
-\item Eidesstattliche Erklärungen
-Eine Eidesstattliche Erklärung entspricht einer Erklärung, welche notariell Beglaubigt wurde.
-\item Experten-Berichte
-Bei Experten Berichten wird sehr hoher Wert auf Formalität gelegt und entspricht praktisch einer Dissertation über den vorliegenden Fall. Der Experte darf auf Basis der Beweise und der Untersuchung seine Meinungen und Schlussfolgerungen äussern. Es ist jedoch darauf zu achten, keine Spekulationen oder Annahmen zu treffen. Der Aufbau des Berichtes ist stark vom Experten abhängig, sollte aber mindestens volgende Elemente aufweisen: Titelseite, Überblick, Qualifikationen des Experten, Was wurde gemacht?, Analyse, Schlussvolgerung und Fazit.
+\item \textbf{Interne Berichte}\\
+Der interne Bericht ist der häufigste, der erstellt werden muss. Er ist nicht formal, hat aber trotzdem Einfluss und Auswirkungen und sollte vor der Herausgabe unbedingt einem Review unterzogen werden. Der Bericht wird allenfalls als Grundlage für eine Erklärung, eine eidesstattliche Erklärung oder einen Experten-Bericht verwendet. Der Bericht setzt sich aus folgenden Teilen zusammen: Zusammenfassung / Abstract, Resultate und Erkentnisse. Es sollte aufgezeigt werden, was gemacht wurde und was herauskam und was für weitere Schritte beauftragt wurden. Auch sind sämtliche Beweise aufzulisten und aufzuzeigen wieso diese relevant sind.
+\item \textbf{Erklärungen}\\
+Nachdem ein interner Bericht erstellt wurde und weitere juristische Schritte unternommen werden, wird meistens als erstes eine Erklärung (oder auch Deklaration) erstellt. Diese Erklärung muss von Anwälten, Richtern und Beratern verstanden werden und auch für Leute ohne technischen Hintergrund nachvollziehbar sein. Der Bericht setzt sich aus folgenden Teilen zusammen: Erklärung, Hintergrundinformationen zum Ermittler (Qualifikation, etc.), Hauptteil mit Informationen, Meinungen und Schlussfolgerungen und einem Fazit am Ende. Für den Bericht dürfen nur Beweise aus erster Hand verwendet werden.
+\item \textbf{Eidesstattliche Erklärungen}\\
+Eine eidesstattliche Erklärung entspricht einer Erklärung, welche notariell beglaubigt wurde.
+\item \textbf{Experten-Berichte}\\
+Bei Experten Berichten wird sehr hoher Wert auf Formalität gelegt und entspricht praktisch einer Dissertation über den vorliegenden Fall. Der Experte darf auf Basis der Beweise und der Untersuchung seine Meinungen und Schlussfolgerungen äussern. Es ist jedoch darauf zu achten, keine Spekulationen oder Annahmen zu treffen. Der Aufbau des Berichtes ist stark vom Experten abhängig, sollte aber mindestens folgende Elemente aufweisen: Titelseite, Überblick, Qualifikationen des Experten, Was wurde gemacht?, Analyse, Schlussfolgerung und Fazit.
 \end{itemize}
 
-\subsection{Present (Präsentation)}
+\subsection{Present (Präsentieren)}
 Bei der Präsentation werden die Ergebnisse der Untersuchung aufgezeigt und erläutert. Das Zielpublikum kann entweder zum Beispiel der Ermittlungsleiter, der Auftraggeber, das Management der Unternehmung oder ein Gericht sein. Hierbei ist zu beachten, dass auch Laien den Ausführungen folgen können und diese verstehen (analog der Dokumentation).
 
 \subsection{Review (Rückblick)}
 In der Review-Phase wird der Ablauf der vergangene Ermittlung betrachtet und analysiert, was gut gelaufen ist, beziehungsweise wo es noch Verbesserungspotenzial gibt. Ziel dieser Phase ist es, dass der eingesetzte Prozess für die forensische Analyse kontinuierlich verbessert und den neusten Erkenntnissen angepasst wird. Gegebenenfalls sind Massnahmen zu treffen, um langfristige Optimierungen und Verbesserungen zu erreichen. Mit dem Aufkommen von neuen Technologien und Trends (zum Beispiel Geräte aus dem Bereich Internet of Things) kann es notwendig sein, entsprechende Analyse-Werkzeuge zu erstellen oder zu evaluieren und im Labor erste Erfahrungen zu sammeln.
 
 \section{Beweiskette und Beweissicherung}
-Die korrekte Beweissicherung und die Einhaltung der Beweiskette sind essentiell für eine spätere Verwertung der Beweise bei einer Strafuntersuchung. Wird ein Beweisstück gefunden muss dieses korrekt sichergestellt werden. Jeder Beweis muss beschriftet werden und anschliessend ein Beweiszettel ausgefüllt werden. Ein Beispiel, beziehungsweise eine Vorlage, für einen Beweiszettel ist im Anhang im kapitel \ref{appx:Template:ProofPaper} \nameref{appx:Template:ProofPaper} zu finden. Dadurch wird sichergestellt, dass kein zweifel an der Herkunft und dem Besitztum des Beweises entsteht. Entweder im Beweiszettel oder separat wird ein Protokoll geführt, wer, wann, was mit dem Beweis gemacht hat. Dadurch kann der Weg des Beweises lückenlos zurückverfolgt werden.
+Die korrekte Beweissicherung und die Einhaltung der Beweiskette sind essentiell für eine spätere Verwertung der Beweise bei einer Strafuntersuchung. Wird ein Beweisstück gefunden muss dieses korrekt sichergestellt werden. Jeder Beweis muss beschriftet und anschliessend ein Beweiszettel ausgefüllt werden. Ein Beispiel, beziehungsweise eine Vorlage, für einen Beweiszettel ist im Anhang im Kapitel \ref{appx:Template:ProofPaper} \nameref{appx:Template:ProofPaper} zu finden. Dadurch wird sichergestellt, dass kein Zweifel an der Herkunft und dem Besitztum des Beweises entsteht. Entweder im Beweiszettel oder separat wird ein Protokoll geführt, wer, wann, was mit dem Beweis gemacht hat. Dadurch kann der Weg des Beweises lückenlos zurückverfolgt werden.
 
-Handelt es sich beim Beweis um ein elektronisches Gerät oder Bauteil, ist dieses in einem antistatischen Sack aufzubewahren. Je nach Situation wird bei Datenträgern das Original nicht mitgenommen, da dieses für den Weiterbetrieb benötigt wird. In diesen Fällen ist dies entsprechend zu dokumentieren und sicherzustellen, dass ein entsprechendes forensisches Duplikat erstellt wurde. Bei Datengrägern ist auf dem Beweiszettel zusätzlich der Hash des Datenträgers zu vermerken, sodass die Unversehrtheit jederzeit geprüft werden kann.
+Handelt es sich beim Beweis um ein elektronisches Gerät oder Bauteil, ist dieses in einem antistatischen Sack aufzubewahren. Je nach Situation wird bei Datenträgern das Original nicht mitgenommen, da dieses für den Weiterbetrieb benötigt wird. In diesen Fällen ist dies entsprechend zu dokumentieren und sicherzustellen, dass ein entsprechendes forensisches Duplikat erstellt wurde. Bei Datenträgern ist auf dem Beweiszettel zusätzlich der Hash des Datenträgers zu vermerken, sodass die Unversehrtheit jederzeit geprüft werden kann.
 
 
 \section{Hinweise zur forensischen Analyse}
@@ -253,17 +254,17 @@ Bei einer forensischen Analyse sind folgende wichtige Aspekte zu berücksichtige
 \item \textbf{Zeuge / Zweitperson} \\
 Während der Untersuchung sollte eine Zweitperson, bzw. ein Zeuge anwesend sein.
 \item \textbf{Protokollierung} \\
-Sämtliche durchgeführten Arbeitsschritte müssen protokolliert werden. Am Ende der Untersuchung sollte das Protokoll durch den Zeugen, die Zweitperson abgenommen und von beiden unterschrieben werden.
+Sämtliche durchgeführten Arbeitsschritte müssen protokolliert werden. Am Ende der Untersuchung sollte das Protokoll durch den Zeugen, die Zweitperson abgenommen und von beiden Personen unterschrieben werden.
 \item \textbf{Schutz der eigenen Umgebung} \\
 Die eigene Analyseumgebung sollte gut gegen Angriffe geschützt sein und nicht direkt mit dem angegriffenen System oder Netzwerk verbunden werden. Sollte sich der Angreifer noch im Netzwerk oder auf dem System befinden, könnte er das Analysesystem angreifen und weiteren Schaden anrichten.
 \item \textbf{Schutz der Beweismittel} \\
 Sämtliche Beweismittel müssen sichergestellt und anschliessend geschützt werden. Eine Veränderung der Daten nach der Sicherung darf nicht mehr möglich sein beziehungsweise muss zweifelsfrei festgestellt werden können.
 \item \textbf{Verwendung von Systembefehlen} \\
 Zur Sammlung und Sicherung von Daten sollten niemals Systembefehle verwendet werden. Die Systemprogramme könnten vom Angreifer durch modifizierte Programme ausgetauscht werden sein. Der Ermittler sollte immer statisch vorkompilierte Programme verwenden.
-\item \textbf{Einsatz Grafischer Programme} \\
-Bei der Untersuchung eines Live-Systems sollte soweit als möglich auf den EInsatz von Programmen mit einer grafischen Oberfläche verzichtet werden. Grund dafür ist, dass diese eine Vielzahl an Binärdateien und Konfigurationen benötigen. Zum einen werden dadurch viele Zeitstempel geändert und zum anderen benötigen diese mehr RAM als Konsolenanwendungen.
+\item \textbf{Einsatz grafischer Programme} \\
+Bei der Untersuchung eines Live-Systems sollte soweit als möglich auf den Einsatz von Programmen mit einer grafischen Oberfläche verzichtet werden. Grund dafür ist, dass diese eine Vielzahl an Binärdateien und Konfigurationen benötigen. Zum einen werden dadurch viele Zeitstempel geändert und zum anderen benötigen diese mehr RAM als Konsolenanwendungen.
 \item \textbf{Patches und Updates} \\
-Eher nicht, wenn kritisch, nach Rücksprache, Vernichtung Beweise
+Updates, Patches oder Fixes zur Schliessung einer Schwachstelle sollten grundsätzlich nicht eingespielt werden, bis die Beweissicherung abgeschlossen ist. Durch das Einspielen würden unter Umständen wertvolle Beweise vernichtet werden. 
 \item \textbf{Remote Untersuchung} \\
 Bei einer forensischen Analyse ist nicht immer ein direkter Zugriff auf das System vorhanden. Gewisse Forensik-Tools erlauben den Einsatz via Netzwerk. Diese benötigt jedoch auf dem zu untersuchenden System einen entsprechenden Forensik-Client, mit welchem sich der Server anschliessend verbinden kann. Dieser sollte bereits vorgängig (vor dem Sicherheitsvorfall) auf dem System installiert worden sein.
 \end{itemize}

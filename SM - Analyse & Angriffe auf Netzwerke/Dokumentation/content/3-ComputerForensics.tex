@@ -3,6 +3,8 @@
 Dieses Kapitel definiert den Begriff der Computer Forensik und beschreibt das Themengebiet im Allgemeinen. 
 
 \section{Einbettung und Definition}
+In diesem Kapitel wird aufgezeigt wie die Computer Forensik in die Forensik und die IT- / Digitale Forensik eingebettet ist. 
+
 \subsection{Forensik}
 \subsubsection{Ursprung}
 Der Begriff "`Forensik"' stammt aus den Zeiten des antiken Roms. Damals wurden Gerichtsverfahren, Untersuchungen, Urteilsverkündungen und der Vollzug von Strafen öffentlich auf dem Marktplatz abgehalten. Marktplatz (oder auch Forum) wird im lateinischen mit \textit{forum} bezeichnet. Die Plural-Form von \textit{forum} ist \textit{foren}. Aus dieser Plural-Form hat sich der Begriff "`Forensik"' entwickelt. \cite{E:Metapedia:Forensik}
@@ -18,6 +20,10 @@ Der "`Guide to Integrating Forensic Techniques into Incident Response"' des \gls
 
 Übersetzt bedeutet dies so viel wie "`Forensische Wissenschaft ist allgemein definiert, als die Anwendung der Wissenschaft für das Gesetz"'.
 
+\subsubsection{Anmerkung}
+Für die Definition der Computer Forensik existieren zum heutigen zwei verschiedene Ansätze. Ein Ansatz sieht die Computer Forensik als Teilgebiet der IT-, bzw. der Digitalen Forensik. Der andere Ansatz betrachtet den Begriff Computer Forensik als Synonym zu den Begriffen IT- und Digitale Forensik.
+
+Diese Arbeit richtet sich nach dem ersten Ansatz, bei dem die Computer Forensik ein Teilgebiet der Digitalen Forensik ist.
 
 \subsubsection{Teilbereiche}
 Wie in der vorangehenden Definition bereits angedeutet, gibt es grundsätzlich für jeden Wissenschaftszweig einen entsprechenden Wissenschaftszweig in der Forensik. Nachfolgend sind einige für die Strafverfolgung bedeutendsten Teilbereiche der Forensik aufgelistet. \cite{E:Gabler:Forensik}
@@ -40,7 +46,7 @@ Die Unterteilung der IT- / Digitalen Forensik in ihre Teilgebiete ist nicht offi
 
 \begin{itemize}
 \item Computer Forensik
-\item Forensische Datananalyse
+\item Forensische Datenanalyse
 \item Datenbank Forensik
 \item Mobile Device Forensik
 \item Netzwerk Forensik
@@ -51,14 +57,10 @@ Die Unterteilung der IT- / Digitalen Forensik in ihre Teilgebiete ist nicht offi
 
 
 \subsection{Computer Forensik}
-Für die Definition der Computer Forensik existieren zum heutigen zwei verschiedene Ansätze. Ein Ansatz sieht die Computer Forensik als Teilgebiet der IT-, bzw. der Digitalen Forensik. Der andere Ansatz betrachtet den Begriff Computer Forensik als Synonym zu den Begriffen IT- und Digitale Forensik.
-
-Diese Arbeit richtet sich nach dem ersten Ansatz, bei dem die Computer Forensik ein Teilgebiet der Digitalen Forensik ist.
-
 Die Computer Forensik ist ein Teilgebiet der Digitalen Forensik und beschäftigt sich mit der Analyse von Computer-Systemen mit Fokus auf Einzelplatzsysteme und Server.
 
 \section{Einführung}
-Die Computer Forensik kann in verschiedenen Kontexten zum Einsatz kommen. Zum einen erfolgt während, bzw. nach einem Sicherheitsvorfall (Incident), z.B. Systemeinbruch eine forensische Untersuchung (Mehr dazu im Kapitel \ref{chap:ForensischeAnalyse} \nameref{chap:ForensischeAnalyse}). 
+Die Computer Forensik, beziehungsweise die computerforensische Analyse, kann in verschiedenen Kontexten zum Einsatz kommen. Zum Beispiel im Rahmen einer polizeilichen Ermittlung oder einer Untersuchung eines Sicherheitsvorfalles. Die computerforensische Analyse wird im Kapitel \ref{chap:ForensischeAnalyse} \nameref{chap:ForensischeAnalyse} näher betrachtet.
 
 Im Kontext der Incident Response ist es das Ziel der Computer Forensik die ausgenutzte Schwachstelle zu finden, den Schaden zu beziffern, den Angreifer zu Identifizieren und die Beweise für allfällige juristische Schritte zu sichern. Im Kontext der Untersuchung von Straftaten oder ähnlich ist es das Ziel, aus dem System so viele Informationen wie möglich zu extrahieren und diese anschliessend zu analysieren. Aus den analysierten Daten werden Beweise gewonnen, welche entweder eine bestimmte Theorie unterstützen, widerlegen oder keine der beiden Aussage unterstützen. 
 
@@ -76,18 +78,18 @@ Die Computer Forensik findet unter anderem in folgenden Bereichen Anwendung:
 
 
 \section{Kategorien von Daten}
-In der Computer Forensik können grundsätzlich zwei Kategorien von Daten unterschieden werden. Auf der einen Seite stehen flüchtige Daten. Diese Daten stehen in der Regel nur temporär zur Verfügung und sind spätestens mit einem normalen Shutdown des Systems unwiderruflich verloren. Als Beispiel seien her der Inhalt des Arbeitspseichers oder die Liste der aktiven Prozesse genannt. Auf der anderen Seite stehen nichtflüchtige Daten. Diese Daten sind auch nach einem Shutdown des Systemes noch vorhanden und können ausgelesen werden. Dazu zählen zum Beispiel Systemdateien, Programme oder Daten des Benutzers (Fotos, Videos, Dokumente, etc.)
+In der Computer Forensik können grundsätzlich zwei Kategorien von Daten unterschieden werden. Auf der einen Seite stehen flüchtige Daten. Diese Daten stehen in der Regel nur temporär zur Verfügung und sind spätestens mit einem normalen Shutdown des Systems unwiderruflich verloren. Als Beispiel seien hier der Inhalt des Arbeitsspeichers oder die Liste der aktiven Prozesse genannt. Auf der anderen Seite stehen nichtflüchtige Daten. Diese Daten sind auch nach einem Shutdown des Systems noch vorhanden und können ausgelesen werden. Dazu zählen zum Beispiel Systemdateien, Programme oder Daten des Benutzers (Fotos, Videos, Dokumente, etc.)
 
-Flüchtige Daten können weiter in Unterkategorien aufgeteilt werden. Zum einen gibt es die Flüchtigen Daten selbst, welche bei einem normalen Shutdown verloren gehen (Zum Beispiel: Cache-Inhalte, Inhalt des Hauptspeichers, Status der Netzwerkveribndungen). Zum anderen gibt es noch fragile Daten. Fragile Daten sind grundsätzlich gespeichert und stehen theoretisch auch nach einem Shutdown weiter zur Verfügung. Bei fragilen Daten besteht jedoch die Gefahr, dass diese sich bei einem Zugriff ändern können (zum Beispiel die Zeit des letzten Dateizugriffes unter Unix). Die dritte Unterkategorie beinhaltet die temporären Daten. Diese Daten stehen nur zu einem bestimmten Zeitpunkt zur Verfügung.
+Flüchtige Daten können weiter in Unterkategorien aufgeteilt werden. Zum einen gibt es die Flüchtigen Daten selbst, welche bei einem normalen Shutdown verloren gehen (zum Beispiel: Cache-Inhalte, Inhalt des Hauptspeichers, Status der Netzwerkverbindungen). Zum anderen gibt es noch fragile Daten. Fragile Daten sind grundsätzlich gespeichert und stehen theoretisch auch nach einem Shutdown weiter zur Verfügung. Bei fragilen Daten besteht jedoch die Gefahr, dass diese sich bei einem Zugriff ändern können (zum Beispiel die Zeit des letzten Dateizugriffes unter Unix). Die dritte Unterkategorie beinhaltet die temporären Daten. Diese Daten stehen nur zu einem bestimmten Zeitpunkt zur Verfügung.
 
-Flüchtige Daten sind meist von sehr hohem Interesse und sollten als erstes gesichert werden. Die Sicherung dieser Daten erfordert jedoch ein besonnenes und koordiniertes Vorgehen.
+Flüchtige Daten sind meist von sehr hohem Interesse und sollten als erstes gesichert werden. Die Sicherung dieser Daten erfordert jedoch ein durchdachtes und koordiniertes Vorgehen.
 
 \section{Anti-Forensik und Anti-Detection}
-Straftäter und Angreifer auf Computer Systeme werden sich immer mehr bewusst, dass sie Spuren auf dem System hinterlassen. Diese versuchen dann entweder keine oder so wenig Spuren wie möglich zu hinterlassen, Spuren und Beweise zu verändern oder gar zu löschen oder falsche Fährten zu legen. Dies kann entweder manuell oder mit Hilfe von Anti-Forensik und Anti-Detection Tools erfolgen.
+Straftäter und Angreifer auf Computer Systeme werden sich immer mehr bewusst, dass sie Spuren auf dem System hinterlassen. Diese versuchen entweder keine oder so wenig Spuren wie möglich zu hinterlassen, Spuren und Beweise zu verändern,  eventuell gar zu löschen oder falsche Fährten zu legen. Dies kann entweder manuell oder mit Hilfe von Anti-Forensik und Anti-Detection Tools erfolgen.
 
-Das primäre Ziel dabei ist, zu verhindern, dass das Eindringen oder die verdächtige Handlung entdeckt wird. Dies wird eigentlich eher dem Themenbereich der Anti-Detection, also dem "`Unbemerkt bleiben"', zugeordnet. Bei der Anti-Detection versuchen die Täter unerkannt und unbemerkt zu bleiben. Zusätzlich wird versucht die Ermittler zu behindern, abzulenken oder die Datensammlung zu stören oder zu unterbinden. Zum Teil wird auch versucht den Umstand ausgenutzt, dass für eine Ermittlung nur eine beschränktes Zeitkontingent und Budget vorhanden ist. Dies kann dazu führen, dass der Ermittler nur die Beweise findet, die er soll und sich dann aus zeitlichen und budgettechnischen Gründen damit zufrieden gibt und die Untersuchung abschliesst.
+Das primäre Ziel dabei ist, zu verhindern, dass das Eindringen oder die verdächtige Handlung entdeckt wird. Dies wird eigentlich eher dem Themenbereich der Anti-Detection, also dem "`Unbemerkt bleiben"', zugeordnet. Bei der Anti-Detection versuchen die Täter unerkannt und unbemerkt zu bleiben. Zusätzlich wird versucht die Ermittler zu behindern, abzulenken oder die Datensammlung zu stören oder zu unterbinden. Zum Teil wird auch versucht den Umstand auszunutzen, dass für eine Ermittlung nur ein beschränktes Zeitkontingent und Budget vorhanden ist. Dies kann dazu führen, dass der Ermittler nur die Beweise findet, die er soll und sich dann aus zeitlichen und budgettechnischen Gründen damit zufrieden gibt und die Untersuchung abschliesst.
 
-Kennt der Angreifer die eingesetzten Werkzeuge oder kann diese ermitteln, kann er Schwachstellen und Sicherheitslücken in diesen ausnutzen und gezielt angreifen. im schlimmsten Fall kann der Angreifer die Ermittlungen gezielt manipulieren, ohne dass der Ermittler dies bemerkt. Daher sollte die Analyse zum einen in einer geschützten Umgebung durchgeführt werden und die verwendete regelmässig upgedatet werden.
+Kennt der Angreifer die eingesetzten Werkzeuge oder kann diese ermitteln, kann er Schwachstellen und Sicherheitslücken in diesen ausnutzen und gezielt angreifen. im schlimmsten Fall kann der Angreifer die Ermittlungen gezielt manipulieren, ohne dass der Ermittler dies bemerkt. Daher sollte die Analyse zum einen in einer geschützten Umgebung durchgeführt werden und das verwendete System regelmässig aktualisiert werden.
 
 
 
@@ -125,11 +127,11 @@ Sollen die sichergestellten Daten und Informationen juristisch verwertbar sein, 
 Die angewendeten Methoden und eingesetzten Techniken und Programme sollten in der Fachwelt akzeptiert und beschrieben sein. Neue Tools und Verfahren haben in der Regel einen schweren Stand, bis diese allgemein akzeptiert werden.
 
 \subsection{Glaubwürdigkeit und Reproduzierbarkeit}
-Um die Glaubwürdigkeit der Ergebnisse sicherzustellen müssen sämtliche Schritte und die resultierenden Ergebnisse von Laien nachvollzogen werden können. Zusätzlich müssen die Ergebnisse durch einen anderen Experten reproduziert werden können. Der Ermittler, bzw. die Person, welche die forensische Untersuchung durchgeführt hat, muss in der Lage sein den gesamten Ablauf im Detail zu erklären. Erklärungen im Stiel von "`Diese Information wurde vom eingesetzten Analyse-Programm automatisch gefunden"' sind nicht gern gesehen und können die Glaubwürkdigkeit der gesamten Untersuschung in Frage stellen.
+Um die Glaubwürdigkeit der Ergebnisse sicherzustellen müssen sämtliche Schritte und die resultierenden Ergebnisse von Laien nachvollzogen werden können. Zusätzlich müssen die Ergebnisse durch einen anderen Experten reproduziert werden können. Der Ermittler, bzw. die Person, welche die forensische Untersuchung durchgeführt hat, muss in der Lage sein den gesamten Ablauf im Detail zu erklären. Erklärungen im Stiel von "`Diese Information wurde vom eingesetzten Analyse-Programm automatisch gefunden"' sind nicht gern gesehen und können die Glaubwürdigkeit der gesamten Untersuchung in Frage stellen.
 
 
 \subsection{Integrität}
-Während der gesamten Ermittlung (und auch darüber hinaus) muss die Integrität der untersuchten Daten und gefundenen Informationen, Daten und Beweise lückenlos sichergestellt und belegt werden. 
+Während der gesamten Ermittlung und auch darüber hinaus muss die Integrität der untersuchten Daten und gefundenen Informationen, Daten und Beweise lückenlos sichergestellt und belegt werden. 
 
 \subsection{Präsentation und Dokumentation}
 Die Ergebnisse müssen angemessen dokumentiert und präsentiert werden. Am geeignetsten ist es, wenn die Ergebnisse in Form von Ursache - Wirkung aufgezeigt werden. Die Beweisspuren, Ereignisse und Personen sollen möglichst logisch und nachvollziehbar in Relation zu einander gebracht werden.
@@ -137,7 +139,7 @@ Die Ergebnisse müssen angemessen dokumentiert und präsentiert werden. Am geeig
 \subsection{Beweiskraft}
 Die gefundenen Informationen und Daten (zum Beispiel: Einträge in Log-Dateien) haben für sich alleine keinerlei Beweiskraft. Es handelt sich dabei um Sachbeweise. Die Beweiskraft ergibt sich erst durch den Kontext, bzw. durch die Person, welche den Beweis in Zusammenhang mit der Tat bringt. Der Sachbeweis ist somit eng mit dem Personenbeweis verbunden.
 
-Ein Beweis verliert relativ rasch seine Beweiskraft, wenn dieser unrichtig, bzw. falsch, dargelegt wurde. Es ist daher zwingend erforderlich, denn Beweis sachlich zu präsentieren. Auch die Integrität und Glaubwürdigkeit der präsentierenden Person ist ebenfalls von hoher Wichtigkeit.
+Ein Beweis verliert relativ rasch seine Beweiskraft, wenn dieser unrichtig, bzw. falsch, dargelegt wurde. Es ist daher zwingend erforderlich, denn Beweis sachlich zu präsentieren. Auch die Integrität und Glaubwürdigkeit der präsentierenden Person ist von hoher Wichtigkeit.
 
 \section{Hinweise zum Datenschutz}
-Auch im Rahmen einer Computer forensischen Analyse hat der Datenschutz weiterhin seine Gültigkeit und die Analyse und Auswertung von personenbezogenen Daten muss entsprechend genehmigt / autorisiert werden. Im Zweifelsfall sollte die zuständige Stelle in der Organisation (zum Beispiel der Datenschutzbeauftrage) hinzugezogen werden. Im Rahmen einer strafrechtlichen Untersuchung kann bei überwiegendem öffentlichen Interesse der Datenschutz jedoch ausser Kraft gesetzt werden.
+Auch im Rahmen einer computerforensische Analyse hat der Datenschutz weiterhin seine Gültigkeit und die Analyse und Auswertung von personenbezogenen Daten muss entsprechend genehmigt / autorisiert werden. Im Zweifelsfall sollte die zuständige Stelle in der Organisation (zum Beispiel der Datenschutzbeauftragte) hinzugezogen werden. Im Rahmen einer strafrechtlichen Untersuchung kann bei überwiegendem öffentlichen Interesse der Datenschutz jedoch ausser Kraft gesetzt werden.

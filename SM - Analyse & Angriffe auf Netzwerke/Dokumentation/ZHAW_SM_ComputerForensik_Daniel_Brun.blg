@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ZHAW_SM_ComputerForensik_Daniel_Brun.aux
+The style file: biblatex.bst
+A level-1 auxiliary file: content/0-title.aux
+A level-1 auxiliary file: content/0-Introduction.aux
+A level-1 auxiliary file: content/1-Attacks.aux
+A level-1 auxiliary file: content/2-IncidentResponse.aux
+A level-1 auxiliary file: content/3-ComputerForensics.aux
+A level-1 auxiliary file: content/4-ForensicAnalysis.aux
+A level-1 auxiliary file: content/5-ToolsAndTechniques.aux
+A level-1 auxiliary file: content/6-Fazit.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ZHAW_SM_ComputerForensik_Daniel_Brun-blx.bib
+Database file #2: bib/e.bib
+Biblatex version: 2.8
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 16 entries,
+            6047 wiz_defined-function locations,
+            1234 strings with 11211 characters,
+and the built_in function-call counts, 47833 in all, are:
+= -- 2303
+> -- 1143
+< -- 725
++ -- 469
+- -- 281
+* -- 2576
+:= -- 2304
+add.period$ -- 0
+call.type$ -- 16
+change.case$ -- 465
+chr.to.int$ -- 42
+cite$ -- 42
+duplicate$ -- 5552
+empty$ -- 5379
+format.name$ -- 496
+if$ -- 11277
+int.to.chr$ -- 0
+int.to.str$ -- 57
+missing$ -- 0
+newline$ -- 347
+num.names$ -- 769
+pop$ -- 4924
+preamble$ -- 1
+purify$ -- 426
+quote$ -- 0
+skip$ -- 2849
+stack$ -- 0
+substring$ -- 1880
+swap$ -- 1868
+text.length$ -- 431
+text.prefix$ -- 20
+top$ -- 1
+type$ -- 584
+warning$ -- 0
+while$ -- 276
+width$ -- 0
+write$ -- 330

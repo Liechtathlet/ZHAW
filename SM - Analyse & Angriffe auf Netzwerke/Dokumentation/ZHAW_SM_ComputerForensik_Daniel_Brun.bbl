@@ -1,0 +1,349 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{E:Metapedia:Forensik}{online}{}
+  \list{language}{1}{%
+    {DE}%
+  }
+  \list{organization}{1}{%
+    {Metapedia}%
+  }
+  \field{labelalpha}{Eme}
+  \verb{url}
+  \verb http://de.metapedia.org/wiki/Forensik
+  \endverb
+\endentry
+
+\entry{E:2008:CFBlog:RAMAnalyse}{online}{}
+  \list{language}{1}{%
+    {Deutsch}%
+  }
+  \field{labelalpha}{E20}
+  \field{extraalpha}{1}
+  \field{howpublished}{Website}
+  \verb{url}
+  \verb http://www.computer-forensik.org/blog/2008/02/22/die-etwas-andere-art-d
+  \verb er-ram-analyse/
+  \endverb
+  \field{year}{2008}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{B:MGrawHill:HE:CF}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Aaron~Philipp}{A.~P.}%
+     {Chris~Davis}{C.~D.}%
+     {}{}%
+     {David~Cowen}{D.~C.}}%
+  }
+  \list{publisher}{1}{%
+    {McGraw-Hill}%
+  }
+  \strng{namehash}{APDCCD1}
+  \strng{fullhash}{APDCCD1}
+  \field{labelalpha}{AP10}
+  \field{sortinit}{A}
+  \field{edition}{2}
+  \field{number}{ISBN 978-0-07-262677-4}
+  \field{title}{Hacking Exposed: Computer Forensics}
+  \field{year}{2010}
+\endentry
+
+\entry{E:2015:GOV:Attacks}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {GCHQ, Cert-UK}%
+  }
+  \field{labelalpha}{E20}
+  \field{extraalpha}{2}
+  \field{sortinit}{C}
+  \field{title}{Common Cyber Attacks: Reducing The Impact}
+  \verb{url}
+  \verb https://www.gov.uk/government/uploads/system/uploads/attachment_data/fi
+  \verb le/400106/Common_Cyber_Attacks-Reducing_The_Impact.pdf
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:2010:MSISAC:IncidentResponseGuide}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{2}{%
+    {Multi-State Information Sharing}%
+    {Analysis Center (MS-ISAC)}%
+  }
+  \field{labelalpha}{E20}
+  \field{extraalpha}{3}
+  \field{sortinit}{C}
+  \field{howpublished}{PDF}
+  \field{title}{Cyber Incident Response Guide}
+  \verb{url}
+  \verb http://msisac.cisecurity.org/members/local-government/documents/finalin
+  \verb cidentresponseguide.pdf
+  \endverb
+  \field{year}{2010}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{B:dpunkt:Geschonneck:CF}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Geschonneck}{G.}%
+     {Alexander}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {dpunkt.verlag}%
+  }
+  \strng{namehash}{GA1}
+  \strng{fullhash}{GA1}
+  \field{labelalpha}{Ges14}
+  \field{sortinit}{G}
+  \field{number}{ISBN 978-3-86490-133-1}
+  \field{title}{Computer-Forensik}
+  \field{year}{2014}
+\endentry
+
+\entry{E:2006:NIST:Guide:IncidentResponse}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {NIST}%
+  }
+  \field{labelalpha}{E20}
+  \field{extraalpha}{4}
+  \field{sortinit}{G}
+  \field{title}{Guide to Integrating Forensic Techniques into Incident
+  Response}
+  \verb{url}
+  \verb http://csrc.nist.gov/publications/nistpubs/800-86/SP800-86.pdf
+  \endverb
+  \field{year}{2006}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:2015:Wikipedia:Computersicherheit}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Wikipedia}%
+  }
+  \field{labelalpha}{E20}
+  \field{extraalpha}{5}
+  \field{sortinit}{H}
+  \field{title}{Hacker (Computersicherheit)}
+  \verb{url}
+  \verb http://de.wikipedia.org/wiki/Hacker_(Computersicherheit)
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{B:OReilly:CFHacks}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Lorenz~Kuhlee}{L.~K.}%
+     {Victor~Völzow}{V.~V.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {O'Reilly Verlag}%
+  }
+  \strng{namehash}{LKVV1}
+  \strng{fullhash}{LKVV1}
+  \field{labelalpha}{LK12}
+  \field{sortinit}{L}
+  \field{number}{ISBN 978-3-86899-121-5}
+  \field{title}{Computer Forensik Hacks}
+  \field{year}{2012}
+\endentry
+
+\entry{E:2013:DFI:RamAnalysis}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Oleg~Afonin}{O.~A.}%
+     {Yuri~Gubanov}{Y.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Digital Forensic Investigator (DFI)}%
+  }
+  \strng{namehash}{OAYG1}
+  \strng{fullhash}{OAYG1}
+  \field{labelalpha}{OA13}
+  \field{extraalpha}{1}
+  \field{sortinit}{O}
+  \field{title}{Catching the Ghost: How to Discover Ephemeral Evidence trough
+  Live RAM Analysis}
+  \verb{url}
+  \verb http://www.forensicmag.com/articles/2013/05/catching-ghost-how-discover
+  \verb -ephemeral-evidence-through-live-ram-analysis
+  \endverb
+  \field{year}{2013}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:2013:Belkasoft:LiveRAMAnalysis}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Oleg~Afonin}{O.~A.}%
+     {Yuri~Gubanov}{Y.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Belkasoft Research}%
+  }
+  \strng{namehash}{OAYG1}
+  \strng{fullhash}{OAYG1}
+  \field{labelalpha}{OA13}
+  \field{extraalpha}{2}
+  \field{sortinit}{O}
+  \field{title}{Live RAM Analysis in Digital Forensics}
+  \verb{url}
+  \verb http://forensic.belkasoft.com/download/info/Live_RAM_Analysis_in_Digita
+  \verb l_Forensics.pdf
+  \endverb
+  \field{year}{2013}
+\endentry
+
+\entry{E:SearchSecurity:SpearPhising}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rouse}{R.}%
+     {Margaret}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {DE}%
+  }
+  \list{organization}{1}{%
+    {SearchSecurity}%
+  }
+  \strng{namehash}{RM1}
+  \strng{fullhash}{RM1}
+  \field{labelalpha}{Rou11}
+  \field{sortinit}{R}
+  \field{title}{Spear-Phising}
+  \verb{url}
+  \verb http://www.searchsecurity.de/definition/Spear-Phishing
+  \endverb
+  \field{year}{2011}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Gabler:Forensik}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Siller}{S.}%
+     {Prof. (FH) Mag. Dr.~Helmut}{P.~F. M. D.~H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {DE}%
+  }
+  \list{organization}{1}{%
+    {Springer Gabler Verlag, Gabler Wirtschaftslexikon}%
+  }
+  \strng{namehash}{SPFMDH1}
+  \strng{fullhash}{SPFMDH1}
+  \field{labelalpha}{Sil}
+  \field{sortinit}{S}
+  \field{title}{Forensik}
+  \verb{url}
+  \verb httphttp://wirtschaftslexikon.gabler.de/Archiv/1408495/forensik-v3.html
+  \endverb
+\endentry
+
+\entry{ZHAW:2012:Seminararbeit:Reglemente}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Stern}{S.}%
+     {Olaf}{O.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {DE}%
+  }
+  \list{organization}{1}{%
+    {ZHAW}%
+  }
+  \strng{namehash}{SO1}
+  \strng{fullhash}{SO1}
+  \field{labelalpha}{Ste12}
+  \field{sortinit}{S}
+  \field{title}{Reglement: Seminararbeit}
+  \verb{url}
+  \verb https://ebs.zhaw.ch/files/documents/informatik/Reglemente/Bachelor/Semi
+  \verb nararbeit/a_Reglement-Seminar_Studiengang-Informatik_V2.1.docx
+  \endverb
+  \field{year}{2012}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:2011:Websense:Attacks}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Websense}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Websense}%
+  }
+  \strng{namehash}{W1}
+  \strng{fullhash}{W1}
+  \field{labelalpha}{Web11}
+  \field{sortinit}{W}
+  \field{howpublished}{PDF}
+  \field{note}{Rev2}
+  \field{title}{Advanced persistent threats and other advanced attacks}
+  \verb{url}
+  \verb https://www.websense.com/assets/white-papers/whitepaper-websense-advanc
+  \verb ed-persistent-threats-and-other-advanced-attacks-en.pdf
+  \endverb
+  \field{year}{2011}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

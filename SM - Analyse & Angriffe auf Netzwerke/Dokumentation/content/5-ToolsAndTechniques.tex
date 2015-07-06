@@ -48,7 +48,7 @@ Beim Auslesen der Zeitkonfiguration ist auch zu notieren, ob das System automati
 Europe/Zurich
 \end{lstlisting}
 
-Das Datum und die Uhrzeit kann über nachfolgenden Befehl ausgelesen werden. Zu beachten ist hier, dass eine statisch vorkompilierte Version des Befehsl verwendet wird.
+Das Datum und die Uhrzeit kann über nachfolgenden Befehl ausgelesen werden. Zu beachten ist hier, dass eine statisch vorkompilierte Version des Befehls verwendet wird.
 \begin{lstlisting}
 > date
 Fre Mai 29 08:00:00 CEST 2015
@@ -112,7 +112,7 @@ Oft gibt auch der verwendete Package-Manager ein Hinweis auf die verwendete Dist
 
 
 \subsection{Shutdown eines Systemes}
-Ein laufendes System kann grundsätzlich auf zwei verschiedene Arten heruntergefahren werden. Zum einen kann ein normaler, regulärer Shutdown des Systemes durchgeführt werden. Dabei werden sämtliche Datei gespeichert und temporäre Daten gelöscht / aufgeräumt. Das System befindet sich anschliessend in einem sauberen / lauffähigen Zustand. Während dem Shutdown werden jedoch bei zahlreichen Dateien die Zeitstempel verändert und sämtliche Daten welche sich im Arbeitsspeicher befinden gehen verloren. Dies kann unter Umständen die Analysearbeiten erschweren oder im schlimmsten Fall wichtige Beweise vernichten.
+Ein laufendes System kann grundsätzlich auf zwei verschiedene Arten heruntergefahren werden. Zum einen kann ein normaler, regulärer Shutdown des Systems durchgeführt werden. Dabei werden sämtliche Datei gespeichert und temporäre Daten gelöscht / aufgeräumt. Das System befindet sich anschliessend in einem sauberen / lauffähigen Zustand. Während dem Shutdown werden jedoch bei zahlreichen Dateien die Zeitstempel verändert und sämtliche Daten welche sich im Arbeitsspeicher befinden gehen verloren. Dies kann unter Umständen die Analysearbeiten erschweren oder im schlimmsten Fall wichtige Beweise vernichten.
 
 Die andere Methode ein System herunterzufahren ist der harte Shutdown. Beim harten Shutdown wird das System von der Stromversorgung getrennt, ohne das dieses vorher heruntergefahren wurde. Mit diesem Vorgehen wird sichergestellt, dass die Zeitstempel unverändert bleiben und die temporären Daten erhalten bleiben. Auch ist die Wahrscheinlichkeit da, dass auf der Festplatte eine Auslagerungsdatei vorhanden ist, welche analysiert werden kann. Die Extraktion und Analyse dieser Daten ist jedoch sehr aufwändig. Diese Methode des Shutdowns kann bei gewissen Dateisystemen zu irreparablen Schäden führen. Daher ist vorgängig abzuwägen, ob ein harter Shutdown sinnvoll und verkraftbar ist.
 
@@ -126,14 +126,14 @@ Die Möglichkeiten den Inhalt des Arbeitsspeichers zu sichern, werden im nachfol
 Für die Sicherung von Daten ist die Erstellung von Hashes von essentieller Bedeutung. Jede Datei, Partition oder ähnlich sollte vor und nach der Sicherung gehasht werden, um sicherzustellen, dass diese durch den Sicherungsvorgang nicht verändert wurde. Auch Protokolle, Dokumentation, Ergebnisse der Analyse, etc. sollten immer mit einem Hash versehen und geprüft werden.
 
 \subsubsection{md5sum}
-Mit folgendem Befehl können MD5-Hashes von einzelnen Dateien erstellt werden. Es stehen unter anderm MD2, MD4, MD5, SHA und SHA1 als Algorithmen zur Verfügung. Der Befehl entspricht jeweils dem Algorithmus. Zum Beispiel für SHA1 wird der Befehl \textit{sha1sum} verwendet.
+Mit folgendem Befehl können MD5-Hashes von einzelnen Dateien erstellt werden. Es stehen unter anderem MD2, MD4, MD5, SHA und SHA1 als Algorithmen zur Verfügung. Der Befehl entspricht jeweils dem Algorithmus. Zum Beispiel für SHA1 wird der Befehl \textit{sha1sum} verwendet.
 
 \begin{lstlisting}
 > md5sum <FileName>
 \end{lstlisting}
 
 \subsubsection{md5deep}
-Mit dem Tool "`md5deppe"' können Hashes von Ordnerinhalten rekursiv erstellt werden. Es können dabei Hashes mit dem MD5, dem SHA1, dem SHA256, dem Tiger und Whirlpool Algorithmus erstellt werden.
+Mit dem Tool "`md5deep"' können Hashes von Ordnerinhalten rekursiv erstellt werden. Es können dabei Hashes mit dem MD5, dem SHA1, dem SHA256, dem Tiger und Whirlpool Algorithmus erstellt werden.
 
 \begin{lstlisting}
 > md5depp -r <PathToDirectory>
@@ -145,21 +145,21 @@ Mit dem Tool "`md5deppe"' können Hashes von Ordnerinhalten rekursiv erstellt we
 Bei der Sicherung von Arbeitsspeicher-Inhalten ist grundsätzlich zu beachten, dass die verwendeten Tools und Techniken einen kleinen Memory-Footprint aufweisen. Je mehr Arbeitsspeicher ein Tool verwendet, desto mehr wichtige Daten und somit auch Beweise gehen verloren. Ein weiterer wichtiger Punkt der beachtet werden soll ist, dass die Sicherung nicht im User-Mode, sondern im Kernel-Mode erfolgt. So ist sichergestellt, dass der gesamte Inhalte des Arbeitsspeichers gesichert werden kann. Andernfalls können aufgrund von Berechtigungseinschränkungen nicht alle Daten gesichert werden.
 
 \subsection{Sicherung des Arbeitsspeicher-Inhaltes ohne Zugriff auf das Betriebssystem}
-Grundsätzlich gilt, dass der Inhalt des Arbeitsspeichers beim herunterfahren des Systems verloren geht. Besteht kein Zugriff auf das Betriebssystem und es besteht keine Möglichkeit das Passwort zu erhalten, muss gegbenenfalles eine der nachfolgend beschriebenen Techniken eingesetzt werden. Studien haben gezeigt, dass die Inhalte des Arbeitsspeichers noch bis zu mehreren Minuten nach dem Verlust der Stromversorgung im Arbeitsspeicher vorhanden sind. Bei einigen BIOS-Varianten wird der Arbeitsspeicher beim Herunterfahren des Systemes vollständig gelöscht. Bei diesen Systemen ist ein Auslesen nach dem Herunterfahren nicht mehr möglich.
+Grundsätzlich gilt, dass der Inhalt des Arbeitsspeichers beim herunterfahren des Systems verloren geht. Besteht kein Zugriff auf das Betriebssystem und besteht keine Möglichkeit das Passwort in Erfahrung zu bringen, muss gegebenenfalls eine der nachfolgend beschriebenen Techniken eingesetzt werden. Studien haben gezeigt, dass die Inhalte des Arbeitsspeichers noch bis zu mehreren Minuten nach dem Verlust der Stromversorgung im Arbeitsspeicher vorhanden sind. Bei einigen BIOS-Varianten wird der Arbeitsspeicher beim Herunterfahren des Systems vollständig gelöscht. Bei diesen Systemen ist ein Auslesen nach dem Herunterfahren nicht mehr möglich.
 
 \begin{itemize}
-\item Cold Boot\\
-Nach dem harten Shutdown des Systemes wird ein speziell präpariertes USB-Boot-Medium eingesetzt und das System sofort neu gestartet. Dabei ist im BIOS die Bootreihenfolge so zu ändern, dass das USB-Medium als primäres Boot-Medium verwendet wird. Das USB-Medium wurde vorgängig mit einem Minibetriebssystem, einem Spezialtool und einer separaten Partition zur Speicherung des Arbeitsspeicher-Abbildes. Als Tool zur Sicherung kann entweder \textit{Msramdmp} oder der \textit{USB Memory Scraper} verwendet werden.
+\item \textbf{Cold Boot}\\
+Nach dem harten Shutdown des Systems wird ein speziell präpariertes USB-Boot-Medium eingesetzt und das System sofort neu gestartet. Dabei ist im BIOS die Bootreihenfolge so zu ändern, dass das USB-Medium als primäres Boot-Medium verwendet wird. Das USB-Medium wurde vorgängig mit einem Minibetriebssystem, einem Spezialtool und einer separaten Partition zur Speicherung des Arbeitsspeicher-Abbildes ausgestattet. Als Tool zur Sicherung kann entweder \textit{Msramdmp} oder der \textit{USB Memory Scraper} verwendet werden.
 
-\item Cold Boot mit Kühlung des physikalischen Bausteins\\
+\item \textbf{Cold Boot mit Kühlung des physikalischen Bausteins}\\
 Bevor das System mit einem harten Shutdown heruntergefahren wird, wird das Gehäuse des Systems geöffnet und der Arbeitsspeicher mit einem Stickstoffspray auf -50 Grad Celsius herunter gekühlt. Dadurch werden die physikalischen Prozesse verlangsamt und die Daten bleiben im physischen Baustein länger erhalten. Nach dem harten Shutdown wird der Arbeitsspeicher ausgebaut und in einem Analyse-System  eingebaut. Das Analyse-System wird mit einer Spezialsoftware gestartet, welche den gesamten Arbeitsspeicher auf einen anderen Datenträger sichert.
 
-\item Firewire-Attacke\\
+\item \textbf{Firewire-Attacke}\\
 Bei der Firewire-Attacke wird eine Schwachstelle der Firewire-Schnittstelle ausgenutzt, um Inhalte des Arbeitsspeichers zu sichern. Die Schwachstelle kann jedoch nur unter bestimmten Bedingungen ausgenutzt werden und es kann nur eine begrenzte Menge (aktuell max. 4 GB) an Arbeitsspeicher ausgelesen werden. Als unterstützendes Tool zur Realisierung dieses Angriffes sei an dieser Stelle das Tool \textit{PythonRaw1394} genannt. Weitere Informationen zur Firewire-Attacke sind hier zu finden: \url{https://blogs.gnome.org/muelli/2010/04/reading-ram-using-firewire/}, \url{http://link.springer.com/chapter/10.1007%2F978-3-642-23602-0_14#page-1}
 \end{itemize}
 
 \subsection{Sicherung des Arbeitsspeicher-Inhaltes mit Zugriff auf das Betriebssystem}
-Für die Sicherung gibt es einige verschiedene Tools. Unter früheren Linux-Kerneles konnte direkt auf das Arbeitsspeicher-Device zugegriffen werden. In neuer Versionen wurde dies aus Sicherheitsgründen unterbunden.
+Für die Sicherung des Arbeitsspeicher-Inhaltes gibt es verschiedene Tools. Unter früheren Linux-Kernels konnte direkt auf das Arbeitsspeicher-Device zugegriffen werden. In neuer Versionen wurde dies aus Sicherheitsgründen unterbunden.
 
 \subsubsection{Linux (alte Kernel-Versionen)}
 \begin{lstlisting}
@@ -320,7 +320,7 @@ Die Sicherung von flüchtigen Daten muss effizient, schnell und korrekt erfolgen
 > df -h
 \end{lstlisting}
 
-\item  Informationen über den physischen Datengräger und die Partitionierung
+\item  Informationen über den physischen Datenträger und die Partitionierung
 \begin{lstlisting}
 > fdisk -lu <PathToHarddisk>
 > mmls <PathToHarddisk> (The Sleuth Kit)
@@ -388,7 +388,7 @@ Die Sicherung von flüchtigen Daten muss effizient, schnell und korrekt erfolgen
 > netstat -anp
 \end{lstlisting}
 
-\item Anzeige der aktiven Netzwerkverbindungen und der dazugehörigen Programmej
+\item Anzeige der aktiven Netzwerkverbindungen und der dazugehörigen Programme
 \begin{lstlisting}
 > netstat -tunp
 \end{lstlisting}
@@ -523,7 +523,7 @@ Die nachfolgenden Tools bieten gewisse Funktionalitäten, um gelöschte Partitio
 
 
 \subsection{Analyse von gelöschten Dateien}
-Wurden Dateien vom Dateien vom System gelöscht besteht ein gewisse Wahrscheinlichkeit, dass diese mit einem entsprechenden Tool wiederhergestellt werden können.
+Wurden Dateien vom System gelöscht besteht ein gewisse Wahrscheinlichkeit, dass diese mit einem entsprechenden Tool wiederhergestellt werden können.
 
 \subsubsection{Sleuth Kit}
 Die Wiederherstellung von gelöschten Daten mit Hilfe der Tools aus dem Sleuth Kit erfolgt nach folgendem Ablauf:
@@ -549,9 +549,9 @@ Die nachfolgenden Tools verfügen ebenfalls über entsprechende Funktionalitäte
 
 
 \subsection{Analyse von versteckten Dateien}
-Auf einer Festplatte können an einigen Stellen Daten versteckt werden. Aufgrund des Aufbaus und der Aufteilung einer Festplatte in Sektoren fester Grösse über die gesamte Fläche, können am Rand Abstände zwischen den Sektoren entstehen. In diesen sogenannten Gaps können Daten versteckt werden. Eine weitere Möglichkeit Daten zu verstekcen sind die Partition-Gaps (Abstände zwischen Partitionen) und unpartitionierte Bereiche der Festplatte. Eine etwas andere Methode ist die Verwendung von Blöcken, welche vom Betriebssystem als unbrauchbar markiert wurden (Bad Blocks).  Die einfachste Art um Dateien zu verstecken, ist die Verwendung des Hidden-Attributes des Betriebssystems. Dieses existiert in der einen oder anderen Form in den meisten gängigen Betriebssystemen.
+Auf einer Festplatte können an einigen Stellen Daten versteckt werden. Aufgrund des Aufbaus und der Aufteilung einer Festplatte in Sektoren fester Grösse über die gesamte Fläche, können am Rand Abstände zwischen den Sektoren entstehen. In diesen sogenannten Gaps können Daten versteckt werden. Eine weitere Möglichkeit Daten zu verstecken sind die Partition-Gaps (Abstände zwischen Partitionen) und unpartitionierte Bereiche der Festplatte. Eine etwas andere Methode ist die Verwendung von Blöcken, welche vom Betriebssystem als unbrauchbar markiert wurden (Bad Blocks).  Die einfachste Art um Dateien zu verstecken, ist die Verwendung des Hidden-Attributes des Betriebssystems. Dieses existiert in der einen oder anderen Form in den meisten gängigen Betriebssystemen.
 
-Auch mit Hilfe von Rootkits lassen sich Dateien und Verzeichnisse verstecken. Darüber hinaus können unter anderem auch Prozesse und Netzwerkverbindungen verborgen werden. Normale Rootkits verwenden dafür trojanisierte (manipulierte) Systemprogramme, welche die entsprechenden Dateien, Verzeichnise, etc. herausfiltern. kernel-Level-Rootkits verwenden keine trojanisierten Systemprogramme, sondern manipulieren die Syscall-Tabelle. Einige Kernel-Level-Rootkits verändern sogar direkt den Syscall-Code. Diese Art von Rootkits sind auf dem System sehr schwer aufzuspüren. Um diese zu finden, müssen die Strukturen analysiert, das System beobachtet und mit einem Referenz-System verglichen werden.
+Auch mit Hilfe von Rootkits lassen sich Dateien und Verzeichnisse verstecken. Darüber hinaus können unter anderem auch Prozesse und Netzwerkverbindungen verborgen werden. Normale Rootkits verwenden dafür trojanisierte (manipulierte) Systemprogramme, welche die entsprechenden Dateien, Verzeichnisse, etc. herausfiltern. Kernel-Level-Rootkits verwenden keine trojanisierten Systemprogramme, sondern manipulieren die Syscall-Tabelle. Einige Kernel-Level-Rootkits verändern sogar direkt den Syscall-Code. Diese Art von Rootkits sind auf dem System sehr schwer aufzuspüren. Um diese zu finden, müssen die Strukturen analysiert, das System beobachtet und mit einem Referenz-System verglichen werden.
 
 
 
@@ -559,7 +559,7 @@ Auch mit Hilfe von Rootkits lassen sich Dateien und Verzeichnisse verstecken. Da
 Wurden Dateien auf einem System gelöscht, bleiben möglicherweise gewisse Dateifragmente über längere Zeit erhalten. Können die einzelnen Fragmente im File-Slack oder unallozierten Bereich gefunden werden, können diese zusammengesetzt werden. Der Prozess der Suche und Wiederherstellung von Dateien oder Dateifragementen wird auch als File Carving bezeichnet.
 
 \subsubsection{foremost}
-Foremost ist ein File-Carving-Tool welches speziell für Unix entwickelt wurde. Die Widerherstellung erfolgt aufgrund der Analyse von Header- und Footer-Informationen.
+Foremost ist ein File-Carving-Tool welches speziell für Unix entwickelt wurde. Die Wiederherstellung erfolgt aufgrund der Analyse von Header- und Footer-Informationen.
 
 \begin{lstlisting}
 > foremost -v -c <PathToForemostConfig> <PathToImage.dd>
@@ -622,7 +622,7 @@ print $1}' > <PathToHashesOfFilesToSearch>
 \subsection{Analyse des File Slacks}
 Aufgrund der Besonderheiten einiger Dateisysteme können auf Datenträgern mit einem solchen Dateisystem Dateien versteckt werden. Der Grund dafür liegt, darin das eine Datei auf dem Datenträger in sogenannten Dateiblöcken mit einer festen Länge (Sektoren) gespeichert werden. Die kleinste beschreibbare Einheit besteht dabei aus einer Gruppe (typischerweise 8) von Sektoren. Eine solcher Gruppe von Sektoren wird als Cluster bezeichnet. Füllt eine Datei nicht den gesamten Dateiblock aus entsteht ein ungenutzter Bereich. Dieser Bereich wird File Slack genannt und wird vom Betriebssystem mit zufälligen Daten aufgefüllt. Dieser Slack unterteilt sich zum einen in RAM-Slack, welcher früher unter Windows mit Inhalten aus dem Arbeitsspeicher aufgefüllt wurde (heute mit Nullen), und zum anderen in Drive-Slack. Der RAM-Slack erstreckt sich vom letzten Byte der Datei bis zur nächsten Sektorgrenze. Der Drive-Slack (auch Sektor- oder Cluster-Slack genannt) ist der restliche Bereich zwischen dem Ende des RAM-Slacks und der Cluster-Grenze.
 
-Im Drive-Slack können sicht unter Umständen wertvolle Informationen für die weitere Analyse befinden. Wichtig zu wissen ist hier, das ein Beweis eindeutig einer Person zugeordnet werdene können muss. Dies ist beim Drive-Slack nicht der Fall.
+Im Drive-Slack können sich unter Umständen wertvolle Informationen für die weitere Analyse befinden. Wichtig zu wissen ist hier, dass ein Beweis eindeutig einer Person zugeordnet werden können muss. Dies ist beim Drive-Slack nicht der Fall.
 
 Neben dem File-Slack gibt es auf einem Computer-System noch weitere Slack-Bereiche wie zum Beispiel der Partition-Slack oder Disk-Slack.
 
@@ -630,7 +630,7 @@ Die File Slack Analyse ermöglicht dem Ermittler unter Umständen auf Inhalte zu
 
 
 \subsection{Timeline-Analyse}
-Bei der Timeline-Analyse werden die letzten Aktivitäten, welche auf dem System durchgeführt wurden, in ein zeitlich logische Abfolge gebracht. Bei der Herstellung einer Verbindung zu anderen Beweisen ist eine allfällige Abweichung der Systemzeit von der Referenzzeit zu beachten. Die Timeline-Analyse ist häufig der erste Ansatzpunkt einer Ermittlung. Durch die Analyse kann festgestellt werden, was undder Täter auf dem System gemacht / verändert / installiert hat. Ausgehend von dem entstehenden Zeitstrahl können weitere, vertiefte Analysen durchgeführt werden. Ein wichtiger Baustein der Timeline-Analyse ist die Auswertung der MAC-Time der Dateien und Ordner. Die MAC-Time setzt sich aus folgenden Elementen zusammen:
+Bei der Timeline-Analyse werden die letzten Aktivitäten, welche auf dem System durchgeführt wurden, in ein zeitlich logische Abfolge gebracht. Bei der Herstellung einer Verbindung zu anderen Beweisen ist eine allfällige Abweichung der Systemzeit von der Referenzzeit zu beachten. Die Timeline-Analyse ist häufig der erste Ansatzpunkt einer Ermittlung. Durch die Analyse kann festgestellt werden, was der Täter auf dem System gemacht / verändert / installiert hat. Ausgehend von dem entstehenden Zeitstrahl können weitere, vertiefte Analysen durchgeführt werden. Ein wichtiger Baustein der Timeline-Analyse ist die Auswertung der MAC-Time der Dateien und Ordner. Die MAC-Time setzt sich aus folgenden Elementen zusammen:
 
 \begin{itemize}
 \item Modification Time\\
@@ -643,26 +643,26 @@ Zeitpunkt der Erstellung der Datei, Der Zeitstempel wird bei Erstellung einer Ko
 Zeitpunkt der Veränderung bestimmter Metadaten der Datei
 \end{itemize}
 
-Nicht jede Aktion löst auf der Datei selbst eine Veränderung der MAC-Time aus. Unter Linux bewirkt die Verschiebung einer Datei eine Veränderung der MAC-Time des Verzeichnises, aber nicht der Datei selbst. Die MAC-Time kann jedoch relativ einfach durch den Angreifer, beziehungsweise durch Anti-Forensik-Tools manipuliert oder unbrauchbar gemacht werden. Eine weitere Schwierigkeit besteht darin, dass die MAC-Time sich je nach Betriebssystem anders verhält.
+Nicht jede Aktion löst auf der Datei selbst eine Veränderung der MAC-Time aus. Unter Linux bewirkt die Verschiebung einer Datei eine Veränderung der MAC-Time des Verzeichnisses, aber nicht der Datei selbst. Die MAC-Time kann jedoch relativ einfach durch den Angreifer, beziehungsweise durch Anti-Forensik-Tools manipuliert oder unbrauchbar gemacht werden. Eine weitere Schwierigkeit besteht darin, dass die MAC-Time sich je nach Betriebssystem anders verhält.
 
 
 \subsubsection{Sleuth Kit}
 \begin{enumerate}
 \item Dateinformationen sammeln
 \begin{lstlisting}
-fls -f <Filesystem> -m <Path> -r <MountPoint>/<PathToimage> > body.fls
-fls -f linux-ext2 -m / -r /mnt/images/hda7.dd > body.fls
+> fls -f <Filesystem> -m <Path> -r <MountPoint>/<PathToimage> > body.fls
+> fls -f linux-ext2 -m / -r /mnt/images/hda7.dd > body.fls
 \end{lstlisting}
 
 \item Metadaten sammeln
 \begin{lstlisting}
-ils -f <Filesystem> -m <MountPoint>/<PathToImage> >> body.fls
-ils -f linux-ext2 -m /mnt/images/hda7.dd >>body.fls
+> ils -f <Filesystem> -m <MountPoint>/<PathToImage> >> body.fls
+> ils -f linux-ext2 -m /mnt/images/hda7.dd >>body.fls
 \end{lstlisting}
 
 \item Gemeinsame Auswertung
 \begin{lstlisting}
-mactime -b body.fls
+> mactime -b body.fls
 \end{lstlisting}
 \end{enumerate}
 
@@ -709,12 +709,12 @@ Es kann sich auch lohnen das Verzeichnis \textit{/etc/skel} einer genaueren Anal
 	
 
 \subsection{Untersuchung der Druckerjobs und der Druckerqueue}
-Die vom System aufgegebenen Druckerjobs können interessante Informationen enthalten. Auf älterne Unix-Systemen sind die entsprechenden Log-Dateien unter \textit{/vaR/log/lpr.log} zu finden. Auf neueren Systemen unter \textit{/var/log/cups}. Der Ort der Log-Datei kann allenfalls auch durch ein Überschreiben der Konfiguration im Verzeichnis \textit{/etc} geändert worden sein. Die Kopien der gedruckten Dateien können im Verzeichnis \textit{/var/spool}, beziehungsweise \textit{/var/spool/cups} gefunden werden. Die Analyse der Druckjobs und der Druckerqueue kann einen guten Ansatzpunkt in der Timeline-Analyse darstellen. Die Log-Einträge können zum Beispiel Hinweise auf eine gelöschte Datei beinhalten und bieten somit einen ersten Anhaltspunkt für die Suche der Datei im Speicherbereich.
+Die vom System aufgegebenen Druckerjobs können interessante Informationen enthalten. Auf älteren Unix-Systemen sind die entsprechenden Log-Dateien unter \textit{/vaR/log/lpr.log} zu finden. Auf neueren Systemen unter \textit{/var/log/cups}. Der Ort der Log-Datei kann allenfalls auch durch ein Überschreiben der Konfiguration im Verzeichnis \textit{/etc} geändert worden sein. Die Kopien der gedruckten Dateien können im Verzeichnis \textit{/var/spool}, beziehungsweise \textit{/var/spool/cups} gefunden werden. Die Analyse der Druckjobs und der Druckerqueue kann einen guten Ansatzpunkt in der Timeline-Analyse darstellen. Die Log-Einträge können zum Beispiel Hinweise auf eine gelöschte Datei beinhalten und bieten somit einen ersten Anhaltspunkt für die Suche der Datei im Speicherbereich.
 
 
 
 \subsection{Untersuchung der Dateien / Dateiendungen}
-Oft wird eine Datei über deren Dateiendung identifiziert. Wurde diese absichtlich verändert, kann der Dateityp weiterhin bestimmt werden. Dies wird durch File-Signatur, beziehungsweise den File-Header, ermöglicht. Durch eine Signaturanalyse können auf einem System Dateien gefunden werden, bei denen Dia Signatur nicht mit der Dateiendung übereinstimmt. Die Ergebnisse einer solchen Analyse sind jedoch mit Vorsicht zu geniessen, da der File-Header auch falsch sein kann. Ein Beispiel wäre eine Text (txt) Datei mit dem Inhalt "`FLV ist ein cooles Format"'. Die Signatur würde dann nahelegen, dass es sich um ein File im "`FLV"' Format handelt. In Wirklichkeit handelt es sich jedoch um ein txt-File.
+Oft wird eine Datei über deren Dateiendung identifiziert. Wurde diese absichtlich verändert, kann der Dateityp weiterhin bestimmt werden. Dies wird durch File-Signatur, beziehungsweise den File-Header, ermöglicht. Durch eine Singnaturanalyse können auf einem System Dateien gefunden werden, bei denen die Signatur nicht mit der Dateiendung übereinstimmt. Die Ergebnisse einer solchen Analyse sind jedoch mit Vorsicht zu geniessen, da der File-Header auch falsch sein kann. Ein Beispiel wäre eine Text (txt) Datei mit dem Inhalt "`FLV ist ein cooles Format"'. Die Signatur würde dann nahelegen, dass es sich um ein File im "`FLV"' Format handelt. In Wirklichkeit handelt es sich jedoch um ein txt-File.
 
 
 \subsubsection{Linux}
@@ -743,7 +743,7 @@ Auch die Untersuchung der Datei-Verzeichnisrechte, beziehungsweise deren Veränd
 \end{lstlisting}
 
 \subsection{Analyse des RAM-Dumps}
-Die Auswertung von RAM-Dumps kann sehr zeitaufwändig sein, da sich die Struktur des RAMs grundlegend von der Struktur von normalen Filesystemen unterscheidet. Hinzu kommt, dass im RAM oft nur Fragemente von Dateien abgelegt sind.
+Die Auswertung von RAM-Dumps kann sehr zeitaufwändig sein, da sich die Struktur des RAMs grundlegend von der Struktur von normalen Filesystemen unterscheidet. Hinzu kommt, dass im RAM oft nur Fragmente von Dateien abgelegt sind.
 
 \subsubsection{Volatility}
 \textit{Volatility} ist ein Framework zur Analyse von RAM-Dumps. Das Framework bietet unzählige Optionen und Einstellmöglichkeiten. Nachfolgend werden einige grundlegende Befehle aufgezeigt.
@@ -829,15 +829,7 @@ Mit Hilfe des Tools \textit{dd} oder eines ähnlichen Tools kann der Master Boot
 \end{lstlisting}
 
 
-\subsubsection{Sicherung des Master Boot Records}
-Mit Hilfe des Tools \textit{dd} oder eines ähnlichen Tools kann der Master Boot Record wie folgt gesichert werden:
-
-\begin{lstlisting}
-> dd if=<PathToSource> of=<PathToTargetFile.dd> bs=512 count=1 skip=0
-\end{lstlisting}
-
-
-\subsubsection{Extraktion des Master Boot Records aus einem image}
+\subsubsection{Extraktion des Master Boot Records aus einem Image}
 \begin{lstlisting}
 > dd if=<PathToSourceImage.dd> of=<PathToTargetFile.dd> bs=512 count=1 skip=0
 \end{lstlisting}
@@ -873,14 +865,14 @@ Gewisse Tools und Tool-Suiten bieten eine integrierte Möglichkeit um Berichte u
 
 
 %---------------------------------------------------------------------------------------------------------------
-\section{Hinweise zu Tooleinsatz}
+\section{Hinweise zum Tooleinsatz}
 Nachfolgend einige Hinweise zum Einsatz von Tools bei einer forensischen Analyse:
 
 \begin{itemize}
 \item Auswahl des Tools kann Grundsatzdiskussionen zu den Ermittlungsmethoden auslösen.
 \item Verständnis der unterschiedlichen Ansätze verschiedener Forensik-Tools und -Tool-Suiten.
-\item Open Source vs. Kommerzielle Tools: Klassische ideologische Diskussion. Für die juristische Verwendbarkeit sind beide Ansätze legitim, sofern die gewählten Tools akzeptiert und etabliert sind.
-\item Einsatz von Script-Sammlungen (Konsolen-Befehle) vs. GUI-Anwendungen. Der Einsatz von GUI-Anwendungen bietet erheblich mehr komfort als der Einsatz von Script-Sammlungen, beziehungsweise dem Absetzen von Konsolen-Befehlen. Der Nachteil der GUI-Anwendungen ist jedoch, dass diese einen höheren RAM-Bedarf haben. Daher sollte bei einer Live-Analyse auf den Einsatz von grafischen Tools wann immer möglich verzichtet werden.
+\item Open Source vs. kommerzielle Tools: Klassische ideologische Diskussion. Für die juristische Verwendbarkeit sind beide Ansätze legitim, sofern die gewählten Tools akzeptiert und etabliert sind.
+\item Einsatz von Script-Sammlungen (Konsolen-Befehle) vs. GUI-Anwendungen. Der Einsatz von GUI-Anwendungen bietet erheblich mehr Komfort als der Einsatz von Script-Sammlungen, beziehungsweise dem Absetzen von Konsolen-Befehlen. Der Nachteil der GUI-Anwendungen ist jedoch, dass diese einen höheren RAM-Bedarf haben. Daher sollte bei einer Live-Analyse auf den Einsatz von grafischen Tools wann immer möglich verzichtet werden.
 \item Die einzusetzenden Tools sind stark von der jeweiligen Situation und dem zu untersuchenden System abhängig. Die Toolsammlung sollte daher jeweils den Umständen entsprechend angepasst werden.
 \item Der Umgang mit den verschiedenen Tools sollte regelmässig geübt werden, damit bei der Untersuchung schnell, effizient und korrekt gearbeitet werden kann.
 \item Bei der Live-Analyse sollten immer nur statisch vorkompilierte Systembefehle verwendet werden. Andernfalls ist die Korrektheit der so gesammelten Daten nicht gewährleistet.
@@ -892,11 +884,11 @@ Nachfolgend einige Hinweise zum Einsatz von Tools bei einer forensischen Analyse
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Tool-Suiten und Toolsammlungen}
-Nachfolgend werden enige Tool-Suiten und Toolsammlungen für die forensische Analyse aufgelistet:
+Nachfolgend werden einige Tool-Suiten und Toolsammlungen für die forensische Analyse aufgelistet:
 
 \begin{itemize}
 \item F.R.E.D. (First Responder's Evidence Disk)\\
-Schnelle Sammlung von Statusinformationen auf Live-Systemen, statisch vorkompilierte Vefehle, anpassbares und erweiterbares Batch- / Shell-Script
+Schnelle Sammlung von Statusinformationen auf Live-Systemen, statisch vorkompilierte Befehle, anpassbares und erweiterbares Batch- / Shell-Script
 
 \item Incident Response Collection Report (IRCR)\\
 Sammlung von Werkzeugen zur Sammlung kritischer Systemdaten, Tool für Windows, Verwendung von Systembefehlen zur Sammlung der Daten (hinterlässt Spuren auf dem System)
@@ -905,7 +897,7 @@ Sammlung von Werkzeugen zur Sammlung kritischer Systemdaten, Tool für Windows, 
 Tool-Sammlung zur Analyse von Live-Systemen unter Windows, Hinterlässt wenige Spuren, Flexible Anpassung der generierten Reports
 
 \item Live View\\
-Java-Anwendung zur Generierung einer read-only VM-Ware Virtual Machiene aus einem dd Image oder einem physischen Datenträger unter Windows.
+Java-Anwendung zur Generierung einer Read-Only VM-Ware Virtual Machine aus einem dd Image oder einem physischen Datenträger unter Windows.
 
 \item EnCase \\
 Windows-Anwendung zur Analyse von verschiedenen Dateisystemen (Windows, Mac OS, Linux, Solaris, AIX, HP UX, ...), Automatisierung von verschiedenen Aufgaben via EnScript, Breite Palette an Tools, Analyse von verschiedensten Anwendungsdaten, Mehrsprachig, erhältlich als Enterprise-Version

@@ -173,18 +173,6 @@
 \IfPackageLoaded{hyperref}{\pdfbookmark[1]{\contentsname}{toc}}
 \tableofcontents
 
-% --- Moved Glossary ---
-\IfPackagesLoaded{glossaries,longtable,tabu}{
-  \clearpage
-  % print out acronym list   
-  \IfGlossariesStyleDefined{longtabuFancyHeader}
-   {\printglossary[type=\acronymtype,style=longtabuFancyHeader]}
-  % print out symbol list 
-  \IfGlossariesStyleDefined{longtabuFancyHeader}
-   {\printglossary[type=symbolslist,style=longtabuFancyHeader]}
-  % print out glossary
-  \printglossary[style=altlist]
-} % end of glossaries
 
 % --- Main Document --- --- --- --- --- --- ---
 \mainmatter
@@ -200,6 +188,18 @@
 \include{content/5-ToolsAndTechniques}
 \include{content/6-Fazit}
 
+% --- Moved Glossary ---
+\IfPackagesLoaded{glossaries,longtable,tabu}{
+  \clearpage
+  % print out acronym list   
+  \IfGlossariesStyleDefined{longtabuFancyHeader}
+   {\printglossary[type=\acronymtype,style=longtabuFancyHeader]}
+  % print out symbol list 
+  \IfGlossariesStyleDefined{longtabuFancyHeader}
+   {\printglossary[type=symbolslist,style=longtabuFancyHeader]}
+  % print out glossary
+  \printglossary[style=altlist]
+} % end of glossaries
 
 %%% -- end of main content
 
