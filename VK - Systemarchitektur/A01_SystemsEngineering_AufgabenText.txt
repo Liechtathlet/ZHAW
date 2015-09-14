@@ -1,0 +1,52 @@
+1. Beispiel (Youtube Film?)
+2. Wichtigste Aussage (2-3 Sätze)
+3. Eigene Meinung (2-3 Sätze)
+
+1.
+	Object-Oriented vs Procedural Programming: http://study.com/academy/lesson/object-oriented-programming-vs-procedural-programming.html
+	Object-Oriented Programming: https://archive.org/details/DanIngal1989
+	Art of Writing Software: http://www.computerhistory.org/revolution/the-art-of-programming/9/357/2216
+
+2: In den 1980er drehte sich alles um die Steigerung der Produktivität und die Skalierbarkeit.
+Zum einen wurden Kosten durch Verteilung des Aufwands auf verschiedene Phasen, bessere Ausbildung der Mitarbeiter, Prozesse, Methoden und Tools gesenkt.
+Zum anderen wurden grosse Fortschritte im Bereich der Software Tools (Testunterstützung, Konfigurations Management, Entwicklungs-Umgebung, etc.) erzielt.
+Im Endeffekt konnte die Produktivität primär dadurch gesteigert werden, dass gewisse (wiederauftretende) Arbeiten vermieden und zusammengefasst wurden.
+Ein weiterer Beitrag leistete die Wiederverwendung von Komponenten, welches erst durch bessere Domänen-Architekturen ermöglicht wurden. Ein weiterer Meilenstein war die Entwicklung der objektorientiert Programmiersprachen wie C++, Java, Smalltalk und Eiffel.
+
+
+3: Meiner Meinung nach stellen die Entwicklungen in den 1980er ein wichtige Entwicklung im Bereich der Software Entwicklung dar.
+Die Verbesserung der Software-Unterstützung, der Wiederverwendbarkeit und der Entwicklung der objektorientierten Programmiersprachen hat den Grundstein für die weitere rasante Entwicklung der Informatik gelegt.
+Ohne diese Bausteine hätten die heutigen Systeme nicht realisiert werden können.
+
+
+
+
+
+
+
+------------------------
+1980er
+
+Produktivität & Skalierbarkeit:
+-------------
+Einige Initiativen um Probleme aus 70er zu lösen
+Objekt-Orientierung, Standards / Maturitätsmodelle, Software Factories, User Programming
+
+Reduktion der Kosten durch Verteilung des Aufwandes auf verschiedene Phasen, bessere Ausbildung der Angestellten, Prozesse, Methoden,Tools
+
+Maturitätsmodelle: SW-CMM
+
+SW-Tools: Fortschritte Testtools, Configuration Managemet
+
+Fokus 80er: Integration in Support environments, Computer-Aided SWE
+
+Ansätze Verbesserung Produktivität:, Forgechrittene Entwicklungsumgebungen
+
+
+Software Prozess: erweiterung des Fokuses, nicht nur Programmiersprachen & Tools -> Reduktion Arbeit
+
+
+Weitere: Experten-Systeme, Hochsprachen, Objekt-Orientierung
+
+
+Software Reuse: Vermeidung und Zusammenfassung durch Wiederverwendung, bessere Domänen Architektur und Engineering
