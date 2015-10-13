@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <title>MyNotes</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      console.log( 'Starting Notes-Application!' );
+      <!-- 160.85.133.61:8080 -->
+
+      $.get( "http://160.85.133.61:8080/api/notes", function( data ) {
+        console.log( "Loaded Notes from server." );
+        if ( $('#noteOverviewList').length > 0){
+
+            $.each(data.notes, function(k, v) {
+              var item = $('<tr><td>'+ v.id + '</td><td>' + v.subject + '</td><td>' + v.message + '</td><td>' + v.creator + '</td><td>' + v.dateTime + '</td><td><a onclick="deleteNote(\''+v.id+'\');">x</a></td></tr>');
+
+              $('#noteOverviewList tbody').append(item);
+            });
+
+
+        }
+        });
+
+
+        jQuery('#SubmitNoteForm').submit( function() {
+
+               $.ajax({
+                   url     : $(this).attr('action'),
+                   type    : $(this).attr('method'),
+                   data    : $(this).serialize(),
+                   success : function( response ) {
+                               alert('Note created!');
+                               jQuery('#SubmitNoteForm')[0].reset();
+                                 location.reload();
+                             }
+               });
+
+               return false;
+           });
+
+      });
+
+      function deleteNote(id){
+        $.get( "http://160.85.133.61:8080/api/deleteNote?id=" + id, function( data ) {
+          console.log( "Deleted Note from server." );
+          location.reload();
+          });
+      }
+
+    </script>
+
+
+  </head>
+
+  <body>
+    <h1>Meine Notizen</h1>
+    <div id="noteOverview">
+      <table id="noteOverviewList">
+          <tbody>
+            <tr>
+              <th>Id</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Creator</th>
+              <th>dateTime</th>
+              <th></th>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr/>
+
+    <h2>Neue Notiz</h2>
+    <div id="noteCreate">
+
+      <form action="http://160.85.133.61:8080/api/addNote" method="GET" id="SubmitNoteForm">
+        <span><strong>Subject: </strong><input type="text" name="subject" /></span><br><br>
+        <span><strong>Message: </strong><input type="text" name="message" /></span><br>
+        <input type="hidden" name="creator" value="Dani"/>
+        <br>
+        <input type="submit" value="Hinzufügen" />
+      </form>
+    </div>
+
+  </body>
+</html>

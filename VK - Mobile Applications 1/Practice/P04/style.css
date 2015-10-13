@@ -1,0 +1,113 @@
+body{
+  color: blue;
+}
+
+/************* Title & Header *****************/
+header {
+  width:100vw - 10px;
+  height:50px;
+  padding:5px;
+}
+
+.titleContainer{
+  background-color:blue;
+  border:1px solid white,
+  border-radius:5px;
+  text-align:center;
+  padding:5px;
+}
+
+.titleText{
+  color:white;
+  font-weight:bold;
+  font-size:2em;
+}
+
+/************* Main Style *****************/
+main {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100vw - 10px;
+  margin:5px;
+  padding:10px;
+  border:1px dashed blue;
+}
+
+.boxStyle {
+  margin:10px;
+}
+
+
+/************* Sub Text Elements *****************/
+.textBoxContainer {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+.bigText{
+  font-size:1.5em;
+  display:flex;
+}
+
+.bigItalicText{
+  font-size:1.5em;
+  font-style:oblique;
+  display:flex;
+}
+
+.smallItalicText{
+  font-size:1.0em;
+  font-style:oblique;
+}
+
+/************* Spacer *****************/
+
+.smallSpacer {
+  height:5vh;
+}
+
+.bigSpacer {
+  height:10vh;
+}
+/************* Game Area *****************/
+
+#gameArea {
+  border:1px solid blue;
+}
+
+
+/**************************************************** Media-Screen: 500-800px */
+@media screen and (min-width:500px) and (max-width: 800px) {
+
+main {
+  flex-direction: column;
+}
+
+.textBoxContainer {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.textElement {
+  min-width:12vh;
+}
+
+.smallText {
+  display:none;
+}
+
+.bigText, .bigItalicText{
+  font-size:1.3em;
+}
+
+.smallSpacer {
+  height:4vh;
+}
+
+.bigSpacer {
+  height:1vh;
+}
+}

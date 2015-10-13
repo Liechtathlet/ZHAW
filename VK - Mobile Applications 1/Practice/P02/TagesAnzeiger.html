@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <title>Tagesanzeiger: Kommentare</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      console.log( 'Starting Notes-Application!' );
+
+
+      $.get( "http://tagesanzeiger.ch/api/articles/21021525/comments", function( data ) {
+        console.log( "Loaded Comments from server." );
+        if ( $('#commentList').length > 0){
+
+            $.each(data.comments, function(k, v) {
+              var item = $('<tr><td>'+ v.id + '</td><td>' + v.first_name + '</td><td>' + v.last_name + '</td><td>' + v.message + '</td></tr>');
+
+              $('#commentList tbody').append(item);
+            });
+
+
+        }
+        });
+
+      });
+
+    </script>
+
+
+  </head>
+
+  <body>
+    <h1>Kommentare</h1>
+    <div id="commentContainer">
+      <table id="commentList">
+          <tbody>
+            <tr>
+              <th>Id</th>
+              <th>LastName</th>
+              <th>FirstName</th>
+              <th>Message</th>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>

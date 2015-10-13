@@ -46,18 +46,30 @@ Triage der Anforderungen (Relevant für Architektur oder nicht), Mengengerüst w
 Jede Architekturentscheidung hat Einfluss auf eine der Eigenschaften
 
 ###Definition
-1 Zeichnung reicht nicht für alles (bei Gebäuden funktioniert das), mindestens 3 Darstellungen: Komponenten, Datenflüsse, Prozesse
+1 Zeichnung reicht nicht für alles (bei Gebäuden funktioniert das), mindestens 3 Darstellungen: Komponenten, Datenflüsse, Prozesse, , Hierarchisch: Unterstrukturen --> Konstruktionselemente
 
+###Formale Definition
+
+  - Architecture
+    - Elements
+      - Processing Elements (Führend Transformationen auf Data Elements aus)
+      - Data Elements (Daten)
+      - Connecting Elements (Entweder P.E. oder D. E., z.B. Procedure Calles, Shared Data, Messages)
+    - Formale
+      - Weighted Properties (Gewichtung Eigenschaften Element, Unterscheidung zentral / dekorativ, Mittel zur Definition Rahmenbedingungen, minimale Anforderungen)
+      - Relationships (Definition Platzierung Element in best. Kontext von Elementen)
+    - Rationale (Motivation zur Auswahl best. Architektur-Elemente, Ausdruck Abbildung Systemanforderungen, funktional nach allgemeine Systemanforderungen.)
 ###Zusammenfassung
   - Werkzeugkasten der Architektur
   - Architektur hat Ordnungsfunktion, beeinflusst Art und Weise wie eine Anwendung oder Systemlandschaft geordnet wird (mit Werkzeugkasten)
   - Architektur hat direkten Einfluss auf allgemeine Systemeigenschaften
   - Messbare / Nicht-Messbare Eigenschaften
 
-##Architektur und Moduleigenschaften
+##2.4 Architektur und Moduleigenschaften
+Gute Architektur in konkretem SW-Design sichtbar, baasiert auf Reihe klar definierter Prinzipien. Prinzipien beziehen sich auf einzelne Module oder Verhältnis der Module zueinander
 
 ###Architekturbild
-Webseite: Logik: z.B. nach Bereichen, oder nach Use Cases, Cross-Cutting-Concerns auf Schichten aufteilen (1 Schicht -> 1 CCC)  
+Webseite: Logik: z.B. nach Bereichen, oder nach Use Cases, Cross-Cutting-Concerns auf Schichten aufteilen (1 Schicht -> 1 CCC)
 
 1. In Schichten einteilen
 2. Ordnungskriterium auswählen (Use Cases, etc.)
@@ -70,19 +82,32 @@ Webseite: Logik: z.B. nach Bereichen, oder nach Use Cases, Cross-Cutting-Concern
   - **Intellectual Control:** Verständnis / Unterstützung durch Beteiligte, zentral
   - **Buildability:** geht aus Conceptual Integrity und Intellectual Control hervor, System muss so spezifiziert werden, dass es von gegebenen Team in gegebener Zeit realisiert werden kann, zentral
   - **Coupling and Cohesion:** Gemäss Programmierunterricht, Idealform: Lose Koppelung, je nach Situation: sinnvoll Koppelung aufheben (Performance)
+    - Data Coupling
+    - Stamp Coupling (Austausch Datenstrukturen)
+    - Control Coupling (Austausch steuert Kontrollfluss)
+    - Content Coupling (verändert Daten von anderem Modul)
+    - Coincidental Cohesion (Gruppierung durch Zufall)
+    - Logical Cohesion (Fkt. in Modul zusammengefasst, bezieht sich aber nich aufeinander)
+    - Temporal Cohesion (Zeitpunkt Verwendung bestimmt Gruppierung)
+    - Procedural Cohesion (Aufrufreihenfolge bestimmt Gruppierung)
+    - Communications Cohesion (Gruppierung durch gemeinsamen I/O)
+    - Sequential Cohesion (Abfolge Datenbearbeitung best. Gruppierung)
+    - Functional Cohesion (Gruppierung hat Ziel dass Modul Logik und Daten lokal halten - Information Hiding)
+    - Erreicht mit Independece of Design, Small Interfaces, Low Interface Traffic, Unity, Encapsulation
 
 ###Übergreifende Themen
   - **Design for Change:** Robust gegenüber Veränderungen, verschiedene Änderungsklassen:
     - Domain Specific Changes: Fachliche Änderungen, z.B. SAP
     - Analytical Changes: Nachbesserungen
     - Downsizing Changes: Reduktion gewisser Funktionalitäten, bei Agile: bereits eingebaut
-  - **Schwierigkeiten SW-Design:**
+
+##2.5 Schwierigkeiten SW-Design:
     - Complexity
     - Conformity: Kein stabiler Untergrund
     - Changeability: SW kann immer verändert werden
     - Invisibility: keine visualisierung, keine geometrische Repräsentation
 
-###Vorteile / Ziele einer Architektur
+##2.6 Vorteile / Ziele einer Architektur
   - SWA Grundlage für Kommunikation: Verständnis, Detail-Fragen
   - SWA treibende Kraft des System-Designs
   - SW Rahmen für Wiederverwendung SW-Artefakte
