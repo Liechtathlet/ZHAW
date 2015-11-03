@@ -1,0 +1,91 @@
+/************* Main Style *****************/
+.main {
+  margin-top:70px;
+}
+
+.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.inner-box {
+  width:500px;
+}
+
+#gameArea, #gameAreaBox{
+  max-width:100%;
+}
+/************* Sub Text Elements *****************/
+.textBoxContainer {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+.bigText{
+  font-size:1.5em;
+  display:flex;
+}
+
+.bigItalicText{
+  font-size:1.5em;
+  font-style:oblique;
+  display:flex;
+}
+
+.smallItalicText{
+  font-size:1.0em;
+  font-style:oblique;
+}
+
+/************* Spacer *****************/
+
+.smallSpacer {
+  height:5vh;
+}
+
+.bigSpacer {
+  height:10vh;
+}
+
+
+/**************************************************** Media-Screen: 500-800px */
+@media screen  and (max-width: 1000px) {
+
+.my-breakpoint .ui-block-a,
+.my-breakpoint .ui-block-b,
+.my-breakpoint .ui-block-c,
+.my-breakpoint .ui-block-d,
+.my-breakpoint .ui-block-e {
+	width: 100%;
+	float: none;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.textBoxContainer {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.textElement {
+  min-width:120px;
+}
+
+.smallText {
+  display:none;
+}
+
+.bigText, .bigItalicText{
+  font-size:1.3em;
+}
+
+.smallSpacer {
+  height:4vh;
+}
+
+.bigSpacer {
+  height:1vh;
+}
+}

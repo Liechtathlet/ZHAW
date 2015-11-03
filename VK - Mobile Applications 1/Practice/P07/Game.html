@@ -1,0 +1,105 @@
+  <!DOCTYPE html>
+  <html lang="de">
+    <head>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+      <title>Connect 4</title>
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"/>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+      <script type="text/javascript" src="./game.js"></script>
+    </head>
+
+    <body>
+
+     <div data-role="page" data-theme="b">
+         <div data-role="header" data-position="fixed" data-fullscreen="true">
+            <a href="Game.html" data-icon="home">Home</a>
+            <h1>Connect 4</h1>
+            <a href="settings.html" data-icon="gear">Settings</a>
+        </div>
+
+        <!--- Dialog 1 -->
+        <div data-role="popup" id="playerOnePopup" data-overlay-theme="b" data-theme="a" style="max-width:400px;" class="ui-corner-all">
+          <div data-role="header" data-theme="a" class="ui-corner-top">
+            <h1>Spieler 1</h1>
+          </div>
+          <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+             <div style="padding:10px 20px;">
+                <h3 class="ui-title">Name von Spieler 1</h3>
+                 <label for="un" class="ui-hidden-accessible">Username:</label>
+                 <input type="text" name="userOne" id="PopupPlayerOneName" placeholder="Name" data-theme="a"/>
+                 <button id="PlayerOneSubmitButton" class="submitButton ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Speichern</button>
+             </div>
+          </div>
+        </div>
+
+        <!--- Dialog 2 -->
+        <div data-role="popup" id="playerTwoPopup" data-overlay-theme="b" data-theme="a" style="max-width:400px;" class="ui-corner-all">
+          <div data-role="header" data-theme="a" class="ui-corner-top">
+            <h1>Spieler 2</h1>
+          </div>
+          <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+             <div style="padding:10px 20px;">
+                <h3 class="ui-title">Name von Spieler 2</h3>
+                 <label for="un" class="ui-hidden-accessible">Username:</label>
+                 <input type="text" name="userTwo" id="PopupPlayerTwoName" placeholder="Name" data-theme="a"/>
+                 <button id="PlayerTwoSubmitButton" class="submitButton ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Speichern</button>
+             </div>
+          </div>
+        </div>
+
+        <div class="main" data-role="content">
+          <div class="ui-grid-a my-breakpoint">
+              <div class="ui-block-a">
+
+                <div class="inner-box center">
+                  <div class="bigSpacer"> </div>
+
+                  <div class="textBoxContainer" id="nameOfPlayer1">
+                    <div class="textElement">
+                      <span class="bigText">Spieler 1</span>
+                    </div>
+                    <div class="textElement">
+                      <span class="bigItalicText" id="nameOfPlayerOneElement">Corinne Muster</span>
+                    </div>
+                  </div>
+
+                  <div class="smallSpacer"></div>
+
+                  <div class="textBoxContainer" id="nameOfPlayer2">
+                    <div class="textElement">
+                      <span class="bigText">Spieler 2</span>
+                    </div>
+                    <div class="textElement">
+                      <span class="bigItalicText" id="nameOfPlayerTwoElement">Peter Muster</span>
+                    </div>
+                  </div>
+
+                  <div class="bigSpacer"> </div>
+
+                  <span class="smallText">Two players put alternately a piece on the board. The first player with four...</span>
+                </div>
+              </div>
+
+              <div class="ui-block-b">
+                <div id="gameAreaBox" class="center inner-box ">
+                  <canvas id="gameArea" height="400px" width="500px">
+                  </canvas>
+                </div>
+              </div>
+          </div>
+
+        </div>
+
+
+      <div data-role="footer" data-position="fixed" data-fullscreen="true">
+        &copy; Daniel Brun, ZHAW, 2015
+      </div>
+
+    </div>
+    </body>
+  </html>

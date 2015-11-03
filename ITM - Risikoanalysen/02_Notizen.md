@@ -1,5 +1,5 @@
-##Lektion 2
-###Review Übungen 01
+## Lektion 2
+### Review Übungen 01
 ISO 31'000: Auswirkung von Unsicherheit (Mangel an Wissen) auf Ziele
   - Ziel definieren
   - Definition Unsicherheiten / Ungewissheiten (gemessen mit Wahrscheinlichkeiten)
@@ -7,7 +7,7 @@ ISO 31'000: Auswirkung von Unsicherheit (Mangel an Wissen) auf Ziele
     - Auswirkung + Ausmass
 
 
-##Risikoanalyse
+## Risikoanalyse
 Was wird wirklich erwartet / gebraucht? Aus Methode kann Zahl ermittelt werden, aber Aussagekraft muss von Aussen gegeben werden.
 
 As Low As Reasonable Practicable (ALARP), umgekehrte Pyramide, unterteilt in 3 Bereiche:
@@ -16,7 +16,7 @@ As Low As Reasonable Practicable (ALARP), umgekehrte Pyramide, unterteilt in 3 B
   - Ausgebildet für Risiko VS. "Konsument"-Risiko (Pyramide: Oben)
 
 
-##Methoden
+## Methoden
 
 |  Methode | Häufigkeit |  Ausmass   | Auswirkungen | Unsicherheiten | Ursachen |
 |---------:|:----------:|:----------:|:------------:|:---------------|---------:|
@@ -28,7 +28,7 @@ As Low As Reasonable Practicable (ALARP), umgekehrte Pyramide, unterteilt in 3 B
 Nachteile Fishbone, MLD, Bow-Tie: Top-Event wird benötigt
 
 
-###Fishbone-Diagramm (Ishikawa-Diagramm)
+### Fishbone-Diagramm (Ishikawa-Diagramm)
 Brainstorming-Methode, Beginn mit Top-Event (Unterwünschtes Ereignis, o.ä.), Definition von Auslösern / Ursachen, Bsp: Wie können User zum Datenverlust beitragen? wichtigsten Pfad ankreuzen
 
 Keine Risikoanalyse für Ausmass und Häufigkeit!, Nur Ursachen von Ereignissen darstellen
@@ -36,14 +36,14 @@ Keine Risikoanalyse für Ausmass und Häufigkeit!, Nur Ursachen von Ereignissen 
 ![](./Grafiken/02_Methoden_Fishbone_Diagramm.jpg)
 
 
-###Master-Logik-Diagramm (MLD)
+### Master-Logik-Diagramm (MLD)
 Beginn mit Top-Event (Unterwünschtes Ereignis), wie kann es zu diesem Datenverlust kommen? Hierarchie von Ursachen, grafisch dargestellte Liste
 
 Keine Risikoanalyse für Ausmass und Häufigkeit!, Nur Ursachen von Ereignissen darstellen
 
 ![](./Grafiken/02_Methoden_MLD_Diagramm.jpg)
 
-###Bow Tie
+### Bow Tie
 Top-Event: Unterwünschtes Ereignis, Ursachen des Ereignisses (Gefährdungen), Schäden der Ereignisse (Konsequenzen), zwischen Urachen - Ereignis: Präventive Sperren, zwischen Ereigniss und Schaden: Schadensminimierende Sperren
 
 **Sperren:** Mehrere Sperren pro Verbindung möglich  
@@ -55,7 +55,7 @@ Top-Event: Unterwünschtes Ereignis, Ursachen des Ereignisses (Gefährdungen), S
 ![](./Grafiken/02_Methoden_BowTie_mitEF_Diagramm.jpg)
 
 
-###Frequency/Consequence-Diagramm & Risikomatrix
+### Frequency/Consequence-Diagramm & Risikomatrix
 X-Achse: Ausmass, Y-Achse: Häufigkeit, Häufigkeit und Ausmass pro Top-Events eintragen
 
 **Akzeptanzlinie:**

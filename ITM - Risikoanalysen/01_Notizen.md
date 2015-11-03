@@ -1,5 +1,5 @@
-#Risikoanalysen in der IT
-##Einleitung
+# Risikoanalysen in der IT
+## Einleitung
 **Risiken:**
   - Potenzielle Schadensereignisse / Unerwünschtes Ereignis
     - Technisch
@@ -45,16 +45,39 @@
 
 **IT:**
   - Probability: Statistische Wahrscheinlichkeit
-  - Likelihood: Geschützte Wahrscheinlichkeit
+  - Likelihood: Geschätzte Wahrscheinlichkeit
 
-TODO: Formel ergänzen
+**Analysen:**
+  - Risikoanalyse: R = (A,C,P)
+    - A: Accident (unerwünschtes, zufälliges Ereignis)
+    - C: Consequence (Folge)
+    - P: Häufigkeit (Prob.) von A
+    - Erweiter: R = (A,B,C,P,U,K)
+      - B: C hängt von Barrieren-Wirksamkeit ab
+      - U: A und C enthalten Ungewissheiten
+      - K: U hängt vom Kenntnisstand K ab
+  - Vulnerability-Analyse: V = (B,C,P,U,K|A)
+    - K|A: Wissen um Anfälligkeit bestehender Stelle gegen Unfallereignis A
+    - Analyse Systemschwachstelle
+  - Resilence-Analyse: Re = (B,C,P,U,K|Ai)
+    - K|Ai: Wissen um Anfälligkeit best. Stelle auf alle Arten von Bedrohungen Ai i = 1,2, ...
+    - Einfluss aler Bedrohungen, Mass Widerstandskraft
 
 **Anwendung in Praxis:** Definition von "Risiko" ist wichtig, Auswahl Risikobeurteilungs-Methoden
 
-###Risk-Assessment-Prozess / Vulnerabilitätsanalyse
-TODO: Bild NIST
+### Risk-Assessment-Prozess
+![](./Grafiken/01_RiskAssessmentProzess.jpg)
 
+### Vulnerabilitätsanalyse
+![](./Grafiken/01_VulnerabilityAnalyses.jpg)
 
-##Risikomanagement im Kontext der ISO 31000
-TODO: Bild Management-Prozess
-TODO: Bild Anwendbarkeit Risikobeurteilung + Auswahl-Attribute
+## Management und Entscheidungsprozesse
+![](./Grafiken/01_MgmtDecisionProcess.jpg)
+
+## Probleme Risikoanalytik
+  - Ergebnisse innerhalb von Monaten Erwarteten
+  - Systeme veralten schnell, hochdynamisch
+  - wachsende Bedeutung IT-Systeme
+  - Hardware-Software-Dualität
+  - Knappe Resourcen
+  - Komplizierte Architekturen / Security

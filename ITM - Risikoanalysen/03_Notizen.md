@@ -1,13 +1,13 @@
-##Lektion 3 & 4
-##Prüfung
+## Lektion 3 & 4
+## Prüfung
 Risikodefinitionen: ISO 31'000, llgemeinere Form und formalere (Auswirkungen von Unsicherheiten auf Ziele)
 
 Hilfsmittel: 1 Blatt A4, PC oder Handgeschrieben
 
-##Allgemeines
+## Allgemeines
 Risiko: Frequency x Consequence (Kosten),C: Worst-Case, F: Gewichtung wie weit man von Worst-Case weg ist, Für Risikoabschützung: Rahmen für Betrachtung / Auswirkungen angeben
 
-##Failure Mode and Effects Analysis (FMEA)
+## Failure Mode and Effects Analysis (FMEA)
 Failure Modes: Ausfallarten  
 Effects: Konsequenzen
 
@@ -20,7 +20,7 @@ Effects: Konsequenzen
   - steigende Kundenanforderungen
   - verschärfte gesetzliche Auflagen
 
-###Arbeitschritte
+### Arbeitschritte
   1.  Auflistung aller Einheiten (E) (Personen, Computer, ...)
   2. Identifizierung aller Ausfallarten für jede der in 1. aufgelisteten E
   3. Bestimmung der Auswirkungen jeder Ausfallart auf andere E und Auswertung daraus resultierender Auswirkungen auf das System oder den Systemzustand
@@ -28,29 +28,29 @@ Effects: Konsequenzen
   5. Ermitteln von Vorgehensweisen zur Reduzierung der Ausfallhäufigkeiten und Ausfallauswirkungen (Risikoverminderung)
   6. Ausfüllen eines Formblattes, das die Ergebnisse der Arbeitsschritte 1. bis 5. zusammenfassend darstellt.
 
-###Ausfallarten
+### Ausfallarten
 Bestimmung aus Funktionselementen oder Einzelteilen
 
-###Auswirkungen
+### Auswirkungen
 Klassifizerung Systemendzustand und dessen Auswirkung (Klassen 1 -4, sicher - katastrophal)
 
 Klassifizierung der Ausfallwirkung (sehr schwer - sehr gering, Der Ausfall einer Einheit E führt...)  
 
 Klassifikation der Häufigkeiten (wahrscheinlich (z.B. > 1x in 10^4 Betriebsstunden) - sehr selten (< 1x in 10^7 Betriebsstunden))
 
-###FMEA-Arten und Zusammenhäng
+### FMEA-Arten und Zusammenhäng
   - System-FMEA: Einheiten eines Systemes, Funktionstüchtigkeit
   - Konstruktions- / Produkt-FMEA: Einheiten hinsichtlich Erfüllung beschriebener Teilfunktionen
   - Prozess-FMA: Tätigkeit / Arbeitschritt innerhalb einer Arbeitsfolge oder Prozesses
 
-###Bewertung
+### Bewertung
   - Kleinstes Risiko: 1
   - Mittleres Risiko: 25 (5 x 5)
   - Höchtes risiko: 100 (10 x 10)
 
 ![](./Grafiken/03_FMEA_Beispiel.jpg)
 
-###Struktur
+### Struktur
   - Spalte 1: Baugruppe / Teil / Prozess / Arbeitsschritte
   - Spalte 2: Ausfall- / Fehlerart
   - Spalte 3: Fehlerfolgen
@@ -67,8 +67,8 @@ Klassifikation der Häufigkeiten (wahrscheinlich (z.B. > 1x in 10^4 Betriebsstun
   **RPZ:** Orientierungsgrösse zur Prioritätssetzung, RPZ mit grossem A zuerst
 
 
-##Risikoanalysen in der IT
+## Risikoanalysen in der IT
 ISO 27002:2005, COBIT (Control Objectives for IT), Mehari (Méthode Harmoniséee de Resques), BSI, US-CERT
 
-###Mehari
+### Mehari
 Einfache Risikoanalyse, Hilfe Erstellung Sicherheitskonzepte, ISO 2700x konform

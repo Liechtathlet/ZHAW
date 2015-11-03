@@ -1,0 +1,112 @@
+  <!DOCTYPE html>
+  <html lang="de">
+    <head>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+      <title>Connect 4</title>
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"/>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+      <script type="text/javascript" src="./game.js"></script>
+    </head>
+
+    <body>
+      <!-- python -m SimpleHTTPServer 8000 -->
+     <div data-role="page" data-theme="b">
+         <div data-role="header" data-position="fixed">
+            <a href="Game.html" data-icon="home">New Game</a>
+            <h1>Connect 4</h1>
+            <!--<a href="settings.html" data-icon="gear">Settings</a>-->
+            <a href="#PopupSettings" data-rel="popup" data-icon="gear" data-transition="pop">Settings</a>
+            <a href="#PopupShowGames" data-rel="popup" data-icon="gear" data-transition="pop">Show Games</a>
+        </div>
+
+        <!--- Dialog: Settings -->
+        <div  id="PopupSettings" data-overlay-theme="b" data-theme="a" style="max-width:400px;" class="ui-corner-all">
+          <div data-role="header" data-theme="a" class="ui-corner-top">
+            <h1>Settings</h1>
+          </div>
+          <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+             <div style="padding:10px 20px;">
+                <h3 class="ui-title">Name of Player 1:</h3>
+                <input type="text" id="settingsPlayer1Name" placeholder="Name of Player 1" data-theme="a"/>
+
+                <h3 class="ui-title">Name of Player 2:</h3>
+                <input type="text" id="settingsPlayer2Name" placeholder="Name of Player 2" data-theme="a"/>
+
+                <br><br>
+                <button id="settingsSaveButton" class="submitButton ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Save</button>
+             </div>
+          </div>
+        </div>
+
+        <!--- Dialog: Game Joice -->
+        <div  id="PopupGameJoice" data-overlay-theme="b" data-theme="a" style="max-width:400px;" class="ui-corner-all">
+          <div data-role="header" data-theme="a" class="ui-corner-top">
+            <h1>Join Game</h1>
+          </div>
+          <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+             <div style="padding:10px 20px;">
+                 <strong>Click on a Player-Name to join the session</strong><br/>
+                 <ul id="providedGames">
+                 </ul>
+                 <button id="cgocnpRefresh" class="submitButton ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Refresh</button>
+                 <button id="cgocnpNewGame" class="submitButton ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">New Game</button>
+             </div>
+          </div>
+        </div>
+
+        <div class="main" data-role="content">
+          <div class="ui-grid-a my-breakpoint">
+              <div class="ui-block-a">
+
+                <div class="inner-box center">
+                  <div class="bigSpacer"> </div>
+
+                  <div class="textBoxContainer" id="areaPlayer1">
+                    <div class="textElement">
+                      <span class="bigText" id="descriptionOfPlayer1">...</span>
+                    </div>
+                    <div class="textElement">
+                      <span class="bigItalicText" id="nameOfPlayer1">...</span>
+                    </div>
+                  </div>
+
+                  <div class="smallSpacer"></div>
+
+                  <div class="textBoxContainer" id="areaPlayer2">
+                    <div class="textElement">
+                      <span class="bigText" id="descriptionOfPlayer2">...</span>
+                    </div>
+                    <div class="textElement">
+                      <span class="bigItalicText" id="nameOfPlayer2">...</span>
+                    </div>
+                  </div>
+
+                  <div class="bigSpacer"> </div>
+
+                  <span class="smallText">Two players put alternately a piece on the board. The first player with four...</span>
+                </div>
+              </div>
+
+              <div class="ui-block-b">
+                <div id="gameAreaBox" class="center inner-box ">
+                  <canvas id="gameArea" height="400px" width="500px">
+                  </canvas>
+                </div>
+              </div>
+          </div>
+
+        </div>
+
+
+      <div data-role="footer" data-position="fixed" >
+        &copy; Daniel Brun, ZHAW, 2015
+      </div>
+
+    </div>
+    </body>
+  </html>
