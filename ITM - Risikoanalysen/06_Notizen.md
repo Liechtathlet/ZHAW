@@ -1,6 +1,6 @@
 # Lektion 8 & 9
 ## Fehlerbaumanalyse
-Ausgehend von Ursache (Top-Event, Worst-Case), basierend auf boolscher Algebra
+Ausgehend von Ursache (Top-Event, Worst-Case), basierend auf boolscher Algebra, Berechnung: Wahrscheinlichkeit Ausfall Top-Event, Basis: auch Ausfallwahrscheinlichkeiten, Momentaufnahme, keine Berücksichtigung Zeit, keine Schleifen / Loops, für jeden Fehlerbaum: Minimalschnitte anschauen (einfachste und kompakteste Art und Weise Fehlerbaum darzustellen)
 
 ![](./Grafiken/06_Fehlerbaum_Bsp.jpg)
 
@@ -20,7 +20,7 @@ Logische Verknüpfungen: UND, ODER, NICHT, Und (Halb-Kreis ohne Striche innerhal
   - Korrekte Berechnung nur via Boolesche Algebra
 
 ### Berechnung
-Einsetzen Ausfallwsk in Basisereignisse, Verwendung Kanonische Darstellung für Berechnung, Und-Verknüpfung = Multiplikation, Oder-Verknüpfung = Addition
+Einsetzen Ausfallwsk in Basisereignisse, Verwendung Kanonische Darstellung für Berechnung, Und-Verknüpfung = Multiplikation, Oder-Verknüpfung = Addition - Multiplikatioin (Multiplikation kann bei kleinen WSK 10^-3 weg gelassen werden.). Wenn alle Ereignisse nur 1 x: gut, sonst Berechnung via boolsche Algebra oder Programm
 
 ### Regeln
   1.  Kleine WSK: Oder-Verknüpfungen einfach addierene, ohne Subtaktion
@@ -57,7 +57,7 @@ Wichtigkeit einzelner Systemeinheiten kennen / beachten, Beitrag für Systemzuve
 ### Strukturelle Importanz
 #### Ansatz
   - Jede Einheit i weist Zustand xi = 0 (ausgefallen) oder xi = 1 (intakt) auf.
-  - Systemfunktion φ(x), besteht aus Einheiten xi, System: Zustand 0 oder 1
+  - Systemfunktion phi(x), besteht aus Einheiten xi, System: Zustand 0 oder 1
   - Zustandsvektor x: Realisierung Einheiten-Zustände in System
   - Anzahl Kombinationen: 2^n unterschiedliche Zustandsvektoren
 
@@ -77,8 +77,8 @@ WSK, dass sich System in Zustand befindet, in dem der Betrieb kritisch ist, part
 
 ![](./Grafiken/07_ImportanzAnalyse_MarginaleImportanz3.jpg)
 
-### Diagnostiische Importanz
-Am meisten verwendet
+### Diagnostiische Importanz (Fusel-Wesley)
+Am meisten verwendet, Bruch: Nenner: Ausfall-WSK Top-Event, Zähler: Ausfall-WSK Komponente i - Wie viel trägt Ausfall-WSK einer Komponente zur Gesamtausfall-WSK bei. Wenn i mehrfach: Minimalschnitte betrachten: Nenner: Ausfall-WSK Top-Event, Zähler: Summe aller Minimalschnitte (Pro Minimalschnitt: Produkt der Ausfall-WSK der einzelnen Komponenten) mit Komponente i
 
 ![](./Grafiken/07_ImportanzAnalyse_DiagnostischeImportanz.jpg)
 

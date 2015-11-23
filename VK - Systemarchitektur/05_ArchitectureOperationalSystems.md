@@ -125,5 +125,41 @@ Standardisierungs: SCOR (Supply-Chain Operations Reference-model), Supplier, Ent
     - Expert Systems
     - Language Processing
 
+#### CSCW (Computer Supported Cooperative Work)
+Zusammenarbeit von Menschen in Gruppen unterstützen, E-Mail, Workflow-Systems, Video Conferences, ...
+
+  - Immer für Gruppenarbeit (2 oder mehr interagierende Personen, die einander beeinflussen) ausgelegt.
+
+##### Enterprise Content Management
+
+**Architektur:**
+  - Clients: Portals & Web Applications, LOB & ISV Solutions, Desktop Applications
+  - Services: Capture, Classification & Taxonomy, Records-, Document-, Image-, Archive-, Web Content-, Forms-, Reports-Management, Search & Discovery, Content Centric BPM, Collaboration
+  - Repositories: File Server, Image / Movie DB, Archive
+
+    - Suchbarkeit
+    - Workflow
+    - Verknüpfung: Dokumente mit Metadaten, Verknüfpung zu Geschäftsfall
+    - Sicherheit
+    - Nachvollziehbarkeit
+    - Versionierung
+    - Sicherung
+    - Mehrsprachigkeit
+    - Komposition
+
+**CQ**
+  - Distributer: Dynamisch Inhalt herstellen
+  - Render: Aus dynamischen Inhalten statischen Inhalt erzeugen
+  - Guardian: Überwachung System
+
+
 ## Hints
 Neuen MA einstellen: ca. 50'000 .-
+
+## Zusammenfassung
+  - Verschiedene Systemtypen
+  - Breites Spektrum im operativen und distributiven Bereich, sehr wenige Daten (nur strukturierte), 80 % der Systeme für 20% der Daten zuständig
+  - Wenige Anbieter für Bearbeitung unstrukturierter Daten
+  - Viele Anbieter für Bearbeitung strukturierter Daten
+  - Gesamtarchitektur besteht aus mehreren Vieews / Blickpunkten
+  - Neues System: Was ist es für ein System? Wie haben es die anderen gemacht?
