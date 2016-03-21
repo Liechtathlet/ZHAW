@@ -124,6 +124,65 @@ let x = { Re = 0.0; Im = 1.0}
 x. Im ;;
 ~~~
 
+## Funktionstyp
+Funktion: Stellt jeder Eingabe x genau eine Ausgabe f(x) gegenüber, reine Funktion hat keinerlei Nebeneffekte, funktionstypen werden mit -> dargestellt., f:a -> b ist eine Funktion von a nach b
+
+Funktionspfeile sind rechtsassoziativ: f: int -> int -> int ist äquivalent zu f:int -> (int -> int)
+
+~~~
+let x y z = y (z <)
+
+x: (a -> b) -> ((a -> b) -> a) -> b
+y: a -> b
+z: (a -> b) -> c
+~~~
+
+### Mehrstellige Funktionen
+Funktion mit mehreren Parametern
+
+  - Variante 1: n-stellige Funktion, welche als Eingabewert ein n-Tupel akzeptiert.
+  - Variante 2: n-Stellige ist eine Funktion, die eine n-1 stellige Funktion als Returnwert zurückgibt.
+
+## Currying
+Currying und Uncurrying: Übersetzen zwischen Variante 1 und 2 (Mehrstellige Funktionen)
+
+## Partial Application
+Eine "curried" funktion wird nicht "erschöpfend" mit Argumenten versehen. Im Endeffekt werden mehrstellige Funktionen immer über eine partielle Anwendung angewendet. Hat nichts mit partiellen Funktionen zu tun. ist in FUP ein Mittel um "generischen" Code zu erzeugen.
+
+~~~
+let plus4 = (+) 4
+~~~
+
+## Optiontypes
+~~~
+type 'a Option =
+  | Some of 'a
+  | None
+~~~
+
+Modellierung partieller Funktionen:
+~~~
+let parse (x:string) =
+  try Some <| int x
+  with _ -> None
+~~~
+
+**Vergleich zur Null-Referenz:**
+Durch Verwendung eines Option-Types wird explizit gemacht, dass die gegebene Funktion partiell ist.
+  - Unterschied zwischen Null-Referenz und validem Objekt sind für Typensystem "unsichtbar"
+  - Null-Referenzen machen in FUP wenig Sinn: Werte sind unveränderlich, Namen stehen nicht für Speicherbereiche
+  - Null-Referenzen zerstören referenzielle Transparenz (NullReferenceException ist ein Seiteneffekt)
+
+## Höhere Funktionen
+Eine Funktion höherer Ordnung ist eine Funktion, die Funktionen als Argumente erhält oder Funktionen als Ergebnis leifert.
+
+~~~
+let ref fold folder state = function
+  | [] -> state
+  | x::xs -> fold folder (folder state x) xs
+~~~
+
+
 ## Funktionen
 
 List.fold
@@ -131,6 +190,7 @@ List.sum
 List.map
 let (|>) f g = g f
 
+#time
 '<SomeName> : Indikator für generischen Typ, Bsp List<'a> = 'a List
 
 Typen: rechtsassoziativ

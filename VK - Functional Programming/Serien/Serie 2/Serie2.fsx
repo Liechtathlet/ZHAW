@@ -41,7 +41,7 @@ eval (Zero)
 
 let rec interpret = function
   | 0u -> Zero
-  | n -> interpret (n-1u) |> Succ
+  | n -> Succ (interpret (n-1u))
 
 interpret 0u;;
 interpret 5u;;
@@ -49,11 +49,16 @@ interpret 5u;;
 // ***** Aufgabe 2c) *****
 let rec ( ++ ) x = function
   | Zero -> x
-  | Succ y -> Succ (x++y) ;;
+  | Succ y -> Succ (x ++ y) ;;
 
 let rec ( -- ) x = function
     | Zero -> x
-    | Succ y -> Succ (x--y) ;;
+    | Succ y ->
+      match x with
+        | Zero -> Zero
+        | Succ x -> x -- y;;
+
+eval ((interpret 4u) -- (interpret 2u))
 
 let rec ( ** ) x = function
   | Zero -> Zero
@@ -67,24 +72,24 @@ let rec fact = function
 fact (interpret 5u) |> eval;;
 
 // ***** Aufgabe 2d) *****
-type IntNumber = {number1: NatNumber; number2: NatNumber};;
+type IntNumber = {minuend: NatNumber; subtrahend: NatNumber};;
 
-let embed = function
-  | Zero ->  {number1 = Zero; number2 = Zero}
-  | Succ n-> {number1 = Succ n; number2 = Zero};;
+let embedInt = function
+  | Zero ->  {minuend = Zero; subtrahend = Zero}
+  | Succ n-> {minuend = Succ n; subtrahend = Zero};;
 
-embed Zero;;
-embed (Succ Zero);;
-embed (Succ (Succ Zero));;
+embedInt Zero;;
+embedInt (Succ Zero);;
+embedInt (Succ (Succ Zero));;
 
-let rec eval = function
-  | {number1 = Zero; number2 = Zero} -> 0
-  | {number1 = Succ n; number2 = Zero}  -> 1 + eval {number1 = n; number2 = Zero}
-  | {number1 = Zero; number2 = Succ n} -> eval {number1 = Zero; number2 = n} - 1;;
+let evalInt x =
+  let a = int <| eval(x.minuend)
+  let b = int <| eval(x.subtrahend)
+  a - b
 
-eval (embed Zero);;
-eval (embed (Succ Zero));;
-eval (embed (Succ (Succ Zero)));;
+evalInt (embed Zero);;
+evalInt (embed (Succ Zero));;
+evalInt (embed (Succ (Succ Zero)));;
 
 let rec interpret = function
   | 0 -> {number1 = Zero; number2 = Zero}
@@ -101,15 +106,13 @@ interpret -5;;
 
 //add
 let add x y=
-   let tmp  = {number1 = x.number1 ++ y.number1; number2 =x.number2 ++ y.number2}
-   if tmp.number1 >= tmp.number2 then {number1 = tmp.number1 -- tmp.number2; number2 = Zero}
-   else {number1 = Zero; number2 = tmp.number2 -- tmp.number1};;
+  {minuend = x.minuend ++ y.minuend; subtrahend = x.subtrahend ++ y.subtrahend}
 
 eval (add (interpret 2) (interpret 3))
 
 //neg
 let neg x =
-  {number1 = x.number2; number2 = x.number1};;
+  {minuend = x.subtrahend; subtrahend = x.minuend};;
 
 eval (neg (interpret 5));;
 
@@ -120,3 +123,22 @@ let sub x y =
 sub (interpret 3) (interpret 2);;
 
 // **** Aufgabe 3 ****
+// Fractran, esoterische, Pseudosprache, Touring-Vollständig, Liste von Brüchen
+// (x,y), (a,b), (c,d)
+// Funktion von n -> n
+// Beispiel: 15 (input) -> ((1/4),(1,5)), Term für Term: input durch Term ganzzahlig teilbar, fertig wenn kein Term mehr teilbar
+// Rekursion: Status-Variable mitgeben
+// 5I -> BigInt 5
+
+let myProg =  [(1I,4I); (1I,5I)]
+let myInput = 15I
+
+let rec interpretFractran prog input =
+  let resT = List.tryFind (fun t ->
+      match t with
+        | (a,b) -> (((a*input) % b) = 0I)) prog
+  match resT with
+    | None -> input
+    | Some (a,b) -> interpretFractran prog (((a*input) / b));;
+
+interpretFractran myProg myInput;;

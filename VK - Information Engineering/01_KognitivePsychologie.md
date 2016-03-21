@@ -103,3 +103,31 @@ Weitere Unterteilung des Langzeitgedächnisses:
       - Semantic Memory: individuelles Wissen über die Welt, unabhänig von konkreten Lern- / Ereigniskontext, "Vestehen"
       - Episodic Memory: Autobiographische Ereignisse
       - Procedural Memory: Speicherung verinnerlichter hochautomatisierter Vorgänge
+
+### Die mentale Organisation des Wissens
+  - Knowledge
+    - Simple Organization
+      - Object Concepts
+      - Relational Concepts
+    - Complex Orgnaisation
+      - Relational Concepts
+      - Events and Other Knowledge Structures
+        - Schemata
+        - Frames
+        - Scripts
+
+#### Simple Organization
+  - Klassierung durch Attribute
+  - Network Theory of Semantic Memory
+  - Allgemeines Netzwerkmodell
+  - Feature Comparison Model
+  - Prototyp Modelle: Kategorien um zentrale Prototypen, Prototyp: Sammlung von charakteristischen Attributen oder bester Repräsentant seiner kategorie, Abbildung in IT via neuronale Netzwerke
+    - Relationales Modell: Grundsätzlich Erweiterung der "isa"-Relation
+      - Kann immer durch Prädikatelogik dargestellt werden.
+    - Semantische Dekomposition: 12-15 "primitive actions", die alle Relationen umfassen
+
+**Onthologie:** Beliebige Klassifizierung von Wissen, muss nicht hierarchisch sein, muss Knoten von darüberliegenden Knoten nicht vererben.
+
+#### Complex Organisation - Schemata, Frames, Scripts
+  - Schemata / Scripts: bestehen aus Beziehungen, Variablen und Werten, verschiedene Ausprägungen, Variablen können wiederum Schemata / Scripts sein
+  - Schema: Strukturierter cluster von Konzepten, Struktur ist situativ, auf Basis der vorhandenen Wissens.
