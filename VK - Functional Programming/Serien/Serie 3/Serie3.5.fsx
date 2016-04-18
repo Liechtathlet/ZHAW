@@ -129,11 +129,94 @@ let glGiveOutCardToPlayer state =
 let glSetActivePlayer state player =
   {state with GameState.activePlayer = player}
 
+let glPlayForCroupier state =
+  // Wenn 21: fertig
+
+  // Wenn >= 17: stay, evaluate
+
+  // Wenn < 17: next card
+
+
+let glPlayForPlayer state player =
+  let newState = (glSetActivePlayer state player)
+
+  // Calculate card value
+  // 21 --> BlackJack
+
+  // > 21 --> verloren
+
+  // < 21 --> more cards?
+
+  if (giPlayerWantsAnotherCard) then
+    newState = (glGiveOutCardToPlayer player)
+    //Check: Value more than 21 --> out, loses bet, game finished
+
+    newState
+  else
+    newState
+
+let glEvaluateWinner state =
+  // Spieler > 21: Out / Over, Spieler hat verloren
+  // Croupier > 21: Spieler haben gewonnen
+  // Spieler Wert näher an 21: gewonnen, sonst Croupier
+  // Untentschieden: kein Gewinn / Verlust
+
+
+let glCalculateValueOfDeck deck =
+  let result = List.fold (fun tot x ->
+    let v = x.card
+    match v with
+      | Ace -> tot+1
+      | Jack -> tot+10
+      | Queen -> tot+10
+      | King -> tot+10
+      | :? System.Int32 -> tot+v
+    ) 0 deck
+
+    let result2 = List.fold (fun tot x ->
+      let v = x.card
+      match v with
+        | Ace -> tot+11
+        | Jack -> tot+10
+        | Queen -> tot+10
+        | King -> tot+10
+        | :? System.Int32 -> tot+v
+      ) 0 deck
+
+      if (result = 21 || result2 = 21) then
+        21
+      else
+        let diff1 = 21 - result
+        let diff2 = 21 - result2
+
+        if (diff1 < diff2) then
+          result
+        else
+          result2
+
+      if (result < 21 && result2 < 21) then
+        if (result < result2) then
+          result2
+        else
+          result
+      else
+        if (result = 21 || result2 = 21) then
+          21
+        else
+          if (result < result2 ) then
+            result2
+
 // give out a card to all players
 let giveOutCardToAllPlayers state =
   let newState = (glGiveOutCardToPlayer <| (glSetActivePlayer state Croupier))
   newState = (glGiveOutCardToPlayer <| (glSetActivePlayer newState Player1))
   (glSetActivePlayer newState Croupier)
+
+let giveOutCardToPlayers state =
+  let newState = (glGiveOutCardToPlayer <| (glSetActivePlayer state Player))
+
+let giveOutCardToCroupier state =
+  let newState = (glGiveOutCardToPlayer <| (glSetActivePlayer state Croupier))
 
 // Receive bet for Player
 let rec glReceiveBet state =
@@ -163,46 +246,22 @@ let playBlackJack() =
   gameState = (giveOutCardToAllPlayers gameState)
 
   // 3: Give out next card to all players (except groupier)
+  gameState = (giveOutCardToPlayers gameState)
 
   // 4: Ask every player for more cards
-    //Check: Value more than 21 --> out, loses bet, game finished
+  gameState = (glPlayForPlayer gameState Player)
 
-  //let rec innerPlay() =
+  // 5: 2. card for croupier
+  //TODO: eigentlich am Anfang, einfach verdeckt
+  gameState = (giveOutCardToCroupier gameState)
 
-    // Croupier: zweite Karte
+  gameState = (glPlayForCroupier gameState)
 
-    // Croupier: Wert >= 17: stay
+  //Evaluate, calculate difference and winner
+  gameState = (glEvaluateWinner gameState)
+  // Rules:
+  //https://www.pagat.com/de/banking/blackjack.html
+  //https://de.wikipedia.org/wiki/Black_Jack
 
-    // Croupier: Wert <= 16: Nochmals eine Karte
-
-    // Berechnung Differenz 21 zu Croupier
-
-    // Berechnung Differenz 21 zu Spieler
-
-    // Vergleich differenzen
-
-  //  match System.Console.ReadLine().ToLower() with
-  //    | "h" -> playBlackJack ()
-  //    | _ -> printfn "Game Ends!";;
-
-  //  printfn "Noch eine runde?  [y/n]"
-
-  //  match System.Console.ReadLine().ToLower() with
-  //    | "y" -> playBlackJack ()
-  //    | _ -> printfn "Game Ends!";;
-
-//playBlackJack ()
-
-
-
-// 5: Alle Spieler bedient: Croupier zieht seine 2. Karte, >= 17 Punkte: stay, <= 16: hit
-//Croupier: Ass stets als 11 Punkte (ausswer wenn resultat mehr als 21, dann mit 1 Punkt)
-// Croupier Punkte > 21: Alle verbleibenden Spieler haben gewonnen
-// Sonst: Spieler gewinnen, deren Kartenwert näher an 21 ist, als der Wert vom Croupier, Gewinn: 1:1
-// Unentschieden: Croupier und Spieler gleich viele Punkte, gewinnt nichts / verliert nichts
-
-//Werte: Ass: 11 oder 1
-//2 - 10: entsprechend den Augen
-//Bilder: (Bube, Dame, König): 10
 
 //TODO: negative Bet

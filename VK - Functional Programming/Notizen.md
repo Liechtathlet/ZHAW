@@ -182,6 +182,62 @@ let ref fold folder state = function
   | x::xs -> fold folder (folder state x) xs
 ~~~
 
+## Rekursion
+### Formen der Rekursion
+  - Primitive Rekursion
+  - Wertverlaufsrekursion
+  - Strukturelle Rekursion
+
+#### Primitive Rekursion
+Rekursive Definitionen zeichnen sich durch die Bezugsnahme auf das zu definierende Objekt aus. Funktionswert an Stelle 0 ist bekannt, gegebenes Verfahren, wie aus bekanten Funktionswerten unbekannte Funktionswerte erzeugen kann (Algorithmus)
+
+#### Wertverlaufsrekursion
+Spezialfall: in rekursiver Definition wird auf mehrere "Vorgänger" Bezug genommen
+
+~~~
+let rec cor g n =
+  g <| List.init n (cor g)
+
+let fib =
+  let g xs
+    match List.rev xs with
+      | x::y::rest -> x+y
+      | _ -> 1
+  cor g
+~~~
+
+~~~
+let rec g = function
+  | n when n < 3 -> pown 2 n
+  | n -> g (n-1) + g(n-2) + g(n-3)
+~~~
+
+#### Allgemeine Rekursion
+Bis jetzt: Rekursion entlang der "üblichen Ordnung" < der natürlichen Zahlen, Rekursion kann entlang jeder Relation angewendet werden.
+
+#### Strukturelle Rekursion
+Spezialfall der allgemeinen Rekursion, Dekonstruktion von induktiv definierten Typen, (Konstruktor wird ersetzt durch Funktion: Siehe Beispiel eval), Rekursion ist universell
+
+~~~
+type term =
+  | Num of int
+  | Sum of term*term
+  | Prod of term*term
+
+let rec eval = function
+  | Sum (x,y) -> (eval x) + (eval y)
+  | prod (x,y) -> (eval x) * (eval y)
+  | Num x -> x
+
+let t = Sum (Prod (Num 3, Num 7), Num 2)
+eval t
+~~~
+
+### Fixpunkte
+Fixpunkt: bietet einen konstruktiven Zugang zu rekursiv definierten Funktionen, Fixpunkt = f(x) = x, analog bei höheren Funktionen, Funktion kann keine Fixpunkte haben (f(x) = x+1), kann einen Fixpunkt haben oder mehrere Fixpunkte haen. Einschränkung: Siehe Slides, Leere Menge: Kleinstes Element, Teilmenge von allen, Grösstes Element: Gibt es nicht, Maximale Elemente: Bildet alle ab (Totale Funktionen: failt nie, ist überall definiert), jede Kette hat eine kleinste obere Schranke
+
+### Kombinatoren
+Fixpunktkombinator: Funktion die von gegebenen Funktionalen den Fixpunkt berechnet
 
 ## Funktionen
 

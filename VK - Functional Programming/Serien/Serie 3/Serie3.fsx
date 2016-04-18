@@ -11,7 +11,7 @@ let x3 y z = List.filter y (z y)
 
 // **** Aufgabe 2)
 // f1 Nimmt ein Tupel von (x,y) entgegen. Die Funktion benötigt zwingend ein Tupel als argument und wertet das Ergebnis gleich aus
-// f2: Parameter werden als Funktion übergeben. Die Auswertung kann gestaffelt erfolgen.
+// f2: Parameter werden als Funktion übergeben. Die Auswertung kann gestaffelt erfolgen. (curried)
 
 //D = (int,int), W= (int)
 //D = x:int -> y:int -> int
