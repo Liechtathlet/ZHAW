@@ -239,6 +239,80 @@ Fixpunkt: bietet einen konstruktiven Zugang zu rekursiv definierten Funktionen, 
 ### Kombinatoren
 Fixpunktkombinator: Funktion die von gegebenen Funktionalen den Fixpunkt berechnet
 
+
+## Lambda-Kalküle
+### Einleitung
+Lambda-Kalkül als funktionale "Proto-Sprache"
+
+  - Implementieren die Idee von Algorithmen als "evaluation of expressions"
+  - Einfache aber ausdrucksstarke Syntax
+  - Mächtige Semantik (Turing vollständig)
+  - Modelliert Funktionsdefinitionen (Abstraction) und Funktionsanwendung (Evaluation)
+  - Implementiert die "programs as data duality"
+  - Funktionale Sprachen können als Variante gesehen werden.
+
+### Bestandteile
+  - Terme ("Programme im λ-Kalkül"): Zeichenvorrat (Alphabet) besteht aus unendlich vielen Variablen, dem Zeichen λ, dem Punkt und Klammern, Fakultativ: Konstanten
+  - Regeln zur Manipulation von Termen
+  - Eventuell ein Typensystem (typisierte Kalküle)
+
+**Geht**:
+  - λx.λy.(x y) (oder Kurz: λx y.(x y))
+  - λx.x
+
+**Geht nicht:**
+  - λ(λx.x).x
+  - λ (x y).x
+
+~~~
+λx.(f x) -> f
+~~~
+
+### Termen
+
+- Jede Variable und jede Konstante ist ein Term
+- Sind A und B Terme, dann ist auch (A B) ein Term (Applikation)
+- Ist x eine Variable und A ein Term, dann ist auch λ x.A ein Term (Abstraktion)
+- Term von der Form (A B) steht für Anwendung von A auf B (F#: (f x))
+- Term λx.A entspricht anynomer Funktion fun x -> A, aufgrund der Typisierung von F# lassen sich nicht alle Terme (des untypisierten λ-Kalküls) in F# realisieren (Bsp: λ.x(x x))
+- **Konventionen**
+  - Äussere Klammern können weggelassen werden (A wird als (a) gelesen)
+  - Applikation ist linksassoziativ A B C wird als ((A B) C) gelesen
+  - Der Bereich einer quantifizierten Variable wird grösstmöglich angenommen (λx.A B C wird als λx.((A B) C) gelesen.
+  - Terme von der Form λxyz.A werden als λx.λy.λz.A gelesen
+
+~~~
+λxy.AB λu.A -> λx.λy.((A B) λu.A)
+~~~
+
+### Freie und gebundene Variablen
+Menge der freien Variablen FV(A) eines λ-Terms A ist wie folgt gegeben (Nicht Lambda-gebundene Variablen, wenn 1x frei, dann frei):
+  - Ist A eine Konstante, dann ist FV(A) = ∅
+  - Ist A eine Variable v, dann gilt FV(A) = {v}
+  - Ist A = (B C), dann ist FV(A) = FV(B) ∪ FV(C)
+  - Ist A = λx.B, dann ist FV(A) = FV(B)\{x}
+
+### Substitution
+  - Term A[x:= B] erhält man, wenn im Term A alle freien Vorkommen der Variablen x durch den Term B ersetzt.
+  - Substitution A[x:=B] ist zulässig, wenn keine der freien Variablen von B durch die Substitution gebunden wird
+
+~~~
+λx.(y x)[y:=add]
+λx.(add x)
+
+((add x) y)[x:=3][y:=]
+((add 3) 4)
+~~~
+
+  - Unzulässige Substitution
+    ~~~
+    λxy.(x y z)[z:=x]
+    ~~~
+  - zulässige Substitution
+    ~~~
+    λxy.(x y z)[z:=u]
+    ~~~
+
 ## Funktionen
 
 List.fold

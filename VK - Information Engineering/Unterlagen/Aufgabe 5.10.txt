@@ -1,0 +1,45 @@
+Aus welchem Grund ist die Playstation 4 nicht mehr mit den Cell Prozessoren ausgestattet?
+Meinung? 
+
+
+Wie wurden die Designziele erfüllt?
+Ziel: 200 x schneller als die Playstation 1
+Outstanding performance, especially on game / multimedia applications
+real-time responsiveness to the user and the network
+Applicability to a wide range of platforms
+Support fort introduction in 2005
+
+
+Outstanding performance, especially on game / multimedia applications
+--
+
+
+Broadband Processor Architecture erweitert die 64-bit power Architecture mit synergistischen Prozessoren mit DMA und Synchronisationsmechanismen für die Kommunikation.
+Verbesserungen für Real-Time Management
+
+-Low Power & Low Voltage (High design frequency)
+-Conventional entry point for programmers, virtualization, multi OS Support, ... (Power Architecture)
+-Single-Instruction, Multiple-Data
+-power- and area efficient power processor element
+-Synergistic processor elements for coherent offload (local memory + async coherent DMA, large reigster file)
+-High-bandwith flexible I/O
+-Full-custom modular implementation
+
+
+
+-Reduced Pipline depth (23 stages), reduce amount of time per stage factor 2, avoiding long wires and limit comm. delay
+-SPE: local store memory, instructions and data, 
+
+
+Substantial improvement over the state of the art in performance in watt:
+-Increasing Local Store to 256, emotion engine, processor with accelerator processer, memory access only via DMA
+Organization of dataflow
+-SIMD Model, dominant model in x86 and PowerPC processors as well as the emotion engine
+
+Bandwith requirement: increase inside chip
+
+1: Miniaturisierung
+2: Good responsivevess: SPEs mit DMA's
+3: Eigenständig auf Interrupts agieren
+4: Zusätzlicher Cache
+5: PowerArchitecture

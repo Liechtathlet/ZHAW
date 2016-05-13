@@ -1,0 +1,2 @@
+/home/user/remote/Development/Repositories/github/ZHAW/VK - Functional Programming/Serien/Serie 6/DigitRecognizer/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.fs
+/home/user/remote/Development/Repositories/github/ZHAW/VK - Functional Programming/Serien/Serie 6/DigitRecognizer/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.fs

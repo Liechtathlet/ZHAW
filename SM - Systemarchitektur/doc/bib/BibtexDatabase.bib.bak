@@ -2,6 +2,19 @@
 % Encoding: UTF8
 
 
+@Electronic{E:Cisco:EnrichProcessesIoE,
+  Title                    = {Enriching Business Processes through the Internet of Everything},
+  Author                   = {Anil Kalbag, Gerald Silverman},
+  Language                 = {EN},
+  Month                    = {Juli},
+  Organization             = {Cisco Systems Inc.},
+  Url                      = {http://www.cisco.com/c/en/us/solutions/collateral/enterprise/cisco-on-cisco/t-en-07142014-business-process-ioe.html},
+  Year                     = {2014},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.04.17}
+}
+
 @Electronic{E:Blog:InfoQ:WSO2_ExtendedCapForIOT,
   Title                    = {WSO2 Extends its Internet of Things Process Orchestration Capabilities},
   Author                   = {Kevin Farnham},
@@ -13,6 +26,17 @@
 
   Owner                    = {dani},
   Timestamp                = {2016.04.04}
+}
+
+@Electronic{E:SearchCIO:Def:BPM,
+  Title                    = {business process management (BPM)},
+  Author                   = {Margaret Rouse},
+  Language                 = {EN},
+  Organization             = {SearchCIO},
+  Url                      = {http://searchcio.techtarget.com/definition/business-process-management},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.13}
 }
 
 @Electronic{E:Oracle:IoT:BPMN,

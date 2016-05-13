@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="DigitRecognizer.fsproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GuidedScript.fsx">
+    <Files>
+      <File FileName="GuidedScript.fsx" Line="52" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <RunToCursorBreakpoint file="/home/user/remote/Development/Repositories/github/ZHAW/VK - Functional Programming/Serien/Serie 6/DigitRecognizer/GuidedScript.fsx" line="54" column="5" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

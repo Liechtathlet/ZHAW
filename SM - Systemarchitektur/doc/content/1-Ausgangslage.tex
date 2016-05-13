@@ -3,15 +3,87 @@
 
 \chapter{Ausgangslage}
 
-Bis heute: IOT mehr Machine zu Machine, aber der Benutzer muss auch beteiligt werden: Reporting, Data Visualization, Data analysis, Data exploration, Decision making, Storytetelling
+In der heutigen Zeit mit immer komplexer werdenden Geschäftsfeldern und Märkten ist \gls{acr:BPM} ein essentieller Bestandteil kleiner, mittlerer und grossen Unternehmen. \gls{acr:BPM} bietet den Unternehmen viele essentielle Vorteile. Diesen Vorteilen gegenüber stehen jedoch die Aufwände, um \gls{acr:BPM} umzusetzen und anschliessend weiter zu pflegen. \todo{ Mehr zu Vor- / Nachteilen?}
 
-1. Schritt: Analying and managing inbound event streams or build basic analytics
-2. Schritt: Wenn Lösung funktioniert und etabliert: Effizient der Verarbeitung im Vordergrund
+Vor allem im Industrie-Zweig ist das \gls{acr:IOT} seit längerer Zeit ein wichtiger Bestandteil des Unternehmens. Mit der zunehmenden Verbreitung und Akzeptanz wird der Nutzen des \gls{acr:IOT} zunehmend auch in anderen Wirtschaftszweigen und im Privat- / Heimandwenderbereich entdeckt und genutzt.
 
-Problemstellungen: Standardisierungslücke -> IFML
+Durch die zunehmende Ausbreitung ergeben sich nun zwei Fragestellungen.
+
+\begin{itemize}
+\itemBfText{Wie sieht die Kommunikation mit / innerhalb des \gls{acr:IOT} in Zukunft aus?}{Bisher wird das Internet der Dinge eher im Rahmen der Kommunikation von zwei oder mehreren Dingen, beziehungsweise Maschinen betrachtet. Bei gewissen Anwendungsfällen ist jedoch die Integration des Menschen in den Kommunikationsprozess von Vorteil, beziehungsweise sogar unerlässlich. Durch die Einbindung des Menschen ergeben sich dann im Gegenzug viele neue mögliche Einsatzzwecke und Anwendungsgebiete. Als Stichworte sind hier Reporting, Datenanalyse, Datenauswertung, Datenvisualisierung und Entscheidungsfindung zu nennen.}
+\itemBfText{Wie wird das \gls{acr:IOT} in die bestehenden Geschäftsprozesse integriert?}{\gls{acr:IOT} Anwendungen / Lösungen wurden bisher oft in einem isolierten Kontext betrachtet. Spätestens nach in Beitriebnahme der Lösung stellt sich früher oder später die Frage, wie das ganze nun in (evtl. bestehende) Geschäftsprozesse integrieren lässt.}
+\end{itemize}
+
+Eine Möglichkeit um die Problemstellung der ersten Frage zu lösen, wäre über die Beantwortung / Lösung der zweite Frage. Dies würde bedeuten, dass die Kommunikation zwischen Geräten und Menschen über die Implementation / Anbindung von Geschäftsprozessen bewerkstelligt werden könnte.
+
+Diese beiden Fragestellungen stellen sich nicht nur für den Geschäftsbereich, sondern auch im Privatbereich. \gls{acr:IOT}-Endgeräte, beziehungsweise "`Dinge"' halten immer mehr auch im Privatbereich Einzug. Dabei handelt es sich oftmals um Produkte aus dem Bereich der Heimautomatisierung. Bei der Heimautomatisierung geht es ebenfalls um die Automatisierung / Steuerung von Abläufen. Im weitesten Sinn handelt es sich somit um Geschäftsprozesse im Privatbereich.
+
+Diese Arbeit soll aufzeigen, was es für im Heimanwender / Privatbereich für Möglichkeiten gibt um solche "`Geschäftsprozesse"' im Bereich der Heimautomatisierung zu realisieren.
 
 
 
 
 
 
+
+\section{Business Process Managemnt (BPM)} \label{sec:Ausg:BPM}
+Dieses Kapitel erläutert die wichtigsten Informationen rund um das Management von Geschäftsprozessen (Business Process Management).
+
+Jedes Unternehmen hat Business Prozesse. Prozesse sind Abläufe, beziehungsweise Abfolgen von Schritten und Tätigkeiten. Diese Schritte müssen in einer bestimmten logischen Reihenfolge von einem Individuum oder einer Maschine ausgeführt werden. Jeder Prozess dient einem bestimmten Zweck und dient dazu ein vordefiniertes Ziel zu erreichen.
+
+Je nach Art und Grösse des Unternehmens können diese Business Prozesse unterschiedliche Komplexitäten und Stellenwerte haben. Oft werden die Business Prozesse mit der Zeit (und dem Wachstum des Unternehmens) immer grösser, vielfältiger und komplizierter.
+
+Daher ist es in der Regel sinnvoll einen strukturierten Ansatz zur Verwaltung / Pflege / Umsetzung der Business Prozesse zu verwenden. Die nachfolgende Auflistung zeigt einige Gründe für die Verwendung eines strukturierten Ansatzes.
+
+\begin{itemize}
+\item Schwierig die Übersicht über die laufenden / offenen Prozesse zu behalten.
+\item Prozessschritte können vergessen oder in falscher Reihenfolge durchgeführt werden.
+\item Prozessschritte können unterschiedlich durchgeführt werden.
+\item Redundante Arbeitsschritte
+\item Wissensübertragung schwierig.
+\item Hoher Aufwand für die Einarbeitung
+\end{itemize}
+
+\gls{acr:BPM} ist eine Methode, beziehungsweise ein strukturierter und systematischer Ansatz um Business Prozesse (und Workflows) effektiver, effizienter und flexibler zu gestalten.
+Einige der wichtigsten Ziele von \gls{acr:BPM} werden nachfolgend aufgelistet.
+
+\begin{itemize}
+\item Reduktion, beziehungsweise Abstraktion, der Komplexität der Business Prozesse
+\item Minimierung von menschlichen Fehlern.
+\item Stakeholder können sich auf ihre eigentliche Rolle konzentrieren.
+\end{itemize}
+
+Früher hatte \gls{acr:BPM} primär zum Ziel Prozesse zu visualisieren, zu automatisieren und dadurch die Effizienz zu steigern. Heutige \gls{acr:BPMS} bieten inzwischen viele zusätzliche Funktionalitäten an. Dazu gehören zum Beispiel End-User-Portale, Integration mit unterschiedlichsten Systemen, Analyse Möglichkeiten und Mobile-Fähigkeit.
+
+
+\subsection{Lebenszyklus / Phasen}
+Innerhalb von \gls{acr:BPM} gibt es folgende Phasen:
+
+\begin{itemize}
+\itemBfText{Design}{In der Design-Phase werden bestehende und mögliche neue Prozesse identifiziert. Dabei wird der Prozess im Ist-Zustand modelliert.}
+\itemBfText{Modelling}{In der Modellierungs-Phase wird der Ist-Prozess analysiert und auf verschiedene Verbesserungsmöglichkeiten geprüft.}
+\itemBfText{Execution}{In der Execution-Phase wird der verbesserte / veränderte Prozess im Tagesgeschäft umgesetzt. Dies kann, muss aber nicht zwingend, mit Hilfe eines Software-Systems unterstützt oder (teil-) automatisiert werden.}
+\itemBfText{Monitoring}{Im Monitoring werden die Prozesse anhand der definierten Metriken und Service Levels gemessen, Statistiken erstellt und mit Benchmarks verglichen.}
+\itemBfText{Optimization}{Aufgrund der Informationen aus dem Monitoring und dem Feedback aus dem Tagesgeschäft werden Potenziale für Prozessoptimierungen identifiziert und anschliessend über die Phasen Design, Modelling und Execution umgesetzt.}
+\end{itemize}
+
+
+\todo{Bild}
+
+\subsection{Formalisierung / Notation }
+Prozesse können mit Hilfe von Notationen formalisiert und dokumentiert werden. Dazu wird heute entweder die Business Process Management Notation oder die Business Process Execution Language verwendet. Diese beiden Notationen zeichnen sich dadurch aus, dass diese einfach zu erlernen sind und dennoch den Basisregeln von Programmiersprachen folgen. Dadurch wird die Kommunikation zwischen Business und IT erheblich vereinfacht. Ebenfalls können so beschriebene Prozesse relativ einfach in einem System umgesetzt werden.
+
+\subsection{Umsetzung}
+\gls{acr:BPM} bietet auf Lange Sicht viele Vorteile für ein Unternehmen. Damit \gls{acr:BPM} in einem Unternehmen erfolgreich ist, ist jedoch eine Veränderung der Unternehmenskultur notwendig. Erst wenn \gls{acr:BPM} teil der Unternehmenskultur ist und aktiv gelebt wird, kann sich das vollständige Potential entfalten.
+
+\subsection{Technische Umsetzung}
+Alternativen: Kein BPM, Abbildung in Software / Code (z.T. durchaus sinnvoll)
+
+
+BPMS: Technology: Prozess umsetze, (erzwingen), Work-Flow-Engine: Establish Rules, Integration in bestehende Systeme, Interaktionsmöglichkeiten, Monitoring, Measuring, Tracking
+
+\subsubsection{Intelligent BPM}
+\todo{ Interessant? Notwendig?}
+
+intelligent BMPS (IT + Business: collaborate)
+Maschinenfreundliche Sprache, Abstraktion von Arbeit, Schnelle Organisation der Arbeit
