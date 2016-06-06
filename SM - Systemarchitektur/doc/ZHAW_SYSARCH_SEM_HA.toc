@@ -13,31 +13,42 @@
 \contentsline {section}{\numberline {2.1}Business Process Managemnt (BPM)}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Lebenszyklus / Phasen}{5}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Formalisierung / Notation }{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Umsetzung}{5}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.3}Umsetzung}{6}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Technische Umsetzung}{6}{subsection.2.1.4}
-\contentsline {subsubsection}{Intelligent BPM}{6}{subsubsection*.8}
-\contentsline {chapter}{\numberline {3}Business Prozesse im Bereich "`Internet of Things"'}{7}{chapter.3}
+\contentsline {subsubsection}{Intelligent BPMS}{6}{subsubsection*.8}
+\contentsline {chapter}{\numberline {3}BPM in der Dom\IeC {\"a}ne "`Internet of Things"'}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}Die Dom\IeC {\"a}ne "`Internet of Things"'}{7}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Herausforderungen \& Problemstellungen}{8}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}Einfluss von \gls {acr:IOT} auf \gls {acr:BPM}}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}M\IeC {\"o}gliche Einsatzzwecke von automatisierten Prozessen im Bereich \gls {acr:IOT}}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Frameworks, Produkte, ...}{11}{section.3.4}
-\contentsline {chapter}{\numberline {4}Business Prozesse im Bereich "`Home Automation"'}{13}{chapter.4}
+\contentsline {section}{\numberline {3.2}Prognose f\IeC {\"u}r BPM im Kontext von IoT}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}BPM im Kontext von IoT}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Einfluss und Nutzen}{10}{section.3.4}
+\contentsline {section}{\numberline {3.5}Anwendungsm\IeC {\"o}glichkeiten}{11}{section.3.5}
+\contentsline {section}{\numberline {3.6}Frameworks, Produkte, ...}{12}{section.3.6}
+\contentsline {chapter}{\numberline {4}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Die Dom\IeC {\"a}ne "`Home Automation"'}{13}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Herausforderungen \& Problemstellungen}{13}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Einfluss von \gls {acr:IOT} auf Business Prozesse}{13}{section.4.2}
-\contentsline {section}{\numberline {4.3}M\IeC {\"o}gliche Einsatzzwecke von automatisierten Prozessen im Bereich \gls {acr:IOT}}{13}{section.4.3}
-\contentsline {section}{\numberline {4.4}Frameworks, Produkte, ...}{13}{section.4.4}
-\contentsline {chapter}{\numberline {5}Business Prozesse im Bereich "`Raspberry PI"'}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Die Dom\IeC {\"a}ne "`Raspberry PI"'}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}L\IeC {\"o}sungskategorien}{15}{section.5.2}
-\contentsline {chapter}{\numberline {6}Schlusswort}{16}{chapter.6}
-\contentsline {section}{\numberline {6.1}Fazit}{16}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Home Automation}{16}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}}{16}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Allgemein}{16}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Vergleich: Ist -/ Soll-Planung}{16}{section.6.2}
-\contentsline {section}{\numberline {6.3}Dank}{16}{section.6.3}
-\contentsline {part}{Anhang}{19}{chapter*.12}
-\contentsline {chapter}{\numberline {A}Anhang}{19}{appendix.A}
+\contentsline {subsection}{\numberline {4.1.2}Prognose und Zukunft}{14}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}BPM im Kontext von "`Home Automation"'}{15}{section.4.2}
+\contentsline {section}{\numberline {4.3}Anwendungsm\IeC {\"o}glichkeiten}{15}{section.4.3}
+\contentsline {section}{\numberline {4.4}L\IeC {\"o}sungen, Produkte, Frameworks, ...}{16}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Software basiert}{17}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Hard- und Software}{19}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Weitere}{19}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}BPM auf dem "`Raspberry PI"' in der Dom\IeC {\"a}ne "`Home Automation"'}{20}{chapter.5}
+\contentsline {section}{\numberline {5.1}Der Raspberry PI}{20}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Raspberry Pi Modelle}{22}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Betrachteter L\IeC {\"o}sungsraum}{23}{section.5.2}
+\contentsline {section}{\numberline {5.3}L\IeC {\"o}sungen, Produkte, Frameworks, ...}{23}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}L\IeC {\"o}sungskategorie: Spezifische Home Automation L\IeC {\"o}sungen}{24}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}L\IeC {\"o}sung mit BPMN-Support im Bereich IOT}{24}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}{24}{section.5.4}
+\contentsline {chapter}{\numberline {6}Schlusswort}{25}{chapter.6}
+\contentsline {section}{\numberline {6.1}Fazit}{25}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Home Automation}{25}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}}{25}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Allgemein}{25}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Vergleich: Ist -/ Soll-Planung}{25}{section.6.2}
+\contentsline {section}{\numberline {6.3}Dank}{25}{section.6.3}
+\contentsline {part}{Anhang}{28}{chapter*.21}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{28}{section*.23}
 \contentsfinish

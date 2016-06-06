@@ -1,108 +1,123 @@
 % !TeX encoding=utf8
 % !TeX spellcheck = de_CH_frami
 
-\chapter{Business Prozesse im Bereich "`Internet of Things"'}
+\chapter{BPM in der Domäne "`Internet of Things"'}
+Dieses Kapitel beleuchtet \gls{acr:BPM} im Kontext der Domäne \gls{acr:IOT}.
 
 %---------------------------------------------------------------------------------
 \section{Die Domäne "`Internet of Things"'}
+Das \gls{acr:IOT} hat zum Ziel Dinge aus der realen Welt mit dem Internet und anderen Dingen zu vernetzen. Diese Dinge sollen intelligent und vollständig autonom mit anderen ihnen bekannten und auch unbekannten Geräten und Anwendungen kommunizieren können. Durch diese Vernetzung werden die Fähigkeit der einzelnen Dinge erweitert und im Endeffekt ein Mehrwert für den Anwender geschaffen.
 
-Bereits fürher: RFID, Sensoren, Machine-Conrols, Messaging Integration, Analytics, Dsahboard -> Kosten und Grösser reduziert
+Bereits früher konnten Dinge und Maschinen bereits selbstständig miteinander kommunizieren. Besonders in den Industriezweigen fand dies Anklang, um die Produktionsanlagen zu überwachen und zu steuern. Das \gls{acr:IOT} stellt nun den nächsten grossen Schritt in dieser Entwicklung dar. Der Hauptaspekt dabei ist die Reduktion der Herstellungskosten und die Miniaturisierung der Geräte.
 
-Investitionen in IOT nur sinnvoll, wenn zwischen "`Edge"' uns "`Management"' Software, ist, welche Arbeit vereinfacht / Arbeit übernimmt
+Die Geräte in einem \gls{acr:IOT} können vereinfacht in die Kategorien "`Endgeräte / Things / Dinge"', "`Gateways"' und "`Backend-Systeme"' eingeteilt werden. Die Things stellen die Eckpunkte des \gls{acr:IOT} dar. Gateways stellen typischerweise eine Verbindung zwischen den "`Dingen"' und den Backend-Systemen her. Dabei kann es auch sein, dass ein "`Ding"' gleichzeitig auch ein Gateway darstellt.
 
-\newpage
-\subsection{Herausforderungen \& Problemstellungen}
+An dieser Stelle wird die Domäne \gls{acr:IOT} nicht weiter im Detail beleuchtet. Weitere Hintergrundinformationen und eine Betrachtung im Rahmmen des "`Software Engineering"' sind in der Seminararbeit "`Domain Specific Software Engeineering - Internet of Things"' \cite{E:DBRU:SEM:IOT} zu finden.
 
-Aktuell: Integration, Impl. Basic Service functions (Lernen von grossen Telekommunikationsfirmen), hoher Effizienzgrad benötigt
+\subsection{Herausforderungen \& Problemstellungen}\label{sec:AnalyseIot:ChallangesAndProblems}
+Die Domäne \gls{acr:IOT} sieht sich folgenden Herausforderungen und Problemstellungen gegenüber:
 
+\begin{itemize}
+\item Verfügbarkeit eines Internet-Zuganges am Einsatz- / Verwendungsort
+\item Sicherheit und Datenschutz
+\item Tiefe Kosten für Hard- und Software
+\item Energieversorgung
+\item Energieverbrauch
+\item Skalierbarkeit
+\item Fehlertoleranz
+\item Akzeptanz
+\item Robustheit (physisch und logisch)
+\item Entdecken von Geräten und Services (Device Discovery)
+\item Fernwartung von Geräten und Anwendungen
+\item Hersteller Unabhängigkeit / Abhängigkeit (Hardware und Software)
+\end{itemize}
+
+Aufgrund der zahlreichen Herausforderungen und Problemstellungen und der daraus resultierenden Komplexität sind grössere Investition in \gls{acr:IOT} nur zu empfehlen, wenn tatsächlich ein Mehrwert geschaffen werden kann.
 \newpage
 %---------------------------------------------------------------------------------
-\section{Einfluss von \gls{acr:IOT} auf \gls{acr:BPM}}
 
-Wie im Kapitel \ref{sec:Ausg:BPM} beschrieben, hat \gls{acr:BPM} das Ziel eine Vereinfachung herbeizuführen. Da \gls{acr:IOT} einiges an neuer Komplexität mit sich bringt, stellt \gls{acr:BPM} ein geeignetes Mittel dar, um entsprechend einen Teil dieser Komplexität zu reduzieren, beziehungsweise zu abstrahieren.
-
-
-
-Evtl. Fragestellung umgekehrt? 
-Koordination von Things \& People in der cloud: Erfüllung von Kunden-Needs, Fundamten für IOT: Analyse + Folgeaktion auslösen
-
-	Industrie IOT: nicht IOT, sondern Services bereitstellen, Consumer IOT: mehr auf Geräte fokussiert, anstatt auf Services, BPaas / High volume / on demand / embedded processes -> work with sensors / iot devices -> Eleiminierung repetitiver Prozesse oder Bereitstellung kritischer Prozesse
-
-BPM für Kühlschrank oder Waschmaschine: Kein grosser Benefit wenn nur für Home Use angewendet, interessant im Industrie-Bereich: Just-In-Time-Produktion für Ersatzteile (keine Lager)
-
-BPM: Technology of Work, machine-friendly language of work, abstraktion, schnellere organisation der Arbeit, alternative? Software / code, spezifisch,
-
-Meiste IOT-Projekte: Fokus auf Datensammlung, Analyse - Wenn in Betrieb: Porzesse aus effizienzgründen wichtig - z.B. predictive Mainentane - 10'000, triggers dass Komponente x in den nächsten Tagen ausfallen könnte...was wird mit dieser Datenflut angestellt? -> BPM
-
-Auch negativ: BPM keine Relevanz in IOT: Komplexe Ereignisse und Pattern, konstante Veränderung und Interaktion, Keine Chance in IOT vordefinierte Prozesse einzuhalten, IOT: Komplexe Ereignisverarbeitung und Machine Learning, Kein process mining aufgrund grösser diversität der Daten und konstanten Veränderung, grösste Herausforderung: Privacy
-
-BPM: Zukunft: Input IOT data, Prozesse ermöglichen erst die "`Datengewinnung"' aus den ermittelten Daten
-
-IOT braucht BPMN nicht, umgekehrt, Beziehung nicht symmetrisch, BPM ist mehr spezialisiert, IOT ist "`breiter"'
-
+\section{Prognose für BPM im Kontext von IoT}
 Gemäss einem Bericht von Gartner (\cite{E:Gartner:BPM:2015}) sollten die Investitionen in \gls{acr:iBPMS} im Jahr 2015 um 4.4\% auf 2.7 Milliarden US-Dollar steigen. Im Rahmen der digitalen Transformation überdenken viele Unternehmen ihre Prozesse und Modelle. Einer der 4 genannten Einflussfaktoren ist \gls{acr:IOT}, wobei die "`Dinge"' in die Business Prozesse integriert werden. Dadurch kann sich der Prozess je nach Bedarf den veränderten Bedingungen anpassen. Durch die gemeinsame Orchestrierung mit allen anderen Prozessteilnehmen können Prozessinovationen einfacher umgesetzt werden.
 
 Nach einem anderen Bericht von Gartner aus dem Jahr 2016 (\cite{E:Gartner:BPM:IOT:2020}) werden im Jahr 2020 mehr als die Hälfte aller neuen Business Prozesse und Systeme in irgendeiner Form ein Element von \gls{acr:IOT} beinhalten.
 
-Stark Abhängig vom Needs der Unternehmen
-Input - Entscheid - Reaktion
-2 Sichten:
-	- Unternehmen (z.B. Industrie) als Enabler, IOT als Kern, Unterstütztend
-	- Private 
-	
-Evtl. aufteilen nach
-	- Kern
-	- Unterstützend
-	- Privat
-	
 
-z.B. Predictive maintenance (Beispiel AKW), HealthCare
-z.B. Formualr wird von Person ausgefüllt, kann das Formular selbst befüllt werden? (Health Care?) oder Ware wird in Truck verschoben, in Warehouse, Ankunft Kunde
-	
-Vorteile (Benefits) / Nachteile (Gefahren, etc...) in den Bereichen
+\section{BPM im Kontext von IoT}
+Der Einsatzzweck und -nutzen von \gls{acr:IOT} ist stark vom Geschäftsfeld und den Bedürfnissen der Unternehmen abhängig. Daher ist auch eine Kombination / Integration mit \gls{acr:BPM} nicht in jedem Fall sinnvoll, bzw. nutzbringend.
 
-Fragestellungen:
--Welche kritischen Prozesse zuerst?
--Wie viel Automatisierung notwenidg / erwünscht
--Wann BPM-Tools, wann Code?
+Aktuell werden zwei mögliche Szenarien diskutiert. Eine Partei argumentiert, dass durch die Verbreitung von \gls{acr:IOT} \gls{acr:BPM} nicht mehr adäquat ist und daher mittelfristig verschwinden wird (Siehe \cite{E:LinkedIn:Herring:IOTBPM}). Die andere Partei sieht \gls{acr:BPM} als einen essentiellen und unabdingbaren Baustein für die erfolgreiche Verbreitung von \gls{acr:IOT} (Siehe \cite{E:DataInformed:IOTBPM} oder \cite{E:InformationAge:IOTBPM}). Die Argumente der beiden Parteien werden an dieser Stelle nicht näher beleuchtet, da diese nicht im Kernfokus dieser Arbeit liegen.
 
 
-Daten werden analysiert, Reaktionen auf Basis dieser Daten, z.b. Alerts oder korrigierende Schritte, Impact auf kritsche Business Przesse, erfordern integration in operative systeme, 
+Der Einsatz von \gls{acr:BPM} in \gls{acr:IOT} lässt sich in folgende Kategorien unterteilen:
+\begin{itemize}
+\itemBfText{Privatbereich}
+{Beim Einsatz von \gls{acr:IOT} liegt das Hauptaugenmerk auf anderen Punkten, als beim Einsatz in / für ein Unternehmen. Bei einem überwiegenden Teil der Endanwender stehen folgende Faktoren im Vordergrund: Kosten, Funktionsumfang, Einfache Bedienung. Es ist in der Regel nicht anzunehmen, dass der Endanwender über technisches Fachwissen verfügt.}
 
-Effekte: Kosteneinsparungen, Effizienzsteigerungen, mehr revenue patterns, viele herausforderungen für gute umsetzung
+\itemBfText{Kern}
+{Diese Kategorie bezeichnet diejenigen Unternehmen für welche \gls{acr:IOT} ein Kerngeschäft darstellt. Diese Unternehmen bieten entweder \gls{acr:IOT}-Lösungen oder Dienstleistungen im selben Bereich an (Hardware und / oder Software).}
+ 
+\itemBfText{Unterstützend}
+{Diese Kategorie bezeichnet diejenigen Unternehmen für welche \gls{acr:IOT} als unterstützender Faktor bei essentiellen Geschäftsabläufen / -tätigkeiten eingesetzt wird. Ein Beispiel wäre die Überwachung und Steuerung von Produktionsanlagen in der Industrie.}
 
-Fokus BPMN früher auf: Automatisierung von menschhlichen Aufgaben, streamlining Workflows
-IOT spielt eine wichtige Rolle zur Verbesserung der Prozesse in Unternehmen
+\itemBfText{Nice-To-Have}
+{Diese Kategorie bezeichnet diejenigen Unternehmen bei welchen \gls{acr:IOT} als "`Nice-to-Have"' im Einsatz ist. Beispiel: Bei einem Finanzdienstleister wurden die Sitzungszimmer so ausgerüstet, dass Online ersichtlich ist, ob es tatsächlich besetzt ist.}
+\end{itemize} 
+
+Diese Kategorisierung ist nicht abschliessend und lässt sich nicht in jedem Fall anwenden. Beispielsweise ist der Einsatz von \gls{acr:IOT} im Bereich der Gebäudeautomatisierung auch im Unternehmensumfeld sinnvoll. Dies hat jedoch keinen zwingend direkten Einfluss auf das Kerngeschäft. \gls{acr:IOT} bietet jedoch die Möglichkeit viele Effektivitäts- und Effizienzsteigerungen herbeizuführen.
 
 
 
+\section{Einfluss und Nutzen}
+Wie im Kapitel \ref{sec:Ausg:BPM} \nameref{sec:Ausg:BPM} beschrieben, hat \gls{acr:BPM} das Ziel eine Abstraktion / Vereinfachung der Komplexität herbeizuführen. Da \gls{acr:IOT} einiges an neuer Komplexität mit sich bringt, stellt \gls{acr:BPM} ein geeignetes Mittel dar, um entsprechend einen Teil dieser Komplexität zu reduzieren, beziehungsweise zu abstrahieren. Der Nutzen von \gls{acr:IOT} für eine Branche, beziehungsweise ein Unternehmen, ist sehr unterschiedlich und hängt stark vom angestrebten Ziel ab. Der konkrete Nutzen ist oft auch vom Kontext abhängig. Zum Beispiel hat eine ans Internet angeschlossene, intelligente Waschmaschine für den Endbenutzer nur einen geringen Zusatznutzen. Für den Hersteller sieht die Situation unter Umständen etwas anders aus. Wenn die Waschmaschine selbstständig ermittelt, wann bestimmte Teile Defekt sind oder in absehbarer Zeit ausgewechselt werden müssen, könnte die entsprechenden Daten direkt an den Hersteller und Wartungstechniker gesendet werden. Dem Hersteller erlaubt dies die Just-In-Time-Produktion der Ersatzteile wodurch entsprechende Kosteneinsparungen möglich sind.
 
-\newpage
-\section{Mögliche Einsatzzwecke von automatisierten Prozessen im Bereich \gls{acr:IOT}}
+
+
+Nachfolgend werden einige Vorteile aufgelistet, welche beim Einsatz von \gls{acr:IOT} in Business Prozessen entstehen:
+\begin{itemize}
+\item Entstehung neuer Anwendungsmöglichkeiten
+\item Erhöhung der Durchgängigkeit von Prozessen
+\item Reduktion von Medienbrüchen in Prozessen
+\item Konsequente Umsetzung von \gls{acr:BPM}
+\item Kosteneinsparungen
+\item Effizienz- und Effektivitätssteigerungen
+\end{itemize}
+
+Innerhalb von Business Prozessen kann das \gls{acr:IOT} an unterschiedlichsten Stellen eingebunden werden.
+\begin{itemize}
+\item \gls{acr:IOT}-Endgerät ("`Thing"') liefert Input-Daten für einen Business Prozess.
+\item \gls{acr:IOT}-Endgerät ("`Thing"') stellt den Startpunkt / Trigger eines Business-Prozesses dar.
+\item \gls{acr:IOT}-Endgerät ("`Thing"') sind Aktoren innerhalb eines Business Prozesses.
+\item \gls{acr:IOT}-Endgerät ("`Thing"') sind Endpunkte in einem Business Prozess.
+\end{itemize}
+
+Grundsätzlich kann das \gls{acr:IOT} in jedem Teil eines Business Prozesses einen Mehrwert liefern, sofern der entsprechende Bedarf da ist. Es kann gut auch sein, dass der gesamte Business Prozess aus \gls{acr:IOT}-Elementen besteht. Ebenfalls sind Business Prozesse denkbar, welche vollständig auf \gls{acr:IOT} ausgerichtet sind. Dies könnte zum Beispiel bei einem \gls{acr:IOT}-Dienstleister der Fall sein.
+
+
+\section{Anwendungsmöglichkeiten}
 % z.B. SBB: Stellwerkstörung, Spital
+\gls{acr:IOT} bietet ein sehr breit gefächerte Palette an Anwendungszwecken und Einsatzzwecken. Diese Palette wird in Zukunft mit der zunehmenden Verbreitung noch grösser werden. Ebenfalls werden sich komplett neue Geschäftsfelder und Möglichkeiten eröffnen.
 
-Einsatzmöglichkeiten:
-- Lagerhause: Temperatursensor, Threshold erreicht, massnahmen einleiten, wenn nicht erreicht -> benachrichtigung eines menschen
+Nachfolgend werden zwei kurze Beispiel für den Einsatz des \gls{acr:IOT} im Rahmen von (Business9 Prozessen aufgezeigt.)
 
-- Auto Versicherung
-- Waste Management
-- Smart Cities
-- Smart Enviornemnts
-- Smart Water
-- Reatil (Supply Chain control, monitoring storage conditions)
--Industrial Control
--Reduktion Ineffizienten, Energie, Verbesserun glead times, increasing customer services
-Beispiel für Prozesse im Bereich IOT
---
-Let’s take an example of a fire breaking out at a public parking lot. Someone in the security team would call the building administration who would in turn inform various agencies including fire tenders etc. If someone wants to take stock of the overall status or deliver a coordinated response, it could be days before the information is recorded and reviewed. Look at an alternate reality, the fire sensors in the parking lot detect a fire and immediately cause a fire hazard case to be recorded. This causes immediate email and SMS messages to various agencies including fire tenders and police. The latest pictures and location can be captured by the parking security to make it easier for agencies and administration. The various agencies can provide the latest updates directly via various mobile handhelds. At any point of time, everyone has a clear picture of what’s going on.
+\begin{itemize}
+\itemBfText{Überwachung der Temperatur in einem Lagerhaus}
+{In einem Lagerhaus in welchem die Kühlung, beziehungsweise die Temperatur eine wichtige Rolle spielt könnte mit Hilfe von \gls{acr:IOT} und \gls{acr:BPMN} einiges erreicht werden. Beispiel: Die einzelnen Produkte sind mit den Informationen ausgestattet, bei welchen Temperaturen diese optimal gelagert werden müssen. Mit Hilfe eines autonomen Fahrzeuges werden die angelieferten Produkte in den entsprechenden Bereich des Lagerhauses verschoben. Gleichzeitig werden die eingelagerten Waren in den entsprechenden Systemen nachgeführt und eine entsprechende Benachrichtigung ausgelöst, dass die Waren eingetroffen sind.
 
-A certain flight from London to Dubai gets delayed by 2 hours. Today it would mean 2 frustrating hours of waiting in the lounge or randomly browsing through shops. However IoT could radically change this experience. It could turn into an excellent opportunity for airport retailers and a pleasant couple of hours for passengers. This is how it could work - the information on flight delays is relayed in real time, the retailer then offers a discount sale with details being sent to the passenger mobiles. The Airport Wifi could accurately determine the current location of the passenger (assuming the passenger logs on to the airport app to access free WiFi) and then guide the passengers to the right shop. Based on the passenger profile, the retailer could then offer him a large discount on his favorite brand of cigars.
-Today repair and maintenance is one of the most difficult and complex activity in large manufacturing organizations. Consider the advantages of predictive maintenance. When a critical shop floor machine is fitted with sensors, it can know its current condition and wear \& tear and, whenever necessary, initiate its own maintenance process. A combination of sensors and human operators monitor the environment continuously for hazards or damage resulting in reduced risks and maintenance costs.
---
+Das Lagerhaus überwacht autonom die Temperatur in den verschiedenen Bereichen des Lagerhauses. Wird eine grössere Schwankung festgestellt oder ein bestimmter Schwellenwert erreicht, leitet das System entsprechende Gegenmassnahmen ein. Gleichzeitig wird eine Benachrichtung mit einer entsprechenden Information versendet.
 
+Zeigen die eingeleiteten Massnahmen keine Wirkung wird ein Prozess gestartet. Dieser informiert die zuständige Person über mehrere Kanäle. Die Person kann anschliessend entscheiden, was weiter getan werden soll. Der Prozess bleibt aktiv, bis die Temperatur wieder im korrekten Bereich ist. Im Notfall könnten die Produkte aus dem entsprechenden Bereich automatisch in einen anderen Bereich des Lagerhauses verschoben (zum Beispiel wenn die Kühlung defekt ist). 
+
+Aufgrund der Informationen aus den Prozessen können im Nachgang entsprechende Kennzahlen für weitere Verbesserungen und Optimierungen ermittelt werden.}
+
+
+\itemBfText{Autonome Produktionsanlage}
+{Ankunft Lieferwagen: Information Zuständiger, Kontrolle, Informationen für Lagerung, anschliessend entscheidet die Produktionsanlage über weitere Verarbeitung, Fortschritt der Verarbeitung immer ersichtlich, qualitätskontrolle}
+
+\end{itemize}
 
 
 \section{Frameworks, Produkte, ...}
+\todo{fertig stellen}
 Nachfolgend werden einige Frameworks, beziehungsweise Produkte aufgezeigt, welche im Bereich \gls{acr:IOT} für die Realisierung und Automatisierung von Business Prozessen verwendet werden können.
 
 \begin{itemize}
@@ -114,7 +129,43 @@ Nachfolgend werden einige Frameworks, beziehungsweise Produkte aufgezeigt, welch
 \itemBfText{Oracle Service Bus}
 \end{itemize}
 
+-https://www.octoblu.com/
+Workflow (nicht IOT-Spezifisch):
+-https://manywho.com/product/features/
+-http://decisions.com/
+-https://webtask.io/
+-https://nebrios.com/
+
+Workflow
+-https://flowthings.io/
+-http://www.ritc.io/
+
+Trigger / Action
+-http://ubidots.com/
+
+Plattform:
+-http://www.zettajs.org/
+
+B2B:
+-http://litmusautomation.com/
+-http://www.waylay.io/
+
+%\midrule
+%\hyperlink{https://msdn.microsoft.com/en-us/library/jj684582.aspx}{Windows Workflow Foundation}
+%Nicht HA-Spezifisch (BizTalk mit BPMN)
+%	& 
+%	&	x
+%	&	(x)\footnotemark[1]
+%	&	x
+%	&	
+%	&	x
+%	&	x
+%	&	x
+%	&	(x)
+%	&	x \\
+
 %IBM: http://www.cisco.com/c/en/us/solutions/collateral/enterprise/cisco-on-cisco/t-en-07142014-business-process-ioe.html
 
 % Mögiche Fragestellungen welche in Bezug auf BPMN / IOT zuerst gelöst werden müssen / sollen
 %http://enterprise-iot.org/book/enterprise-iot/part-ii-igniteiot-methodology/igniteiot-solution-delivery/building-blocks/iot-technology-profiles/4-middleware/process_efficiency_and_automation/
+

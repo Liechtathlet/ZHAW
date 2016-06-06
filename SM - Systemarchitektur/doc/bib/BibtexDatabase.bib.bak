@@ -15,6 +15,29 @@
   Timestamp                = {2016.04.17}
 }
 
+@Electronic{E:DBRU:SEM:IOT,
+  Title                    = {Internet of Things - Seminar Domain Specific Software Engineering},
+  Author                   = {Daniel Brun},
+  Language                 = {DE},
+  Month                    = {Juni},
+  Url                      = {https://github.com/Liechtathlet/ZHAW/blob/master/SM%20-%20Domain%20Specific%20SWE/Dokumentation/ZHAW_SM_DSSE_IoT_Daniel_Brun%20-%20V01.00.pdf},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.13}
+}
+
+@Electronic{E:IPT:Def:CEP,
+  Title                    = {Complex Event Processing – Eine strategische Big Data Entscheidung},
+  Author                   = {Dr. Florian Serban, Dr. Yves Brise},
+  Language                 = {DE},
+  Organization             = {Innovation Process Technology AG},
+  Url                      = {http://ipt.ch/complex-event-processing-eine-strategische-big-data-entscheidung/},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.13}
+}
+
 @Electronic{E:Blog:InfoQ:WSO2_ExtendedCapForIOT,
   Title                    = {WSO2 Extends its Internet of Things Process Orchestration Capabilities},
   Author                   = {Kevin Farnham},
@@ -26,6 +49,44 @@
 
   Owner                    = {dani},
   Timestamp                = {2016.04.04}
+}
+
+@Electronic{E:InformationAge:IOTBPM,
+  Title                    = {Why BPM is the essential link between the IoT and CRM in the digital age},
+  Author                   = {Chloe Green},
+  Language                 = {EN},
+  Month                    = {Februar},
+  Organization             = {InformationAge},
+  Url                      = {http://www.information-age.com/it-management/strategy-and-innovation/123460863/why-bpm-essential-link-between-iot-and-crm-digital-age},
+  Year                     = {2016},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.23}
+}
+
+@Electronic{E:LinkedIn:Herring:IOTBPM,
+  Title                    = {IoT signals the end for BPM.},
+  Author                   = {Mark Herring},
+  Language                 = {EN},
+  Month                    = {Mai},
+  Url                      = {https://www.linkedin.com/pulse/iot-signals-end-bpm-mark-herring},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.23}
+}
+
+@Electronic{E:DataInformed:IOTBPM,
+  Title                    = {BPM of Things: the Next Generation of the Internet of Things},
+  Author                   = {Phillipe Ozil},
+  Language                 = {EN},
+  Month                    = {Juni},
+  Organization             = {DataInformed},
+  Url                      = {http://data-informed.com/bpm-of-things-the-next-generation-of-the-internet-of-things/},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.23}
 }
 
 @Electronic{E:SearchCIO:Def:BPM,
@@ -62,6 +123,37 @@
   Timestamp                = {2016.04.17}
 }
 
+@Electronic{E:Futstrat:Def:IBPM,
+  Title                    = {Intelligent BPM Systems: Impact and Opportunity},
+  Language                 = {EN},
+  Organization             = {Future Strategies Inc., Workflow Management Coalition},
+  Url                      = {http://futstrat.com/books/iBPMS_Handbook.php},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.13}
+}
+
+@Electronic{E:Gartner:Def:BPM,
+  Title                    = {Business process management (BPM)},
+  Language                 = {EN},
+  Organization             = {Gartner Inc.},
+  Url                      = {http://www.gartner.com/it-glossary/business-process-management-bpm/},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.13}
+}
+
+@Electronic{E:WhatIsBPM:Def:Lifecycle,
+  Title                    = {BPM Get Started - Overview},
+
+  Address                  = {What is BPM},
+  Language                 = {EN},
+  Url                      = {http://www.what-is-bpm.com/get_started/bpm_methodology.html},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.13}
+}
+
 @Electronic{E:Gartner:BPM:IOT:2020,
   Title                    = {Gartner Says By 2020, More Than Half of Major New Business Processes and Systems Will Incorporate Some Element of the Internet of Things},
   Language                 = {EN},
@@ -72,6 +164,30 @@
 
   Owner                    = {dani},
   Timestamp                = {2016.04.17}
+}
+
+@Electronic{E:Wikipedia,
+  Title                    = {Raspberry Pi},
+  Language                 = {EN},
+  Month                    = {Juni},
+  Organization             = {Wikimedia Foundation},
+  Url                      = {https://en.wikipedia.org/wiki/Raspberry_Pi},
+  Year                     = {2016},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.06.06}
+}
+
+@Electronic{E:Wikipedia:RaspberryPi:DE,
+  Title                    = {Raspberry Pi},
+  Language                 = {DE},
+  Month                    = {Juni},
+  Organization             = {Wikimedia Foundation},
+  Url                      = {https://de.wikipedia.org/wiki/Raspberry_Pi},
+  Year                     = {2016},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.06.06}
 }
 
 @Electronic{E:BPM:Discussion:IOT,
@@ -87,7 +203,7 @@
 }
 
 @Electronic{E:Gartner:BPM:2015,
-  Title                    = {Gartner Says Spending on Business Process Management Suites to Reach $2.7 Billion in 2015 as Organizations Digitalize Processes},
+  Title                    = {Gartner Says Spending on Business Process Management Suites to Reach 2.7 Billion US-Dollar in 2015 as Organizations Digitalize Processes},
   Language                 = {EN},
   Month                    = {Mai},
   Organization             = {Gartner Inc.},
@@ -96,5 +212,29 @@
 
   Owner                    = {dani},
   Timestamp                = {2016.04.17}
+}
+
+@Electronic{E:JuniperReasearch:Prognose:HomeAutomation,
+  Title                    = {SMART HOME REVENUES TO REACH \$100 BILLION BY 2020, DRIVEN BY AUTOMATION AND ENTERTAINMENT SERVICES},
+  Language                 = {EN},
+  Month                    = {Oktober},
+  Organization             = {Juniper Research Ltd},
+  Url                      = {http://www.juniperresearch.com/press/press-releases/smart-home-revenues-to-reach-$100-billion-by-2020},
+  Year                     = {2015},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.27}
+}
+
+@Electronic{E:Gartner:Prognose:SmartHome,
+  Title                    = {Gartner Says a Typical Family Home Could Contain More Than 500 Smart Devices by 2022},
+  Language                 = {EN},
+  Month                    = {September},
+  Organization             = {Gartner Inc.},
+  Url                      = {http://www.gartner.com/newsroom/id/2839717},
+  Year                     = {2014},
+
+  Owner                    = {dani},
+  Timestamp                = {2016.05.27}
 }
 

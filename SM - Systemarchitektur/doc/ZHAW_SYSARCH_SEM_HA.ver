@@ -7,4 +7,40 @@
  & 04.04.2016
  & \listset {DBRU}
  & Initiale Version\\\hline
+0.02
+ & April / März
+ & \listset {DBRU}
+ & Hintergrundrecherchen und Informationsbeschaffung\\\hline
+0.05
+ & 02.05.2016
+ & \listset {DBRU}
+ & Verfassung der Einleitung\\\hline
+0.10
+ & 09.05.2016
+ & \listset {DBRU}
+ & Verfassung der Ausgangslage\\\hline
+0.15
+ & 13.05.2016
+ & \listset {DBRU}
+ & Ergänzung der Ausgangslage, Verfassung Kapitel "`BPM in der Domäne IOT"'\\\hline
+0.16
+ & 13.05.2016
+ & \listset {DBRU}
+ & Ergänzung im Kapitel "`BPM in der Domäne IOT"'\\\hline
+0.20
+ & 20.05.2016
+ & \listset {DBRU}
+ & Kleiner Ergänzungen in den bestehenden Kapiteln\\\hline
+0.25
+ & 22.05.2016
+ & \listset {DBRU}
+ & Verfassung Kapitel "`BPM in der Domäne Home Automation"' und "`BPM auf dem Raspberry Pi in der Domäne Home Automation"'\\\hline
+0.30
+ & 23.05.2016
+ & \listset {DBRU}
+ & Ergänzung weiterer Details in den Kapiteln 3,4,5\\\hline
+0.31
+ & 27.05.2016
+ & \listset {DBRU}
+ & Ergänzungen im Kapitel "`BPM in der Domäne Home Automation"'\\\hline
 \end {longtable}

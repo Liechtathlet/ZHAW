@@ -266,6 +266,15 @@ Lambda-Kalkül als funktionale "Proto-Sprache"
 
 ~~~
 λx.(f x) -> f
+λf.λg.λz.(g (f z)) -> f >> g -> f ( g ( x ))
+~~~
+~~~
+λfgx.(f (g x)) (Add 3) (Add 4) 2
+(λfgx.(f (g x)) (Add 3)) (Add 4) 2
+λgx.((Add 3) (g x)) (Add 4) 2
+λx.((Add 3) ((Add 4) x)) 2
+((Add 3) ((Add 4) 2)) = 9
+
 ~~~
 
 ### Termen
@@ -295,6 +304,7 @@ Menge der freien Variablen FV(A) eines λ-Terms A ist wie folgt gegeben (Nicht L
 ### Substitution
   - Term A[x:= B] erhält man, wenn im Term A alle freien Vorkommen der Variablen x durch den Term B ersetzt.
   - Substitution A[x:=B] ist zulässig, wenn keine der freien Variablen von B durch die Substitution gebunden wird
+  - Es werden nur freie Variablen ersetzt
 
 ~~~
 λx.(y x)[y:=add]
@@ -312,6 +322,85 @@ Menge der freien Variablen FV(A) eines λ-Terms A ist wie folgt gegeben (Nicht L
     ~~~
     λxy.(x y z)[z:=u]
     ~~~
+
+### Reduktion / Konversion
+Rechnen im Lambda-Kalkül: Reduzieren, Ziel: Term in Normalform (Konstante, Variable sind Normalform, nicht weiter vereinfachbar)
+
+#### α-Reduktion
+Äquivalente Terme ineinander überführen:
+~~~
+λfgx.(g f x) =>α λ hgx.(g h x)
+~~~
+
+**Definition**
+~~~
+λx.A => λy.A[x :=y] (wenn y nicht in A vorkommt)
+~~~
+
+#### β-Reduktion
+Formalisiert Idee der Funktionsanwendung durch ersetzen von Werten durch entsprechende Funktionswerte, Term auf den β-Reduktion angewendet werden kann: β Redex, β Normalform:  kein β Redex als Teilterm und keine δ-Reduktion mehr möglich (keine β und δ-Reduktion mehr möglich)
+
+~~~
+(λ x.(Add x x) z) =>β (Add z z)
+~~~
+
+**Definition**
+~~~
+(λ x.A B) =>β A[x := B] (Substitution muss zulässig sein)
+~~~
+
+
+#### η-Reduktion
+Formalisiert Idee, dass Funktionen die dieselben Rückgabewerte produzieren gleich sind, ~partielle Anwendung
+
+~~~
+λ x.(Add y x) =>η (Add y)
+~~~
+
+**Definition**
+~~~
+(λ x.A x) =>η A (wobei x nicht element FV(A) und A keine Konstante, die nicht eine Funktion darstellt)
+~~~
+
+#### δ-Konversion
+Einsetzen von Konstanten
+~~~
+(Add 14) 3 => δ 17
+~~~
+
+#### Rechnen mit Konversionen
+Anzahl der Redexe verringert sich it einer Reduktion nicht notwendigerweise:
+~~~
+λ f .(f f f ) (λ x.A)
+=>β (λ x.A) (λ x.A) (λ x.A)
+~~~
+
+Nicht jeder Term kann zu einer β--Normalform reduziert werden:
+~~~
+λ x.(x x) λ x.(x x)
+~~~
+
+Reihenfolge der Reduktion nicht eindeutig, Evaluationsstrategien:
+  - "Applicative order reduction:" Von "Innen nach Aussen"
+  - "Normal order reduction:" von "Links nach Rechts" (Lazy-Evaluation ist eine Variante dieser Strategie)
+
+
+  - Wenn ein Term eine β-Normalform besitzt, dann wird diese immer durch “normal order reduction” gefunden.
+  - Es gibt Terme, die eine β-Normalform besitzen, die nicht mit “applicative order reduction” gefunden werden kann.
+  - Unabhängig von der gewählten Evaluationsstrategie, ist die (falls vorhanden) erhaltene β-Normalform bis auf α-Konversion eindeutig.
+
+### Vollständigkeit
+  - Lambda-Kalkül bietet keine expliziten Konstrukte um rekursiv Funktionen zu deklarieren
+  - Rekursion wird über Fixpunkte erreicht
+  - Fixpunktkombinator Y (~= fix) kann im untypisierten Lambda-Kalkül direkt als Term geschrieben werden:
+  ~~~
+  Y :≡ λ f .(λ x.(f (x x)) λ x.(f (x x)))
+  ~~~
+
+  - While Schleifen via Rekursion (mittels Fixpunkten)
+  - Natürliche Zahlen ("Church Numerale")
+  - Paare und deren Projektionen (mittels expliziter Paarungsfunktionen)
+  - Listen (via Paare)
 
 ## Funktionen
 

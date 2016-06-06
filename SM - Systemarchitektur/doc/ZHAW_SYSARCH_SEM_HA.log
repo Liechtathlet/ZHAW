@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.23)  13 MAY 2016 13:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.23)  6 JUN 2016 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3901,20 +3901,20 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/20.74'.
 (microtype)             Ignoring protrusion settings for this character.
- (./version.txt)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./ZHAW_SYSARCH_SEM_HA.mw)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./ZHAW_SYSARCH_SEM_HA.mw)
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
@@ -4017,6 +4017,78 @@ Package microtype Info: Loading generic settings for font family
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 \openout3 = `ZHAW_SYSARCH_SEM_HA.ver'.
 
 \vh@hstfile=\write14
@@ -4030,7 +4102,7 @@ Package microtype Info: Loading generic settings for font family
 
  (./ZHAW_SYSARCH_SEM_HA.ver)
 (./ZHAW_SYSARCH_SEM_HA.ver) (./ZHAW_SYSARCH_SEM_HA.ver
-Underfull \vbox (badness 10000) detected at line 10
+Underfull \vbox (badness 10000) detected at line 46
  []
 
 )) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -4143,208 +4215,253 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 3.
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 15.81615pt
+text indent calculated (toc, 0): 12.59247pt
 number indent calculated (toc, 0): 0.0pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 15.81615pt
+text indent calculated (toc, 0): 12.59247pt
 number indent calculated (toc, 0): 0.0pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 15.81615pt
+text indent calculated (toc, 0): 12.59247pt
 number indent calculated (toc, 0): 0.0pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 15.81615pt
+text indent calculated (toc, 0): 12.59247pt
 number indent calculated (toc, 0): 0.0pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
-number indent by \l@... (toc, 1):  16.42499pt
-text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
-text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
-number indent by \l@... (toc, 1):  16.42499pt
-text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
-text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
-number indent by \l@... (toc, 1):  16.42499pt
-text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
-text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
-number indent by \l@... (toc, 0):  0.0pt
-text indent by \l@... (toc, 0):  16.42499pt
-number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 15.81615pt
-number indent calculated (toc, 0): 0.0pt
-number indent by \l@... (toc, 1):  16.42499pt
-text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
-text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
-number indent by \l@... (toc, 1):  16.42499pt
-text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
-text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
-number indent by \l@... (toc, 0):  0.0pt
-text indent by \l@... (toc, 0):  16.42499pt
-number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 15.81615pt
-number indent calculated (toc, 0): 0.0pt
-number indent by \l@... (toc, 1):  16.42499pt
-text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
-text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 27.98325pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 27.98325pt
+number indent calculated (toc, 2): 32.05908pt
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 36.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 [1] (./ZHAW_SYSARCH_SEM_HA.mw)
 
 
 
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
 
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 0):  0.0pt
+text indent by \l@... (toc, 0):  16.42499pt
+number indent by parent (toc, 0):  0.0pt
+text indent calculated (toc, 0): 12.59247pt
+number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 2):  41.61002pt
 text indent by \l@... (toc, 2):  35.03995pt
-number indent by parent (toc, 2):  35.28276pt
+number indent by parent (toc, 2):  32.05908pt
 text indent calculated (toc, 2): 27.98325pt
-number indent calculated (toc, 2): 35.28276pt
+number indent calculated (toc, 2): 32.05908pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, 1):  16.42499pt
 text indent by \l@... (toc, 1):  25.18501pt
-number indent by parent (toc, 1):  15.81615pt
+number indent by parent (toc, 1):  12.59247pt
 text indent calculated (toc, 1): 19.46661pt
-number indent calculated (toc, 1): 15.81615pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 27.98325pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 27.98325pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 0):  0.0pt
+text indent by \l@... (toc, 0):  16.42499pt
+number indent by parent (toc, 0):  0.0pt
+text indent calculated (toc, 0): 12.59247pt
+number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 27.98325pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 27.98325pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 2):  41.61002pt
+text indent by \l@... (toc, 2):  35.03995pt
+number indent by parent (toc, 2):  32.05908pt
+text indent calculated (toc, 2): 27.98325pt
+number indent calculated (toc, 2): 32.05908pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
+number indent by \l@... (toc, 1):  16.42499pt
+text indent by \l@... (toc, 1):  25.18501pt
+number indent by parent (toc, 1):  12.59247pt
+text indent calculated (toc, 1): 19.46661pt
+number indent calculated (toc, 1): 12.59247pt
 number indent by \l@... (toc, -1):  0.0pt
 text indent by \l@... (toc, -1):  21.9pt
 number indent by parent (toc, -1):  0.0pt
@@ -4353,7 +4470,7 @@ number indent calculated (toc, -1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  16.42499pt
 number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 15.81615pt
+text indent calculated (toc, 0): 12.59247pt
 number indent calculated (toc, 0): 0.0pt
 )
 \tf@toc=\write15
@@ -4403,29 +4520,29 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 31.
+(babel)             in language  on input line 24.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 28.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 31.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
  [1] (./ZHAW_SYSARCH_SEM_HA.mw)
@@ -4436,39 +4553,39 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 34.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 40.
+ine 37.
 
-Overfull \hbox (17.08418pt too wide) in paragraph at lines 40--40
+Overfull \hbox (17.08418pt too wide) in paragraph at lines 37--37
 [][][][]\T1/lmr/m/n/10.95 (-20) Abgrenzung  
  []
 
 
-Overfull \hbox (17.08418pt too wide) in paragraph at lines 40--40
+Overfull \hbox (17.08418pt too wide) in paragraph at lines 37--37
 [][][][]\T1/lmr/m/n/10.95 (-20) Abgrenzung  
  []
 
 
-Overfull \hbox (17.08418pt too wide) in paragraph at lines 40--40
+Overfull \hbox (17.08418pt too wide) in paragraph at lines 37--37
 [][][][]\T1/lmr/m/n/10.95 (-20) Abgrenzung  
  []
 
 
-Overfull \hbox (17.08418pt too wide) in paragraph at lines 40--40
+Overfull \hbox (17.08418pt too wide) in paragraph at lines 37--37
 [][][][]\T1/lmr/m/n/10.95 (-20) Abgrenzung  
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 63.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 63.
+(babel)             in language  on input line 60.
 )
 Package cleveref Info: loaded `ngerman' language definitions on input line 186.
 
@@ -4557,22 +4674,18 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 73.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 76.
+Package cleveref Info: loaded `ngerman' language definitions on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-Package cleveref Info: loaded `ngerman' language definitions on input line 85.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 78.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
  [5]
@@ -4584,29 +4697,13 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 86.
-
-Overfull \hbox (16.26907pt too wide) in paragraph at lines 87--87
-[][][][]\T1/lmr/m/n/10.95 (-20) Interessant? 
- []
-
-
-Overfull \hbox (16.26907pt too wide) in paragraph at lines 87--87
-[][][][]\T1/lmr/m/n/10.95 (-20) Interessant? 
- []
-
-
-Overfull \hbox (16.26907pt too wide) in paragraph at lines 87--87
-[][][][]\T1/lmr/m/n/10.95 (-20) Interessant? 
- []
-
-
-Overfull \hbox (16.26907pt too wide) in paragraph at lines 87--87
-[][][][]\T1/lmr/m/n/10.95 (-20) Interessant? 
- []
-
+(babel)             in language  on input line 79.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 82.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 82.
 )
 Package cleveref Info: loaded `ngerman' language definitions on input line 187.
 
@@ -4621,26 +4718,58 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
  [6] (./ZHAW_SYSARCH_SEM_HA.mw)
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 \openout2 = `content/2-AnalyseIOT.aux'.
 
- (./content/2-AnalyseIOT.tex
+
+(./content/2-AnalyseIOT.tex
 Kapitel 3.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 8.
+
+LaTeX Warning: Citation 'E:DBRU:SEM:IOT' on page 7 undefined on input line 15.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 22.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 [7] (./ZHAW_SYSARCH_SEM_HA.mw)
@@ -4648,63 +4777,81 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
-Package cleveref Info: loaded `ngerman' language definitions on input line 18.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 36.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
  [8] (./ZHAW_SYSARCH_SEM_HA.mw)
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 20.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 20.
+(babel)             in language  on input line 39.
 
 
 LaTeX Warning: Citation 'E:Gartner:BPM:2015' on page 9 undefined on input line 
-43.
+40.
 
 
 LaTeX Warning: Citation 'E:Gartner:BPM:IOT:2020' on page 9 undefined on input l
-ine 45.
+ine 42.
 
 
-Overfull \hbox (8.22034pt too wide) in paragraph at lines 45--46
+Overfull \hbox (8.22034pt too wide) in paragraph at lines 42--43
 []\T1/lmr/m/n/10.95 (-20) Nach ei-nem an-de-ren Be-richt von Gart-ner aus dem J
 ahr 2016 ([[]])
  []
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 46.
-
-Overfull \vbox (7.43991pt too high) has occurred while \output is active []
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 45.
+
+LaTeX Warning: Citation 'E:LinkedIn:Herring:IOTBPM' on page 9 undefined on inpu
+t line 48.
+
+
+LaTeX Warning: Citation 'E:DataInformed:IOTBPM' on page 9 undefined on input li
+ne 48.
+
+
+LaTeX Warning: Citation 'E:InformationAge:IOTBPM' on page 9 undefined on input 
+line 48.
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 64.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 64.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 64.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
 
 [9] (./ZHAW_SYSARCH_SEM_HA.mw)
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
@@ -4721,57 +4868,113 @@ Package babel Info: Redefining ngerman shorthand "~
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 80.
-
-Overfull \vbox (7.43991pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
-
-[10] (./ZHAW_SYSARCH_SEM_HA.mw)
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 81.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 81.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 105.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 105.
-Package cleveref Info: loaded `ngerman' language definitions on input line 110.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 110.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 110.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 110.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 110.
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
-[11] (./ZHAW_SYSARCH_SEM_HA.mw)
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 70.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 70.
+Package cleveref Info: loaded `ngerman' language definitions on input line 91.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 91.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 91.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+ [10] (./ZHAW_SYSARCH_SEM_HA.mw)
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 96.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 96.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 119.
+Package cleveref Info: loaded `ngerman' language definitions on input line 122.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 122.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+ [11]
+(./ZHAW_SYSARCH_SEM_HA.mw)
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+
+ []
+
+
+Overfull \hbox (55.27504pt too wide) in paragraph at lines 132--138
+[]\T1/lmr/m/n/10.95 (-20) -https://www.octoblu.com/ Work-flow (nicht IOT-Spezif
+isch): -https://manywho.com/product/features/
  []
 
 )
@@ -4788,6 +4991,8 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
  [12] (./ZHAW_SYSARCH_SEM_HA.mw)
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 \openout2 = `content/3-AnalyseHA.aux'.
 
  (./content/3-AnalyseHA.tex
@@ -4797,53 +5002,21 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 23.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 23.
-
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 27.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
-
-Overfull \hbox (72.00273pt too wide) in paragraph at lines 41--50
-[]\T1/lmr/m/n/10.95 (-20) -WeMo https://www.review-weekly.com/home-automation/r
-eview/wemo-com/ -https://www.octoblu.com/
- []
-
-
-Overfull \hbox (30.78589pt too wide) in paragraph at lines 41--50
-\T1/lmr/m/n/10.95 (-20) home-overview -https://www.igd.fraunhofer.de/Institut/A
-bteilungen/IMA/Projekte/universAAL-
- []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 50.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 50.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 50.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 50.
+(babel)             in language  on input line 22.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 [13] (./ZHAW_SYSARCH_SEM_HA.mw)
@@ -4853,38 +5026,146 @@ Package babel Info: Redefining ngerman shorthand "~
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 34.
+
+
+LaTeX Warning: Citation 'E:Gartner:Prognose:SmartHome' on page 14 undefined on 
+input line 35.
+
+
+Overfull \hbox (84.09676pt too wide) in paragraph at lines 35--36
+\T1/lmr/m/n/10.95 (-20) 2020 ei-ne durch-schnitt-li-che Fa-mi-lie über 500 ^^RS
+mart De-vi-ces^^P be-sit-zen [[]].
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 44.
+
+LaTeX Warning: Reference `sec:Analyse:HA:Kontext' on page 14 undefined on input
+ line 44.
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 46.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+[14] (./ZHAW_SYSARCH_SEM_HA.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 57.
+Package cleveref Info: loaded `ngerman' language definitions on input line 71.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 71.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
-Overfull \hbox (44.86336pt too wide) in paragraph at lines 60--66
-[]\T1/lmr/m/n/10.95 (-20) Workflow: -https://cylonjs.com/ -https://manywho.com/
- -http://www.ritc.io/ -http://decisions.com/
- []
+ [15] (./ZHAW_SYSARCH_SEM_HA.mw)
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 79.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 79.
 
 
-Overfull \hbox (62.32243pt too wide) in paragraph at lines 67--81
-\T1/lmr/m/n/10.95 (-20) http://www.domogik.org/en/ -http://www.opensourceautoma
-tion.com/ -https://www.smartthings.com/
- []
+LaTeX Warning: Reference `sec:Analyse:HA:Kontext' on page 16 undefined on input
+ line 80.
 
 
-Overfull \hbox (26.56082pt too wide) in paragraph at lines 67--81
-\T1/lmr/m/n/10.95 (-20) https://www.promixis.com/ -http://www.comfortclick.com/
-UsageExample/ViewExample/Home
- []
+LaTeX Warning: Reference `sec:Analyse:HA:Kontext' on page 16 undefined on input
+ line 80.
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 82.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 82.
+Package cleveref Info: loaded `ngerman' language definitions on input line 84.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 84.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 84.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 84.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 84.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
-Overfull \hbox (33.46448pt too wide) in paragraph at lines 82--87
-[]\T1/lmr/m/n/10.95 (-20) Code / For Devs: -http://www.zettajs.org/ -http://lit
-musautomation.com/ -http://www.waylay.io/
- []
+[16] (./ZHAW_SYSARCH_SEM_HA.mw)
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 299.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+ [17] (./ZHAW_SYSARCH_SEM_HA.mw)
+Package cleveref Info: loaded `ngerman' language definitions on input line 304.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 304.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 304.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 304.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 304.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+ [18]
+(./ZHAW_SYSARCH_SEM_HA.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 305.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 305.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 318.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 318.
 )
-Overfull \hbox (79.6046pt too wide) in paragraph at lines 95--189
-[]\T1/lmr/m/n/10.95 (-20) Produkte: htt-ps://www.qivicon.com/de/ http://www.zoo
-automation.com/ http://www.getdroplit.com/hub/
- []
-
 Package cleveref Info: loaded `ngerman' language definitions on input line 189.
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -4897,24 +5178,177 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 189.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
-[14] (./ZHAW_SYSARCH_SEM_HA.mw)
+ [19] (./ZHAW_SYSARCH_SEM_HA.mw)
 \openout2 = `content/4-AnalyseRPI.aux'.
 
- (./content/4-AnalyseRPI.tex
+
+(./content/4-AnalyseRPI.tex
 Kapitel 5.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 8.
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-iso-8859-1.def
+File: se-iso-8859-1.def 2011/12/02 v1.10 stringenc: ISO-8859-1
 )
+<./images/RaspberryPi2ModelB.jpg, id=309, 299.1175pt x 169.63374pt>
+File: ./images/RaspberryPi2ModelB.jpg Graphic file (type jpg)
+
+<use ./images/RaspberryPi2ModelB.jpg>
+Package pdftex.def Info: ./images/RaspberryPi2ModelB.jpg used on input line 12.
+
+(pdftex.def)             Requested size: 170.71652pt x 96.81647pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+\T1/lmr/bx/n/10 Quel-le: [][]$\T1/lmtt/m/n/10 https : / / www . raspberrypi . o
+rg / wp-[]content / uploads / 2015 / 01 / Pi2ModB1GB _
+ []
+
+
+<./images/RaspberryPi2ModelBPlusOverview.jpg, id=312, 669.50125pt x 502.87875pt
+>
+File: ./images/RaspberryPi2ModelBPlusOverview.jpg Graphic file (type jpg)
+ <use ./images/RaspberryPi2ModelBPlusOverview.jpg>
+Package pdftex.def Info: ./images/RaspberryPi2ModelBPlusOverview.jpg used on in
+put line 20.
+(pdftex.def)             Requested size: 369.88582pt x 277.84259pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/bx/n/10 Quel-le: [][]$\T1/lmtt/m/n/10 https : / / www . elektronik-[]ko
+mpendium . de / sites / raspberry-[]pi / bilder /
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 23.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 23.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+[20 <./images/RaspberryPi2ModelB.jpg>] (./ZHAW_SYSARCH_SEM_HA.mw)
+
+
+
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 24.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 24.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+ [21 <./images/RaspberryPi2ModelBPlusOverview.jpg>] (./ZHAW_SYSARCH_SEM_HA.mw)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
+Package cleveref Info: loaded `ngerman' language definitions on input line 114.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 114.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 114.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+ [22]
+(./ZHAW_SYSARCH_SEM_HA.mw)
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 117.
+
+Overfull \hbox (54.30214pt too wide) in paragraph at lines 119--119
+\T1/lmr/m/n/10.95 (-20) acronym]\glossaryentryBPMN?\glossentryacr:BPMN|setentry
+counter[]page\glsnumberformat23BPMN
+ []
+
+
+Overfull \hbox (65.37314pt too wide) in paragraph at lines 119--119
+\T1/lmr/m/n/10.95 (-20) oder acronym]\glossaryentryBPEL?\glossentryacr:BPEL|set
+entrycounter[]page\glsnumberformat23BPEL
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 142.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 142.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 145.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 145.
+Package cleveref Info: loaded `ngerman' language definitions on input line 147.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 147.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 147.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+[23] (./ZHAW_SYSARCH_SEM_HA.mw)
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 152.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 152.
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 180.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 180.
+)
+Package cleveref Info: loaded `ngerman' language definitions on input line 190.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 190.
 Package babel Info: Redefining ngerman shorthand "~
@@ -4925,11 +5359,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 190.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
- [15] (./ZHAW_SYSARCH_SEM_HA.mw)
-
-
-
-
+ [24] (./ZHAW_SYSARCH_SEM_HA.mw)
 \openout2 = `content/7-Schlusswort.aux'.
 
  (./content/7-Schlusswort.tex
@@ -4947,21 +5377,21 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 33.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 191.
@@ -4973,17 +5403,15 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 191.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
- [16] (./ZHAW_SYSARCH_SEM_HA.mw)
+ [25] (./ZHAW_SYSARCH_SEM_HA.mw)
 
 
 
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
-
-No file ZHAW_SYSARCH_SEM_HA.acr.
-No file ZHAW_SYSARCH_SEM_HA.syi.
-No file ZHAW_SYSARCH_SEM_HA.gls.
+ (./ZHAW_SYSARCH_SEM_HA.acr)
+(./ZHAW_SYSARCH_SEM_HA.syi) (./ZHAW_SYSARCH_SEM_HA.gls)
 Package cleveref Info: loaded `ngerman' language definitions on input line 223.
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -4996,9 +5424,12 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 223.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
-[17] (./ZHAW_SYSARCH_SEM_HA.mw)
+ [26]
+(./ZHAW_SYSARCH_SEM_HA.mw)
 
 
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 
 
@@ -5008,6 +5439,17 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 22
 7.
 (./ZHAW_SYSARCH_SEM_HA.lof
 Package cleveref Info: loaded `ngerman' language definitions on input line 3.
+
+number indent by \l@... (lof, 1):  16.42499pt
+text indent by \l@... (lof, 1):  25.18501pt
+number indent by parent (lof, 1):  16.42499pt
+text indent calculated (lof, 1): 19.46661pt
+number indent calculated (lof, 1): 16.42499pt
+number indent by \l@... (lof, 1):  16.42499pt
+text indent by \l@... (lof, 1):  25.18501pt
+number indent by parent (lof, 1):  16.42499pt
+text indent calculated (lof, 1): 19.46661pt
+number indent calculated (lof, 1): 16.42499pt
 )
 \tf@lof=\write20
 Package babel Info: Redefining ngerman shorthand "|
@@ -5020,7 +5462,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 237.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
- [18] (./ZHAW_SYSARCH_SEM_HA.mw)
+ [27] (./ZHAW_SYSARCH_SEM_HA.mw)
 
 
 
@@ -5031,40 +5473,84 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 240.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 240.
-
-(./content/Z-Appendix.tex
-Anhang A.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 255.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 255.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 255.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 255.
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
- [19] (./ZHAW_SYSARCH_SEM_HA.mw)
-
-
-
-
 \openout3 = `ZHAW_SYSARCH_SEM_HA.idx'.
 
 runsystem(makeindex ZHAW_SYSARCH_SEM_HA.idx)...executed safely (allowed).
 
  (./ZHAW_SYSARCH_SEM_HA.ind)
-
+(./content/Z-Todo.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 6.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 6.
+) (./ZHAW_SYSARCH_SEM_HA.tdo
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+number indent by \l@... (tdo, 1):  0.0pt
+text indent by \l@... (tdo, 1):  25.18501pt
+number indent by parent (tdo, 1):  0.0pt
+text indent calculated (tdo, 1): 25.18501pt
+number indent calculated (tdo, 1): 0.0pt
+)
+\tf@tdo=\write21
+ 
 AED: pageslts setting LastPage 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 263.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 263.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 263.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 263.
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+[28] (./ZHAW_SYSARCH_SEM_HA.mw)
+
+
+
+
+
+
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 263.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 263.
+
 No complaints by nag.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 263.
@@ -5099,7 +5585,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 263.
 
 
-Package pageslts Info: Total number of pages is even.
+Package pageslts Info: Total number of pages is odd.
 
 
 (./ZHAW_SYSARCH_SEM_HA.aux (./content/0-title.aux)
@@ -5136,8 +5622,16 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 )
 (./content/1-Ausgangslage.aux
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
@@ -5169,6 +5663,12 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 )
 (./content/3-AnalyseHA.aux
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
@@ -5185,7 +5685,35 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 ) (./content/4-AnalyseRPI.aux
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
+\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
+
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
@@ -5213,8 +5741,6 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 39.
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 )
-\openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
-
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.mw'.
@@ -5599,7 +6125,6 @@ gettitlestring.sty    2010/12/03 v1.4 Cleanup title references (HO)
 lstlang1.sty    2013/08/26 1.5b listings language file
 lstlang1.sty    2013/08/26 1.5b listings language file
 content/0-title.tex
- version.txt
 content/0-History.tex
   t1lmss.fd    2009/10/30 v1.6 Font defs for Latin Modern
 ZHAW_SYSARCH_SEM_HA.ver
@@ -5615,9 +6140,15 @@ content/1-Ausgangslage.tex
 content/2-AnalyseIOT.tex
 content/3-AnalyseHA.tex
 content/4-AnalyseRPI.tex
+se-iso-8859-1.def    2011/12/02 v1.10 stringenc: ISO-8859-1
+./images/RaspberryPi2ModelB.jpg
+./images/RaspberryPi2ModelBPlusOverview.jpg
 content/7-Schlusswort.tex
-content/Z-Appendix.tex
+ZHAW_SYSARCH_SEM_HA.acr
+ZHAW_SYSARCH_SEM_HA.syi
+ZHAW_SYSARCH_SEM_HA.gls
 ZHAW_SYSARCH_SEM_HA.ind
+content/Z-Todo.tex
  ***********
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
@@ -5645,27 +6176,83 @@ Package logreq Info: Writing requests to 'ZHAW_SYSARCH_SEM_HA.run.xml'.
 
 \openout3 = `ZHAW_SYSARCH_SEM_HA.lof'.
 
+\openout3 = `ZHAW_SYSARCH_SEM_HA.tdo'.
+
  ) 
 Here is how much of TeX's memory you used:
- 63114 strings out of 493304
- 1316710 string characters out of 6139871
- 1849171 words of memory out of 5000000
- 64625 multiletter control sequences out of 15000+600000
- 100289 words of font info for 160 fonts, out of 8000000 for 9000
+ 63603 strings out of 493304
+ 1327439 string characters out of 6139871
+ 1862980 words of memory out of 5000000
+ 65009 multiletter control sequences out of 15000+600000
+ 119148 words of font info for 176 fonts, out of 8000000 for 9000
  963 hyphenation exceptions out of 8191
- 65i,12n,101p,10454b,2725s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
-7.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb
->
-Output written on ZHAW_SYSARCH_SEM_HA.pdf (26 pages, 261769 bytes).
+ 65i,14n,101p,10454b,2725s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{http://www.ubicomp.org/ubicomp2013/adjunct/adjunc
+t/p801.pdf} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.domoticz.com/} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{https://netbeast.co/} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.freedomotic.com/} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.homegenie.it/} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.castleos.com/} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.comfortclick.com/} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.opensourceautomation.com/} has been refe
+renced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.domogik.org/en/} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.openhab.org/} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.indigodomo.com/} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://universaal.sintef9013.com/index.php/en/} has
+ been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.control4.com/solutions/smart-home-overvi
+ew} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{https://home-assistant.io/} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{http://www.theintegratedconnection.com/coco-wireles
+s-home-automation/} has been referenced but does not exist, replaced by a fixed
+ one
+
+pdfTeX warning (dest): name{https://github.com/foxmask/django-th} has been refe
+renced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{https://ifttt.com/} has been referenced but does no
+t exist, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvip
+s/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on ZHAW_SYSARCH_SEM_HA.pdf (35 pages, 485013 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 350 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
- 39917 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 520 compressed objects within 6 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 47695 words of extra memory for PDF output out of 51595 (max. 10000000)
 
