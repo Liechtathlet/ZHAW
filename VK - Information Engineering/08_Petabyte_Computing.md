@@ -138,7 +138,7 @@ Spezialisiert auf DWH-Anwendungen, garantiert linearen Zugriff (durch Redundante
 ## Big Data
 2 Varianten
 
-  - V1
+  - V1 - BI Extension
     - "Neue Welt":
       - Dinge erzeugen Daten (Sensoren)
       - Social Networks
@@ -159,15 +159,15 @@ Spezialisiert auf DWH-Anwendungen, garantiert linearen Zugriff (durch Redundante
         - Apply
       - Analyse & DataMining in DataMarts
     - Rohdaten -> Informationen
-  - V2 (Datenanalyse als wissenschaftliches Tool) - Big Data Ecosystem
+  - V2 (Datenanalyse als wissenschaftliches Tool) - Big Data Ecosystemr
     - Apps (DataMining, Analytics)
     - Komponenten
-      - Streaming Data (für FAST Data)
-      - SQL-Like Queries
-      - Data Pipeline Access (Weiterstreamen von Daten)
-      - Moving (Sehr grosser Datenmengen)
-      - Populate (Befüllung der Datenbereiche)
+      - Streaming Data (für FAST Data) (STORM9)
+      - SQL-Like Queries (HIVE)
+      - Data Pipeline Access (Weiterstreamen von Daten) (Pix)
+      - Moving (Sehr grosser Datenmengen) (Sqoop)
+      - Populate (Befüllung der Datenbereiche) (Flume)
       - Distributed Query Engine
-      - Non-Relational-Database (Zwischenspeicher)
+      - Non-Relational-Database (Zwischenspeicher) (HBase)
       - Distributed File System (z.B. Hadoop, GFS)
     - Cloud (Infrastruktur)

@@ -5,50 +5,49 @@
 \contentsline {section}{\numberline {1.1}Hintergrund}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Ziel}{1}{section.1.2}
 \contentsline {section}{\numberline {1.3}Aufgabenstellung}{1}{section.1.3}
-\contentsline {section}{\numberline {1.4}Erwartete Resultate}{1}{section.1.4}
+\contentsline {section}{\numberline {1.4}Erwartete Resultate}{2}{section.1.4}
 \contentsline {section}{\numberline {1.5}Abgrenzung}{2}{section.1.5}
 \contentsline {section}{\numberline {1.6}Struktur}{2}{section.1.6}
-\contentsline {section}{\numberline {1.7}Planung}{2}{section.1.7}
-\contentsline {chapter}{\numberline {2}Ausgangslage}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Business Process Managemnt (BPM)}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Lebenszyklus / Phasen}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Formalisierung / Notation }{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Umsetzung}{6}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Technische Umsetzung}{6}{subsection.2.1.4}
-\contentsline {subsubsection}{Intelligent BPMS}{6}{subsubsection*.8}
-\contentsline {chapter}{\numberline {3}BPM in der Dom\IeC {\"a}ne "`Internet of Things"'}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Die Dom\IeC {\"a}ne "`Internet of Things"'}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Herausforderungen \& Problemstellungen}{8}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}Prognose f\IeC {\"u}r BPM im Kontext von IoT}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}BPM im Kontext von IoT}{9}{section.3.3}
-\contentsline {section}{\numberline {3.4}Einfluss und Nutzen}{10}{section.3.4}
-\contentsline {section}{\numberline {3.5}Anwendungsm\IeC {\"o}glichkeiten}{11}{section.3.5}
-\contentsline {section}{\numberline {3.6}Frameworks, Produkte, ...}{12}{section.3.6}
-\contentsline {chapter}{\numberline {4}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Die Dom\IeC {\"a}ne "`Home Automation"'}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Herausforderungen \& Problemstellungen}{13}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Prognose und Zukunft}{14}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}BPM im Kontext von "`Home Automation"'}{15}{section.4.2}
-\contentsline {section}{\numberline {4.3}Anwendungsm\IeC {\"o}glichkeiten}{15}{section.4.3}
-\contentsline {section}{\numberline {4.4}L\IeC {\"o}sungen, Produkte, Frameworks, ...}{16}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Software basiert}{17}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Hard- und Software}{19}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Weitere}{19}{subsection.4.4.3}
-\contentsline {chapter}{\numberline {5}BPM auf dem "`Raspberry PI"' in der Dom\IeC {\"a}ne "`Home Automation"'}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Der Raspberry PI}{20}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Raspberry Pi Modelle}{22}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Betrachteter L\IeC {\"o}sungsraum}{23}{section.5.2}
-\contentsline {section}{\numberline {5.3}L\IeC {\"o}sungen, Produkte, Frameworks, ...}{23}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}L\IeC {\"o}sungskategorie: Spezifische Home Automation L\IeC {\"o}sungen}{24}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}L\IeC {\"o}sung mit BPMN-Support im Bereich IOT}{24}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}{24}{section.5.4}
-\contentsline {chapter}{\numberline {6}Schlusswort}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Fazit}{25}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Home Automation}{25}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}}{25}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Allgemein}{25}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Vergleich: Ist -/ Soll-Planung}{25}{section.6.2}
-\contentsline {section}{\numberline {6.3}Dank}{25}{section.6.3}
-\contentsline {part}{Anhang}{28}{chapter*.21}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{28}{section*.23}
+\contentsline {chapter}{\numberline {2}Ausgangslage}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Business Process Managemnt (BPM)}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Lebenszyklus / Phasen}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Formalisierung / Notation }{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Umsetzung}{7}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Technische Umsetzung}{7}{subsection.2.1.4}
+\contentsline {subsubsection}{Intelligent BPMS}{7}{subsubsection*.5}
+\contentsline {chapter}{\numberline {3}BPM in der Dom\IeC {\"a}ne "`Internet of Things"'}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Die Dom\IeC {\"a}ne "`Internet of Things"'}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Herausforderungen \& Problemstellungen}{9}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Prognose f\IeC {\"u}r BPM im Kontext von IoT}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}BPM im Kontext von IoT}{10}{section.3.3}
+\contentsline {section}{\numberline {3.4}Einfluss und Nutzen}{11}{section.3.4}
+\contentsline {section}{\numberline {3.5}Anwendungsm\IeC {\"o}glichkeiten}{12}{section.3.5}
+\contentsline {section}{\numberline {3.6}Frameworks, Produkte, ...}{13}{section.3.6}
+\contentsline {chapter}{\numberline {4}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Die Dom\IeC {\"a}ne "`Home Automation"'}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Herausforderungen \& Problemstellungen}{15}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Prognose und Zukunft}{16}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}BPM im Kontext von "`Home Automation"'}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Anwendungsm\IeC {\"o}glichkeiten}{17}{section.4.3}
+\contentsline {section}{\numberline {4.4}L\IeC {\"o}sungen, Produkte, Frameworks, ...}{18}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Software basiert}{19}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Hard- und Software}{21}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Weitere}{21}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}BPM auf dem "`Raspberry PI"' in der Dom\IeC {\"a}ne "`Home Automation"'}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Der Raspberry PI}{22}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Raspberry Pi Modelle im \IeC {\"U}berblick}{24}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Betrachteter L\IeC {\"o}sungsraum}{25}{section.5.2}
+\contentsline {section}{\numberline {5.3}L\IeC {\"o}sungen, Produkte \& Frameworks }{25}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}L\IeC {\"o}sungskategorie: Spezifische Home Automation L\IeC {\"o}sungen}{26}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}L\IeC {\"o}sung mit BPMN-Support im Bereich IOT}{26}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}{27}{section.5.4}
+\contentsline {chapter}{\numberline {6}Schlusswort}{28}{chapter.6}
+\contentsline {section}{\numberline {6.1}Fazit}{28}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Home Automation}{28}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}}{28}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Allgemein}{28}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Vergleich: Ist -/ Soll-Planung}{28}{section.6.2}
+\contentsline {section}{\numberline {6.3}Dank}{28}{section.6.3}
+\contentsline {part}{Anhang}{31}{chapter*.17}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{31}{section*.19}
 \contentsfinish

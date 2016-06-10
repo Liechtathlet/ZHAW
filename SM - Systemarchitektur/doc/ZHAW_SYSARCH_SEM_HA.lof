@@ -3,10 +3,11 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Lebenszyklus / Phasen von BPMN}}{6}{figure.caption.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Raspberry Pi 2 Model B}}{20}{figure.caption.14}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Raspberry Pi 2 Model B \IeC {\"U}berblick}}{21}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Raspberry Pi 2 Model B}}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Raspberry Pi 2 Model B \IeC {\"U}berblick}}{23}{figure.caption.11}
 \addvspace {10\p@ }
 \contentsfinish
