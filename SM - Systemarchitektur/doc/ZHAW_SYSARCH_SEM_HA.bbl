@@ -1,0 +1,450 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{E:Cisco:EnrichProcessesIoE}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anil~Kalbag}{A.~K.}%
+     {Gerald~Silverman}{G.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Cisco Systems Inc.}%
+  }
+  \strng{namehash}{AKGS1}
+  \strng{fullhash}{AKGS1}
+  \field{labelalpha}{AK14}
+  \field{sortinit}{A}
+  \field{title}{Enriching Business Processes through the Internet of
+  Everything}
+  \verb{url}
+  \verb http://www.cisco.com/c/en/us/solutions/collateral/enterprise/cisco-on-c
+  \verb isco/t-en-07142014-business-process-ioe.html
+  \endverb
+  \field{year}{2014}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:WhatIsBPM:Def:Lifecycle}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \field{labelalpha}{Ewh}
+  \field{sortinit}{B}
+  \field{title}{BPM Get Started - Overview}
+  \verb{url}
+  \verb http://www.what-is-bpm.com/get_started/bpm_methodology.html
+  \endverb
+  \list{location}{1}{%
+    {What is BPM}%
+  }
+\endentry
+
+\entry{E:DBRU:SEM:IOT}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Brun}{B.}%
+     {Daniel}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {DE}%
+  }
+  \strng{namehash}{BD1}
+  \strng{fullhash}{BD1}
+  \field{labelalpha}{Bru15}
+  \field{sortinit}{B}
+  \field{title}{Internet of Things - Seminar Domain Specific Software
+  Engineering}
+  \verb{url}
+  \verb https://github.com/Liechtathlet/ZHAW/blob/master/SM%20-%20Domain%20Spec
+  \verb ific%20SWE/Dokumentation/ZHAW_SM_DSSE_IoT_Daniel_Brun%20-%20V01.00.pdf
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Gartner:Def:BPM}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Gartner Inc.}%
+  }
+  \field{labelalpha}{Ega}
+  \field{extraalpha}{1}
+  \field{sortinit}{B}
+  \field{title}{Business process management (BPM)}
+  \verb{url}
+  \verb http://www.gartner.com/it-glossary/business-process-management-bpm/
+  \endverb
+\endentry
+
+\entry{E:IPT:Def:CEP}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Dr. Florian~Serban}{D.~F.~S.}%
+     {Dr. Yves~Brise}{D.~Y.~B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {DE}%
+  }
+  \list{organization}{1}{%
+    {Innovation Process Technology AG}%
+  }
+  \strng{namehash}{DFSDYB1}
+  \strng{fullhash}{DFSDYB1}
+  \field{labelalpha}{DFS}
+  \field{sortinit}{D}
+  \field{title}{Complex Event Processing – Eine strategische Big Data
+  Entscheidung}
+  \verb{url}
+  \verb http://ipt.ch/complex-event-processing-eine-strategische-big-data-entsc
+  \verb heidung/
+  \endverb
+\endentry
+
+\entry{E:Blog:InfoQ:WSO2_ExtendedCapForIOT}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Farnham}{F.}%
+     {Kevin}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {InfoQ}%
+  }
+  \strng{namehash}{FK1}
+  \strng{fullhash}{FK1}
+  \field{labelalpha}{Far15}
+  \field{sortinit}{F}
+  \field{title}{WSO2 Extends its Internet of Things Process Orchestration
+  Capabilities}
+  \verb{url}
+  \verb http://www.infoq.com/news/2015/12/wso2-iot-process-orchestration
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Gartner:Prognose:SmartHome}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Gartner Inc.}%
+  }
+  \field{labelalpha}{Ega}
+  \field{extraalpha}{2}
+  \field{sortinit}{G}
+  \field{title}{Gartner Says a Typical Family Home Could Contain More Than 500
+  Smart Devices by 2022}
+  \verb{url}
+  \verb http://www.gartner.com/newsroom/id/2839717
+  \endverb
+  \field{year}{2014}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Gartner:BPM:IOT:2020}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Gartner Inc.}%
+  }
+  \field{labelalpha}{Ega}
+  \field{extraalpha}{3}
+  \field{sortinit}{G}
+  \field{title}{Gartner Says By 2020, More Than Half of Major New Business
+  Processes and Systems Will Incorporate Some Element of the Internet of
+  Things}
+  \verb{url}
+  \verb http://www.gartner.com/newsroom/id/3185623
+  \endverb
+  \field{year}{2016}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Gartner:BPM:2015}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Gartner Inc.}%
+  }
+  \field{labelalpha}{Ega}
+  \field{extraalpha}{4}
+  \field{sortinit}{G}
+  \field{title}{Gartner Says Spending on Business Process Management Suites to
+  Reach 2.7 Billion US-Dollar in 2015 as Organizations Digitalize Processes}
+  \verb{url}
+  \verb http://www.gartner.com/newsroom/id/3064717
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:InformationAge:IOTBPM}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Green}{G.}%
+     {Chloe}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {InformationAge}%
+  }
+  \strng{namehash}{GC1}
+  \strng{fullhash}{GC1}
+  \field{labelalpha}{Gre16}
+  \field{sortinit}{G}
+  \field{title}{Why BPM is the essential link between the IoT and CRM in the
+  digital age}
+  \verb{url}
+  \verb http://www.information-age.com/it-management/strategy-and-innovation/12
+  \verb 3460863/why-bpm-essential-link-between-iot-and-crm-digital-age
+  \endverb
+  \field{year}{2016}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:LinkedIn:Herring:IOTBPM}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Herring}{H.}%
+     {Mark}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \strng{namehash}{HM1}
+  \strng{fullhash}{HM1}
+  \field{labelalpha}{Her15}
+  \field{sortinit}{H}
+  \field{title}{IoT signals the end for BPM.}
+  \verb{url}
+  \verb https://www.linkedin.com/pulse/iot-signals-end-bpm-mark-herring
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:BPM:Discussion:IOT}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \field{labelalpha}{Ebp}
+  \field{sortinit}{H}
+  \field{howpublished}{Forums Diskussion}
+  \field{title}{How Important Are Processes to the Internet of Things?}
+  \verb{url}
+  \verb http://bpm.com/bpm-today/in-the-forum/how-important-are-processes-to-th
+  \verb e-internet-of-things
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Futstrat:Def:IBPM}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Future Strategies Inc., Workflow Management Coalition}%
+  }
+  \field{labelalpha}{Efu}
+  \field{sortinit}{I}
+  \field{title}{Intelligent BPM Systems: Impact and Opportunity}
+  \verb{url}
+  \verb http://futstrat.com/books/iBPMS_Handbook.php
+  \endverb
+\endentry
+
+\entry{E:EnterpriseIoT:BPM}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Enterprise IoT}%
+  }
+  \field{labelalpha}{Een}
+  \field{sortinit}{I}
+  \field{title}{IoT and Process Management}
+  \verb{url}
+  \verb http://enterprise-iot.org/book/enterprise-iot/part-ii-igniteiot-methodo
+  \verb logy/igniteiot-solution-delivery/building-blocks/iot-technology-profile
+  \verb s/4-middleware/process_efficiency_and_automation/
+  \endverb
+\endentry
+
+\entry{E:DataInformed:IOTBPM}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ozil}{O.}%
+     {Phillipe}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {DataInformed}%
+  }
+  \strng{namehash}{OP1}
+  \strng{fullhash}{OP1}
+  \field{labelalpha}{Ozi15}
+  \field{sortinit}{O}
+  \field{title}{BPM of Things: the Next Generation of the Internet of Things}
+  \verb{url}
+  \verb http://data-informed.com/bpm-of-things-the-next-generation-of-the-inter
+  \verb net-of-things/
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Wikipedia:RaspberryPi:DE}{online}{}
+  \list{language}{1}{%
+    {DE}%
+  }
+  \list{organization}{1}{%
+    {Wikimedia Foundation}%
+  }
+  \field{labelalpha}{Ewi}
+  \field{extraalpha}{1}
+  \field{sortinit}{R}
+  \field{title}{Raspberry Pi}
+  \verb{url}
+  \verb https://de.wikipedia.org/wiki/Raspberry_Pi
+  \endverb
+  \field{year}{2016}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Wikipedia:RaspberryPi:EN}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Wikimedia Foundation}%
+  }
+  \field{labelalpha}{Ewi}
+  \field{extraalpha}{2}
+  \field{sortinit}{R}
+  \field{title}{Raspberry Pi}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Raspberry_Pi
+  \endverb
+  \field{year}{2016}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:SearchCIO:Def:BPM}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rouse}{R.}%
+     {Margaret}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {SearchCIO}%
+  }
+  \strng{namehash}{RM1}
+  \strng{fullhash}{RM1}
+  \field{labelalpha}{Rou}
+  \field{sortinit}{R}
+  \field{title}{business process management (BPM)}
+  \verb{url}
+  \verb http://searchcio.techtarget.com/definition/business-process-management
+  \endverb
+\endentry
+
+\entry{E:JuniperReasearch:Prognose:HomeAutomation}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Juniper Research Ltd}%
+  }
+  \field{labelalpha}{Eju}
+  \field{sortinit}{S}
+  \field{title}{SMART HOME REVENUES TO REACH \$100 BILLION BY 2020, DRIVEN BY
+  AUTOMATION AND ENTERTAINMENT SERVICES}
+  \verb{url}
+  \verb http://www.juniperresearch.com/press/press-releases/smart-home-revenues
+  \verb -to-reach-$100-billion-by-2020
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{E:Oracle:IoT:BPMN}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Wang}{W.}%
+     {Phil}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Oracle Corporation}%
+  }
+  \strng{namehash}{WP1}
+  \strng{fullhash}{WP1}
+  \field{labelalpha}{Wan15}
+  \field{sortinit}{W}
+  \field{title}{Internet of Things and Business Process Management – IoT \&
+  BPM}
+  \verb{url}
+  \verb https://blogs.oracle.com/acharyavivek/entry/internet_of_things_and_busi
+  \verb ness
+  \endverb
+  \field{year}{2015}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

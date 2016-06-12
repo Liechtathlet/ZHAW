@@ -6,10 +6,9 @@ In diesem Kapitel wird analysiert wie Business Prozesse auf einem Raspberry PI i
 
 
 \section{Der Raspberry PI}
-\todo{Fix Footenotemarks}
 \begin{figure}
   \centering
-  \includegraphics[width=6cm]{./images/RaspberryPi2ModelB}
+  \includegraphics[width=8cm]{./images/RaspberryPi2ModelB}
   \captionsource{Raspberry Pi 2 Model B}{\url{https://www.raspberrypi.org/wp-content/uploads/2015/01/Pi2ModB1GB_-comp.jpeg}}
 \end{figure}
   
@@ -122,21 +121,22 @@ Die ersten intensiven Recherchen haben gezeigt, dass es keine bis sehr wenige L�
 
 \textbf{Spezifische Home Automation Lösungen}
 \begin{itemize}
-\item Lauffähig auf dem Raspberry Pi mit Raspbian (32-Bit).
-\item Fokus: Home-Automation
-\item Funktionalität um Abläufe oder Aktionen zu automatisieren.
-\item Eine Komponente
+\item Lauffähig auf dem Raspberry Pi mit Raspbian (32-Bit)
+\item Eine einzige Komponente (Keine Kombination von Komponenten)
 \item Open Source / Frei verfügbar (allenfalls Demoversion)
-\item Muss via Web steuerbar sein.
+\item Bedienbar via Web
+\item Fokus: Home-Automation
+\item Funktionalität um Abläufe oder Aktionen zu automatisieren
 \end{itemize}
 
 \textbf{Lösung mit \gls{acr:BPMN}-Support im Bereich \gls{acr:IOT}}
 \begin{itemize}
 \item Lauffähig auf dem Raspberry Pi mit Raspbian (32-Bit).
-\item Abläufe / Prozesse können mit Hilfe von \gls{acr:BPMN} modelliert werden.
-\item Kann aus mehreren Komponenten bestehen
-\item Möglichkeit zur Anbindung von \gls{acr:IOT}-Geräten aus dem Bereich "`Home Automation"' (z.B. via Plugins).
+\item Eine einzige Komponente (Keine Kombination von Komponenten)
 \item Open Source / Frei verfügbar (allenfalls Demoversion)
+\item Bedienbar via Web
+\item Abläufe / Prozesse können mit Hilfe von \gls{acr:BPMN} modelliert werden.
+\item Möglichkeit zur Anbindung von \gls{acr:IOT}-Geräten aus dem Bereich "`Home Automation"' (z.B. via Plugins oder Custom-Code).
 \end{itemize}
 
 
@@ -144,28 +144,29 @@ Die ersten intensiven Recherchen haben gezeigt, dass es keine bis sehr wenige L�
 In diesem Abschnitt werden die recherchierten Lösungen, Produkte und Frameworks aufgezeigt. Diese Auflistungen sind nicht abschliessend und repräsentieren den Stand der Dinge zum Zeitpunkt der Recherchen im Q2/2016.
 
 \subsection{Lösungskategorie: Spezifische Home Automation Lösungen}
-Die Inhalte dieser Lösungskategorie wurden zum Grössten Teil aus dem Kapitel \ref{sec:Analyse:HA:LPF} \nameref{sec:Analyse:HA:LPF} entnommen und nach der Lauffähigkeit auf dem Raspberry Pi und Raspbian gefiltert.
+Die Inhalte dieser Lösungskategorie wurden aus dem Kapitel \ref{sec:Analyse:HA:LPF} \nameref{sec:Analyse:HA:LPF} entnommen und nach folgenden Kriterien gefiltert:
 
+\textbf{Filterkriterian}
+\begin{itemize}
+\item Web-basiert
+\item Ready-To-Use
+\item Kein Framework
+\item Trigger \& Action oder Workflow  / Prozess oder BPMN / BPEL Unterstützung
+\item Open Source / frei verfügbar
+\item Lauffähig unter Raspbian 32-Bit
+\end{itemize}
+
+\textbf{Gefilterte Lösungen}
 \begin{itemize}
 \item TriggerHappy
 \item HomeAssistant
-\item openHAB (2)
-\item CastleOS
+\item openHAB
+\item Domogik
 \item HomeGenie
 \item Freedomotic
 \item Domoticz
 \end{itemize}
 
-Filter-Kriterien: OpenSource, Kein Framework, mindestens Trigger \& Action Support, unter linux betreibbar
-\begin{itemize}
-\item TriggerHappy (Für Web-Services)
-\item HomeAssistant (https://home-assistant.io/getting-started/)
-\item openHAB (2)
-\item CastleOS (Windows basiert)
-\item HomeGenie
-\item Freedomotic (http://www.freedomotic.com/content/download)
-\item Domoticz
-\end{itemize}
 
 - OpenHAB: https://github.com/openhab/openhab/wiki/Z-Wave-Binding
 - Evtl. mit ubidots (via HTTP-Request http://ubidots.com/docs/\#contents)
@@ -173,36 +174,21 @@ Filter-Kriterien: OpenSource, Kein Framework, mindestens Trigger \& Action Suppo
 - Domoticz
 
 \subsection{Lösung mit BPMN-Support im Bereich IOT}
-Der definierte Lösungsraum dieser Lösungskategorie ermöglicht ein breites Spektrum an Lösungen. Nachfolgend werden einige der möglichen Lösungen aufgezeigt.
+Der definierte Lösungsraum dieser Lösungskategorie ermöglicht ein breites Spektrum an Lösungen. Nachfolgend werden einige der möglichen Lösungen aufgezeigt, welche auf dem Raspberry Pi mit Raspbian 32-Bit lauffähig sind.
 
 \begin{itemize}
 \itemBfText{Activiti BPM (Java)}{}
 \itemBfText{jBPM (Java)}{}
 \itemBfText{Camunda (Java)}{https://github.com/zambrovski/mqtt-camunda-bpm} Nicht oben-Source
-\itemBfText{Drools (java)} {}http://www.drools.org/ with jbpm
-\itemBfText{http://www.bonitasoft.com/}{} Linux 64-Bit only
+\itemBfText{Drools (java)} {}http://www.drools.org/ with jbpm, Business Rules Management System (BRMS) solution
+%\itemBfText{http://www.bonitasoft.com/}{} Linux 64-Bit only
 \itemBfText{http://www.imixs.org/}{}
 
 \end{itemize}
 
-https://bpmn.io/
-
-% https://en.wikipedia.org/wiki/List_of_BPMN_2.0_engines
-
-\begin{itemize}
-\item Spezifische Lösung für den Raspberry PI -aus dem Bereiche BPM
-\item Benutzung einer Lösung und Erweiterung
-\item Kombination von Komponenten
-% https://azure.microsoft.com/en-us/blog/build-an-azure-app-service-to-record-raspberry-pi-sensor-data/
-% http://tonynysraspberrypi.blogspot.ch/
-\item Komponente in übergreifenden Lösung
-% https://www.eclipsecon.org/na2015/session/bpm-things-iot-and-processes
-% http://column2.com/2015/03/bpmnext-2015-day-1-demos-sap-w4-and-whitestein/
-% http://en.w4software.com/
-\end{itemize}
 
 
 \section{Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}
 Als Beispiel für diese Seminararbeit wird folgender Setup realisiert:
 
-
+\todo{Abbildung + Beschreibung}

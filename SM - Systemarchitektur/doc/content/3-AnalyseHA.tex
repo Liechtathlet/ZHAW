@@ -7,12 +7,15 @@
 \section{Die Domäne "`Home Automation"'}
 Im Kontext dieser Arbeit bezeichnet "`Home Automation"' den Gesamten Bereich der Heimautomatisierung im Privat- / Endanwenderbereich. Darunter wird die (teil-) automatisierung von Abläufen im Umfeld rund um das Eigenheim und das Privatleben verstanden.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{./images/home_automation_system}
+  \captionsource{Konzeptdarstellung eines "`Smart Home"'}{\url{http://eieihome.com/articles/wp-content/uploads/2015/08/home_automation_system.jpg}}
+
+\end{figure}
 "`Home Automation"' oder Heimautomation bezeichnet klassischerweise die Vernetzung und intelligent Kommunikation von Endgeräten in einem "`Eigenheit"'. Das "`Eigenheim"' kann dabei sowohl ein Haus, eine Wohnung oder aber auch ein einzelnes Zimmer oder ähnlich sein. Im weiteren Sinne gehört auch die Automatisierung von grossen Gebäuden, Gebäudekomplexen oder Siedlungen dazu. Dies wird dann aber meistens unter dem Begriff "`Gebäudeautomation"' zusammengefasst.
 
 Bezogen auf die Anwendung im Eigenheim kommt häufig ein bunter Mix an unterschiedlichen Geräten und Technologien zum Einsatz. Dies stellt eine der zentralen Herausforderungen für die autonome Kommunikation der Geräte dar. Durch den Einsatz einer zentralen Koordinationsstelle (z.B. durch einen Home Automation Hub oder ein Smart Gateway) kann hier Abhilfe geschaffen werden. Diese Koordinationsstellen unterstützen in der Regel eine breite Palette an Übertragungs- und Kommunikationsprotokollen und können so zwischen den verschiedenen Endgeräten vermitteln. 
-
-\todo{evtl. ein bild?}
-http://www.witura.com/wifi-smart-home-management-system.html
 
 \subsection{Herausforderungen \& Problemstellungen}
 Zusätzlich zu den allgemeinen Herausforderungen und Problemstellungen des \gls{acr:IOT} (Sieh dazu das Kapitel \ref{sec:AnalyseIot:ChallangesAndProblems} \nameref{sec:AnalyseIot:ChallangesAndProblems}) hat der Bereich "`Home Automation"' noch eine Reihe spezifischer Herausforderungen und Problemstellungen, welche es zu bewältigen gibt.
@@ -37,8 +40,6 @@ Dem Bereich "`Home Automation"' und insbesonder auch "`Smart Home"' wird ein gro
 Gemäss Juniper Research werden im Jahr 2020 rund 100 Milliarden US-Dollar für "`Smart Home Services"' (Dienstleistungen und Geräte aus dem Bereich Smart Home) ausgegeben werden. Darin enthalten sind Produkte und Dienstleistungen aus den Bereichen Unterhaltung, Gesundheit, Energie und Heimautomatisierung.
 
 Aufgrund der aktuellen Entwicklung besteht im Bereich "`Smart Home"' und "`Home Automation"' enormes Potenzial für Innovationen und die Erschliessung von neuen Anwendungs- und Geschäftsfeldern. 
-
-\todo{evtl. ein Bild?}
 
 %---------------------------------------------------------------------------------
 \section{BPM im Kontext von "`Home Automation"'}\ref{sec:Analyse:HA:Kontext}
@@ -79,8 +80,8 @@ Für \gls{acr:BPM} oder allgemein die Automatisierung von Abläufen im Bereich d
 \section{Lösungen, Produkte, Frameworks, ...}\label{sec:Analyse:HA:LPF}
 Im Bereich "`Home Automation"' gibt es aktuell viele verschiedene Lösungen, Produkte und Frameworks. Zum einen handelt es sich um reine Softwarelösungen und zum anderen auch um Kombinationen von Hard- und Software. Wie im Kapitel \ref{sec:Analyse:HA:Kontext} \nameref{sec:Analyse:HA:Kontext} erwähnt, gibt es nur wenige Lösungen, welche eine explizite Prozessunterstützung via \gls{acr:BPMN} oder \gls{acr:BPEL} haben.
 
-\subsection{Software basiert}
-Nachfolgend werden die Software-Lösungen, Produkte und Frameworks aus dem Bereich "`Home Automation"' aufgelistet, welche durch die Recherche ermittelt wurden. Diese wurden jeweils auf ausgewählte Eigenschaften hin überprüft. Als Quelle für die Zuordnung der Eigenschaften diente der jeweilige Webauftritt und die dazugehörigen Dokumentationen.
+\subsection{Software Lösungen}
+Nachfolgend werden die Software-Lösungen, Produkte und Frameworks aus dem Bereich "`Home Automation"' aufgelistet, welche durch die Recherche ermittelt wurden. Diese wurden jeweils auf rudimentär auf ausgewählte Eigenschaften hin überprüft. Als Quelle für die Zuordnung der Eigenschaften diente der jeweilige Webauftritt und die dazugehörigen Dokumentationen. Eine detaillierte und tiefer führende Analyse der einzelnen Lösungen wurde nicht durchgeführt (Siehe Kapitel \ref{sec:Abgrenzung} \nameref{sec:Abgrenzung}).
 
 Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die verschiedenen Lösungen zu schaffen und dadurch eine Basis für den weiteren Verlauf der Arbeit zu erhalten.
 
@@ -122,7 +123,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&	
 	&
-	& 	x	\\
+	& 	x	
+	&	x\\
 \midrule
 \hyperlink{http://www.theintegratedconnection.com/coco-wireless-home-automation/}{CoCo}
 	& 	x
@@ -134,7 +136,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&	
 	&
-	&	\\
+	&	
+	&	\footnotemark[2] \\
 \midrule
 \hyperlink{https://home-assistant.io/}{Home Assistant}
 	& 	x
@@ -146,7 +149,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&	
 	&
-	& 	x\\
+	& 	x
+	&	x\\
 \midrule
 \hyperlink{http://www.control4.com/solutions/smart-home-overview}{Control4}
 	&	x
@@ -158,7 +162,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	\footnotemark[2]
 	&	\footnotemark[2]
 	&	\footnotemark[2]
-	&	\\
+	&	
+	&  \footnotemark[2] \\
 \midrule
 \hyperlink{http://universaal.sintef9013.com/index.php/en/}{universAAL}
 	& 
@@ -170,7 +175,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&
 	&
-	&	x \\
+	&	x 
+	&  \footnotemark[2] \\
 \midrule
 \hyperlink{http://www.indigodomo.com/}{indigo domotics (Pro Version)}	
 	& 	x
@@ -182,7 +188,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&	
 	&	
-	&\\
+	&
+	&	\\
 \midrule
 \hyperlink{http://www.openhab.org/}{openHAB}
 	&	x
@@ -192,9 +199,10 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&	
 	&	x
-	&	(x)\footnotetext[2])
+	&	(x)\footnotemark[2])
 	&	
-	&	x \\
+	&	x 
+	&	x\\
 \midrule
 \hyperlink{http://www.domogik.org/en/}{Domogik}
 	&	x
@@ -206,7 +214,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&
 	&
-	& 	x \\
+	& 	x 
+	&   x\\
 \midrule
 \hyperlink{http://www.opensourceautomation.com/}{Open Source Automation}
 	&	x
@@ -215,22 +224,24 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&	x
 	&	
-	&	\footnotetext[2]
-	&	\footnotetext[2]
+	&	\footnotemark[2]
+	&	\footnotemark[2]
 	&
-	&	x \\
+	&	x 
+	& \\
 \midrule
 \hyperlink{http://www.comfortclick.com/}{Comfortclick bOS}
 	&	x
 	&	(x)
 	&	
-	&	\footnotetext[2]
+	&	\footnotemark[2]
 	&	x
 	&	
 	&	x
 	&	x
 	&
-	&	x \\
+	&	x 
+	&   (x)\footnotemark[3]\\
 \midrule
 \hyperlink{http://www.castleos.com/}{CastleOS}
 	&	x
@@ -242,8 +253,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	&	x
 	&	
 	&		
-	&	x\\
-	
+	&	x
+	& 	\\
 \midrule 
 \hyperlink{http://www.homegenie.it/}{HomeGenie}
 	& x
@@ -255,6 +266,7 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	& x
 	& x
 	& 
+	& x
 	& x\\
 	
 \midrule
@@ -268,6 +280,7 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	& x
 	& x
 	& 
+	& x
 	& x\\
 	
 \midrule
@@ -281,7 +294,8 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	& x
 	& x
 	& 
-	& x\\
+	& x
+	& x \\
 	
 \midrule
 \hyperlink{http://www.domoticz.com/}{Domoticz}
@@ -294,6 +308,7 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 	& \footnotemark[2]
 	& \footnotemark[2]
 	& 
+	& x
 	& x\\
 \bottomrule
 \end{tabular}
@@ -301,10 +316,12 @@ Diese Zuordnung dient in erster Linie dazu, einen groben Überblick über die ve
 
 \footnotetext[1]{Möglich, aber optional}
 \footnotetext[2]{Keine Informationen verfügbar}
+\footnotetext[3]{Nur mit kostenpflichtiger Hardware.}
 
+\newpage
 Die betrachteten Lösungen sind grundsätzlich alle für den Endbenutzer einsetzbar. Es gibt zusätzlich noch Angebote im Bereiche Business-2-Business. Dabei werden Unternehmen ganze Plattformen (Hardware und Software) zur Verfügung gestellt, um eigene Home Automation Lösungen zu konzipieren und zu vertreiben (White Label Produkte).
 
-\subsection{Hard- und Software}
+\subsection{Hardware Lösungen (inkl. abgestimmter Software)}
 Kombinierte Lösungen aus Hard- und Software gibt es aktuell auf dem eine ganze Reihe verschiedenster Produkte. Viele davon sind proprietär ausgelegt, sodass diese nur mit Produkten der entsprechenden Produktlinie oder vom selben Hersteller oder dessen Partnern funktionieren. Darüber hinaus gibt es auch Lösungen, welche einen eher generischen Ansatz verfolgen. Dabei können Produkte von unterschiedlichsten Herstellern angeschlossen werden. Voraussetzung ist jeweils, dass das entsprechende Protokoll unterstützt wird.
 
 Nachfolgend werden einige der recherchierten Lösungen aufgelistet. Diese werden jedoch im Rahmen dieser Arbeit nicht weiter betrachtet.

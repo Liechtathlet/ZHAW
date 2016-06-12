@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ZHAW_SYSARCH_SEM_HA.aux
+The style file: biblatex.bst
+A level-1 auxiliary file: content/0-title.aux
+A level-1 auxiliary file: content/0-History.aux
+A level-1 auxiliary file: content/0-Abstract.aux
+A level-1 auxiliary file: content/0-Introduction.aux
+A level-1 auxiliary file: content/1-Ausgangslage.aux
+A level-1 auxiliary file: content/2-AnalyseIOT.aux
+A level-1 auxiliary file: content/3-AnalyseHA.aux
+A level-1 auxiliary file: content/4-AnalyseRPI.aux
+A level-1 auxiliary file: content/7-Schlusswort.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ZHAW_SYSARCH_SEM_HA-blx.bib
+Database file #2: bib/BibtexDatabase.bib
+Biblatex version: 2.8
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 21 entries,
+            6047 wiz_defined-function locations,
+            1254 strings with 12487 characters,
+and the built_in function-call counts, 58841 in all, are:
+= -- 2720
+> -- 1213
+< -- 874
++ -- 518
+- -- 300
+* -- 3118
+:= -- 2587
+add.period$ -- 0
+call.type$ -- 21
+change.case$ -- 574
+chr.to.int$ -- 48
+cite$ -- 62
+duplicate$ -- 6993
+empty$ -- 6961
+format.name$ -- 503
+if$ -- 13926
+int.to.chr$ -- 0
+int.to.str$ -- 70
+missing$ -- 0
+newline$ -- 439
+num.names$ -- 843
+pop$ -- 6533
+preamble$ -- 1
+purify$ -- 510
+quote$ -- 0
+skip$ -- 3390
+stack$ -- 0
+substring$ -- 2254
+swap$ -- 2342
+text.length$ -- 517
+text.prefix$ -- 27
+top$ -- 1
+type$ -- 766
+warning$ -- 0
+while$ -- 313
+width$ -- 0
+write$ -- 417
