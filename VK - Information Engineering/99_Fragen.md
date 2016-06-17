@@ -325,3 +325,33 @@ Ich würde für die Realisierung das ILM des BITKOM empfehlen.
 
 ### 10. Welche Bedingungen sollten erfüllt sein, dass ein ILM durchgeführt werden kann?
   - Klassierung der Informationsobjekte
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Prüfungsvorbereitung
+  - Welche Klassifikation von Prozessorarchitekturen ist die wichtigste und welche gibt es? (Flynn, SIMD, MISD, SISD, MIMD)
+  - Was ist die Aufgabe eines Converters (Umwandeln von Daten in einem Format in ein anderes, mögliche Datenanreicherung, Transofrmation)
+  - Was ist ein Superscalar-Prozessor und was für Vorteile bietet er? (Mehrfache Execution Pipeline, Performance-Gewinn)
+  - Erklären Sie in groben Zügen wie das menschliche Gedächtnis gemäss der kognitiven Psychologie aufgebaut ist.
+  - Architekturen für Zetabyte-Computing
+  - Aus welchem Grund ist ihr Laptop langsam? (Von Neumann Bottleneck)
+  - Was verwendet Java und C# um zur Laufzeit ausgeführt zu werden? (VM)

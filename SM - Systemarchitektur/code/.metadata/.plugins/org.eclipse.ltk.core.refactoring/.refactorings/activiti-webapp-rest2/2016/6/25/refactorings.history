@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;activiti-webapp-explorer3/src/main/java&apos;&#x0A;- Original project: &apos;activiti-webapp-rest2&apos;&#x0A;- Destination element: &apos;activiti-webapp-explorer3/src/main/java&apos;&#x0A;- Original elements:&#x0A;     activiti-webapp-rest2/src/main/java/org.activiti.rest.servlet&#x0A;     activiti-webapp-rest2/src/main/java/org.activiti.rest.conf" description="Copy packages" destination="=activiti-webapp-explorer3/src\/main\/java" element1="/src\/main\/java&lt;org.activiti.rest.servlet" element2="/src\/main\/java&lt;org.activiti.rest.conf" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1466142345593" version="1.0"/>
+</session>

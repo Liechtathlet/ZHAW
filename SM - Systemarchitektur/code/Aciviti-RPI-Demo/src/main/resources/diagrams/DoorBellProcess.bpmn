@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="rpiDoorBellProcess" name="RPI - Door Bell Process" isExecutable="true" activiti:candidateStarterUsers="openhab" activiti:candidateStarterGroups="house">
+    <endEvent id="endevent1" name="End"></endEvent>
+    <scriptTask id="receivingPresenceAtHomeState" name="Status &quot;Zu Hause&quot; abrufen" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>  import groovy.json.*
+ 
+def url = "http://pi:raspberryi@raspberrypi.local:8080/rest/items/presenceAtHome".toURL().text
+def root = new JsonSlurper().parseText(url)
+ 
+if (root.state == "ON"){
+	execution.setVariable("presenceAtHome", true)
+}else{
+	execution.setVariable("presenceAtHome", false)
+}
+</script>
+    </scriptTask>
+    <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="PresentAtHome" name="User ist zu Hause" sourceRef="exclusivegateway1" targetRef="endevent1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceAtHome}]]></conditionExpression>
+    </sequenceFlow>
+    <userTask id="initiateCounterMeasurementsUT" name="Gegenmassnahmen einleiten" activiti:assignee="dani" activiti:candidateUsers="dani" activiti:candidateGroups="security">
+      <documentation>Während Ihrer Abwesenheit wurde um ${doorBellRangDateTime} an Ihrer Tür geklingelt. Bitte definsieren Sie die zu treffenden Massnahmen.</documentation>
+      <extensionElements>
+        <activiti:formProperty id="initiateCounterMeasurement" name="Massnahme einleiten" type="boolean" variable="initiateCounterMeasurement" default="false" required="true"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="presenceAway" name="User nicht zu Hause" sourceRef="exclusivegateway1" targetRef="initiateCounterMeasurementsUT">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${!presenceAtHome}]]></conditionExpression>
+    </sequenceFlow>
+    <endEvent id="endevent2" name="End"></endEvent>
+    <sequenceFlow id="flow3" sourceRef="initiateCounterMeasurementsUT" targetRef="endevent2"></sequenceFlow>
+    <sequenceFlow id="flow5" sourceRef="receivingPresenceAtHomeState" targetRef="exclusivegateway1"></sequenceFlow>
+    <startEvent id="doorBellRang" name="Door Bell Rang" activiti:initiator="openhab"></startEvent>
+    <sequenceFlow id="flow6" sourceRef="doorBellRang" targetRef="receivingPresenceAtHomeState"></sequenceFlow>
+    <dataObject id="presenceAtHome" name="presenceAtHome" itemSubjectRef="xsd:boolean">
+      <extensionElements>
+        <activiti:value>false</activiti:value>
+      </extensionElements>
+    </dataObject>
+    <dataObject id="initiateCounterMeasurement" name="initiateCounterMeasurement" itemSubjectRef="xsd:boolean">
+      <extensionElements>
+        <activiti:value>false</activiti:value>
+      </extensionElements>
+    </dataObject>
+    <dataObject id="doorBellRangDateTime" name="doorBellRangDateTime" itemSubjectRef="xsd:datetime">
+      <extensionElements>
+        <activiti:value></activiti:value>
+      </extensionElements>
+    </dataObject>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_rpiDoorBellProcess">
+    <bpmndi:BPMNPlane bpmnElement="rpiDoorBellProcess" id="BPMNPlane_rpiDoorBellProcess">
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="1000.0" y="200.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="receivingPresenceAtHomeState" id="BPMNShape_receivingPresenceAtHomeState">
+        <omgdc:Bounds height="55.0" width="105.0" x="313.0" y="263.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="650.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="initiateCounterMeasurementsUT" id="BPMNShape_initiateCounterMeasurementsUT">
+        <omgdc:Bounds height="55.0" width="105.0" x="740.0" y="340.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
+        <omgdc:Bounds height="35.0" width="35.0" x="1000.0" y="350.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="doorBellRang" id="BPMNShape_doorBellRang">
+        <omgdc:Bounds height="35.0" width="35.0" x="190.0" y="273.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="PresentAtHome" id="BPMNEdge_PresentAtHome">
+        <omgdi:waypoint x="670.0" y="270.0"></omgdi:waypoint>
+        <omgdi:waypoint x="670.0" y="217.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1000.0" y="217.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="13.0" width="100.0" x="670.0" y="270.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="presenceAway" id="BPMNEdge_presenceAway">
+        <omgdi:waypoint x="670.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="670.0" y="367.0"></omgdi:waypoint>
+        <omgdi:waypoint x="740.0" y="367.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="39.0" width="100.0" x="670.0" y="310.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="845.0" y="367.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1000.0" y="367.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="418.0" y="290.0"></omgdi:waypoint>
+        <omgdi:waypoint x="650.0" y="290.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="225.0" y="290.0"></omgdi:waypoint>
+        <omgdi:waypoint x="313.0" y="290.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

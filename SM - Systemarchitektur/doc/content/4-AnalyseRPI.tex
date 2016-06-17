@@ -146,7 +146,7 @@ In diesem Abschnitt werden die recherchierten Lösungen, Produkte und Frameworks
 \subsection{Lösungskategorie: Spezifische Home Automation Lösungen}
 Die Inhalte dieser Lösungskategorie wurden aus dem Kapitel \ref{sec:Analyse:HA:LPF} \nameref{sec:Analyse:HA:LPF} entnommen und nach folgenden Kriterien gefiltert:
 
-\textbf{Filterkriterian}
+\textbf{Filterkriterien}
 \begin{itemize}
 \item Web-basiert
 \item Ready-To-Use
@@ -156,7 +156,7 @@ Die Inhalte dieser Lösungskategorie wurden aus dem Kapitel \ref{sec:Analyse:HA:
 \item Lauffähig unter Raspbian 32-Bit
 \end{itemize}
 
-\textbf{Gefilterte Lösungen}
+\textbf{Lösungsraum (gefiltert nach Filterkriterien)}
 \begin{itemize}
 \item TriggerHappy
 \item HomeAssistant
@@ -167,28 +167,70 @@ Die Inhalte dieser Lösungskategorie wurden aus dem Kapitel \ref{sec:Analyse:HA:
 \item Domoticz
 \end{itemize}
 
+Aufgrund eines kurzen Antestens und des daraus resultierenden Eindruckes wurde "`openHAB"' für die Realisierung des Demo-Setups ausgewählt. Die Auswahl erfolgte nicht aufgrund bestimmter Kriterien. Der genaue Setup wird im Abschnitt \ref{sec:AnalyseRPI:Beispiel} \nameref{sec:AnalyseRPI:Beispiel} beschrieben. Ein Fazit zur ausgewählten Lösung wird im Kapitel \todo{Ref zu Kapitel.}
 
-- OpenHAB: https://github.com/openhab/openhab/wiki/Z-Wave-Binding
-- Evtl. mit ubidots (via HTTP-Request http://ubidots.com/docs/\#contents)
-- HomeGenie: http://www.homegenie.it/
-- Domoticz
 
 \subsection{Lösung mit BPMN-Support im Bereich IOT}
-Der definierte Lösungsraum dieser Lösungskategorie ermöglicht ein breites Spektrum an Lösungen. Nachfolgend werden einige der möglichen Lösungen aufgezeigt, welche auf dem Raspberry Pi mit Raspbian 32-Bit lauffähig sind.
+Der definierte Lösungsraum dieser Lösungskategorie ermöglicht ein breites Spektrum an Lösungen. Nachfolgend werden einige der möglichen Lösungen aufgezeigt. Bei der Auswahl wurden folgende Kriterien berücksichtigt:
 
+\textbf{Filterkriterien}
 \begin{itemize}
-\itemBfText{Activiti BPM (Java)}{}
-\itemBfText{jBPM (Java)}{}
-\itemBfText{Camunda (Java)}{https://github.com/zambrovski/mqtt-camunda-bpm} Nicht oben-Source
-\itemBfText{Drools (java)} {}http://www.drools.org/ with jbpm, Business Rules Management System (BRMS) solution
-%\itemBfText{http://www.bonitasoft.com/}{} Linux 64-Bit only
-\itemBfText{http://www.imixs.org/}{}
+\item Web-basiert
+\item Ready-To-Use
+\item Kein Framework
+\item Integrierte \gls{acr:BPMN}-Engine
+\item Open Source / frei verfügbar
+\item Lauffähig unter Raspbian 32-Bit
+\end{itemize}
 
+\textbf{Lösungsraum (gefiltert nach Filterkriterien)}
+\begin{itemize}
+\item \hyperlink{http://activiti.org/}{Activiti BPM Platform}
+\item \hyperlink{http://www.jbpm.org/}{jBPM}
+\item \hyperlink{https://camunda.com/}{Camunda BPM Platform (Community Edition)}
+\item \hyperlink{http://www.imixs.org/}{Imixs Workflow}
 \end{itemize}
 
 
 
-\section{Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}
+\section{Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'} \label{sec:AnalyseRPI:Beispiel}
 Als Beispiel für diese Seminararbeit wird folgender Setup realisiert:
 
 \todo{Abbildung + Beschreibung}
+
+\subsection{Verwendete Hardware}
+Für die Realisierung des Beispiel-Setups wurden folgende Hardware-Komponenten verwendet:
+\begin{itemize}
+\itemBfText{Raspberry Pi 2 Model B}
+\itemBfText{Razberry Board}{Das Razberry Board ist ein Raspberry Pi Erweiterungsboard, welches als Z-Wave Controller eingesetzt werden kann.}
+\itemBfText{Z-Wave.Me Double Wall Switch}
+\itemBfText{Light Bulb}
+\itemBfText{WLAN-Dongle}
+\end{itemize}
+
+\subsection{Verwendete Software}
+Für die Realisierung des Beispiel-Setups wurden folgende Software-Komponenten verwendet.
+\begin{itemize}
+\itemBfText{NOOBS}
+
+\itemBfText{Raspbian Jessie}
+
+\itemBfText{XMPP-Server: ejabberd}{Die Installation und Konfiguration des Servers erfolgte anhand der Anleitungen von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-ejabberd-xmpp-server-on-ubuntu}{Digitalocean} und \hyperlink{https://box.matto.nl/ejabberdjessie.html}{Matto....?}. Die Verknüpfung mit OpenHab erfolgte gemäss der Dokumentationen im OpenHab-Wik (\hyperlink{https://github.com/openhab/openhab/wiki/Actions\#xmpp-actions}{Action-Bindings}, \hyperlink{https://github.com/openhab/openhab/wiki/Feature-Overview}{UI's})}
+
+
+\item Apache tomcat 
+https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get
+change port to 8081 in server.xml
+\item Activiti
+\hyperlink{http://activiti.org/userguide/index.html\#_getting_started}{Anleitung}
+
+\itemBfText{screen}{}
+\end{itemize}
+
+
+\subsection{Komponentenübersicht}
+
+\todo{Image}
+
+
+\subsection{Szenario}
