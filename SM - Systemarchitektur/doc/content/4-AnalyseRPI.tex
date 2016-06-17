@@ -185,52 +185,71 @@ Der definierte Lösungsraum dieser Lösungskategorie ermöglicht ein breites Spe
 
 \textbf{Lösungsraum (gefiltert nach Filterkriterien)}
 \begin{itemize}
-\item \hyperlink{http://activiti.org/}{Activiti BPM Platform}
+\item \hyperlink{http://activiti.org/}{activiti BPM Platform}
 \item \hyperlink{http://www.jbpm.org/}{jBPM}
 \item \hyperlink{https://camunda.com/}{Camunda BPM Platform (Community Edition)}
 \item \hyperlink{http://www.imixs.org/}{Imixs Workflow}
 \end{itemize}
 
+Aufgrund einer kurzen Analyse, des ersten Eindruckes und der eingeschätzten Komplexität wurde für den Beispielsetup die "`activiti BPM Plattform"' ausgewählt.
 
 
+%------------------------------------------------------------------
+\newpage
 \section{Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'} \label{sec:AnalyseRPI:Beispiel}
-Als Beispiel für diese Seminararbeit wird folgender Setup realisiert:
-
-\todo{Abbildung + Beschreibung}
+Nachfolgend wird der realisierte Beispielprozess und die dafür benötigten Komponenten beschrieben.
 
 \subsection{Verwendete Hardware}
 Für die Realisierung des Beispiel-Setups wurden folgende Hardware-Komponenten verwendet:
 \begin{itemize}
-\itemBfText{Raspberry Pi 2 Model B}
+\item \textbf{Raspberry Pi 2 Model B}
 \itemBfText{Razberry Board}{Das Razberry Board ist ein Raspberry Pi Erweiterungsboard, welches als Z-Wave Controller eingesetzt werden kann.}
-\itemBfText{Z-Wave.Me Double Wall Switch}
-\itemBfText{Light Bulb}
-\itemBfText{WLAN-Dongle}
+\itemBfText{Z-Wave.Me Double Wall Switch}{Z-Wave Wand-Schalter, welcher mit verschiedenen Funktionen programmiert werden kann.}
+\itemBfText{domitech Z-Wave Smart LED Light Bulb}{Z-Wave LED Glühbirne.}
+\itemBfText{Ralink Technology, Corp. RT5370 Wireless Adapter}{USB-WLAN Adapter.}
 \end{itemize}
 
 \subsection{Verwendete Software}
 Für die Realisierung des Beispiel-Setups wurden folgende Software-Komponenten verwendet.
 \begin{itemize}
-\itemBfText{NOOBS}
+\itemBfText{NOOBS}{\gls{acr:NOOBS} ist ein Hilfsprogramm zur Installation von Betriebssystemen auf dem Raspberry Pi.}
 
-\itemBfText{Raspbian Jessie}
+\itemBfText{Raspbian Jessie}{Als Betriebssystem wurde die aktuelle Version von Raspbian Jessie (Debian Derivat).}
 
-\itemBfText{XMPP-Server: ejabberd}{Die Installation und Konfiguration des Servers erfolgte anhand der Anleitungen von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-ejabberd-xmpp-server-on-ubuntu}{Digitalocean} und \hyperlink{https://box.matto.nl/ejabberdjessie.html}{Matto....?}. Die Verknüpfung mit OpenHab erfolgte gemäss der Dokumentationen im OpenHab-Wik (\hyperlink{https://github.com/openhab/openhab/wiki/Actions\#xmpp-actions}{Action-Bindings}, \hyperlink{https://github.com/openhab/openhab/wiki/Feature-Overview}{UI's})}
+\itemBfText{openHAB 2}{Als Schlüsselkomponente wurde openHAB 2 eingesetzt. openHAB 2 ist eine Open Source Lösung für die Heimautomatisierung. Die Basis von openHAB 2 bildet das Eclipse SmartHome Framework der Eclipse Foundation. Die Installation und Konfiguration erfolgte gemäss den Anleitungen und Beispielen im \hyperlink{https://github.com/openhab/openhab/wiki}{GitHub-Wiki von openHAB}.}
+
+\itemBfText{Apache Derby}{Apache Derby ist eine in Java implementierte relationale Datenbank, welche unter der Open Source Apache Lizenz, Version 2.0 verfügbar ist. Die Apache Derby Datenbank wurde verwendet um die Persistenz in openHAB zu realisieren. Die Integration erfolgte über das \gls{acr:JPA} Binding von openHAB. Die Apache Derby Installation wurde gemäss der von Apache zur Verfügung gestellten \hyperlink{https://db.apache.org/derby/papers/DerbyTut/install_software.html}{Anleitung} installiert und konfiguriert. Die Anbindung an openHAB erfolgte gemäss der Dokumentation im \hyperlink{https://github.com/openhab/openhab/wiki/JPA-Persistence}{Wiki}.}
+
+\itemBfText{ejabberd XMPP-Server}{Als \gls{acr:XMPP} Server wurde ejabberd verwendet. \gls{acr:XMPP} Server werden unter anderem für Instant Messaging eingesetzt. In diesem Setup wurde der \gls{acr:XMPP} Server für die Kommunikation zwischen dem openHAB Server und dem Anwender verwendet. Einerseits kann openHAB über ein Binding Nachrichten an den Anwender senden und andererseits kann der Anwender bestimmte Befehle und Anweisungen an openHAB übermittelt. Die Installation von ejabberd erfolgt anhand der Anleitungen von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-ejabberd-xmpp-server-on-ubuntu}{Digitalocean} und \hyperlink{https://box.matto.nl/ejabberdjessie.html}{box.matto.nl}. Das openHAB Binding wurde gemäss der Dokumentationen im openHAB-Wik eingerichtet (\hyperlink{https://github.com/openhab/openhab/wiki/Actions\#xmpp-actions}{Action-Bindings}, \hyperlink{https://github.com/openhab/openhab/wiki/Feature-Overview}{UI's}).}
+
+\itemBfText{Mosquitto MQTT Broker}{Mosquitto ist ein Open Source \gls{acr:MQTT} Broker der Eclipse Foundation. \gls{acr:MQTT} ist ein leichtgewichtiges "`Publish-Subscribe"' Protokoll auf Basis von TCP/IP. Innerhalb von openHAB kann \gls{acr:MQTT} unter anderem für die Publikation des aktuellen Status der Geräte / Komponenten verwendet werden. Ebenfalls können Statusänderungen an Geräten / Komponenten über den \gls{acr:MQTT} Server durchgeführt werden. Mosquitto wurde gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/questions/how-to-setup-a-mosquitto-mqtt-server-and-receive-data-from-owntracks}{Digitalocean} installiert. Die Konfiguration in openHAB erfolgte gemäss der Anleitung im \hyperlink{https://github.com/openhab/openhab/wiki/MQTT-Binding}{Wiki}.}
+
+\itemBfText{openHAB Bindings}{Neben den beschriebenen Komponenten wurden diverse weitere Bindings und Actions innerhalb von openHAB verwendet.}
+
+\itemBfText{Apache Tomcat 7}{Um die BPM Plattform "`activiti"' zu nutzen wurde der Open Source Web Server Apache Tomcat 7 eingesetzt. Die Installation erfolgte gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get}{Digitalocean}}.
+
+\itemBfText{activiti BPM Plattform}{Activiti ist eine Java-basierte Open Source Workflow und \gls{acr:BPM} Plattform. Die Beispielsapplikation wurde gemäss den Informationen im \hyperlink{http://activiti.org/userguide/index.html}{User-Guide} und den Beispiels-Anwendungen "`activiti-explorer"' und "`activiti-rest"' implementiert. }
+
+\itemBfText{H2}{Die H2 Datenbank ist eine Open Source Java SQL Datenbank, welche als Backend der activiti BPM Plattform eingesetz wird. Die Installation erfolgte gemäss der Anleitung von \hyperlink{http://www.h2database.com/html/tutorial.html}{H2}.}
 
 
-\item Apache tomcat 
-https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get
-change port to 8081 in server.xml
-\item Activiti
-\hyperlink{http://activiti.org/userguide/index.html\#_getting_started}{Anleitung}
+\itemBfText{Pidgin Internet Messenger}{Auf der Client-Seite wurde für die Kommunikation mit ejabberd der "`Pidgin Internet Messenger"' verwendet.}
 
-\itemBfText{screen}{}
+\itemBfText{Linux Utilities und Tools}{Es wurden diverse weitere Linus-Utilites und Tools für die Implementation und die Arbeit mit den Komponenten verwendet (unter anderem: screen, scp, Eclipse IDE).}
 \end{itemize}
 
-
+\newpage
+\begin{landscape}
 \subsection{Komponentenübersicht}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=21cm]{./images/Component-Overview}
+  \caption{Komponentenübersicht}
+\end{figure}
+\end{landscape}
 
-\todo{Image}
 
-
-\subsection{Szenario}
+\subsection{Prozess / Szenario}
+\todo{Finish Process}
+Das implementierte Beispiel verwendet nicht alle installierten und konfigurierten Komponenten....
+\todo{Beschreibung}

@@ -11,6 +11,18 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="issueManagementUrl">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
 		</list>
@@ -28,9 +40,11 @@
 			<item value="ch.dbru.rpi.bpmn"/>
 		</list>
 		<list key="package">
+			<item value="ch.dbru.rpi.bpmn.activiti_rpi"/>
 			<item value="ch.dbru.rpi.bpmn.RpiBpmn"/>
 		</list>
 		<list key="artifactId">
+			<item value="activiti-rpi"/>
 			<item value="RpiBpmn"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -43,6 +57,20 @@
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Activiti-activiti-5.21.0/modules"/>
+			<item value="/home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Activiti-activiti-5.21.0"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardArtifactPage">

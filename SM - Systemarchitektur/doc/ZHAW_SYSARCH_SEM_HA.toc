@@ -40,17 +40,19 @@
 \contentsline {section}{\numberline {5.3}L\IeC {\"o}sungen, Produkte \& Frameworks }{25}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}L\IeC {\"o}sungskategorie: Spezifische Home Automation L\IeC {\"o}sungen}{26}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}L\IeC {\"o}sung mit BPMN-Support im Bereich IOT}{26}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}{27}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Verwendete Hardware}{27}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.4}Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}{28}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Verwendete Hardware}{28}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Verwendete Software}{28}{subsection.5.4.2}
-\contentsline {chapter}{\numberline {6}Schlusswort}{29}{chapter.6}
-\contentsline {section}{\numberline {6.1}Fazit}{29}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Internet of Things}{29}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Home Automation}{29}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Home Automation + Raspberry Pi}{29}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Allgemein}{29}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Dank}{29}{section.6.2}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{31}{chapter*.17}
-\contentsline {part}{Anhang}{34}{chapter*.19}
-\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{34}{section*.21}
+\contentsline {subsection}{\numberline {5.4.3}Komponenten\IeC {\"u}bersicht}{31}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Prozess / Szenario}{32}{subsection.5.4.4}
+\contentsline {chapter}{\numberline {6}Schlusswort}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Fazit}{33}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}BPM in der Dom\IeC {\"a}ne "`Internet of Things"'}{33}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{33}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}BPM auf dem "`Raspberry Pi"' in der Dom\IeC {\"a}ne "`Home Automation"'}{33}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Allgemein}{34}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Reflexion}{34}{section.6.2}
+\contentsline {chapter}{\nonumberline Quellenverzeichnis}{36}{chapter*.19}
+\contentsline {part}{Anhang}{39}{chapter*.21}
+\contentsline {chapter}{Liste der noch zu erledigenden Punkte}{39}{section*.23}
 \contentsfinish

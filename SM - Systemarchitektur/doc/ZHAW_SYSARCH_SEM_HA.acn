@@ -95,5 +95,15 @@
 \glossaryentry{BPMN?\glossentry{acr:BPMN}|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{IoT?\glossentry{acr:IOT}|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{BPMN?\glossentry{acr:BPMN}|setentrycounter[]{page}\glsnumberformat}{27}
-\glossaryentry{IoT?\glossentry{acr:IOT}|setentrycounter[]{page}\glsnumberformat}{29}
-\glossaryentry{CPE?\glossentry{acr:CPE}|setentrycounter[]{page}\glsnumberformat}{30}
+\glossaryentry{NOOBS?\glossentry{acr:NOOBS}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{JPA?\glossentry{acr:JPA}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{XMPP?\glossentry{acr:XMPP}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{XMPP?\glossentry{acr:XMPP}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{XMPP?\glossentry{acr:XMPP}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{MQTT?\glossentry{acr:MQTT}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{MQTT?\glossentry{acr:MQTT}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{MQTT?\glossentry{acr:MQTT}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{MQTT?\glossentry{acr:MQTT}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{BPM?\glossentry{acr:BPM}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{IoT?\glossentry{acr:IOT}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{CPE?\glossentry{acr:CPE}|setentrycounter[]{page}\glsnumberformat}{35}
