@@ -4584,3 +4584,130 @@ org.eclipse.core.runtime.CoreException: Launch configuration h2-server reference
 2016-06-17 16:08:50,524 [Worker-108] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2016-06-17 16:08:50,526 [Worker-108] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-06-17 16:08:50,526 [Worker-108] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:37:40,270 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:37:40,279 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:37:40,289 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:37:40,290 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:38:13,086 [Worker-15] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.activiti.examples:activiti-examples:1.0-SNAPSHOT @ /home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Aciviti-RPI-Demo/pom.xml.
+2016-06-19 17:38:13,600 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-xmlrpc/0.7/groovy-xmlrpc-0.7.pom
+2016-06-19 17:38:13,851 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-xmlrpc/0.7/groovy-xmlrpc-0.7.pom
+2016-06-19 17:38:13,989 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-all/1.7.0/groovy-all-1.7.0.pom
+2016-06-19 17:38:14,066 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-all/1.7.0/groovy-all-1.7.0.pom
+2016-06-19 17:38:14,107 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/jline/jline/0.9.94/jline-0.9.94.pom
+2016-06-19 17:38:14,146 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/jline/jline/0.9.94/jline-0.9.94.pom
+2016-06-19 17:38:14,281 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/jivesoftware/smack/3.0.1/smack-3.0.1.pom
+2016-06-19 17:38:14,309 [Worker-15] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded file://${pom.basedir}/repository/jivesoftware/smack/3.0.1/smack-3.0.1.pom
+2016-06-19 17:38:14,585 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:38:14,589 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:38:14,592 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:38:14,592 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:39:35,366 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.activiti.examples:activiti-examples:1.0-SNAPSHOT @ /home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Aciviti-RPI-Demo/pom.xml.
+2016-06-19 17:39:35,516 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehous/groovy/groovy-xmlrpc/0.7/groovy-xmlrpc-0.7.pom
+2016-06-19 17:39:35,518 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehous.groovy:groovy-xmlrpc:jar:0.7 is missing, no dependency information available
+2016-06-19 17:39:35,521 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehous.groovy:groovy-xmlrpc:jar:0.7 is missing, no dependency information available
+2016-06-19 17:39:35,689 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:39:35,691 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:39:35,693 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:39:35,694 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:39:40,019 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehous.groovy:groovy-xmlrpc:jar:0.7 is missing, no dependency information available
+2016-06-19 17:39:40,269 [Worker-15] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.activiti.examples:activiti-examples:1.0-SNAPSHOT @ /home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Aciviti-RPI-Demo/pom.xml.
+2016-06-19 17:39:40,476 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehous/groovy/groovy-xmlrpc/0.7/groovy-xmlrpc-0.7.jar
+2016-06-19 17:39:40,603 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehous.groovy:groovy-xmlrpc:jar:0.7 is missing, no dependency information available
+2016-06-19 17:39:40,734 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:39:40,736 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:39:40,738 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:39:40,738 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:40:07,928 [Worker-1] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-06-19 17:40:08,099 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.activiti.examples:activiti-examples:1.0-SNAPSHOT @ /home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Aciviti-RPI-Demo/pom.xml.
+2016-06-19 17:40:08,194 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehous.groovy:groovy-xmlrpc:jar:0.7 is missing, no dependency information available
+2016-06-19 17:40:08,313 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Aciviti-RPI-Demo/src/main/java
+2016-06-19 17:40:08,313 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Aciviti-RPI-Demo/src/main/resources
+2016-06-19 17:40:08,313 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Aciviti-RPI-Demo/src/test/java
+2016-06-19 17:40:08,314 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Aciviti-RPI-Demo/src/test/resources
+2016-06-19 17:40:08,417 [Worker-1] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2016-06-19 17:40:08,629 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehous.groovy:groovy-xmlrpc:jar:0.7 is missing, no dependency information available
+2016-06-19 17:40:08,653 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:40:08,654 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:40:08,660 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:40:08,662 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:41:25,029 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.activiti:activiti-webapp-explorer3:5.21.0 @ /home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Activiti-activiti-5.21.0/modules/activiti-webapp-explorer3/pom.xml.
+2016-06-19 17:41:25,656 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/codehaus/groovy/groovy-xmlrpc/0.8/groovy-xmlrpc-0.8.pom
+2016-06-19 17:41:25,870 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-xmlrpc/0.8/groovy-xmlrpc-0.8.pom
+2016-06-19 17:41:25,989 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-xmlrpc/0.8/groovy-xmlrpc-0.8.pom
+2016-06-19 17:41:26,255 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/jivesoftware/smack/3.1.0/smack-3.1.0.pom
+2016-06-19 17:41:26,286 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/jivesoftware/smack/3.1.0/smack-3.1.0.pom
+2016-06-19 17:41:26,314 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/jivesoftware/smack/3.1.0/smack-3.1.0.pom
+2016-06-19 17:41:26,767 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/codehaus/groovy/groovy-xmlrpc/0.8/groovy-xmlrpc-0.8.jar
+2016-06-19 17:41:27,177 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/jivesoftware/smack/3.1.0/smack-3.1.0.jar
+2016-06-19 17:41:27,293 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-xmlrpc/0.8/groovy-xmlrpc-0.8.jar
+2016-06-19 17:41:27,458 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-xmlrpc/0.8/groovy-xmlrpc-0.8.jar
+2016-06-19 17:41:27,492 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/jivesoftware/smack/3.1.0/smack-3.1.0.jar
+2016-06-19 17:41:27,579 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/jivesoftware/smack/3.1.0/smack-3.1.0.jar
+2016-06-19 17:41:29,745 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-06-19 17:41:29,749 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 30 resources
+2016-06-19 17:41:29,771 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-06-19 17:41:29,771 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Activiti-activiti-5.21.0/modules/activiti-webapp-explorer3/src/test/resources
+2016-06-19 17:41:29,773 [Worker-11] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of activiti-webapp-explorer3
+2016-06-19 17:41:29,774 [Worker-11] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for activiti-webapp-explorer3
+2016-06-19 17:41:29,778 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-06-19 17:41:30,919 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-06-19 17:41:30,931 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 30 resources
+2016-06-19 17:41:30,942 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-06-19 17:41:30,942 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/dani/Development/Repositories/github/ZHAW/SM - Systemarchitektur/code/Activiti-activiti-5.21.0/modules/activiti-webapp-explorer3/src/test/resources
+2016-06-19 17:42:45,296 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehous.groovy:groovy-xmlrpc:jar:0.7 is missing, no dependency information available
+2016-06-19 17:42:45,436 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:42:45,438 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:42:45,440 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:42:45,441 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:42:45,582 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:42:45,583 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:42:45,596 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:42:45,596 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:44:24,026 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:44:24,026 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:44:24,028 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:44:24,029 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:44:33,076 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:44:33,077 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:44:33,083 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:44:33,084 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:45:59,936 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:45:59,937 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:45:59,940 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:45:59,941 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:46:36,254 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:46:36,254 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:46:36,257 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:46:36,257 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:46:54,989 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:46:54,990 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:46:54,991 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:46:54,992 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:47:04,317 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:47:04,318 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:47:04,326 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:47:04,327 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:48:01,045 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:48:01,046 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:48:01,048 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:48:01,049 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:49:35,028 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:49:35,028 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:49:35,031 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:49:35,031 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:50:46,619 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:50:46,619 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:50:46,622 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:50:46,623 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:51:14,094 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:51:14,095 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:51:14,097 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:51:14,097 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 17:59:25,806 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:59:25,806 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 17:59:25,808 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 17:59:25,808 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-19 18:02:44,746 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 18:02:44,746 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-06-19 18:02:44,748 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-19 18:02:44,748 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
