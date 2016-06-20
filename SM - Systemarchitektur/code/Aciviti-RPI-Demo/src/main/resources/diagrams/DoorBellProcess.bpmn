@@ -144,7 +144,7 @@ println severProxy.echo("Hello World!")</script>
         <omgdi:waypoint x="600.0" y="47.0"></omgdi:waypoint>
         <omgdi:waypoint x="660.0" y="47.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="13.0" width="100.0" x="570.0" y="101.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="84.0" x="570.0" y="101.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="presenceAway" id="BPMNEdge_presenceAway">
@@ -152,7 +152,7 @@ println severProxy.echo("Hello World!")</script>
         <omgdi:waypoint x="563.0" y="257.0"></omgdi:waypoint>
         <omgdi:waypoint x="660.0" y="257.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="39.0" width="100.0" x="570.0" y="191.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="96.0" x="570.0" y="191.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
@@ -185,7 +185,7 @@ println severProxy.echo("Hello World!")</script>
         <omgdi:waypoint x="563.0" y="357.0"></omgdi:waypoint>
         <omgdi:waypoint x="660.0" y="357.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="13.0" width="100.0" x="570.0" y="299.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="89.0" x="570.0" y="299.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">

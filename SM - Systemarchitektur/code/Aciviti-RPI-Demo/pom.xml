@@ -47,9 +47,9 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-xmlrpc -->
 		<dependency>
-			<groupId>org.codehous.groovy</groupId>
+			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-xmlrpc</artifactId>
-			<version>0.7</version>
+			<version>0.8</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -76,4 +76,14 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	 <repositories>
+    <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </repository>
+  </repositories>
 </project>
