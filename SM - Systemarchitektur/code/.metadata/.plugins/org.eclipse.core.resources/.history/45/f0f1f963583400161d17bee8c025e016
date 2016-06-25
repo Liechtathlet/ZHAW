@@ -1,1 +1,0 @@
-{"description":null,"formKey":null,"formGroups":[{"title":"Info","id":"info","type":null,"formProperties":[{"type":"list","name":"Accept","displayName":null,"mandatory":true,"writable":false,"type":null,"value":null,"entries":[{"value":"Yes","name":"Yes"},{"value":"No","name":"No"}]}]}],"formProperties":[]}

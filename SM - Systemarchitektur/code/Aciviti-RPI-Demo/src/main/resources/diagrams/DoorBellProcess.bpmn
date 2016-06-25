@@ -4,25 +4,24 @@
     <scriptTask id="receivingPresenceAtHomeState" name="Status &quot;Zu Hause&quot; abrufen" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>  import groovy.json.*
  
+  print("Script: Query ZuHause")
 def url = "http://pi:raspberryi@raspberrypi.local:8080/rest/items/presenceAtHome".toURL().text
 def root = new JsonSlurper().parseText(url)
  
 if (root.state == "ON"){
 	execution.setVariable("presenceAtHome", true)
+	print("State is ON")
 }else{
 	execution.setVariable("presenceAtHome", false)
+	print("State is OFF")
 }
 </script>
     </scriptTask>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
     <sequenceFlow id="PresentAtHome" name="User ist zu Hause" sourceRef="exclusivegateway1" targetRef="enableLight">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceAtHome && !presenceInHoliday}]]></conditionExpression>
-    </sequenceFlow>
-    <sequenceFlow id="presenceAway" name="User nicht zu Hause" sourceRef="exclusivegateway1" targetRef="scripttask1">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${!presenceAtHome && !presenceInHoliday}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceAtHome == true}]]></conditionExpression>
     </sequenceFlow>
     <endEvent id="endevent2" name="End"></endEvent>
-    <sequenceFlow id="flow3" sourceRef="scripttask1" targetRef="endevent2"></sequenceFlow>
     <sequenceFlow id="flow5" sourceRef="receivingPresenceAtHomeState" targetRef="queryStateUserHoliday"></sequenceFlow>
     <startEvent id="doorBellRang" name="Door Bell Rang" activiti:initiator="openhab"></startEvent>
     <sequenceFlow id="flow6" sourceRef="doorBellRang" targetRef="receivingPresenceAtHomeState"></sequenceFlow>
@@ -32,42 +31,61 @@ import groovyx.net.http.ContentType
 import groovyx.net.http.Method
 import groovyx.net.http.RESTClient
 
+	    print("Script: Activate Light")
 	    def ret = null
-            def http = new HTTPBuilder("URL")
+            def http = new HTTPBuilder("http://raspberrypi.local:8080/")
 
             // perform a POST request, expecting TEXT response
-            http.request(method, ContentType.TEXT) {
-                uri.path = ""
-                uri.query = [ : "Eric", lastName: "Berry", email: "cavneb@gmail.com" ]
-                headers.'User-Agent' = 'Mozilla/5.0 Ubuntu/8.10 Firefox/3.0.4'
+            http.request(Method.POST, ContentType.TEXT) {
+                uri.path = "rest/items/zwave_device_664088cc_node4_switch_dimmer"
+                body= "100"
 
                 // response handler for a success response code
                 response.success = { resp, reader -&gt;
                     println "response status: ${resp.statusLine}"
-                    println 'Headers: -----------'
-               
-                    ret = reader.getText()
+                      println '--------------------'
+                }
+            }
+</script>
+    </scriptTask>
+    <scriptTask id="pushDoorBell" name="Türklingel aktivieren" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
 
-                    println 'Response data: -----'
-                    println ret
+	    def ret = null
+            def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+            // perform a POST request, expecting TEXT response
+            http.request(Method.POST, ContentType.TEXT) {
+                uri.path = "rest/items/Doorbell"
+                body = "ON"
+
+                // response handler for a success response code
+                response.success = { resp, reader -&gt;
+                    println "response status: ${resp.statusLine}"
                     println '--------------------'
                 }
             }
 </script>
     </scriptTask>
-    <scriptTask id="pushDoorBell" name="Türklingel aktivieren" activiti:autoStoreVariables="false"></scriptTask>
     <sequenceFlow id="flow7" sourceRef="enableLight" targetRef="pushDoorBell"></sequenceFlow>
     <sequenceFlow id="flow8" sourceRef="pushDoorBell" targetRef="endevent2"></sequenceFlow>
     <scriptTask id="queryStateUserHoliday" name="Status &quot;In den Ferien&quot; abrufen" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>  import groovy.json.*
  
-def url = "http://pi:raspberryi@raspberrypi.local:8080/rest/items/presenceInHoliday".toURL().text
+  print("Script: Query InHoliday")
+ 
+def url = "http://pi:raspberryi@raspberrypi.local:8080/rest/items/presenceAtHoliday".toURL().text
 def root = new JsonSlurper().parseText(url)
  
 if (root.state == "ON"){
 	execution.setVariable("presenceInHoliday", true)
+	print("Holiday is ON")
 }else{
 	execution.setVariable("presenceInHoliday", false)
+	print("Holiday is OFF")
 }
 </script>
     </scriptTask>
@@ -88,109 +106,355 @@ if (root.state == "ON"){
       </extensionElements>
     </dataObject>
     <sequenceFlow id="flow9" sourceRef="queryStateUserHoliday" targetRef="exclusivegateway1"></sequenceFlow>
-    <userTask id="usertask1" name="Gegenmassnahmen einleiten" activiti:assignee="dani">
+    <userTask id="usertask1" name="Gegenmassnahmen auswählen" activiti:assignee="dani">
       <extensionElements>
-        <activiti:formProperty id="initiateCounterMeasurement" name="Massnahme einleiten" type="boolean" variable="initiateCounterMeasurement" default="false" required="true"></activiti:formProperty>
+        <activiti:formProperty id="imcSound" name="Musik anschalten" type="boolean" variable="imcSound" default="false"></activiti:formProperty>
+        <activiti:formProperty id="imcLight" name="Licht anschalten" type="boolean" variable="imcLight" default="false"></activiti:formProperty>
+        <activiti:formProperty id="imcInformNeighbour" name="Nachbar informieren" type="boolean" variable="imcInformNeighbour" default="false"></activiti:formProperty>
       </extensionElements>
     </userTask>
-    <sequenceFlow id="flow10" name="User in den Ferien" sourceRef="exclusivegateway1" targetRef="usertask1">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${!presenceAtHome && presenceInHoliday}]]></conditionExpression>
+    <sequenceFlow id="flow10" name="User in den Ferien" sourceRef="exclusivegateway2" targetRef="mailtask2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceInHoliday == true}]]></conditionExpression>
     </sequenceFlow>
-    <scriptTask id="scripttask1" name="Benachrichtigung senden" scriptFormat="groovy" activiti:autoStoreVariables="false">
-      <script>import groovy.net.xmlrpc.*
-import org.jivesoftware.smack.XMPPConnection
+    <sequenceFlow id="flow11" sourceRef="parallelgateway2" targetRef="endevent2"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow12" name="User nicht zu Hause" sourceRef="exclusivegateway1" targetRef="exclusivegateway2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceAtHome == false}]]></conditionExpression>
+    </sequenceFlow>
+    <serviceTask id="mailtask1" name="Nachricht senden" activiti:type="mail">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:string><![CDATA[pi@raspberrypi.local]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[activiti@raspberrypi.local]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Security: Door Bell]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="html">
+          <activiti:string><![CDATA[Someone rang the door bell while you weren't at home!]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow14" sourceRef="mailtask1" targetRef="endevent2"></sequenceFlow>
+    <sequenceFlow id="flow15" sourceRef="exclusivegateway2" targetRef="mailtask1"></sequenceFlow>
+    <serviceTask id="mailtask2" name="Nachricht senden" activiti:type="mail">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:string><![CDATA[pi@raspberrypi.local]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[activiti@raspberrypi.local]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Security: Door Bell]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="html">
+          <activiti:string><![CDATA[Hey there,
 
-def clientConnection = new XMPPConnection("raspberrypi.local", 5222, "??g")
-    clientConnection.login("activiti", "raspberry")   // logging in as myClientId@example.orgm
-    def serverProxy = new JabberRPCServerProxy(clientConnection, "dani")
+Someone rang the door bell while you are in holiday. Please check your workflow inbox and choose the next steps.
 
-println severProxy.echo("Hello World!")</script>
+Greetings,
+activiti]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow16" sourceRef="mailtask2" targetRef="usertask1"></sequenceFlow>
+    <scriptTask id="scripttask1" name="Licht anschalten" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
+
+	    print("Script: Activate Light")
+	    def ret = null
+            def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+            // perform a POST request, expecting TEXT response
+            http.request(Method.POST, ContentType.TEXT) {
+                uri.path = "rest/items/zwave_device_664088cc_node4_switch_dimmer"
+                body= "100"
+
+                // response handler for a success response code
+                response.success = { resp, reader -&gt;
+                    println "response status: ${resp.statusLine}"
+                      println '--------------------'
+                }
+            }
+</script>
     </scriptTask>
-    <sequenceFlow id="flow11" sourceRef="usertask1" targetRef="endevent2"></sequenceFlow>
+    <serviceTask id="mailtask3" name="Mail Task" activiti:type="mail">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:string><![CDATA[hans@raspberrypi.local]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[activiti@raspberrypi.local]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Please checkout PI's flat]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="html">
+          <activiti:string><![CDATA[Hey there,
+
+Someone rang at PI's door bell. Could you check out his flat?
+
+Thanks and greetings,
+Pi System]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow17" sourceRef="usertask1" targetRef="parallelgateway1"></sequenceFlow>
+    <parallelGateway id="parallelgateway1" name="Parallel Gateway"></parallelGateway>
+    <sequenceFlow id="flow18" sourceRef="parallelgateway1" targetRef="mailtask3">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${imcInformNeighbour == true}]]></conditionExpression>
+    </sequenceFlow>
+    <parallelGateway id="parallelgateway2" name="Parallel Gateway"></parallelGateway>
+    <sequenceFlow id="flow19" sourceRef="mailtask3" targetRef="parallelgateway2"></sequenceFlow>
+    <sequenceFlow id="flow20" sourceRef="parallelgateway1" targetRef="scripttask1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${imcLight == true}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow21" sourceRef="scripttask1" targetRef="timerintermediatecatchevent1"></sequenceFlow>
+    <scriptTask id="scripttask2" name="Musik abspielen" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
+
+	    print("Script: Play Music")
+	    def ret = null
+            def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+            // perform a POST request, expecting TEXT response
+            http.request(Method.POST, ContentType.TEXT) {
+                uri.path = "rest/items/Musicplayer"
+                body= "ON"
+
+                // response handler for a success response code
+                response.success = { resp, reader -&gt;
+                    println "response status: ${resp.statusLine}"
+                      println '--------------------'
+                }
+            }
+</script>
+    </scriptTask>
+    <sequenceFlow id="flow22" sourceRef="parallelgateway1" targetRef="scripttask2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${imcSound == true}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow23" sourceRef="scripttask2" targetRef="parallelgateway2"></sequenceFlow>
+    <sequenceFlow id="flow24" sourceRef="parallelgateway1" targetRef="parallelgateway2"></sequenceFlow>
+    <boundaryEvent id="boundarytimer1" name="Timer" attachedToRef="usertask1" cancelActivity="true">
+      <timerEventDefinition>
+        <timeDuration>PT2M</timeDuration>
+      </timerEventDefinition>
+    </boundaryEvent>
+    <endEvent id="endevent3" name="End"></endEvent>
+    <sequenceFlow id="flow25" sourceRef="boundarytimer1" targetRef="endevent3"></sequenceFlow>
+    <intermediateCatchEvent id="timerintermediatecatchevent1" name="TimerCatchEvent">
+      <timerEventDefinition>
+        <timeDuration>PT15S</timeDuration>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <scriptTask id="scripttask4" name="Licht ausschalten" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
+
+	    print("Script: Activate Light")
+	    def ret = null
+            def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+            // perform a POST request, expecting TEXT response
+            http.request(Method.POST, ContentType.TEXT) {
+                uri.path = "rest/items/zwave_device_664088cc_node4_switch_dimmer"
+                body= "0"
+
+                // response handler for a success response code
+                response.success = { resp, reader -&gt;
+                    println "response status: ${resp.statusLine}"
+                      println '--------------------'
+                }
+            }
+</script>
+    </scriptTask>
+    <sequenceFlow id="flow26" sourceRef="timerintermediatecatchevent1" targetRef="scripttask4"></sequenceFlow>
+    <sequenceFlow id="flow27" sourceRef="scripttask4" targetRef="parallelgateway2"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_rpiDoorBellProcess">
     <bpmndi:BPMNPlane bpmnElement="rpiDoorBellProcess" id="BPMNPlane_rpiDoorBellProcess">
       <bpmndi:BPMNShape bpmnElement="receivingPresenceAtHomeState" id="BPMNShape_receivingPresenceAtHomeState">
-        <omgdc:Bounds height="55.0" width="158.0" x="110.0" y="120.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="158.0" x="80.0" y="120.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
-        <omgdc:Bounds height="40.0" width="40.0" x="543.0" y="127.0"></omgdc:Bounds>
+        <omgdc:Bounds height="40.0" width="40.0" x="460.0" y="127.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
-        <omgdc:Bounds height="35.0" width="35.0" x="980.0" y="240.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="1140.0" y="223.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="doorBellRang" id="BPMNShape_doorBellRang">
         <omgdc:Bounds height="35.0" width="35.0" x="10.0" y="130.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="enableLight" id="BPMNShape_enableLight">
-        <omgdc:Bounds height="55.0" width="105.0" x="660.0" y="20.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="610.0" y="20.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="pushDoorBell" id="BPMNShape_pushDoorBell">
         <omgdc:Bounds height="55.0" width="105.0" x="810.0" y="20.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="queryStateUserHoliday" id="BPMNShape_queryStateUserHoliday">
-        <omgdc:Bounds height="55.0" width="158.0" x="330.0" y="120.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="158.0" x="270.0" y="120.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
-        <omgdc:Bounds height="55.0" width="142.0" x="660.0" y="330.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="146.0" x="644.0" y="377.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="boundarytimer1" id="BPMNShape_boundarytimer1">
+        <omgdc:Bounds height="30.0" width="30.0" x="670.0" y="423.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="460.0" y="220.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="mailtask1" id="BPMNShape_mailtask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="621.0" y="213.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="mailtask2" id="BPMNShape_mailtask2">
+        <omgdc:Bounds height="55.0" width="105.0" x="520.0" y="377.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
-        <omgdc:Bounds height="55.0" width="141.0" x="660.0" y="230.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="113.0" x="785.0" y="277.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="mailtask3" id="BPMNShape_mailtask3">
+        <omgdc:Bounds height="55.0" width="105.0" x="789.0" y="458.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="parallelgateway1" id="BPMNShape_parallelgateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="821.0" y="384.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="parallelgateway2" id="BPMNShape_parallelgateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="1134.0" y="384.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask2" id="BPMNShape_scripttask2">
+        <omgdc:Bounds height="55.0" width="121.0" x="899.0" y="377.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
+        <omgdc:Bounds height="35.0" width="35.0" x="667.0" y="490.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="timerintermediatecatchevent1" id="BPMNShape_timerintermediatecatchevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="925.0" y="287.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask4" id="BPMNShape_scripttask4">
+        <omgdc:Bounds height="55.0" width="113.0" x="990.0" y="277.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="PresentAtHome" id="BPMNEdge_PresentAtHome">
-        <omgdi:waypoint x="563.0" y="127.0"></omgdi:waypoint>
-        <omgdi:waypoint x="563.0" y="87.0"></omgdi:waypoint>
+        <omgdi:waypoint x="480.0" y="127.0"></omgdi:waypoint>
+        <omgdi:waypoint x="480.0" y="47.0"></omgdi:waypoint>
         <omgdi:waypoint x="563.0" y="47.0"></omgdi:waypoint>
-        <omgdi:waypoint x="600.0" y="47.0"></omgdi:waypoint>
-        <omgdi:waypoint x="660.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="541.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="610.0" y="47.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="13.0" width="84.0" x="570.0" y="101.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="84.0" x="487.0" y="101.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="presenceAway" id="BPMNEdge_presenceAway">
-        <omgdi:waypoint x="563.0" y="167.0"></omgdi:waypoint>
-        <omgdi:waypoint x="563.0" y="257.0"></omgdi:waypoint>
-        <omgdi:waypoint x="660.0" y="257.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="13.0" width="96.0" x="570.0" y="191.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
-        <omgdi:waypoint x="801.0" y="257.0"></omgdi:waypoint>
-        <omgdi:waypoint x="980.0" y="257.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
-        <omgdi:waypoint x="268.0" y="147.0"></omgdi:waypoint>
-        <omgdi:waypoint x="330.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="238.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="270.0" y="147.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
         <omgdi:waypoint x="45.0" y="147.0"></omgdi:waypoint>
-        <omgdi:waypoint x="110.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="80.0" y="147.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
-        <omgdi:waypoint x="765.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="715.0" y="47.0"></omgdi:waypoint>
         <omgdi:waypoint x="810.0" y="47.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
         <omgdi:waypoint x="915.0" y="47.0"></omgdi:waypoint>
-        <omgdi:waypoint x="997.0" y="47.0"></omgdi:waypoint>
-        <omgdi:waypoint x="997.0" y="240.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1157.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1157.0" y="223.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
-        <omgdi:waypoint x="488.0" y="147.0"></omgdi:waypoint>
-        <omgdi:waypoint x="543.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="428.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="460.0" y="147.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
-        <omgdi:waypoint x="563.0" y="167.0"></omgdi:waypoint>
-        <omgdi:waypoint x="563.0" y="357.0"></omgdi:waypoint>
-        <omgdi:waypoint x="660.0" y="357.0"></omgdi:waypoint>
+        <omgdi:waypoint x="480.0" y="260.0"></omgdi:waypoint>
+        <omgdi:waypoint x="480.0" y="404.0"></omgdi:waypoint>
+        <omgdi:waypoint x="520.0" y="404.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="13.0" width="89.0" x="570.0" y="299.0"></omgdc:Bounds>
+          <omgdc:Bounds height="13.0" width="89.0" x="500.0" y="318.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
-        <omgdi:waypoint x="731.0" y="330.0"></omgdi:waypoint>
-        <omgdi:waypoint x="997.0" y="275.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1174.0" y="404.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1157.0" y="395.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1157.0" y="258.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow12" id="BPMNEdge_flow12">
+        <omgdi:waypoint x="480.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="480.0" y="220.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="13.0" width="96.0" x="500.0" y="173.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow14" id="BPMNEdge_flow14">
+        <omgdi:waypoint x="726.0" y="240.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1140.0" y="240.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow15" id="BPMNEdge_flow15">
+        <omgdi:waypoint x="500.0" y="240.0"></omgdi:waypoint>
+        <omgdi:waypoint x="621.0" y="240.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow16" id="BPMNEdge_flow16">
+        <omgdi:waypoint x="625.0" y="404.0"></omgdi:waypoint>
+        <omgdi:waypoint x="644.0" y="404.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow17" id="BPMNEdge_flow17">
+        <omgdi:waypoint x="790.0" y="404.0"></omgdi:waypoint>
+        <omgdi:waypoint x="821.0" y="404.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow18" id="BPMNEdge_flow18">
+        <omgdi:waypoint x="841.0" y="424.0"></omgdi:waypoint>
+        <omgdi:waypoint x="841.0" y="458.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow19" id="BPMNEdge_flow19">
+        <omgdi:waypoint x="894.0" y="485.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1089.0" y="485.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1154.0" y="424.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow20" id="BPMNEdge_flow20">
+        <omgdi:waypoint x="841.0" y="384.0"></omgdi:waypoint>
+        <omgdi:waypoint x="841.0" y="332.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow21" id="BPMNEdge_flow21">
+        <omgdi:waypoint x="898.0" y="304.0"></omgdi:waypoint>
+        <omgdi:waypoint x="925.0" y="304.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow22" id="BPMNEdge_flow22">
+        <omgdi:waypoint x="861.0" y="404.0"></omgdi:waypoint>
+        <omgdi:waypoint x="899.0" y="404.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow23" id="BPMNEdge_flow23">
+        <omgdi:waypoint x="1020.0" y="404.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1134.0" y="404.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow24" id="BPMNEdge_flow24">
+        <omgdi:waypoint x="841.0" y="384.0"></omgdi:waypoint>
+        <omgdi:waypoint x="889.0" y="344.0"></omgdi:waypoint>
+        <omgdi:waypoint x="960.0" y="344.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1049.0" y="344.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1154.0" y="384.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow25" id="BPMNEdge_flow25">
+        <omgdi:waypoint x="685.0" y="453.0"></omgdi:waypoint>
+        <omgdi:waypoint x="684.0" y="490.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow26" id="BPMNEdge_flow26">
+        <omgdi:waypoint x="960.0" y="304.0"></omgdi:waypoint>
+        <omgdi:waypoint x="990.0" y="304.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow27" id="BPMNEdge_flow27">
+        <omgdi:waypoint x="1103.0" y="304.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1154.0" y="304.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1154.0" y="384.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

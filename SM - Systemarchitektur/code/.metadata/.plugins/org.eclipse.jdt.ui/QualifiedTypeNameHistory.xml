@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.activiti.bpmn.model.Task"/>
+<fullyQualifiedTypeName name="org.activiti.explorer.conf.ApplicationConfiguration"/>
+<fullyQualifiedTypeName name="org.jivesoftware.smack.XMPPConnection"/>
+<fullyQualifiedTypeName name="org.jivesoftware.smack.packet.Message"/>
 </qualifiedTypeNameHistroy>

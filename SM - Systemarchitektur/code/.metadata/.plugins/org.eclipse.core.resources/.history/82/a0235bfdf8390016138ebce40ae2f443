@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="rpiDoorBellProcess" name="RPI - Door Bell Process" isExecutable="true" activiti:candidateStarterUsers="openhab" activiti:candidateStarterGroups="house">
+    <scriptTask id="receivingPresenceAtHomeState" name="Status &quot;Zu Hause&quot; abrufen" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>  import groovy.json.*
+ 
+  print("Script: Query ZuHause")
+def url = "http://pi:raspberryi@raspberrypi.local:8080/rest/items/presenceAtHome".toURL().text
+def root = new JsonSlurper().parseText(url)
+ 
+if (root.state == "ON"){
+	execution.setVariable("presenceAtHome", true)
+	print("State is ON")
+}else{
+	execution.setVariable("presenceAtHome", false)
+	print("State is OFF")
+}
+</script>
+    </scriptTask>
+    <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="PresentAtHome" name="User ist zu Hause" sourceRef="exclusivegateway1" targetRef="enableLight">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceAtHome == true}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="presenceAway" name="User nicht in den Ferien" sourceRef="exclusivegateway2" targetRef="usertask2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceInHoliday == false}]]></conditionExpression>
+    </sequenceFlow>
+    <endEvent id="endevent2" name="End"></endEvent>
+    <sequenceFlow id="flow3" sourceRef="scripttask1" targetRef="endevent2"></sequenceFlow>
+    <sequenceFlow id="flow5" sourceRef="receivingPresenceAtHomeState" targetRef="queryStateUserHoliday"></sequenceFlow>
+    <startEvent id="doorBellRang" name="Door Bell Rang" activiti:initiator="openhab"></startEvent>
+    <sequenceFlow id="flow6" sourceRef="doorBellRang" targetRef="receivingPresenceAtHomeState"></sequenceFlow>
+    <scriptTask id="enableLight" name="Licht einschalten" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
+
+	    print("Script: Activate Light")
+	    def ret = null
+            def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+            // perform a POST request, expecting TEXT response
+            http.request(Method.POST, ContentType.TEXT) {
+                uri.path = "rest/items/zwave_device_664088cc_node4_switch_dimmer"
+                body= "100"
+
+                // response handler for a success response code
+                response.success = { resp, reader -&gt;
+                    println "response status: ${resp.statusLine}"
+                      println '--------------------'
+                }
+            }
+</script>
+    </scriptTask>
+    <scriptTask id="pushDoorBell" name="Türklingel aktivieren" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
+
+	    def ret = null
+            def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+            // perform a POST request, expecting TEXT response
+            http.request(Method.POST, ContentType.TEXT) {
+                uri.path = "rest/items/zwave_device_664088cc_node4_switch_dimmer"
+                body = "50"
+
+                // response handler for a success response code
+                response.success = { resp, reader -&gt;
+                    println "response status: ${resp.statusLine}"
+                    println '--------------------'
+                }
+            }
+</script>
+    </scriptTask>
+    <sequenceFlow id="flow7" sourceRef="enableLight" targetRef="pushDoorBell"></sequenceFlow>
+    <sequenceFlow id="flow8" sourceRef="pushDoorBell" targetRef="endevent2"></sequenceFlow>
+    <scriptTask id="queryStateUserHoliday" name="Status &quot;In den Ferien&quot; abrufen" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>  import groovy.json.*
+ 
+  print("Script: Query InHoliday")
+ 
+def url = "http://pi:raspberryi@raspberrypi.local:8080/rest/items/presenceAtHoliday".toURL().text
+def root = new JsonSlurper().parseText(url)
+ 
+if (root.state == "ON"){
+	execution.setVariable("presenceInHoliday", true)
+	print("Holiday is ON")
+}else{
+	execution.setVariable("presenceInHoliday", false)
+	print("Holiday is OFF")
+}
+</script>
+    </scriptTask>
+    <dataObject id="presenceAtHome" name="presenceAtHome" itemSubjectRef="xsd:boolean">
+      <extensionElements>
+        <activiti:value>false</activiti:value>
+      </extensionElements>
+    </dataObject>
+    <dataObject id="initiateCounterMeasurement" name="initiateCounterMeasurement" itemSubjectRef="xsd:boolean">
+      <extensionElements>
+        <activiti:value>false</activiti:value>
+      </extensionElements>
+    </dataObject>
+    <dataObject id="doorBellRangDateTime" name="doorBellRangDateTime" itemSubjectRef="xsd:datetime"></dataObject>
+    <dataObject id="presenceInHoliday" name="presenceInHoliday" itemSubjectRef="xsd:boolean">
+      <extensionElements>
+        <activiti:value>false</activiti:value>
+      </extensionElements>
+    </dataObject>
+    <sequenceFlow id="flow9" sourceRef="queryStateUserHoliday" targetRef="exclusivegateway1"></sequenceFlow>
+    <userTask id="usertask1" name="Gegenmassnahmen einleiten" activiti:assignee="dani">
+      <extensionElements>
+        <activiti:formProperty id="initiateCounterMeasurement" name="Massnahme einleiten" type="boolean" variable="initiateCounterMeasurement" default="false" required="true"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow10" name="User in den Ferien" sourceRef="exclusivegateway2" targetRef="usertask1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceInHoliday == true}]]></conditionExpression>
+    </sequenceFlow>
+    <scriptTask id="scripttask1" name="Benachrichtigung senden" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>print(System.getenv('PATH') + "\n")
+print(['sh', '-c', 'echo $PATH' ].execute().text)
+print("ls -lrt".execute().text)
+print("pwd".execute().text)
+
+def process2=new ProcessBuilder("ls -lrt").redirectErrorStream(true).start()
+process2.inputStream.eachLine {println it}
+
+def process=new ProcessBuilder("echo raspberry | sudo -S /opt/ejabberd/ejabberd-16.03/bin/ejabberdctl send_message \"chat admin@raspberrypi.local dani@raspberrypi.local 'Security' 'Someone rang your door bell while you were not at home'\"").redirectErrorStream(true).start()
+process.inputStream.eachLine {println it}</script>
+    </scriptTask>
+    <sequenceFlow id="flow11" sourceRef="usertask1" targetRef="endevent2"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow12" name="User nicht zu Hause" sourceRef="exclusivegateway1" targetRef="exclusivegateway2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${presenceAtHome == false}]]></conditionExpression>
+    </sequenceFlow>
+    <userTask id="usertask2" name="Gegenmassnahmen einleiten (Not Ferien)" activiti:assignee="dani">
+      <extensionElements>
+        <activiti:formProperty id="initiateCounterMeasurement" name="Massnahme einleiten" type="boolean" variable="initiateCounterMeasurement" default="false" required="true"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow13" sourceRef="usertask2" targetRef="servicetask1"></sequenceFlow>
+    <serviceTask id="servicetask1" name="Shell: Execute" activiti:type="shell">
+    	<extensionElements>
+	    <activiti:field name="command" stringValue="/opt/ejabberd/ejabberd-16.03/bin/ejabberdctl" />
+		<activiti:field name="arg1" stringValue="send_message chat admin@raspberrypi.local dani@raspberrypi.local 'Security' 'Someone rang your door bell while you were not at home'"/>
+	    <activiti:field name="outputVariable" stringValue="resultVar" />
+	  </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow14" sourceRef="servicetask1" targetRef="scripttask1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_rpiDoorBellProcess">
+    <bpmndi:BPMNPlane bpmnElement="rpiDoorBellProcess" id="BPMNPlane_rpiDoorBellProcess">
+      <bpmndi:BPMNShape bpmnElement="receivingPresenceAtHomeState" id="BPMNShape_receivingPresenceAtHomeState">
+        <omgdc:Bounds height="55.0" width="158.0" x="110.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="543.0" y="127.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
+        <omgdc:Bounds height="35.0" width="35.0" x="980.0" y="240.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="doorBellRang" id="BPMNShape_doorBellRang">
+        <omgdc:Bounds height="35.0" width="35.0" x="10.0" y="130.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="enableLight" id="BPMNShape_enableLight">
+        <omgdc:Bounds height="55.0" width="105.0" x="660.0" y="20.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="pushDoorBell" id="BPMNShape_pushDoorBell">
+        <omgdc:Bounds height="55.0" width="105.0" x="810.0" y="20.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="queryStateUserHoliday" id="BPMNShape_queryStateUserHoliday">
+        <omgdc:Bounds height="55.0" width="158.0" x="330.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="55.0" width="142.0" x="710.0" y="369.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
+        <omgdc:Bounds height="55.0" width="141.0" x="803.0" y="186.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="543.0" y="237.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="55.0" width="142.0" x="830.0" y="310.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="660.0" y="186.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="PresentAtHome" id="BPMNEdge_PresentAtHome">
+        <omgdi:waypoint x="563.0" y="127.0"></omgdi:waypoint>
+        <omgdi:waypoint x="563.0" y="87.0"></omgdi:waypoint>
+        <omgdi:waypoint x="563.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="600.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="632.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="660.0" y="47.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="13.0" width="84.0" x="570.0" y="101.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="presenceAway" id="BPMNEdge_presenceAway">
+        <omgdi:waypoint x="563.0" y="277.0"></omgdi:waypoint>
+        <omgdi:waypoint x="901.0" y="310.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="39.0" width="100.0" x="570.0" y="301.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="944.0" y="213.0"></omgdi:waypoint>
+        <omgdi:waypoint x="997.0" y="240.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="268.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="330.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="45.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="110.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="765.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="810.0" y="47.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
+        <omgdi:waypoint x="915.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="997.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="997.0" y="240.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
+        <omgdi:waypoint x="488.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="543.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
+        <omgdi:waypoint x="563.0" y="277.0"></omgdi:waypoint>
+        <omgdi:waypoint x="563.0" y="396.0"></omgdi:waypoint>
+        <omgdi:waypoint x="710.0" y="396.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="13.0" width="89.0" x="570.0" y="409.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
+        <omgdi:waypoint x="852.0" y="396.0"></omgdi:waypoint>
+        <omgdi:waypoint x="997.0" y="396.0"></omgdi:waypoint>
+        <omgdi:waypoint x="997.0" y="275.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow12" id="BPMNEdge_flow12">
+        <omgdi:waypoint x="563.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="563.0" y="237.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="13.0" width="96.0" x="583.0" y="173.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow13" id="BPMNEdge_flow13">
+        <omgdi:waypoint x="901.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="712.0" y="241.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow14" id="BPMNEdge_flow14">
+        <omgdi:waypoint x="765.0" y="213.0"></omgdi:waypoint>
+        <omgdi:waypoint x="803.0" y="213.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
