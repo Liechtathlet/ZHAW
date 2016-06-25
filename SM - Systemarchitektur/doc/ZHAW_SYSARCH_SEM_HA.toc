@@ -45,12 +45,20 @@
 \contentsline {subsection}{\numberline {5.4.2}Verwendete Software}{30}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Komponenten\IeC {\"u}bersicht}{32}{subsection.5.4.3}
 \contentsline {subsection}{\numberline {5.4.4}Prozess / Szenario}{34}{subsection.5.4.4}
+\contentsline {subsubsection}{Beschreibung}{34}{subsubsection*.12}
+\contentsline {subsubsection}{Ausbau- und Verbesserungsm\IeC {\"o}glichkeiten}{34}{subsubsection*.13}
+\contentsline {subsubsection}{Start-Event}{34}{subsubsection*.14}
+\contentsline {subsubsection}{Abrufen der Status-Informationen}{34}{subsubsection*.15}
+\contentsline {subsubsection}{Auswerten der Status-Informationen}{34}{subsubsection*.16}
+\contentsline {subsubsection}{Verzweigung: "`User ist zu Hause"'}{34}{subsubsection*.17}
+\contentsline {subsubsection}{Verzweigung: "`User ist nicht zu Hause"'}{34}{subsubsection*.18}
+\contentsline {subsubsection}{Verzweigung: "`User ist in den Ferien"'}{34}{subsubsection*.19}
 \contentsline {chapter}{\numberline {6}Schlusswort}{36}{chapter.6}
 \contentsline {section}{\numberline {6.1}Fazit}{36}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}BPM in der Dom\IeC {\"a}ne "`Internet of Things"'}{36}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{36}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.2}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{37}{subsection.6.1.2}
 \contentsline {subsection}{\numberline {6.1.3}BPM auf dem "`Raspberry Pi"' in der Dom\IeC {\"a}ne "`Home Automation"'}{37}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Allgemein}{37}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.4}Beispielsetup}{37}{subsection.6.1.4}
 \contentsline {section}{\numberline {6.2}Reflexion}{37}{section.6.2}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{39}{chapter*.17}
+\contentsline {chapter}{\nonumberline Quellenverzeichnis}{39}{chapter*.25}
 \contentsfinish

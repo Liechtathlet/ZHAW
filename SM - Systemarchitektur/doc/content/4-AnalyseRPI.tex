@@ -244,19 +244,6 @@ Für die Realisierung des Beispiel-Setups wurden folgende Software-Komponenten v
 \subsection{Komponentenübersicht}
 Die Abbildung \ref{img:AnalyseRpi:ComponentOverview} \nameref{img:AnalyseRpi:ComponentOverview} zeigt die im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschriebenen Komponenten grafisch auf und zeigt deren direkten Abhängigkeiten auf. Sämtliche Komponenten wurden befinden sich auf dem Raspberry Pi. Der Grossteil der Komponenten muss nach dem Start durch ein Shell-Script gestartet werden.
 
-\subsubsection{Start-Event}
-
-\subsubsection{Abrufen der Status-Informationen}
-
-\subsubsection{Auswerten der Status-Informationen}
-
-\subsubsection{Verzweigung: "`User ist zu Hause"'}
-
-\subsubsection{Verzweigung: "`User ist nicht zu Hause"'}
-
-\subsubsection{Verzweigung: "`User ist in den Ferien"'}
-
-
 \begin{landscape}
 \begin{figure}[H]
   \centering
@@ -268,8 +255,30 @@ Die Abbildung \ref{img:AnalyseRpi:ComponentOverview} \nameref{img:AnalyseRpi:Com
 \subsection{Prozess / Szenario}
 Als Beispiel wurde der Prozess "`Türklingel"' beschrieben und umgesetzt. Formal wurde der Prozess gemäss der \gls{acr:BPMN} 2.0 Spezifikation beschrieben. Der formale Prozess ist in der Abbildung \ref{img:AnalyseRpi:DoorbellProcess} \nameref{img:AnalyseRpi:DoorbellProcess} ersichtlich.
 
-Das implementierte Beispiel verwendet nicht alle installierten und konfigurierten Komponenten....
+Bei der Umsetzung des konkreten Beispiels wurden nicht alle Komponenten verwendet, welche im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschrieben wurden (zum Beispiel: MQTT-Broker und Persistent von OpenHab).
 
+{\small \textbf{Hinweis: }}
+\subsubsection{Beschreibung}
+Der "`Türklingel"' Prozess definiert das Verhalten des "`Smart-Home"' wenn jemand an der Türe klingelt. Dabei werden bestimmte Kriterien geprüft, um den zu durchlaufenden Prozesszweig zu evaluieren.
+
+\subsubsection{Ausbau- und Verbesserungsmöglichkeiten}
+
+\subsubsection{Start-Event}
+Der Start des Prozesses erfolgt in der gewählten Home Automation Lösung (openHAB 2). In openHAB wurde ein Z-Wave Wandschalter eingerichtet. Für diesen Wandschalter wurde eine Regel definiert, welche bei einer Statusänderung ausgeführt wird. 
+
+\begin{lstlisting}
+Code goes here
+\end{lstlisting}
+
+\subsubsection{Abrufen der Status-Informationen}
+
+\subsubsection{Auswerten der Status-Informationen}
+
+\subsubsection{Verzweigung: "`User ist zu Hause"'}
+
+\subsubsection{Verzweigung: "`User ist nicht zu Hause"'}
+
+\subsubsection{Verzweigung: "`User ist in den Ferien"'}
 \todo{Beschreibung}
 
 \newpage
