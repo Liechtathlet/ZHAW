@@ -167,7 +167,7 @@ Die Inhalte dieser Lösungskategorie wurden aus dem Kapitel \ref{sec:Analyse:HA:
 \item Domoticz
 \end{itemize}
 
-Aufgrund eines kurzen Antestens und des daraus resultierenden Eindruckes wurde \textbf{"`openHAB"'} für die Realisierung des Demo-Setups ausgewählt. Die Auswahl erfolgte nicht aufgrund bestimmter Kriterien. Der genaue Setup wird im Abschnitt \ref{sec:AnalyseRPI:Beispiel} \nameref{sec:AnalyseRPI:Beispiel} beschrieben. Das Fazit zur ausgewählten Lösung wird im Kapitel \ref{subsec:Fazit:BPMN:RPI:HA} \nameref{subsec:Fazit:BPMN:RPI:HA} erläutert.
+Aufgrund eines kurzen Antestens und des daraus resultierenden Eindruckes wurde \textbf{"`openHAB"'} für die Realisierung des Demo-Setups ausgewählt. Die Auswahl erfolgte nicht aufgrund bestimmter Kriterien. Der genaue Setup wird im Kapitel \ref{sec:AnalyseRPI:Beispiel} \nameref{sec:AnalyseRPI:Beispiel} beschrieben. Das Fazit zur ausgewählten Lösung wird im Kapitel \ref{subsec:Fazit:BPMN:RPI:HA} \nameref{subsec:Fazit:BPMN:RPI:HA} erläutert.
 
 
 \subsection{Lösung mit BPMN-Support im Bereich IOT}
@@ -192,100 +192,3 @@ Der definierte Lösungsraum dieser Lösungskategorie ermöglicht ein breites Spe
 \end{itemize}
 
 Aufgrund des ersten Eindruckes, der eingeschätzten Komplexität und des eingeschätzten Zeitaufwands für die Realisierung eines Beispiel-Setups wurde die \textbf{"`activiti BPM Plattform"'} ausgewählt. Die Einschätzung erfolgte aufgrund der Informationen auf den entsprechenden Produkt-Webseiten und den dazugehörigen Dokumentationen und Beispielen.
-
-
-%------------------------------------------------------------------
-\newpage
-\section{Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'} \label{sec:AnalyseRPI:Beispiel}
-Nachfolgend wird der realisierte Beispielprozess und die dafür benötigten Komponenten beschrieben.
-
-\subsection{Verwendete Hardware}
-Für die Realisierung des Beispiel-Setups wurden folgende Hardware-Komponenten verwendet:
-\begin{itemize}
-\item \textbf{Raspberry Pi 2 Model B}
-\itemBfText{Razberry Board}{Das Razberry Board ist ein Raspberry Pi Erweiterungsboard, welches die Einbindung des Raspberry Pi's in ein Z-Wave Netzwerk ermöglicht. Dabei kann das Razberry Board als Z-Wave Controller verwendet werden.}
-\itemBfText{Z-Wave.Me Double Wall Switch}{Z-Wave Wand-Schalter, welcher mit verschiedenen Funktionen programmiert werden kann.}
-\itemBfText{domitech Z-Wave Smart LED Light Bulb}{LED Glühbirne, welche über Z-Wave gesteuert werden kann.}
-\itemBfText{Ralink Technology, Corp. RT5370 Wireless Adapter}{USB WLAN Adapter}
-\end{itemize}
-
-\subsection{Verwendete Software} \label{sec:AnalyseRPI:Beispiel:SW}
-Für die Realisierung des Beispiel-Setups wurden folgende Software-Komponenten verwendet.
-
-\begin{itemize}
-\itemBfText{NOOBS}{\gls{acr:NOOBS} ist ein Hilfsprogramm zur Installation von Betriebssystemen auf dem Raspberry Pi (Installations-Manager).}
-
-\itemBfText{Raspbian Jessie}{Als Betriebssystem wurde die aktuelle Version von Raspbian Jessie (Debian Derivat).}
-
-\itemBfText{openHAB 2}{Als Schlüsselkomponente wurde openHAB 2 eingesetzt. openHAB 2 ist eine Open Source Lösung für die Heimautomatisierung. Die Basis von openHAB 2 bildet das Eclipse SmartHome Framework der Eclipse Foundation. Die Installation und Konfiguration erfolgte gemäss den Anleitungen und Beispielen im \hyperlink{https://github.com/openhab/openhab/wiki}{GitHub-Wiki von openHAB} \footnote{\url{https://github.com/openhab/openhab/wiki}}.}
-
-\itemBfText{Apache Derby}{Apache Derby ist eine in Java implementierte relationale Datenbank, welche unter der Open Source Apache Lizenz Version 2.0 verfügbar ist. Die Apache Derby Datenbank wurde verwendet um die Persistenz in openHAB zu realisieren. Die Integration erfolgte über das \gls{acr:JPA} Binding von openHAB. Die Apache Derby Installation wurde gemäss der von Apache zur Verfügung gestellten \hyperlink{https://db.apache.org/derby/papers/DerbyTut/install_software.html}{Anleitung}\footnote{\url{https://db.apache.org/derby/papers/DerbyTut/install_software.html}} installiert und konfiguriert. Die Anbindung an openHAB erfolgte gemäss der Dokumentation im \hyperlink{https://github.com/openhab/openhab/wiki/JPA-Persistence}{Wiki} \footnote{\url{https://github.com/openhab/openhab/wiki/JPA-Persistence}}.}
-
-\itemBfText{ejabberd XMPP-Server}{Als \gls{acr:XMPP} Server wurde ejabberd verwendet. \gls{acr:XMPP} Server werden unter anderem für Instant Messaging (Dienst für Sofortnachrichten) eingesetzt. In diesem Setup wurde der \gls{acr:XMPP} Server für die Kommunikation zwischen dem openHAB Server und dem Anwender verwendet. Einerseits kann openHAB über ein Binding Nachrichten an den Anwender senden und andererseits kann der Anwender bestimmte Befehle und Anweisungen an openHAB übermitteln. Die Installation von ejabberd erfolgt anhand der Anleitungen von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-ejabberd-xmpp-server-on-ubuntu}{Digitalocean}\footnote{\url{https://www.digitalocean.com/community/tutorials/how-to-install-ejabberd-xmpp-server-on-ubuntu}} und \hyperlink{https://box.matto.nl/ejabberdjessie.html}{box.matto.nl}\footnote{\url{https://box.matto.nl/ejabberdjessie.html}}. Das openHAB Binding wurde gemäss der Dokumentationen im openHAB-Wik eingerichtet (\hyperlink{https://github.com/openhab/openhab/wiki/Actions\#xmpp-actions}{Action-Bindings}\footnote{\url{https://github.com/openhab/openhab/wiki/Actions\#xmpp-actions}}, \hyperlink{https://github.com/openhab/openhab/wiki/Feature-Overview}{UI's}\footnote{\url{https://github.com/openhab/openhab/wiki/Feature-Overview}}).}
-
-\itemBfText{Mosquitto MQTT Broker}{Mosquitto ist ein Open Source \gls{acr:MQTT} Broker der Eclipse Foundation. \gls{acr:MQTT} ist ein leichtgewichtiges "`Publish-Subscribe"' Protokoll auf Basis von TCP/IP. Innerhalb von openHAB kann \gls{acr:MQTT} unter anderem für die Publikation des aktuellen Status der Geräte / Komponenten verwendet werden. Ebenfalls können Statusänderungen für Geräte / Komponenten über den \gls{acr:MQTT} Server ausgeführt werden. Mosquitto wurde gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/questions/how-to-setup-a-mosquitto-mqtt-server-and-receive-data-from-owntracks}{Digitalocean}\footnote{\url{https://www.digitalocean.com/community/questions/how-to-setup-a-mosquitto-mqtt-server-and-receive-data-from-owntracks}} installiert. Die Konfiguration in openHAB erfolgte gemäss der Anleitung im \hyperlink{https://github.com/openhab/openhab/wiki/MQTT-Binding}{Wiki}\footnote{\url{https://github.com/openhab/openhab/wiki/MQTT-Binding}}.}
-
-\itemBfText{openHAB Bindings}{Neben den beschriebenen Komponenten wurden diverse weitere Bindings und Actions innerhalb von openHAB verwendet.}
-
-\itemBfText{Apache Tomcat 7}{Um die BPM Plattform "`activiti"' zu nutzen wurde der Open Source Web Server Apache Tomcat 7 eingesetzt. Die Installation erfolgte gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get}{Digitalocean}}\footnote{\url{https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get}}.
-
-\itemBfText{activiti BPM Plattform}{Activiti ist eine Java-basierte Open Source Workflow und \gls{acr:BPM} Plattform. Die Beispielsapplikation wurde gemäss den Informationen im \hyperlink{http://activiti.org/userguide/index.html}{User-Guide}\footnote{\url{http://activiti.org/userguide/index.html}} und den Beispiels-Anwendungen "`activiti-explorer"' und "`activiti-rest"' implementiert. }
-
-\itemBfText{H2}{Die H2 Datenbank ist eine Open Source Java SQL Datenbank, welche als Backend der activiti BPM Plattform eingesetz wird. Die Installation erfolgte gemäss der Anleitung von \hyperlink{http://www.h2database.com/html/tutorial.html}{H2}\footnote{\url{http://www.h2database.com/html/tutorial.html}}.}
-
-\itemBfText{Postfix}{Der Postfix-Mail-Server wurde zum Versand von lokalen E-Mail's verwendet. Dieser Mail-Server wird von der activiti BPM Plattform verwendet, um Benachrichtigungen innerhalb des Prozesses zu versenden. Die Installation und Konfiguration erfolgte gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04}{Digitalocean}\footnote{\url{https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04}}.}
-
-\itemBfText{Pidgin Internet Messenger}{Auf der Client-Seite wurde für die Kommunikation mit ejabberd der "`Pidgin Internet Messenger"' verwendet.}
-
-\itemBfText{Linux Utilities und Tools}{Es wurden diverse weitere Linus-Utilites und Tools für die Implementation und die Arbeit mit den Komponenten verwendet (unter anderem: screen, scp, Eclipse IDE).}
-\end{itemize}
-
-
-\subsection{Komponentenübersicht}
-Die Abbildung \ref{img:AnalyseRpi:ComponentOverview} \nameref{img:AnalyseRpi:ComponentOverview} zeigt die im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschriebenen Komponenten grafisch auf und zeigt deren direkten Abhängigkeiten auf. Sämtliche Komponenten wurden befinden sich auf dem Raspberry Pi. Der Grossteil der Komponenten muss nach dem Start durch ein Shell-Script gestartet werden.
-
-\begin{landscape}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=19cm]{./images/Component-Overview}
-  \caption{Komponentenübersicht}\label{img:AnalyseRpi:ComponentOverview}
-\end{figure}
-\end{landscape}
-
-\subsection{Prozess / Szenario}
-Als Beispiel wurde der Prozess "`Türklingel"' beschrieben und umgesetzt. Formal wurde der Prozess gemäss der \gls{acr:BPMN} 2.0 Spezifikation beschrieben. Der formale Prozess ist in der Abbildung \ref{img:AnalyseRpi:DoorbellProcess} \nameref{img:AnalyseRpi:DoorbellProcess} ersichtlich.
-
-Bei der Umsetzung des konkreten Beispiels wurden nicht alle Komponenten verwendet, welche im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschrieben wurden (zum Beispiel: MQTT-Broker und Persistent von OpenHab).
-
-{\small \textbf{Hinweis: }}
-\subsubsection{Beschreibung}
-Der "`Türklingel"' Prozess definiert das Verhalten des "`Smart-Home"' wenn jemand an der Türe klingelt. Dabei werden bestimmte Kriterien geprüft, um den zu durchlaufenden Prozesszweig zu evaluieren.
-
-\subsubsection{Ausbau- und Verbesserungsmöglichkeiten}
-
-\subsubsection{Start-Event}
-Der Start des Prozesses erfolgt in der gewählten Home Automation Lösung (openHAB 2). In openHAB wurde ein Z-Wave Wandschalter eingerichtet. Für diesen Wandschalter wurde eine Regel definiert, welche bei einer Statusänderung ausgeführt wird. 
-
-\begin{lstlisting}
-Code goes here
-\end{lstlisting}
-
-\subsubsection{Abrufen der Status-Informationen}
-
-\subsubsection{Auswerten der Status-Informationen}
-
-\subsubsection{Verzweigung: "`User ist zu Hause"'}
-
-\subsubsection{Verzweigung: "`User ist nicht zu Hause"'}
-
-\subsubsection{Verzweigung: "`User ist in den Ferien"'}
-\todo{Beschreibung}
-
-\newpage
-\begin{landscape}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=21cm]{./images/DoorBellProcess}
-  \caption{"'Türklingel-Prozess"'}\label{img:AnalyseRpi:DoorbellProcess}
-\end{figure}
-\end{landscape}

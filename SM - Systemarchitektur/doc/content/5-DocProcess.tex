@@ -1,0 +1,212 @@
+% !TeX encoding=utf8
+% !TeX spellcheck = de_CH_frami
+
+\chapter{Realisierung eines beispielhaften Prozesses}\label{sec:AnalyseRPI:Beispiel}
+Dieses Kapitel beschreibt die Realisierung eines beispielhaften Prozesses mit \gls{acr:BPMN} im Bereich "`Home Automation"'. Als primäres Hardware-Element wird ein Raspberry PI eingesetzt.
+
+\section{Verwendete Hardware}
+Für die Realisierung des Beispiel-Setups wurden folgende Hardware-Komponenten verwendet:
+\begin{itemize}
+\item \textbf{Raspberry Pi 2 Model B}
+\itemBfText{Razberry Board}{Das Razberry Board ist ein Raspberry Pi Erweiterungsboard, welches die Einbindung des Raspberry Pi's in ein Z-Wave Netzwerk ermöglicht. Dabei kann das Razberry Board als Z-Wave Controller verwendet werden.}
+\itemBfText{Z-Wave.Me Double Wall Switch}{Z-Wave Wand-Schalter, welcher mit verschiedenen Funktionen programmiert werden kann.}
+\itemBfText{domitech Z-Wave Smart LED Light Bulb}{LED Glühbirne, welche über Z-Wave gesteuert werden kann.}
+\itemBfText{Ralink Technology, Corp. RT5370 Wireless Adapter}{USB WLAN Adapter}
+\end{itemize}
+
+\section{Verwendete Software} \label{sec:AnalyseRPI:Beispiel:SW}
+Für die Realisierung des Beispiel-Setups wurden folgende Software-Komponenten verwendet.
+
+\begin{itemize}
+\itemBfText{NOOBS}{\gls{acr:NOOBS} ist ein Hilfsprogramm zur Installation von Betriebssystemen auf dem Raspberry Pi (Installations-Manager).}
+
+\itemBfText{Raspbian Jessie}{Als Betriebssystem wurde die aktuelle Version von Raspbian Jessie (Debian Derivat).}
+
+\itemBfText{openHAB 2}{Als Schlüsselkomponente wurde openHAB 2 eingesetzt. openHAB 2 ist eine Open Source Lösung für die Heimautomatisierung. Die Basis von openHAB 2 bildet das Eclipse SmartHome Framework der Eclipse Foundation. Die Installation und Konfiguration erfolgte gemäss den Anleitungen und Beispielen im \hyperlink{https://github.com/openhab/openhab/wiki}{GitHub-Wiki von openHAB} \footnote{\url{https://github.com/openhab/openhab/wiki}}.}
+
+\itemBfText{Apache Derby}{Apache Derby ist eine in Java implementierte relationale Datenbank, welche unter der Open Source Apache Lizenz Version 2.0 verfügbar ist. Die Apache Derby Datenbank wurde verwendet um die Persistenz in openHAB zu realisieren. Die Integration erfolgte über das \gls{acr:JPA} Binding von openHAB. Die Apache Derby Installation wurde gemäss der von Apache zur Verfügung gestellten \hyperlink{https://db.apache.org/derby/papers/DerbyTut/install_software.html}{Anleitung}\footnote{\url{https://db.apache.org/derby/papers/DerbyTut/install_software.html}} installiert und konfiguriert. Die Anbindung an openHAB erfolgte gemäss der Dokumentation im \hyperlink{https://github.com/openhab/openhab/wiki/JPA-Persistence}{Wiki} \footnote{\url{https://github.com/openhab/openhab/wiki/JPA-Persistence}}.}
+
+\itemBfText{ejabberd XMPP-Server}{Als \gls{acr:XMPP} Server wurde ejabberd verwendet. \gls{acr:XMPP} Server werden unter anderem für Instant Messaging (Dienst für Sofortnachrichten) eingesetzt. In diesem Setup wurde der \gls{acr:XMPP} Server für die Kommunikation zwischen dem openHAB Server und dem Anwender verwendet. Einerseits kann openHAB über ein Binding Nachrichten an den Anwender senden und andererseits kann der Anwender bestimmte Befehle und Anweisungen an openHAB übermitteln. Die Installation von ejabberd erfolgt anhand der Anleitungen von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-ejabberd-xmpp-server-on-ubuntu}{Digitalocean}\footnote{\url{https://www.digitalocean.com/community/tutorials/how-to-install-ejabberd-xmpp-server-on-ubuntu}} und \hyperlink{https://box.matto.nl/ejabberdjessie.html}{box.matto.nl}\footnote{\url{https://box.matto.nl/ejabberdjessie.html}}. Das openHAB Binding wurde gemäss der Dokumentationen im openHAB-Wik eingerichtet (\hyperlink{https://github.com/openhab/openhab/wiki/Actions\#xmpp-actions}{Action-Bindings}\footnote{\url{https://github.com/openhab/openhab/wiki/Actions\#xmpp-actions}}, \hyperlink{https://github.com/openhab/openhab/wiki/Feature-Overview}{UI's}\footnote{\url{https://github.com/openhab/openhab/wiki/Feature-Overview}}).}
+
+\itemBfText{Mosquitto MQTT Broker}{Mosquitto ist ein Open Source \gls{acr:MQTT} Broker der Eclipse Foundation. \gls{acr:MQTT} ist ein leichtgewichtiges "`Publish-Subscribe"' Protokoll auf Basis von TCP/IP. Innerhalb von openHAB kann \gls{acr:MQTT} unter anderem für die Publikation des aktuellen Status der Geräte / Komponenten verwendet werden. Ebenfalls können Statusänderungen für Geräte / Komponenten über den \gls{acr:MQTT} Server ausgeführt werden. Mosquitto wurde gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/questions/how-to-setup-a-mosquitto-mqtt-server-and-receive-data-from-owntracks}{Digitalocean}\footnote{\url{https://www.digitalocean.com/community/questions/how-to-setup-a-mosquitto-mqtt-server-and-receive-data-from-owntracks}} installiert. Die Konfiguration in openHAB erfolgte gemäss der Anleitung im \hyperlink{https://github.com/openhab/openhab/wiki/MQTT-Binding}{Wiki}\footnote{\url{https://github.com/openhab/openhab/wiki/MQTT-Binding}}.}
+
+\itemBfText{openHAB Bindings}{Neben den beschriebenen Komponenten wurden diverse weitere Bindings und Actions innerhalb von openHAB verwendet.}
+
+\itemBfText{Apache Tomcat 7}{Um die BPM Plattform "`activiti"' zu nutzen wurde der Open Source Web Server Apache Tomcat 7 eingesetzt. Die Installation erfolgte gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get}{Digitalocean}}\footnote{\url{https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get}}.
+
+\itemBfText{activiti BPM Plattform}{Activiti ist eine Java-basierte Open Source Workflow und \gls{acr:BPM} Plattform. Die Beispielsapplikation wurde gemäss den Informationen im \hyperlink{http://activiti.org/userguide/index.html}{User-Guide}\footnote{\url{http://activiti.org/userguide/index.html}} und den Beispiels-Anwendungen "`activiti-explorer"' und "`activiti-rest"' implementiert. }
+
+\itemBfText{H2}{Die H2 Datenbank ist eine Open Source Java SQL Datenbank, welche als Backend der activiti BPM Plattform eingesetz wird. Die Installation erfolgte gemäss der Anleitung von \hyperlink{http://www.h2database.com/html/tutorial.html}{H2}\footnote{\url{http://www.h2database.com/html/tutorial.html}}.}
+
+\itemBfText{Postfix}{Der Postfix-Mail-Server wurde zum Versand von lokalen E-Mail's verwendet. Dieser Mail-Server wird von der activiti BPM Plattform verwendet, um Benachrichtigungen innerhalb des Prozesses zu versenden. Die Installation und Konfiguration erfolgte gemäss der Anleitung von \hyperlink{https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04}{Digitalocean}\footnote{\url{https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04}}.}
+
+\itemBfText{Pidgin Internet Messenger}{Auf der Client-Seite wurde für die Kommunikation mit ejabberd der "`Pidgin Internet Messenger"' verwendet.}
+
+\itemBfText{Linux Utilities und Tools}{Es wurden diverse weitere Linus-Utilites und Tools für die Implementation und die Arbeit mit den Komponenten verwendet (unter anderem: screen, scp, Eclipse IDE).}
+\end{itemize}
+
+
+\section{Komponentenübersicht}
+Die Abbildung \ref{img:AnalyseRpi:ComponentOverview} \nameref{img:AnalyseRpi:ComponentOverview} zeigt die im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschriebenen Komponenten grafisch auf und zeigt deren direkten Abhängigkeiten auf. Sämtliche Komponenten wurden befinden sich auf dem Raspberry Pi. Der Grossteil der Komponenten muss nach dem Start durch ein Shell-Script gestartet werden.
+
+\begin{landscape}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=19cm]{./images/Component-Overview}
+  \caption{Komponentenübersicht}\label{img:AnalyseRpi:ComponentOverview}
+\end{figure}
+\end{landscape}
+
+\section{Prozess / Szenario}
+Als Beispiel wurde der Prozess "`Türklingel"' beschrieben und umgesetzt. Formal wurde der Prozess gemäss der \gls{acr:BPMN} 2.0 Spezifikation beschrieben. Der formale Prozess ist in der Abbildung \ref{img:AnalyseRpi:DoorbellProcess} \nameref{img:AnalyseRpi:DoorbellProcess} ersichtlich.
+
+Bei der Umsetzung des konkreten Beispiels wurden nicht alle Komponenten verwendet, welche im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschrieben wurden (zum Beispiel: MQTT-Broker und Persistent von OpenHab).
+
+%{\small \textbf{Hinweis: }}
+\subsection{Beschreibung}
+Der "`Türklingel"' Prozess definiert das Verhalten des "`Smart-Home"' wenn jemand an der Türe klingelt. Dabei werden bestimmte Kriterien (Ist zu Hause, Ist in den Ferien) geprüft, um den zu durchlaufenden Prozesszweig zu evaluieren.
+
+\subsection{Ausbau- und Verbesserungsmöglichkeiten}
+
+\subsection{Start-Event}
+Der Start des Prozesses erfolgt in der gewählten Home Automation Lösung (openHAB 2). In openHAB wurde ein Z-Wave Wandschalter eingerichtet. Für diesen Wandschalter wurde eine Regel (Rule) definiert, welche bei einer Statusänderung (Wechsel zu einer bestimmten Szene) ausgeführt wird. Bei einer Statusänderung wird ein POST-Request auf die activiti \gls{acr:REST} Services abgesetzt, um den Prozess in activiti zu starten. Zusätzlich wird eine Benachrichtigung über \gls{acr:XMPP} an den Benutzer versendet.
+
+\begin{lstlisting}[caption=Die definierte "`Doorbell"' Regel.]
+    import org.openhab.core.library.types.*
+    import java.util.Date
+    import java.text.SimpleDateFormat
+
+rule "Doorbell"
+when
+        Item zwave_device_664088cc_node8_scene_number changed to 2
+then
+        sendXMPP("dani@raspberrypi.local","Someone rang while you weren't at home, check your Inbox.")
+
+        var SimpleDateFormat df = new SimpleDateFormat( "YYYY-MM-dd'T'HH:mm:ss" )
+        var String Timestamp = df.format( new Date() )
+
+        var String message = '{"processDefinitionKey":"rpiDoorBellProcess","businessKey":"openhabRpi","variables": [{"name":"doorBellRangDateTime", "value":"' + Timestamp + '"}]}'
+
+        sendHttpPostRequest("http://openhab:raspberry@localhost:8081/activiti-webapp-explorer3/service/api/runtime/process-instances", "application/json",message)
+end
+
+\end{lstlisting}
+
+\subsection{Abrufen der Status-Informationen}
+Die Informationen, ob der Benutzer zu Hause ist oder sich in den Ferien befindet wird von openHAB verwaltet. Dazu wurden zwei "`Items"' angelegt, welche über die Benutzeroberfläche verändert werden können.
+
+\begin{lstlisting}[caption={Item-Definitionen für die An-, bzw. Abwesenheitsinformationen.}]
+Switch presenceAtHome "Zu Hause" <switch>
+Switch presenceAtHoliday "In den Ferien" <switch>
+\end{lstlisting}
+
+Nachdem der Start-Event in activiti ausgelöst wurde, werden die Statusinformationen "`Ist zu Hause"' und "`Ist in den Ferien"' über die openHAB \gls{acr:REST} Schnittstelle ausgelesen. Diese Logik wurde in \gls{acr:BPMN} mit zwei Script-Tasks realisiert. Die Informationen werden für die weitere Verwendung in Variablen gespeichert.
+
+\begin{lstlisting}[caption={Grovvy Script zum Auslesen der Information "`Ist zu Hause"'.}]
+import groovy.json.*
+ 
+def url = "http://pi:raspberryi@raspberrypi.local:8080/rest/items/presenceAtHome".toURL().text
+def root = new JsonSlurper().parseText(url)
+ 
+if (root.state == "ON"){
+	execution.setVariable("presenceAtHome", true)
+	print("State is ON")
+}else{
+	execution.setVariable("presenceAtHome", false)
+	print("State is OFF")
+}
+\end{lstlisting}
+
+\subsection{Auswerten der Status-Informationen}
+Die gespeicherten Statusinformationen werden anschliessend über zwei "`Exclusive Gateways"' ausgewertet. Dabei entstehen drei mögliche Verzweigungen innerhalb des Prozesses. Die einzelnen Verzweigungen werden nachfolgend beschrieben. Nachdem der entsprechende Prozesszweig durchlaufen wurde, endet der Prozess.
+
+\subsection{Verzweigung: "`User ist zu Hause"'}
+Ist der Benutzer zu Hause wird das Licht eingeschaltet (zum Beispiel dies Licht beim Eingangsreich) und die akustische Ausgabe der "`Türklingel"' veranlasst. Das Anschalten des Lichts wurde wiederum über ein Script-Task und die \gls{acr:REST} Services von openHab gelöst (Siehe Listing \ref{lst:analyse:gr:light}). Das akkustische Signal für die Türklingel wurde über ein spezielles "`Türklingel"'-Item (Siehe Listing \ref{lst:analyse:item:doorbell}) und eine entsprechende Regel (Siehe Listing \ref{lst:analyse:rule:doorbell}) definiert. Anschliessend wird der Prozess automatisch abgeschlossen.
+
+\begin{lstlisting}[caption={Groovy-Script zum Einschalten des Lichts},label={lst:analyse:gr:light}] 
+import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
+
+def ret = null
+def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+// perform a POST request, expecting TEXT response
+http.request(Method.POST, ContentType.TEXT) {
+    uri.path = "rest/items/zwave_device_664088cc_node4_switch_dimmer"
+    body= "100"
+}
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption={Groovy-Script zum Start der akkustischen "`Türklingel"' Ausgabe}]
+import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ContentType
+import groovyx.net.http.Method
+import groovyx.net.http.RESTClient
+
+def ret = null
+def http = new HTTPBuilder("http://raspberrypi.local:8080/")
+
+// perform a POST request, expecting TEXT response
+http.request(Method.POST, ContentType.TEXT) {
+    uri.path = "rest/items/Doorbell"
+    body = "ON"
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Item-Definition für die "`Virtuelle Türklingel"'},label={lst:analyse:item:doorbell}]
+Switch Doorbell "klingeln" { binding="xxx", autoupdate="false"}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Item-Regel für die "`Virtuelle Türklingel"'},label={lst:analyse:rule:doorbell}]
+rule "DoorBell"
+when
+	Item Doorbell received command
+then
+	if (receivedCommand == ON){
+		executeCommandLine("omxplayer /opt/openhab2/runtime/sounds/Doorbell-sound-tubular-chimes.mp3")
+	}
+end
+
+\end{lstlisting}
+
+\subsection{Verzweigung: "`User ist nicht zu Hause"'}
+Befindet sich der Benutzer nicht zu Hause und er ist auch nicht in den Ferien, wird er per E-Mail darüber informiert, dass jemand an der Türe geklingelt hat. Der Versand der E-Mail erfolgt über einen standartisierten "`Task"' innerhalb von activiti. Anschliessend wird der Prozess abgeschlossen.
+
+\subsection{Verzweigung: "`User ist in den Ferien"'}
+Befindet sich der Benutzer in den Ferien wird zuerst eine E-Mail-Benachrichtigung an den Benutzer versendet. Anschliessend hat er eine bestimmte Zeitspanne zur Verfügung, um zwischen verschiedenen "`Massnahmen"' auszuwählen. Nach Ablauf der definierten Zeitspanne (2 Minuten im Demo-Setup) wird der Prozess automatisch beendet.
+
+Wählt der Benutzer innerhalb der zur Verfügung stehenden Zeitspanne entsprechende Massnahmen aus, werden diese entsprechend ausgeführt. Sobald alle Massnahmen durchlaufen sind, wird der Prozess abgeschlossen. Es stehen folgende Massnahmen zur Auswahl:
+
+\begin{itemize}
+\item Licht anschalten: Das Licht wird für eine bestimmte Zeitspanne eingeschaltet. Nach dem Ablauf der Zeitspanne (15 Sekunden im Demo-Setup) wird das Licht wieder ausgeschaltet. Die Steuerung erfolgt über die \gls{acr:REST} Services von openHAB.
+\item Musik abspielen: Über ein "`Musikplayer-Item"' (Siehe Listing \ref{lst:analyse:item:musicplayer}) und eine Regel (Siehe Listing \ref{lst:analyse:rule:musicplayer}) wird ein Musikstück abgespielt. Die Steuerung erfolgt über die \gls{acr:REST} Services von openHAB.
+\item Nachbar informieren: Es wird eine E-Mail an den Nachbar versendet, mit der bitte kurz nach dem rechten zu sehen.
+\end{itemize}
+
+\begin{lstlisting}[caption={Item-Definition für den "`Virtuellen Musikplayer"'},label={lst:analyse:item:musicplayer}]
+Switch Musicplayer "Start" { binding="xxx", autoupdate="false"}
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption={Item-Regel für den "`Virtuellen Musikplayer"'},label={lst:analyse:rule:musicplayer}]
+rule "Musicplayer"
+when
+	Item Musicplayer received command
+then
+	if (receivedCommand == ON) {
+		executeCommandLine("omxplayer /opt/openhab2/runtime/sounds/MCHamerHammerTime.mp3")
+	}
+end
+\end{lstlisting}
+
+\newpage
+\begin{landscape}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=21cm]{./images/DoorBellProcess}
+  \caption{"'Türklingel-Prozess"'}\label{img:AnalyseRpi:DoorbellProcess}
+\end{figure}
+\end{landscape}

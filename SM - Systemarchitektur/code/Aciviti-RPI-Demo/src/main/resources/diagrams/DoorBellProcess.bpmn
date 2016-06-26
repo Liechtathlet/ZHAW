@@ -306,7 +306,7 @@ import groovyx.net.http.RESTClient
         <omgdc:Bounds height="55.0" width="158.0" x="270.0" y="120.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
-        <omgdc:Bounds height="55.0" width="146.0" x="644.0" y="377.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="157.0" x="644.0" y="377.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="boundarytimer1" id="BPMNShape_boundarytimer1">
         <omgdc:Bounds height="30.0" width="30.0" x="670.0" y="423.0"></omgdc:Bounds>
@@ -408,7 +408,7 @@ import groovyx.net.http.RESTClient
         <omgdi:waypoint x="644.0" y="404.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow17" id="BPMNEdge_flow17">
-        <omgdi:waypoint x="790.0" y="404.0"></omgdi:waypoint>
+        <omgdi:waypoint x="801.0" y="404.0"></omgdi:waypoint>
         <omgdi:waypoint x="821.0" y="404.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow18" id="BPMNEdge_flow18">

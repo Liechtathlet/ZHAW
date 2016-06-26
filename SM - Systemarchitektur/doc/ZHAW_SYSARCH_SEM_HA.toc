@@ -39,26 +39,26 @@
 \contentsline {section}{\numberline {5.2}Betrachteter L\IeC {\"o}sungsraum}{27}{section.5.2}
 \contentsline {section}{\numberline {5.3}L\IeC {\"o}sungen, Produkte \& Frameworks }{27}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}L\IeC {\"o}sungskategorie: Spezifische Home Automation L\IeC {\"o}sungen}{28}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}L\IeC {\"o}sung mit BPMN-Support im Bereich IOT}{29}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Realisierung eines Beispielhaften Prozesses mit BPMN im Bereich "`Home Automation"'}{30}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Verwendete Hardware}{30}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Verwendete Software}{30}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Komponenten\IeC {\"u}bersicht}{32}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Prozess / Szenario}{34}{subsection.5.4.4}
-\contentsline {subsubsection}{Beschreibung}{34}{subsubsection*.12}
-\contentsline {subsubsection}{Ausbau- und Verbesserungsm\IeC {\"o}glichkeiten}{34}{subsubsection*.13}
-\contentsline {subsubsection}{Start-Event}{34}{subsubsection*.14}
-\contentsline {subsubsection}{Abrufen der Status-Informationen}{34}{subsubsection*.15}
-\contentsline {subsubsection}{Auswerten der Status-Informationen}{34}{subsubsection*.16}
-\contentsline {subsubsection}{Verzweigung: "`User ist zu Hause"'}{34}{subsubsection*.17}
-\contentsline {subsubsection}{Verzweigung: "`User ist nicht zu Hause"'}{34}{subsubsection*.18}
-\contentsline {subsubsection}{Verzweigung: "`User ist in den Ferien"'}{34}{subsubsection*.19}
-\contentsline {chapter}{\numberline {6}Schlusswort}{36}{chapter.6}
-\contentsline {section}{\numberline {6.1}Fazit}{36}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}BPM in der Dom\IeC {\"a}ne "`Internet of Things"'}{36}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{37}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}BPM auf dem "`Raspberry Pi"' in der Dom\IeC {\"a}ne "`Home Automation"'}{37}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Beispielsetup}{37}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Reflexion}{37}{section.6.2}
-\contentsline {chapter}{\nonumberline Quellenverzeichnis}{39}{chapter*.25}
+\contentsline {subsection}{\numberline {5.3.2}L\IeC {\"o}sung mit BPMN-Support im Bereich IOT}{28}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}Realisierung eines beispielhaften Prozesses}{30}{chapter.6}
+\contentsline {section}{\numberline {6.1}Verwendete Hardware}{30}{section.6.1}
+\contentsline {section}{\numberline {6.2}Verwendete Software}{31}{section.6.2}
+\contentsline {section}{\numberline {6.3}Komponenten\IeC {\"u}bersicht}{33}{section.6.3}
+\contentsline {section}{\numberline {6.4}Prozess / Szenario}{35}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Beschreibung}{35}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Ausbau- und Verbesserungsm\IeC {\"o}glichkeiten}{35}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Start-Event}{35}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Abrufen der Status-Informationen}{36}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.5}Auswerten der Status-Informationen}{36}{subsection.6.4.5}
+\contentsline {subsection}{\numberline {6.4.6}Verzweigung: "`User ist zu Hause"'}{36}{subsection.6.4.6}
+\contentsline {subsection}{\numberline {6.4.7}Verzweigung: "`User ist nicht zu Hause"'}{38}{subsection.6.4.7}
+\contentsline {subsection}{\numberline {6.4.8}Verzweigung: "`User ist in den Ferien"'}{38}{subsection.6.4.8}
+\contentsline {chapter}{\numberline {7}Schlusswort}{40}{chapter.7}
+\contentsline {section}{\numberline {7.1}Fazit}{40}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}BPM in der Dom\IeC {\"a}ne "`Internet of Things"'}{40}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}BPM in der Dom\IeC {\"a}ne "`Home Automation"'}{41}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}BPM auf dem "`Raspberry Pi"' in der Dom\IeC {\"a}ne "`Home Automation"'}{41}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Beispielsetup}{41}{subsection.7.1.4}
+\contentsline {section}{\numberline {7.2}Reflexion}{42}{section.7.2}
+\contentsline {chapter}{\nonumberline Quellenverzeichnis}{44}{chapter*.16}
 \contentsfinish
