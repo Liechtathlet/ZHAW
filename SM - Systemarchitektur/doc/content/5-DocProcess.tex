@@ -2,7 +2,7 @@
 % !TeX spellcheck = de_CH_frami
 
 \chapter{Realisierung eines beispielhaften Prozesses}\label{sec:AnalyseRPI:Beispiel}
-Dieses Kapitel beschreibt die Realisierung eines beispielhaften Prozesses mit \gls{acr:BPMN} im Bereich "`Home Automation"'. Als primäres Hardware-Element wird ein Raspberry PI eingesetzt.
+Dieses Kapitel beschreibt die Realisierung eines beispielhaften Prozesses mit \gls{acr:BPMN} im Bereich "`Home Automation"'. Die Realisierung des Prozesses erfolgt fast ausschliesslich  auf einem Raspberry Pi.
 
 \section{Verwendete Hardware}
 Für die Realisierung des Beispiel-Setups wurden folgende Hardware-Komponenten verwendet:
@@ -20,7 +20,7 @@ Für die Realisierung des Beispiel-Setups wurden folgende Software-Komponenten v
 \begin{itemize}
 \itemBfText{NOOBS}{\gls{acr:NOOBS} ist ein Hilfsprogramm zur Installation von Betriebssystemen auf dem Raspberry Pi (Installations-Manager).}
 
-\itemBfText{Raspbian Jessie}{Als Betriebssystem wurde die aktuelle Version von Raspbian Jessie (Debian Derivat).}
+\itemBfText{Raspbian Jessie}{Als Betriebssystem wurde die aktuelle Version von Raspbian Jessie (Debian Derivat) verwendet.}
 
 \itemBfText{openHAB 2}{Als Schlüsselkomponente wurde openHAB 2 eingesetzt. openHAB 2 ist eine Open Source Lösung für die Heimautomatisierung. Die Basis von openHAB 2 bildet das Eclipse SmartHome Framework der Eclipse Foundation. Die Installation und Konfiguration erfolgte gemäss den Anleitungen und Beispielen im \hyperlink{https://github.com/openhab/openhab/wiki}{GitHub-Wiki von openHAB} \footnote{\url{https://github.com/openhab/openhab/wiki}}.}
 
@@ -47,7 +47,7 @@ Für die Realisierung des Beispiel-Setups wurden folgende Software-Komponenten v
 
 
 \section{Komponentenübersicht}
-Die Abbildung \ref{img:AnalyseRpi:ComponentOverview} \nameref{img:AnalyseRpi:ComponentOverview} zeigt die im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschriebenen Komponenten grafisch auf und zeigt deren direkten Abhängigkeiten auf. Sämtliche Komponenten wurden befinden sich auf dem Raspberry Pi. Der Grossteil der Komponenten muss nach dem Start durch ein Shell-Script gestartet werden.
+Die Abbildung \ref{img:AnalyseRpi:ComponentOverview} \nameref{img:AnalyseRpi:ComponentOverview} zeigt die im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschriebenen Komponenten grafisch auf und zeigt deren direkten Abhängigkeiten auf. Sämtliche Komponenten befinden sich auf dem Raspberry Pi. Einige Komponenten müssen nach dem Start manuell durch ein Shell-Script gestartet werden. Dieses würde sich jedoch ohne Probleme in den System-Startprozess integrieren lassen.
 
 \begin{landscape}
 \begin{figure}[H]
@@ -58,15 +58,24 @@ Die Abbildung \ref{img:AnalyseRpi:ComponentOverview} \nameref{img:AnalyseRpi:Com
 \end{landscape}
 
 \section{Prozess / Szenario}
-Als Beispiel wurde der Prozess "`Türklingel"' beschrieben und umgesetzt. Formal wurde der Prozess gemäss der \gls{acr:BPMN} 2.0 Spezifikation beschrieben. Der formale Prozess ist in der Abbildung \ref{img:AnalyseRpi:DoorbellProcess} \nameref{img:AnalyseRpi:DoorbellProcess} ersichtlich.
+Als Beispiel wurde der Prozess "`Türklingel"' beschrieben und umgesetzt. Formal wurde der Prozess gemäss der \gls{acr:BPMN} 2.0 Spezifikation beschrieben (Siehe Abbildung \ref{img:AnalyseRpi:DoorbellProcess}  \nameref{img:AnalyseRpi:DoorbellProcess}). 
 
 Bei der Umsetzung des konkreten Beispiels wurden nicht alle Komponenten verwendet, welche im Kapitel \ref{sec:AnalyseRPI:Beispiel:SW} \nameref{sec:AnalyseRPI:Beispiel:SW} beschrieben wurden (zum Beispiel: MQTT-Broker und Persistent von OpenHab).
 
 %{\small \textbf{Hinweis: }}
 \subsection{Beschreibung}
-Der "`Türklingel"' Prozess definiert das Verhalten des "`Smart-Home"' wenn jemand an der Türe klingelt. Dabei werden bestimmte Kriterien (Ist zu Hause, Ist in den Ferien) geprüft, um den zu durchlaufenden Prozesszweig zu evaluieren.
+Der "`Türklingel"' Prozess definiert das Verhalten des "`Smart-Home"' wenn jemand an der Türe klingelt. Dabei werden bestimmte Kriterien (Ist zu Hause, Ist in den Ferien) ausgewertet, um den zu durchlaufenden Prozesszweig zu bestimmen.
 
 \subsection{Ausbau- und Verbesserungsmöglichkeiten}
+Der Setup könnte noch an vielen Stellen verbessert und optimiert werden. So könnten zum Beispiel die Statusinformationen "`Ist zu Hause"' oder "`Ist in den Ferien"' automatisch anhand von verschiedenen Kriterien ausgewertet werden (Kalender, zeit seit letztem WLAN Kontakt mit dem Handy, NFC-Chips, etc.). Ebenfalls könnte für Kommunikation eine einheitliche Plattform verwendet werden. Es könnte zum Beispiel ein \gls{acr:XMPP}-Dienst oder ein Messenger wie "`Telegram"' verwendet werden um dem Benutzer Benachrichtigungen zu schicken. 
+
+Dies konnte aus zwei Gründen nicht umgesetzt werden:
+\begin{enumerate}
+\item Für den Demo-Setup besteht keine Internet-Verbindung, da für den Zugriff auf den Raspberry Pi ein Ad-hoc WLAN aufgebaut wird.
+\item Activiti bietet aktuell keine Konnektoren / Aktivitäten für \gls{acr:XMPP} oder "`Telegram"'. Es müssten selbst solche Konnektoren gebaut werden.
+\end{enumerate}
+
+Eine weitere Verbesserungsmöglichkeit wäre die Verwendung des \gls{acr:MQTT} Brokers um einen Prozess auszulösen. Dann müssten auf Seiten openHAB keine manuellen Regeln mehr definiert werden, wann Prozesse gestartet werden sollen.
 
 \subsection{Start-Event}
 Der Start des Prozesses erfolgt in der gewählten Home Automation Lösung (openHAB 2). In openHAB wurde ein Z-Wave Wandschalter eingerichtet. Für diesen Wandschalter wurde eine Regel (Rule) definiert, welche bei einer Statusänderung (Wechsel zu einer bestimmten Szene) ausgeführt wird. Bei einer Statusänderung wird ein POST-Request auf die activiti \gls{acr:REST} Services abgesetzt, um den Prozess in activiti zu starten. Zusätzlich wird eine Benachrichtigung über \gls{acr:XMPP} an den Benutzer versendet.
@@ -93,7 +102,7 @@ end
 \end{lstlisting}
 
 \subsection{Abrufen der Status-Informationen}
-Die Informationen, ob der Benutzer zu Hause ist oder sich in den Ferien befindet wird von openHAB verwaltet. Dazu wurden zwei "`Items"' angelegt, welche über die Benutzeroberfläche verändert werden können.
+Die Informationen, ob der Benutzer zu Hause ist oder sich in den Ferien befindet wird von openHAB verwaltet. Dazu wurden zwei "`Items"' konfiguriert, welche über die Benutzeroberfläche verändert werden können.
 
 \begin{lstlisting}[caption={Item-Definitionen für die An-, bzw. Abwesenheitsinformationen.}]
 Switch presenceAtHome "Zu Hause" <switch>
@@ -118,10 +127,10 @@ if (root.state == "ON"){
 \end{lstlisting}
 
 \subsection{Auswerten der Status-Informationen}
-Die gespeicherten Statusinformationen werden anschliessend über zwei "`Exclusive Gateways"' ausgewertet. Dabei entstehen drei mögliche Verzweigungen innerhalb des Prozesses. Die einzelnen Verzweigungen werden nachfolgend beschrieben. Nachdem der entsprechende Prozesszweig durchlaufen wurde, endet der Prozess.
+Die gespeicherten Statusinformationen werden anschliessend über zwei "`Exclusive Gateways"' ausgewertet. Dabei entstehen drei mögliche Verzweigungen innerhalb des Prozesses.  Nachdem der entsprechende Prozesszweig durchlaufen wurde, endet der Prozess. Die einzelnen Verzweigungen werden in den nachfolgenden Abschnitten beschrieben.
 
 \subsection{Verzweigung: "`User ist zu Hause"'}
-Ist der Benutzer zu Hause wird das Licht eingeschaltet (zum Beispiel dies Licht beim Eingangsreich) und die akustische Ausgabe der "`Türklingel"' veranlasst. Das Anschalten des Lichts wurde wiederum über ein Script-Task und die \gls{acr:REST} Services von openHab gelöst (Siehe Listing \ref{lst:analyse:gr:light}). Das akkustische Signal für die Türklingel wurde über ein spezielles "`Türklingel"'-Item (Siehe Listing \ref{lst:analyse:item:doorbell}) und eine entsprechende Regel (Siehe Listing \ref{lst:analyse:rule:doorbell}) definiert. Anschliessend wird der Prozess automatisch abgeschlossen.
+Ist der Benutzer zu Hause wird das Licht eingeschaltet (zum Beispiel das Licht beim Eingangsreich) und die akustische Ausgabe der "`Türklingel"' veranlasst. Das Anschalten des Lichts wurde wiederum über ein Script-Task und die \gls{acr:REST} Services von openHAB gelöst (Siehe Listing \ref{lst:analyse:gr:light}). Das akkustische Signal für die Türklingel wurde über ein spezielles "`Türklingel"'-Item (Siehe Listing \ref{lst:analyse:item:doorbell}) und eine entsprechende Regel (Siehe Listing \ref{lst:analyse:rule:doorbell}) definiert. Anschliessend wird der Prozess automatisch abgeschlossen.
 
 \begin{lstlisting}[caption={Groovy-Script zum Einschalten des Lichts},label={lst:analyse:gr:light}] 
 import groovyx.net.http.HTTPBuilder
@@ -176,14 +185,16 @@ end
 Befindet sich der Benutzer nicht zu Hause und er ist auch nicht in den Ferien, wird er per E-Mail darüber informiert, dass jemand an der Türe geklingelt hat. Der Versand der E-Mail erfolgt über einen standartisierten "`Task"' innerhalb von activiti. Anschliessend wird der Prozess abgeschlossen.
 
 \subsection{Verzweigung: "`User ist in den Ferien"'}
-Befindet sich der Benutzer in den Ferien wird zuerst eine E-Mail-Benachrichtigung an den Benutzer versendet. Anschliessend hat er eine bestimmte Zeitspanne zur Verfügung, um zwischen verschiedenen "`Massnahmen"' auszuwählen. Nach Ablauf der definierten Zeitspanne (2 Minuten im Demo-Setup) wird der Prozess automatisch beendet.
+Befindet sich der Benutzer in den Ferien wird zuerst eine E-Mail-Benachrichtigung an den Benutzer versendet. Anschliessend hat er eine bestimmte Zeitspanne zur Verfügung, um zwischen verschiedenen "`Massnahmen"' auszuwählen. Nach Ablauf der dieser Zeitspanne (2 Minuten im Demo-Setup) wird der Prozess automatisch beendet.
 
-Wählt der Benutzer innerhalb der zur Verfügung stehenden Zeitspanne entsprechende Massnahmen aus, werden diese entsprechend ausgeführt. Sobald alle Massnahmen durchlaufen sind, wird der Prozess abgeschlossen. Es stehen folgende Massnahmen zur Auswahl:
+Wählt der Benutzer innerhalb der zur Verfügung stehenden Zeitspanne auszuführende Massnahmen aus, werden diese entsprechend ausgeführt. Sobald alle Massnahmen durchlaufen sind, wird der Prozess abgeschlossen. 
+
+Es stehen folgende Massnahmen zur Auswahl:
 
 \begin{itemize}
 \item Licht anschalten: Das Licht wird für eine bestimmte Zeitspanne eingeschaltet. Nach dem Ablauf der Zeitspanne (15 Sekunden im Demo-Setup) wird das Licht wieder ausgeschaltet. Die Steuerung erfolgt über die \gls{acr:REST} Services von openHAB.
 \item Musik abspielen: Über ein "`Musikplayer-Item"' (Siehe Listing \ref{lst:analyse:item:musicplayer}) und eine Regel (Siehe Listing \ref{lst:analyse:rule:musicplayer}) wird ein Musikstück abgespielt. Die Steuerung erfolgt über die \gls{acr:REST} Services von openHAB.
-\item Nachbar informieren: Es wird eine E-Mail an den Nachbar versendet, mit der bitte kurz nach dem rechten zu sehen.
+\item Nachbar informieren: Es wird eine E-Mail an den Nachbar versendet, mit der Bitte kurz nach dem rechten zu sehen.
 \end{itemize}
 
 \begin{lstlisting}[caption={Item-Definition für den "`Virtuellen Musikplayer"'},label={lst:analyse:item:musicplayer}]
@@ -204,7 +215,7 @@ end
 
 \newpage
 \begin{landscape}
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[width=21cm]{./images/DoorBellProcess}
   \caption{"'Türklingel-Prozess"'}\label{img:AnalyseRpi:DoorbellProcess}

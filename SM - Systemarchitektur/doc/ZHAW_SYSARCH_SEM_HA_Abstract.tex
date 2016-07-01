@@ -17,7 +17,7 @@
 
 % do not change these lines:
 \pagestyle{empty}                %% no page numbers!
-\usepackage[left=35mm, right=35mm, top=15mm, bottom=20mm, noheadfoot]{geometry}
+\usepackage[left=35mm, right=35mm, top=10mm, bottom=15mm, noheadfoot]{geometry}
 %% please don't change geometry settings!
 
 %\usepackage{parskip}
@@ -30,9 +30,9 @@
 
 \fancypagestyle{empty}{%
   \fancyhf{}% Clear header/footer
-  \fancyfoot[C]{Simon Lang, Daniel Brun}
+  \fancyfoot[C]{Daniel Brun}
   %\fancyhead[R]{Konzeption und Prototyp zur Ablösung eines Legacy Systemes}
-  \fancyfoot[L]{Date} %TODO
+  \fancyfoot[L]{29. Juni 2016}
   \fancyfoot[R]{ZHAW}
 }
 
@@ -45,11 +45,10 @@
 % ----------------------------------------
 % Title
 % ----------------------------------------
-\rmfamily\large  
-\title{\textbf{Abstract} \\ \rmfamily\huge  \textsc{Titel}}
-\author{Simon Lang, Daniel Brun\\
-Zürcher Hochschule für Angewandte Wissenschaften
-}
+\rmfamily  
+\title{\textbf{Abstract} \\ \rmfamily  \textsc{Praktisches Beispiel einer Prozesssteuerung im Bereich Home Automation}}
+\author{Daniel Brun\\
+Zürcher Hochschule für Angewandte Wissenschaften}
 \date{} % <--- leave date empty
 \maketitle\thispagestyle{empty} %% <-- you need this for the first page
 
@@ -59,19 +58,17 @@ Zürcher Hochschule für Angewandte Wissenschaften
 % Title
 % ----------------------------------------
 \section*{Ausgangslage und Ziel}
+Die Seminararbeit "`Praktisches Beispiel einer Prozesssteuerung im Bereich Home Automation"' soll zeigen, was es heute für Möglichkeiten gibt um Prozesse und Abläufe im Bereich Home Automation und BPM (Business Process Management) zu automatisieren. Dabei soll ein End-to-End Beispiel auf einem Raspberry Pi implementiert werden.
 
 \section*{Vorgehensweise}
+Im Rahmen der Arbeit wird zuerst der aktuelle Stand von BPM im Kontext IOT (Internet of Things) und anschliessend im Bereich "`Home Automation"' betrachtet. Aufgrund der Erkenntnisse aus diesen Bereichen wird anschliessend analysiert, was es für Möglichkeiten gibt Prozesse und Abläufe auf einem Raspberry Pi im Kontext "`Home Automation"' zu realisieren. Im Anschluss wird mit einer ausgewählten Lösung ein Beispielprozess implementiert.
 
-\section*{Detailkonzept \& Proof-of-Concept}
+\section*{Der Setup und der realisierte Beispielprozess}
+Als Beispiel wurde ein "`Türlinkgel-Prozess"' realisiert. Dieser Prozess wird ausgelöst, wenn an der Haustüre geklingelt wird. Innerhalb des Prozesses werden verschiedene Kriterien (Ist zu Hause, Ist in den Ferien) ausgewertet und je nach Zustand ein anderer Prozesszweig durchlaufen. Für die Realisierung wurde ein Raspberry Pi 2 mit einem Razberry Z-Wave Board, eine Z-Wave LED Glühbirne und ein Z-Wave Wandschalter verwendet. Softwareseitig wurden folgende Komponenten verwendet: Mosquitto MQTT Broker, ejabberd XMPP Server, Apache Derby Database, H2 Database, Apache Tomcat 7, activiti BPM Platform, Postfix Mail Server und openHAB 2 als Home Automation Lösung.
 
-%\begin{figure}[h]
-%uncomment next line to include a graphic file
-%\centerline{\includegraphics[width=6cm, angle=-90]{fig5.eps}}
-%and comment out next line
-%\centerline{\framebox[6cm]{\rule{0cm}{3.5cm} figure example}}
-%\caption{Structure of the DNA double helix}
-%\label{fig5}
-%\end{figure}
+\begin{figure}[h]
+\centerline{\includegraphics[width=15cm]{./images/DoorBellProcess}}
+\end{figure}
 
 \end{document}
  

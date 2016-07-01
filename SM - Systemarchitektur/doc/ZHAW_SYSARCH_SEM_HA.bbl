@@ -310,6 +310,21 @@
   \endverb
 \endentry
 
+\entry{E:RaspberryPiFoundation:Noobs}{online}{}
+  \list{language}{1}{%
+    {EN}%
+  }
+  \list{organization}{1}{%
+    {Raspberry Pi Foundation}%
+  }
+  \field{labelalpha}{Era}
+  \field{sortinit}{N}
+  \field{title}{Noobs}
+  \verb{url}
+  \verb https://www.raspberrypi.org/documentation/installation/noobs.md
+  \endverb
+\endentry
+
 \entry{E:DataInformed:IOTBPM}{online}{}
   \name{author}{1}{}{%
     {{}%
